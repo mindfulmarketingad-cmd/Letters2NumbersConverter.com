@@ -130,6 +130,13 @@ const blogPosts = [
     image: "/images/blog/alphabet-to-numbers-converter.jpg",
     imageAlt: "Alphabet to numbers converter showing A-Z letters with numbers 1-26",
   },
+  {
+    slug: "a0z25-cipher",
+    title: "A0Z25 Cipher",
+    description: "Learn about the A0Z25 cipher, a zero-indexed letter-to-number encoding system where A=0, B=1, through Z=25.",
+    image: "/images/blog/a0z25-cipher-hero.jpg",
+    imageAlt: "A0Z25 cipher chart showing zero-indexed alphabet A=0 through Z=25",
+  },
 ]
 
 export default function BlogPage() {

@@ -5,6 +5,7 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { AllToolsSection } from "@/components/all-tools-section"
+import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
   title: "ABC to Number Code: The Easy Guide to Converting Letters to Numbers",
@@ -37,6 +38,7 @@ export default function AbcToNumberCodePage() {
               <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-balance">
                 ABC to Number Code: The Easy Guide to Converting Letters to Numbers
               </h1>
+              <ShareButton title="ABC to Number Code: The Easy Guide to Converting Letters to Numbers" />
             </header>
 
             <Image

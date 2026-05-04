@@ -5,6 +5,7 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { AllToolsSection } from "@/components/all-tools-section"
+import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
   title: "A0Z25 Cipher",
@@ -32,9 +33,12 @@ export default function A0Z25CipherPage() {
               Back to Blog
             </Link>
             
-            <h1 id="a0z25-cipher" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+            <h1 id="a0z25-cipher" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
               A0Z25 Cipher
             </h1>
+            <div className="mb-6">
+              <ShareButton title="A0Z25 Cipher" />
+            </div>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               The A0Z25 cipher is a zero-indexed variation of the classic letter-to-number encoding system. Unlike the traditional A1Z26 cipher where A=1, the A0Z25 system starts at zero, making it essential for programmers and computer scientists.

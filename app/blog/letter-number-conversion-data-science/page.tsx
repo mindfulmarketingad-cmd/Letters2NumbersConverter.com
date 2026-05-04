@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { AllToolsSection } from "@/components/all-tools-section"
+import { ShareButton } from "@/components/share-button"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -39,9 +40,12 @@ export default function LetterNumberConversionDataScience() {
               />
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-8 text-balance">
+            <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-balance">
               Applications of Letter-Number Conversion in Data Science
             </h1>
+            <div className="mb-8">
+              <ShareButton title="Applications of Letter-Number Conversion in Data Science" />
+            </div>
 
             <div className="prose prose-neutral dark:prose-invert max-w-none">
               <p className="text-foreground leading-relaxed mb-6">

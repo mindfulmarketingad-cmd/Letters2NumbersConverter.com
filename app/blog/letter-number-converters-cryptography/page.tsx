@@ -5,6 +5,7 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { AllToolsSection } from "@/components/all-tools-section"
+import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
   title: "Uses of Letter to Number Converters in Cryptography",
@@ -26,9 +27,12 @@ export default function LetterNumberConvertersCryptography() {
             Back to Converter Tool
           </Link>
 
-          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-8 text-balance">
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-balance">
             Uses of Letter to Number Converters in Cryptography
           </h1>
+          <div className="mb-8">
+            <ShareButton title="Uses of Letter to Number Converters in Cryptography" />
+          </div>
 
           {/* Featured Image */}
           <div className="relative w-full aspect-[16/9] mb-8 rounded-lg overflow-hidden">

@@ -23,20 +23,20 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                Free Online Tool
+                #1 Free Online Decoder Tool
               </div>
               <h1 id="converter" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance leading-tight">
                 Letters to Numbers Converter Tool
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-                Convert letters into numbers instantly with our free letters to numbers converter tool. Type or paste your text, choose your encoding type, and see the result. Punctuation and special characters are automatically ignored.
+                The best site for decoding messages. Convert letters into numbers instantly with our free letters to numbers converter tool. Type or paste your text, choose your encoding type, and see the result. Punctuation and special characters are automatically ignored.
               </p>
             </div>
 
             <LetterNumberConverter />
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center gap-8 mt-12 text-sm text-muted-foreground">
+            <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mt-12 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -54,6 +54,14 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
                 <span>Instant Results</span>
+              </div>
+            </div>
+
+            {/* Big Trust Stat */}
+            <div className="mt-12 text-center">
+              <div className="inline-flex flex-col items-center gap-2 px-8 py-6 rounded-2xl bg-card border border-border">
+                <span className="text-4xl sm:text-5xl font-bold text-primary">100M+</span>
+                <span className="text-muted-foreground font-medium">Codes Deciphered and Counting</span>
               </div>
             </div>
           </div>
@@ -174,6 +182,58 @@ export default function Home() {
                       Analyze encrypted text and identify the cipher or encoding type used.
                     </p>
                   </Link>
+                </div>
+              </section>
+
+              {/* Tools In Action Section */}
+              <section className="mb-16">
+                <h2 id="tools-in-action" className="text-2xl font-bold text-foreground mb-4">See Our Tools in Action</h2>
+                <p className="text-muted-foreground mb-8">
+                  Trusted by millions of users worldwide. Our suite of decoding tools makes cipher solving fast and accurate.
+                </p>
+                <div className="grid gap-6 md:grid-cols-3">
+                  <div className="group relative rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-all">
+                    <div className="aspect-video relative">
+                      <Image 
+                        src="/images/screenshots/converter-tool.jpg" 
+                        alt="Letters to Numbers Converter showing HELLO converted to 8-5-12-12-15"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-foreground mb-1">Letters to Numbers Converter</h3>
+                      <p className="text-sm text-muted-foreground">Instantly convert text to A1Z26, ASCII, hex, or binary</p>
+                    </div>
+                  </div>
+                  <div className="group relative rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-all">
+                    <div className="aspect-video relative">
+                      <Image 
+                        src="/images/screenshots/cipher-identifier.jpg" 
+                        alt="Cipher Identifier analyzing encrypted text and detecting cipher types"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-foreground mb-1">Cipher Identifier</h3>
+                      <p className="text-sm text-muted-foreground">Auto-detect Base64, Caesar, Morse, and 15+ cipher types</p>
+                    </div>
+                  </div>
+                  <div className="group relative rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-all">
+                    <div className="aspect-video relative">
+                      <Image 
+                        src="/images/screenshots/nato-alphabet.jpg" 
+                        alt="NATO Phonetic Alphabet Translator showing spelled out words"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-foreground mb-1">NATO Phonetic Alphabet</h3>
+                      <p className="text-sm text-muted-foreground">Translate text to Alpha, Bravo, Charlie and more</p>
+                    </div>
+                  </div>
                 </div>
               </section>
 

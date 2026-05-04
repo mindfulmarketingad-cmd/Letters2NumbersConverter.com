@@ -1,0 +1,370 @@
+import { LetterNumberConverter } from "@/components/letter-number-converter"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
+import { CodeChart } from "@/components/code-chart"
+import Link from "next/link"
+import Image from "next/image"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Letters to Numbers Converter Tool | Free Online A1Z26 Decoder",
+  description: "Free letters to numbers converter tool. Convert A=1, B=2 through Z=26 instantly. Supports A1Z26, ASCII, hexadecimal, and binary encoding for puzzles, cryptography, geocaching, and data science.",
+  keywords: ["letters to numbers converter tool", "letter to number converter", "A1Z26 cipher decoder", "alphabet to numbers", "text to numbers converter"],
+}
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-background flex flex-col">
+      <SiteHeader />
+
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="py-12 sm:py-20 bg-gradient-to-b from-card/50 to-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                Free Online Tool
+              </div>
+              <h1 id="converter" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance leading-tight">
+                Letters to Numbers Converter Tool
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+                Convert letters into numbers instantly with our free letters to numbers converter tool. Type or paste your text, choose your encoding type, and see the result. Punctuation and special characters are automatically ignored.
+              </p>
+            </div>
+
+            <LetterNumberConverter />
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap justify-center gap-8 mt-12 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>100% Free</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>No Data Stored</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span>Instant Results</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Content Section */}
+        <section className="py-16 sm:py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-card/50 border border-border rounded-xl p-6 sm:p-8 mb-16">
+                <h2 id="how-it-works" className="text-xl font-bold text-foreground mb-4">How the Letters to Numbers Converter Tool Works</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Numbering the letters so A=1, B=2, etc is one of the simplest ways of converting them to numbers. This is called the A1Z26 cipher. Our letters to numbers converter tool supports multiple encoding types including standard A1Z26, zero-based indexing, ASCII codes, hexadecimal, and binary representations. Whether you&apos;re solving puzzles, working on cryptography projects, or learning about character encoding, this tool provides instant and accurate conversions.
+                </p>
+              </div>
+
+              {/* Standard (A1Z26) */}
+              <section className="mb-16">
+                <h2 id="a1z26" className="text-2xl font-bold text-foreground mb-4">Standard Letter to Number (A1Z26)</h2>
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  The A1Z26 cipher is the most commonly used letter-to-number encoding in our letters to numbers converter tool. Each letter is assigned a number based on its position in the alphabet, starting with A=1 and ending with Z=26. This simple substitution cipher is widely used in puzzles, escape rooms, geocaching, and educational settings. It&apos;s easy to memorize and decode without any special tools, making it perfect for beginners learning about cryptography.
+                </p>
+                <CodeChart type="standard" />
+              </section>
+
+              {/* Zero-based (A0Z25) */}
+              <section className="mb-16">
+                <h2 id="a0z25" className="text-2xl font-bold text-foreground mb-4">Zero-based Letter Numbering (A0Z25)</h2>
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  The A0Z25 cipher is a zero-indexed variant available in our letters to numbers converter tool. In this encoding, A=0, B=1, and Z=25. This format is particularly useful in programming and computer science contexts where zero-based indexing is standard. It&apos;s also used in modular arithmetic and certain cryptographic algorithms where calculations are simplified by starting from zero.
+                </p>
+                <CodeChart type="zero-based" />
+              </section>
+
+              {/* ASCII */}
+              <section className="mb-16">
+                <h2 id="ascii" className="text-2xl font-bold text-foreground mb-4">ASCII Letter to Number Conversion</h2>
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  ASCII (American Standard Code for Information Interchange) is a character encoding standard used in computers and electronic devices. Our letters to numbers converter tool supports ASCII conversion where each character is represented by a unique decimal number between 0 and 127. Uppercase letters range from 65 (A) to 90 (Z), while lowercase letters range from 97 (a) to 122 (z). ASCII codes are fundamental to computing and are commonly used in CTF challenges, programming, and data transmission.
+                </p>
+                <CodeChart type="ascii" />
+              </section>
+
+              {/* Hex ASCII */}
+              <section className="mb-16">
+                <h2 id="hex" className="text-2xl font-bold text-foreground mb-4">Hexadecimal ASCII Encoding</h2>
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  Hexadecimal ASCII represents characters using base-16 numbers in our letters to numbers converter tool. Each letter is converted to its hexadecimal equivalent, with uppercase A starting at 41 and Z at 5A. Hex encoding is widely used in web development, color codes, memory addresses, and network protocols. It provides a more compact representation than binary while remaining easily convertible to decimal ASCII values.
+                </p>
+                <CodeChart type="hex" />
+              </section>
+
+              {/* Binary ASCII */}
+              <section className="mb-16">
+                <h2 id="binary" className="text-2xl font-bold text-foreground mb-4">Binary ASCII Letter Conversion</h2>
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  Binary ASCII encoding converts each character to its 8-bit binary representation using our letters to numbers converter tool. This is the most fundamental form of digital encoding, as computers process all data as sequences of 0s and 1s. Uppercase A is represented as 01000001 and Z as 01011010. Binary encoding is essential for understanding how computers store and transmit text data at the lowest level.
+                </p>
+                <CodeChart type="binary" />
+              </section>
+
+              {/* Use Cases */}
+              <div className="bg-card/50 border border-border rounded-xl p-6 sm:p-8 mb-16">
+                <h2 id="common-uses" className="text-xl font-bold text-foreground mb-4">Common Uses for Letter to Number Conversion</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Letter numbers are used frequently in geocaching mystery caches (puzzle caches), CTF (Capture The Flag) competitions, escape rooms, and puzzle games. Our letters to numbers converter tool is trusted by educators, puzzle enthusiasts, cryptography students, and data scientists worldwide for accurate and instant conversions.
+                </p>
+              </div>
+
+              {/* Other Tools Section */}
+              <section className="mb-16">
+                <div className="flex items-center justify-between mb-8">
+                  <h2 id="other-tools" className="text-2xl font-bold text-foreground">Other Free Tools</h2>
+                  <Link href="/tools" className="text-sm text-primary hover:underline">
+                    View all tools
+                  </Link>
+                </div>
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <Link 
+                    href="/tools/nato-phonetic-alphabet" 
+                    className="group block bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg transition-all"
+                  >
+                    <div className="inline-flex items-center px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium mb-3">
+                      Encoding Tool
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                      NATO Phonetic Alphabet Translator
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Convert text to NATO/ICAO phonetic alphabet. Supports multiple spelling alphabets including Dutch, German, Swedish, and Russian.
+                    </p>
+                  </Link>
+                  <Link 
+                    href="/tools/letter-to-phone-number-converter" 
+                    className="group block bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg transition-all"
+                  >
+                    <div className="inline-flex items-center px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium mb-3">
+                      Conversion Tool
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                      Phone Number Converter
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Convert vanity phone numbers like 1-800-FLOWERS to digits or see letter options for any phone number.
+                    </p>
+                  </Link>
+                  <Link 
+                    href="/tools/cipher-identifier" 
+                    className="group block bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg transition-all"
+                  >
+                    <div className="inline-flex items-center px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium mb-3">
+                      Analysis Tool
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                      Cipher Identifier
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Analyze encrypted text and identify the cipher or encoding type used.
+                    </p>
+                  </Link>
+                </div>
+              </section>
+
+              {/* FAQ Section */}
+              <section className="mb-16">
+                <h2 id="faq" className="text-2xl font-bold text-foreground mb-8">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  <div className="bg-card border border-border rounded-lg p-6">
+                    <h3 className="font-semibold text-foreground mb-2">What is the A1Z26 cipher?</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      The A1Z26 cipher is a simple substitution cipher where each letter of the alphabet is replaced by its numerical position. A=1, B=2, C=3, and so on until Z=26. It&apos;s commonly used in puzzles, escape rooms, and geocaching challenges.
+                    </p>
+                  </div>
+                  <div className="bg-card border border-border rounded-lg p-6">
+                    <h3 className="font-semibold text-foreground mb-2">How do I convert letters to numbers?</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      Simply type or paste your text into our converter above and select your encoding type. The tool instantly converts each letter to its corresponding number. You can choose from A1Z26 (standard), zero-based, ASCII, hexadecimal, or binary encoding.
+                    </p>
+                  </div>
+                  <div className="bg-card border border-border rounded-lg p-6">
+                    <h3 className="font-semibold text-foreground mb-2">What&apos;s the difference between A1Z26 and ASCII?</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      A1Z26 uses simple alphabet positions (A=1 to Z=26), while ASCII is a computer standard where uppercase letters are 65-90 and lowercase are 97-122. ASCII also includes numbers, punctuation, and control characters.
+                    </p>
+                  </div>
+                  <div className="bg-card border border-border rounded-lg p-6">
+                    <h3 className="font-semibold text-foreground mb-2">Is my data stored when I use this converter?</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      No, all conversions happen directly in your browser. Your text is never sent to our servers or stored anywhere. Your privacy is completely protected.
+                    </p>
+                  </div>
+                  <div className="bg-card border border-border rounded-lg p-6">
+                    <h3 className="font-semibold text-foreground mb-2">Can I convert numbers back to letters?</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      Yes! Our converter works both ways. Enter numbers separated by spaces, commas, or dashes, and the tool will decode them back to letters using your selected encoding type.
+                    </p>
+                  </div>
+                  <div className="bg-card border border-border rounded-lg p-6">
+                    <h3 className="font-semibold text-foreground mb-2">What are common uses for letter to number conversion?</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      Letter to number conversion is used in geocaching puzzle caches, escape rooms, CTF cybersecurity challenges, cryptography education, data encoding for programming, and creating secret messages or codes.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Blog Section */}
+              <section>
+                <div className="flex items-center justify-between mb-8">
+                  <h2 id="blog" className="text-2xl font-bold text-foreground">Learn More About Letter-Number Conversion</h2>
+                </div>
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  <Link 
+                    href="/blog/letter-number-conversion-data-science" 
+                    className="group block bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all"
+                  >
+                    <div className="aspect-video relative bg-muted">
+                      <Image 
+                        src="/images/blog/data-science.jpg" 
+                        alt="Data science visualization showing letter to number conversion applications"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                        Applications in Data Science
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        Discover how letter-to-number conversion is used in data science for feature engineering and machine learning.
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link 
+                    href="/blog/understanding-ascii-character-encoding" 
+                    className="group block bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all"
+                  >
+                    <div className="aspect-video relative bg-muted">
+                      <Image 
+                        src="/images/blog/ascii-encoding.jpg" 
+                        alt="ASCII character encoding table and computer binary representation"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                        Understanding ASCII Encoding
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        Learn about ASCII character encoding and how computers convert letters to numbers internally.
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link 
+                    href="/blog/puzzle-solving-letter-number-conversion" 
+                    className="group block bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all"
+                  >
+                    <div className="aspect-video relative bg-muted">
+                      <Image 
+                        src="/images/blog/puzzle-solving.jpg" 
+                        alt="Puzzle solving with letter number codes for geocaching and escape rooms"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                        Puzzle Solving Techniques
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        Master puzzle solving using letter-number conversion for geocaching, escape rooms, and CTFs.
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link 
+                    href="/blog/educational-uses-letter-number-conversion" 
+                    className="group block bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all"
+                  >
+                    <div className="aspect-video relative bg-muted">
+                      <Image 
+                        src="/images/blog/education.jpg" 
+                        alt="Educational classroom teaching letter to number conversion for math and coding"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                        Educational Uses
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        Explore how letter-number conversion is used in education for teaching math and coding concepts.
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link 
+                    href="/blog/letter-number-converters-cryptography" 
+                    className="group block bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all"
+                  >
+                    <div className="aspect-video relative bg-muted">
+                      <Image 
+                        src="/images/blog/cryptography.jpg" 
+                        alt="Cryptography and cipher encryption using letter to number substitution"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                        Uses in Cryptography
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        Learn how letter-to-number conversion forms the foundation of cryptography and encryption.
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link 
+                    href="/blog/how-to-manually-check-letter-number-conversion" 
+                    className="group block bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all"
+                  >
+                    <div className="aspect-video relative bg-muted">
+                      <Image 
+                        src="/images/blog/manual-conversion.jpg" 
+                        alt="Manual letter to number conversion guide with alphabet reference chart"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                        Manual Conversion Guide
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        Step-by-step methods for manually converting letters to numbers without tools.
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
+    </div>
+  )
+}

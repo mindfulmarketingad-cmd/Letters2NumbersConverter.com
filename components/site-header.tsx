@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -10,7 +11,9 @@ export function SiteHeader() {
   return (
     <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <Link href="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
             <span className="text-primary-foreground font-bold text-sm tracking-tight">L2N</span>
           </div>
@@ -18,6 +21,7 @@ export function SiteHeader() {
             Letters to Numbers
           </span>
         </Link>
+        </div>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">

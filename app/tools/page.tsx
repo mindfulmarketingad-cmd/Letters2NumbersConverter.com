@@ -34,6 +34,12 @@ const tools = [
     description: "Analyze encrypted text and identify the cipher or encoding type. Detects Base64, hex, binary, A1Z26, Morse code, Caesar cipher, and more.",
     href: "/tools/cipher-identifier",
     category: "Analysis"
+  },
+  {
+    title: "Audio Spectrogram Analyzer",
+    description: "Visualize audio frequencies and detect hidden messages. Upload WAV, FLAC, OGG, MP3, or M4A files to generate spectrograms for audio steganography analysis.",
+    href: "/tools/audio-spectrogram",
+    category: "Analysis"
   }
 ]
 

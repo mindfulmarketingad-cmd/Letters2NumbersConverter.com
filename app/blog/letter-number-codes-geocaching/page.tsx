@@ -5,6 +5,7 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { AllToolsSection } from "@/components/all-tools-section"
+import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
   title: "Letter Number Codes in Geocaching: Solve Mystery Caches Like a Pro",
@@ -34,6 +35,7 @@ export default function GeoachingCodesPage() {
                 <h1 id="title" className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-balance">
                   Letter Number Codes in Geocaching: Solve Mystery Caches Like a Pro
                 </h1>
+                <ShareButton title="Letter Number Codes in Geocaching: Solve Mystery Caches Like a Pro" />
               </header>
 
               {/* Hero Image */}

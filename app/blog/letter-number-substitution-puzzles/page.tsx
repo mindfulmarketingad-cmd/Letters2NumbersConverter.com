@@ -5,6 +5,7 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { AllToolsSection } from "@/components/all-tools-section"
+import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
   title: "Letter Number Substitution Puzzles: Your Complete Guide to Cipher Solving",
@@ -37,6 +38,7 @@ export default function LetterNumberSubstitutionPuzzlesPage() {
               <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-balance">
                 Letter Number Substitution Puzzles: Your Complete Guide to Cipher Solving
               </h1>
+              <ShareButton title="Letter Number Substitution Puzzles: Your Complete Guide to Cipher Solving" />
             </header>
 
             <Image

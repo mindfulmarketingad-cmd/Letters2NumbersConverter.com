@@ -5,6 +5,7 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { AllToolsSection } from "@/components/all-tools-section"
+import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
   title: "Alphabet to Numbers Converter",
@@ -37,9 +38,10 @@ export default function AlphabetToNumbersConverterPage() {
               <h1 id="intro" className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-balance">
                 Alphabet to Numbers Converter
               </h1>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground mb-4">
                 The complete guide to converting alphabet letters to their numerical positions
               </p>
+              <ShareButton title="Alphabet to Numbers Converter" />
             </header>
 
             <Image

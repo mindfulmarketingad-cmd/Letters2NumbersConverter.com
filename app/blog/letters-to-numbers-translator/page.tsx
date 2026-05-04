@@ -5,6 +5,7 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { AllToolsSection } from "@/components/all-tools-section"
+import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
   title: "Letters to Numbers Translator",
@@ -37,9 +38,10 @@ export default function LettersToNumbersTranslatorPage() {
               <h1 id="intro" className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-balance">
                 Letters to Numbers Translator
               </h1>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground mb-4">
                 Your complete guide to translating letters into numbers
               </p>
+              <ShareButton title="Letters to Numbers Translator" />
             </header>
 
             <Image

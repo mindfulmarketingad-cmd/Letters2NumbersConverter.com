@@ -2,7 +2,7 @@
 
 A free, instant tool that converts any letter or text string into its corresponding numeric value (A=1, B=2, C=3 ... Z=26).
 
-🔗 **[Try the free tool → yourdomain.com/letters-to-numbers-converter](https://yourdomain.com/letters-to-numbers-converter)**
+🔗 **[Try the free tool → yourdomain.com/letters-to-numbers-converter](https://letters2numbersconverter.com)**
 
 ---
 

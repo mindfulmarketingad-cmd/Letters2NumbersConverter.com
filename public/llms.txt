@@ -1,0 +1,66 @@
+# Letters to Numbers Converter Tool
+
+> A free online tool for converting letters to numbers and numbers to letters using various encoding systems.
+
+## About This Site
+
+Letters to Numbers Converter Tool is a free utility for encoding and decoding text using letter-number substitution ciphers. The tool supports multiple encoding formats:
+
+- **A1Z26 (Standard)**: A=1, B=2, through Z=26
+- **A0Z25 (Zero-based)**: A=0, B=1, through Z=25
+- **ASCII**: Decimal ASCII codes (A=65 through Z=90)
+- **Hex ASCII**: Hexadecimal ASCII codes (A=41 through Z=5A)
+- **Binary ASCII**: 8-bit binary representation
+
+## Primary Use Cases
+
+- Solving geocaching puzzle caches
+- Escape room puzzle solving
+- CTF (Capture the Flag) competitions
+- Educational activities for learning the alphabet
+- Cryptography education
+- Secret message encoding/decoding
+- Data science and text encoding
+
+## Main Features
+
+- Instant letter-to-number conversion
+- Multiple encoding format support
+- Copy to clipboard functionality
+- Workspace for saving conversions
+- Large editor mode
+- Download conversion results
+
+## Site Structure
+
+- `/` - Main converter tool
+- `/about` - Information about the tool
+- `/contact` - Contact form
+- `/blog/` - Educational articles about letter-number conversion
+- `/cookie-policy` - Cookie usage policy
+- `/privacy-policy` - Privacy policy
+- `/terms-of-service` - Terms of service
+- `/sitemap` - Site navigation
+
+## Blog Topics
+
+The site includes educational content covering:
+- Letter to numbers code systems
+- How to solve letter number puzzles
+- Letter number substitution puzzles
+- ABC to number code for education
+- Applications in data science
+- Understanding ASCII encoding
+- Cryptography fundamentals
+- Manual conversion techniques
+
+## Contact
+
+For inquiries, use the contact form at /contact or email mindfulmarketingad@gmail.com
+
+## Technical Details
+
+- Built with Next.js
+- Hosted on Vercel
+- No user data collection required for tool usage
+- Client-side processing (no server-side text storage)

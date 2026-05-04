@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Letters To Numbers Converter Tool | Free',
+    default: 'Letter to Number Converter | Fast and Easy Conversion',
     template: '%s | Letters to Numbers Converter Tool',
   },
   description: 'Free letters to numbers converter tool. Convert A=1, B=2 through Z=26 instantly. Supports A1Z26, ASCII, hexadecimal, and binary encoding for puzzles, cryptography, and data science.',

@@ -116,6 +116,20 @@ const blogPosts = [
     image: "/images/blog/secret-codes-hero.jpg",
     imageAlt: "Secret spy theme with coded messages and decoder ring",
   },
+  {
+    slug: "letters-to-numbers-translator",
+    title: "Letters to Numbers Translator",
+    description: "Use our free letters to numbers translator to instantly convert any text to numerical values. Learn how letter-to-number translation works.",
+    image: "/images/blog/letters-to-numbers-translator.jpg",
+    imageAlt: "Letters to numbers translator interface showing text being converted",
+  },
+  {
+    slug: "alphabet-to-numbers-converter",
+    title: "Alphabet to Numbers Converter",
+    description: "Free alphabet to numbers converter tool. Convert any letter A-Z to its numerical position 1-26 instantly.",
+    image: "/images/blog/alphabet-to-numbers-converter.jpg",
+    imageAlt: "Alphabet to numbers converter showing A-Z letters with numbers 1-26",
+  },
 ]
 
 export default function BlogPage() {

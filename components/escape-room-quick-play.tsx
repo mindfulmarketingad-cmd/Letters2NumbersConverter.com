@@ -1,8 +1,9 @@
 "use client"
 
 import { useState, useEffect, useCallback } from "react"
-import { Clock, Eye, MousePointer2, RotateCcw, Trophy, Share2, ChevronRight, Sparkles, Lock, Check } from "lucide-react"
+import { Clock, Eye, MousePointer2, RotateCcw, Trophy, Share2, ChevronRight, Sparkles, Lock, Check, MapPin } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 type Environment = "dungeon" | "jungle" | "park" | "mansion" | "spaceship"
 
@@ -23,6 +24,7 @@ interface EnvironmentData {
   name: string
   description: string
   background: string
+  backgroundImage: string
   ambiance: string
   items: Omit<HiddenItem, "found">[]
   story: string
@@ -35,6 +37,7 @@ const environments: EnvironmentData[] = [
     name: "The Dark Dungeon",
     description: "Escape the ancient dungeon before the torch burns out",
     background: "linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%)",
+    backgroundImage: "/images/environments/dungeon.jpg",
     ambiance: "Stone walls drip with moisture. Chains rattle in the darkness...",
     story: "You wake up in a cold, dark dungeon. The only light comes from a flickering torch on the wall. Find the hidden objects to unlock your escape!",
     victoryMessage: "The heavy iron door creaks open. Freedom awaits!",
@@ -51,6 +54,7 @@ const environments: EnvironmentData[] = [
     name: "Lost in the Jungle",
     description: "Navigate through the dense rainforest to find your way home",
     background: "linear-gradient(180deg, #134e5e 0%, #1a5f3c 50%, #0d3320 100%)",
+    backgroundImage: "/images/environments/jungle.jpg",
     ambiance: "Birds call overhead. Leaves rustle with hidden creatures...",
     story: "Your expedition went wrong and you're stranded deep in the jungle. Find the survival items hidden among the foliage to make your way back to civilization!",
     victoryMessage: "You hear the sound of a helicopter! Rescue is here!",
@@ -67,6 +71,7 @@ const environments: EnvironmentData[] = [
     name: "Mystery at Midnight Park",
     description: "Solve the mystery before dawn breaks",
     background: "linear-gradient(180deg, #2c3e50 0%, #1a252f 50%, #0d1318 100%)",
+    backgroundImage: "/images/environments/park.jpg",
     ambiance: "Street lamps flicker. Footsteps echo in the distance...",
     story: "A mysterious letter led you to this empty park at midnight. Someone has hidden clues for you to find. Can you uncover the secret before sunrise?",
     victoryMessage: "The final clue reveals the truth! Mystery solved!",
@@ -83,6 +88,7 @@ const environments: EnvironmentData[] = [
     name: "The Haunted Mansion",
     description: "Escape the ghostly manor before you become its next resident",
     background: "linear-gradient(180deg, #2d132c 0%, #1a0a1a 50%, #0d0510 100%)",
+    backgroundImage: "/images/environments/mansion.jpg",
     ambiance: "Floorboards creak. A cold wind whispers your name...",
     story: "The door slammed shut behind you and won't open. This old mansion is filled with secrets. Find the cursed objects to break the spell and escape!",
     victoryMessage: "The curse is broken! The mansion releases you!",
@@ -99,6 +105,7 @@ const environments: EnvironmentData[] = [
     name: "Stranded in Space",
     description: "Repair the ship before life support fails",
     background: "linear-gradient(180deg, #0c0c1e 0%, #1a1a3e 50%, #0a0a20 100%)",
+    backgroundImage: "/images/environments/spaceship.jpg",
     ambiance: "Warning lights flash. The hull groans under pressure...",
     story: "An asteroid strike has damaged your spacecraft. Life support is failing! Find the repair components scattered around the ship to survive!",
     victoryMessage: "Systems restored! Setting course for home!",
@@ -191,6 +198,7 @@ export function EscapeRoomQuickPlay({ initialEnvironment, onBack }: QuickPlayPro
   const [timer, setTimer] = useState(0)
   const [hintsUsed, setHintsUsed] = useState(0)
   const [showHint, setShowHint] = useState(false)
+  const [showLocation, setShowLocation] = useState(false)
   const [wrongClick, setWrongClick] = useState<{x: number, y: number} | null>(null)
   const [foundAnimation, setFoundAnimation] = useState<string | null>(null)
 
@@ -217,6 +225,7 @@ export function EscapeRoomQuickPlay({ initialEnvironment, onBack }: QuickPlayPro
     setTimer(0)
     setHintsUsed(0)
     setShowHint(false)
+    setShowLocation(false)
     setGameState("playing")
     
     // Track game start
@@ -243,6 +252,7 @@ export function EscapeRoomQuickPlay({ initialEnvironment, onBack }: QuickPlayPro
         setCurrentTarget(prev => prev + 1)
       }
       setShowHint(false)
+      setShowLocation(false)
     }
   }
 
@@ -276,6 +286,12 @@ export function EscapeRoomQuickPlay({ initialEnvironment, onBack }: QuickPlayPro
     trackAnalytics(selectedEnv!, 'hint', currentTarget)
   }
 
+  const revealLocation = () => {
+    setShowLocation(true)
+    setTimer(prev => prev + 60) // 60 second penalty for revealing
+    trackAnalytics(selectedEnv!, 'reveal', currentTarget)
+  }
+
   const resetGame = () => {
     setGameState("select")
     setSelectedEnv(null)
@@ -284,6 +300,7 @@ export function EscapeRoomQuickPlay({ initialEnvironment, onBack }: QuickPlayPro
     setTimer(0)
     setHintsUsed(0)
     setShowHint(false)
+    setShowLocation(false)
   }
 
   const trackAnalytics = (env: Environment, action: string, value?: number, hints?: number) => {
@@ -323,13 +340,18 @@ export function EscapeRoomQuickPlay({ initialEnvironment, onBack }: QuickPlayPro
             <button
               key={env.id}
               onClick={() => startGame(env.id)}
-              className="group relative overflow-hidden rounded-xl border border-border bg-card p-6 text-left transition-all hover:border-primary/50 hover:shadow-lg"
+              className="group relative overflow-hidden rounded-xl border border-border bg-card text-left transition-all hover:border-primary/50 hover:shadow-lg"
             >
-              <div 
-                className="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-30"
-                style={{ background: env.background }}
-              />
-              <div className="relative">
+              <div className="relative h-32 overflow-hidden">
+                <Image
+                  src={env.backgroundImage}
+                  alt={env.name}
+                  fill
+                  className="object-cover transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+              </div>
+              <div className="relative p-4">
                 <h3 className="text-lg font-semibold text-foreground mb-1">{env.name}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{env.description}</p>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -476,13 +498,24 @@ export function EscapeRoomQuickPlay({ initialEnvironment, onBack }: QuickPlayPro
               <p className="font-semibold text-foreground">{currentItem?.name}</p>
             </div>
           </div>
-          <button
-            onClick={useHint}
-            className="px-3 py-1.5 text-sm bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors flex items-center gap-1"
-          >
-            <Sparkles className="w-3 h-3" />
-            Hint (+30s)
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={useHint}
+              disabled={showHint}
+              className="px-3 py-1.5 text-sm bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors flex items-center gap-1 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <Sparkles className="w-3 h-3" />
+              Hint (+30s)
+            </button>
+            <button
+              onClick={revealLocation}
+              disabled={showLocation}
+              className="px-3 py-1.5 text-sm bg-primary/10 text-primary border border-primary/30 rounded-md hover:bg-primary/20 transition-colors flex items-center gap-1 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <MapPin className="w-3 h-3" />
+              Show Me (+60s)
+            </button>
+          </div>
         </div>
         
         {/* Hint display */}
@@ -495,11 +528,18 @@ export function EscapeRoomQuickPlay({ initialEnvironment, onBack }: QuickPlayPro
         {/* Game area */}
         <div 
           className="relative aspect-video rounded-xl overflow-hidden cursor-crosshair select-none"
-          style={{ background: currentEnvData.background }}
           onClick={handleBackgroundClick}
         >
-          {/* Decorations */}
-          {getEnvironmentDecorations(selectedEnv!)}
+          {/* Background Image */}
+          <Image
+            src={currentEnvData.backgroundImage}
+            alt={currentEnvData.name}
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Overlay for better visibility */}
+          <div className="absolute inset-0 bg-black/20" />
           
           {/* Found items indicator */}
           {items.filter(i => i.found).map(item => (
@@ -521,18 +561,21 @@ export function EscapeRoomQuickPlay({ initialEnvironment, onBack }: QuickPlayPro
             </div>
           ))}
           
-          {/* Current target subtle glow (very subtle hint) */}
-          {currentItem && !currentItem.found && (
+          {/* Show Me - Location Reveal */}
+          {showLocation && currentItem && !currentItem.found && (
             <div
-              className="absolute pointer-events-none opacity-0 hover:opacity-20 transition-opacity"
+              className="absolute pointer-events-none z-10"
               style={{
-                left: `${currentItem.x - 2}%`,
-                top: `${currentItem.y - 2}%`,
-                width: `${currentItem.width + 4}%`,
-                height: `${currentItem.height + 4}%`,
+                left: `${currentItem.x + currentItem.width / 2}%`,
+                top: `${currentItem.y + currentItem.height / 2}%`,
+                transform: 'translate(-50%, -50%)',
               }}
             >
-              <div className="w-full h-full rounded-lg bg-primary/30 animate-pulse" />
+              <div className="relative">
+                <div className="absolute inset-0 w-16 h-16 -translate-x-1/2 -translate-y-1/2 bg-primary/30 rounded-full animate-ping" />
+                <div className="absolute inset-0 w-12 h-12 -translate-x-1/2 -translate-y-1/2 bg-primary/50 rounded-full animate-pulse" />
+                <MapPin className="w-8 h-8 text-primary drop-shadow-lg animate-bounce" style={{ transform: 'translate(-50%, -50%)' }} />
+              </div>
             </div>
           )}
           

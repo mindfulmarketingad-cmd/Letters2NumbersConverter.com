@@ -52,6 +52,12 @@ const tools = [
     description: "Test your password security and see how long it would take to crack. Get real-time feedback on password strength with entropy analysis.",
     href: "/tools/password-strength-tester",
     category: "Security"
+  },
+  {
+    title: "Escape Room Builder",
+    description: "Create and share your own escape room puzzles! Build cipher challenges using A1Z26, Morse code, binary, and riddles. Share via URL - no account needed.",
+    href: "/tools/escape-room-builder",
+    category: "Games"
   }
 ]
 

@@ -76,6 +76,12 @@ const tools = [
     description: "Encrypt and decrypt messages using monoalphabetic substitution ciphers. Create custom substitution keys, analyze letter frequencies, and solve ciphers with interactive mapping.",
     href: "/tools/monoalphabetic-substitution-cipher",
     category: "Cryptography"
+  },
+  {
+    title: "Anagram Solver with Wildcard",
+    description: "Find all possible words from your letters with wildcard support. Filter by starting letter, ending letter, containing letters, or exact word length.",
+    href: "/tools/anagram-solver",
+    category: "Word Games"
   }
 ]
 

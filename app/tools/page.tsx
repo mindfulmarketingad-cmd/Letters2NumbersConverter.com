@@ -90,26 +90,26 @@ export default function ToolsPage() {
               </p>
             </div>
 
-            <div className="grid gap-6">
+            <div className="grid gap-3">
               {tools.map((tool) => (
                 <Link
                   key={tool.href}
                   href={tool.href}
-                  className="group block bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg transition-all"
+                  className="group block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:bg-card/80 transition-all"
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <div className="inline-flex items-center px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium mb-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex-1 min-w-0">
+                      <div className="inline-flex items-center px-2 py-0.5 rounded text-primary text-xs font-medium mb-2">
                         {tool.category}
                       </div>
-                      <h2 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                      <h2 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
                         {tool.title}
                       </h2>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm text-muted-foreground line-clamp-2">
                         {tool.description}
                       </p>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
+                    <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
                   </div>
                 </Link>
               ))}

@@ -145,10 +145,16 @@ export default function Home() {
   <h3 className="font-semibold text-foreground hover:text-primary transition-colors">Letters to Numbers Converter</h3>
   </Link>
   <Link
-  href="/tools/nato-phonetic-alphabet"
+  href="/"
   className="block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all"
   >
-  <h3 className="font-semibold text-foreground hover:text-primary transition-colors">NATO Phonetic Alphabet</h3>
+  <h3 className="font-semibold text-foreground hover:text-primary transition-colors">Letters to Numbers Converter</h3>
+  </Link>
+  <Link
+  href="/tools/numbers-to-letters"
+  className="block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all"
+  >
+  <h3 className="font-semibold text-foreground hover:text-primary transition-colors">Numbers to Letters Converter</h3>
   </Link>
   <Link
   href="/tools/letter-to-phone-number-converter"

@@ -18,6 +18,12 @@ const tools = [
     category: "Encoding"
   },
   {
+    title: "Numbers to Letters Converter",
+    description: "Convert numbers back into letters. Decode A1Z26, A0Z25, ASCII, hex, and binary encoded messages instantly.",
+    href: "/tools/numbers-to-letters",
+    category: "Decoding"
+  },
+  {
     title: "NATO Phonetic Alphabet Translator",
     description: "Convert text to NATO/ICAO phonetic alphabet and other spelling alphabets including Dutch, German, Swedish, and Russian.",
     href: "/tools/nato-phonetic-alphabet",

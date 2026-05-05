@@ -137,6 +137,20 @@ const blogPosts = [
     image: "/images/blog/a0z25-cipher-hero.jpg",
     imageAlt: "A0Z25 cipher chart showing zero-indexed alphabet A=0 through Z=25",
   },
+  {
+    slug: "a1z26-translator",
+    title: "A1Z26 Translator",
+    description: "Use our free A1Z26 translator to convert letters to numbers and numbers to letters. The A1Z26 cipher assigns A=1, B=2 through Z=26.",
+    image: "/images/blog/a1z26-translator-hero.jpg",
+    imageAlt: "A1Z26 translator showing alphabet letters converting to numbers 1-26",
+  },
+  {
+    slug: "alphanumeric-converter",
+    title: "Alphanumeric Converter",
+    description: "Free alphanumeric converter tool to transform text into numbers, ASCII codes, hex, and binary. Convert between letters and numeric representations.",
+    image: "/images/blog/alphanumeric-converter-hero.jpg",
+    imageAlt: "Alphanumeric converter showing text transforming into numbers and digital codes",
+  },
 ]
 
 export default function BlogPage() {

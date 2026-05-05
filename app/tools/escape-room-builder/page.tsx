@@ -6,9 +6,9 @@ import { EscapeRoomBuilder } from "@/components/escape-room-builder"
 import { EXAMPLE_ROOMS } from "@/lib/escape-room-types"
 
 export const metadata: Metadata = {
-  title: "Escape Room Builder | Create Free Online Cipher Puzzles",
-  description: "Build your own escape room puzzles using ciphers and codes. Create A1Z26, Morse code, binary, and riddle puzzles. Share with friends via URL - no account needed!",
-  keywords: ["escape room builder", "puzzle creator", "cipher puzzles", "escape room maker", "code puzzles", "free escape room"],
+  title: "Escape Room Builder | Free Online Puzzle Creator",
+  description: "Use our free escape room builder to create custom cipher puzzles online. Build challenges with A1Z26, Morse code, binary, and riddles. Share instantly via URL - no account needed!",
+  keywords: ["escape room builder", "puzzle creator", "cipher puzzles", "escape room maker", "code puzzles", "free escape room", "online escape room builder"],
 }
 
 export default function EscapeRoomBuilderPage() {
@@ -28,7 +28,7 @@ export default function EscapeRoomBuilderPage() {
                   Escape Room Builder
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Create your own escape room puzzles using ciphers and codes. Build challenges with A1Z26, Morse code, binary, and more. Share instantly via URL - no account needed!
+                  This free escape room builder lets you create custom cipher puzzles online in minutes. Build challenges with A1Z26, Morse code, binary, and more. Share instantly via URL - no account needed!
                 </p>
               </div>
 

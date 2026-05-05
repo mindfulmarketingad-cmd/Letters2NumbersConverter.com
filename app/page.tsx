@@ -131,59 +131,56 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Other Tools Section */}
-              <section className="mb-16">
-                <div className="flex items-center justify-between mb-8">
-                  <h2 id="other-tools" className="text-2xl font-bold text-foreground">Other Free Tools</h2>
-                  <Link href="/tools" className="text-sm text-primary hover:underline">
-                    View all tools
-                  </Link>
-                </div>
-                <div className="grid gap-6 sm:grid-cols-2">
-                  <Link 
-                    href="/tools/nato-phonetic-alphabet" 
-                    className="group block bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg transition-all"
-                  >
-                    <div className="inline-flex items-center px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium mb-3">
-                      Encoding Tool
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
-                      NATO Phonetic Alphabet Translator
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Convert text to NATO/ICAO phonetic alphabet. Supports multiple spelling alphabets including Dutch, German, Swedish, and Russian.
-                    </p>
-                  </Link>
-                  <Link 
-                    href="/tools/letter-to-phone-number-converter" 
-                    className="group block bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg transition-all"
-                  >
-                    <div className="inline-flex items-center px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium mb-3">
-                      Conversion Tool
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
-                      Phone Number Converter
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Convert vanity phone numbers like 1-800-FLOWERS to digits or see letter options for any phone number.
-                    </p>
-                  </Link>
-                  <Link 
-                    href="/tools/cipher-identifier" 
-                    className="group block bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg transition-all"
-                  >
-                    <div className="inline-flex items-center px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium mb-3">
-                      Analysis Tool
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
-                      Cipher Identifier
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Analyze encrypted text and identify the cipher or encoding type used.
-                    </p>
-                  </Link>
-                </div>
-              </section>
+  {/* Other Tools Section */}
+  <section className="mb-16">
+  <div className="mb-8">
+  <h2 id="other-tools" className="text-2xl font-bold text-foreground mb-2">All Tools</h2>
+  <p className="text-muted-foreground">Complete list of all available encoding, decoding, and analysis tools</p>
+  </div>
+  <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+  <Link
+  href="/"
+  className="block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all"
+  >
+  <h3 className="font-semibold text-foreground hover:text-primary transition-colors">Letters to Numbers Converter</h3>
+  </Link>
+  <Link
+  href="/tools/nato-phonetic-alphabet"
+  className="block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all"
+  >
+  <h3 className="font-semibold text-foreground hover:text-primary transition-colors">NATO Phonetic Alphabet</h3>
+  </Link>
+  <Link
+  href="/tools/letter-to-phone-number-converter"
+  className="block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all"
+  >
+  <h3 className="font-semibold text-foreground hover:text-primary transition-colors">Phone Number Converter</h3>
+  </Link>
+  <Link
+  href="/tools/cipher-identifier"
+  className="block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all"
+  >
+  <h3 className="font-semibold text-foreground hover:text-primary transition-colors">Cipher Identifier</h3>
+  </Link>
+  <Link
+  href="/tools/audio-spectrogram"
+  className="block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all"
+  >
+  <h3 className="font-semibold text-foreground hover:text-primary transition-colors">Audio Spectrogram Analyzer</h3>
+  </Link>
+  <Link
+  href="/tools/book-cipher-decoder"
+  className="block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all"
+  >
+  <h3 className="font-semibold text-foreground hover:text-primary transition-colors">Book Cipher Decoder</h3>
+  </Link>
+  </div>
+  <div className="mt-6 text-center">
+  <Link href="/tools" className="text-primary hover:underline font-medium">
+  View all tools with descriptions →
+  </Link>
+  </div>
+  </section>
 
               {/* Tools In Action Section */}
               <section className="mb-16">

@@ -64,6 +64,12 @@ const tools = [
     description: "Simulate the legendary World War II Enigma encryption device. Configure rotors, reflectors, ring settings, and plugboard to encrypt and decrypt authentic Enigma cipher messages.",
     href: "/tools/enigma-machine-emulator",
     category: "Cryptography"
+  },
+  {
+    title: "Monoalphabetic Substitution Cipher",
+    description: "Encrypt and decrypt messages using monoalphabetic substitution ciphers. Create custom substitution keys, analyze letter frequencies, and solve ciphers with interactive mapping.",
+    href: "/tools/monoalphabetic-substitution-cipher",
+    category: "Cryptography"
   }
 ]
 

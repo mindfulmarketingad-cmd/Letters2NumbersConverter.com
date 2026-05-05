@@ -192,6 +192,12 @@ export default function Home() {
   >
   <h3 className="font-semibold text-foreground hover:text-primary transition-colors">Enigma Machine Emulator</h3>
   </Link>
+  <Link
+  href="/tools/monoalphabetic-substitution-cipher"
+  className="block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all"
+  >
+  <h3 className="font-semibold text-foreground hover:text-primary transition-colors">Monoalphabetic Substitution Cipher</h3>
+  </Link>
   </div>
   <div className="mt-6 text-center">
   <Link href="/tools" className="text-primary hover:underline font-medium">

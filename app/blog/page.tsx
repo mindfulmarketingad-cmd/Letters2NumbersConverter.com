@@ -151,6 +151,13 @@ const blogPosts = [
     image: "/images/blog/alphanumeric-converter-hero.jpg",
     imageAlt: "Alphanumeric converter showing text transforming into numbers and digital codes",
   },
+  {
+    slug: "build-your-own-escape-room",
+    title: "Build Your Own Escape Room",
+    description: "Learn how to build your own escape room with our complete guide. Create cipher puzzles, design challenges, and share with friends using our free escape room builder.",
+    image: "/images/blog/build-your-own-escape-room.jpg",
+    imageAlt: "People solving puzzles in an escape room with ciphers and clues",
+  },
 ]
 
 export default function BlogPage() {

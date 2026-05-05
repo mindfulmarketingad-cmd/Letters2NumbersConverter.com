@@ -58,6 +58,12 @@ const tools = [
     description: "Create and share your own escape room puzzles! Build cipher challenges using A1Z26, Morse code, binary, and riddles. Share via URL - no account needed.",
     href: "/tools/escape-room-builder",
     category: "Games"
+  },
+  {
+    title: "Enigma Machine Emulator",
+    description: "Simulate the legendary World War II Enigma encryption device. Configure rotors, reflectors, ring settings, and plugboard to encrypt and decrypt authentic Enigma cipher messages.",
+    href: "/tools/enigma-machine-emulator",
+    category: "Cryptography"
   }
 ]
 

@@ -23,6 +23,7 @@ const tools = [
     href: "/tools/numbers-to-letters",
     category: "Decoding"
   },
+  {
     title: "NATO Phonetic Alphabet Translator",
     description: "Convert text to NATO/ICAO phonetic alphabet and other spelling alphabets including Dutch, German, Swedish, and Russian.",
     href: "/tools/nato-phonetic-alphabet",

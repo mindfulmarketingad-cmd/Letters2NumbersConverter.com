@@ -46,6 +46,12 @@ const tools = [
     description: "Decode hidden messages using book references. Enter book text and numerical codes (page:line:word) to reveal secret messages encoded in literature.",
     href: "/tools/book-cipher-decoder",
     category: "Decoding"
+  },
+  {
+    title: "Password Strength Tester",
+    description: "Test your password security and see how long it would take to crack. Get real-time feedback on password strength with entropy analysis.",
+    href: "/tools/password-strength-tester",
+    category: "Security"
   }
 ]
 

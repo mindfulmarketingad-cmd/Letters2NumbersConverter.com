@@ -88,6 +88,8 @@ export default function Home() {
       answer: "No, all conversions happen in your browser. We do not store, monitor, or track any data you enter.",
     },
   ])
+
+  return (
     <div className="min-h-screen bg-background flex flex-col">
       <PageSchemaMarkup schema={homePageSchema} />
       <PageSchemaMarkup schema={howToSchema} />

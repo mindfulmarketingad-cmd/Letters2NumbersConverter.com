@@ -18,6 +18,30 @@ const tools = [
     category: "Encoding"
   },
   {
+    title: "YAML to INI Converter",
+    description: "YAML to INI Converter - Free online bidirectional configuration file converter. Transform YAML to INI format instantly or convert INI to YAML. Perfect for DevOps, developers, and system administrators.",
+    href: "/tools/yaml-to-ini-converter",
+    category: "Conversion"
+  },
+  {
+    title: "JSON to Java Code Generator",
+    description: "JSON to Java code generator - Free tool to convert JSON schema into Java Object with private variables, getter/setter methods, and inner classes for nested objects.",
+    href: "/tools/json-to-java-code-generator",
+    category: "Code Generation"
+  },
+  {
+    title: "Mayan Numeral Converter",
+    description: "Mayan Numeral Converter - Convert decimal numbers to ancient Mayan base-20 vigesimal numerals with visual dot, bar, and shell symbols. Learn about the sophisticated mathematics of the Maya civilization.",
+    href: "/tools/mayan-numeral-converter",
+    category: "Numeral Systems"
+  },
+  {
+    title: "A0Z25 Cipher Translator",
+    description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
+    href: "/tools/a0z25-cipher-translator",
+    category: "Encoding"
+  },
+  {
     title: "Numbers to Letters Converter",
     description: "Convert numbers back into letters. Decode A1Z26, A0Z25, ASCII, hex, and binary encoded messages instantly.",
     href: "/tools/numbers-to-letters",
@@ -42,9 +66,9 @@ const tools = [
     category: "Analysis"
   },
   {
-    title: "Audio Spectrogram Analyzer",
-    description: "Visualize audio frequencies and detect hidden messages. Upload WAV, FLAC, OGG, MP3, or M4A files to generate spectrograms for audio steganography analysis.",
-    href: "/tools/audio-spectrogram",
+    title: "Spectrogram Decoder",
+    description: "Free spectrogram decoder tool to analyze audio frequencies and detect hidden messages. Upload WAV, FLAC, OGG, MP3, or M4A files to generate spectrograms for audio steganography analysis.",
+    href: "/tools/audio-spectrogram-decoder",
     category: "Analysis"
   },
   {

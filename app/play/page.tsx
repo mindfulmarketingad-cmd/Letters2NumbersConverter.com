@@ -35,7 +35,7 @@ export default function PlayPage() {
       <SiteHeader />
       <main className="flex-1 py-12">
         <div className="container mx-auto px-4">
-          <div className="mb-12">
+          <div className="mb-12 text-center">
             <h1 className="text-4xl font-bold text-foreground mb-2">Play <span className="text-primary">Games</span></h1>
             <p className="text-lg text-muted-foreground">
               Challenge your mind with our collection of free online word and puzzle games. Solve cryptograms, play anagrams, and more!

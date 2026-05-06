@@ -107,7 +107,7 @@ export default function ToolsPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-                Free Online Tools
+                Free Online <span className="text-primary">Tools</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 A collection of free encoding and decoding tools for puzzles, cryptography, and more. No signup required.

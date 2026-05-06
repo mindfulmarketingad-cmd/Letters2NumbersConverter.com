@@ -12,6 +12,13 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "best-cipher-locks",
+    title: "Best Cipher Locks 2024 - Reviews & Buying Guide",
+    description: "Discover the top 5 best cipher locks on Amazon. Read detailed reviews, compare features, and find the perfect combination padlock for your needs.",
+    image: "/images/blog/best-cipher-locks-hero.jpg",
+    imageAlt: "Collection of best cipher locks displayed showing various combination lock designs and security features",
+  },
+  {
     slug: "letter-to-numbers-code",
     title: "Letter to Numbers Code: Complete Guide to A1Z26 Cipher",
     description: "Learn how the letter to numbers code works. Convert A=1, B=2 through Z=26 with our complete guide to the A1Z26 cipher system.",

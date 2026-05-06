@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { FloatingToc } from '@/components/floating-toc'
 import { ThemeProvider } from '@/components/theme-provider'
+import { SchemaMarkup } from '@/components/schema-markup'
 import Script from 'next/script'
 import './globals.css'
 
@@ -71,6 +72,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <head>
+        <SchemaMarkup />
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2173008413459742"

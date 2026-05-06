@@ -24,6 +24,12 @@ const tools = [
     category: "Conversion"
   },
   {
+    title: "JSON to Java Code Generator",
+    description: "JSON to Java code generator - Free tool to convert JSON schema into Java Object with private variables, getter/setter methods, and inner classes for nested objects.",
+    href: "/tools/json-to-java-code-generator",
+    category: "Code Generation"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

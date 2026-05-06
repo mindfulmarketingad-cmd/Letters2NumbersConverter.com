@@ -82,6 +82,12 @@ const tools = [
     description: "Find all possible words from your letters with wildcard support. Filter by starting letter, ending letter, containing letters, or exact word length.",
     href: "/tools/anagram-solver",
     category: "Word Games"
+  },
+  {
+    title: "Cryptogram Generator",
+    description: "Create custom cryptogram generator puzzles to challenge your friends. Generate substitution cipher cryptograms with adjustable difficulty levels and share via link.",
+    href: "/tools/cryptogram-solver",
+    category: "Word Games"
   }
 ]
 

@@ -66,6 +66,12 @@ const tools = [
     category: "Number Systems"
   },
   {
+    title: "Cistercian Numerals Converter",
+    description: "Cistercian Numerals Converter - Convert decimal numbers to medieval Cistercian numerals. Learn about the Cistercian monks' number system with complete symbol chart and historical context.",
+    href: "/tools/cistercian-numerals-converter",
+    category: "Numeral Systems"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

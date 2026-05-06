@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import CryptogramSolver from "@/components/cryptogram-solver"
+import { SiteHeader } from "@/components/site-header"
 
 export const metadata: Metadata = {
   title: "Cryptogram Solver | Free Online Cipher Puzzle Solver",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 export default function CryptogramSolverPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SiteHeader />
       <main className="flex-1 py-12">
         <CryptogramSolver />
       </main>

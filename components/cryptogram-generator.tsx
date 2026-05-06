@@ -77,6 +77,22 @@ export default function CryptogramGenerator() {
         </p>
       </div>
 
+      {/* Who It's For */}
+      <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 mb-8">
+        <h2 className="font-semibold text-foreground mb-3">Who It's For</h2>
+        <p className="text-muted-foreground mb-3">
+          This cryptogram generator is perfect for:
+        </p>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-muted-foreground">
+          <li className="flex gap-2"><span className="text-primary">•</span> Teachers creating engaging classroom activities</li>
+          <li className="flex gap-2"><span className="text-primary">•</span> Puzzle enthusiasts sharing challenges with friends</li>
+          <li className="flex gap-2"><span className="text-primary">•</span> Event organizers running team-building games</li>
+          <li className="flex gap-2"><span className="text-primary">•</span> Parents creating fun activities for kids</li>
+          <li className="flex gap-2"><span className="text-primary">•</span> Writers and game designers developing content</li>
+          <li className="flex gap-2"><span className="text-primary">•</span> Anyone wanting to create personalized cryptograms</li>
+        </ul>
+      </div>
+
       {/* Quick Examples */}
       <div className="bg-primary/10 border-2 border-dashed border-primary/30 rounded-xl p-6 mb-8">
         <h2 className="text-primary font-semibold mb-4">Quick examples — click to auto-fill:</h2>
@@ -205,7 +221,7 @@ export default function CryptogramGenerator() {
       {/* Info Section */}
       <div className="mt-8 bg-secondary/10 border border-secondary/20 rounded-lg p-6">
         <h3 className="font-semibold text-foreground mb-3">How Cryptograms Work:</h3>
-        <ul className="space-y-2 text-sm text-muted-foreground">
+        <ul className="space-y-2 text-sm text-muted-foreground mb-6">
           <li className="flex gap-3">
             <span className="font-semibold text-foreground min-w-fit">1. Substitution:</span>
             <span>Each letter is replaced with another letter consistently throughout the message.</span>
@@ -223,6 +239,17 @@ export default function CryptogramGenerator() {
             <span>Solvers can figure out the letter substitution to reveal the original message.</span>
           </li>
         </ul>
+
+        <div className="pt-6 border-t border-secondary/20">
+          <h4 className="font-semibold text-foreground mb-3">How to Use the Cryptogram Generator:</h4>
+          <ol className="space-y-2 text-sm text-muted-foreground">
+            <li><span className="font-semibold text-foreground">1. Choose Input:</span> Select a random quote or enter your own custom text</li>
+            <li><span className="font-semibold text-foreground">2. Set Difficulty:</span> Pick Easy (most hints), Medium (some hints), or Hard (no hints)</li>
+            <li><span className="font-semibold text-foreground">3. Generate:</span> Click "Generate Cryptogram" to create your puzzle</li>
+            <li><span className="font-semibold text-foreground">4. Share:</span> Copy the shareable link or the puzzle text to send to friends</li>
+            <li><span className="font-semibold text-foreground">5. Keep Secret:</span> The solution is shown only to you—don't share it!</li>
+          </ol>
+        </div>
       </div>
     </div>
   )

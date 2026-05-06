@@ -1,4 +1,5 @@
 import CryptogramGenerator from "@/components/cryptogram-generator"
+import { SiteHeader } from "@/components/site-header"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 export default function CryptogramGeneratorPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SiteHeader />
       <main className="flex-1 py-12">
         <CryptogramGenerator />
       </main>

@@ -88,6 +88,12 @@ const tools = [
     description: "Create custom cryptogram generator puzzles to challenge your friends. Generate substitution cipher cryptograms with adjustable difficulty levels and share via link.",
     href: "/tools/cryptogram-solver",
     category: "Word Games"
+  },
+  {
+    title: "Cryptogram Solver",
+    description: "Free cryptogram solver tool to decode substitution cipher puzzles. Analyze letter frequencies, manipulate text, and solve cryptograms with interactive tools.",
+    href: "/tools/cryptogram-solver-free",
+    category: "Word Games"
   }
 ]
 

@@ -48,6 +48,12 @@ const tools = [
     category: "CSS Utilities"
   },
   {
+    title: "Camel Case Converter",
+    description: "Camel Case Converter - Convert any text to camelCase or PascalCase format instantly. Supports snake_case, kebab-case, space-separated text, and batch processing for multiple lines.",
+    href: "/tools/camel-case-converter",
+    category: "Text Formatting"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

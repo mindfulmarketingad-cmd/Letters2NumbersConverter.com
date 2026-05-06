@@ -54,6 +54,22 @@ export default function CryptogramSolver() {
         </p>
       </div>
 
+      {/* Who It's For */}
+      <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 mb-8">
+        <h2 className="font-semibold text-foreground mb-3">Who It's For</h2>
+        <p className="text-muted-foreground mb-3">
+          This cryptogram solver is perfect for:
+        </p>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-muted-foreground">
+          <li className="flex gap-2"><span className="text-primary">•</span> Puzzle enthusiasts and word game lovers</li>
+          <li className="flex gap-2"><span className="text-primary">•</span> Teachers and students learning about ciphers</li>
+          <li className="flex gap-2"><span className="text-primary">•</span> Cryptography hobbyists and code breakers</li>
+          <li className="flex gap-2"><span className="text-primary">•</span> Anyone solving cryptograms from newspapers or books</li>
+          <li className="flex gap-2"><span className="text-primary">•</span> Game enthusiasts playing word puzzle challenges</li>
+          <li className="flex gap-2"><span className="text-primary">•</span> Writers and puzzle creators testing their ciphers</li>
+        </ul>
+      </div>
+
       {/* Main Input */}
       <div className="bg-card border border-border rounded-xl p-6 mb-6">
         <label className="block text-sm font-semibold text-foreground mb-3">The cipher text to decode:</label>
@@ -239,6 +255,16 @@ export default function CryptogramSolver() {
             <span>Use the frequency analysis and tips to figure out letter substitutions</span>
           </li>
         </ul>
+
+        <div className="mt-6 pt-6 border-t border-secondary/20">
+          <h4 className="font-semibold text-foreground mb-3">How Cryptogram Solving Works:</h4>
+          <p className="text-sm text-muted-foreground mb-3">
+            Cryptogram solving relies on frequency analysis and pattern recognition. Each letter is consistently replaced with another letter throughout the message. By analyzing which letters appear most frequently and recognizing common word patterns, you can deduce the substitution key and reveal the original message.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            This solver provides letter frequency analysis showing which letters appear most often (common letters in English like E, T, A tend to appear frequently in ciphers too), text manipulation tools to format your puzzle, and helpful solving tips to guide you toward the solution.
+          </p>
+        </div>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useState, useMemo } from "react"
 import { Copy, ClipboardPaste, Download, RotateCcw } from "lucide-react"
 import { generateJavaCode } from "@/lib/json-to-java-generator"
 
@@ -9,13 +9,11 @@ export function JsonToJavaGenerator() {
   const [className, setClassName] = useState("JsonObject")
   const [error, setError] = useState("")
 
-  const generate = useCallback(() => {
+  const output = useMemo(() => {
     if (!input.trim()) {
-      setError("")
       return ""
     }
     try {
-      setError("")
       return generateJavaCode(input, className)
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : "Generation failed"
@@ -23,8 +21,6 @@ export function JsonToJavaGenerator() {
       return ""
     }
   }, [input, className])
-
-  const output = generate()
 
   const copyToClipboard = () => {
     if (output) {
@@ -56,6 +52,15 @@ export function JsonToJavaGenerator() {
   const clearAll = () => {
     setInput("")
     setError("")
+  }
+
+  const handleConvert = () => {
+    if (!input.trim()) {
+      setError("Please enter JSON content")
+      return
+    }
+    // Re-trigger the memoized output calculation
+    setInput(input)
   }
 
   return (

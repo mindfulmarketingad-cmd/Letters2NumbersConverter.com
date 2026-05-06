@@ -86,7 +86,7 @@ const tools = [
   {
     title: "Cryptogram Generator",
     description: "Create custom cryptogram generator puzzles to challenge your friends. Generate substitution cipher cryptograms with adjustable difficulty levels and share via link.",
-    href: "/tools/cryptogram-solver",
+    href: "/tools/cryptogram-generator",
     category: "Word Games"
   },
   {

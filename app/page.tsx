@@ -145,11 +145,11 @@ export default function Home() {
                 </div>
                 <div className="inline-flex flex-col items-center gap-2 px-8 py-6 rounded-2xl bg-card border border-border">
                   <span className="text-4xl sm:text-5xl font-bold text-primary">Instant</span>
-                  <span className="text-muted-foreground font-medium">Results</span>
+                  <span className="text-muted-foreground font-medium">Results and Outputs</span>
                 </div>
                 <div className="inline-flex flex-col items-center gap-2 px-8 py-6 rounded-2xl bg-card border border-border">
                   <span className="text-4xl sm:text-5xl font-bold text-primary">0%</span>
-                  <span className="text-muted-foreground font-medium">Of Data Stored</span>
+                  <span className="text-muted-foreground font-medium">Data Stored</span>
                 </div>
               </div>
             </div>

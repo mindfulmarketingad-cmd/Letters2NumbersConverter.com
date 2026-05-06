@@ -54,6 +54,12 @@ const tools = [
     category: "Text Formatting"
   },
   {
+    title: "Line Ending Converter",
+    description: "Line Ending Converter - Convert line endings between Windows (CRLF), Unix/Mac (LF), and old Mac (CR) formats for cross-platform compatibility.",
+    href: "/tools/line-ending-converter",
+    category: "Text Formatting"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

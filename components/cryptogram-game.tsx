@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useState, useEffect } from "react"
 import { initializeCryptogramGame, makeGuess, getDisplayText, getEncryptedLetters, calculateScore, CryptogramGameState } from "@/lib/cryptogram-game"
 import { RotateCcw, Volume2, CheckCircle, XCircle } from "lucide-react"
@@ -207,6 +208,17 @@ export default function CryptogramGame() {
             )
           })}
         </div>
+      </div>
+
+      {/* Helper Link */}
+      <div className="mt-8 bg-primary/5 border border-primary/20 rounded-lg p-6 text-center">
+        <p className="text-foreground mb-3">Need help solving a cryptogram puzzle?</p>
+        <Link
+          href="/tools/cryptogram-solver-free"
+          className="inline-block px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+        >
+          Use the Cryptogram Solver
+        </Link>
       </div>
     </div>
   )

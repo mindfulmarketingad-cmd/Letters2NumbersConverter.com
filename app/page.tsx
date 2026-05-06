@@ -105,7 +105,7 @@ export default function Home() {
                 #1 Free Online Decoder Tool
               </div>
               <h1 id="converter" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance leading-tight">
-                Letters to Numbers Converter Tool
+                Letters to Numbers <span className="text-primary">Converter</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
                 The best site for decoding messages. Convert letters into numbers instantly with our free letters to numbers converter tool. Type or paste your text, choose your encoding type, and see the result. Punctuation and special characters are automatically ignored.

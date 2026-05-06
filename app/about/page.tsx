@@ -1,33 +1,17 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
+import { SiteHeader } from "@/components/site-header"
 
 export const metadata: Metadata = {
-  title: "What is Letters to Numbers Converter | Letter2Num",
-  description: "Learn about Letter2Num - a free online tool for converting letters to numbers using A1Z26, ASCII, hexadecimal, and binary encoding.",
+  title: "What is Letters to Numbers Converter | Letters2Numbers",
+  description: "Learn about Letters to Numbers Converter - a free online tool for converting letters to numbers using A1Z26, ASCII, hexadecimal, and binary encoding.",
 }
 
 export default function About() {
   return (
     <main className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">A1</span>
-            </div>
-            <span className="font-semibold text-foreground hidden sm:inline">
-              Letter2Num
-            </span>
-          </Link>
-          <nav className="flex items-center gap-6 text-sm text-muted-foreground">
-            <Link href="/contact" className="hover:text-foreground transition-colors">
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <article className="py-12 sm:py-16">
         <div className="container mx-auto px-4 max-w-3xl">
@@ -45,7 +29,7 @@ export default function About() {
 
           <div className="prose prose-neutral dark:prose-invert max-w-none">
             <p className="text-foreground leading-relaxed mb-6 text-lg">
-              Letter2Num is a free online tool designed to instantly convert letters into their corresponding numerical values. Whether you need to decode a geocaching puzzle, solve an escape room cipher, work on a CTF challenge, or simply understand how computers represent text as numbers, our converter provides quick and accurate results across multiple encoding formats.
+            Letter2Num is a free online tool designed to instantly convert letters into their corresponding numerical values. Whether you need to decode a geocaching puzzle, solve an escape room cipher, work on a CTF challenge, or simply understand how computers represent text as numbers, our converter provides quick and accurate results across multiple encoding formats.
             </p>
 
             <p className="text-foreground leading-relaxed mb-6 text-lg">

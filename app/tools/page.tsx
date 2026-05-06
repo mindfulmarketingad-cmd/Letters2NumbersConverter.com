@@ -30,6 +30,12 @@ const tools = [
     category: "Code Generation"
   },
   {
+    title: "Mayan Numeral Converter",
+    description: "Mayan Numeral Converter - Convert decimal numbers to ancient Mayan base-20 vigesimal numerals with visual dot, bar, and shell symbols. Learn about the sophisticated mathematics of the Maya civilization.",
+    href: "/tools/mayan-numeral-converter",
+    category: "Numeral Systems"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

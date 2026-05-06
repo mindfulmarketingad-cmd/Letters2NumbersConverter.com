@@ -4,7 +4,7 @@ import { useState, useMemo } from "react"
 import { Copy, RotateCcw, X } from "lucide-react"
 import {
   decimalToCistercian,
-  getSymbolRepresentation,
+  getCompositeGlyph,
   getDetailedBreakdown,
   isValidCistercianNumber,
   getAllCistercianSymbols,
@@ -40,7 +40,7 @@ export function CistercianConverter() {
 
   const symbolRepresentation = useMemo(() => {
     if (!input.trim() || !isValidCistercianNumber(input)) return ""
-    return getSymbolRepresentation(parseInt(input))
+    return getCompositeGlyph(parseInt(input))
   }, [input])
 
   const handleClear = () => {
@@ -207,7 +207,7 @@ export function CistercianConverter() {
                 <div key={index} className="bg-background border border-border rounded p-4 space-y-2">
                   <p className="text-xs font-semibold text-muted-foreground uppercase">{part.position}</p>
                   <p className="text-2xl font-bold text-foreground">{part.symbol}</p>
-                  <p className="text-sm text-muted-foreground">Value: {part.value}</p>
+                  <p className="text-sm text-muted-foreground">{part.description}</p>
                 </div>
               ))}
             </div>

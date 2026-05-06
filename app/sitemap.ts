@@ -227,6 +227,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/a0z25-cipher`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/a1z26-translator`,
       lastModified: new Date(),
       changeFrequency: 'monthly',

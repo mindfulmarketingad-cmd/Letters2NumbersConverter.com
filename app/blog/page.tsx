@@ -12,6 +12,13 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "a0z25-cipher",
+    title: "A0Z25 Cipher",
+    description: "Complete guide to the A0Z25 cipher - a zero-indexed letter-to-number encoding system where A=0 and Z=25, used in programming, cryptography, and puzzle solving.",
+    image: "/images/blog/a0z25-cipher-hero.jpg",
+    imageAlt: "A0Z25 cipher chart showing zero-indexed alphabet mapping from A=0 to Z=25",
+  },
+  {
     slug: "best-cipher-locks",
     title: "Best Cipher Locks 2024 - Reviews & Buying Guide",
     description: "Discover the top 5 best cipher locks on Amazon. Read detailed reviews, compare features, and find the perfect combination padlock for your needs.",

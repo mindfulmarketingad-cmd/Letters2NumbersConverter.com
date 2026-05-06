@@ -60,6 +60,12 @@ const tools = [
     category: "Text Formatting"
   },
   {
+    title: "Decimal to Hexadecimal Converter Online",
+    description: "Decimal to Hexadecimal Converter Online - Convert decimal numbers to hexadecimal format instantly. Supports values up to 19 digits. Free online conversion tool.",
+    href: "/tools/decimal-to-hexadecimal-converter-online",
+    category: "Number Systems"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

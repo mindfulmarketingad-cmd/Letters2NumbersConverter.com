@@ -42,6 +42,12 @@ const tools = [
     category: "Numeral Systems"
   },
   {
+    title: "PX To VW Converter",
+    description: "PX To VW Converter - Free responsive design tool to convert between pixels (px) and viewport width (vw) CSS units. Perfect for creating responsive layouts with preset viewport sizes.",
+    href: "/tools/px-vw-converter",
+    category: "CSS Utilities"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

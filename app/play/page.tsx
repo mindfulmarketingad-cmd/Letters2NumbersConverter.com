@@ -21,6 +21,12 @@ const games = [
     href: "/play/cryptogram-game-online",
     badge: "Popular",
   },
+  {
+    title: "Escape Room",
+    description: "Solve cipher puzzles and escape the room! Test your decoding skills with A1Z26, Morse code, binary, and riddle challenges in immersive environments.",
+    href: "/play/escape-room",
+    badge: "Featured",
+  },
 ]
 
 export default function PlayPage() {

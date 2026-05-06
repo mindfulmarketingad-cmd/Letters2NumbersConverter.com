@@ -1,0 +1,26 @@
+# Allow all bots to crawl and index the site
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*.json$
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Site specific crawl-delay (in seconds)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.letters2numbersconverter.com/sitemap.xml
+Sitemap: https://www.letters2numbersconverter.com/sitemap-0.xml
+
+# Additional sitemaps if needed
+# Sitemap: https://www.letters2numbersconverter.com/blog-sitemap.xml

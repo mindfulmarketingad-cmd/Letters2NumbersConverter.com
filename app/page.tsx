@@ -136,11 +136,21 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Big Trust Stat */}
+            {/* Big Trust Stats */}
             <div className="mt-12 text-center">
-              <div className="inline-flex flex-col items-center gap-2 px-8 py-6 rounded-2xl bg-card border border-border">
-                <span className="text-4xl sm:text-5xl font-bold text-primary">100M+</span>
-                <span className="text-muted-foreground font-medium">Codes Deciphered and Counting</span>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+                <div className="inline-flex flex-col items-center gap-2 px-8 py-6 rounded-2xl bg-card border border-border">
+                  <span className="text-4xl sm:text-5xl font-bold text-primary">100M+</span>
+                  <span className="text-muted-foreground font-medium">Codes Deciphered and Counting</span>
+                </div>
+                <div className="inline-flex flex-col items-center gap-2 px-8 py-6 rounded-2xl bg-card border border-border">
+                  <span className="text-4xl sm:text-5xl font-bold text-primary">Instant</span>
+                  <span className="text-muted-foreground font-medium">Results and Outputs</span>
+                </div>
+                <div className="inline-flex flex-col items-center gap-2 px-8 py-6 rounded-2xl bg-card border border-border">
+                  <span className="text-4xl sm:text-5xl font-bold text-primary">0%</span>
+                  <span className="text-muted-foreground font-medium">Data Stored</span>
+                </div>
               </div>
             </div>
           </div>

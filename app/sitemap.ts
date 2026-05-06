@@ -209,7 +209,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/tools/audio-spectrogram`,
+      url: `${baseUrl}/tools/audio-spectrogram-decoder`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

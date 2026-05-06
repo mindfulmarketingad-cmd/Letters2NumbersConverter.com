@@ -42,9 +42,9 @@ const tools = [
     category: "Analysis"
   },
   {
-    title: "Audio Spectrogram Analyzer",
-    description: "Visualize audio frequencies and detect hidden messages. Upload WAV, FLAC, OGG, MP3, or M4A files to generate spectrograms for audio steganography analysis.",
-    href: "/tools/audio-spectrogram",
+    title: "Spectrogram Decoder",
+    description: "Free spectrogram decoder tool to analyze audio frequencies and detect hidden messages. Upload WAV, FLAC, OGG, MP3, or M4A files to generate spectrograms for audio steganography analysis.",
+    href: "/tools/audio-spectrogram-decoder",
     category: "Analysis"
   },
   {

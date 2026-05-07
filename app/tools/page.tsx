@@ -78,6 +78,12 @@ const tools = [
     category: "Numeral Systems"
   },
   {
+    title: "Fill In The Blanks Equation Solver",
+    description: "Fill In The Blanks Equation Solver - Solve math puzzles with missing digits or operators. Enter equations with ? and find all possible solutions instantly. Free online tool.",
+    href: "/tools/fill-in-the-blanks-equation-solver",
+    category: "Math Solvers"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

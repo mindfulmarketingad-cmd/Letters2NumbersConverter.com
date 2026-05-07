@@ -112,7 +112,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="w-full mx-auto max-h-screen overflow-hidden bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-lg">
+            <div className="w-full mx-auto bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-lg">
               <LetterNumberConverter />
             </div>
 

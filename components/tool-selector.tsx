@@ -97,22 +97,17 @@ export function ToolSelector({ onSelect }: ToolSelectorProps) {
             ) : (
               <div className="p-3 space-y-4">
                 {categorizedTools.map(({ category, tools }) => (
-                  <div key={category}>
-                    <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2 px-2">
-                      {category}
-                    </h3>
-                    <div className="space-y-1">
-                      {tools.map((tool) => (
-                        <button
-                          key={tool.id}
-                          onClick={() => handleSelect(tool.id)}
-                          className="w-full text-left p-2 rounded-md hover:bg-secondary transition-colors text-sm"
-                        >
-                          <div className="font-semibold">{tool.name}</div>
-                          <div className="text-xs text-muted-foreground line-clamp-1">{tool.description}</div>
-                        </button>
-                      ))}
-                    </div>
+                  <div key={category} className="space-y-1">
+                    {tools.map((tool) => (
+                      <button
+                        key={tool.id}
+                        onClick={() => handleSelect(tool.id)}
+                        className="w-full text-left p-2 rounded-md hover:bg-secondary transition-colors text-sm"
+                      >
+                        <div className="font-semibold">{tool.name}</div>
+                        <div className="text-xs text-muted-foreground line-clamp-1">{tool.description}</div>
+                      </button>
+                    ))}
                   </div>
                 ))}
               </div>

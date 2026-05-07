@@ -15,6 +15,17 @@ export function ToolDescription({ toolName, toolDescription, toolData }: ToolDes
 
   return (
     <div className="space-y-8">
+      {/* Site Logo */}
+      <Link href="/" className="inline-flex items-center gap-3 group mb-4">
+        <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
+          <span className="text-primary-foreground font-bold text-base tracking-tight">L2N</span>
+        </div>
+        <div>
+          <p className="text-sm font-semibold text-foreground">Letters to Numbers</p>
+          <p className="text-xs text-muted-foreground">Trusted Conversion Tools</p>
+        </div>
+      </Link>
+
       {/* Tool Header */}
       <div>
         <h1 className="text-4xl font-bold mb-4">{toolName}</h1>

@@ -1,7 +1,8 @@
 'use client'
 
-import { Plus, Share2, Save, Maximize2 } from 'lucide-react'
+import { Plus, Save, Maximize2 } from 'lucide-react'
 import { ToolSelector } from '@/components/tool-selector'
+import { ShareMenu } from '@/components/share-menu'
 import { LetterNumberConverter } from '@/components/letter-number-converter'
 
 interface WorkAreaProps {
@@ -12,11 +13,6 @@ export function WorkArea({ toolComponent }: WorkAreaProps) {
   const handleSave = () => {
     // Save functionality
     console.log('[v0] Save button clicked')
-  }
-
-  const handleShare = () => {
-    // Share functionality
-    console.log('[v0] Share button clicked')
   }
 
   const handleFullscreen = () => {
@@ -37,13 +33,7 @@ export function WorkArea({ toolComponent }: WorkAreaProps) {
       <div className="flex items-center gap-2 p-4 border-b border-border bg-secondary">
         <ToolSelector />
 
-        <button
-          onClick={handleShare}
-          className="p-2 hover:bg-background rounded-lg transition-colors"
-          title="Share"
-        >
-          <Share2 className="w-5 h-5" />
-        </button>
+        <ShareMenu />
 
         <button
           onClick={handleSave}

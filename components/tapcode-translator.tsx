@@ -22,17 +22,6 @@ export function TapcodeTranslator() {
 
   return (
     <div className="w-full space-y-8">
-      {/* Description */}
-      <div className="bg-amber-100/50 border border-amber-500/30 rounded-lg p-6">
-        <h2 className="text-sm font-semibold text-foreground mb-2">About Tapcode</h2>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          Tapcode Translator converts messages into tap code, a simple communication method using rhythmic tapping patterns. Each letter is encoded as two numbers (row and column) on a 5×5 grid, then transmitted as taps separated by pauses.
-        </p>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          <strong>Historic Use:</strong> Widely used by prisoners in Vietnam War POW camps as a covert communication method, also known as knock code or Smitty code.
-        </p>
-      </div>
-
       {/* Main Tool */}
       <div className="space-y-6 bg-card border border-border rounded-lg p-6">
         {/* Message Input */}

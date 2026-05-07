@@ -94,17 +94,6 @@ export function SkipCipherTool() {
 
   return (
     <div className="w-full space-y-8">
-      {/* Description */}
-      <div className="bg-amber-100/50 border border-amber-500/30 rounded-lg p-6">
-        <h2 className="text-sm font-semibold text-foreground mb-2">About Skip Cipher</h2>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          The Skip Cipher (or Jump Cipher) is a transposition cipher which reorders the letters of a message by extracting a letter every n characters (in other words, by jumping n characters or skipping n−1). This classic cipher is useful for understanding basic cryptography and message obfuscation.
-        </p>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          <strong>How it works:</strong> Starting from an initial position, the cipher extracts every nth character from the plaintext to create the ciphertext.
-        </p>
-      </div>
-
       {/* Tabs */}
       <div className="flex gap-2 border-b border-border">
         <button

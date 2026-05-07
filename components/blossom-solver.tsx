@@ -49,17 +49,6 @@ export function BlossomSolver() {
 
   return (
     <div className="w-full space-y-8">
-      {/* Description */}
-      <div className="bg-amber-100/50 border border-amber-500/30 rounded-lg p-6">
-        <h2 className="text-sm font-semibold text-foreground mb-2">About Blossom Solver</h2>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          A Blossom solver is an online tool designed to help players of the Merriam-Webster "Blossom" daily word game. It works by taking the seven letters provided (one center letter and six surrounding "petal" letters) and generating all possible word combinations.
-        </p>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          <strong>Goal:</strong> Find high-scoring words, including pangrams (words using all 7 letters).
-        </p>
-      </div>
-
       {/* Input Section */}
       <div className="space-y-6 bg-card border border-border rounded-lg p-6">
         <div className="space-y-3">

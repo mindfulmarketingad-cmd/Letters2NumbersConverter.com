@@ -62,17 +62,6 @@ export function LongestWordSolver() {
 
   return (
     <div className="w-full space-y-8">
-      {/* Description */}
-      <div className="bg-amber-100/50 border border-amber-500/30 rounded-lg p-6">
-        <h2 className="text-sm font-semibold text-foreground mb-2">About This Tool</h2>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          Longest Word Using These Letters Solver is a tool that helps you find words you can make with the letters you provide. The largest words from the input are shown first.
-        </p>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          <strong>Features:</strong> Find the longest possible words, filter by letter count, starting letters, or containing letters.
-        </p>
-      </div>
-
       {/* Input Section */}
       <div className="space-y-6 bg-card border border-border rounded-lg p-6">
         <div className="space-y-3">

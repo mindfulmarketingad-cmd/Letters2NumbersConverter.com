@@ -141,7 +141,7 @@ export function CistercianConverter() {
       </div>
 
       {/* Conversion Section */}
-      <div className="bg-amber-100/50 border border-amber-500/30 rounded-lg p-6 space-y-4">
+      <div className="bg-card border border-border rounded-lg p-6 space-y-4">
         <h3 className="text-sm font-semibold text-foreground">Convert to Cistercian Number</h3>
 
         <div className="space-y-3">

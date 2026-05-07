@@ -47,17 +47,6 @@ export function PlayfairCipherSolver() {
 
   return (
     <div className="w-full space-y-8">
-      {/* Description */}
-      <div className="bg-amber-100/50 border border-amber-500/30 rounded-lg p-6">
-        <h2 className="text-sm font-semibold text-foreground mb-2">About Playfair Cipher</h2>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          The Playfair cipher is a classic digraph substitution that encrypts text in pairs of letters, invented by (Sir) Charles Wheatstone in 1854 and named after Lord Lyon Playfair who popularized its use.
-        </p>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          <strong>How it works:</strong> The Playfair cipher uses a 5×5 key square to encrypt pairs of letters. It's significantly more secure than simple substitution ciphers and was widely used in military and diplomatic communications.
-        </p>
-      </div>
-
       {/* Input Section */}
       <div className="space-y-6 bg-card border border-border rounded-lg p-6">
         <div className="space-y-3">

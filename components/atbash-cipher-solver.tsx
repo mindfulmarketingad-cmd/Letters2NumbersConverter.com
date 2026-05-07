@@ -58,17 +58,6 @@ export function AtbashCipherSolver() {
 
   return (
     <div className="w-full space-y-6">
-      {/* Description */}
-      <div className="bg-amber-100/50 border border-amber-500/30 rounded-lg p-6">
-        <h2 className="text-sm font-semibold text-foreground mb-2">About Atbash Cipher Decoder</h2>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          An Atbash cipher decoder is a tool used to reverse a simple substitution cipher where the alphabet is mirrored (A becomes Z, B becomes Y, etc.). It is an involutory system, meaning the same process works for both encryption and decryption.
-        </p>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          <strong>Key Feature:</strong> Atbash is symmetric - applying it twice returns the original message.
-        </p>
-      </div>
-
       {/* Controls */}
       <div className="space-y-4 bg-card border border-border rounded-lg p-6">
         <div>

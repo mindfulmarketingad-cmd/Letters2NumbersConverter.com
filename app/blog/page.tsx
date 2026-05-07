@@ -131,6 +131,13 @@ const blogPosts = [
     imageAlt: "Secret spy theme with coded messages and decoder ring",
   },
   {
+    slug: "skip-cipher",
+    title: "Skip Cipher",
+    description: "Skip Cipher (Jump Cipher) is a transposition cipher that reorders message letters by extracting every nth character. Learn its origin, mechanics, creation, and importance in cryptography.",
+    image: "/images/blog/skip-cipher-hero.jpg",
+    imageAlt: "Skip cipher diagram showing character extraction pattern and encryption process",
+  },
+  {
     slug: "letters-to-numbers-translator",
     title: "Letters to Numbers Translator",
     description: "Use our free letters to numbers translator to instantly convert any text to numerical values. Learn how letter-to-number translation works.",

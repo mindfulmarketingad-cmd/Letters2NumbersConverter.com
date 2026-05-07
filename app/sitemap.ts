@@ -233,6 +233,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/skip-cipher`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/letters-to-numbers-translator`,
       lastModified: new Date(),
       changeFrequency: 'monthly',

@@ -72,6 +72,12 @@ const tools = [
     category: "Numeral Systems"
   },
   {
+    title: "Egyptian Numbers Converter",
+    description: "Egyptian Numbers Converter - Convert decimal numbers to ancient Egyptian numerals and hieroglyphic symbols. Learn about the Egyptian numeral system used from 3000 BC.",
+    href: "/tools/egyptian-numbers-converter",
+    category: "Numeral Systems"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

@@ -2,13 +2,15 @@
 
 import Link from 'next/link'
 import { getToolRegistry } from '@/lib/tool-registry'
+import type { ToolData } from '@/components/tool-layout'
 
 interface ToolDescriptionProps {
   toolName: string
   toolDescription: string
+  toolData?: ToolData
 }
 
-export function ToolDescription({ toolName, toolDescription }: ToolDescriptionProps) {
+export function ToolDescription({ toolName, toolDescription, toolData }: ToolDescriptionProps) {
   const toolRegistry = getToolRegistry()
 
   return (
@@ -19,11 +21,26 @@ export function ToolDescription({ toolName, toolDescription }: ToolDescriptionPr
         <p className="text-lg text-muted-foreground">{toolDescription}</p>
       </div>
 
+      {/* Who Is It For */}
+      {toolData?.whoIsItFor && toolData.whoIsItFor.length > 0 && (
+        <div className="space-y-3">
+          <h2 className="text-xl font-semibold">Who Is It For?</h2>
+          <div className="space-y-2">
+            {toolData.whoIsItFor.map((item, idx) => (
+              <div key={idx} className="bg-card border border-border rounded-lg p-3">
+                <p className="font-medium text-foreground">{item.title}</p>
+                <p className="text-sm text-muted-foreground">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* How It Works */}
       <div className="space-y-2">
         <h2 className="text-xl font-semibold">How It Works</h2>
         <p className="text-muted-foreground">
-          Use the interactive tool on the left to encode, decode, or solve your input. The tool provides real-time results as you type or make selections.
+          {toolData?.howItWorks || "Use the interactive tool on the left to encode, decode, or solve your input. The tool provides real-time results as you type or make selections."}
         </p>
       </div>
 
@@ -31,10 +48,18 @@ export function ToolDescription({ toolName, toolDescription }: ToolDescriptionPr
       <div className="space-y-2">
         <h2 className="text-xl font-semibold">Features</h2>
         <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-          <li>Real-time processing with instant results</li>
-          <li>Works completely offline - no data sent to servers</li>
-          <li>Copy results to clipboard easily</li>
-          <li>Free and always available</li>
+          {toolData?.features && toolData.features.length > 0 ? (
+            toolData.features.map((feature, idx) => (
+              <li key={idx}>{feature}</li>
+            ))
+          ) : (
+            <>
+              <li>Real-time processing with instant results</li>
+              <li>Works completely offline - no data sent to servers</li>
+              <li>Copy results to clipboard easily</li>
+              <li>Free and always available</li>
+            </>
+          )}
         </ul>
       </div>
 

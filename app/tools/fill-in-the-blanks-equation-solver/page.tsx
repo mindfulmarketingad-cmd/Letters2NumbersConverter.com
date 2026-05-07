@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { EquationSolver } from "@/components/equation-solver"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Fill In The Blanks Equation Solver",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("fill-in-the-blanks-equation-solver")
+
 export default function EquationSolverPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function EquationSolverPage() {
       toolName="Fill In The Blanks Equation Solver"
       toolDescription="Find missing digits and operators in equations"
       toolComponent={<EquationSolver />}
+      toolData={toolData}
     />
   )
 }

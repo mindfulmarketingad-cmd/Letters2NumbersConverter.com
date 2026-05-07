@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { LineEndingConverter } from "@/components/line-ending-converter"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Line Ending Converter",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("line-ending-converter")
+
 export default function LineEndingConverterPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function LineEndingConverterPage() {
       toolName="Line Ending Converter"
       toolDescription="Convert between different line ending formats (LF, CRLF, CR) for cross-platform compatibility. Handle line break differences across Windows, Mac, and Unix systems effortlessly."
       toolComponent={<LineEndingConverter />}
+      toolData={toolData}
     />
   )
 }

@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { EscapeRoomBuilder } from "@/components/escape-room-builder"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Escape Room Builder",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("escape-room-builder")
+
 export default function EscapeRoomBuilderPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function EscapeRoomBuilderPage() {
       toolName="Escape Room Builder"
       toolDescription="Create and design interactive escape room puzzles"
       toolComponent={<EscapeRoomBuilder />}
+      toolData={toolData}
     />
   )
 }

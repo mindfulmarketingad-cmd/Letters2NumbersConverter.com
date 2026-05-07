@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { EgyptianConverter } from "@/components/egyptian-converter"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Egyptian Numbers Converter",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("egyptian-numbers-converter")
+
 export default function EgyptianNumbersConverterPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function EgyptianNumbersConverterPage() {
       toolName="Egyptian Numbers Converter"
       toolDescription="Convert to and from ancient Egyptian hieroglyphic numerals"
       toolComponent={<EgyptianConverter />}
+      toolData={toolData}
     />
   )
 }

@@ -6,11 +6,18 @@ import { SiteFooter } from '@/components/site-footer'
 import { WorkArea } from '@/components/work-area'
 import { ToolDescription } from '@/components/tool-description'
 
+export interface ToolData {
+  howItWorks: string
+  features: string[]
+  whoIsItFor: { title: string; description: string }[]
+}
+
 interface ToolLayoutProps {
   toolId: string
   toolName: string
   toolDescription: string
   toolComponent: ReactNode
+  toolData?: ToolData
 }
 
 export function ToolLayout({
@@ -18,6 +25,7 @@ export function ToolLayout({
   toolName,
   toolDescription,
   toolComponent,
+  toolData,
 }: ToolLayoutProps) {
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -34,7 +42,7 @@ export function ToolLayout({
         <div className="w-full md:w-[55%] flex flex-col overflow-hidden">
           <div className="flex-1 overflow-y-auto">
             <div className="p-6 md:p-8 max-w-3xl">
-              <ToolDescription toolName={toolName} toolDescription={toolDescription} />
+              <ToolDescription toolName={toolName} toolDescription={toolDescription} toolData={toolData} />
             </div>
           </div>
         </div>

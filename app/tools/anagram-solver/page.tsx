@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import AnagramSolver from "@/components/anagram-solver"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Anagram Solver with Wildcard | Find All Possible Words",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("anagram-solver")
+
 export default function AnagramSolverPage() {
   return (
     <ToolLayout
@@ -20,6 +24,6 @@ export default function AnagramSolverPage() {
       toolName="Anagram Solver"
       toolDescription="Find all possible words from your letters with wildcard support. This powerful anagram solver helps you discover words for word games, crosswords, and language puzzles. Supports up to 3 wildcards (?) for advanced searching."
       toolComponent={<AnagramSolver />}
-    />
+      toolData={toolData}/>
   )
 }

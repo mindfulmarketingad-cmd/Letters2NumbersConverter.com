@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { NatoAlphabetConverter } from "@/components/nato-alphabet-converter"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "NATO Phonetic Alphabet Translator",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("nato-phonetic-alphabet")
+
 export default function NatoPhoneticAlphabetPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function NatoPhoneticAlphabetPage() {
       toolName="NATO Phonetic Alphabet Translator"
       toolDescription="Convert text to NATO phonetic alphabet spelling"
       toolComponent={<NatoAlphabetConverter />}
+      toolData={toolData}
     />
   )
 }

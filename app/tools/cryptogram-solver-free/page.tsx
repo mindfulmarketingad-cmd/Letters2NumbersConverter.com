@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import CryptogramSolver from "@/components/cryptogram-solver"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Cryptogram Solver Free",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("cryptogram-solver-free")
+
 export default function CryptogramSolverFreePage() {
   return (
     <ToolLayout
@@ -20,6 +24,6 @@ export default function CryptogramSolverFreePage() {
       toolName="Cryptogram Solver Free"
       toolDescription="Solve substitution cipher cryptograms"
       toolComponent={<CryptogramSolver />}
-    />
+      toolData={toolData}/>
   )
 }

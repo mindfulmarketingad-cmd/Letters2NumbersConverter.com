@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { LongestWordSolver } from "@/components/longest-word-solver"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Longest Word Using These Letters Solver",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("longest-word-using-these-letters-solver")
+
 export default function LongestWordPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function LongestWordPage() {
       toolName="Longest Word Using These Letters Solver"
       toolDescription="Find the longest words you can make from any set of letters. Instantly discover all possible words ranked by length with advanced filtering options for word games and puzzles."
       toolComponent={<LongestWordSolver />}
+      toolData={toolData}
     />
   )
 }

@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { AudioSpectrogram } from "@/components/audio-spectrogram"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Audio Spectrogram Analyzer",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("audio-spectrogram")
+
 export default function AudioSpectrogramPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function AudioSpectrogramPage() {
       toolName="Audio Spectrogram Analyzer"
       toolDescription="Visualize audio frequencies and analyze sound waves"
       toolComponent={<AudioSpectrogram />}
+      toolData={toolData}
     />
   )
 }

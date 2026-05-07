@@ -1,7 +1,6 @@
 import { Metadata } from "next"
 import { AtbashCipherSolver } from "@/components/atbash-cipher-solver"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
+import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Atbash Cipher Decoder",
@@ -15,39 +14,15 @@ export const metadata: Metadata = {
 }
 
 export default function AtbashCipherPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "Atbash Cipher Decoder",
-    description: "Free online tool to encode and decode Atbash cipher messages",
-    url: "https://letters2numbersconverter.com/tools/atbash-cipher-decoder",
-    applicationCategory: "UtilityApplication",
-  }
-
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="min-h-screen bg-background">
-        <SiteHeader />
-        <main className="flex-1">
-          <section className="py-12 sm:py-20">
-            <div className="container mx-auto px-4">
-              {/* Center Aligned Title */}
-              <div className="mb-12 text-center max-w-3xl mx-auto">
-                <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-4 text-balance">
-                  Atbash Cipher Decoder
-                </h1>
-                <p className="text-lg text-muted-foreground text-pretty">
-                  Atbash Cipher Decoder - Encrypt and decrypt messages using the ancient mirror alphabet substitution cipher. An involutory system where the same process works for both encryption and decryption.
-                </p>
-              </div>
-
-              {/* Main Tool */}
-              <div className="w-full mx-auto bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-lg mb-12">
-                <AtbashCipherSolver />
-              </div>
-
-              {/* How It Works */}
+    <ToolLayout
+      toolId="atbash-cipher"
+      toolName="Atbash Cipher Decoder"
+      toolDescription="Encrypt and decrypt messages using the ancient mirror alphabet substitution cipher. An involutory system where the same process works for both encryption and decryption. Perfect for cryptography enthusiasts and puzzle solvers."
+      toolComponent={<AtbashCipherSolver />}
+    />
+  )
+}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">Who Is This For?</h2>

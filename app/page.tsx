@@ -112,7 +112,9 @@ export default function Home() {
               </p>
             </div>
 
-            <LetterNumberConverter />
+            <div className="w-full mx-auto max-h-screen overflow-hidden bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-lg">
+              <LetterNumberConverter />
+            </div>
 
             {/* Trust Indicators */}
             <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mt-12 text-sm text-muted-foreground">

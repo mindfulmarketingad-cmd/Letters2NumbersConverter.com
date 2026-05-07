@@ -20,11 +20,14 @@ export function WorkArea({ toolComponent }: WorkAreaProps) {
 
   const handleFullscreen = () => {
     // Fullscreen functionality
-    const element = document.querySelector('[data-workarea]')
-    if (element?.requestFullscreen) {
-      element.requestFullscreen()
+    try {
+      const element = document.querySelector('[data-workarea]')
+      if (element?.requestFullscreen) {
+        element.requestFullscreen()
+      }
+    } catch (error) {
+      console.log('[v0] Fullscreen not available:', error)
     }
-    console.log('[v0] Fullscreen button clicked')
   }
 
   return (

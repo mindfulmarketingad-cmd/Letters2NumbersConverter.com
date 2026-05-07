@@ -1,7 +1,6 @@
 import { Metadata } from "next"
 import { BlossomSolver } from "@/components/blossom-solver"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
+import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Blossom Solver - Jump Cipher Online Encrypt Decrypt",
@@ -15,37 +14,15 @@ export const metadata: Metadata = {
 }
 
 export default function BlossomSolverPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "Blossom Solver",
-    description: "Help solve Merriam-Webster Blossom daily word game puzzles",
-    url: "https://letters2numbersconverter.com/tools/blossom-solver",
-    applicationCategory: "UtilityApplication",
-  }
-
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="min-h-screen bg-background">
-        <SiteHeader />
-        <main className="flex-1">
-          <section className="py-12 sm:py-20">
-            <div className="container mx-auto px-4">
-              {/* Center Aligned Title with Green "Solver" Word */}
-              <div className="mb-12 text-center max-w-3xl mx-auto">
-                <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-balance">
-                  <span className="text-foreground">Blossom </span><span className="text-green-600">Solver</span>
-                </h1>
-                <p className="text-lg text-muted-foreground text-pretty">
-                  Blossom Solver helps you master the Merriam-Webster Blossom daily word game. Enter your seven letters (one center letter and six petal letters) and discover all possible words to maximize your score.
-                </p>
-              </div>
-
-              {/* Main Tool */}
-              <div className="w-full mx-auto bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-lg mb-12">
-                <BlossomSolver />
-              </div>
+    <ToolLayout
+      toolId="blossom-solver"
+      toolName="Blossom Solver"
+      toolDescription="Help solve Merriam-Webster Blossom daily word game puzzles. Enter your seven letters (one center letter and six petal letters) and discover all possible words to maximize your score and find high-scoring pangrams."
+      toolComponent={<BlossomSolver />}
+    />
+  )
+}
 
               {/* How It Works */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">

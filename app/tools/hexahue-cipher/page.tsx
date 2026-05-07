@@ -1,7 +1,6 @@
 import { Metadata } from "next"
 import { HexahueCipherSolver } from "@/components/hexahue-cipher-solver"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
+import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Hexahue Cipher",
@@ -15,41 +14,15 @@ export const metadata: Metadata = {
 }
 
 export default function HexahueCipherPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "Hexahue Cipher",
-    description: "Color-based cipher tool for encoding text into visual Hexahue blocks",
-    url: "https://letters2numbersconverter.com/tools/hexahue-cipher",
-    applicationCategory: "UtilityApplication",
-    creator: {
-      "@type": "Person",
-      name: "Josh Cramer",
-    },
-  }
-
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="min-h-screen bg-background">
-        <SiteHeader />
-        <main className="flex-1">
-          <section className="py-12 sm:py-20">
-            <div className="container mx-auto px-4">
-              {/* Center Aligned Title */}
-              <div className="mb-12 text-center max-w-3xl mx-auto">
-                <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-4 text-balance">
-                  Hexahue Cipher
-                </h1>
-                <p className="text-lg text-muted-foreground text-pretty">
-                  Hexahue Cipher is a unique color-based encoding system that translates letters, numbers, and punctuation into visual blocks of easily distinguishable colors. Created by Josh Cramer, this innovative system uses common HTML color combinations for intuitive visual communication.
-                </p>
-              </div>
-
-              {/* Main Tool */}
-              <div className="w-full mx-auto bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-lg mb-12">
-                <HexahueCipherSolver />
-              </div>
+    <ToolLayout
+      toolId="hexahue-cipher"
+      toolName="Hexahue Cipher"
+      toolDescription="Hexahue Cipher is a unique color-based encoding system that translates text into visual blocks of easily distinguishable colors. Created by Josh Cramer, this innovative cipher uses common HTML color combinations for intuitive visual communication."
+      toolComponent={<HexahueCipherSolver />}
+    />
+  )
+}
 
               {/* How It Works */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">

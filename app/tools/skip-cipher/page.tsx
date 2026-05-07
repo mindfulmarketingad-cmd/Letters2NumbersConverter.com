@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { SkipCipherTool } from "@/components/skip-cipher"
+import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Skip Cipher - Jump Cipher Online Encrypt Decrypt",
@@ -13,31 +14,15 @@ export const metadata: Metadata = {
 }
 
 export default function SkipCipherPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "Skip Cipher",
-    description: "Skip Cipher (Jump Cipher) encryption and decryption tool with brute force capabilities",
-    url: "https://letters2numbersconverter.com/tools/skip-cipher",
-    applicationCategory: "UtilityApplication",
-  }
-
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <main className="flex-1">
-        <section className="py-12 sm:py-20">
-          <div className="container mx-auto px-4">
-            <div className="mb-12 text-center max-w-3xl mx-auto">
-              <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 text-balance">Skip Cipher</h1>
-              <p className="text-lg text-muted-foreground text-pretty">
-                The Skip Cipher (Jump Cipher) is a transposition cipher that reorders letters by extracting every nth character. Use this online tool to encrypt, decrypt, and analyze skip cipher messages.
-              </p>
-            </div>
-
-            <div className="w-full mx-auto bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-lg mb-12">
-              <SkipCipherTool />
-            </div>
+    <ToolLayout
+      toolId="skip-cipher"
+      toolName="Skip Cipher"
+      toolDescription="The Skip Cipher (Jump Cipher) is a transposition cipher that reorders letters by extracting every nth character. Use this online tool to encrypt, decrypt, and analyze skip cipher messages with advanced brute force capabilities."
+      toolComponent={<SkipCipherTool />}
+    />
+  )
+}
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
               <div className="space-y-4">

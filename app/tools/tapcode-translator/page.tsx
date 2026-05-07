@@ -1,7 +1,6 @@
 import { Metadata } from "next"
 import { TapcodeTranslator } from "@/components/tapcode-translator"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
+import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Instant Tapcode Translator | Letters2NumbersConverter.com",
@@ -15,37 +14,15 @@ export const metadata: Metadata = {
 }
 
 export default function TapcodePage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "Tapcode Translator",
-    description: "Translate messages to tap code patterns using the 5x5 grid cipher system",
-    url: "https://letters2numbersconverter.com/tools/tapcode-translator",
-    applicationCategory: "UtilityApplication",
-  }
-
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="min-h-screen bg-background">
-        <SiteHeader />
-        <main className="flex-1">
-          <section className="py-12 sm:py-20">
-            <div className="container mx-auto px-4">
-              {/* Center Aligned Title */}
-              <div className="mb-12 text-center max-w-3xl mx-auto">
-                <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-4 text-balance">
-                  Tapcode Translator
-                </h1>
-                <p className="text-lg text-muted-foreground text-pretty">
-                  Tapcode Translator converts your messages into rhythmic tap patterns. The tap code is a simple way to encode messages using knock sounds, historically used by prisoners in Vietnam War POW camps.
-                </p>
-              </div>
-
-              {/* Main Tool */}
-              <div className="w-full mx-auto bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-lg mb-12">
-                <TapcodeTranslator />
-              </div>
+    <ToolLayout
+      toolId="tapcode-translator"
+      toolName="Tapcode Translator"
+      toolDescription="Convert your messages into rhythmic tap patterns using the tap code system. This simple yet effective communication method uses a 5×5 grid and was historically used by POW prisoners during the Vietnam War."
+      toolComponent={<TapcodeTranslator />}
+    />
+  )
+}
 
               {/* Who Is This For */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">

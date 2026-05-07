@@ -9,7 +9,7 @@ import type { Metadata } from "next"
 import { generateWebPageSchema, generateHowToSchema, generateFAQSchema } from "@/lib/schema-markup"
 
 export const metadata: Metadata = {
-  title: "Letters to Numbers Converter Tool | Free Online A1Z26 Decoder",
+  title: "#1 Letters to Numbers Converter | Free Online A1Z26 Decoder",
   description: "Free letters to numbers converter tool. Convert A=1, B=2 through Z=26 instantly. Supports A1Z26, ASCII, hexadecimal, and binary encoding for puzzles, cryptography, geocaching, and data science.",
   keywords: ["letters to numbers converter tool", "letter to number converter", "A1Z26 cipher decoder", "alphabet to numbers", "text to numbers converter"],
   openGraph: {

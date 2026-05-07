@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { EscapeRoomBuilder } from "@/components/escaperoombuilder"
+import { EscapeRoomBuilder } from "@/components/escape-room-builder"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {

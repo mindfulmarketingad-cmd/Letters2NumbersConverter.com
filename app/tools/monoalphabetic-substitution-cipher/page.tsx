@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { MonoalphabeticSubstitutionCipher } from "@/components/monoalphabeticsubstitutioncipher"
+import { MonoalphabeticSubstitutionCipher } from "@/components/monoalphabetic-substitution-cipher"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {

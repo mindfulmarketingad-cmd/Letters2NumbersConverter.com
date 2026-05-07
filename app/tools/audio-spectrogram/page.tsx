@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { AudioSpectrogram } from "@/components/audiospectrogram"
+import { AudioSpectrogram } from "@/components/audio-spectrogram"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { PasswordStrengthTester } from "@/components/passwordstrengthtester"
+import { PasswordStrengthTester } from "@/components/password-strength-tester"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {

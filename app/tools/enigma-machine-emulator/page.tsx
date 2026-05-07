@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { EnigmaMachineEmulator } from "@/components/enigmamachineemulator"
+import { EnigmaMachineEmulator } from "@/components/enigma-machine-emulator"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {

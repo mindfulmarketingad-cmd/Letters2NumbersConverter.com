@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { CipherIdentifier } from "@/components/cipheridentifier"
+import { CipherIdentifier } from "@/components/cipher-identifier"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {

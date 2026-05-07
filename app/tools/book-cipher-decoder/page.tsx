@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { BookCipherDecoder } from "@/components/bookcipherdecoder"
+import { BookCipherDecoder } from "@/components/book-cipher-decoder"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {

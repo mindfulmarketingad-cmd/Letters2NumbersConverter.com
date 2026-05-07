@@ -52,17 +52,6 @@ export function HexahueCipherSolver() {
 
   return (
     <div className="w-full space-y-8">
-      {/* Description */}
-      <div className="bg-amber-100/50 border border-amber-500/30 rounded-lg p-6">
-        <h2 className="text-sm font-semibold text-foreground mb-2">About Hexahue Cipher</h2>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          Hexahue Cipher is a unique color-based encoding system invented by Josh Cramer. It uses combinations of common, easily distinguishable colors (red, green, blue, yellow, cyan, magenta) in HTML notation to represent letters, numbers, and punctuation. Each character is represented as a 2×4 grid of colored squares.
-        </p>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          <strong>Goal:</strong> Translate text into colorful visual blocks for unique communication and artistic expression.
-        </p>
-      </div>
-
       {/* Mode Selection */}
       <div className="flex gap-3 border-b border-border pb-4">
         <button

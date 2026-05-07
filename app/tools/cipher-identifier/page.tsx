@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { CipherIdentifier } from "@/components/cipher-identifier"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Cipher Identifier Tool",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("cipher-identifier")
+
 export default function CipherIdentifierPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function CipherIdentifierPage() {
       toolName="Cipher Identifier Tool"
       toolDescription="Identify and analyze cipher types from encrypted text"
       toolComponent={<CipherIdentifier />}
+      toolData={toolData}
     />
   )
 }

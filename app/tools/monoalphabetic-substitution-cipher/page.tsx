@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { MonoalphabeticSubstitutionCipher } from "@/components/monoalphabetic-substitution-cipher"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Monoalphabetic Substitution Cipher",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("monoalphabetic-substitution-cipher")
+
 export default function MonoalphabeticSubstitutionCipherPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function MonoalphabeticSubstitutionCipherPage() {
       toolName="Monoalphabetic Substitution Cipher"
       toolDescription="Encrypt and decrypt using monoalphabetic ciphers"
       toolComponent={<MonoalphabeticSubstitutionCipher />}
+      toolData={toolData}
     />
   )
 }

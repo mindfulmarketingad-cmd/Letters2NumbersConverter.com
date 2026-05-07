@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { EnigmaMachineEmulator } from "@/components/enigma-machine-emulator"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Enigma Machine Emulator",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("enigma-machine-emulator")
+
 export default function EnigmaMachineEmulatorPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function EnigmaMachineEmulatorPage() {
       toolName="Enigma Machine Emulator"
       toolDescription="Simulate the historical Enigma machine cipher device"
       toolComponent={<EnigmaMachineEmulator />}
+      toolData={toolData}
     />
   )
 }

@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { PxVwConverter } from "@/components/px-vw-converter"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "PX To VW Converter",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("px-vw-converter")
+
 export default function PxVwConverterPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function PxVwConverterPage() {
       toolName="PX To VW Converter"
       toolDescription="Convert between pixels (px) and viewport width (vw) units instantly. Essential tool for responsive web design, CSS calculations, and creating fluid layouts."
       toolComponent={<PxVwConverter />}
+      toolData={toolData}
     />
   )
 }

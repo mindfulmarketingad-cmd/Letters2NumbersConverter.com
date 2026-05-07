@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { PlayfairCipherSolver } from "@/components/playfair-cipher-solver"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Playfair Cipher Solver",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("playfair-cipher-solver")
+
 export default function PlayfairCipherSolverPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function PlayfairCipherSolverPage() {
       toolName="Playfair Cipher Solver"
       toolDescription="Encrypt and decrypt text using the classic Playfair digraph substitution cipher invented by Charles Wheatstone. This historic cipher uses a 5×5 key square to encrypt letter pairs, making it significantly more secure than simple substitution ciphers."
       toolComponent={<PlayfairCipherSolver />}
+      toolData={toolData}
     />
   )
 }

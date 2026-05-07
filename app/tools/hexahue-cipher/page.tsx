@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { HexahueCipherSolver } from "@/components/hexahue-cipher-solver"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Hexahue Cipher",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("hexahue-cipher")
+
 export default function HexahueCipherPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function HexahueCipherPage() {
       toolName="Hexahue Cipher"
       toolDescription="Hexahue Cipher is a unique color-based encoding system that translates text into visual blocks of easily distinguishable colors. Created by Josh Cramer, this innovative cipher uses common HTML color combinations for intuitive visual communication."
       toolComponent={<HexahueCipherSolver />}
+      toolData={toolData}
     />
   )
 }

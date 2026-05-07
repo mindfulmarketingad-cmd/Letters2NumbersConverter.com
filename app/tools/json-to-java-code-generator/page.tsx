@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { JsonToJavaGenerator } from "@/components/json-to-java-generator"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "JSON to Java Code Generator",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("json-to-java-code-generator")
+
 export default function JsonToJavaGeneratorPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function JsonToJavaGeneratorPage() {
       toolName="JSON to Java Code Generator"
       toolDescription="Generate Java code from JSON structure"
       toolComponent={<JsonToJavaGenerator />}
+      toolData={toolData}
     />
   )
 }

@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { BabylonianNumeralConverter } from "@/components/babylonian-numeral-converter"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Babylonian Numeral Converter",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("babylonian-numeral-converter")
+
 export default function BabylonianNumeralConverterPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function BabylonianNumeralConverterPage() {
       toolName="Babylonian Numeral Converter"
       toolDescription="Convert between decimal numbers and ancient Babylonian sexagesimal (base-60) numerals. Explore the sophisticated mathematical system used by Babylonians, Sumerians, and Akkadians."
       toolComponent={<BabylonianNumeralConverter />}
+      toolData={toolData}
     />
   )
 }

@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { PasswordStrengthTester } from "@/components/password-strength-tester"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Password Strength Tester",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("password-strength-tester")
+
 export default function PasswordStrengthTesterPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function PasswordStrengthTesterPage() {
       toolName="Password Strength Tester"
       toolDescription="Test and analyze password security"
       toolComponent={<PasswordStrengthTester />}
+      toolData={toolData}
     />
   )
 }

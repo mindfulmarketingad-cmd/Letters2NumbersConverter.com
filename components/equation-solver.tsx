@@ -69,17 +69,6 @@ export function EquationSolver() {
 
   return (
     <div className="w-full space-y-8">
-      {/* Description */}
-      <div className="bg-amber-100/50 border border-amber-500/30 rounded-lg p-6">
-        <h2 className="text-sm font-semibold text-foreground mb-2">About Fill In The Blanks Equation Solver</h2>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          The Fill In The Blanks Equation Solver Online helps you find missing digits or operators in mathematical equations. Simply enter an equation with "?" representing the unknown value, and the tool will find all possible solutions.
-        </p>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          <strong>Examples:</strong> "127 + 756 = 77?" (missing digit) or "127 ? 756 = 883" (missing operator)
-        </p>
-      </div>
-
       {/* Mode Selection */}
       <div className="space-y-3">
         <label className="text-sm font-medium text-foreground">Search For:</label>

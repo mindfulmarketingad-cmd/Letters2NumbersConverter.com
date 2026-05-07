@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { AtbashCipherSolver } from "@/components/atbash-cipher-solver"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Atbash Cipher Decoder",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("atbash-cipher-decoder")
+
 export default function AtbashCipherPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function AtbashCipherPage() {
       toolName="Atbash Cipher Decoder"
       toolDescription="Encrypt and decrypt messages using the ancient mirror alphabet substitution cipher. An involutory system where the same process works for both encryption and decryption. Perfect for cryptography enthusiasts and puzzle solvers."
       toolComponent={<AtbashCipherSolver />}
+      toolData={toolData}
     />
   )
 }

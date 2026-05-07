@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { SkipCipherTool } from "@/components/skip-cipher"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Skip Cipher - Jump Cipher Online Encrypt Decrypt",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("skip-cipher")
+
 export default function SkipCipherPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function SkipCipherPage() {
       toolName="Skip Cipher"
       toolDescription="The Skip Cipher (Jump Cipher) is a transposition cipher that reorders letters by extracting every nth character. Use this online tool to encrypt, decrypt, and analyze skip cipher messages with advanced brute force capabilities."
       toolComponent={<SkipCipherTool />}
+      toolData={toolData}
     />
   )
 }

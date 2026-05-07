@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { TapcodeTranslator } from "@/components/tapcode-translator"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Instant Tapcode Translator | Letters2NumbersConverter.com",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("tapcode-translator")
+
 export default function TapcodePage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function TapcodePage() {
       toolName="Tapcode Translator"
       toolDescription="Convert your messages into rhythmic tap patterns using the tap code system. This simple yet effective communication method uses a 5×5 grid and was historically used by POW prisoners during the Vietnam War."
       toolComponent={<TapcodeTranslator />}
+      toolData={toolData}
     />
   )
 }

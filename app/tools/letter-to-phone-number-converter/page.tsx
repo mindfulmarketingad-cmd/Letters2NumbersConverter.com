@@ -1,6 +1,7 @@
 import { Metadata } from "next"
+import { getToolData } from "@/lib/tool-data"
 import { PhoneNumberConverter } from "@/components/phone-number-converter"
-import { ToolLayout } from "@/components/tool-layout"
+import { ToolLayout, type ToolData } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Phone Number Converter - Letters to Numbers Converter",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   },
 }
 
+
+const toolData: ToolData = getToolData("letter-to-phone-number-converter")
+
 export default function PhoneNumberConverterPage() {
   return (
     <ToolLayout
@@ -20,6 +24,7 @@ export default function PhoneNumberConverterPage() {
       toolName="Phone Number Converter"
       toolDescription="Convert letters to phone number digits using T9/multi-tap phone keypad mapping. Perfect for decoding phone-based text messages and understanding legacy phone systems."
       toolComponent={<PhoneNumberConverter />}
+      toolData={toolData}
     />
   )
 }

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGENumbers to Letters Converter() {
+export default function NumbersToLettersConverterPage() {
   return (
     <ToolLayout
       toolId="numbers-to-letters"

@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { CryptogramGenerator } from "@/components/cryptogram-generator"
+import { CryptogramSolver } from "@/components/cryptogram-solver"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function CryptogramSolverPage() {
       toolId="cryptogram-solver"
       toolName="Cryptogram Solver"
       toolDescription="Solve complex cryptogram puzzles"
-      toolComponent={<CryptogramGenerator />}
+      toolComponent={<CryptogramSolver />}
     />
   )
 }

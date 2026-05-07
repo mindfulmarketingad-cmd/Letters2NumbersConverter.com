@@ -1,0 +1,259 @@
+'use client'
+
+export interface Tool {
+  id: string
+  name: string
+  description: string
+  category: string
+  href: string
+  component: React.ComponentType<any>
+}
+
+// Lazy load tool components
+const toolRegistry: Record<string, { name: string; description: string; category: string; href: string }> = {
+  'letters-to-numbers': {
+    name: 'Letters to Numbers Converter',
+    description: 'Convert letters to numbers using A1Z26 cipher',
+    category: 'Conversion',
+    href: '/tools/letter-number-converter',
+  },
+  'a1z26-translator': {
+    name: 'A1Z26 Translator',
+    description: 'Translate letters to numbers with the A1Z26 alphabet',
+    category: 'Conversion',
+    href: '/tools/a1z26-translator',
+  },
+  'a0z25-cipher': {
+    name: 'A0Z25 Cipher Translator',
+    description: 'Convert text using A0Z25 cipher encoding',
+    category: 'Cipher',
+    href: '/tools/a0z25-cipher-translator',
+  },
+  'anagram-solver': {
+    name: 'Anagram Solver',
+    description: 'Solve anagrams and find word combinations',
+    category: 'Word Games',
+    href: '/tools/anagram-solver',
+  },
+  'atbash-cipher': {
+    name: 'Atbash Cipher Decoder',
+    description: 'Mirror alphabet substitution cipher decoder',
+    category: 'Cipher',
+    href: '/tools/atbash-cipher-decoder',
+  },
+  'audio-spectrogram': {
+    name: 'Audio Spectrogram Analyzer',
+    description: 'Visualize audio frequencies and analyze sound waves',
+    category: 'Audio Tools',
+    href: '/tools/audio-spectrogram',
+  },
+  'audio-spectrogram-decoder': {
+    name: 'Spectrogram Decoder',
+    description: 'Decode audio spectrograms and analyze frequencies',
+    category: 'Audio Tools',
+    href: '/tools/audio-spectrogram-decoder',
+  },
+  'babylonian-numeral-converter': {
+    name: 'Babylonian Numeral Converter',
+    description: 'Convert to ancient Babylonian base-60 numerals',
+    category: 'Number Systems',
+    href: '/tools/babylonian-numeral-converter',
+  },
+  'blossom-solver': {
+    name: 'Blossom Solver',
+    description: 'Solve Merriam-Webster Blossom word game',
+    category: 'Word Games',
+    href: '/tools/blossom-solver',
+  },
+  'book-cipher-decoder': {
+    name: 'Book Cipher Decoder',
+    description: 'Decode hidden messages from books',
+    category: 'Cipher',
+    href: '/tools/book-cipher-decoder',
+  },
+  'camel-case-converter': {
+    name: 'Camel Case Converter',
+    description: 'Convert text to camelCase, PascalCase, and other formats',
+    category: 'Text Tools',
+    href: '/tools/camel-case-converter',
+  },
+  'cipher-identifier': {
+    name: 'Cipher Identifier',
+    description: 'Identify and analyze cipher types from encrypted text',
+    category: 'Cipher',
+    href: '/tools/cipher-identifier',
+  },
+  'cistercian-numerals-converter': {
+    name: 'Cistercian Numerals Converter',
+    description: 'Convert to Cistercian numeral notation',
+    category: 'Number Systems',
+    href: '/tools/cistercian-numerals-converter',
+  },
+  'cryptogram-generator': {
+    name: 'Cryptogram Generator',
+    description: 'Create and share puzzle cryptograms',
+    category: 'Puzzle Games',
+    href: '/tools/cryptogram-generator',
+  },
+  'cryptogram-solver': {
+    name: 'Cryptogram Solver',
+    description: 'Solve complex cryptogram puzzles',
+    category: 'Puzzle Games',
+    href: '/tools/cryptogram-solver',
+  },
+  'cryptogram-solver-free': {
+    name: 'Cryptogram Solver Free',
+    description: 'Solve substitution cipher cryptograms',
+    category: 'Puzzle Games',
+    href: '/tools/cryptogram-solver-free',
+  },
+  'decimal-to-hexadecimal-converter': {
+    name: 'Decimal to Hexadecimal Converter',
+    description: 'Convert between decimal, hex, binary, and octal',
+    category: 'Number Conversion',
+    href: '/tools/decimal-to-hexadecimal-converter-online',
+  },
+  'egyptian-numbers-converter': {
+    name: 'Egyptian Numbers Converter',
+    description: 'Convert to ancient Egyptian hieroglyphic numerals',
+    category: 'Number Systems',
+    href: '/tools/egyptian-numbers-converter',
+  },
+  'enigma-machine-emulator': {
+    name: 'Enigma Machine Emulator',
+    description: 'Simulate the historical Enigma cipher device',
+    category: 'Cipher',
+    href: '/tools/enigma-machine-emulator',
+  },
+  'escape-room-builder': {
+    name: 'Escape Room Builder',
+    description: 'Create and design interactive escape room puzzles',
+    category: 'Puzzle Games',
+    href: '/tools/escape-room-builder',
+  },
+  'equation-solver': {
+    name: 'Fill In The Blanks Equation Solver',
+    description: 'Find missing digits and operators in equations',
+    category: 'Math Tools',
+    href: '/tools/fill-in-the-blanks-equation-solver',
+  },
+  'hexahue-cipher': {
+    name: 'Hexahue Cipher',
+    description: 'Color-based encoding system for visual communication',
+    category: 'Cipher',
+    href: '/tools/hexahue-cipher',
+  },
+  'json-to-java-generator': {
+    name: 'JSON to Java Code Generator',
+    description: 'Generate Java code from JSON structure',
+    category: 'Code Generators',
+    href: '/tools/json-to-java-code-generator',
+  },
+  'letter-to-phone-converter': {
+    name: 'Phone Number Converter',
+    description: 'Convert letters to phone number digits using T9',
+    category: 'Conversion',
+    href: '/tools/letter-to-phone-number-converter',
+  },
+  'line-ending-converter': {
+    name: 'Line Ending Converter',
+    description: 'Convert between LF, CRLF, and CR line endings',
+    category: 'Text Tools',
+    href: '/tools/line-ending-converter',
+  },
+  'longest-word-solver': {
+    name: 'Longest Word Using These Letters Solver',
+    description: 'Find the longest words from available letters',
+    category: 'Word Games',
+    href: '/tools/longest-word-using-these-letters-solver',
+  },
+  'mayan-numeral-converter': {
+    name: 'Mayan Numeral Converter',
+    description: 'Convert to ancient Mayan numerals',
+    category: 'Number Systems',
+    href: '/tools/mayan-numeral-converter',
+  },
+  'monoalphabetic-substitution-cipher': {
+    name: 'Monoalphabetic Substitution Cipher',
+    description: 'Encrypt and decrypt using monoalphabetic ciphers',
+    category: 'Cipher',
+    href: '/tools/monoalphabetic-substitution-cipher',
+  },
+  'nato-phonetic-alphabet': {
+    name: 'NATO Phonetic Alphabet Translator',
+    description: 'Convert text to NATO phonetic alphabet spelling',
+    category: 'Text Tools',
+    href: '/tools/nato-phonetic-alphabet',
+  },
+  'numbers-to-letters': {
+    name: 'Numbers to Letters Converter',
+    description: 'Convert numbers back to letters',
+    category: 'Conversion',
+    href: '/tools/numbers-to-letters',
+  },
+  'password-strength-tester': {
+    name: 'Password Strength Tester',
+    description: 'Test and analyze password security strength',
+    category: 'Security Tools',
+    href: '/tools/password-strength-tester',
+  },
+  'playfair-cipher': {
+    name: 'Playfair Cipher Solver',
+    description: 'Encrypt and decrypt using Playfair cipher',
+    category: 'Cipher',
+    href: '/tools/playfair-cipher-solver',
+  },
+  'px-vw-converter': {
+    name: 'PX To VW Converter',
+    description: 'Convert between pixels and viewport width units',
+    category: 'Unit Conversion',
+    href: '/tools/px-vw-converter',
+  },
+  'skip-cipher': {
+    name: 'Skip Cipher',
+    description: 'Encode text using skip cipher technique',
+    category: 'Cipher',
+    href: '/tools/skip-cipher',
+  },
+  'tapcode-translator': {
+    name: 'Tapcode Translator',
+    description: 'Convert messages to tap code cipher',
+    category: 'Cipher',
+    href: '/tools/tapcode-translator',
+  },
+  'yaml-to-ini-converter': {
+    name: 'YAML to INI Converter',
+    description: 'Convert between YAML and INI configuration formats',
+    category: 'Data Conversion',
+    href: '/tools/yaml-to-ini-converter',
+  },
+}
+
+export function getToolRegistry() {
+  return Object.entries(toolRegistry).map(([id, tool]) => ({
+    id,
+    ...tool,
+  }))
+}
+
+export function getToolsByCategory() {
+  const registry = getToolRegistry()
+  const categories = new Map<string, typeof registry>()
+
+  registry.forEach((tool) => {
+    if (!categories.has(tool.category)) {
+      categories.set(tool.category, [])
+    }
+    categories.get(tool.category)!.push(tool)
+  })
+
+  return Array.from(categories.entries()).map(([category, tools]) => ({
+    category,
+    tools,
+  }))
+}
+
+export function getTool(id: string) {
+  const registry = getToolRegistry()
+  return registry.find((tool) => tool.id === id)
+}

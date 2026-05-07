@@ -1,29 +1,25 @@
+import { Metadata } from "next"
 import CryptogramGenerator from "@/components/cryptogram-generator"
-import { SiteHeader } from "@/components/site-header"
-import type { Metadata } from "next"
+import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Cryptogram Generator | Create & Share Puzzle Cryptograms",
-  description: "Free cryptogram generator to create custom puzzle cryptograms. Use famous quotes or custom text with adjustable difficulty levels. Share cryptograms with friends instantly.",
-  keywords: ["cryptogram generator", "cryptogram puzzle", "cryptogram maker", "cipher puzzle generator", "substitution cipher"],
+  description: "Create custom puzzle cryptograms using famous quotes or your own text. Share cryptograms with friends with adjustable difficulty levels.",
+  keywords: ["cryptogram generator", "cryptogram puzzle", "cryptogram maker", "cipher puzzle", "substitution cipher"],
   openGraph: {
-    title: "Cryptogram Generator | Create & Share Puzzle Cryptograms",
-    description: "Create and share custom cryptogram puzzles with adjustable difficulty levels.",
-    url: "https://www.letters2numbersconverter.com/tools/cryptogram-generator",
+    title: "Cryptogram Generator",
+    description: "Create and share custom cryptogram puzzles instantly.",
     type: "website",
-  },
-  alternates: {
-    canonical: "https://www.letters2numbersconverter.com/tools/cryptogram-generator",
   },
 }
 
 export default function CryptogramGeneratorPage() {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <SiteHeader />
-      <main className="flex-1 py-12">
-        <CryptogramGenerator />
-      </main>
-    </div>
+    <ToolLayout
+      toolId="cryptogram-generator"
+      toolName="Cryptogram Generator"
+      toolDescription="Create, customize, and share puzzle cryptograms with this interactive tool. Generate substitution cipher puzzles perfect for word games and entertainment."
+      toolComponent={<CryptogramGenerator />}
+    />
   )
 }

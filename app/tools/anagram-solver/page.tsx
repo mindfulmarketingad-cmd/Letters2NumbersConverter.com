@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import AnagramSolver from "@/components/anagram-solver"
-import { SiteHeader } from "@/components/site-header"
+import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Anagram Solver with Wildcard | Find All Possible Words",
@@ -15,13 +15,11 @@ export const metadata: Metadata = {
 
 export default function AnagramSolverPage() {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <SiteHeader />
-      <main className="flex-1 py-12">
-        <div className="container mx-auto">
-          <AnagramSolver />
-        </div>
-      </main>
-    </div>
+    <ToolLayout
+      toolId="anagram-solver"
+      toolName="Anagram Solver"
+      toolDescription="Find all possible words from your letters with wildcard support. This powerful anagram solver helps you discover words for word games, crosswords, and language puzzles. Supports up to 3 wildcards (?) for advanced searching."
+      toolComponent={<AnagramSolver />}
+    />
   )
 }

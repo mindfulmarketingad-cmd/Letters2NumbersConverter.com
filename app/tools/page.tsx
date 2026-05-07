@@ -96,6 +96,12 @@ const tools = [
     category: "Games"
   },
   {
+    title: "Longest Word Using These Letters Solver",
+    description: "Longest Word Using These Letters Solver - Find the longest words you can make from any set of letters. Instantly discover all possible words ranked by length with filtering options. Free online word game helper.",
+    href: "/tools/longest-word-using-these-letters-solver",
+    category: "Games"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

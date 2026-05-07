@@ -2,6 +2,7 @@
 
 import { Plus, Share2, Save, Maximize2 } from 'lucide-react'
 import { ToolSelector } from '@/components/tool-selector'
+import { LetterNumberConverter } from '@/components/letter-number-converter'
 
 interface WorkAreaProps {
   toolComponent?: React.ReactNode
@@ -66,14 +67,7 @@ export function WorkArea({ toolComponent }: WorkAreaProps) {
         {toolComponent ? (
           toolComponent
         ) : (
-          <div className="h-full flex items-center justify-center">
-            <div className="text-center">
-              <Plus className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">
-                Press <span className="font-semibold">+</span> to select a tool
-              </p>
-            </div>
-          </div>
+          <LetterNumberConverter />
         )}
       </div>
     </div>

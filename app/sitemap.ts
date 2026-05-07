@@ -125,6 +125,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/tools/playfair-cipher-solver`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/tools/a0z25-cipher-translator`,
       lastModified: new Date(),
       changeFrequency: 'weekly',

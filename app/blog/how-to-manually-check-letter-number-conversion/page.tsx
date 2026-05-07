@@ -10,6 +10,7 @@ import { ShareButton } from "@/components/share-button"
 export const metadata: Metadata = {
   title: "How to Manually Check Letter to Number Conversion",
   description: "Learn step-by-step methods for manually converting letters to numbers using A1Z26, ASCII, hexadecimal, and binary encoding without tools.",
+  authors: [{ name: "Neo" }],
 }
 
 export default function HowToManuallyCheckLetterNumberConversion() {

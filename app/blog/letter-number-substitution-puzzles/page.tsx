@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Letter Number Substitution Puzzles: Your Complete Guide to Cipher Solving",
   description: "Master letter number substitution puzzles with our complete guide. Learn different cipher types, see worked examples, and discover solving techniques for cryptograms and codes.",
   keywords: ["letter number substitution puzzles", "substitution cipher", "cryptogram puzzles", "letter substitution", "number cipher puzzles"],
+  authors: [{ name: "Neo" }],
   openGraph: {
     title: "Letter Number Substitution Puzzles: Your Complete Guide to Cipher Solving",
     description: "Master letter number substitution puzzles with our complete guide covering types, examples, and solutions.",

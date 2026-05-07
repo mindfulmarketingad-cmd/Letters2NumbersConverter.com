@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Best Letter Number Ciphers for Beginners and Experts",
   description: "Discover the best letter number ciphers from simple A1Z26 to complex ASCII encoding. Learn which cipher is right for your puzzle solving, cryptography, or educational needs.",
   keywords: ["letter number ciphers", "best ciphers", "A1Z26 cipher", "alphabet cipher", "cryptography ciphers"],
+  authors: [{ name: "Neo" }],
 }
 
 export default function BestLetterNumberCiphersPage() {

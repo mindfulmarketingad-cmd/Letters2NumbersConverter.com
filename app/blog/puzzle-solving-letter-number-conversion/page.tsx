@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Puzzle Solving with Letter-Number Conversion",
   description: "Master puzzle solving techniques using letter-to-number conversion. Learn how to decode geocache puzzles, escape rooms, and CTF challenges with our letters to numbers converter tool.",
   keywords: ["puzzle solving", "geocaching cipher", "escape room puzzles", "CTF challenges", "A1Z26 decoder", "letters to numbers converter tool"],
+  authors: [{ name: "Neo" }],
 }
 
 export default function PuzzleSolvingLetterNumberConversion() {

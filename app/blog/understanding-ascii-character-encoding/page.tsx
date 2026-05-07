@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Understanding ASCII and Character Encoding",
   description: "Learn about ASCII character encoding, how letters are converted to numbers in computers, and the history of character encoding systems. Use our letters to numbers converter tool for instant conversions.",
   keywords: ["ASCII encoding", "character encoding", "ASCII table", "text to ASCII converter", "letters to numbers converter tool", "binary encoding"],
+  authors: [{ name: "Neo" }],
 }
 
 export default function UnderstandingAsciiCharacterEncoding() {

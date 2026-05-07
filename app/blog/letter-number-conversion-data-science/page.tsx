@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Applications of Letter-Number Conversion in Data Science",
   description: "Discover how letter-to-number conversion techniques are used in data science for feature engineering, text preprocessing, machine learning, and NLP applications with our letters to numbers converter tool.",
   keywords: ["letter to number data science", "text encoding machine learning", "feature engineering letters", "NLP preprocessing", "letters to numbers converter tool"],
+  authors: [{ name: "Neo" }],
 }
 
 export default function LetterNumberConversionDataScience() {

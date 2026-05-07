@@ -1,19 +1,18 @@
 'use client'
 
-import { useState } from 'react'
-import { Plus, Search, X } from 'lucide-react'
+import { useState, useRef, useEffect } from 'react'
+import { Plus, Search, ChevronDown } from 'lucide-react'
 import { getToolsByCategory, getToolRegistry } from '@/lib/tool-registry'
-import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 
 interface ToolSelectorProps {
   onSelect: (toolId: string) => void
-  isOpen: boolean
-  onClose: () => void
 }
 
-export function ToolSelector({ onSelect, isOpen, onClose }: ToolSelectorProps) {
+export function ToolSelector({ onSelect }: ToolSelectorProps) {
+  const [isOpen, setIsOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
+  const dropdownRef = useRef<HTMLDivElement>(null)
   const categorizedTools = getToolsByCategory()
   const allTools = getToolRegistry()
 
@@ -27,82 +26,94 @@ export function ToolSelector({ onSelect, isOpen, onClose }: ToolSelectorProps) {
 
   const handleSelect = (toolId: string) => {
     onSelect(toolId)
-    onClose()
+    setIsOpen(false)
+    setSearchQuery('')
   }
 
-  if (!isOpen) return null
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center bg-black/50 p-4">
-      <div className="bg-background rounded-lg shadow-lg w-full max-w-2xl max-h-[80vh] flex flex-col">
-        {/* Header */}
-        <div className="flex items-center justify-between border-b border-border p-4">
-          <h2 className="text-xl font-bold">Select a Tool</h2>
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-secondary rounded-md transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
+    <div className="relative" ref={dropdownRef}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="p-2 hover:bg-background rounded-lg transition-colors flex items-center gap-1"
+        title="Select tool"
+      >
+        <Plus className="w-5 h-5" />
+      </button>
 
-        {/* Search */}
-        <div className="p-4 border-b border-border">
-          <div className="flex items-center gap-2 px-3 py-2 rounded-md border border-border bg-secondary/50">
-            <Search className="w-4 h-4 text-muted-foreground" />
-            <Input
-              placeholder="Search tools..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="border-0 bg-transparent outline-none text-sm"
-            />
+      {/* Dropdown Menu */}
+      {isOpen && (
+        <div className="absolute top-full left-0 mt-2 bg-background rounded-lg shadow-lg border border-border w-80 max-h-96 flex flex-col z-40">
+          {/* Search */}
+          <div className="p-3 border-b border-border">
+            <div className="flex items-center gap-2 px-3 py-2 rounded-md border border-border bg-secondary/50">
+              <Search className="w-4 h-4 text-muted-foreground" />
+              <Input
+                placeholder="Search tools..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                autoFocus
+                className="border-0 bg-transparent outline-none text-sm"
+              />
+            </div>
+          </div>
+
+          {/* Tools List */}
+          <div className="flex-1 overflow-y-auto">
+            {searchQuery ? (
+              <div className="p-3 space-y-2">
+                {filteredTools.length > 0 ? (
+                  filteredTools.map((tool) => (
+                    <button
+                      key={tool.id}
+                      onClick={() => handleSelect(tool.id)}
+                      className="w-full text-left p-2 rounded-md hover:bg-secondary transition-colors text-sm"
+                    >
+                      <div className="font-semibold">{tool.name}</div>
+                      <div className="text-xs text-muted-foreground line-clamp-1">{tool.description}</div>
+                    </button>
+                  ))
+                ) : (
+                  <p className="text-center text-muted-foreground py-4 text-sm">No tools found</p>
+                )}
+              </div>
+            ) : (
+              <div className="p-3 space-y-4">
+                {categorizedTools.map(({ category, tools }) => (
+                  <div key={category}>
+                    <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2 px-2">
+                      {category}
+                    </h3>
+                    <div className="space-y-1">
+                      {tools.map((tool) => (
+                        <button
+                          key={tool.id}
+                          onClick={() => handleSelect(tool.id)}
+                          className="w-full text-left p-2 rounded-md hover:bg-secondary transition-colors text-sm"
+                        >
+                          <div className="font-semibold">{tool.name}</div>
+                          <div className="text-xs text-muted-foreground line-clamp-1">{tool.description}</div>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
-
-        {/* Tools List */}
-        <div className="flex-1 overflow-y-auto">
-          {searchQuery ? (
-            <div className="p-4 space-y-2">
-              {filteredTools.length > 0 ? (
-                filteredTools.map((tool) => (
-                  <button
-                    key={tool.id}
-                    onClick={() => handleSelect(tool.id)}
-                    className="w-full text-left p-3 rounded-lg hover:bg-secondary transition-colors"
-                  >
-                    <div className="font-semibold text-sm">{tool.name}</div>
-                    <div className="text-xs text-muted-foreground">{tool.description}</div>
-                  </button>
-                ))
-              ) : (
-                <p className="text-center text-muted-foreground py-8">No tools found</p>
-              )}
-            </div>
-          ) : (
-            <div className="p-4 space-y-6">
-              {categorizedTools.map(({ category, tools }) => (
-                <div key={category}>
-                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">
-                    {category}
-                  </h3>
-                  <div className="space-y-2">
-                    {tools.map((tool) => (
-                      <button
-                        key={tool.id}
-                        onClick={() => handleSelect(tool.id)}
-                        className="w-full text-left p-3 rounded-lg hover:bg-secondary transition-colors"
-                      >
-                        <div className="font-semibold text-sm">{tool.name}</div>
-                        <div className="text-xs text-muted-foreground">{tool.description}</div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
+      )}
     </div>
   )
 }

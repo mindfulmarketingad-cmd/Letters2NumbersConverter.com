@@ -33,13 +33,12 @@ export default function A0Z25CipherPage() {
     datePublished: new Date().toISOString(),
     dateModified: new Date().toISOString(),
     author: {
-      "@type": "Organization",
-      name: "Letters2Numbers",
-      url: "https://www.letters2numbersconverter.com",
+      "@type": "Person",
+      name: "Neo",
     },
     publisher: {
       "@type": "Organization",
-      name: "Letters2Numbers",
+      name: "Letters2NumbersConverter",
       logo: {
         "@type": "ImageObject",
         url: "https://www.letters2numbersconverter.com/logo.png",

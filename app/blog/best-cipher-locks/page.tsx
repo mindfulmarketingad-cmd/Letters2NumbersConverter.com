@@ -30,9 +30,8 @@ const structuredData = {
   datePublished: new Date().toISOString().split('T')[0],
   dateModified: new Date().toISOString().split('T')[0],
   author: {
-    "@type": "Organization",
-    name: "Letters to Numbers Converter",
-    url: "https://www.letters2numbersconverter.com",
+    "@type": "Person",
+    name: "Neo",
   },
   publisher: {
     "@type": "Organization",

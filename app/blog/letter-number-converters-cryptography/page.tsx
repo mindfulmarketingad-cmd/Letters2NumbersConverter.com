@@ -10,6 +10,7 @@ import { ShareButton } from "@/components/share-button"
 export const metadata: Metadata = {
   title: "Uses of Letter to Number Converters in Cryptography",
   description: "Learn how letter-to-number conversion forms the foundation of cryptography, from ancient ciphers to modern encryption algorithms.",
+  authors: [{ name: "Neo" }],
 }
 
 export default function LetterNumberConvertersCryptography() {

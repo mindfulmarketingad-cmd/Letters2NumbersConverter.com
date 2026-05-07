@@ -96,6 +96,24 @@ const tools = [
     category: "Games"
   },
   {
+    title: "Longest Word Using These Letters Solver",
+    description: "Longest Word Using These Letters Solver - Find the longest words you can make from any set of letters. Instantly discover all possible words ranked by length with filtering options. Free online word game helper.",
+    href: "/tools/longest-word-using-these-letters-solver",
+    category: "Games"
+  },
+  {
+    title: "Playfair Cipher Solver",
+    description: "Playfair Cipher Solver - Encrypt and decrypt text using the classic digraph substitution cipher. Learn about this historic cipher invented by Charles Wheatstone and explore the 5x5 key square mechanics.",
+    href: "/tools/playfair-cipher-solver",
+    category: "Encryption"
+  },
+  {
+    title: "Hexahue Cipher",
+    description: "Hexahue Cipher - Color-based encoding system that translates text to visual blocks. Invented by Josh Cramer, use combinations of common colors for unique visual communication.",
+    href: "/tools/hexahue-cipher",
+    category: "Encoding"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

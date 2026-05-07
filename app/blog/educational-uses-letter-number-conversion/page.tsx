@@ -10,6 +10,7 @@ import { ShareButton } from "@/components/share-button"
 export const metadata: Metadata = {
   title: "Educational Uses of Letter-Number Conversion",
   description: "Explore how letter-to-number conversion is used in education for teaching mathematics, coding concepts, reading skills, and critical thinking.",
+  authors: [{ name: "Neo" }],
 }
 
 export default function EducationalUsesLetterNumberConversion() {

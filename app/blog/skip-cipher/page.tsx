@@ -30,8 +30,8 @@ export default function SkipCipherBlog() {
     url: "https://letters2numbersconverter.com/blog/skip-cipher",
     datePublished: new Date().toISOString(),
     author: {
-      "@type": "Organization",
-      name: "Letters2NumbersConverter",
+      "@type": "Person",
+      name: "Neo",
     },
     image: "https://letters2numbersconverter.com/og-image.jpg",
   }

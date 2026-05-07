@@ -10,6 +10,7 @@ import { ShareButton } from "@/components/share-button"
 export const metadata: Metadata = {
   title: "The History of Letter-Number Systems",
   description: "Explore the fascinating history of letter-number systems from ancient civilizations to modern computing, including Greek numerals, Hebrew gematria, and ASCII encoding.",
+  authors: [{ name: "Neo" }],
 }
 
 export default function HistoryLetterNumberSystems() {

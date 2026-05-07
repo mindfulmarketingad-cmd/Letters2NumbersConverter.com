@@ -32,10 +32,10 @@ export default function BlossomSolverPage() {
         <main className="flex-1">
           <section className="py-12 sm:py-20">
             <div className="container mx-auto px-4">
-              {/* Center Aligned Title with Green Last Letter */}
+              {/* Center Aligned Title with Green "Solver" Word */}
               <div className="mb-12 text-center max-w-3xl mx-auto">
-                <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-4 text-balance">
-                  Blossom Solv<span className="text-green-600">e</span>r
+                <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-balance">
+                  <span className="text-foreground">Blossom </span><span className="text-green-600">Solver</span>
                 </h1>
                 <p className="text-lg text-muted-foreground text-pretty">
                   Blossom Solver helps you master the Merriam-Webster Blossom daily word game. Enter your seven letters (one center letter and six petal letters) and discover all possible words to maximize your score.

@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'Letters to Numbers' }],
   creator: 'Letters to Numbers',
   publisher: 'Letters to Numbers',
+  other: {
+    'google-adsense-account': 'ca-pub-2173008413459742',
+  },
   robots: {
     index: true,
     follow: true,

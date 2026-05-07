@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { CryptogramSolver } from "@/components/cryptogram-solver"
+import CryptogramSolver from "@/components/cryptogram-solver"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {

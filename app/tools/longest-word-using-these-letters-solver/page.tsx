@@ -23,8 +23,6 @@ export default function LongestWordPage() {
     />
   )
 }
-
-              {/* How It Works */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">Who Is This For?</h2>

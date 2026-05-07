@@ -1,59 +1,18 @@
 'use client'
 
 import { Plus, RotateCcw, Share2, ArrowUp, Square } from 'lucide-react'
-import dynamic from 'next/dynamic'
 import { ToolSelector } from '@/components/tool-selector'
 
 interface WorkAreaProps {
-  toolId: string | null
-  onSelectTool: (toolId: string) => void
+  toolComponent?: React.ReactNode
 }
 
-// Dynamically import tool components
-const toolComponents: Record<string, any> = {
-  'a1z26-translator': dynamic(() =>
-    import('@/components/a0z25-translator').then((mod) => mod.A1Z26Translator)
-  ),
-  'a0z25-cipher': dynamic(() =>
-    import('@/components/a0z25-translator').then((mod) => mod.A1Z26Translator)
-  ),
-  'blossom-solver': dynamic(() =>
-    import('@/components/blossom-solver').then((mod) => mod.BlossomSolver)
-  ),
-  'longest-word-solver': dynamic(() =>
-    import('@/components/longest-word-solver').then((mod) => mod.LongestWordSolver)
-  ),
-  'playfair-cipher': dynamic(() =>
-    import('@/components/playfair-cipher-solver').then((mod) => mod.PlayfairCipherSolver)
-  ),
-  'hexahue-cipher': dynamic(() =>
-    import('@/components/hexahue-cipher-solver').then((mod) => mod.HexahueCipherSolver)
-  ),
-  'atbash-cipher': dynamic(() =>
-    import('@/components/atbash-cipher-solver').then((mod) => mod.AtbashCipherSolver)
-  ),
-  'tapcode-translator': dynamic(() =>
-    import('@/components/tapcode-translator').then((mod) => mod.TapcodeTranslator)
-  ),
-  'letter-number-converter': dynamic(() =>
-    import('@/components/letter-number-converter').then((mod) => mod.LetterNumberConverter)
-  ),
-  'anagram-solver': dynamic(() =>
-    import('@/components/anagram-solver')
-  ),
-  'skip-cipher': dynamic(() =>
-    import('@/components/skip-cipher').then((mod) => mod.SkipCipherTool)
-  ),
-}
-
-export function WorkArea({ toolId, onSelectTool }: WorkAreaProps) {
-  const ToolComponent = toolId ? toolComponents[toolId] : null
-
+export function WorkArea({ toolComponent }: WorkAreaProps) {
   return (
     <div className="flex flex-col h-full bg-secondary/50">
       {/* Toolbar */}
       <div className="flex items-center gap-2 p-4 border-b border-border bg-secondary">
-        <ToolSelector onSelect={onSelectTool} />
+        <ToolSelector />
 
         <button
           className="p-2 hover:bg-background rounded-lg transition-colors"
@@ -86,8 +45,8 @@ export function WorkArea({ toolId, onSelectTool }: WorkAreaProps) {
 
       {/* Work Area */}
       <div className="flex-1 overflow-auto p-4">
-        {ToolComponent ? (
-          <ToolComponent />
+        {toolComponent ? (
+          toolComponent
         ) : (
           <div className="h-full flex items-center justify-center">
             <div className="text-center">

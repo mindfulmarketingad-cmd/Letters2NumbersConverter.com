@@ -4,48 +4,8 @@ import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 import { getToolRegistry } from '@/lib/tool-registry'
 
-interface SeoPanelProps {
-  toolId?: string | null
-}
-
-export function SeoPanel({ toolId }: SeoPanelProps) {
+export function SeoPanel() {
   const toolRegistry = getToolRegistry()
-  const selectedToolData = toolId ? toolRegistry.find((t) => t.id === toolId) : null
-
-  // If a tool is selected, show its description/content
-  if (selectedToolData) {
-    return (
-      <div className="space-y-8">
-        <div>
-          <h1 className="text-4xl font-bold mb-4">{selectedToolData.name}</h1>
-          <p className="text-lg text-muted-foreground">{selectedToolData.description}</p>
-        </div>
-
-        <div className="space-y-2">
-          <h2 className="text-xl font-semibold">How It Works</h2>
-          <p className="text-muted-foreground">
-            Use the interactive tool on the left to encode or decode your messages. Select different options to customize your workflow.
-          </p>
-        </div>
-
-        <div className="space-y-2">
-          <h2 className="text-xl font-semibold">Related Tools</h2>
-          <div className="space-y-2">
-            {toolRegistry.slice(0, 3).map((tool) => (
-              <Link
-                key={tool.id}
-                href={`?tool=${tool.id}`}
-                className="block p-3 rounded-lg border border-border hover:bg-secondary transition-colors"
-              >
-                <div className="font-semibold text-sm">{tool.name}</div>
-                <div className="text-xs text-muted-foreground">{tool.description}</div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    )
-  }
 
   // Default homepage content
   return (

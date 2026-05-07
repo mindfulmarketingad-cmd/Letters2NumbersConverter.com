@@ -1,33 +1,28 @@
+import { Metadata } from "next"
 import { DecimalHexConverter } from "@/components/decimal-hex-converter"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
-import Link from "next/link"
-import type { Metadata } from "next"
-import Script from "next/script"
+import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Decimal to Hexadecimal Converter Online",
-  description: "Decimal to Hexadecimal Converter Online - Convert decimal numbers to hexadecimal format instantly. Supports values up to 19 digits. Free online conversion tool.",
-  keywords: ["decimal to hex converter", "decimal to hexadecimal", "hex converter", "decimal converter", "number base conversion"],
+  description: "Convert between decimal, hexadecimal, binary, and octal number systems instantly. Perfect for programmers and developers.",
+  keywords: ["decimal to hex", "hexadecimal converter", "number converter", "binary converter", "octal converter"],
   openGraph: {
-    title: "Decimal to Hexadecimal Converter Online | Letters2NumbersConverter.com",
-    description: "Free online Decimal to Hexadecimal Converter - Convert decimal numbers to hex format instantly with detailed conversion details.",
+    title: "Decimal to Hexadecimal Converter",
+    description: "Convert between decimal, hex, binary, and octal number systems.",
     type: "website",
-    url: "https://www.letters2numbersconverter.com/tools/decimal-to-hexadecimal-converter-online",
-  },
-  alternates: {
-    canonical: "https://www.letters2numbersconverter.com/tools/decimal-to-hexadecimal-converter-online",
   },
 }
 
 export default function DecimalHexConverterPage() {
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "Decimal to Hexadecimal Converter Online",
-    description: "Convert decimal numbers to hexadecimal format online instantly",
-    url: "https://www.letters2numbersconverter.com/tools/decimal-to-hexadecimal-converter-online",
-    applicationCategory: "UtilityApplication",
+  return (
+    <ToolLayout
+      toolId="decimal-hex-converter"
+      toolName="Decimal to Hexadecimal Converter"
+      toolDescription="Convert between decimal, hexadecimal, binary, and octal number systems. Perfect for programmers, developers, and anyone working with different numeral systems."
+      toolComponent={<DecimalHexConverter />}
+    />
+  )
+}
     offers: {
       "@type": "Offer",
       price: "0",

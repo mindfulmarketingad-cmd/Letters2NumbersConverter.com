@@ -1,33 +1,28 @@
+import { Metadata } from "next"
 import { PxVwConverter } from "@/components/px-vw-converter"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
-import Link from "next/link"
-import type { Metadata } from "next"
-import Script from "next/script"
+import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "PX To VW Converter",
-  description: "PX To VW Converter - Convert pixels to viewport width units instantly. Free responsive design tool for web developers to convert between px and vw CSS units with preset viewport sizes.",
-  keywords: ["px to vw converter", "pixel to viewport width", "CSS units converter", "responsive design", "vw converter", "px converter"],
+  description: "Convert between pixels (px) and viewport width (vw) units instantly. Essential tool for responsive web design and CSS calculations.",
+  keywords: ["px to vw converter", "pixel to viewport", "CSS units", "responsive design", "vw converter"],
   openGraph: {
-    title: "PX To VW Converter | Letters2NumbersConverter.com",
-    description: "Free online PX to VW and VW to PX converter for responsive web design. Convert CSS units with preset viewport widths.",
+    title: "PX To VW Converter",
+    description: "Convert between pixels and viewport width units for responsive web design.",
     type: "website",
-    url: "https://www.letters2numbersconverter.com/tools/px-vw-converter",
-  },
-  alternates: {
-    canonical: "https://www.letters2numbersconverter.com/tools/px-vw-converter",
   },
 }
 
 export default function PxVwConverterPage() {
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "PX To VW Converter",
-    description: "Free PX to VW and VW to PX converter for responsive web design with preset viewport widths",
-    url: "https://www.letters2numbersconverter.com/tools/px-vw-converter",
-    applicationCategory: "UtilityApplication",
+  return (
+    <ToolLayout
+      toolId="px-vw-converter"
+      toolName="PX To VW Converter"
+      toolDescription="Convert between pixels (px) and viewport width (vw) units instantly. Essential tool for responsive web design, CSS calculations, and creating fluid layouts."
+      toolComponent={<PxVwConverter />}
+    />
+  )
+}
     offers: {
       "@type": "Offer",
       price: "0",

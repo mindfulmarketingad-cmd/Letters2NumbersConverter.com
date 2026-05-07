@@ -1,31 +1,28 @@
+import { Metadata } from "next"
 import { PhoneNumberConverter } from "@/components/phone-number-converter"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
-import Link from "next/link"
-import type { Metadata } from "next"
+import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
   title: "Phone Number Converter - Letters to Numbers Converter",
-  description: "Free phone number converter tool. Convert vanity phone numbers like 1-800-FLOWERS to digits or see letter options for any phone number. Uses standard telephone keypad mapping.",
-  keywords: ["phone number converter", "vanity phone number", "letter to phone number", "phone keypad converter", "1-800 number converter"],
+  description: "Convert letters to phone number digits using T9/multi-tap phone keypad mapping. Decode phone-based text messages instantly.",
+  keywords: ["phone number converter", "letters to numbers", "T9 converter", "phone keypad", "text message decoder"],
+  openGraph: {
+    title: "Phone Number Converter",
+    description: "Convert letters to phone number digits using T9 phone keypad mapping.",
+    type: "website",
+  },
 }
-
-// Phone keypad reference
-const phoneKeypad = [
-  { digit: '2', letters: 'ABC' },
-  { digit: '3', letters: 'DEF' },
-  { digit: '4', letters: 'GHI' },
-  { digit: '5', letters: 'JKL' },
-  { digit: '6', letters: 'MNO' },
-  { digit: '7', letters: 'PQRS' },
-  { digit: '8', letters: 'TUV' },
-  { digit: '9', letters: 'WXYZ' },
-]
 
 export default function PhoneNumberConverterPage() {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <SiteHeader />
+    <ToolLayout
+      toolId="phone-number-converter"
+      toolName="Phone Number Converter"
+      toolDescription="Convert letters to phone number digits using T9/multi-tap phone keypad mapping. Perfect for decoding phone-based text messages and understanding legacy phone systems."
+      toolComponent={<PhoneNumberConverter />}
+    />
+  )
+}
 
       <main className="flex-1">
         {/* Hero Section */}

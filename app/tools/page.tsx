@@ -90,6 +90,12 @@ const tools = [
     category: "Encryption"
   },
   {
+    title: "Blossom Solver",
+    description: "Blossom Solver - Help solve Merriam-Webster Blossom daily word game. Find all valid words from 7 letters (1 center + 6 petal letters). Get high scores and pangrams. Free online game helper.",
+    href: "/tools/blossom-solver",
+    category: "Games"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

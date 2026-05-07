@@ -114,6 +114,12 @@ const tools = [
     category: "Encoding"
   },
   {
+    title: "Atbash Cipher Decoder",
+    description: "Atbash Cipher Decoder - Encrypt and decrypt messages using the mirror alphabet substitution cipher. An involutory cipher where the same process works for both encryption and decryption.",
+    href: "/tools/atbash-cipher-decoder",
+    category: "Decoding"
+  },
+  {
     title: "A0Z25 Cipher Translator",
     description: "A0Z25 Cipher Translator - Free zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Encode and decode messages instantly with support for multiple encoding formats.",
     href: "/tools/a0z25-cipher-translator",

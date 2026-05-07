@@ -12,10 +12,10 @@ interface WorkAreaProps {
 // Dynamically import tool components
 const toolComponents: Record<string, any> = {
   'a1z26-translator': dynamic(() =>
-    import('@/components/a1z26-translator').then((mod) => mod.A1Z26Translator)
+    import('@/components/a0z25-translator').then((mod) => mod.A1Z26Translator)
   ),
   'a0z25-cipher': dynamic(() =>
-    import('@/components/a0z25-cipher-translator').then((mod) => mod.A0Z25CipherTranslator)
+    import('@/components/a0z25-translator').then((mod) => mod.A1Z26Translator)
   ),
   'blossom-solver': dynamic(() =>
     import('@/components/blossom-solver').then((mod) => mod.BlossomSolver)
@@ -34,6 +34,18 @@ const toolComponents: Record<string, any> = {
   ),
   'tapcode-translator': dynamic(() =>
     import('@/components/tapcode-translator').then((mod) => mod.TapcodeTranslator)
+  ),
+  'letter-number-converter': dynamic(() =>
+    import('@/components/letter-number-converter').then((mod) => mod.LetterNumberConverter)
+  ),
+  'anagram-solver': dynamic(() =>
+    import('@/components/anagram-solver').then((mod) => mod.AnagramSolver)
+  ),
+  'anagram-solver': dynamic(() =>
+    import('@/components/anagram-solver')
+  ),
+  'skip-cipher': dynamic(() =>
+    import('@/components/skip-cipher').then((mod) => mod.SkipCipherTool)
   ),
 }
 

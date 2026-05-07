@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { CipherIdentifier } from "@/components/site-header"
+import { CipherIdentifier } from "@/components/cipheridentifier"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGECipher Identifier Tool() {
+export default function CipherIdentifierPage() {
   return (
     <ToolLayout
       toolId="cipher-identifier"

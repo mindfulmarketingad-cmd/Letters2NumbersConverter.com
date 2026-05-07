@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGEEgyptian Numbers Converter() {
+export default function EgyptianNumbersConverterPage() {
   return (
     <ToolLayout
       toolId="egyptian-numbers-converter"

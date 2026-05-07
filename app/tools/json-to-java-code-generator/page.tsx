@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGEJSON to Java Code Generator() {
+export default function JsonToJavaGeneratorPage() {
   return (
     <ToolLayout
       toolId="json-to-java-code-generator"

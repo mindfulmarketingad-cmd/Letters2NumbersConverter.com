@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGEFill In The Blanks Equation Solver() {
+export default function EquationSolverPage() {
   return (
     <ToolLayout
       toolId="fill-in-the-blanks-equation-solver"

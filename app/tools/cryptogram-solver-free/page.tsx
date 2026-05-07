@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGECryptogram Solver Free() {
+export default function CryptogramSolverFreePage() {
   return (
     <ToolLayout
       toolId="cryptogram-solver-free"

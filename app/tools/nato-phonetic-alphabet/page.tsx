@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGENATO Phonetic Alphabet Translator() {
+export default function NatoPhoneticAlphabetPage() {
   return (
     <ToolLayout
       toolId="nato-phonetic-alphabet"

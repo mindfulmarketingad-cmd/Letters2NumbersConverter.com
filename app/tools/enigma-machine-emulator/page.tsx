@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { EnigmaMachineEmulator } from "@/components/site-header"
+import { EnigmaMachineEmulator } from "@/components/enigmamachineemulator"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGEEnigma Machine Emulator() {
+export default function EnigmaMachineEmulatorPage() {
   return (
     <ToolLayout
       toolId="enigma-machine-emulator"

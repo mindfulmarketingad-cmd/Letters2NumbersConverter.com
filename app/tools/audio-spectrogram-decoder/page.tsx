@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { AudioSpectrogramDecoder } from "@/components/site-header"
+import { AudioSpectrogramDecoder } from "@/components/audiospectrogramdecoder"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGESpectrogram Decoder() {
+export default function AudioSpectrogramDecoderPage() {
   return (
     <ToolLayout
       toolId="audio-spectrogram-decoder"

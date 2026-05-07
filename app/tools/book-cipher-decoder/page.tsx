@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { BookCipherDecoder } from "@/components/site-header"
+import { BookCipherDecoder } from "@/components/bookcipherdecoder"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGEBook Cipher Decoder() {
+export default function BookCipherDecoderPage() {
   return (
     <ToolLayout
       toolId="book-cipher-decoder"

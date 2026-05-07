@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { PasswordStrengthTester } from "@/components/site-header"
+import { PasswordStrengthTester } from "@/components/passwordstrengthtester"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGEPassword Strength Tester() {
+export default function PasswordStrengthTesterPage() {
   return (
     <ToolLayout
       toolId="password-strength-tester"

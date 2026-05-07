@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { MonoalphabeticSubstitutionCipher } from "@/components/site-header"
+import { MonoalphabeticSubstitutionCipher } from "@/components/monoalphabeticsubstitutioncipher"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGEMonoalphabetic Substitution Cipher() {
+export default function MonoalphabeticSubstitutionCipherPage() {
   return (
     <ToolLayout
       toolId="monoalphabetic-substitution-cipher"

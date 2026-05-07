@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGEMayan Numeral Converter() {
+export default function MayanNumeralConverterPage() {
   return (
     <ToolLayout
       toolId="mayan-numeral-converter"

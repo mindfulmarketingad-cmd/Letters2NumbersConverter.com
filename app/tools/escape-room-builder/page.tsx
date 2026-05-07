@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { EscapeRoomBuilder } from "@/components/site-header"
+import { EscapeRoomBuilder } from "@/components/escaperoombuilder"
 import { ToolLayout } from "@/components/tool-layout"
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGEEscape Room Builder() {
+export default function EscapeRoomBuilderPage() {
   return (
     <ToolLayout
       toolId="escape-room-builder"

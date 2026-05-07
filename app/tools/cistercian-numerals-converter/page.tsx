@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PAGECistercian Numerals Converter() {
+export default function CistercianNumeralsConverterPage() {
   return (
     <ToolLayout
       toolId="cistercian-numerals-converter"

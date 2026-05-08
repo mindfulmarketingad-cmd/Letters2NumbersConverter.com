@@ -411,6 +411,25 @@ export const getToolData = (toolId: string) => {
         { title: 'Security Professionals', description: 'Analyzing suspicious or obfuscated base64 image data for security audits' }
       ]
     },
+    'morse-to-base64-converter': {
+      howItWorks: 'Enter or paste Morse code into the left panel using the configured separators (default: − for dash, · for dot, / for word spaces). The tool automatically decodes the Morse code to readable text and converts it to Base64 format on the right. Customize the separators to match your Morse code format. All processing happens offline on your device.',
+      features: [
+        'Decode Morse code to readable text',
+        'Convert decoded text to Base64 format',
+        'Customizable Morse code separators',
+        'Real-time decoding and conversion',
+        'Displays intermediate decoded text',
+        'Copy decoded text and Base64 output',
+        'Support for standard Morse alphabet',
+        'Works completely offline'
+      ],
+      whoIsItFor: [
+        { title: 'Amateur Radio Operators', description: 'Decoding received Morse code messages and converting to digital formats' },
+        { title: 'History Enthusiasts', description: 'Translating historical Morse code communications and digital preservation' },
+        { title: 'Cryptography Students', description: 'Learning encoding systems and practicing Morse code decryption' },
+        { title: 'Data Analysts', description: 'Processing encoded Morse data and converting to Base64 for storage and transmission' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

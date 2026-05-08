@@ -2,135 +2,178 @@
 
 ## Overview
 
-Each tool should track usage when the user performs the **primary conversion/action** of that tool. This is done by calling the `useTrackUsage` hook.
+All tools on your site need to track user tool usage to enforce the daily limits:
+- **Anonymous users**: 10 uses/day
+- **Logged-in users**: 25 uses/day
+- **Paid subscribers**: Unlimited uses
 
-## Usage Definition by Tool Type
+## What Counts as a "Use"?
 
-| Tool Type | When to Track | Action |
-|-----------|---------------|--------|
-| **Converter** | User clicks "Convert" button | Track on button click |
-| **Generator** | User generates output | Track when output is created |
-| **Real-time Tool** | User completes input | Track on final input change |
+A **"use"** is counted when the user **performs the primary action that generates output**:
 
-### Examples:
-- **CM To Pixels Converter** → Track when user clicks "Convert to Pixels"
-- **Placeholder Image Creator** → Track when user first generates an image (on mount or after first input)
-- **Letters to Numbers Converter** → Track when user submits/converts
+- **Converters** (CM to Pixels, Letters to Numbers, etc.) → Count when user triggers the conversion
+- **Generators** (Placeholder Image Creator) → Count when the output is generated
+- **Solvers** (Anagram, Equation, etc.) → Count when user solves/calculates
+- **Real-time tools** → Count on the final action/submission
 
 ## Implementation Steps
 
-### Step 1: Import the Hook
+### 1. Import the Hook
 
 ```tsx
-'use client'
-
 import { useTrackUsage } from '@/lib/use-track-usage'
-
-export function MyTool() {
-  const { trackUsage, remainingUses, isLimitExceeded } = useTrackUsage('My Tool Name')
+import { UpgradeModal } from '@/components/upgrade-modal'
 ```
 
-### Step 2: Call trackUsage on Primary Action
+### 2. Initialize Usage Tracking in Component
 
 ```tsx
-const handleConvert = async () => {
-  // Check if user has uses remaining
-  const { allowed, message } = await trackUsage()
+export function YourToolComponent() {
+  // ... other state declarations
+  const { trackUsage, showUpgradeModal, setShowUpgradeModal, remainingUses } = useTrackUsage('Tool Display Name')
   
-  if (!allowed) {
-    // Show upgrade modal or error message
-    alert(message)
-    return
-  }
-
-  // Perform the conversion/tool action
-  doConversion()
+  // Rest of component
 }
 ```
 
-### Step 3: Show Remaining Uses (Optional)
+### 3. Call trackUsage() on Primary Action
 
 ```tsx
-return (
-  <div>
-    {remainingUses !== null && (
-      <p className="text-sm text-muted-foreground">
-        Uses remaining today: {remainingUses}
-      </p>
-    )}
-    {/* Rest of tool UI */}
-  </div>
-)
+const handleConvert = async () => {
+  // Call trackUsage() when user performs the main action
+  const result = await trackUsage()
+  
+  if (!result.allowed) {
+    // Don't perform the action if limit exceeded
+    return
+  }
+  
+  // Perform your conversion/generation logic
+  const output = performConversion(input)
+  setResult(output)
+}
 ```
 
-## Full Example: CM To Pixels Converter
+### 4. Display Remaining Uses (Optional)
+
+```tsx
+{remainingUses !== null && remainingUses > 0 && (
+  <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900 rounded-lg p-3">
+    <p className="text-sm text-blue-800 dark:text-blue-200">
+      Remaining uses today: <span className="font-bold">{remainingUses}</span>
+    </p>
+  </div>
+)}
+```
+
+### 5. Add Upgrade Modal
+
+```tsx
+{/* At the end of your component's return statement */}
+<UpgradeModal isOpen={showUpgradeModal} onClose={() => setShowUpgradeModal(false)} />
+```
+
+## Complete Example
+
+Here's the pattern used in CM To Pixels Converter and Placeholder Image Creator:
 
 ```tsx
 'use client'
 
 import { useState } from 'react'
 import { useTrackUsage } from '@/lib/use-track-usage'
+import { UpgradeModal } from '@/components/upgrade-modal'
 
-export function CMToPixelsConverter() {
-  const [cm, setCm] = useState('')
-  const [result, setResult] = useState<number | null>(null)
-  
-  const { trackUsage, remainingUses, isLimitExceeded } = useTrackUsage('CM To Pixels Converter')
+export function YourToolComponent() {
+  const [result, setResult] = useState(null)
+  const { trackUsage, showUpgradeModal, setShowUpgradeModal, remainingUses } = useTrackUsage('Your Tool Name')
 
-  const handleConvert = async () => {
-    if (!cm || isNaN(Number(cm))) return
-
+  const handleAction = async () => {
     // Track the usage
-    const { allowed, message } = await trackUsage()
+    const { allowed } = await trackUsage()
     
-    if (!allowed) {
-      alert(message)
-      return
-    }
+    // If limit exceeded, modal will show automatically
+    if (!allowed) return
 
-    // Do the conversion
-    const pixels = (parseFloat(cm) * 96) / 2.54
-    setResult(Math.round(pixels * 100) / 100)
+    // Perform your tool's primary action
+    const output = doSomething()
+    setResult(output)
   }
 
   return (
-    <div className="space-y-4">
-      {remainingUses !== null && (
-        <p className="text-sm text-muted-foreground">
-          Remaining uses: {remainingUses}
-        </p>
-      )}
-      
-      <input
-        type="number"
-        value={cm}
-        onChange={e => setCm(e.target.value)}
-        placeholder="Enter cm..."
-      />
-      
-      <button
-        onClick={handleConvert}
-        disabled={isLimitExceeded}
-        className="px-4 py-2 bg-primary text-white rounded disabled:opacity-50"
-      >
-        {isLimitExceeded ? 'Limit Exceeded' : 'Convert to Pixels'}
-      </button>
+    <div className="space-y-8">
+      {/* Your tool UI */}
+      <button onClick={handleAction}>Perform Action</button>
 
-      {result && <p>Result: {result}px</p>}
+      {/* Show remaining uses */}
+      {remainingUses !== null && remainingUses > 0 && (
+        <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900 rounded-lg p-3">
+          <p className="text-sm text-blue-800 dark:text-blue-200">
+            Remaining uses today: <span className="font-bold">{remainingUses}</span>
+          </p>
+        </div>
+      )}
+
+      {/* Upgrade modal appears when limit exceeded */}
+      <UpgradeModal isOpen={showUpgradeModal} onClose={() => setShowUpgradeModal(false)} />
     </div>
   )
 }
 ```
 
-## Limits
+## How It Works
 
-- **Anonymous Users**: 10 uses per day
-- **Logged-in Users**: 25 uses per day
-- **Paid Subscribers**: Unlimited uses
+1. **useTrackUsage()** hook handles all tracking logic
+2. Calls `/api/usage/track` POST endpoint to track usage
+3. Returns:
+   - `allowed`: Whether user can perform the action
+   - `remainingUses`: How many uses left today
+   - `showUpgradeModal`: Whether to show upgrade prompt
+4. **UpgradeModal** automatically displays when limit exceeded
+5. Uses either user ID (if logged in) or session ID (if anonymous)
 
-## Notes
+## Key Files
 
-- The `trackUsage()` function is debounced and cached internally
-- If tracking fails, the tool still works (fail-open policy)
-- Usage resets daily at midnight UTC
-- Each tool needs to implement tracking independently
+- `/lib/use-track-usage.ts` - Main hook for tracking
+- `/lib/use-session-id.ts` - Session ID management for anonymous users
+- `/api/usage/track/route.ts` - Backend endpoint
+- `/components/upgrade-modal.tsx` - Modal shown when limit reached
+
+## Database
+
+Uses two Supabase tables:
+- `usage_tracking` - Records each tool use
+- `user_subscriptions` - Tracks subscription status for paid limits
+
+Run `lib/setup-database.sql` in Supabase SQL editor if tables don't exist.
+
+## Testing
+
+### Test Anonymous User (10 uses)
+1. Clear localStorage or use incognito browser
+2. Use any tool 10 times
+3. Should see upgrade modal on 11th use
+
+### Test Logged-in User (25 uses)
+1. Sign up / sign in
+2. Use any tool 25 times
+3. Should see upgrade modal on 26th use
+
+### Test Paid User (Unlimited)
+1. Create a paid subscription in Supabase
+2. Use any tool unlimited times
+3. No limit reached message
+
+## Tools Already Updated with Tracking
+
+- ✅ CM To Pixels Converter
+- ✅ Placeholder Image Creator
+
+## Future Tools
+
+**All new tools created after this should automatically include:**
+1. Import `useTrackUsage` hook
+2. Call `trackUsage()` on primary action
+3. Display remaining uses
+4. Include `UpgradeModal` component
+

@@ -2,12 +2,15 @@
 
 import { useState } from 'react'
 import { Copy } from 'lucide-react'
+import { useTrackUsage } from '@/lib/use-track-usage'
+import { UpgradeModal } from '@/components/upgrade-modal'
 
 export function CMToPixelsConverter() {
   const [cm, setCm] = useState('')
   const [ppi, setPpi] = useState(96)
   const [result, setResult] = useState<number | null>(null)
   const [copied, setCopied] = useState(false)
+  const { trackUsage, showUpgradeModal, setShowUpgradeModal, remainingUses } = useTrackUsage('CM To Pixels Converter')
 
   const ppiOptions = [
     { value: 72, label: '72 PPI (Print)' },
@@ -26,6 +29,7 @@ export function CMToPixelsConverter() {
     const cmValue = parseFloat(value)
     const pixels = (cmValue * selectedPpi) / 2.54
     setResult(Math.round(pixels * 100) / 100)
+    trackUsage() // Track usage on conversion
   }
 
   const handleCmChange = (value: string) => {
@@ -186,6 +190,18 @@ export function CMToPixelsConverter() {
           <li>• <strong>Formula:</strong> Pixels = (Centimeters × PPI) / 2.54</li>
         </ul>
       </div>
+
+      {/* Remaining Uses Display */}
+      {remainingUses !== null && remainingUses > 0 && (
+        <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900 rounded-lg p-3">
+          <p className="text-sm text-blue-800 dark:text-blue-200">
+            Remaining uses today: <span className="font-bold">{remainingUses}</span>
+          </p>
+        </div>
+      )}
+
+      {/* Upgrade Modal */}
+      <UpgradeModal isOpen={showUpgradeModal} onClose={() => setShowUpgradeModal(false)} />
     </div>
   )
 }

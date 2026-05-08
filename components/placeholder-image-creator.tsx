@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { Copy, Download, Shuffle } from 'lucide-react'
+import { useTrackUsage } from '@/lib/use-track-usage'
+import { UpgradeModal } from '@/components/upgrade-modal'
 
 export function PlaceholderImageCreator() {
   const [width, setWidth] = useState(600)
@@ -16,6 +18,7 @@ export function PlaceholderImageCreator() {
   const [dataUri, setDataUri] = useState('')
   const [copied, setCopied] = useState(false)
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const { trackUsage, showUpgradeModal, setShowUpgradeModal, remainingUses } = useTrackUsage('Placeholder Image Creator')
 
   const fontFamilies = ['sans-serif', 'serif', 'monospace', 'Arial', 'Georgia', 'Times New Roman', 'Courier New']
   const fontWeights = [100, 300, 400, 500, 600, 700, 800, 900]
@@ -49,6 +52,7 @@ export function PlaceholderImageCreator() {
     const type = fileType === 'jpg' ? 'image/jpeg' : `image/${fileType}`
     const uri = canvas.toDataURL(type)
     setDataUri(uri)
+    trackUsage() // Track usage on image generation
   }
 
   useEffect(() => {
@@ -286,6 +290,18 @@ export function PlaceholderImageCreator() {
           <li>• Copy the Data URI for embedding directly in HTML/CSS</li>
         </ul>
       </div>
+
+      {/* Remaining Uses Display */}
+      {remainingUses !== null && remainingUses > 0 && (
+        <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900 rounded-lg p-3">
+          <p className="text-sm text-blue-800 dark:text-blue-200">
+            Remaining uses today: <span className="font-bold">{remainingUses}</span>
+          </p>
+        </div>
+      )}
+
+      {/* Upgrade Modal */}
+      <UpgradeModal isOpen={showUpgradeModal} onClose={() => setShowUpgradeModal(false)} />
     </div>
   )
 }

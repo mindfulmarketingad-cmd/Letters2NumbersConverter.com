@@ -245,6 +245,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Code Tools',
     href: '/tools/batch-file-editor',
   },
+  'rgb-to-pantone-converter': {
+    name: 'RGB To Pantone Color Converter',
+    description: 'Convert RGB colors to Pantone (PMS) format instantly',
+    category: 'Color Tools',
+    href: '/tools/rgb-to-pantone-color-converter',
+  },
 }
 
 export function getToolRegistry() {

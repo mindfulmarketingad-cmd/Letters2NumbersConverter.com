@@ -354,6 +354,25 @@ export const getToolData = (toolId: string) => {
         { title: 'Students & Learners', description: 'Learning batch scripting and Windows command-line programming' }
       ]
     },
+    'rgb-to-pantone-converter': {
+      howItWorks: 'Enter RGB color values (Red, Green, Blue) using the sliders or numeric inputs (0-255) on the left. The converter instantly calculates the closest Pantone (PMS) color match and displays the equivalent hex color code with a distance metric. The interactive color picker allows you to select colors visually, and the tool shows multiple Pantone alternatives for precise color matching.',
+      features: [
+        'Convert RGB to Pantone (PMS) color format',
+        'Interactive RGB sliders (0-255 range)',
+        'Real-time color preview display',
+        'Visual color picker with gradient selector',
+        'Distance metric for color accuracy',
+        'Shows closest Pantone match plus alternatives',
+        'Hex color code conversion and display',
+        'Copy Pantone PMS code to clipboard'
+      ],
+      whoIsItFor: [
+        { title: 'Web Designers', description: 'Converting RGB web colors to Pantone for print mockups and branding consistency' },
+        { title: 'Graphic Designers', description: 'Bridging digital RGB colors to print-ready Pantone specifications' },
+        { title: 'Brand Managers', description: 'Ensuring accurate color reproduction across digital and print materials' },
+        { title: 'Print & Marketing Professionals', description: 'Matching screen colors to print production requirements and standards' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

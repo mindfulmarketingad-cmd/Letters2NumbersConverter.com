@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { FloatingToc } from '@/components/floating-toc'
 import { ThemeProvider } from '@/components/theme-provider'
 import { SchemaMarkup } from '@/components/schema-markup'
+import { AuthProvider } from '@/lib/auth-context'
 import Script from 'next/script'
 import './globals.css'
 
@@ -105,15 +106,17 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased min-h-screen bg-background">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-          <FloatingToc />
-        </ThemeProvider>
+        <AuthProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+            <FloatingToc />
+          </ThemeProvider>
+        </AuthProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

@@ -32,7 +32,7 @@ export default function IVRAlphanumericPage() {
   const toolData = getToolData('ivr-alphanumeric-converter')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="ivr-alphanumeric-conversion-tool">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -56,7 +56,6 @@ export default function IVRAlphanumericPage() {
           })
         }}
       />
-    <ToolPageWrapper toolSlug="ivr-alphanumeric-conversion-tool">
       <ToolLayout
         toolId="ivr-alphanumeric-converter"
         toolName="IVR Alphanumeric Conversion Tool"
@@ -64,6 +63,6 @@ export default function IVRAlphanumericPage() {
         toolComponent={<IVRAlphanumericConverter />}
         toolData={toolData}
       />
-  </ToolPageWrapper>
+    </ToolPageWrapper>
   )
 }

@@ -32,7 +32,7 @@ export default function MorseToBase64ConverterPage() {
   const toolData = getToolData('morse-to-base64-converter')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="morse-code-to-base64">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -56,7 +56,6 @@ export default function MorseToBase64ConverterPage() {
           })
         }}
       />
-    <ToolPageWrapper toolSlug="morse-code-to-base64">
       <ToolLayout
         toolId="morse-to-base64-converter"
         toolName="Morse Code to Base64 Converter"
@@ -64,6 +63,6 @@ export default function MorseToBase64ConverterPage() {
         toolComponent={<MorseToBase64Converter />}
         toolData={toolData}
       />
-  </ToolPageWrapper>
+    </ToolPageWrapper>
   )
 }

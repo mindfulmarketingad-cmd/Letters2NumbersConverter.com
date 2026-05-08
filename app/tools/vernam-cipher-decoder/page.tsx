@@ -32,7 +32,7 @@ export default function VernamCipherDecoderPage() {
   const toolData = getToolData('vernam-cipher-decoder')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="vernam-cipher-decoder">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -56,7 +56,6 @@ export default function VernamCipherDecoderPage() {
           })
         }}
       />
-    <ToolPageWrapper toolSlug="vernam-cipher-decoder">
       <ToolLayout
         toolId="vernam-cipher-decoder"
         toolName="Vernam Cipher Decoder"
@@ -64,6 +63,6 @@ export default function VernamCipherDecoderPage() {
         toolComponent={<VernamCipherDecoder />}
         toolData={toolData}
       />
-  </ToolPageWrapper>
+    </ToolPageWrapper>
   )
 }

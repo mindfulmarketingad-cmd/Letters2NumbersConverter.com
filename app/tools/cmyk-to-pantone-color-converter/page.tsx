@@ -32,7 +32,7 @@ export default function CMYKToPantoneConverterPage() {
   const toolData = getToolData('cmyk-to-pantone-color-converter')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="cmyk-to-pantone-color-converter">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -56,7 +56,6 @@ export default function CMYKToPantoneConverterPage() {
           })
         }}
       />
-    <ToolPageWrapper toolSlug="cmyk-to-pantone-color-converter">
       <ToolLayout
         toolId="cmyk-to-pantone-converter"
         toolName="CMYK to Pantone Color Converter"
@@ -64,6 +63,6 @@ export default function CMYKToPantoneConverterPage() {
         toolComponent={<CMYKToPantoneConverter />}
         toolData={toolData}
       />
-  </ToolPageWrapper>
+    </ToolPageWrapper>
   )
 }

@@ -32,7 +32,7 @@ export default function RGBToPantoneConverterPage() {
   const toolData = getToolData('rgb-to-pantone-converter')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="rgb-to-pantone-color-converter">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -56,7 +56,6 @@ export default function RGBToPantoneConverterPage() {
           })
         }}
       />
-    <ToolPageWrapper toolSlug="rgb-to-pantone-color-converter">
       <ToolLayout
         toolId="rgb-to-pantone-converter"
         toolName="RGB To Pantone Color Converter"
@@ -64,6 +63,6 @@ export default function RGBToPantoneConverterPage() {
         toolComponent={<RGBToPantoneConverter />}
         toolData={toolData}
       />
-  </ToolPageWrapper>
+    </ToolPageWrapper>
   )
 }

@@ -32,7 +32,7 @@ export default function PantoneToHexConverterPage() {
   const toolData = getToolData('pantone-to-hex-converter')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="pantone-to-hex-converter">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -56,7 +56,6 @@ export default function PantoneToHexConverterPage() {
           })
         }}
       />
-    <ToolPageWrapper toolSlug="pantone-to-hex-converter">
       <ToolLayout
         toolId="pantone-to-hex-converter"
         toolName="Pantone to Hex Converter"
@@ -64,6 +63,6 @@ export default function PantoneToHexConverterPage() {
         toolComponent={<PantoneToHexConverter />}
         toolData={toolData}
       />
-  </ToolPageWrapper>
+    </ToolPageWrapper>
   )
 }

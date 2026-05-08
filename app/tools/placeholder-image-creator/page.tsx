@@ -32,7 +32,7 @@ export default function PlaceholderImageCreatorPage() {
   const toolData = getToolData('placeholder-image-creator')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="placeholder-image-creator">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -56,7 +56,6 @@ export default function PlaceholderImageCreatorPage() {
           })
         }}
       />
-    <ToolPageWrapper toolSlug="placeholder-image-creator">
       <ToolLayout
         toolId="placeholder-image-creator"
         toolName="Placeholder Image Creator"
@@ -64,6 +63,6 @@ export default function PlaceholderImageCreatorPage() {
         toolComponent={<PlaceholderImageCreator />}
         toolData={toolData}
       />
-  </ToolPageWrapper>
+    </ToolPageWrapper>
   )
 }

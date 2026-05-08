@@ -263,6 +263,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Image Tools',
     href: '/tools/base64-image-viewer',
   },
+  'morse-to-base64-converter': {
+    name: 'Morse Code to Base64 Converter',
+    description: 'Decode Morse code and convert to Base64 format',
+    category: 'Conversion',
+    href: '/tools/morse-code-to-base64',
+  },
 }
 
 export function getToolRegistry() {

@@ -29,6 +29,7 @@ export function PricingPage() {
       highlight: true,
       planType: 'pro_monthly',
       savings: 'Most Popular',
+      checkoutUrl: 'https://buy.stripe.com/cNifZi1DQ6cMd6S59sfrW01',
     },
     {
       name: 'Pro Annual',
@@ -48,11 +49,19 @@ export function PricingPage() {
       ctaVariant: 'primary',
       highlight: false,
       planType: 'pro_yearly',
+      checkoutUrl: 'https://buy.stripe.com/fZubJ26Ya44Eff08lEfrW00',
     },
   ]
 
-  const handleSubscribe = async (planType: string | null) => {
-    if (!planType) {
+  const handleSubscribe = async (plan: any) => {
+    // Direct redirect to Stripe checkout link
+    if (plan.checkoutUrl) {
+      window.location.href = plan.checkoutUrl
+      return
+    }
+
+    // Fallback for free plan
+    if (!plan.planType) {
       router.push(user ? '/dashboard' : '/auth/signup')
       return
     }
@@ -68,7 +77,7 @@ export function PricingPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          planType,
+          planType: plan.planType,
           userId: user.id,
           email: user.email,
         }),
@@ -170,7 +179,7 @@ export function PricingPage() {
                   </ul>
 
                   <button
-                    onClick={() => handleSubscribe(plan.planType)}
+                    onClick={() => handleSubscribe(plan)}
                     disabled={isLoading}
                     className={`w-full py-2 px-4 rounded-lg font-medium transition-colors ${
                       plan.ctaVariant === 'primary'

@@ -289,23 +289,76 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'yaml-to-ini-converter': {
-      howItWorks: 'Paste your YAML configuration file or INI format file into the left panel. The tool instantly converts between formats, automatically detecting the input type. Download the converted file or copy to clipboard.',
-      features: ['YAML to INI bidirectional conversion', 'Automatic format detection', 'Hierarchy and nested structure preservation', 'Comment preservation during conversion', 'Format validation and error detection', 'Download converted file', 'Copy to clipboard functionality', 'Support for complex configuration structures'],
+      howItWorks: 'Paste YAML configuration and the tool converts to INI format (or vice versa). Maintains hierarchy and values. Preview changes before download.',
+      features: ['YAML to INI bidirectional conversion', 'Hierarchy preservation', 'Nested structure handling', 'Comment preservation', 'Format validation', 'Download converted file'],
       whoIsItFor: [
-        { title: 'DevOps Engineers', description: 'Converting configuration file formats across different deployment systems' },
+        { title: 'DevOps Engineers', description: 'Converting config file formats across different deployment systems' },
         { title: 'System Administrators', description: 'Migrating configuration systems and standardizing config file formats' },
         { title: 'Developers', description: 'Working across different configuration standards in various frameworks and tools' }
       ]
     },
+    'word-to-number-translator': {
+      howItWorks: 'Enter words or numeric text in the left panel and choose your encoding method to convert words to numbers or numbers back to words. The translator instantly processes the conversion and displays the result with a character-by-character breakdown. Supports multiple encoding systems including A1Z26, A0Z25, ASCII, and more.',
+      features: [
+        'Convert English words to numerical sequences instantly',
+        'Support for multiple encoding methods (A1Z26, A0Z25, ASCII, HEX, BINARY)',
+        'Bidirectional conversion - words to numbers and numbers to words',
+        'Real-time conversion as you type',
+        'Character-by-character breakdown visualization',
+        'Copy results to clipboard with one click',
+        'Works completely offline - no data sent to servers',
+        'Perfect for cryptography, puzzles, and data encoding'
+      ],
+      whoIsItFor: [
+        { title: 'Puzzle Enthusiasts', description: 'Solving word-based cryptograms and numeric puzzles that require word-to-number conversion' },
+        { title: 'Cryptography Learners', description: 'Understanding how words are encoded numerically in encryption systems' },
+        { title: 'Students & Teachers', description: 'Educational tool for learning about character encoding and numerical representation of text' },
+        { title: 'Data Science Professionals', description: 'Converting categorical word data to numerical format for analysis and machine learning' }
+      ]
+    },
+    'cmyk-to-pantone-color-converter': {
+      howItWorks: 'Enter CMYK color values (Cyan, Magenta, Yellow, Black) using the sliders or numeric inputs on the left. The converter instantly calculates the closest Pantone (PMS) color match and displays the equivalent hex color code. The tool shows the main color result plus five alternative Pantone options for precision color matching in print production.',
+      features: [
+        'Convert CMYK to Pantone (PMS) color format',
+        'Interactive CMYK sliders (0-100% range)',
+        'Real-time color preview display',
+        'Shows closest Pantone match with distance calculation',
+        'Alternative Pantone color suggestions',
+        'Hex color code conversion and display',
+        'Copy Pantone PMS code to clipboard',
+        'Perfect for print design, branding, and color standardization'
+      ],
+      whoIsItFor: [
+        { title: 'Graphic Designers', description: 'Converting CMYK colors from digital design to Pantone for accurate print production' },
+        { title: 'Print Professionals', description: 'Matching spot colors in printing using Pantone standards' },
+        { title: 'Branding Specialists', description: 'Ensuring consistent color representation across print and digital media' },
+        { title: 'Marketing Teams', description: 'Standardizing brand colors across all marketing materials and collateral' }
+      ]
+    },
+    'batch-file-editor': {
+      howItWorks: 'Write or paste batch file commands into the editor. The tool provides real-time syntax highlighting, line numbering, and instant file statistics. Analyze your batch scripts by character count, word count, line count, and file size. Download your batch files directly or copy to clipboard for easy sharing and execution.',
+      features: [
+        'Full-featured batch file code editor',
+        'Line numbering with real-time display',
+        'Character, word, line, and size statistics',
+        'Dark theme editor for coding comfort',
+        'Copy to clipboard functionality',
+        'Download as .bat file directly',
+        'Batch file syntax-aware editing',
+        'File size calculation in B/KB/MB'
+      ],
+      whoIsItFor: [
+        { title: 'Windows System Administrators', description: 'Creating and editing batch scripts for system automation and maintenance' },
+        { title: 'System Developers', description: 'Writing batch files for deployment, backups, and scheduled tasks' },
+        { title: 'IT Professionals', description: 'Managing batch file libraries and scripts for server administration' },
+        { title: 'Students & Learners', description: 'Learning batch scripting and Windows command-line programming' }
+      ]
+    },
   }
-  
+
   return toolDataMap[toolId] || {
     howItWorks: 'Use the interactive tool on the left to encode, decode, or solve your input. The tool provides real-time results as you type or make selections.',
     features: ['Real-time processing with instant results', 'Works completely offline - no data sent to servers', 'Copy results to clipboard easily', 'Free and always available'],
-    whoIsItFor: [
-      { title: 'Enthusiasts', description: 'Exploring and learning new tools' },
-      { title: 'Students', description: 'Understanding different concepts and techniques' },
-      { title: 'Professionals', description: 'Using tools for work and productivity' }
-    ]
+    whoIsItFor: []
   }
 }

@@ -227,6 +227,24 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Data Conversion',
     href: '/tools/yaml-to-ini-converter',
   },
+  'word-to-number-translator': {
+    name: 'Word To Number Translator',
+    description: 'Convert words to numbers and numbers to words with multiple encoding methods',
+    category: 'Conversion',
+    href: '/tools/word-to-number-translator',
+  },
+  'cmyk-to-pantone-converter': {
+    name: 'CMYK to Pantone Color Converter',
+    description: 'Convert CMYK colors to Pantone (PMS) format instantly',
+    category: 'Color Tools',
+    href: '/tools/cmyk-to-pantone-color-converter',
+  },
+  'batch-file-editor': {
+    name: 'Batch File Editor',
+    description: 'Edit, create, and analyze batch files with real-time statistics',
+    category: 'Code Tools',
+    href: '/tools/batch-file-editor',
+  },
 }
 
 export function getToolRegistry() {

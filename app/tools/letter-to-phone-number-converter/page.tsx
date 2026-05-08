@@ -21,12 +21,13 @@ const toolData: ToolData = getToolData("letter-to-phone-number-converter")
 export default function PhoneNumberConverterPage() {
   return (
     <ToolPageWrapper toolSlug="letter-to-phone-number-converter">
-    <ToolLayout
-      toolId="phone-number-converter"
-      toolName="Phone Number Converter"
-      toolDescription="Convert letters to phone number digits using T9/multi-tap phone keypad mapping. Perfect for decoding phone-based text messages and understanding legacy phone systems."
-      toolComponent={<PhoneNumberConverter />}
-      toolData={toolData}
-    />
+      <ToolLayout
+        toolId="phone-number-converter"
+        toolName="Phone Number Converter"
+        toolDescription="Convert letters to phone number digits using T9/multi-tap phone keypad mapping. Perfect for decoding phone-based text messages and understanding legacy phone systems."
+        toolComponent={<PhoneNumberConverter />}
+        toolData={toolData}
+      />
+    </ToolPageWrapper>
   )
 }

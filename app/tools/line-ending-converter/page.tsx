@@ -21,12 +21,13 @@ const toolData: ToolData = getToolData("line-ending-converter")
 export default function LineEndingConverterPage() {
   return (
     <ToolPageWrapper toolSlug="line-ending-converter">
-    <ToolLayout
-      toolId="line-ending-converter"
-      toolName="Line Ending Converter"
-      toolDescription="Convert between different line ending formats (LF, CRLF, CR) for cross-platform compatibility. Handle line break differences across Windows, Mac, and Unix systems effortlessly."
-      toolComponent={<LineEndingConverter />}
-      toolData={toolData}
-    />
+      <ToolLayout
+        toolId="line-ending-converter"
+        toolName="Line Ending Converter"
+        toolDescription="Convert between different line ending formats (LF, CRLF, CR) for cross-platform compatibility. Handle line break differences across Windows, Mac, and Unix systems effortlessly."
+        toolComponent={<LineEndingConverter />}
+        toolData={toolData}
+      />
+    </ToolPageWrapper>
   )
 }

@@ -373,6 +373,25 @@ export const getToolData = (toolId: string) => {
         { title: 'Print & Marketing Professionals', description: 'Matching screen colors to print production requirements and standards' }
       ]
     },
+    'pantone-to-hex-converter': {
+      howItWorks: 'Use the search panel to browse and select from an extensive Pantone color database, or use the visual color picker on the right to select any color and find its closest Pantone match. The tool instantly displays hex, RGB, and CMYK color values for seamless conversion between format types. Real-time color matching ensures accurate color reproduction across design and print workflows.',
+      features: [
+        'Searchable Pantone color database',
+        'Visual color picker with interactive gradient',
+        'Convert to hex, RGB, and CMYK formats',
+        'Real-time color distance calculation',
+        'Closest Pantone match identification',
+        'Copy Pantone codes to clipboard',
+        'Comprehensive color information display',
+        'Works completely offline'
+      ],
+      whoIsItFor: [
+        { title: 'Graphic & Print Designers', description: 'Finding and converting Pantone colors for design projects and print specifications' },
+        { title: 'Brand Specialists', description: 'Maintaining consistent brand colors across digital and print media' },
+        { title: 'Web Developers', description: 'Converting Pantone specifications to hex values for web implementation' },
+        { title: 'Color Professionals', description: 'Color matching and format conversion for accurate reproduction across mediums' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

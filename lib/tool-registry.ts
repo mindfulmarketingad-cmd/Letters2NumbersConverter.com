@@ -251,6 +251,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Color Tools',
     href: '/tools/rgb-to-pantone-color-converter',
   },
+  'pantone-to-hex-converter': {
+    name: 'Pantone to Hex Converter',
+    description: 'Search Pantone colors and convert to hex format',
+    category: 'Color Tools',
+    href: '/tools/pantone-to-hex-converter',
+  },
 }
 
 export function getToolRegistry() {

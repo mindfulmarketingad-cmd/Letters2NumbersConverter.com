@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { CMToPixelsConverter } from "@/components/cm-to-pixels-converter"
 import { ToolLayout } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ export default function CMToPixelsPage() {
           })
         }}
       />
+    <ToolPageWrapper toolSlug="cm-to-pixels-converter">
       <ToolLayout
         toolId="cm-to-pixels-converter"
         toolName="CM To Pixels Converter"

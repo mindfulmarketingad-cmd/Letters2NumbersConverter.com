@@ -1,5 +1,6 @@
 import { A0Z25Translator } from "@/components/a0z25-translator"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import type { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 
@@ -23,12 +24,14 @@ const toolData: ToolData = getToolData("a0z25-cipher-translator")
 
 export default function A0Z25CipherTranslatorPage() {
   return (
-    <ToolLayout
-      toolId="a0z25-cipher"
-      toolName="A0Z25 Cipher Translator"
-      toolDescription="The A0Z25 Cipher Translator is a powerful zero-indexed letter-to-number encoding tool. Convert letters to numbers instantly using A0Z25 encoding where A=0, B=1, through Z=25. Perfect for programming, computer science, cryptography, and puzzle solving."
-      toolComponent={<A0Z25Translator />}
-      toolData={toolData}
-    />
+    <ToolPageWrapper toolSlug="a0z25-cipher-translator">
+      <ToolLayout
+        toolId="a0z25-cipher"
+        toolName="A0Z25 Cipher Translator"
+        toolDescription="The A0Z25 Cipher Translator is a powerful zero-indexed letter-to-number encoding tool. Convert letters to numbers instantly using A0Z25 encoding where A=0, B=1, through Z=25. Perfect for programming, computer science, cryptography, and puzzle solving."
+        toolComponent={<A0Z25Translator />}
+        toolData={toolData}
+      />
+    </ToolPageWrapper>
   )
 }

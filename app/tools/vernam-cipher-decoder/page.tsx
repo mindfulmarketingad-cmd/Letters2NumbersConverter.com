@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { VernamCipherDecoder } from "@/components/vernam-cipher-decoder"
 import { ToolLayout } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ export default function VernamCipherDecoderPage() {
           })
         }}
       />
+    <ToolPageWrapper toolSlug="vernam-cipher-decoder">
       <ToolLayout
         toolId="vernam-cipher-decoder"
         toolName="Vernam Cipher Decoder"

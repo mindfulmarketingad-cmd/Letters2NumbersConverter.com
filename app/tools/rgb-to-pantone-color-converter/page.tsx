@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { RGBToPantoneConverter } from "@/components/rgb-to-pantone-converter"
 import { ToolLayout } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ export default function RGBToPantoneConverterPage() {
           })
         }}
       />
+    <ToolPageWrapper toolSlug="rgb-to-pantone-color-converter">
       <ToolLayout
         toolId="rgb-to-pantone-converter"
         toolName="RGB To Pantone Color Converter"

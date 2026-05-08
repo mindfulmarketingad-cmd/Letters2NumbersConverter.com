@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { Base64ImageViewer } from "@/components/base64-image-viewer"
 import { ToolLayout } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ export default function Base64ImageViewerPage() {
           })
         }}
       />
+    <ToolPageWrapper toolSlug="base64-image-viewer">
       <ToolLayout
         toolId="base64-image-viewer"
         toolName="Base64 Image Viewer"

@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { BookCipherDecoder } from "@/components/book-cipher-decoder"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Book Cipher Decoder",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("book-cipher-decoder")
 
 export default function BookCipherDecoderPage() {
   return (
+    <ToolPageWrapper toolSlug="book-cipher-decoder">
     <ToolLayout
       toolId="book-cipher-decoder"
       toolName="Book Cipher Decoder"

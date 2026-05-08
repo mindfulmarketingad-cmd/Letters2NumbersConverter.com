@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { HexahueCipherSolver } from "@/components/hexahue-cipher-solver"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Hexahue Cipher",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("hexahue-cipher")
 
 export default function HexahueCipherPage() {
   return (
+    <ToolPageWrapper toolSlug="hexahue-cipher">
     <ToolLayout
       toolId="hexahue-cipher"
       toolName="Hexahue Cipher"

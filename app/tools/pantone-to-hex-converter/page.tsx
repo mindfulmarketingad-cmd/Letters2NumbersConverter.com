@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { PantoneToHexConverter } from "@/components/pantone-to-hex-converter"
 import { ToolLayout } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ export default function PantoneToHexConverterPage() {
           })
         }}
       />
+    <ToolPageWrapper toolSlug="pantone-to-hex-converter">
       <ToolLayout
         toolId="pantone-to-hex-converter"
         toolName="Pantone to Hex Converter"

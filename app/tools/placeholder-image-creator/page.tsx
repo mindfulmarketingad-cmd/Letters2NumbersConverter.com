@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { PlaceholderImageCreator } from "@/components/placeholder-image-creator"
 import { ToolLayout } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ export default function PlaceholderImageCreatorPage() {
           })
         }}
       />
+    <ToolPageWrapper toolSlug="placeholder-image-creator">
       <ToolLayout
         toolId="placeholder-image-creator"
         toolName="Placeholder Image Creator"

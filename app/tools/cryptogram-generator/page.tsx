@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import CryptogramGenerator from "@/components/cryptogram-generator"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Cryptogram Generator | Create & Share Puzzle Cryptograms",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("cryptogram-generator")
 
 export default function CryptogramGeneratorPage() {
   return (
+    <ToolPageWrapper toolSlug="cryptogram-generator">
     <ToolLayout
       toolId="cryptogram-generator"
       toolName="Cryptogram Generator"

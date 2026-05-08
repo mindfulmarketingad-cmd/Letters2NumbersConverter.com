@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { MayanNumeralConverter } from "@/components/mayan-numeral-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Mayan Numeral Converter",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("mayan-numeral-converter")
 
 export default function MayanNumeralConverterPage() {
   return (
+    <ToolPageWrapper toolSlug="mayan-numeral-converter">
     <ToolLayout
       toolId="mayan-numeral-converter"
       toolName="Mayan Numeral Converter"

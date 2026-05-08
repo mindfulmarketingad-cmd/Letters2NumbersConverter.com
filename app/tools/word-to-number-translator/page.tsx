@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { LetterNumberConverter } from "@/components/letter-number-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ const toolData: ToolData = getToolData('word-to-number-translator')
 
 export default function WordToNumberTranslatorPage() {
   return (
+    <ToolPageWrapper toolSlug="word-to-number-translator">
     <ToolLayout
       toolId="word-to-number-translator"
       toolName="Word To Number Translator"

@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { SkipCipherTool } from "@/components/skip-cipher"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Skip Cipher - Jump Cipher Online Encrypt Decrypt",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("skip-cipher")
 
 export default function SkipCipherPage() {
   return (
+    <ToolPageWrapper toolSlug="skip-cipher">
     <ToolLayout
       toolId="skip-cipher"
       toolName="Skip Cipher"

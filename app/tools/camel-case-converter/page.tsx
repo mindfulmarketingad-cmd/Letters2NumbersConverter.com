@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { CamelCaseConverter } from "@/components/camel-case-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Camel Case Converter",
@@ -43,6 +44,7 @@ const toolData: ToolData = {
 
 export default function CamelCaseConverterPage() {
   return (
+    <ToolPageWrapper toolSlug="camel-case-converter">
     <ToolLayout
       toolId="camel-case-converter"
       toolName="Camel Case Converter"

@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { BlossomSolver } from "@/components/blossom-solver"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Blossom Solver - Jump Cipher Online Encrypt Decrypt",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("blossom-solver")
 
 export default function BlossomSolverPage() {
   return (
+    <ToolPageWrapper toolSlug="blossom-solver">
     <ToolLayout
       toolId="blossom-solver"
       toolName="Blossom Solver"

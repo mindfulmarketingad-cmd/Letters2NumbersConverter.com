@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { CMYKToPantoneConverter } from "@/components/cmyk-to-pantone-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ export default function CMYKToPantoneConverterPage() {
           })
         }}
       />
+    <ToolPageWrapper toolSlug="cmyk-to-pantone-color-converter">
       <ToolLayout
         toolId="cmyk-to-pantone-converter"
         toolName="CMYK to Pantone Color Converter"

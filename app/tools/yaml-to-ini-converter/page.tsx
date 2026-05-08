@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { YamlIniConverter } from "@/components/yaml-ini-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "YAML to INI Converter",
@@ -43,6 +44,7 @@ const toolData: ToolData = {
 
 export default function YamlToIniConverterPage() {
   return (
+    <ToolPageWrapper toolSlug="yaml-to-ini-converter">
     <ToolLayout
       toolId="yaml-to-ini-converter"
       toolName="YAML to INI Converter"

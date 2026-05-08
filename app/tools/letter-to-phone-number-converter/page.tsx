@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { PhoneNumberConverter } from "@/components/phone-number-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Phone Number Converter - Letters to Numbers Converter",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("letter-to-phone-number-converter")
 
 export default function PhoneNumberConverterPage() {
   return (
+    <ToolPageWrapper toolSlug="letter-to-phone-number-converter">
     <ToolLayout
       toolId="phone-number-converter"
       toolName="Phone Number Converter"

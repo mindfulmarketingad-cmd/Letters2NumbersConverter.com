@@ -3,6 +3,8 @@ import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { SignInForm } from '@/components/sign-in-form'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Sign In | Letters2NumbersConverter.com',
   description: 'Sign in to your account to get 25 free tool uses and access premium features.',

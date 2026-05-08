@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createClient } from '@supabase/supabase-js'
 import { Mail, Lock, LogIn } from 'lucide-react'
@@ -20,9 +20,11 @@ export function SignInForm() {
   const searchParams = useSearchParams()
 
   // Check if signup mode from URL parameter
-  if (searchParams.get('mode') === 'signup' && !isSignUp) {
-    setIsSignUp(true)
-  }
+  useEffect(() => {
+    if (searchParams.get('mode') === 'signup') {
+      setIsSignUp(true)
+    }
+  }, [searchParams])
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault()

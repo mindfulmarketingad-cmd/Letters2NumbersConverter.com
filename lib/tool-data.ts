@@ -316,6 +316,25 @@ export const getToolData = (toolId: string) => {
         { title: 'Data Science Professionals', description: 'Converting categorical word data to numerical format for analysis and machine learning' }
       ]
     },
+    'cmyk-to-pantone-color-converter': {
+      howItWorks: 'Enter CMYK color values (Cyan, Magenta, Yellow, Black) using the sliders or numeric inputs on the left. The converter instantly calculates the closest Pantone (PMS) color match and displays the equivalent hex color code. The tool shows the main color result plus five alternative Pantone options for precision color matching in print production.',
+      features: [
+        'Convert CMYK to Pantone (PMS) color format',
+        'Interactive CMYK sliders (0-100% range)',
+        'Real-time color preview display',
+        'Shows closest Pantone match with distance calculation',
+        'Alternative Pantone color suggestions',
+        'Hex color code conversion and display',
+        'Copy Pantone PMS code to clipboard',
+        'Perfect for print design, branding, and color standardization'
+      ],
+      whoIsItFor: [
+        { title: 'Graphic Designers', description: 'Converting CMYK colors from digital design to Pantone for accurate print production' },
+        { title: 'Print Professionals', description: 'Matching spot colors in printing using Pantone standards' },
+        { title: 'Branding Specialists', description: 'Ensuring consistent color representation across print and digital media' },
+        { title: 'Marketing Teams', description: 'Standardizing brand colors across all marketing materials and collateral' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

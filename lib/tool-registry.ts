@@ -233,6 +233,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Conversion',
     href: '/tools/word-to-number-translator',
   },
+  'cmyk-to-pantone-converter': {
+    name: 'CMYK to Pantone Color Converter',
+    description: 'Convert CMYK colors to Pantone (PMS) format instantly',
+    category: 'Color Tools',
+    href: '/tools/cmyk-to-pantone-color-converter',
+  },
 }
 
 export function getToolRegistry() {

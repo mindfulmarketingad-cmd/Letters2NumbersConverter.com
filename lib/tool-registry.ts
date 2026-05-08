@@ -287,6 +287,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Unit Conversion',
     href: '/tools/cm-to-pixels-converter',
   },
+  'placeholder-image-creator': {
+    name: 'Placeholder Image Creator',
+    description: 'Generate custom placeholder images with text, colors, and download options',
+    category: 'Image Tools',
+    href: '/tools/placeholder-image-creator',
+  },
 }
 
 export function getToolRegistry() {

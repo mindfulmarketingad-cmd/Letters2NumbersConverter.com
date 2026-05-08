@@ -487,6 +487,25 @@ export const getToolData = (toolId: string) => {
         { title: 'UI/UX Developers', description: 'Determining exact pixel measurements from metric specifications in design mockups' }
       ]
     },
+    'placeholder-image-creator': {
+      howItWorks: 'Enter your desired width and height in pixels. Choose text and background colors using color pickers or the random color generator. Customize font properties like family, size, and weight. Add optional caption text or leave blank to display dimensions. Download the image in PNG, JPG, or WebP format, or copy the Data URI for direct embedding.',
+      features: [
+        'Create custom placeholder images with any dimensions',
+        'Customize text and background colors',
+        'Random color generator for quick styling',
+        'Multiple font families and weights available',
+        'Adjustable font size for text display',
+        'Optional custom caption or auto-display dimensions',
+        'Download in PNG, JPG, or WebP formats',
+        'Copy Data URI for direct HTML/CSS embedding'
+      ],
+      whoIsItFor: [
+        { title: 'Web Designers', description: 'Creating quick placeholder images for mockups and design compositions' },
+        { title: 'Front-end Developers', description: 'Generating placeholder images for testing layouts and responsive designs' },
+        { title: 'UI/UX Designers', description: 'Building wireframes and prototypes with custom placeholder graphics' },
+        { title: 'Content Managers', description: 'Creating quick visual placeholders for content planning and documentation' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

@@ -5,6 +5,7 @@ import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useAuth } from "@/lib/auth-context"
+import { ProfileDropdown } from "@/components/profile-dropdown"
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -38,9 +39,7 @@ export function SiteHeader() {
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center gap-3">
           {user ? (
-            <Link href="/dashboard" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
-              Dashboard
-            </Link>
+            <ProfileDropdown />
           ) : (
             <>
               <Link href="/sign-in" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">

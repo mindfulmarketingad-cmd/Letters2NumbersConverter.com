@@ -74,11 +74,20 @@ export function PricingPage() {
         }),
       })
 
+      if (!response.ok) {
+        const error = await response.json()
+        throw new Error(error.error || 'Checkout failed')
+      }
+
       const { sessionId } = await response.json()
 
-      // Redirect to Stripe checkout
-      const stripe = await (window as any).Stripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
-      await stripe.redirectToCheckout({ sessionId })
+      // Redirect to Stripe checkout using the modern Stripe API
+      const stripe = (window as any).Stripe
+      if (!stripe) {
+        throw new Error('Stripe library not loaded')
+      }
+      const stripeInstance = stripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+      await stripeInstance.redirectToCheckout({ sessionId })
     } catch (error) {
       console.error('Subscription error:', error)
       alert('Failed to start checkout. Please try again.')

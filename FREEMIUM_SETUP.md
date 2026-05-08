@@ -1,83 +1,94 @@
-# Database Setup Instructions for Freemium System
+# Freemium Subscription System Setup
 
-## Required Tables
+## CRITICAL: Database Setup (MUST DO FIRST)
 
-Run the following SQL in your Supabase SQL Editor to set up the required tables:
+Your deployment is failing because the database tables don't exist. Follow these steps:
 
-```sql
--- Usage Tracking Table
-CREATE TABLE usage_tracking (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
-  session_id UUID,
-  usage_count INT DEFAULT 0,
-  is_registered BOOLEAN DEFAULT false,
-  last_used TIMESTAMP DEFAULT now(),
-  created_at TIMESTAMP DEFAULT now(),
-  UNIQUE(user_id),
-  UNIQUE(session_id)
-);
+### Step 1: Create Tables in Supabase
 
--- User Subscriptions Table
-CREATE TABLE user_subscriptions (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID UNIQUE REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
-  stripe_customer_id TEXT,
-  stripe_subscription_id TEXT,
-  plan_type TEXT DEFAULT 'free' CHECK(plan_type IN ('free', 'pro')),
-  status TEXT DEFAULT 'active' CHECK(status IN ('active', 'cancelled', 'past_due')),
-  current_period_start TIMESTAMP,
-  current_period_end TIMESTAMP,
-  cancel_at_period_end BOOLEAN DEFAULT false,
-  created_at TIMESTAMP DEFAULT now(),
-  updated_at TIMESTAMP DEFAULT now()
-);
+1. Go to your Supabase project at https://supabase.com/dashboard
+2. Click "SQL Editor" in the left sidebar
+3. Click "New Query"
+4. Copy and paste ALL the SQL from `lib/setup-database.sql`
+5. Click the play button to execute
 
--- Enable Row Level Security
-ALTER TABLE usage_tracking ENABLE ROW LEVEL SECURITY;
-ALTER TABLE user_subscriptions ENABLE ROW LEVEL SECURITY;
+This creates the `usage_tracking` and `user_subscriptions` tables with proper indexes and security policies.
 
--- RLS Policies for usage_tracking
-CREATE POLICY "Users can view their own usage" ON usage_tracking
-  FOR SELECT USING (
-    auth.uid() = user_id OR (user_id IS NULL AND session_id IS NOT NULL)
-  );
+## Stripe Setup (CRITICAL - Check Your Config!)
 
--- RLS Policies for user_subscriptions
-CREATE POLICY "Users can view their own subscription" ON user_subscriptions
-  FOR SELECT USING (auth.uid() = user_id);
+Your Stripe environment variables are INCORRECT. They contain product IDs instead of price IDs.
 
--- Allow service role for API operations
-CREATE POLICY "Service role can manage subscriptions" ON user_subscriptions
-  FOR ALL USING (auth.role() = 'service_role');
+### Current Problem:
+- `NEXT_PUBLIC_STRIPE_PRICE_YEARLY` = `prod_UTriZWQWugZnKA` ❌ (This is a PRODUCT ID)
+- Should be a price ID like `price_1ABC123XYZ`
+
+### Step 1: Get Correct Price IDs from Stripe
+
+1. Log in to [Stripe Dashboard](https://dashboard.stripe.com)
+2. Go to **Products** in the left sidebar
+3. Find or create your two products:
+   - **Pro Monthly** - $4.99/month
+   - **Pro Annual** - $39/year
+
+4. For each product, click it and scroll to **Pricing**
+5. Copy the **Price ID** (starts with `price_` not `prod_`)
+
+Example:
+- Monthly Price ID: `price_1ABC123def456`
+- Yearly Price ID: `price_1XYZ789ghi012`
+
+### Step 2: Update Environment Variables
+
+Update your environment variables with the CORRECT price IDs:
+- `NEXT_PUBLIC_STRIPE_PRICE_MONTHLY` = `price_...` (monthly)
+- `NEXT_PUBLIC_STRIPE_PRICE_YEARLY` = `price_...` (yearly)
+
+## Environment Variables (All Required)
+
+These must be set in your project:
+
+```
+STRIPE_SECRET_KEY=sk_test_...
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
+NEXT_PUBLIC_STRIPE_PRICE_MONTHLY=price_1ABC123...
+NEXT_PUBLIC_STRIPE_PRICE_YEARLY=price_1XYZ789...
+STRIPE_WEBHOOK_SECRET=whsec_...
+NEXT_PUBLIC_APP_URL=https://yourdomain.com
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGc...
 ```
 
-## Environment Variables
+## Step 3: Set Up Stripe Webhook
 
-Make sure you have added the following environment variables:
-- `STRIPE_SECRET_KEY` - Your Stripe secret key
-- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` - Your Stripe publishable key
-- `NEXT_PUBLIC_STRIPE_PRICE_MONTHLY` - Stripe price ID for monthly plan
-- `NEXT_PUBLIC_STRIPE_PRICE_YEARLY` - Stripe price ID for yearly plan
-- `STRIPE_WEBHOOK_SECRET` - Your Stripe webhook secret
-- `NEXT_PUBLIC_APP_URL` - Your app URL (e.g., https://yourdomain.com)
-- `SUPABASE_SERVICE_ROLE_KEY` - Your Supabase service role key
+1. Go to Stripe Dashboard > **Developers** > **Webhooks**
+2. Click **Add endpoint**
+3. Endpoint URL: `https://yourdomain.com/api/stripe/webhook`
+4. Select events:
+   - `customer.subscription.created`
+   - `customer.subscription.updated`
+   - `customer.subscription.deleted`
+5. Click **Add events** and **Create endpoint**
+6. Copy the signing secret and add it to `STRIPE_WEBHOOK_SECRET`
 
-## Stripe Setup
+## Troubleshooting
 
-1. Create two products in Stripe:
-   - Monthly plan: $4.99/month
-   - Yearly plan: $39/year
+### Database Tables 404 Errors
+- ❌ You haven't run the SQL setup script
+- ✅ Go to Supabase > SQL Editor and run `lib/setup-database.sql`
 
-2. Copy the price IDs and add them to your environment variables
+### "No such price" Error
+- ❌ Your environment variables have product IDs (prod_*) not price IDs (price_*)
+- ✅ Get the correct price IDs from Stripe and update your env vars
 
-3. Set up a webhook endpoint in Stripe:
-   - Endpoint URL: `https://yourdomain.com/api/stripe/webhook`
-   - Events to listen for:
-     - `customer.subscription.created`
-     - `customer.subscription.updated`
-     - `customer.subscription.deleted`
-     - `invoice.payment_succeeded`
-     - `invoice.payment_failed`
+### "window.Stripe is not a function"
+- ✅ This is now fixed - Stripe.js loads in the layout
 
-4. Copy the webhook signing secret to `STRIPE_WEBHOOK_SECRET`
+## Verification Checklist
+
+After setup, verify everything works:
+
+- [ ] Database tables created (check Supabase Table Editor)
+- [ ] Correct Stripe price IDs in environment variables
+- [ ] Stripe webhook configured and secret saved
+- [ ] Can access `/pricing` page without errors
+- [ ] Can create account and see "25 uses" limit
+- [ ] Can subscribe to Pro plan and redirect to Stripe checkout

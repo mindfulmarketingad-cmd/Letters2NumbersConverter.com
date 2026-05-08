@@ -47,9 +47,20 @@ export async function POST(request: NextRequest) {
       subscription = sub
     }
 
-    // Determine usage limits
-    const isPaid = subscription?.plan_type === 'pro'
-    const limit = isPaid ? Infinity : (usage?.is_registered ? 25 : 10)
+    // Determine usage limits based on user status
+    const isPaid = subscription?.plan_type === 'pro_monthly' || subscription?.plan_type === 'pro_yearly'
+    let limit: number
+    
+    if (isPaid && subscription?.status === 'active') {
+      limit = Infinity
+    } else if (userId) {
+      // Logged-in users get 25 uses
+      limit = 25
+    } else {
+      // Anonymous users get 10 uses
+      limit = 10
+    }
+    
     const currentUsage = usage?.usage_count || 0
 
     // Check if limit exceeded
@@ -127,8 +138,20 @@ export async function GET(request: NextRequest) {
       subscription = sub
     }
 
-    const isPaid = subscription?.plan_type === 'pro'
-    const limit = isPaid ? Infinity : (usage?.is_registered ? 25 : 10)
+    // Determine usage limits based on user status
+    const isPaid = subscription?.plan_type === 'pro_monthly' || subscription?.plan_type === 'pro_yearly'
+    let limit: number
+    
+    if (isPaid && subscription?.status === 'active') {
+      limit = Infinity
+    } else if (userId) {
+      // Logged-in users get 25 uses
+      limit = 25
+    } else {
+      // Anonymous users get 10 uses
+      limit = 10
+    }
+    
     const currentUsage = usage?.usage_count || 0
 
     return NextResponse.json({

@@ -104,6 +104,10 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://js.stripe.com/v3/"
+          strategy="beforeInteractive"
+        />
       </head>
       <body className="font-sans antialiased min-h-screen bg-background">
         <AuthProvider>

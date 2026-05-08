@@ -23,16 +23,20 @@ export function ThemeToggle() {
     )
   }
 
+  const handleThemeToggle = () => {
+    setTheme(theme === "dark" ? "light" : "dark")
+  }
+
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="p-2 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+      onClick={handleThemeToggle}
+      className="p-2 rounded-lg bg-muted/50 hover:bg-muted transition-colors duration-300"
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
       {theme === "dark" ? (
-        <Sun className="w-5 h-5 text-foreground" />
+        <Sun className="w-5 h-5 text-foreground transition-opacity duration-300" />
       ) : (
-        <Moon className="w-5 h-5 text-foreground" />
+        <Moon className="w-5 h-5 text-foreground transition-opacity duration-300" />
       )}
     </button>
   )

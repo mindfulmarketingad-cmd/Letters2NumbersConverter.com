@@ -354,6 +354,63 @@ export const getToolData = (toolId: string) => {
         { title: 'Students & Learners', description: 'Learning batch scripting and Windows command-line programming' }
       ]
     },
+    'rgb-to-pantone-converter': {
+      howItWorks: 'Enter RGB color values (Red, Green, Blue) using the sliders or numeric inputs (0-255) on the left. The converter instantly calculates the closest Pantone (PMS) color match and displays the equivalent hex color code with a distance metric. The interactive color picker allows you to select colors visually, and the tool shows multiple Pantone alternatives for precise color matching.',
+      features: [
+        'Convert RGB to Pantone (PMS) color format',
+        'Interactive RGB sliders (0-255 range)',
+        'Real-time color preview display',
+        'Visual color picker with gradient selector',
+        'Distance metric for color accuracy',
+        'Shows closest Pantone match plus alternatives',
+        'Hex color code conversion and display',
+        'Copy Pantone PMS code to clipboard'
+      ],
+      whoIsItFor: [
+        { title: 'Web Designers', description: 'Converting RGB web colors to Pantone for print mockups and branding consistency' },
+        { title: 'Graphic Designers', description: 'Bridging digital RGB colors to print-ready Pantone specifications' },
+        { title: 'Brand Managers', description: 'Ensuring accurate color reproduction across digital and print materials' },
+        { title: 'Print & Marketing Professionals', description: 'Matching screen colors to print production requirements and standards' }
+      ]
+    },
+    'pantone-to-hex-converter': {
+      howItWorks: 'Use the search panel to browse and select from an extensive Pantone color database, or use the visual color picker on the right to select any color and find its closest Pantone match. The tool instantly displays hex, RGB, and CMYK color values for seamless conversion between format types. Real-time color matching ensures accurate color reproduction across design and print workflows.',
+      features: [
+        'Searchable Pantone color database',
+        'Visual color picker with interactive gradient',
+        'Convert to hex, RGB, and CMYK formats',
+        'Real-time color distance calculation',
+        'Closest Pantone match identification',
+        'Copy Pantone codes to clipboard',
+        'Comprehensive color information display',
+        'Works completely offline'
+      ],
+      whoIsItFor: [
+        { title: 'Graphic & Print Designers', description: 'Finding and converting Pantone colors for design projects and print specifications' },
+        { title: 'Brand Specialists', description: 'Maintaining consistent brand colors across digital and print media' },
+        { title: 'Web Developers', description: 'Converting Pantone specifications to hex values for web implementation' },
+        { title: 'Color Professionals', description: 'Color matching and format conversion for accurate reproduction across mediums' }
+      ]
+    },
+    'base64-image-viewer': {
+      howItWorks: 'Paste or input a base64-encoded image string into the left panel. The tool automatically decodes the base64 data and displays the decoded image in real-time on the right. Supports data URI prefixes (data:image/...) or raw base64 strings. Download the image or copy the base64 code for further use.',
+      features: [
+        'Decode and display base64-encoded images',
+        'Support for PNG, JPEG, GIF, SVG, WebP formats',
+        'Real-time image preview as you type',
+        'Works with data URI prefixes or raw base64',
+        'Copy base64 string to clipboard',
+        'Download decoded images directly',
+        'File size calculation and display',
+        'Format auto-detection'
+      ],
+      whoIsItFor: [
+        { title: 'Developers & Programmers', description: 'Decoding and previewing base64-encoded image data from APIs, databases, or code' },
+        { title: 'Web Designers', description: 'Viewing embedded base64 images in HTML/CSS projects and converting to regular image files' },
+        { title: 'Data Engineers', description: 'Inspecting base64-encoded images in data pipelines and ETL processes' },
+        { title: 'Security Professionals', description: 'Analyzing suspicious or obfuscated base64 image data for security audits' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

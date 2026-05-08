@@ -245,6 +245,24 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Code Tools',
     href: '/tools/batch-file-editor',
   },
+  'rgb-to-pantone-converter': {
+    name: 'RGB To Pantone Color Converter',
+    description: 'Convert RGB colors to Pantone (PMS) format instantly',
+    category: 'Color Tools',
+    href: '/tools/rgb-to-pantone-color-converter',
+  },
+  'pantone-to-hex-converter': {
+    name: 'Pantone to Hex Converter',
+    description: 'Search Pantone colors and convert to hex format',
+    category: 'Color Tools',
+    href: '/tools/pantone-to-hex-converter',
+  },
+  'base64-image-viewer': {
+    name: 'Base64 Image Viewer',
+    description: 'Decode and view base64-encoded images instantly',
+    category: 'Image Tools',
+    href: '/tools/base64-image-viewer',
+  },
 }
 
 export function getToolRegistry() {

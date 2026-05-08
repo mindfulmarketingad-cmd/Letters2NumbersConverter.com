@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { createClient } from '@supabase/supabase-js'
 import { Mail, Lock, LogIn } from 'lucide-react'
 
@@ -15,7 +15,14 @@ export function SignInForm() {
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [isSignUp, setIsSignUp] = useState(false)
   const router = useRouter()
+  const searchParams = useSearchParams()
+
+  // Check if signup mode from URL parameter
+  if (searchParams.get('mode') === 'signup' && !isSignUp) {
+    setIsSignUp(true)
+  }
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -73,13 +80,13 @@ export function SignInForm() {
     <div className="w-full max-w-md">
       <div className="bg-card border border-border rounded-lg shadow-lg p-8 space-y-6">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-foreground mb-2">Sign In</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-2">{isSignUp ? 'Create Account' : 'Sign In'}</h1>
           <p className="text-sm text-muted-foreground">
-            Create an account to get 25 free tool uses
+            {isSignUp ? 'Get 25 free tool uses when you sign up' : 'Create an account to get 25 free tool uses'}
           </p>
         </div>
 
-        <form onSubmit={handleSignIn} className="space-y-4">
+        <form onSubmit={isSignUp ? handleSignUp : handleSignIn} className="space-y-4">
           {error && (
             <div className="p-3 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900 rounded-lg">
               <p className="text-sm text-red-800 dark:text-red-200">{error}</p>
@@ -126,7 +133,7 @@ export function SignInForm() {
             className="w-full py-2 bg-primary hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed text-primary-foreground font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
           >
             <LogIn className="w-4 h-4" />
-            {loading ? 'Signing in...' : 'Sign In'}
+            {loading ? (isSignUp ? 'Creating account...' : 'Signing in...') : (isSignUp ? 'Create Account' : 'Sign In')}
           </button>
         </form>
 
@@ -140,11 +147,11 @@ export function SignInForm() {
         </div>
 
         <button
-          onClick={handleSignUp}
+          onClick={() => setIsSignUp(!isSignUp)}
           disabled={loading}
-          className="w-full py-2 border border-border hover:bg-secondary rounded-lg transition-colors text-foreground font-medium flex items-center justify-center gap-2"
+          className="w-full py-2 border border-border hover:bg-secondary rounded-lg transition-colors text-foreground font-medium"
         >
-          Create New Account
+          {isSignUp ? 'Already have an account? Sign In' : 'Don\'t have an account? Sign Up'}
         </button>
 
         <div className="text-center text-sm text-muted-foreground">

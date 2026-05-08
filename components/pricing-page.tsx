@@ -24,7 +24,7 @@ export function PricingPage() {
         'Usage analytics',
         'Cancel anytime',
       ],
-      cta: 'Start Free Trial',
+      cta: 'Subscribe Now',
       ctaVariant: 'primary',
       highlight: true,
       planType: 'pro_monthly',

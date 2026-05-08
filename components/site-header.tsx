@@ -4,9 +4,11 @@ import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { useAuth } from "@/lib/auth-context"
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { user } = useAuth()
 
   return (
     <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
@@ -41,6 +43,24 @@ export function SiteHeader() {
             Contact
           </Link>
         </nav>
+
+        {/* Auth Buttons */}
+        <div className="hidden md:flex items-center gap-3">
+          {user ? (
+            <Link href="/dashboard" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
+              Dashboard
+            </Link>
+          ) : (
+            <>
+              <Link href="/sign-in" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
+                Sign In
+              </Link>
+              <Link href="/sign-in?mode=signup" className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors">
+                Sign Up
+              </Link>
+            </>
+          )}
+        </div>
 
         {/* Mobile Menu Button */}
         <button

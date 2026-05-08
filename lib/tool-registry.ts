@@ -269,6 +269,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Conversion',
     href: '/tools/morse-code-to-base64',
   },
+  'vernam-cipher-decoder': {
+    name: 'Vernam Cipher Decoder',
+    description: 'Decrypt Vernam cipher (one-time pad) ciphertext using the original key',
+    category: 'Cipher',
+    href: '/tools/vernam-cipher-decoder',
+  },
 }
 
 export function getToolRegistry() {

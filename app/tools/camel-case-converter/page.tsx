@@ -45,12 +45,13 @@ const toolData: ToolData = {
 export default function CamelCaseConverterPage() {
   return (
     <ToolPageWrapper toolSlug="camel-case-converter">
-    <ToolLayout
-      toolId="camel-case-converter"
-      toolName="Camel Case Converter"
-      toolDescription="Convert text to camelCase, PascalCase, snake_case, kebab-case and other formats. Supports batch processing of multiple lines and various input formats for developers and content creators."
-      toolComponent={<CamelCaseConverter />}
-      toolData={toolData}
-    />
+      <ToolLayout
+        toolId="camel-case-converter"
+        toolName="Camel Case Converter"
+        toolDescription="Convert text to camelCase, PascalCase, snake_case, kebab-case and other formats. Supports batch processing of multiple lines and various input formats for developers and content creators."
+        toolComponent={<CamelCaseConverter />}
+        toolData={toolData}
+      />
+    </ToolPageWrapper>
   )
 }

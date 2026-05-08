@@ -45,12 +45,13 @@ const toolData: ToolData = {
 export default function YamlToIniConverterPage() {
   return (
     <ToolPageWrapper toolSlug="yaml-to-ini-converter">
-    <ToolLayout
-      toolId="yaml-to-ini-converter"
-      toolName="YAML to INI Converter"
-      toolDescription="Free online tool to convert between YAML and INI configuration file formats. Supports bidirectional conversion for developers and system administrators working with different configuration file standards."
-      toolComponent={<YamlIniConverter />}
-      toolData={toolData}
-    />
+      <ToolLayout
+        toolId="yaml-to-ini-converter"
+        toolName="YAML to INI Converter"
+        toolDescription="Free online tool to convert between YAML and INI configuration file formats. Supports bidirectional conversion for developers and system administrators working with different configuration file standards."
+        toolComponent={<YamlIniConverter />}
+        toolData={toolData}
+      />
+    </ToolPageWrapper>
   )
 }

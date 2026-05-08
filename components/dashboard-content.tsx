@@ -27,11 +27,11 @@ export function DashboardContent() {
     { revalidateOnFocus: true, revalidateOnReconnect: true, refreshInterval: 10000 }
   )
 
-  // Fetch usage data with auto-refresh every 5 seconds
+  // Fetch usage data with auto-refresh every 2 seconds for real-time session updates
   const { data: usage, isLoading: usageLoading, mutate: refreshUsage } = useSWR(
     user ? `/api/usage/track?userId=${user.id}` : null,
     fetcher,
-    { revalidateOnFocus: true, revalidateOnReconnect: true, refreshInterval: 5000 }
+    { revalidateOnFocus: true, revalidateOnReconnect: true, refreshInterval: 2000 }
   )
 
   const handleRefresh = async () => {

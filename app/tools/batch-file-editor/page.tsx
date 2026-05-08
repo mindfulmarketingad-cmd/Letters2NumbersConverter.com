@@ -32,7 +32,7 @@ export default function BatchFileEditorPage() {
   const toolData = getToolData('batch-file-editor')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="batch-file-editor">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -56,7 +56,6 @@ export default function BatchFileEditorPage() {
           })
         }}
       />
-    <ToolPageWrapper toolSlug="batch-file-editor">
       <ToolLayout
         toolId="batch-file-editor"
         toolName="Batch File Editor"
@@ -64,6 +63,6 @@ export default function BatchFileEditorPage() {
         toolComponent={<BatchFileEditor />}
         toolData={toolData}
       />
-  </ToolPageWrapper>
+    </ToolPageWrapper>
   )
 }

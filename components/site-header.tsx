@@ -84,6 +84,30 @@ export function SiteHeader() {
             >
               Tools
             </Link>
+            
+            {/* Mobile Auth Buttons */}
+            <div className="border-t border-border pt-4 mt-2 flex flex-col gap-3">
+              {user ? (
+                <ProfileDropdown />
+              ) : (
+                <>
+                  <Link 
+                    href="/sign-in" 
+                    className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors text-center"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Sign In
+                  </Link>
+                  <Link 
+                    href="/sign-in?mode=signup" 
+                    className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors text-center"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Sign Up
+                  </Link>
+                </>
+              )}
+            </div>
           </nav>
         </div>
       )}

@@ -468,6 +468,25 @@ export const getToolData = (toolId: string) => {
         { title: 'Patient Care Coordinators', description: 'Helping patients navigate healthcare IVR systems without speaking to representatives' }
       ]
     },
+    'cm-to-pixels-converter': {
+      howItWorks: 'Enter the centimeter value you want to convert in the input field and select your desired resolution (PPI/DPI). The tool instantly calculates and displays the equivalent pixel measurement. Use Quick Conversions for common values, or refer to the Popular Conversions table showing standard measurements at different print and screen resolutions.',
+      features: [
+        'Convert centimeters to pixels instantly',
+        'Multiple resolution options (72 PPI, 96 PPI, 150 PPI, 300 PPI)',
+        'Quick conversion buttons for common values (1-50 cm)',
+        'Popular conversions reference table included',
+        'Copy results to clipboard with one click',
+        'Display conversions at both web and print resolutions',
+        'Formula reference for manual calculations',
+        'Accurate calculations for all measurement types'
+      ],
+      whoIsItFor: [
+        { title: 'Web Designers', description: 'Converting design measurements from centimeters to pixels for accurate web layouts and responsive design' },
+        { title: 'Print Designers', description: 'Calculating pixel-to-centimeter conversions for print media with high-resolution requirements' },
+        { title: 'Graphic Designers', description: 'Converting between metric and digital measurements for cross-media design projects' },
+        { title: 'UI/UX Developers', description: 'Determining exact pixel measurements from metric specifications in design mockups' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

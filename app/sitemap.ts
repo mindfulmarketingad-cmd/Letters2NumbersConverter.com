@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'camel-case-converter',
     'cipher-identifier',
     'cistercian-numerals-converter',
+    'cm-to-pixels-converter',
     'cmyk-to-pantone-color-converter',
     'cryptogram-generator',
     'cryptogram-solver',

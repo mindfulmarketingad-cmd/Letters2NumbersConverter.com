@@ -275,6 +275,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/vernam-cipher-decoder',
   },
+  'ivr-alphanumeric-converter': {
+    name: 'IVR Alphanumeric Conversion Tool',
+    description: 'Convert Medicare IDs, PTAN, and DCN to IVR telephone keypad sequences',
+    category: 'Healthcare Tools',
+    href: '/tools/ivr-alphanumeric-conversion-tool',
+  },
 }
 
 export function getToolRegistry() {

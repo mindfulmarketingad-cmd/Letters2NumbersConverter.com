@@ -449,6 +449,25 @@ export const getToolData = (toolId: string) => {
         { title: 'Computer Science Students', description: 'Learning advanced cryptography concepts and mathematical encryption principles' }
       ]
     },
+    'ivr-alphanumeric-converter': {
+      howItWorks: 'Type or paste the alphanumeric PTAN, DCN, or Medicare Beneficiary ID number (MBI) into the input field. Click the Convert button or press Enter. The tool instantly converts each letter to its corresponding telephone keypad number and displays the sequence exactly as it needs to be entered into the IVR system. Copy the result or download it as a reference file for your records.',
+      features: [
+        'Convert PTAN, DCN, and Medicare Beneficiary ID numbers',
+        'Real-time conversion with instant results',
+        'Telephone keypad reference guide included',
+        'Copy converted sequence to clipboard easily',
+        'Download sequences as text files for records',
+        'Works with alphanumeric characters and dashes',
+        'Supports Enter key for quick conversion',
+        'Complete offline processing for privacy'
+      ],
+      whoIsItFor: [
+        { title: 'Healthcare Administrators', description: 'Converting patient IDs for IVR system interactions and Medicare inquiries' },
+        { title: 'Medical Office Staff', description: 'Processing PTAN and DCN codes for automated telephone system access' },
+        { title: 'Insurance Specialists', description: 'Converting Medicare Beneficiary IDs for phone-based healthcare services' },
+        { title: 'Patient Care Coordinators', description: 'Helping patients navigate healthcare IVR systems without speaking to representatives' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

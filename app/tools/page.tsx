@@ -1,8 +1,11 @@
+'use client'
+
 import Link from "next/link"
-import type { Metadata } from "next"
+import { useState, useMemo } from "react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ArrowRight } from "lucide-react"
+import { ToolsSearch } from "@/components/tools-search"
 
 export const metadata: Metadata = {
   title: "Free Online Tools",
@@ -212,6 +215,8 @@ const tools = [
 ]
 
 export default function ToolsPage() {
+  const [displayedTools, setDisplayedTools] = useState(tools)
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SiteHeader />
@@ -228,30 +233,45 @@ export default function ToolsPage() {
               </p>
             </div>
 
-            <div className="grid gap-3">
-              {tools.map((tool) => (
-                <Link
-                  key={tool.href}
-                  href={tool.href}
-                  className="group block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:bg-card/80 transition-all"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex-1 min-w-0">
-                      <div className="inline-flex items-center px-2 py-0.5 rounded text-primary text-xs font-medium mb-2">
-                        {tool.category}
+            {/* Search Component */}
+            <ToolsSearch tools={tools} onFilterChange={setDisplayedTools} />
+
+            {/* Tools Grid */}
+            {displayedTools.length > 0 ? (
+              <div className="grid gap-3">
+                {displayedTools.map((tool) => (
+                  <Link
+                    key={tool.href}
+                    href={tool.href}
+                    className="group block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:bg-card/80 transition-all"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex-1 min-w-0">
+                        <div className="inline-flex items-center px-2 py-0.5 rounded text-primary text-xs font-medium mb-2">
+                          {tool.category}
+                        </div>
+                        <h2 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
+                          {tool.title}
+                        </h2>
+                        <p className="text-sm text-muted-foreground line-clamp-2">
+                          {tool.description}
+                        </p>
                       </div>
-                      <h2 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
-                        {tool.title}
-                      </h2>
-                      <p className="text-sm text-muted-foreground line-clamp-2">
-                        {tool.description}
-                      </p>
+                      <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
                     </div>
-                    <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
-                  </div>
-                </Link>
-              ))}
-            </div>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <p className="text-lg text-muted-foreground mb-2">
+                  No tools found matching your search
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Try searching with different keywords or browse all tools
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </main>

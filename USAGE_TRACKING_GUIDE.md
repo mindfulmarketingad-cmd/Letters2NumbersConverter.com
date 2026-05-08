@@ -11,11 +11,182 @@ All tools on your site need to track user tool usage to enforce the daily limits
 
 A **"use"** is counted when the user **performs the primary action that generates output**:
 
-- **Converters** (CM to Pixels, Letters to Numbers, etc.) → Count when user triggers the conversion
-- **Generators** (Placeholder Image Creator) → Count when the output is generated
-- **Solvers** (Anagram, Equation, etc.) → Count when user solves/calculates
+## What Counts as a "Use"?
+
+A **"use"** is counted when the user **performs the primary action that generates output**:
+
+- **Converters with Button** (CM to Pixels) → Count when user clicks "Convert" button
+- **Instant Output Tools** (A0Z25 Translator, Anagram Solver) → Count after user stops typing for 2 seconds (debounced)
+- **Generators** (Placeholder Image Creator) → Count when output is generated
 - **Real-time tools** → Count on the final action/submission
 
+## Implementation Steps: Button-Based Tools
+
+For tools with a "Convert" or "Calculate" button:
+
+### 1. Import the Hook
+
+```tsx
+import { useTrackUsage } from '@/lib/use-track-usage'
+import { UpgradeModal } from '@/components/upgrade-modal'
+```
+
+### 2. Initialize Usage Tracking in Component
+
+```tsx
+export function YourToolComponent() {
+  // ... other state declarations
+  const { trackUsage, showUpgradeModal, setShowUpgradeModal, remainingUses } = useTrackUsage('Tool Display Name')
+  
+  // Rest of component
+}
+```
+
+### 3. Call trackUsage() on Button Click
+
+```tsx
+const handleConvert = async () => {
+  // Call trackUsage() when user clicks the button
+  const result = await trackUsage()
+  
+  if (!result.allowed) {
+    // Modal shows automatically when limit exceeded
+    return
+  }
+  
+  // Perform the conversion
+  doConversion()
+}
+```
+
+## Implementation Steps: Instant Output Tools
+
+For tools that produce output automatically (on every keystroke/input change):
+
+### 1. Import the Instant Hook
+
+```tsx
+import { useInstantTrackUsage } from '@/lib/use-instant-track-usage'
+import { UpgradeModal } from '@/components/upgrade-modal'
+```
+
+### 2. Initialize Usage Tracking
+
+```tsx
+export function YourInstantTool() {
+  const [input, setInput] = useState("")
+  const [output, setOutput] = useState("")
+  
+  // Debounced tracking: tracks usage 2 seconds after user stops typing
+  const { scheduleTracking, resetTracking, showUpgradeModal, setShowUpgradeModal, remainingUses } = useInstantTrackUsage('Tool Name', 2000)
+```
+
+### 3. Schedule Tracking on Input Change
+
+```tsx
+useEffect(() => {
+  if (input.trim()) {
+    scheduleTracking() // Schedules tracking after 2-second delay
+  } else {
+    resetTracking() // Reset if input is cleared
+  }
+}, [input, scheduleTracking, resetTracking])
+```
+
+## Complete Examples
+
+### Example 1: Button-Based Tool (CM to Pixels Converter)
+
+```tsx
+'use client'
+
+import { useState } from 'react'
+import { useTrackUsage } from '@/lib/use-track-usage'
+import { UpgradeModal } from '@/components/upgrade-modal'
+
+export function CMToPixelsConverter() {
+  const [cm, setCm] = useState('')
+  const [result, setResult] = useState<number | null>(null)
+  const { trackUsage, showUpgradeModal, setShowUpgradeModal, remainingUses } = useTrackUsage('CM To Pixels Converter')
+
+  const handleConvert = async () => {
+    if (!cm || isNaN(Number(cm))) return
+
+    // Track the usage
+    const { allowed } = await trackUsage()
+    
+    if (!allowed) return // Modal shows automatically
+
+    // Perform conversion
+    const pixels = (parseFloat(cm) * 96) / 2.54
+    setResult(Math.round(pixels * 100) / 100)
+  }
+
+  return (
+    <div className="space-y-4">
+      <input type="number" value={cm} onChange={e => setCm(e.target.value)} />
+      <button onClick={handleConvert}>Convert to Pixels</button>
+      {result && <p>Result: {result}px</p>}
+      
+      {remainingUses !== null && remainingUses > 0 && (
+        <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900 rounded-lg p-3">
+          <p className="text-sm text-blue-800 dark:text-blue-200">
+            Remaining uses today: <span className="font-bold">{remainingUses}</span>
+          </p>
+        </div>
+      )}
+      
+      <UpgradeModal isOpen={showUpgradeModal} onClose={() => setShowUpgradeModal(false)} />
+    </div>
+  )
+}
+```
+
+### Example 2: Instant Output Tool (A0Z25 Translator)
+
+```tsx
+'use client'
+
+import { useState, useEffect, useMemo } from 'react'
+import { useInstantTrackUsage } from '@/lib/use-instant-track-usage'
+import { UpgradeModal } from '@/components/upgrade-modal'
+
+export function A0Z25Translator() {
+  const [input, setInput] = useState('')
+  const { scheduleTracking, resetTracking, showUpgradeModal, setShowUpgradeModal, remainingUses } = useInstantTrackUsage('A0Z25 Translator')
+
+  // Track usage after 2 seconds of inactivity
+  useEffect(() => {
+    if (input.trim()) {
+      scheduleTracking() // Called on every input change, but only tracks after 2-second delay
+    } else {
+      resetTracking()
+    }
+  }, [input, scheduleTracking, resetTracking])
+
+  const output = useMemo(() => {
+    // Instant conversion logic here
+    return performConversion(input)
+  }, [input])
+
+  return (
+    <div className="space-y-4">
+      <textarea value={input} onChange={e => setInput(e.target.value)} />
+      <textarea readOnly value={output} />
+      
+      {remainingUses !== null && remainingUses > 0 && (
+        <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900 rounded-lg p-3">
+          <p className="text-sm text-blue-800 dark:text-blue-200">
+            Remaining uses today: <span className="font-bold">{remainingUses}</span>
+          </p>
+        </div>
+      )}
+      
+      <UpgradeModal isOpen={showUpgradeModal} onClose={() => setShowUpgradeModal(false)} />
+    </div>
+  )
+}
+```
 ## Implementation Steps
 
 ### 1. Import the Hook

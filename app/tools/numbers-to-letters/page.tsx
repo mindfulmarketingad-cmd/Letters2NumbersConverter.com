@@ -21,12 +21,13 @@ const toolData: ToolData = getToolData("numbers-to-letters")
 export default function NumbersToLettersConverterPage() {
   return (
     <ToolPageWrapper toolSlug="numbers-to-letters">
-    <ToolLayout
-      toolId="numbers-to-letters"
-      toolName="Numbers to Letters Converter"
-      toolDescription="Convert numbers back to letters"
-      toolComponent={<LetterNumberConverter />}
-      toolData={toolData}
-    />
+      <ToolLayout
+        toolId="numbers-to-letters"
+        toolName="Numbers to Letters Converter"
+        toolDescription="Convert numbers back to letters"
+        toolComponent={<LetterNumberConverter />}
+        toolData={toolData}
+      />
+    </ToolPageWrapper>
   )
 }

@@ -28,5 +28,6 @@ export default function CistercianNumeralsConverterPage() {
       toolComponent={<CistercianConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

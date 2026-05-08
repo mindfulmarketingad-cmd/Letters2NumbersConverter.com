@@ -28,5 +28,6 @@ export default function NatoPhoneticAlphabetPage() {
       toolComponent={<NatoAlphabetConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

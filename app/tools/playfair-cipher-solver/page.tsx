@@ -28,5 +28,6 @@ export default function PlayfairCipherSolverPage() {
       toolComponent={<PlayfairCipherSolver />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

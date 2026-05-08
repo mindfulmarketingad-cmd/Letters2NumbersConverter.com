@@ -27,5 +27,6 @@ export default function CryptogramSolverFreePage() {
       toolDescription="Solve substitution cipher cryptograms"
       toolComponent={<CryptogramSolver />}
       toolData={toolData}/>
+    </ToolPageWrapper>
   )
 }

@@ -65,5 +65,6 @@ export default function VernamCipherDecoderPage() {
         toolData={toolData}
       />
     </>
+  </ToolPageWrapper>
   )
 }

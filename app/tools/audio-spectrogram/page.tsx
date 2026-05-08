@@ -28,5 +28,6 @@ export default function AudioSpectrogramPage() {
       toolComponent={<AudioSpectrogram />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

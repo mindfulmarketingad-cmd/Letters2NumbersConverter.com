@@ -28,5 +28,6 @@ export default function EquationSolverPage() {
       toolComponent={<EquationSolver />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

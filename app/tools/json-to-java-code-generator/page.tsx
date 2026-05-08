@@ -28,5 +28,6 @@ export default function JsonToJavaGeneratorPage() {
       toolComponent={<JsonToJavaGenerator />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

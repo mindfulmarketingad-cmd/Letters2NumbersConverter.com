@@ -28,5 +28,6 @@ export default function EscapeRoomBuilderPage() {
       toolComponent={<EscapeRoomBuilder />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

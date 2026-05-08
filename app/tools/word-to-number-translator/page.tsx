@@ -27,5 +27,6 @@ export default function WordToNumberTranslatorPage() {
       toolComponent={<LetterNumberConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

@@ -27,5 +27,6 @@ export default function CryptogramSolverPage() {
       toolDescription="Solve complex cryptogram puzzles"
       toolComponent={<CryptogramSolver />}
       toolData={toolData}/>
+    </ToolPageWrapper>
   )
 }

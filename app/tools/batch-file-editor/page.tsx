@@ -65,5 +65,6 @@ export default function BatchFileEditorPage() {
         toolData={toolData}
       />
     </>
+  </ToolPageWrapper>
   )
 }

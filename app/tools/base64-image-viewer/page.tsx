@@ -65,5 +65,6 @@ export default function Base64ImageViewerPage() {
         toolData={toolData}
       />
     </>
+  </ToolPageWrapper>
   )
 }

@@ -28,5 +28,6 @@ export default function BookCipherDecoderPage() {
       toolComponent={<BookCipherDecoder />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

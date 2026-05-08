@@ -65,5 +65,6 @@ export default function RGBToPantoneConverterPage() {
         toolData={toolData}
       />
     </>
+  </ToolPageWrapper>
   )
 }

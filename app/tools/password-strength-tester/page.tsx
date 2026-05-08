@@ -28,5 +28,6 @@ export default function PasswordStrengthTesterPage() {
       toolComponent={<PasswordStrengthTester />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

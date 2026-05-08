@@ -65,5 +65,6 @@ export default function CMToPixelsPage() {
         toolData={toolData}
       />
     </>
+  </ToolPageWrapper>
   )
 }

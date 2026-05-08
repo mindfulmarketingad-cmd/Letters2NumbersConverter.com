@@ -28,5 +28,6 @@ export default function LongestWordPage() {
       toolComponent={<LongestWordSolver />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

@@ -65,5 +65,6 @@ export default function IVRAlphanumericPage() {
         toolData={toolData}
       />
     </>
+  </ToolPageWrapper>
   )
 }

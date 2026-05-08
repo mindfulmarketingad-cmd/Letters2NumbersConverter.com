@@ -28,5 +28,6 @@ export default function EnigmaMachineEmulatorPage() {
       toolComponent={<EnigmaMachineEmulator />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

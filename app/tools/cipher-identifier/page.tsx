@@ -28,5 +28,6 @@ export default function CipherIdentifierPage() {
       toolComponent={<CipherIdentifier />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

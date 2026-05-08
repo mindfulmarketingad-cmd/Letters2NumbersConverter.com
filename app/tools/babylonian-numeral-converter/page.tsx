@@ -28,5 +28,6 @@ export default function BabylonianNumeralConverterPage() {
       toolComponent={<BabylonianNumeralConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

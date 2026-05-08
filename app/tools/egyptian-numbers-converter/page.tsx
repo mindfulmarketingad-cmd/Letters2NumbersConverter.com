@@ -28,5 +28,6 @@ export default function EgyptianNumbersConverterPage() {
       toolComponent={<EgyptianConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

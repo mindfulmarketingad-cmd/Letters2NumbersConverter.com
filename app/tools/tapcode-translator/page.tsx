@@ -28,5 +28,6 @@ export default function TapcodePage() {
       toolComponent={<TapcodeTranslator />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

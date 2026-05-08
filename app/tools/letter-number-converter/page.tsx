@@ -56,5 +56,6 @@ export default function LetterNumberConverterPage() {
       toolComponent={<LetterNumberConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

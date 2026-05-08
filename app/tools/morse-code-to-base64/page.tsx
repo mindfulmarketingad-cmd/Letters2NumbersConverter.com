@@ -65,5 +65,6 @@ export default function MorseToBase64ConverterPage() {
         toolData={toolData}
       />
     </>
+  </ToolPageWrapper>
   )
 }

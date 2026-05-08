@@ -28,5 +28,6 @@ export default function AtbashCipherPage() {
       toolComponent={<AtbashCipherSolver />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

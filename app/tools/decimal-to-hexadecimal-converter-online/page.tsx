@@ -28,5 +28,6 @@ export default function DecimalHexConverterPage() {
       toolComponent={<DecimalHexConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

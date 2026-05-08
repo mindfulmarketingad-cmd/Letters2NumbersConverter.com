@@ -65,5 +65,6 @@ export default function PantoneToHexConverterPage() {
         toolData={toolData}
       />
     </>
+  </ToolPageWrapper>
   )
 }

@@ -28,5 +28,6 @@ export default function HexahueCipherPage() {
       toolComponent={<HexahueCipherSolver />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

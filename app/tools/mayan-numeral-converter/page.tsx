@@ -28,5 +28,6 @@ export default function MayanNumeralConverterPage() {
       toolComponent={<MayanNumeralConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

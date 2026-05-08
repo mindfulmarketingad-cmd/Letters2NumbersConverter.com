@@ -27,5 +27,6 @@ export default function CryptogramGeneratorPage() {
       toolDescription="Create, customize, and share puzzle cryptograms with this interactive tool. Generate substitution cipher puzzles perfect for word games and entertainment."
       toolComponent={<CryptogramGenerator />}
       toolData={toolData}/>
+    </ToolPageWrapper>
   )
 }

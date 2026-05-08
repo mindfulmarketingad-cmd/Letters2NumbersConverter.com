@@ -28,5 +28,6 @@ export default function MonoalphabeticSubstitutionCipherPage() {
       toolComponent={<MonoalphabeticSubstitutionCipher />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

@@ -28,5 +28,6 @@ export default function BlossomSolverPage() {
       toolComponent={<BlossomSolver />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

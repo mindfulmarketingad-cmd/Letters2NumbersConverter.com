@@ -28,5 +28,6 @@ export default function SkipCipherPage() {
       toolComponent={<SkipCipherTool />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

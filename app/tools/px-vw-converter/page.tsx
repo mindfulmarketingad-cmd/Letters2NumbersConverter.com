@@ -28,5 +28,6 @@ export default function PxVwConverterPage() {
       toolComponent={<PxVwConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

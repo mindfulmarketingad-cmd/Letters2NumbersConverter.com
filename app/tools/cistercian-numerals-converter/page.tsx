@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { CistercianConverter } from "@/components/cistercian-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Cistercian Numerals Converter",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("cistercian-numerals-converter")
 
 export default function CistercianNumeralsConverterPage() {
   return (
+    <ToolPageWrapper toolSlug="cistercian-numerals-converter">
     <ToolLayout
       toolId="cistercian-numerals-converter"
       toolName="Cistercian Numerals Converter"
@@ -26,5 +28,6 @@ export default function CistercianNumeralsConverterPage() {
       toolComponent={<CistercianConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

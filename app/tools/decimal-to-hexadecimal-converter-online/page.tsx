@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { DecimalHexConverter } from "@/components/decimal-hex-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Decimal to Hexadecimal Converter Online",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("decimal-to-hexadecimal-converter-online"
 
 export default function DecimalHexConverterPage() {
   return (
+    <ToolPageWrapper toolSlug="decimal-to-hexadecimal-converter-online">
     <ToolLayout
       toolId="decimal-hex-converter"
       toolName="Decimal to Hexadecimal Converter"
@@ -26,5 +28,6 @@ export default function DecimalHexConverterPage() {
       toolComponent={<DecimalHexConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

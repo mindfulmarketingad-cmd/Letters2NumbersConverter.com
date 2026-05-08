@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { YamlIniConverter } from "@/components/yaml-ini-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "YAML to INI Converter",
@@ -43,12 +44,14 @@ const toolData: ToolData = {
 
 export default function YamlToIniConverterPage() {
   return (
-    <ToolLayout
-      toolId="yaml-to-ini-converter"
-      toolName="YAML to INI Converter"
-      toolDescription="Free online tool to convert between YAML and INI configuration file formats. Supports bidirectional conversion for developers and system administrators working with different configuration file standards."
-      toolComponent={<YamlIniConverter />}
-      toolData={toolData}
-    />
+    <ToolPageWrapper toolSlug="yaml-to-ini-converter">
+      <ToolLayout
+        toolId="yaml-to-ini-converter"
+        toolName="YAML to INI Converter"
+        toolDescription="Free online tool to convert between YAML and INI configuration file formats. Supports bidirectional conversion for developers and system administrators working with different configuration file standards."
+        toolComponent={<YamlIniConverter />}
+        toolData={toolData}
+      />
+    </ToolPageWrapper>
   )
 }

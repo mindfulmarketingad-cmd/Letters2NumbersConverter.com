@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { TapcodeTranslator } from "@/components/tapcode-translator"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Instant Tapcode Translator | Letters2NumbersConverter.com",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("tapcode-translator")
 
 export default function TapcodePage() {
   return (
+    <ToolPageWrapper toolSlug="tapcode-translator">
     <ToolLayout
       toolId="tapcode-translator"
       toolName="Tapcode Translator"
@@ -26,5 +28,6 @@ export default function TapcodePage() {
       toolComponent={<TapcodeTranslator />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

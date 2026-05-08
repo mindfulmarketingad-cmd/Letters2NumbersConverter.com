@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { BabylonianNumeralConverter } from "@/components/babylonian-numeral-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Babylonian Numeral Converter",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("babylonian-numeral-converter")
 
 export default function BabylonianNumeralConverterPage() {
   return (
+    <ToolPageWrapper toolSlug="babylonian-numeral-converter">
     <ToolLayout
       toolId="babylonian-numeral-converter"
       toolName="Babylonian Numeral Converter"
@@ -26,5 +28,6 @@ export default function BabylonianNumeralConverterPage() {
       toolComponent={<BabylonianNumeralConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { BatchFileEditor } from "@/components/batch-file-editor"
 import { ToolLayout } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function BatchFileEditorPage() {
   const toolData = getToolData('batch-file-editor')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="batch-file-editor">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -62,6 +63,6 @@ export default function BatchFileEditorPage() {
         toolComponent={<BatchFileEditor />}
         toolData={toolData}
       />
-    </>
+    </ToolPageWrapper>
   )
 }

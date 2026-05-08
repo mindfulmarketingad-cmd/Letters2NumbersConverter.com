@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { CamelCaseConverter } from "@/components/camel-case-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Camel Case Converter",
@@ -43,12 +44,14 @@ const toolData: ToolData = {
 
 export default function CamelCaseConverterPage() {
   return (
-    <ToolLayout
-      toolId="camel-case-converter"
-      toolName="Camel Case Converter"
-      toolDescription="Convert text to camelCase, PascalCase, snake_case, kebab-case and other formats. Supports batch processing of multiple lines and various input formats for developers and content creators."
-      toolComponent={<CamelCaseConverter />}
-      toolData={toolData}
-    />
+    <ToolPageWrapper toolSlug="camel-case-converter">
+      <ToolLayout
+        toolId="camel-case-converter"
+        toolName="Camel Case Converter"
+        toolDescription="Convert text to camelCase, PascalCase, snake_case, kebab-case and other formats. Supports batch processing of multiple lines and various input formats for developers and content creators."
+        toolComponent={<CamelCaseConverter />}
+        toolData={toolData}
+      />
+    </ToolPageWrapper>
   )
 }

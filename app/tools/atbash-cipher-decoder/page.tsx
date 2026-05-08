@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { AtbashCipherSolver } from "@/components/atbash-cipher-solver"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Atbash Cipher Decoder",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("atbash-cipher-decoder")
 
 export default function AtbashCipherPage() {
   return (
+    <ToolPageWrapper toolSlug="atbash-cipher-decoder">
     <ToolLayout
       toolId="atbash-cipher"
       toolName="Atbash Cipher Decoder"
@@ -26,5 +28,6 @@ export default function AtbashCipherPage() {
       toolComponent={<AtbashCipherSolver />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

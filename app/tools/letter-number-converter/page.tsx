@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { LetterNumberConverter } from "@/components/letter-number-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Letter to Number Converter | A1Z26 Cipher Encoder",
@@ -47,6 +48,7 @@ const toolData: ToolData = {
 
 export default function LetterNumberConverterPage() {
   return (
+    <ToolPageWrapper toolSlug="letter-number-converter">
     <ToolLayout
       toolId="letters-to-numbers"
       toolName="Letter to Number Converter"
@@ -54,5 +56,6 @@ export default function LetterNumberConverterPage() {
       toolComponent={<LetterNumberConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

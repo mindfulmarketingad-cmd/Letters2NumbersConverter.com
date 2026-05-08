@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { AudioSpectrogram } from "@/components/audio-spectrogram"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Spectrogram Decoder",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("audio-spectrogram-decoder")
 
 export default function AudioSpectrogramDecoderPage() {
   return (
+    <ToolPageWrapper toolSlug="audio-spectrogram-decoder">
     <ToolLayout
       toolId="audio-spectrogram-decoder"
       toolName="Spectrogram Decoder"
@@ -26,5 +28,6 @@ export default function AudioSpectrogramDecoderPage() {
       toolComponent={<AudioSpectrogram />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

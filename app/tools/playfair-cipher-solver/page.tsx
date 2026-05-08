@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { PlayfairCipherSolver } from "@/components/playfair-cipher-solver"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Playfair Cipher Solver",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("playfair-cipher-solver")
 
 export default function PlayfairCipherSolverPage() {
   return (
+    <ToolPageWrapper toolSlug="playfair-cipher-solver">
     <ToolLayout
       toolId="playfair-cipher"
       toolName="Playfair Cipher Solver"
@@ -26,5 +28,6 @@ export default function PlayfairCipherSolverPage() {
       toolComponent={<PlayfairCipherSolver />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

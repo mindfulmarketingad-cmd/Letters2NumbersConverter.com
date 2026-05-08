@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { CMToPixelsConverter } from "@/components/cm-to-pixels-converter"
 import { ToolLayout } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function CMToPixelsPage() {
   const toolData = getToolData('cm-to-pixels-converter')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="cm-to-pixels-converter">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -62,6 +63,6 @@ export default function CMToPixelsPage() {
         toolComponent={<CMToPixelsConverter />}
         toolData={toolData}
       />
-    </>
+    </ToolPageWrapper>
   )
 }

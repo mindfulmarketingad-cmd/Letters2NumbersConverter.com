@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { IVRAlphanumericConverter } from "@/components/ivr-alphanumeric-converter"
 import { ToolLayout } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function IVRAlphanumericPage() {
   const toolData = getToolData('ivr-alphanumeric-converter')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="ivr-alphanumeric-conversion-tool">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -62,6 +63,6 @@ export default function IVRAlphanumericPage() {
         toolComponent={<IVRAlphanumericConverter />}
         toolData={toolData}
       />
-    </>
+    </ToolPageWrapper>
   )
 }

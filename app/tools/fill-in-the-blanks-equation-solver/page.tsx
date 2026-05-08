@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { EquationSolver } from "@/components/equation-solver"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "Fill In The Blanks Equation Solver",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("fill-in-the-blanks-equation-solver")
 
 export default function EquationSolverPage() {
   return (
+    <ToolPageWrapper toolSlug="fill-in-the-blanks-equation-solver">
     <ToolLayout
       toolId="fill-in-the-blanks-equation-solver"
       toolName="Fill In The Blanks Equation Solver"
@@ -26,5 +28,6 @@ export default function EquationSolverPage() {
       toolComponent={<EquationSolver />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

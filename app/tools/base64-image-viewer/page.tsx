@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { Base64ImageViewer } from "@/components/base64-image-viewer"
 import { ToolLayout } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function Base64ImageViewerPage() {
   const toolData = getToolData('base64-image-viewer')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="base64-image-viewer">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -62,6 +63,6 @@ export default function Base64ImageViewerPage() {
         toolComponent={<Base64ImageViewer />}
         toolData={toolData}
       />
-    </>
+    </ToolPageWrapper>
   )
 }

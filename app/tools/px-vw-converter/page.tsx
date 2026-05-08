@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { getToolData } from "@/lib/tool-data"
 import { PxVwConverter } from "@/components/px-vw-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
   title: "PX To VW Converter",
@@ -19,6 +20,7 @@ const toolData: ToolData = getToolData("px-vw-converter")
 
 export default function PxVwConverterPage() {
   return (
+    <ToolPageWrapper toolSlug="px-vw-converter">
     <ToolLayout
       toolId="px-vw-converter"
       toolName="PX To VW Converter"
@@ -26,5 +28,6 @@ export default function PxVwConverterPage() {
       toolComponent={<PxVwConverter />}
       toolData={toolData}
     />
+    </ToolPageWrapper>
   )
 }

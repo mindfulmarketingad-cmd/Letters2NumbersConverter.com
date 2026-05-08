@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { MorseToBase64Converter } from "@/components/morse-to-base64-converter"
 import { ToolLayout } from "@/components/tool-layout"
+import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function MorseToBase64ConverterPage() {
   const toolData = getToolData('morse-to-base64-converter')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="morse-code-to-base64">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -62,6 +63,6 @@ export default function MorseToBase64ConverterPage() {
         toolComponent={<MorseToBase64Converter />}
         toolData={toolData}
       />
-    </>
+    </ToolPageWrapper>
   )
 }

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback, useMemo, useRef } from "react"
+import { useState, useCallback, useMemo, useRef, useEffect } from "react"
 import { Copy, ClipboardPaste, FolderOpen, Pencil, Download, Save, ChevronDown, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -16,6 +16,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
+import { useInstantTrackUsage } from "@/lib/use-instant-track-usage"
+import { UpgradeModal } from "@/components/upgrade-modal"
 
 type ConversionMode = "letters-to-numbers" | "numbers-to-letters"
 type CodeType = "a0" | "a1" | "ascii" | "hex" | "binary"
@@ -56,8 +58,18 @@ export function A0Z25Translator() {
   const [saveDialogOpen, setSaveDialogOpen] = useState(false)
   const [workspaceName, setWorkspaceName] = useState("")
   const textareaRef = useRef<HTMLTextAreaElement>(null)
+  const { scheduleTracking, resetTracking, showUpgradeModal, setShowUpgradeModal, remainingUses } = useInstantTrackUsage("A0Z25 Translator")
 
   const alphabet = useMemo(() => languages[language]?.alphabet || "ABCDEFGHIJKLMNOPQRSTUVWXYZ", [language])
+
+  // Track usage when output changes (debounced)
+  useEffect(() => {
+    if (input.trim()) {
+      scheduleTracking()
+    } else {
+      resetTracking()
+    }
+  }, [input, scheduleTracking, resetTracking])
 
   const convert = useCallback(() => {
     let result = ""
@@ -343,6 +355,18 @@ export function A0Z25Translator() {
           )}
         </DialogContent>
       </Dialog>
+
+      {/* Remaining Uses Display */}
+      {remainingUses !== null && remainingUses > 0 && (
+        <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900 rounded-lg p-3">
+          <p className="text-sm text-blue-800 dark:text-blue-200">
+            Remaining uses today: <span className="font-bold">{remainingUses}</span>
+          </p>
+        </div>
+      )}
+
+      {/* Upgrade Modal */}
+      <UpgradeModal isOpen={showUpgradeModal} onClose={() => setShowUpgradeModal(false)} />
     </div>
   )
 }

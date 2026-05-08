@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useAuth } from "@/lib/auth-context"
 import { ProfileDropdown } from "@/components/profile-dropdown"
+import { HeaderUsageIndicator } from "@/components/header-usage-indicator"
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -37,7 +38,9 @@ export function SiteHeader() {
         </nav>
 
         {/* Auth Buttons */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-4">
+          <HeaderUsageIndicator />
+          <div className="w-px h-6 bg-border" />
           {user ? (
             <ProfileDropdown />
           ) : (
@@ -87,6 +90,7 @@ export function SiteHeader() {
             
             {/* Mobile Auth Buttons */}
             <div className="border-t border-border pt-4 mt-2 flex flex-col gap-3">
+              <HeaderUsageIndicator />
               {user ? (
                 <ProfileDropdown />
               ) : (

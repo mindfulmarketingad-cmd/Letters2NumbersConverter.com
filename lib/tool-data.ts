@@ -430,6 +430,25 @@ export const getToolData = (toolId: string) => {
         { title: 'Data Analysts', description: 'Processing encoded Morse data and converting to Base64 for storage and transmission' }
       ]
     },
+    'vernam-cipher-decoder': {
+      howItWorks: 'Enter the ciphertext into the left panel and provide the original encryption key in the key field. Select your decryption mode (Vigenere for alphabetic cipher or XOR for bitwise operations). The tool decrypts the message in real-time using the selected algorithm. Toggle "Preserve case" to maintain original letter capitalization. All decryption happens locally in your browser with no data transmission.',
+      features: [
+        'Vigenere mode decryption for alphabetic ciphers',
+        'XOR mode for bitwise one-time pad decryption',
+        'Real-time decryption with instant results',
+        'Preserve case option for maintaining formatting',
+        'Copy decrypted text to clipboard',
+        'Download decrypted messages as text files',
+        'Character counting for both input and output',
+        'Complete offline processing for security'
+      ],
+      whoIsItFor: [
+        { title: 'Cryptography Enthusiasts', description: 'Understanding and implementing one-time pad ciphers and Vernam encryption' },
+        { title: 'Security Researchers', description: 'Analyzing theoretically unbreakable cipher systems and encryption methods' },
+        { title: 'Military & Intelligence Personnel', description: 'Decrypting historical and modern one-time pad communications' },
+        { title: 'Computer Science Students', description: 'Learning advanced cryptography concepts and mathematical encryption principles' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

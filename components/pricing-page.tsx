@@ -12,41 +12,6 @@ export function PricingPage() {
 
   const plans = [
     {
-      name: 'Free',
-      description: 'Get started with our tools',
-      price: 'Free',
-      period: 'forever',
-      uses: '10 uses total',
-      features: [
-        'Access to all conversion tools',
-        '10 tool uses',
-        'No account required',
-        'Download results',
-      ],
-      cta: 'Get Started',
-      ctaVariant: 'secondary',
-      highlight: false,
-      planType: null,
-    },
-    {
-      name: 'Free Account',
-      description: 'Create an account for more uses',
-      price: 'Free',
-      period: 'forever',
-      uses: '25 uses total',
-      features: [
-        'All Free features',
-        '25 tool uses',
-        'Account creation required',
-        'Usage tracking',
-        'Email support',
-      ],
-      cta: 'Create Account',
-      ctaVariant: 'secondary',
-      highlight: false,
-      planType: null,
-    },
-    {
       name: 'Pro',
       description: 'Unlimited access to all tools',
       price: '$4.99',
@@ -137,7 +102,7 @@ export function PricingPage() {
           </div>
 
           {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
             {plans.map((plan, idx) => (
               <div
                 key={idx}

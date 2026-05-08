@@ -25,8 +25,8 @@ export function SiteHeader() {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-            Converter
+          <Link href="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+            Pricing
           </Link>
           <Link href="/tools" className="text-muted-foreground hover:text-foreground transition-colors">
             Tools
@@ -61,11 +61,11 @@ export function SiteHeader() {
         <div className="md:hidden border-t border-border bg-background">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
             <Link 
-              href="/" 
+              href="/pricing" 
               className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
-              Converter Tool
+              Pricing
             </Link>
             <Link 
               href="/tools" 

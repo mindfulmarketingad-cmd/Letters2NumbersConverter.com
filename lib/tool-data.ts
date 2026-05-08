@@ -324,14 +324,3 @@ export const getToolData = (toolId: string) => {
     whoIsItFor: []
   }
 }
-  
-  return toolDataMap[toolId] || {
-    howItWorks: 'Use the interactive tool on the left to encode, decode, or solve your input. The tool provides real-time results as you type or make selections.',
-    features: ['Real-time processing with instant results', 'Works completely offline - no data sent to servers', 'Copy results to clipboard easily', 'Free and always available'],
-    whoIsItFor: [
-      { title: 'Enthusiasts', description: 'Exploring and learning new tools' },
-      { title: 'Students', description: 'Understanding different concepts and techniques' },
-      { title: 'Professionals', description: 'Using tools for work and productivity' }
-    ]
-  }
-}

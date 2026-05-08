@@ -392,6 +392,25 @@ export const getToolData = (toolId: string) => {
         { title: 'Color Professionals', description: 'Color matching and format conversion for accurate reproduction across mediums' }
       ]
     },
+    'base64-image-viewer': {
+      howItWorks: 'Paste or input a base64-encoded image string into the left panel. The tool automatically decodes the base64 data and displays the decoded image in real-time on the right. Supports data URI prefixes (data:image/...) or raw base64 strings. Download the image or copy the base64 code for further use.',
+      features: [
+        'Decode and display base64-encoded images',
+        'Support for PNG, JPEG, GIF, SVG, WebP formats',
+        'Real-time image preview as you type',
+        'Works with data URI prefixes or raw base64',
+        'Copy base64 string to clipboard',
+        'Download decoded images directly',
+        'File size calculation and display',
+        'Format auto-detection'
+      ],
+      whoIsItFor: [
+        { title: 'Developers & Programmers', description: 'Decoding and previewing base64-encoded image data from APIs, databases, or code' },
+        { title: 'Web Designers', description: 'Viewing embedded base64 images in HTML/CSS projects and converting to regular image files' },
+        { title: 'Data Engineers', description: 'Inspecting base64-encoded images in data pipelines and ETL processes' },
+        { title: 'Security Professionals', description: 'Analyzing suspicious or obfuscated base64 image data for security audits' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

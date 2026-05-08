@@ -257,6 +257,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Color Tools',
     href: '/tools/pantone-to-hex-converter',
   },
+  'base64-image-viewer': {
+    name: 'Base64 Image Viewer',
+    description: 'Decode and view base64-encoded images instantly',
+    category: 'Image Tools',
+    href: '/tools/base64-image-viewer',
+  },
 }
 
 export function getToolRegistry() {

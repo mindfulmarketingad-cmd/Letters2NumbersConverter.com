@@ -33,15 +33,6 @@ export function SiteHeader() {
           <Link href="/tools" className="text-muted-foreground hover:text-foreground transition-colors">
             Tools
           </Link>
-          <Link href="/play" className="text-muted-foreground hover:text-foreground transition-colors">
-            Games
-          </Link>
-          <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-            About
-          </Link>
-          <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-            Contact
-          </Link>
         </nav>
 
         {/* Auth Buttons */}
@@ -93,27 +84,6 @@ export function SiteHeader() {
               onClick={() => setIsMenuOpen(false)}
             >
               Tools
-            </Link>
-            <Link 
-              href="/play" 
-              className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Games
-            </Link>
-            <Link 
-              href="/about" 
-              className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link 
-              href="/contact" 
-              className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
             </Link>
           </nav>
         </div>

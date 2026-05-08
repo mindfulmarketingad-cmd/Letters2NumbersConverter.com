@@ -64,7 +64,6 @@ export default function IVRAlphanumericPage() {
         toolComponent={<IVRAlphanumericConverter />}
         toolData={toolData}
       />
-    </>
   </ToolPageWrapper>
   )
 }

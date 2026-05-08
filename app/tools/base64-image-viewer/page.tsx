@@ -64,7 +64,6 @@ export default function Base64ImageViewerPage() {
         toolComponent={<Base64ImageViewer />}
         toolData={toolData}
       />
-    </>
   </ToolPageWrapper>
   )
 }

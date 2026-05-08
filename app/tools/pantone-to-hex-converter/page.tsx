@@ -64,7 +64,6 @@ export default function PantoneToHexConverterPage() {
         toolComponent={<PantoneToHexConverter />}
         toolData={toolData}
       />
-    </>
   </ToolPageWrapper>
   )
 }

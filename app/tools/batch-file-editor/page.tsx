@@ -64,7 +64,6 @@ export default function BatchFileEditorPage() {
         toolComponent={<BatchFileEditor />}
         toolData={toolData}
       />
-    </>
   </ToolPageWrapper>
   )
 }

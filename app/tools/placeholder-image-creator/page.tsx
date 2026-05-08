@@ -64,7 +64,6 @@ export default function PlaceholderImageCreatorPage() {
         toolComponent={<PlaceholderImageCreator />}
         toolData={toolData}
       />
-    </>
   </ToolPageWrapper>
   )
 }

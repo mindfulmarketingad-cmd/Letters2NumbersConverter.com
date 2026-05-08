@@ -64,7 +64,6 @@ export default function VernamCipherDecoderPage() {
         toolComponent={<VernamCipherDecoder />}
         toolData={toolData}
       />
-    </>
   </ToolPageWrapper>
   )
 }

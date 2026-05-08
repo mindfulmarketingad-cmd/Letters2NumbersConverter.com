@@ -64,7 +64,6 @@ export default function CMYKToPantoneConverterPage() {
         toolComponent={<CMYKToPantoneConverter />}
         toolData={toolData}
       />
-    </>
   </ToolPageWrapper>
   )
 }

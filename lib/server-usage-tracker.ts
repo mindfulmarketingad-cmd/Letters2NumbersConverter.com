@@ -10,7 +10,7 @@ const supabase = createClient(
 
 export async function trackToolUsage(toolSlug: string, userId?: string) {
   try {
-    const cookieStore = cookies()
+    const cookieStore = await cookies()
     const sessionId = cookieStore.get('sessionId')?.value
 
     // Determine identifier (user_id if logged in, session_id if anonymous)
@@ -56,7 +56,7 @@ export async function trackToolUsage(toolSlug: string, userId?: string) {
 
 export async function checkUsageLimit(userId?: string) {
   try {
-    const cookieStore = cookies()
+    const cookieStore = await cookies()
     const sessionId = cookieStore.get('sessionId')?.value
 
     // Determine limits and identifier

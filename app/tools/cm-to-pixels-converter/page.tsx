@@ -64,7 +64,6 @@ export default function CMToPixelsPage() {
         toolComponent={<CMToPixelsConverter />}
         toolData={toolData}
       />
-    </>
   </ToolPageWrapper>
   )
 }

@@ -239,6 +239,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Color Tools',
     href: '/tools/cmyk-to-pantone-color-converter',
   },
+  'batch-file-editor': {
+    name: 'Batch File Editor',
+    description: 'Edit, create, and analyze batch files with real-time statistics',
+    category: 'Code Tools',
+    href: '/tools/batch-file-editor',
+  },
 }
 
 export function getToolRegistry() {

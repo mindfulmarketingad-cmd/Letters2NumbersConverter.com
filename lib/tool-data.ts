@@ -335,6 +335,25 @@ export const getToolData = (toolId: string) => {
         { title: 'Marketing Teams', description: 'Standardizing brand colors across all marketing materials and collateral' }
       ]
     },
+    'batch-file-editor': {
+      howItWorks: 'Write or paste batch file commands into the editor. The tool provides real-time syntax highlighting, line numbering, and instant file statistics. Analyze your batch scripts by character count, word count, line count, and file size. Download your batch files directly or copy to clipboard for easy sharing and execution.',
+      features: [
+        'Full-featured batch file code editor',
+        'Line numbering with real-time display',
+        'Character, word, line, and size statistics',
+        'Dark theme editor for coding comfort',
+        'Copy to clipboard functionality',
+        'Download as .bat file directly',
+        'Batch file syntax-aware editing',
+        'File size calculation in B/KB/MB'
+      ],
+      whoIsItFor: [
+        { title: 'Windows System Administrators', description: 'Creating and editing batch scripts for system automation and maintenance' },
+        { title: 'System Developers', description: 'Writing batch files for deployment, backups, and scheduled tasks' },
+        { title: 'IT Professionals', description: 'Managing batch file libraries and scripts for server administration' },
+        { title: 'Students & Learners', description: 'Learning batch scripting and Windows command-line programming' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

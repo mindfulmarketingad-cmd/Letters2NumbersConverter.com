@@ -32,7 +32,7 @@ export default function CMToPixelsPage() {
   const toolData = getToolData('cm-to-pixels-converter')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="cm-to-pixels-converter">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -56,7 +56,6 @@ export default function CMToPixelsPage() {
           })
         }}
       />
-    <ToolPageWrapper toolSlug="cm-to-pixels-converter">
       <ToolLayout
         toolId="cm-to-pixels-converter"
         toolName="CM To Pixels Converter"
@@ -64,6 +63,6 @@ export default function CMToPixelsPage() {
         toolComponent={<CMToPixelsConverter />}
         toolData={toolData}
       />
-  </ToolPageWrapper>
+    </ToolPageWrapper>
   )
 }

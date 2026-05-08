@@ -1,8 +1,7 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { trackToolUsage, checkUsageLimit } from '@/lib/server-usage-tracker'
 import { useAuth } from '@/lib/auth-context'
 
 interface ToolPageProps {
@@ -12,30 +11,38 @@ interface ToolPageProps {
 
 export function ToolPageWrapper({ children, toolSlug }: ToolPageProps) {
   const router = useRouter()
-  const { user } = useAuth()
+  const { user, loading } = useAuth()
+  const tracked = useRef(false)
 
   useEffect(() => {
+    // Wait until auth is resolved and only track once per mount
+    if (loading) return
+    if (tracked.current) return
+    tracked.current = true
+
     const trackUsage = async () => {
       try {
-        // Check usage limit first
-        const limitCheck = await checkUsageLimit(user?.id)
+        const res = await fetch('/api/usage/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            toolSlug,
+            userId: user?.id ?? null,
+          }),
+        })
 
-        if (!limitCheck.allowed) {
-          // Redirect to upgrade if limit reached
+        const data = await res.json()
+
+        if (!data.allowed) {
           router.push('/upgrade')
-          return
         }
-
-        // Track this tool usage
-        await trackToolUsage(toolSlug, user?.id)
       } catch (error) {
-        console.error('[v0] Failed to track usage:', error)
-        // Continue loading the page even if tracking fails
+        // Silently fail — never block the tool page from loading
       }
     }
 
     trackUsage()
-  }, [toolSlug, user?.id, router])
+  }, [loading, toolSlug, user?.id, router])
 
   return <>{children}</>
 }

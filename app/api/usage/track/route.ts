@@ -6,166 +6,147 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY!
 )
 
+const ANON_LIMIT = 10
+const FREE_LIMIT = 25
+
+function startOfToday() {
+  const d = new Date()
+  d.setHours(0, 0, 0, 0)
+  return d.toISOString()
+}
+
+// POST — record a tool visit and check if the user is within their limit
 export async function POST(request: NextRequest) {
   try {
-    const { userId, sessionId } = await request.json()
+    const { toolSlug, userId } = await request.json()
+
+    if (!toolSlug) {
+      return NextResponse.json({ error: 'Missing toolSlug' }, { status: 400 })
+    }
+
+    // Resolve session cookie for anonymous users
+    const sessionId = request.cookies.get('sessionId')?.value ?? null
 
     if (!userId && !sessionId) {
-      return NextResponse.json(
-        { error: 'Missing userId or sessionId' },
-        { status: 400 }
-      )
+      // No identity at all — allow but don't track
+      return NextResponse.json({ allowed: true })
     }
 
-    // Get or create session
-    const identifier = userId || sessionId
-    const isAnonymous = !userId
-
-    // Check current usage
-    const { data: usage, error: usageError } = await supabase
-      .from('usage_tracking')
-      .select('*')
-      .eq(isAnonymous ? 'session_id' : 'user_id', identifier)
-      .single()
-
-    if (usageError && usageError.code !== 'PGRST116') {
-      console.error('Usage lookup error:', usageError)
-      return NextResponse.json(
-        { error: 'Failed to check usage' },
-        { status: 500 }
-      )
-    }
-
-    // Get user subscription if logged in
-    let subscription = null
+    // Get subscription for logged-in users
+    let isPro = false
     if (userId) {
       const { data: sub } = await supabase
         .from('user_subscriptions')
-        .select('*')
+        .select('plan_type, status')
         .eq('user_id', userId)
         .single()
-      subscription = sub
+      isPro =
+        (sub?.plan_type === 'pro_monthly' || sub?.plan_type === 'pro_yearly') &&
+        sub?.status === 'active'
     }
 
-    // Determine usage limits based on user status
-    const isPaid = subscription?.plan_type === 'pro_monthly' || subscription?.plan_type === 'pro_yearly'
-    let limit: number
-    
-    if (isPaid && subscription?.status === 'active') {
-      limit = Infinity
-    } else if (userId) {
-      // Logged-in users get 25 uses
-      limit = 25
-    } else {
-      // Anonymous users get 10 uses
-      limit = 10
+    // Pro users — unlimited, just insert the row and return
+    if (isPro) {
+      await supabase.from('usage_tracking').insert({
+        user_id: userId,
+        session_id: sessionId,
+        tool_id: toolSlug,
+      })
+      return NextResponse.json({ allowed: true })
     }
-    
-    const currentUsage = usage?.usage_count || 0
 
-    // Check if limit exceeded
-    if (currentUsage >= limit) {
+    // Count today's unique tool visits
+    const todayStart = startOfToday()
+    const column = userId ? 'user_id' : 'session_id'
+    const identifier = userId ?? sessionId
+
+    const { count } = await supabase
+      .from('usage_tracking')
+      .select('*', { count: 'exact', head: true })
+      .eq(column, identifier)
+      .gte('created_at', todayStart)
+
+    const todayCount = count ?? 0
+    const limit = userId ? FREE_LIMIT : ANON_LIMIT
+
+    if (todayCount >= limit) {
       return NextResponse.json({
         allowed: false,
-        message: 'Usage limit exceeded',
-        currentUsage,
-        limit,
-        canUpgrade: !isPaid,
+        usage_count: todayCount,
+        dailyLimit: limit,
+        remainingUses: 0,
       })
     }
 
-    // Increment usage
-    if (usage) {
-      await supabase
-        .from('usage_tracking')
-        .update({ usage_count: currentUsage + 1, last_used: new Date().toISOString() })
-        .eq(isAnonymous ? 'session_id' : 'user_id', identifier)
-    } else {
-      await supabase
-        .from('usage_tracking')
-        .insert({
-          user_id: userId || null,
-          session_id: sessionId || null,
-          usage_count: 1,
-          is_registered: !!userId,
-        })
-    }
+    // Insert the new visit row
+    await supabase.from('usage_tracking').insert({
+      user_id: userId ?? null,
+      session_id: sessionId ?? null,
+      tool_id: toolSlug,
+    })
 
     return NextResponse.json({
       allowed: true,
-      currentUsage: currentUsage + 1,
-      limit,
-      remainingUsage: limit - (currentUsage + 1),
+      usage_count: todayCount + 1,
+      dailyLimit: limit,
+      remainingUses: limit - (todayCount + 1),
     })
   } catch (error) {
     console.error('Usage tracking error:', error)
-    return NextResponse.json(
-      { error: 'Failed to track usage' },
-      { status: 500 }
-    )
+    // Fail open — never block a user from using the tool
+    return NextResponse.json({ allowed: true })
   }
 }
 
+// GET — return today's usage stats for the dashboard
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams
     const userId = searchParams.get('userId')
-    const sessionId = searchParams.get('sessionId')
+    const sessionId =
+      searchParams.get('sessionId') ?? request.cookies.get('sessionId')?.value ?? null
 
     if (!userId && !sessionId) {
-      return NextResponse.json(
-        { error: 'Missing userId or sessionId' },
-        { status: 400 }
-      )
+      return NextResponse.json({ usage_count: 0, dailyLimit: ANON_LIMIT, remainingUses: ANON_LIMIT })
     }
 
-    const identifier = userId || sessionId
-    const isAnonymous = !userId
-
-    const { data: usage } = await supabase
-      .from('usage_tracking')
-      .select('*')
-      .eq(isAnonymous ? 'session_id' : 'user_id', identifier)
-      .single()
-
-    let subscription = null
+    // Get subscription
+    let isPro = false
+    let planType = 'free'
     if (userId) {
       const { data: sub } = await supabase
         .from('user_subscriptions')
-        .select('*')
+        .select('plan_type, status')
         .eq('user_id', userId)
         .single()
-      subscription = sub
+      planType = sub?.plan_type ?? 'free'
+      isPro =
+        (planType === 'pro_monthly' || planType === 'pro_yearly') &&
+        sub?.status === 'active'
     }
 
-    // Determine usage limits based on user status
-    const isPaid = subscription?.plan_type === 'pro_monthly' || subscription?.plan_type === 'pro_yearly'
-    let limit: number
-    
-    if (isPaid && subscription?.status === 'active') {
-      limit = Infinity
-    } else if (userId) {
-      // Logged-in users get 25 uses
-      limit = 25
-    } else {
-      // Anonymous users get 10 uses
-      limit = 10
-    }
-    
-    const currentUsage = usage?.usage_count || 0
+    const dailyLimit = isPro ? Infinity : userId ? FREE_LIMIT : ANON_LIMIT
+    const todayStart = startOfToday()
+    const column = userId ? 'user_id' : 'session_id'
+    const identifier = userId ?? sessionId
+
+    const { count } = await supabase
+      .from('usage_tracking')
+      .select('*', { count: 'exact', head: true })
+      .eq(column, identifier)
+      .gte('created_at', todayStart)
+
+    const usage_count = count ?? 0
 
     return NextResponse.json({
-      currentUsage,
-      limit,
-      remainingUsage: Math.max(0, limit - currentUsage),
-      isPaid,
-      isRegistered: usage?.is_registered || false,
+      usage_count,
+      dailyLimit,
+      remainingUses: isPro ? Infinity : Math.max(0, dailyLimit - usage_count),
+      isPro,
+      planType,
     })
   } catch (error) {
-    console.error('Usage check error:', error)
-    return NextResponse.json(
-      { error: 'Failed to check usage' },
-      { status: 500 }
-    )
+    console.error('Usage GET error:', error)
+    return NextResponse.json({ usage_count: 0, dailyLimit: FREE_LIMIT, remainingUses: FREE_LIMIT })
   }
 }

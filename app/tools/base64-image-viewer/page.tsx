@@ -32,7 +32,7 @@ export default function Base64ImageViewerPage() {
   const toolData = getToolData('base64-image-viewer')
 
   return (
-    <>
+    <ToolPageWrapper toolSlug="base64-image-viewer">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -56,7 +56,6 @@ export default function Base64ImageViewerPage() {
           })
         }}
       />
-    <ToolPageWrapper toolSlug="base64-image-viewer">
       <ToolLayout
         toolId="base64-image-viewer"
         toolName="Base64 Image Viewer"
@@ -64,6 +63,6 @@ export default function Base64ImageViewerPage() {
         toolComponent={<Base64ImageViewer />}
         toolData={toolData}
       />
-  </ToolPageWrapper>
+    </ToolPageWrapper>
   )
 }

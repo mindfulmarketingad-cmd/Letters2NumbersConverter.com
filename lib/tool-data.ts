@@ -289,15 +289,41 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'yaml-to-ini-converter': {
-      howItWorks: 'Paste your YAML configuration file or INI format file into the left panel. The tool instantly converts between formats, automatically detecting the input type. Download the converted file or copy to clipboard.',
-      features: ['YAML to INI bidirectional conversion', 'Automatic format detection', 'Hierarchy and nested structure preservation', 'Comment preservation during conversion', 'Format validation and error detection', 'Download converted file', 'Copy to clipboard functionality', 'Support for complex configuration structures'],
+      howItWorks: 'Paste YAML configuration and the tool converts to INI format (or vice versa). Maintains hierarchy and values. Preview changes before download.',
+      features: ['YAML to INI bidirectional conversion', 'Hierarchy preservation', 'Nested structure handling', 'Comment preservation', 'Format validation', 'Download converted file'],
       whoIsItFor: [
-        { title: 'DevOps Engineers', description: 'Converting configuration file formats across different deployment systems' },
+        { title: 'DevOps Engineers', description: 'Converting config file formats across different deployment systems' },
         { title: 'System Administrators', description: 'Migrating configuration systems and standardizing config file formats' },
         { title: 'Developers', description: 'Working across different configuration standards in various frameworks and tools' }
       ]
     },
+    'word-to-number-translator': {
+      howItWorks: 'Enter words or numeric text in the left panel and choose your encoding method to convert words to numbers or numbers back to words. The translator instantly processes the conversion and displays the result with a character-by-character breakdown. Supports multiple encoding systems including A1Z26, A0Z25, ASCII, and more.',
+      features: [
+        'Convert English words to numerical sequences instantly',
+        'Support for multiple encoding methods (A1Z26, A0Z25, ASCII, HEX, BINARY)',
+        'Bidirectional conversion - words to numbers and numbers to words',
+        'Real-time conversion as you type',
+        'Character-by-character breakdown visualization',
+        'Copy results to clipboard with one click',
+        'Works completely offline - no data sent to servers',
+        'Perfect for cryptography, puzzles, and data encoding'
+      ],
+      whoIsItFor: [
+        { title: 'Puzzle Enthusiasts', description: 'Solving word-based cryptograms and numeric puzzles that require word-to-number conversion' },
+        { title: 'Cryptography Learners', description: 'Understanding how words are encoded numerically in encryption systems' },
+        { title: 'Students & Teachers', description: 'Educational tool for learning about character encoding and numerical representation of text' },
+        { title: 'Data Science Professionals', description: 'Converting categorical word data to numerical format for analysis and machine learning' }
+      ]
+    },
   }
+
+  return toolDataMap[toolId] || {
+    howItWorks: 'Use the interactive tool on the left to encode, decode, or solve your input. The tool provides real-time results as you type or make selections.',
+    features: ['Real-time processing with instant results', 'Works completely offline - no data sent to servers', 'Copy results to clipboard easily', 'Free and always available'],
+    whoIsItFor: []
+  }
+}
   
   return toolDataMap[toolId] || {
     howItWorks: 'Use the interactive tool on the left to encode, decode, or solve your input. The tool provides real-time results as you type or make selections.',

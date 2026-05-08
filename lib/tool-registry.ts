@@ -227,6 +227,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Data Conversion',
     href: '/tools/yaml-to-ini-converter',
   },
+  'word-to-number-translator': {
+    name: 'Word To Number Translator',
+    description: 'Convert words to numbers and numbers to words with multiple encoding methods',
+    category: 'Conversion',
+    href: '/tools/word-to-number-translator',
+  },
 }
 
 export function getToolRegistry() {

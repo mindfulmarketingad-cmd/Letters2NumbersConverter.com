@@ -281,6 +281,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Healthcare Tools',
     href: '/tools/ivr-alphanumeric-conversion-tool',
   },
+  'cm-to-pixels-converter': {
+    name: 'CM To Pixels Converter',
+    description: 'Convert centimeters to pixels for web design, print media, and screen calculations',
+    category: 'Unit Conversion',
+    href: '/tools/cm-to-pixels-converter',
+  },
 }
 
 export function getToolRegistry() {

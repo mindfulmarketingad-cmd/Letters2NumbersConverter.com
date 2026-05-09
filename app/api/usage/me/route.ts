@@ -10,9 +10,11 @@ const ANON_LIMIT = 10
 const FREE_LIMIT = 25
 
 function startOfToday() {
-  const d = new Date()
-  d.setHours(0, 0, 0, 0)
-  return d.toISOString()
+  // Get current time in EST (UTC-5, or UTC-4 during daylight saving)
+  const estTime = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })
+  const estDate = new Date(estTime)
+  estDate.setHours(0, 0, 0, 0)
+  return estDate.toISOString()
 }
 
 export async function GET(request: NextRequest) {

@@ -23,11 +23,29 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Conversion',
     href: '/tools/a1z26-translator',
   },
+  'a1z26-decoder-and-encoder': {
+    name: 'A1Z26 Decoder and Encoder',
+    description: 'Encode letters to A1Z26 numbers and decode numbers back to letters instantly',
+    category: 'Conversion',
+    href: '/tools/a1z26-decoder-and-encoder',
+  },
   'a0z25-cipher': {
     name: 'A0Z25 Cipher Translator',
     description: 'Convert text using A0Z25 cipher encoding',
     category: 'Cipher',
     href: '/tools/a0z25-cipher-translator',
+  },
+  'a0z25-decoder': {
+    name: 'A0Z25 Decoder',
+    description: 'Decode A0Z25 encoded numbers back to letters instantly',
+    category: 'Decoder',
+    href: '/tools/a0z25-decoder',
+  },
+  'a0z25-converter': {
+    name: 'A0Z25 Converter',
+    description: 'Convert letters to numbers and numbers to letters with A0Z25 formatting',
+    category: 'Converter',
+    href: '/tools/a0z25-converter',
   },
   'anagram-solver': {
     name: 'Anagram Solver',

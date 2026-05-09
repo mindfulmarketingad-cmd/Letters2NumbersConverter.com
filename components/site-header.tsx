@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -18,13 +19,18 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
-            <span className="text-primary-foreground font-bold text-sm tracking-tight">L2N</span>
-          </div>
-          <span className="font-semibold text-foreground hidden sm:inline text-lg">
-            Letters to Numbers
-          </span>
-        </Link>
+            <Image 
+              src="/logo.png" 
+              alt="Letters to Numbers Logo" 
+              width={40} 
+              height={40}
+              className="w-10 h-10 rounded-lg shadow-sm group-hover:shadow-md transition-shadow"
+              priority
+            />
+            <span className="font-semibold text-foreground hidden sm:inline text-lg">
+              Letters to Numbers
+            </span>
+          </Link>
         </div>
         
         {/* Desktop Navigation */}

@@ -359,6 +359,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/baconian-cipher',
   },
+  'black-and-white-photo-to-color-converter': {
+    name: 'Black and White Photo to Color Converter',
+    description: 'Transform grayscale photos into vibrant color images instantly',
+    category: 'Image Tools',
+    href: '/tools/black-and-white-photo-to-color-converter',
+  },
   'morse-to-base64-converter': {
     name: 'Morse Code to Base64 Converter',
     description: 'Decode Morse code and convert to Base64 format',

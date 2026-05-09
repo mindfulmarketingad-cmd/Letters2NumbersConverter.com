@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'audio-spectrogram',
     'audio-spectrogram-decoder',
     'baconian-cipher',
+    'black-and-white-photo-to-color-converter',
     'babylonian-numeral-converter',
     'base64-image-viewer',
     'batch-file-editor',

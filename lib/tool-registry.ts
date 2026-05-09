@@ -173,6 +173,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Utility',
     href: '/tools/half-birthday-calculator',
   },
+  'html-encoder-decoder': {
+    name: 'HTML Encoder and Decoder',
+    description: 'Instantly encode and decode HTML entities for safe web content',
+    category: 'Encoding Tools',
+    href: '/tools/html-encoder-decoder',
+  },
   'hexahue-cipher': {
     name: 'Hexahue Cipher',
     description: 'Color-based encoding system for visual communication',

@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'fill-in-the-blanks-equation-solver',
     'grade-curve-calculator',
     'half-birthday-calculator',
+    'html-encoder-decoder',
     'hexahue-cipher',
     'ivr-alphanumeric-conversion-tool',
     'json-to-java-code-generator',

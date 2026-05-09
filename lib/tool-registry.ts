@@ -161,6 +161,18 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Math Tools',
     href: '/tools/fill-in-the-blanks-equation-solver',
   },
+  'grade-curve-calculator': {
+    name: 'Grade Curve Calculator',
+    description: 'Adjust student grades using normal, linear, or percentile distribution methods',
+    category: 'Education',
+    href: '/tools/grade-curve-calculator',
+  },
+  'half-birthday-calculator': {
+    name: 'Half Birthday Calculator',
+    description: 'Calculate when your half birthday is and celebrate twice a year',
+    category: 'Utility',
+    href: '/tools/half-birthday-calculator',
+  },
   'hexahue-cipher': {
     name: 'Hexahue Cipher',
     description: 'Color-based encoding system for visual communication',
@@ -197,6 +209,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Number Systems',
     href: '/tools/mayan-numeral-converter',
   },
+  'meq-to-mg-calculator': {
+    name: 'mEq to mg Calculator',
+    description: 'Convert milliequivalents (mEq) to milligrams (mg) for pharmaceutical and medical calculations',
+    category: 'Medical',
+    href: '/tools/meq-to-mg-calculator',
+  },
   'monoalphabetic-substitution-cipher': {
     name: 'Monoalphabetic Substitution Cipher',
     description: 'Encrypt and decrypt using monoalphabetic ciphers',
@@ -220,6 +238,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Test and analyze password security strength',
     category: 'Security Tools',
     href: '/tools/password-strength-tester',
+  },
+  'playback-speed-calculator': {
+    name: 'Playback Speed Calculator',
+    description: 'Calculate adjusted duration and time saved when playing media at different speeds',
+    category: 'Utility',
+    href: '/tools/playback-speed-calculator',
   },
   'playfair-cipher': {
     name: 'Playfair Cipher Solver',

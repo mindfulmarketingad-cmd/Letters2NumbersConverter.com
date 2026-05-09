@@ -41,6 +41,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/atbash-cipher-decoder',
   },
+  'alphanumeric-conversion-tool': {
+    name: 'Alphanumeric Conversion Tool',
+    description: 'Convert letters to numbers and numbers to letters with multiple encoding formats',
+    category: 'Conversion',
+    href: '/tools/alphanumeric-conversion-tool',
+  },
   'audio-spectrogram': {
     name: 'Audio Spectrogram Analyzer',
     description: 'Visualize audio frequencies and analyze sound waves',

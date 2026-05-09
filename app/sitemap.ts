@@ -84,6 +84,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'escape-room-letter-codes',
     'history-letter-number-systems',
     'how-to-change-photo-to-high-resolution',
+    'how-to-convert-image-to-text-in-excel',
     'how-to-convert-image-to-word-text',
     'how-to-manually-check-letter-number-conversion',
     'how-to-solve-letter-number-puzzles',

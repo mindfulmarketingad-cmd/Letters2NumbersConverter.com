@@ -29,6 +29,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/a0z25-cipher-translator',
   },
+  'a0z25-decoder': {
+    name: 'A0Z25 Decoder',
+    description: 'Decode A0Z25 encoded numbers back to letters instantly',
+    category: 'Decoder',
+    href: '/tools/a0z25-decoder',
+  },
   'anagram-solver': {
     name: 'Anagram Solver',
     description: 'Solve anagrams and find word combinations',

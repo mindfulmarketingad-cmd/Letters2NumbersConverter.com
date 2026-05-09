@@ -50,6 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'numbers-to-letters',
     'pantone-to-hex-converter',
     'password-strength-tester',
+    'playback-speed-calculator',
     'placeholder-image-creator',
     'playfair-cipher-solver',
     'px-vw-converter',

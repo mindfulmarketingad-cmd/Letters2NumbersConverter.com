@@ -239,6 +239,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Security Tools',
     href: '/tools/password-strength-tester',
   },
+  'playback-speed-calculator': {
+    name: 'Playback Speed Calculator',
+    description: 'Calculate adjusted duration and time saved when playing media at different speeds',
+    category: 'Utility',
+    href: '/tools/playback-speed-calculator',
+  },
   'playfair-cipher': {
     name: 'Playfair Cipher Solver',
     description: 'Encrypt and decrypt using Playfair cipher',

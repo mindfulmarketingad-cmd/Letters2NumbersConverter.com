@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'monoalphabetic-substitution-cipher',
     'morse-code-to-base64',
     'nato-phonetic-alphabet',
+    'online-url-decoder-encoder',
     'numbers-to-letters',
     'pantone-to-hex-converter',
     'password-strength-tester',

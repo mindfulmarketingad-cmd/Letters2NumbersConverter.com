@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { getToolRegistry } from '@/lib/tool-registry'
 import type { ToolData } from '@/components/tool-layout'
 
@@ -17,9 +18,14 @@ export function ToolDescription({ toolName, toolDescription, toolData }: ToolDes
     <div className="space-y-8">
       {/* Site Logo */}
       <Link href="/" className="inline-flex items-center gap-3 group mb-4">
-        <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
-          <span className="text-primary-foreground font-bold text-base tracking-tight">L2N</span>
-        </div>
+        <Image 
+          src="/logo.png" 
+          alt="Letters to Numbers Logo" 
+          width={48} 
+          height={48}
+          className="w-12 h-12 rounded-lg shadow-sm group-hover:shadow-md transition-shadow"
+          priority
+        />
         <div>
           <p className="text-sm font-semibold text-foreground">Letters to Numbers</p>
           <p className="text-xs text-muted-foreground">Trusted Conversion Tools</p>

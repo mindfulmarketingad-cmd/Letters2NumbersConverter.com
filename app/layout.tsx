@@ -50,20 +50,31 @@ export const metadata: Metadata = {
     siteName: 'Letters to Numbers Converter Tool',
     title: 'Letters to Numbers Converter Tool | Free Online A1Z26 Decoder',
     description: 'Free letters to numbers converter tool. Convert A=1, B=2 through Z=26 instantly. Supports A1Z26, ASCII, hexadecimal, and binary encoding.',
+    images: [
+      {
+        url: '/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'Letters to Numbers Converter Logo',
+        type: 'image/png',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Letters to Numbers Converter Tool | Free Online A1Z26 Decoder',
     description: 'Free letters to numbers converter tool. Convert A=1, B=2 through Z=26 instantly. Supports multiple encoding types.',
+    images: ['/logo.png'],
   },
   icons: {
     icon: [
       {
-        url: '/favicon.svg',
-        type: 'image/svg+xml',
+        url: '/logo.png',
+        type: 'image/png',
+        sizes: '512x512',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/logo.png',
   },
   metadataBase: new URL('https://www.letters2numbersconverter.com'),
 }

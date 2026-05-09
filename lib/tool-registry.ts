@@ -209,6 +209,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Number Systems',
     href: '/tools/mayan-numeral-converter',
   },
+  'meq-to-mg-calculator': {
+    name: 'mEq to mg Calculator',
+    description: 'Convert milliequivalents (mEq) to milligrams (mg) for pharmaceutical and medical calculations',
+    category: 'Medical',
+    href: '/tools/meq-to-mg-calculator',
+  },
   'monoalphabetic-substitution-cipher': {
     name: 'Monoalphabetic Substitution Cipher',
     description: 'Encrypt and decrypt using monoalphabetic ciphers',

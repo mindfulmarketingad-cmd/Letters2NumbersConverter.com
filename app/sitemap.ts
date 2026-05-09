@@ -43,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'line-ending-converter',
     'longest-word-using-these-letters-solver',
     'mayan-numeral-converter',
+    'meq-to-mg-calculator',
     'monoalphabetic-substitution-cipher',
     'morse-code-to-base64',
     'nato-phonetic-alphabet',

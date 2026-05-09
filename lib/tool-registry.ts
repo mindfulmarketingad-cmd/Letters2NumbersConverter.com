@@ -215,6 +215,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/skip-cipher',
   },
+  'steganography-image-decoder': {
+    name: 'Steganography Image Decoder',
+    description: 'Extract hidden information and messages from steganographic images using LSB extraction',
+    category: 'Decoder',
+    href: '/tools/steganography-image-decoder',
+  },
   'tapcode-translator': {
     name: 'Tapcode Translator',
     description: 'Convert messages to tap code cipher',

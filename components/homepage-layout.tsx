@@ -11,15 +11,15 @@ export function HomepageLayout() {
       <SiteHeader />
 
       {/* Main Layout - Two Column */}
-      <main className="flex-1 flex flex-col md:flex-row gap-0 overflow-hidden">
-        {/* Left Column - Work Area (Static/Fixed) */}
-        <div className="w-full md:w-[45%] flex flex-col bg-secondary/30 border-r border-border min-h-[50vh] md:min-h-auto overflow-hidden">
+      <main className="flex-1 flex flex-col md:flex-row gap-0">
+        {/* Left Column - Work Area (Sticky) */}
+        <div className="w-full md:w-[45%] md:sticky md:top-0 md:h-screen flex flex-col bg-secondary/30 border-r border-border min-h-[50vh] shrink-0">
           <WorkArea />
         </div>
 
         {/* Right Column - SEO Content (Scrollable) */}
-        <div className="w-full md:w-[55%] flex flex-col overflow-hidden">
-          <div className="flex-1 overflow-y-auto">
+        <div className="w-full md:w-[55%] flex flex-col">
+          <div className="flex-1">
             <div className="p-6 md:p-8 max-w-3xl">
               <SeoPanel />
             </div>

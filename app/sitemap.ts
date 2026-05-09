@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'atbash-cipher-decoder',
     'audio-spectrogram',
     'audio-spectrogram-decoder',
+    'baconian-cipher',
     'babylonian-numeral-converter',
     'base64-image-viewer',
     'batch-file-editor',

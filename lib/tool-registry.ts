@@ -227,6 +227,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Text Tools',
     href: '/tools/nato-phonetic-alphabet',
   },
+  'online-url-decoder-encoder': {
+    name: 'Online URL Decoder Encoder',
+    description: 'Instantly encode and decode URLs with support for recursive decoding and batch processing',
+    category: 'Encoding Tools',
+    href: '/tools/online-url-decoder-encoder',
+  },
   'numbers-to-letters': {
     name: 'Numbers to Letters Converter',
     description: 'Convert numbers back to letters',

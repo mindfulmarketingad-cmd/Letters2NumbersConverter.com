@@ -10,7 +10,9 @@ interface ShareMenuProps {
 
 export function ShareMenu({ title = 'Check this out!', url = typeof window !== 'undefined' ? window.location.href : '' }: ShareMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const [dropdownPosition, setDropdownPosition] = useState<'below' | 'above'>('below')
   const menuRef = useRef<HTMLDivElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -22,6 +24,21 @@ export function ShareMenu({ title = 'Check this out!', url = typeof window !== '
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside)
       return () => document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isOpen])
+
+  useEffect(() => {
+    if (isOpen && buttonRef.current) {
+      const rect = buttonRef.current.getBoundingClientRect()
+      const spaceBelow = window.innerHeight - rect.bottom
+      const spaceAbove = rect.top
+      
+      // If less than 200px space below, position above
+      if (spaceBelow < 200 && spaceAbove > 150) {
+        setDropdownPosition('above')
+      } else {
+        setDropdownPosition('below')
+      }
     }
   }, [isOpen])
 
@@ -72,6 +89,7 @@ export function ShareMenu({ title = 'Check this out!', url = typeof window !== '
   return (
     <div className="relative" ref={menuRef}>
       <button
+        ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         className="p-2 hover:bg-background rounded-lg transition-colors"
         title="Share"
@@ -80,7 +98,9 @@ export function ShareMenu({ title = 'Check this out!', url = typeof window !== '
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 bg-card border border-border rounded-lg shadow-lg p-2 z-50 min-w-48">
+        <div className={`absolute right-0 mt-2 bg-card border border-border rounded-lg shadow-lg p-2 z-50 min-w-48 ${
+          dropdownPosition === 'above' ? 'bottom-full mb-2' : 'top-full'
+        }`}>
           <p className="text-xs font-semibold text-muted-foreground px-2 py-1 mb-1">Share to</p>
           <div className="space-y-1">
             {shareOptions.map((option) => {

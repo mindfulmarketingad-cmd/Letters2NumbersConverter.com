@@ -86,6 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-to-change-photo-to-high-resolution',
     'how-to-convert-image-to-text-in-excel',
     'how-to-convert-image-to-word-text',
+    'how-to-make-an-image-grayscale',
     'how-to-manually-check-letter-number-conversion',
     'how-to-solve-letter-number-puzzles',
     'letter-number-codes-geocaching',

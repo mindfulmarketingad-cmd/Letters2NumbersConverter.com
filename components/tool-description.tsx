@@ -28,8 +28,8 @@ export function ToolDescription({ toolName, toolDescription, toolData }: ToolDes
 
       {/* Tool Header */}
       <div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          <span className="text-green-500">{toolName}</span>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+          {toolName}
         </h1>
         <p className="text-lg text-muted-foreground">{toolDescription}</p>
       </div>

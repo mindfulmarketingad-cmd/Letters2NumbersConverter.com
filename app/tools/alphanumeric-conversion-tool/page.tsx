@@ -40,7 +40,7 @@ export default function AlphanumericConversionToolPage() {
     <ToolPageWrapper toolSlug="alphanumeric-conversion-tool">
       <ToolLayout
         toolId="alphanumeric-conversion-tool"
-        toolName="Alphanumeric Conversion Tool"
+        toolName="What Is An Alphanumeric Conversion Tool?"
         toolDescription="The Alphanumeric Conversion Tool is a powerful utility designed to convert letters to numbers and numbers back to letters instantly. Whether you need to encode text for cryptography, coding, puzzles, or data analysis, this tool supports multiple encoding formats including A=0, A=1, ASCII, hexadecimal, and binary representations. Perfect for programmers, cryptographers, students, and anyone working with alphanumeric data."
         toolComponent={<AlphanumericConversionTool />}
         toolData={toolData}

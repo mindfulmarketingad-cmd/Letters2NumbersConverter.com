@@ -28,7 +28,7 @@ export function ToolDescription({ toolName, toolDescription, toolData }: ToolDes
 
       {/* Tool Header */}
       <div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black dark:text-white">
           {toolName.includes('Converter') ? (
             <>
               {toolName.replace('Converter', '').trim()}

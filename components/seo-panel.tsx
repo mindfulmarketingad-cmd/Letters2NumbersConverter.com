@@ -12,7 +12,7 @@ export function SeoPanel() {
     <div className="space-y-8">
       {/* Header */}
       <div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black dark:text-white">
           Letters to Numbers <span style={{ color: '#11a099' }}>Converter</span>
         </h1>
         <p className="text-lg text-muted-foreground">

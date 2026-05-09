@@ -130,8 +130,8 @@ export default function A0Z25ChartPage() {
           <div className="prose dark:prose-invert max-w-none space-y-8">
             {/* What is A0Z25 */}
             <section>
-              <h2 className="text-3xl font-bold text-black dark:text-white mb-4">
-                What is A0Z25?
+              <h2 className="text-6xl font-bold text-black dark:text-white mb-4">
+                What is the A0Z25 Cipher?
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 A0Z25 Chart is a simple yet powerful encoding system used throughout computing, cryptography, and data science. In this system, each letter of the alphabet is assigned a numerical value starting from 0: A=0, B=1, C=2, D=3, and continuing through Z=25. This zero-indexed approach makes A0Z25 particularly useful in programming environments where arrays and indexing typically start at 0.
@@ -143,8 +143,8 @@ export default function A0Z25ChartPage() {
 
             {/* A1Z26 VS A0Z25 */}
             <section>
-              <h2 className="text-3xl font-bold text-black dark:text-white mb-4">
-                A1Z26 VS A0Z25
+              <h2 className="text-6xl font-bold text-black dark:text-white mb-4">
+                A0Z25 vs A1Z26: Key Differences
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 One of the most common questions we receive is about the difference between A1Z26 and A0Z25. While they seem similar at first glance, the distinction is crucial depending on your use case:
@@ -202,8 +202,8 @@ export default function A0Z25ChartPage() {
 
             {/* Who uses A0Z25 */}
             <section>
-              <h2 className="text-3xl font-bold text-black dark:text-white mb-4">
-                Who uses A0Z25 Charts
+              <h2 className="text-6xl font-bold text-black dark:text-white mb-4">
+                Real-World Uses of A0Z25
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 A0Z25 encoding is utilized by a diverse range of professionals and enthusiasts:

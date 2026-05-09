@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { CTAButton } from '@/components/cta-button'
 
 export const metadata: Metadata = {
   title: 'A0Z25 Chart',
@@ -332,15 +333,9 @@ export default function A0Z25ChartPage() {
               <p className="text-muted-foreground mb-6">
                 Start using our free A0Z25 Cipher Translator right now. No registration required, no data stored.
               </p>
-              <Link
-                href="/tools/a0z25-cipher-translator"
-                className="inline-block px-8 py-3 rounded-lg font-semibold text-white transition-opacity"
-                style={{ backgroundColor: '#11a099' }}
-                onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.9')}
-                onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
-              >
+              <CTAButton href="/tools/a0z25-cipher-translator">
                 Open A0Z25 Translator
-              </Link>
+              </CTAButton>
             </section>
           </div>
         </div>

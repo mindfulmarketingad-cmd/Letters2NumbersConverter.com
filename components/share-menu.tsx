@@ -10,7 +10,11 @@ interface ShareMenuProps {
 
 export function ShareMenu({ title = 'Check this out!', url = typeof window !== 'undefined' ? window.location.href : '' }: ShareMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const [dropdownPosition, setDropdownPosition] = useState<'below' | 'above'>('below')
+  const [alignmentPosition, setAlignmentPosition] = useState<'left' | 'right'>('right')
   const menuRef = useRef<HTMLDivElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -22,6 +26,32 @@ export function ShareMenu({ title = 'Check this out!', url = typeof window !== '
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside)
       return () => document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isOpen])
+
+  useEffect(() => {
+    if (isOpen && buttonRef.current && dropdownRef.current) {
+      const buttonRect = buttonRef.current.getBoundingClientRect()
+      const dropdownRect = dropdownRef.current.getBoundingClientRect()
+      const spaceBelow = window.innerHeight - buttonRect.bottom
+      const spaceAbove = buttonRect.top
+      const spaceRight = window.innerWidth - buttonRect.right
+      const spaceLeft = buttonRect.left
+      
+      // Vertical positioning: If less than 200px space below, position above
+      if (spaceBelow < 200 && spaceAbove > 150) {
+        setDropdownPosition('above')
+      } else {
+        setDropdownPosition('below')
+      }
+
+      // Horizontal positioning: If not enough space on right, align to left
+      const dropdownWidth = 192 // min-w-48 = 12rem = 192px
+      if (spaceRight < dropdownWidth + 10 && spaceLeft > dropdownWidth) {
+        setAlignmentPosition('left')
+      } else {
+        setAlignmentPosition('right')
+      }
     }
   }, [isOpen])
 
@@ -72,6 +102,7 @@ export function ShareMenu({ title = 'Check this out!', url = typeof window !== '
   return (
     <div className="relative" ref={menuRef}>
       <button
+        ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         className="p-2 hover:bg-background rounded-lg transition-colors"
         title="Share"
@@ -80,7 +111,12 @@ export function ShareMenu({ title = 'Check this out!', url = typeof window !== '
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 bg-card border border-border rounded-lg shadow-lg p-2 z-50 min-w-48">
+        <div 
+          ref={dropdownRef}
+          className={`absolute mt-2 bg-card border border-border rounded-lg shadow-lg p-2 z-50 min-w-48 ${
+            dropdownPosition === 'above' ? 'bottom-full mb-2' : 'top-full'
+          } ${alignmentPosition === 'right' ? 'right-0' : 'left-0'}`}
+        >
           <p className="text-xs font-semibold text-muted-foreground px-2 py-1 mb-1">Share to</p>
           <div className="space-y-1">
             {shareOptions.map((option) => {

@@ -173,6 +173,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Utility',
     href: '/tools/half-birthday-calculator',
   },
+  'html-encoder-decoder': {
+    name: 'HTML Encoder and Decoder',
+    description: 'Instantly encode and decode HTML entities for safe web content',
+    category: 'Encoding Tools',
+    href: '/tools/html-encoder-decoder',
+  },
   'hexahue-cipher': {
     name: 'Hexahue Cipher',
     description: 'Color-based encoding system for visual communication',
@@ -280,6 +286,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Convert messages to tap code cipher',
     category: 'Cipher',
     href: '/tools/tapcode-translator',
+  },
+  'url-percent-encoding-decoding': {
+    name: 'URL Percent Encoding and Decoding',
+    description: 'Instantly encode and decode URLs with percent encoding support',
+    category: 'Encoding Tools',
+    href: '/tools/url-percent-encoding-decoding',
   },
   'yaml-to-ini-converter': {
     name: 'YAML to INI Converter',

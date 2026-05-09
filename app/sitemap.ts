@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'fill-in-the-blanks-equation-solver',
     'grade-curve-calculator',
     'half-birthday-calculator',
+    'html-encoder-decoder',
     'hexahue-cipher',
     'ivr-alphanumeric-conversion-tool',
     'json-to-java-code-generator',
@@ -60,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'skip-cipher',
     'steganography-image-decoder',
     'tapcode-translator',
+    'url-percent-encoding-decoding',
     'vernam-cipher-decoder',
     'word-to-number-translator',
     'yaml-to-ini-converter',
@@ -93,6 +95,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'secret-codes-with-letters-numbers',
     'skip-cipher',
     'understanding-ascii-character-encoding',
+    'what-is-url-encoding',
   ]
 
   const playRoutes = [

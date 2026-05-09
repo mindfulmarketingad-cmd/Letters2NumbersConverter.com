@@ -46,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'playfair-cipher-solver',
     'px-vw-converter',
     'rgb-to-pantone-color-converter',
+    'reverse-text-converter',
     'skip-cipher',
     'steganography-image-decoder',
     'tapcode-translator',

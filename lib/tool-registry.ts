@@ -257,6 +257,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Color Tools',
     href: '/tools/rgb-to-pantone-color-converter',
   },
+  'reverse-text-converter': {
+    name: 'Reverse Text Converter',
+    description: 'Reverse any text, string, or message instantly',
+    category: 'Converter',
+    href: '/tools/reverse-text-converter',
+  },
   'pantone-to-hex-converter': {
     name: 'Pantone to Hex Converter',
     description: 'Search Pantone colors and convert to hex format',

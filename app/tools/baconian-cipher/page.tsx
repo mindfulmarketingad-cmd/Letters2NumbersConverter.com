@@ -1,5 +1,3 @@
-'use client'
-
 import { Metadata } from 'next'
 import { BaconianCipher } from '@/components/baconian-cipher'
 import { ToolPageWrapper } from '@/components/tool-page-wrapper'

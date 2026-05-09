@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const toolRoutes = [
     'a0z25-cipher-translator',
     'a0z25-decoder',
+    'a0z25-converter',
     'a1z26-translator',
     'alphanumeric-conversion-tool',
     'anagram-solver',

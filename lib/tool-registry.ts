@@ -35,6 +35,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Decoder',
     href: '/tools/a0z25-decoder',
   },
+  'a0z25-converter': {
+    name: 'A0Z25 Converter',
+    description: 'Convert letters to numbers and numbers to letters with A0Z25 formatting',
+    category: 'Converter',
+    href: '/tools/a0z25-converter',
+  },
   'anagram-solver': {
     name: 'Anagram Solver',
     description: 'Solve anagrams and find word combinations',

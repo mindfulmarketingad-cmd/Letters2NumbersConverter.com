@@ -275,6 +275,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/skip-cipher',
   },
+  'scan-words-from-image': {
+    name: 'Scan Words From Image',
+    description: 'Extract text from images using advanced OCR technology',
+    category: 'Text Tools',
+    href: '/tools/scan-words-from-image',
+  },
   'steganography-image-decoder': {
     name: 'Steganography Image Decoder',
     description: 'Extract hidden information and messages from steganographic images using LSB extraction',

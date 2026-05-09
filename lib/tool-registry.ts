@@ -167,6 +167,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Education',
     href: '/tools/grade-curve-calculator',
   },
+  'half-birthday-calculator': {
+    name: 'Half Birthday Calculator',
+    description: 'Calculate when your half birthday is and celebrate twice a year',
+    category: 'Utility',
+    href: '/tools/half-birthday-calculator',
+  },
   'hexahue-cipher': {
     name: 'Hexahue Cipher',
     description: 'Color-based encoding system for visual communication',

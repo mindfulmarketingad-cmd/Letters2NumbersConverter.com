@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'escape-room-builder',
     'fill-in-the-blanks-equation-solver',
     'grade-curve-calculator',
+    'half-birthday-calculator',
     'hexahue-cipher',
     'ivr-alphanumeric-conversion-tool',
     'json-to-java-code-generator',

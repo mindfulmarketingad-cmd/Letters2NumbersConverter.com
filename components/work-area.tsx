@@ -30,7 +30,7 @@ export function WorkArea({ toolComponent }: WorkAreaProps) {
   return (
     <div className="flex flex-col h-full bg-secondary/50" data-workarea>
       {/* Toolbar */}
-      <div className="flex items-center gap-2 p-4 border-b border-border bg-secondary">
+      <div className="flex items-center gap-4 p-4 border-b border-border bg-secondary">
         <ToolSelector />
 
         <ShareMenu />
@@ -50,6 +50,10 @@ export function WorkArea({ toolComponent }: WorkAreaProps) {
         >
           <Maximize2 className="w-5 h-5" />
         </button>
+
+        <div className="w-px h-6 bg-border ml-2" />
+
+        <span className="text-sm font-semibold text-muted-foreground ml-2">Workspace</span>
       </div>
 
       {/* Work Area */}

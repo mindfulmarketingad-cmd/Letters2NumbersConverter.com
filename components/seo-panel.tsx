@@ -12,8 +12,8 @@ export function SeoPanel() {
     <div className="space-y-8">
       {/* Header */}
       <div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Letters to Numbers <span className="text-green-600">Converter</span>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black dark:text-white">
+          Letters to Numbers <span style={{ color: '#11a099' }}>Converter</span>
         </h1>
         <p className="text-lg text-muted-foreground">
           Free online tool to convert letters to numbers using A1Z26, ASCII, hexadecimal, binary encoding and more. Instantly encode and decode text for cryptography, puzzles, geocaching, and data science.
@@ -33,7 +33,7 @@ export function SeoPanel() {
             'All tools run locally in browser. No data is stored.',
           ].map((feature, index) => (
             <div key={index} className="flex items-start gap-3">
-              <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#11a099' }} />
               <span className="text-muted-foreground">{feature}</span>
             </div>
           ))}
@@ -81,7 +81,10 @@ export function SeoPanel() {
         </p>
         <Link
           href="/tools"
-          className="inline-block px-6 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition-colors"
+          className="inline-block px-6 py-2 rounded-lg text-white transition-colors"
+          style={{ backgroundColor: '#11a099' }}
+          onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.9')}
+          onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
         >
           View All Tools
         </Link>
@@ -114,12 +117,14 @@ export function SeoPanel() {
       </div>
 
       {/* CTA */}
-      <div className="rounded-lg bg-green-600/10 border border-green-600/20 p-6">
+      <div className="rounded-lg border p-6" style={{ backgroundColor: 'rgba(17, 160, 153, 0.1)', borderColor: 'rgba(17, 160, 153, 0.2)' }}>
         <h3 className="font-bold text-lg mb-2">Ready to get started?</h3>
         <p className="text-muted-foreground mb-4">
           Select any tool from the left panel and start encoding or decoding right away.
         </p>
-        <button className="px-6 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition-colors">
+        <button className="px-6 py-2 rounded-lg text-white transition-colors" style={{ backgroundColor: '#11a099' }} 
+          onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.9')}
+          onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}>
           Start Converting
         </button>
       </div>

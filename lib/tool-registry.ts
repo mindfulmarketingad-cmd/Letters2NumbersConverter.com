@@ -41,6 +41,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/atbash-cipher-decoder',
   },
+  'alphanumeric-conversion-tool': {
+    name: 'Alphanumeric Conversion Tool',
+    description: 'Convert letters to numbers and numbers to letters with multiple encoding formats',
+    category: 'Conversion',
+    href: '/tools/alphanumeric-conversion-tool',
+  },
   'audio-spectrogram': {
     name: 'Audio Spectrogram Analyzer',
     description: 'Visualize audio frequencies and analyze sound waves',
@@ -215,6 +221,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/skip-cipher',
   },
+  'steganography-image-decoder': {
+    name: 'Steganography Image Decoder',
+    description: 'Extract hidden information and messages from steganographic images using LSB extraction',
+    category: 'Decoder',
+    href: '/tools/steganography-image-decoder',
+  },
   'tapcode-translator': {
     name: 'Tapcode Translator',
     description: 'Convert messages to tap code cipher',
@@ -251,6 +263,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Color Tools',
     href: '/tools/rgb-to-pantone-color-converter',
   },
+  'reverse-text-converter': {
+    name: 'Reverse Text Converter',
+    description: 'Reverse any text, string, or message instantly',
+    category: 'Converter',
+    href: '/tools/reverse-text-converter',
+  },
   'pantone-to-hex-converter': {
     name: 'Pantone to Hex Converter',
     description: 'Search Pantone colors and convert to hex format',
@@ -262,6 +280,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Decode and view base64-encoded images instantly',
     category: 'Image Tools',
     href: '/tools/base64-image-viewer',
+  },
+  'baconian-cipher': {
+    name: 'Baconian Cipher',
+    description: 'Encode and decode text using the Baconian Cipher with A/B patterns',
+    category: 'Cipher',
+    href: '/tools/baconian-cipher',
   },
   'morse-to-base64-converter': {
     name: 'Morse Code to Base64 Converter',

@@ -28,8 +28,15 @@ export function ToolDescription({ toolName, toolDescription, toolData }: ToolDes
 
       {/* Tool Header */}
       <div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          <span className="text-green-500">{toolName}</span>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black dark:text-white">
+          {toolName.includes('Converter') ? (
+            <>
+              {toolName.replace('Converter', '').trim()}
+              <span style={{ color: '#11a099' }}> Converter</span>
+            </>
+          ) : (
+            toolName
+          )}
         </h1>
         <p className="text-lg text-muted-foreground">{toolDescription}</p>
       </div>
@@ -89,7 +96,7 @@ export function ToolDescription({ toolName, toolDescription, toolData }: ToolDes
               href={tool.href}
               className="block p-3 rounded-lg border border-border hover:bg-secondary transition-colors group"
             >
-              <div className="font-semibold group-hover:text-green-600 transition-colors">{tool.name}</div>
+              <div className="font-semibold transition-colors" style={{ color: 'inherit' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#11a099')} onMouseLeave={(e) => (e.currentTarget.style.color = 'inherit')}>{tool.name}</div>
               <div className="text-sm text-muted-foreground">{tool.description}</div>
             </Link>
           ))}
@@ -97,7 +104,7 @@ export function ToolDescription({ toolName, toolDescription, toolData }: ToolDes
       </div>
 
       {/* Privacy Notice */}
-      <div className="bg-green-600/10 border border-green-600/20 rounded-lg p-4">
+      <div className="border rounded-lg p-4" style={{ backgroundColor: 'rgba(17, 160, 153, 0.1)', borderColor: 'rgba(17, 160, 153, 0.2)' }}>
         <h3 className="font-semibold mb-2">Your Privacy Matters</h3>
         <p className="text-sm text-muted-foreground">
           All processing happens in your browser. We never store, send, or log your data. Completely private and secure.

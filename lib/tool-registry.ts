@@ -215,6 +215,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Number Systems',
     href: '/tools/mayan-numeral-converter',
   },
+  'make-grayscale-image-online': {
+    name: 'Grayscale Image Online',
+    description: 'Convert colored images to black and white grayscale instantly',
+    category: 'Image Tools',
+    href: '/tools/make-grayscale-image-online',
+  },
   'meq-to-mg-calculator': {
     name: 'mEq to mg Calculator',
     description: 'Convert milliequivalents (mEq) to milligrams (mg) for pharmaceutical and medical calculations',
@@ -274,6 +280,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Encode text using skip cipher technique',
     category: 'Cipher',
     href: '/tools/skip-cipher',
+  },
+  'scan-words-from-image': {
+    name: 'Scan Words From Image',
+    description: 'Extract text from images using advanced OCR technology',
+    category: 'Text Tools',
+    href: '/tools/scan-words-from-image',
   },
   'steganography-image-decoder': {
     name: 'Steganography Image Decoder',
@@ -346,6 +358,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Encode and decode text using the Baconian Cipher with A/B patterns',
     category: 'Cipher',
     href: '/tools/baconian-cipher',
+  },
+  'black-and-white-photo-to-color-converter': {
+    name: 'Black and White Photo to Color Converter',
+    description: 'Transform grayscale photos into vibrant color images instantly',
+    category: 'Image Tools',
+    href: '/tools/black-and-white-photo-to-color-converter',
   },
   'morse-to-base64-converter': {
     name: 'Morse Code to Base64 Converter',

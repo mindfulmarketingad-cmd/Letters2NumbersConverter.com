@@ -1,9 +1,8 @@
 'use client'
 
-import { Plus, Save, Maximize2 } from 'lucide-react'
+import { Save, Maximize2 } from 'lucide-react'
 import { ToolSelector } from '@/components/tool-selector'
 import { ShareMenu } from '@/components/share-menu'
-import { LetterNumberConverter } from '@/components/letter-number-converter'
 
 interface WorkAreaProps {
   toolComponent?: React.ReactNode
@@ -28,7 +27,7 @@ export function WorkArea({ toolComponent }: WorkAreaProps) {
   }
 
   return (
-    <div className="flex flex-col h-full bg-secondary/50" data-workarea>
+    <div className="flex flex-col h-full md:h-screen bg-secondary/50" data-workarea>
       {/* Toolbar */}
       <div className="flex items-center gap-4 p-4 border-b border-border bg-secondary">
         <ToolSelector />
@@ -57,11 +56,21 @@ export function WorkArea({ toolComponent }: WorkAreaProps) {
       </div>
 
       {/* Work Area */}
-      <div className="flex-1 overflow-auto p-4">
+      <div className="flex-1 overflow-auto">
         {toolComponent ? (
-          toolComponent
+          <div className="p-4">{toolComponent}</div>
         ) : (
-          <LetterNumberConverter />
+          <div className="flex items-center justify-center h-full bg-[#f0f2f5] dark:bg-secondary/30">
+            <p className="text-center text-[#7a8fa6] dark:text-muted-foreground text-base leading-relaxed select-none">
+              Press{' '}
+              <span className="inline-flex items-center justify-center w-7 h-7 border border-[#7a8fa6] dark:border-muted-foreground rounded-md mx-1 align-middle">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                  <path d="M6.5 1v11M1 6.5h11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+                </svg>
+              </span>{' '}
+              to add an online tool to the workspace.
+            </p>
+          </div>
         )}
       </div>
     </div>

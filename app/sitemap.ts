@@ -93,6 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'secret-codes-with-letters-numbers',
     'skip-cipher',
     'understanding-ascii-character-encoding',
+    'what-is-url-encoding',
   ]
 
   const playRoutes = [

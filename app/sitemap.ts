@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'line-ending-converter',
     'longest-word-using-these-letters-solver',
     'mayan-numeral-converter',
+    'make-grayscale-image-online',
     'meq-to-mg-calculator',
     'monoalphabetic-substitution-cipher',
     'morse-code-to-base64',

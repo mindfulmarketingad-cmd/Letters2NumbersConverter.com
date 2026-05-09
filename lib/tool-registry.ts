@@ -215,6 +215,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Number Systems',
     href: '/tools/mayan-numeral-converter',
   },
+  'make-grayscale-image-online': {
+    name: 'Grayscale Image Online',
+    description: 'Convert colored images to black and white grayscale instantly',
+    category: 'Image Tools',
+    href: '/tools/make-grayscale-image-online',
+  },
   'meq-to-mg-calculator': {
     name: 'mEq to mg Calculator',
     description: 'Convert milliequivalents (mEq) to milligrams (mg) for pharmaceutical and medical calculations',

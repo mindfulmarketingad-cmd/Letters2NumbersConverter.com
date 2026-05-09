@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'a0z25-decoder',
     'a0z25-converter',
     'a1z26-translator',
+    'a1z26-decoder-and-encoder',
     'alphanumeric-conversion-tool',
     'anagram-solver',
     'atbash-cipher-decoder',

@@ -23,6 +23,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Conversion',
     href: '/tools/a1z26-translator',
   },
+  'a1z26-decoder-and-encoder': {
+    name: 'A1Z26 Decoder and Encoder',
+    description: 'Encode letters to A1Z26 numbers and decode numbers back to letters instantly',
+    category: 'Conversion',
+    href: '/tools/a1z26-decoder-and-encoder',
+  },
   'a0z25-cipher': {
     name: 'A0Z25 Cipher Translator',
     description: 'Convert text using A0Z25 cipher encoding',

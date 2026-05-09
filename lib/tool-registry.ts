@@ -161,6 +161,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Math Tools',
     href: '/tools/fill-in-the-blanks-equation-solver',
   },
+  'grade-curve-calculator': {
+    name: 'Grade Curve Calculator',
+    description: 'Adjust student grades using normal, linear, or percentile distribution methods',
+    category: 'Education',
+    href: '/tools/grade-curve-calculator',
+  },
   'hexahue-cipher': {
     name: 'Hexahue Cipher',
     description: 'Color-based encoding system for visual communication',

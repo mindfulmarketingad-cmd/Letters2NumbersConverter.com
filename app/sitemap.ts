@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'enigma-machine-emulator',
     'escape-room-builder',
     'fill-in-the-blanks-equation-solver',
+    'grade-curve-calculator',
     'hexahue-cipher',
     'ivr-alphanumeric-conversion-tool',
     'json-to-java-code-generator',

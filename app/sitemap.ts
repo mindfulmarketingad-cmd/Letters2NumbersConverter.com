@@ -61,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'skip-cipher',
     'steganography-image-decoder',
     'tapcode-translator',
+    'url-percent-encoding-decoding',
     'vernam-cipher-decoder',
     'word-to-number-translator',
     'yaml-to-ini-converter',

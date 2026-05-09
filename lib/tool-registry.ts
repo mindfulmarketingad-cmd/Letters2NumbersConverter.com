@@ -287,6 +287,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/tapcode-translator',
   },
+  'url-percent-encoding-decoding': {
+    name: 'URL Percent Encoding and Decoding',
+    description: 'Instantly encode and decode URLs with percent encoding support',
+    category: 'Encoding Tools',
+    href: '/tools/url-percent-encoding-decoding',
+  },
   'yaml-to-ini-converter': {
     name: 'YAML to INI Converter',
     description: 'Convert between YAML and INI configuration formats',

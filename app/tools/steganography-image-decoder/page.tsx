@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { SteganographyImageDecoder } from '@/components/steganography-image-decoder'
 import { ToolPageWrapper } from '@/components/tool-page-wrapper'
 import { ToolLayout } from '@/components/tool-layout'
-import { getToolData } from '@/lib/tool-registry'
+import { getToolData } from '@/lib/tool-data'
 
 export const metadata: Metadata = {
   title: 'Steganography Image Decoder',

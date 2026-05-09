@@ -83,6 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'educational-uses-letter-number-conversion',
     'escape-room-letter-codes',
     'history-letter-number-systems',
+    'how-to-convert-image-to-word-text',
     'how-to-manually-check-letter-number-conversion',
     'how-to-solve-letter-number-puzzles',
     'letter-number-codes-geocaching',

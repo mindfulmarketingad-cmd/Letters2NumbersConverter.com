@@ -33,11 +33,11 @@ export function HomepageSearch() {
     <div className="w-full max-w-4xl mx-auto px-4 py-12 md:py-20">
       {/* Logo/Branding */}
       <div className="text-center mb-12 md:mb-16">
-        <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+        <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
           Letters2NumbersConverter.com
         </h1>
-        <p className="text-lg text-muted-foreground">
-          Our Free Online Tools Get Things Done Fast!
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Our Free Online Tools Get Things Done Fast! Edit images, text, lists, and data — all in your browser. Thousands of free tools, ready in seconds.
         </p>
       </div>
 

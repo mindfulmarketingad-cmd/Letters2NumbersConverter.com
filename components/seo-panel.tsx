@@ -14,7 +14,7 @@ export function SeoPanel() {
       {/* Header */}
       <div>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black dark:text-white">
-          Letters to Numbers <span style={{ color: '#11a099' }}>Converter</span>
+          Free Online <span style={{ color: '#11a099' }}>Web Tools</span>
         </h1>
         <p className="text-lg text-muted-foreground">
           Free online tool to convert letters to numbers using A1Z26, ASCII, hexadecimal, binary encoding and more. Instantly encode and decode text for cryptography, puzzles, geocaching, and data science.

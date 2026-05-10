@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react'
 import { Search, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { getToolRegistry } from '@/lib/tool-registry'
 
 export function HomepageSearch() {
@@ -94,35 +95,54 @@ export function HomepageSearch() {
 
       {/* Quick Links / Featured Tools */}
       {!query && (
-        <div>
-          <p className="text-center text-sm text-muted-foreground mb-6">
-            Popular tools
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-            {tools.slice(0, 12).map((tool, index) => (
-              <Link
-                key={tool.id}
-                href={tool.href}
-                className="relative p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-secondary/50 transition-all group text-left"
-              >
-                {index === 1 && (
-                  <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs font-semibold px-2 py-1 rounded-full">
-                    Most Popular
+        <div className="space-y-16">
+          <div>
+            <p className="text-center text-sm text-muted-foreground mb-6">
+              Popular tools
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+              {tools.slice(0, 12).map((tool, index) => (
+                <Link
+                  key={tool.id}
+                  href={tool.href}
+                  className="relative p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-secondary/50 transition-all group text-left"
+                >
+                  {index === 1 && (
+                    <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs font-semibold px-2 py-1 rounded-full">
+                      Most Popular
+                    </div>
+                  )}
+                  {index === 4 && (
+                    <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                      Trending
+                    </div>
+                  )}
+                  <div className="font-medium text-foreground group-hover:text-primary transition-colors text-sm mb-1">
+                    {tool.name}
                   </div>
-                )}
-                {index === 4 && (
-                  <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
-                    Trending
+                  <div className="text-xs text-muted-foreground line-clamp-2">
+                    {tool.description}
                   </div>
-                )}
-                <div className="font-medium text-foreground group-hover:text-primary transition-colors text-sm mb-1">
-                  {tool.name}
-                </div>
-                <div className="text-xs text-muted-foreground line-clamp-2">
-                  {tool.description}
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Trust Logos Section */}
+          <div className="border-t border-border/50 pt-16">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-foreground">
+              Our Tools Are Trusted By:
+            </h2>
+            <div className="flex justify-center">
+              <Image
+                src="/images/trust-logos.png"
+                alt="Companies that trust our tools: L'Oreal, Dolby, Payoneer, Library of Congress, Hasbro, Fujitsu, Home Office, Fiverr, Ironman, Wegmans, T-Mobile, ICE, Der Spiegel, Nestle, Accenture, Australian Government, Orange, Universität Basel, Motorola, US House, The New York Times, and NYC"
+                width={1200}
+                height={400}
+                className="w-full max-w-5xl h-auto"
+                priority={false}
+              />
+            </div>
           </div>
         </div>
       )}

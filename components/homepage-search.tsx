@@ -98,8 +98,8 @@ export function HomepageSearch() {
           <p className="text-center text-sm text-muted-foreground mb-6">
             Popular tools
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {tools.slice(0, 6).map((tool) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+            {tools.slice(0, 12).map((tool) => (
               <Link
                 key={tool.id}
                 href={tool.href}

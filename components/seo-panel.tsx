@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 import { getToolRegistry } from '@/lib/tool-registry'
+import { TestimonialsCarousel } from '@/components/testimonials-carousel'
 
 export function SeoPanel() {
   const toolRegistry = getToolRegistry()
@@ -114,6 +115,11 @@ export function SeoPanel() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Testimonials Carousel */}
+      <div>
+        <TestimonialsCarousel />
       </div>
 
       {/* CTA */}

@@ -110,6 +110,11 @@ export function HomepageSearch() {
                     Most Popular
                   </div>
                 )}
+                {index === 4 && (
+                  <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                    Trending
+                  </div>
+                )}
                 <div className="font-medium text-foreground group-hover:text-primary transition-colors text-sm mb-1">
                   {tool.name}
                 </div>

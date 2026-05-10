@@ -98,15 +98,35 @@ export function SeoPanel() {
           {[
             {
               q: 'Is my data secure?',
-              a: 'Yes. All conversions happen in your browser. No data is sent to our servers.',
+              a: 'Yes. All conversions happen in your browser. No data is sent to our servers. Your privacy is always protected.',
             },
             {
               q: 'What encoding should I use?',
-              a: 'A1Z26 is the most common for puzzles. Use ASCII for computer text. Binary for digital systems.',
+              a: 'A1Z26 is the most common for puzzles. Use ASCII for computer text. Binary for digital systems. Hex for programming.',
             },
             {
               q: 'Can I convert numbers back to letters?',
-              a: 'Yes, most tools support bidirectional conversion. Just reverse the process.',
+              a: 'Yes, most tools support bidirectional conversion. Simply use the decode function to reverse the process.',
+            },
+            {
+              q: 'Are all online tools free?',
+              a: 'Yes, all our online web tools are completely free to use. No registration, no hidden fees, just pure functionality.',
+            },
+            {
+              q: 'How do I use the A1Z26 converter?',
+              a: 'Select the A1Z26 Translator tool, paste your text, click Encode to convert letters to numbers (A=1, B=2, etc.), or Decode to reverse it.',
+            },
+            {
+              q: 'What are the best tools for image processing?',
+              a: 'We offer Grayscale Image Converter for black and white conversion, Black and White Photo to Color Converter for colorization, and Scan Words From Image for text extraction via OCR.',
+            },
+            {
+              q: 'Can I use these tools offline?',
+              a: 'Yes! All our web tools work completely offline once loaded. Your browser processes everything locally without requiring an internet connection.',
+            },
+            {
+              q: 'What is URL percent encoding used for?',
+              a: 'URL percent encoding converts special characters into a format safe for URLs. Use our URL Percent Encoding and Decoding tool to instantly encode or decode any URL safely.',
             },
           ].map((item, index) => (
             <div key={index}>

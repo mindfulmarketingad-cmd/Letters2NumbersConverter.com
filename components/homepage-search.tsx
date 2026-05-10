@@ -99,12 +99,17 @@ export function HomepageSearch() {
             Popular tools
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-            {tools.slice(0, 12).map((tool) => (
+            {tools.slice(0, 12).map((tool, index) => (
               <Link
                 key={tool.id}
                 href={tool.href}
-                className="p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-secondary/50 transition-all group text-left"
+                className="relative p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-secondary/50 transition-all group text-left"
               >
+                {index === 1 && (
+                  <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs font-semibold px-2 py-1 rounded-full">
+                    Most Popular
+                  </div>
+                )}
                 <div className="font-medium text-foreground group-hover:text-primary transition-colors text-sm mb-1">
                   {tool.name}
                 </div>

@@ -1,15 +1,11 @@
+'use client'
+
 import Link from "next/link"
 import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ToolsSearchContainer } from "@/components/tools-search-container"
 import { getToolRegistry } from "@/lib/tool-registry"
-
-export const metadata: Metadata = {
-  title: "Free Online Tools",
-  description: "Free online encoding and decoding tools. Convert letters to numbers, translate to NATO phonetic alphabet, and more. No signup required.",
-  keywords: ["online tools", "encoding tools", "decoding tools", "text converter", "cipher tools"],
-}
 
 export default function ToolsPage() {
   const toolRegistry = getToolRegistry()

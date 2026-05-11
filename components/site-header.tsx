@@ -41,6 +41,9 @@ export function SiteHeader() {
           <Link href="/tools" className="text-muted-foreground hover:text-foreground transition-colors">
             Tools
           </Link>
+          <Link href="/hackathon" className="text-muted-foreground hover:text-foreground transition-colors">
+            Hackathon
+          </Link>
         </nav>
 
         {/* Auth Buttons */}
@@ -92,6 +95,13 @@ export function SiteHeader() {
               onClick={() => setIsMenuOpen(false)}
             >
               Tools
+            </Link>
+            <Link 
+              href="/hackathon" 
+              className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Hackathon
             </Link>
             
             {/* Mobile Auth Buttons */}

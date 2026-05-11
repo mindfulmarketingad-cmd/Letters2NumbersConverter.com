@@ -40,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'hexahue-cipher',
     'ivr-alphanumeric-conversion-tool',
     'json-to-java-code-generator',
+    'json-to-ini-converter',
     'letter-number-converter',
     'letter-to-phone-number-converter',
     'line-ending-converter',
@@ -65,10 +66,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'scan-words-from-image',
     'steganography-image-decoder',
     'tapcode-translator',
+    'txt-to-ini-converter',
     'url-percent-encoding-decoding',
     'vernam-cipher-decoder',
     'word-to-number-translator',
     'yaml-to-ini-converter',
+    'yaml-to-jpg-converter',
+    'yaml-to-xml-converter',
   ]
 
   const blogRoutes = [

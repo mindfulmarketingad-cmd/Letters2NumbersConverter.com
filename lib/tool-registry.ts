@@ -191,6 +191,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Code Generators',
     href: '/tools/json-to-java-code-generator',
   },
+  'json-to-ini-converter': {
+    name: 'JSON to INI Converter',
+    description: 'Convert JSON configuration files to INI format instantly',
+    category: 'Data Conversion',
+    href: '/tools/json-to-ini-converter',
+  },
   'letter-to-phone-converter': {
     name: 'Phone Number Converter',
     description: 'Convert letters to phone number digits using T9',
@@ -305,6 +311,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/tapcode-translator',
   },
+  'txt-to-ini-converter': {
+    name: 'TXT to INI Converter',
+    description: 'Convert plain text files to INI configuration format instantly',
+    category: 'Conversion',
+    href: '/tools/txt-to-ini-converter',
+  },
   'url-percent-encoding-decoding': {
     name: 'URL Percent Encoding and Decoding',
     description: 'Instantly encode and decode URLs with percent encoding support',
@@ -316,6 +328,18 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Convert between YAML and INI configuration formats',
     category: 'Data Conversion',
     href: '/tools/yaml-to-ini-converter',
+  },
+  'yaml-to-jpg-converter': {
+    name: 'YAML to JPG Converter',
+    description: 'Convert YAML configuration files to JPG images for easy sharing',
+    category: 'Data Conversion',
+    href: '/tools/yaml-to-jpg-converter',
+  },
+  'yaml-to-xml-converter': {
+    name: 'YAML to XML Converter',
+    description: 'Convert YAML configuration files to XML format instantly',
+    category: 'Data Conversion',
+    href: '/tools/yaml-to-xml-converter',
   },
   'word-to-number-translator': {
     name: 'Word To Number Translator',

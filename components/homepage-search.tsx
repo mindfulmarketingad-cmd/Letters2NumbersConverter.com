@@ -8,6 +8,7 @@ import { getToolRegistry } from '@/lib/tool-registry'
 
 export function HomepageSearch() {
   const [query, setQuery] = useState('')
+  const [isFocused, setIsFocused] = useState(false)
   const toolRegistry = getToolRegistry()
   const tools = Object.entries(toolRegistry).map(([id, data]) => ({
     id,
@@ -15,9 +16,10 @@ export function HomepageSearch() {
   }))
 
   const filteredTools = useMemo(() => {
-    if (!query.trim()) return []
-    
     const searchTerm = query.toLowerCase()
+    if (!searchTerm.trim()) {
+      return []
+    }
     return tools
       .filter(tool => 
         tool.name.toLowerCase().includes(searchTerm) ||
@@ -28,7 +30,12 @@ export function HomepageSearch() {
 
   const handleToolClick = () => {
     setQuery('')
+    setIsFocused(false)
   }
+
+  // Show dropdown only when focused, has query, and has results
+  const showDropdown = isFocused && query.trim() && filteredTools.length > 0
+  const showNoResults = isFocused && query.trim() && filteredTools.length === 0
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-12 md:py-20">
@@ -53,12 +60,14 @@ export function HomepageSearch() {
             placeholder="Search for a tool..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
             className="w-full pl-12 pr-6 py-4 md:py-5 rounded-full border border-border bg-secondary/50 hover:bg-secondary/70 focus:bg-secondary/80 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder-muted-foreground text-foreground text-base md:text-lg shadow-sm hover:shadow-md"
           />
         </div>
 
         {/* Search Results Dropdown */}
-        {query && filteredTools.length > 0 && (
+        {showDropdown && (
           <div className="absolute top-full left-0 right-0 mt-2 bg-background border border-border rounded-lg shadow-lg z-50">
             <div className="max-h-96 overflow-y-auto">
               {filteredTools.map((tool) => (
@@ -84,11 +93,20 @@ export function HomepageSearch() {
         )}
 
         {/* No Results Message */}
-        {query && filteredTools.length === 0 && (
-          <div className="absolute top-full left-0 right-0 mt-2 bg-background border border-border rounded-lg shadow-lg p-4 text-center z-50">
-            <p className="text-muted-foreground">
+        {showNoResults && (
+          <div className="absolute top-full left-0 right-0 mt-2 bg-background border border-border rounded-lg shadow-lg p-6 text-center z-50">
+            <p className="text-muted-foreground mb-4">
               No tools found for &quot;{query}&quot;. Try a different search term.
             </p>
+            <p className="text-sm text-muted-foreground mb-3">
+              Can&apos;t find what you&apos;re looking for?
+            </p>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
+            >
+              Contact Us
+            </Link>
           </div>
         )}
       </div>

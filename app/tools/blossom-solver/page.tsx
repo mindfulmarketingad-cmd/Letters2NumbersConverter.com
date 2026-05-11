@@ -5,12 +5,12 @@ import { ToolLayout, type ToolData } from "@/components/tool-layout"
 import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 
 export const metadata: Metadata = {
-  title: "Blossom Solver - Jump Cipher Online Encrypt Decrypt",
-  description: "Blossom Solver - Help solve Merriam-Webster Blossom daily word game. Find all valid words from 7 letters (1 center + 6 petal letters). Get high scores and pangrams. Free online game helper.",
-  keywords: ["blossom solver", "blossom game helper", "word game solver", "blossom puzzle", "merriam webster blossom"],
+  title: "Blossom Solver - Merriam-Webster Blossom Answers & Helper",
+  description: "Free online Blossom solver helps you find all valid words and blossom answers for Merriam-Webster Blossom daily puzzle. Enter 7 letters to get blossom answers, find pangrams, and maximize your score with our blossom puzzle solver.",
+  keywords: ["blossom solver", "blossom answers", "blossom game solver", "blossom puzzle", "merriam webster blossom", "blossom helper", "blossom word finder", "blossom puzzle solver"],
   openGraph: {
-    title: "Blossom Solver",
-    description: "Solve the Merriam-Webster Blossom daily word game with our free online solver",
+    title: "Blossom Solver - Find All Blossom Answers",
+    description: "Use our free blossom solver to find all valid words and complete answers for Merriam-Webster Blossom daily challenges",
     type: "website",
   },
 }

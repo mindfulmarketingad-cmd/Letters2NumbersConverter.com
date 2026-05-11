@@ -55,12 +55,36 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'blossom-solver': {
-      howItWorks: 'Enter the seven letters from the Merriam-Webster Blossom puzzle. The solver finds all valid words including the center letter, starting with simpler words and progressing to the target pangram.',
-      features: ['Instant word finding from 7 letters', 'Filter by word length', 'Highlight the center letter requirement', 'Pangram identification', 'Word definitions (when available)', 'Difficulty level ranking'],
+      howItWorks: 'Our blossom solver finds all valid blossom answers from your 7 letters (one center letter and six petal letters). Enter your puzzle letters and the blossom puzzle solver instantly generates all possible words, organized by length and score. The solver identifies the target pangram - a word using all seven letters for maximum points. Perfect for tackling daily Merriam-Webster Blossom challenges and mastering blossom answers.',
+      features: [
+        'Find all blossom answers from any 7-letter combination',
+        'Instant blossom puzzle solving with comprehensive word lists',
+        'Identify the target pangram in your blossom puzzle',
+        'Filter blossom answers by word length',
+        'Highlight center letter requirement for blossom solver',
+        'Score calculation for each blossom answer',
+        'Difficulty level ranking for blossom puzzle words',
+        'Dictionary-validated blossom answers',
+        'Common word vs. all words toggle for blossom puzzles',
+        'Word definitions to learn from blossom puzzle solutions'
+      ],
       whoIsItFor: [
-        { title: 'Daily Puzzle Players', description: 'Solving the Merriam-Webster Blossom daily challenge' },
-        { title: 'Word Game Addicts', description: 'Finding all possible words quickly' },
-        { title: 'Competitive Players', description: 'Reaching high scores and finding the pangram' }
+        { 
+          title: 'Daily Puzzle Players', 
+          description: 'Solve your Merriam-Webster Blossom daily challenges using our blossom solver to find all valid blossom answers and reach the pangram goal.' 
+        },
+        { 
+          title: 'Word Game Enthusiasts', 
+          description: 'Use the blossom puzzle solver to maximize your score by discovering every possible word from your blossom puzzle letters.' 
+        },
+        { 
+          title: 'Competitive Blossom Players', 
+          description: 'Master Merriam-Webster Blossom by using our blossom answers finder to consistently reach perfect scores and identify all blossom puzzle solutions.' 
+        },
+        { 
+          title: 'Word Learners', 
+          description: 'Expand your vocabulary through the blossom solver by discovering new words and learning blossom puzzle strategies.' 
+        }
       ]
     },
     'book-cipher-decoder': {
@@ -127,12 +151,46 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'egyptian-numbers-converter': {
-      howItWorks: 'Enter any decimal number and convert it to ancient Egyptian hieroglyphic numerals. The tool displays the symbolic representation using authentic Egyptian number glyphs.',
-      features: ['Decimal to Egyptian numeral conversion', 'Authentic hieroglyphic symbol display', 'Value breakdown explanation', 'Historical context', 'Symbol reference guide', 'Beautiful visual representation'],
+      howItWorks: 'Our Egyptian Numbers Converter transforms decimal numbers into authentic ancient Egyptian hieroglyphic numerals. Simply enter any number and the converter instantly displays the Egyptian hieroglyphic representation using symbols that ancient Egyptians used in the Nile Valley. Learn how the Egyptian numeral system worked with its base-10 structure. The converter includes detailed explanations of each hieroglyphic symbol and its value, providing insight into how ancient Egyptian mathematicians counted and recorded numbers on papyrus and temple walls.',
+      features: [
+        'Convert decimal numbers to Egyptian hieroglyphic numerals',
+        'Display authentic ancient Egyptian number symbols',
+        'Detailed breakdown of each hieroglyphic value',
+        'Historical context for Egyptian number systems',
+        'Visual representation of Egyptian mathematical symbols',
+        'Educational explanations of ancient Egyptian mathematics',
+        'Symbol reference guide with meanings',
+        'Support for large numbers in Egyptian numerals',
+        'Beautiful visual hieroglyphic display',
+        'Learn ancient Egyptian counting methods',
+        'Compare modern vs. ancient Egyptian numbers',
+        'Perfect for Egyptology research and education'
+      ],
       whoIsItFor: [
-        { title: 'Egyptology Enthusiasts', description: 'Learning ancient Egyptian mathematics' },
-        { title: 'History Teachers', description: 'Creating engaging lessons on ancient numerals' },
-        { title: 'Art Students', description: 'Studying hieroglyphic design and symbolism' }
+        { 
+          title: 'Egyptology Enthusiasts & Scholars', 
+          description: 'Explore ancient Egyptian mathematics and numeral systems using the Egyptian Numbers Converter to understand how pharaohs and scribes represented numbers with hieroglyphic symbols.' 
+        },
+        { 
+          title: 'History & Ancient Civilization Teachers', 
+          description: 'Use the Egyptian Numbers Converter to create engaging lessons on ancient Egyptian culture, mathematics, and numerals. Demonstrate how ancient Egyptians counted and recorded numbers without the modern decimal system.' 
+        },
+        { 
+          title: 'Art & Design Students', 
+          description: 'Study hieroglyphic design elements and symbolism through the Egyptian Numbers Converter. Learn authentic Egyptian artistic representations of numbers and mathematical concepts.' 
+        },
+        { 
+          title: 'Academic Researchers', 
+          description: 'Reference the Egyptian Numbers Converter for accurate Egyptian hieroglyphic numeral conversions in research papers, archaeological studies, and academic publications on ancient Egypt.' 
+        },
+        { 
+          title: 'Museum Educators & Curators', 
+          description: 'Enhance museum exhibits and educational programs using the Egyptian Numbers Converter to demonstrate how ancient Egyptian numbers worked to museum visitors and students.' 
+        },
+        { 
+          title: 'Students Learning Ancient Languages', 
+          description: 'Study Egyptian hieroglyphics and ancient languages with the Egyptian Numbers Converter as an educational tool for understanding numerals in historical context.' 
+        }
       ]
     },
     'enigma-machine-emulator': {
@@ -208,12 +266,46 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'mayan-numeral-converter': {
-      howItWorks: 'Enter a decimal number and convert to ancient Mayan base-20 numerals. The tool displays the iconic dot-and-bar representation with visual clarity and historical context.',
-      features: ['Decimal to Mayan base-20 conversion', 'Dot-and-bar symbol display', 'Value breakdown by position', 'Historical explanations', 'Support for large numbers', 'Educational annotations'],
+      howItWorks: 'Our Mayan Numeral Converter transforms decimal numbers into authentic ancient Mayan base-20 numerals. Simply enter any number and the converter instantly displays the Mayan representation using the iconic dot-and-bar notation system used by Mesoamerican civilizations. The Mayan numeral converter explains the unique base-20 (vigesimal) structure and shows how ancient Mayans used dots (representing 1) and bars (representing 5) to perform sophisticated mathematical calculations. Learn how Mayan numerals related to their calendar systems and astronomical observations.',
+      features: [
+        'Convert decimal numbers to Mayan base-20 numerals',
+        'Authentic dot-and-bar symbol representation',
+        'Display of Mayan numeral notation system',
+        'Value breakdown by vertical position',
+        'Historical context for Mayan mathematics',
+        'Support for large numbers in Mayan converter',
+        'Vigesimal (base-20) system explanation',
+        'Visual representation of Mayan numerals',
+        'Educational annotations for learning',
+        'Connection to Mayan calendar systems',
+        'Mesoamerican number system demonstration',
+        'Perfect for archaeological research and education'
+      ],
       whoIsItFor: [
-        { title: 'Archaeology Students', description: 'Learning Mesoamerican number systems' },
-        { title: 'History Enthusiasts', description: 'Understanding Mayan civilization math' },
-        { title: 'Comparative Numeral System Learners', description: 'Studying different cultural counting methods' }
+        { 
+          title: 'Archaeology & Anthropology Students', 
+          description: 'Use the Mayan numeral converter to study Mesoamerican civilizations, understand how ancient Mayans performed mathematics, and learn the base-20 numeral system used in Mayan astronomical calculations.' 
+        },
+        { 
+          title: 'History & Ancient Civilization Educators', 
+          description: 'Teach students about Mayan numerals and base-20 mathematics using the Mayan numeral converter as an interactive educational tool to demonstrate ancient Mesoamerican numerical systems.' 
+        },
+        { 
+          title: 'Comparative Mathematics Enthusiasts', 
+          description: 'Study different cultural approaches to mathematics with the Mayan numeral converter, comparing vigesimal systems to modern decimal and exploring ancient civilizations\' mathematical sophistication.' 
+        },
+        { 
+          title: 'Archaeology Researchers & Scholars', 
+          description: 'Reference the Mayan numeral converter when analyzing Mayan texts, codices, and archaeological findings that contain numerical information and calendar calculations.' 
+        },
+        { 
+          title: 'Museum Educators & Curators', 
+          description: 'Enhance museum exhibits and educational programs with the Mayan numeral converter to demonstrate how ancient Mayans represented numbers and performed calculations.' 
+        },
+        { 
+          title: 'Students Learning Ancient History', 
+          description: 'Deepen your understanding of Mayan civilization by using the Mayan numeral converter to explore the mathematical sophistication and numerical systems of Mesoamerican cultures.' 
+        }
       ]
     },
     'monoalphabetic-substitution-cipher': {
@@ -262,12 +354,48 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'px-vw-converter': {
-      howItWorks: 'Enter a pixel value and viewport width to calculate the equivalent viewport unit (vw). Or enter a vw value to calculate pixels. Useful for responsive design calculations.',
-      features: ['Bidirectional px ↔ vw conversion', 'Multiple viewport presets', 'Custom viewport calculations', 'Formula explanation', 'Common breakpoint values', 'Copy results instantly'],
+      howItWorks: 'Our PX to VW converter instantly transforms pixel measurements into viewport width units and vice versa. Enter a pixel value and select your viewport width (or use preset device sizes), and the calculator converts to vw units using the formula: vw = (px / viewport width) × 100. The px to vw converter supports custom viewport widths for any device, predefined breakpoints for mobile, tablet, and desktop, and real-time conversion as you type. Perfect for creating responsive CSS, fluid typography, scalable designs that adapt across all screen sizes and devices.',
+      features: [
+        'Bidirectional px to vw and vw to px conversion',
+        'Support for multiple viewport presets and breakpoints',
+        'Custom viewport width calculation',
+        'Real-time px-vw converter calculations',
+        'Common device sizes (iPhone, iPad, desktop)',
+        'Responsive design breakpoint conversion',
+        'Fluid typography CSS calculations',
+        'Copy converted values to clipboard instantly',
+        'PX to VW formula display and explanation',
+        'Batch conversion for multiple values',
+        'Mobile-first responsive design support',
+        'Viewport width visualization',
+        'Pixel to viewport width converter with precision',
+        'CSS scaling and animation calculations'
+      ],
       whoIsItFor: [
-        { title: 'Web Designers', description: 'Creating responsive layouts' },
-        { title: 'Frontend Developers', description: 'Converting between CSS units' },
-        { title: 'UI Engineers', description: 'Scaling designs across devices' }
+        {
+          title: 'Front-End Web Developers',
+          description: 'Use the px to vw converter to transform pixel measurements into viewport-relative units for responsive CSS, media queries, and fluid layouts that scale seamlessly across devices.'
+        },
+        {
+          title: 'Responsive Web Design Specialists',
+          description: 'Convert between px and vw units efficiently using the px to vw converter to create mobile-first responsive designs that maintain visual consistency across mobile, tablet, and desktop screens.'
+        },
+        {
+          title: 'UI/UX Designers',
+          description: 'Calculate vw values from pixel measurements using the px to vw converter to translate design specifications into responsive CSS that maintains proportions across different viewport sizes.'
+        },
+        {
+          title: 'Full-Stack Developers',
+          description: 'Streamline CSS development using the px to vw converter for converting fixed pixel values to relative viewport width units when building scalable web applications.'
+        },
+        {
+          title: 'CSS Framework Developers',
+          description: 'Build responsive component systems with the px to vw converter by calculating viewport-relative measurements for typography, spacing, and flexible layouts.'
+        },
+        {
+          title: 'Mobile-First Development Teams',
+          description: 'Accelerate responsive development workflows using the px to vw converter to quickly calculate viewport-width measurements for adaptive designs starting from mobile screens.'
+        }
       ]
     },
     'skip-cipher': {
@@ -298,22 +426,48 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'word-to-number-translator': {
-      howItWorks: 'Enter words or numeric text in the left panel and choose your encoding method to convert words to numbers or numbers back to words. The translator instantly processes the conversion and displays the result with a character-by-character breakdown. Supports multiple encoding systems including A1Z26, A0Z25, ASCII, and more.',
+      howItWorks: 'Our word to number translator instantly converts English words and phrases into numerical sequences. Simply type any word in the input panel and select your desired encoding method: A1Z26 (A=1, Z=26), A0Z25 (A=0, Z=25), ASCII, HEX, or BINARY. The word to number converter displays real-time conversion results with a detailed character-by-character breakdown showing exactly how each letter maps to its numeric value. Works bidirectionally—convert words to numbers or reverse the process by entering numeric sequences to get words back. Perfect for cryptography, word puzzle solving, understanding text encoding, and data analysis.',
       features: [
-        'Convert English words to numerical sequences instantly',
-        'Support for multiple encoding methods (A1Z26, A0Z25, ASCII, HEX, BINARY)',
-        'Bidirectional conversion - words to numbers and numbers to words',
-        'Real-time conversion as you type',
-        'Character-by-character breakdown visualization',
-        'Copy results to clipboard with one click',
+        'Convert words to numbers using multiple encoding methods',
+        'A1Z26 word to number conversion (A=1 through Z=26)',
+        'A0Z25 word encoding format (A=0 through Z=25)',
+        'ASCII character code conversion from words',
+        'Hexadecimal (HEX) word to number encoding',
+        'Binary (BINARY) word encoding and conversion',
+        'Bidirectional word-to-number and number-to-word translator',
+        'Real-time conversion as you type words or numbers',
+        'Character-by-character numeric breakdown visualization',
+        'Support for phrases and multi-word text conversion',
+        'Copy converted word numbers to clipboard instantly',
         'Works completely offline - no data sent to servers',
-        'Perfect for cryptography, puzzles, and data encoding'
+        'Perfect for cryptography, word puzzles, and cryptograms',
+        'Understanding text encoding and numerical representation'
       ],
       whoIsItFor: [
-        { title: 'Puzzle Enthusiasts', description: 'Solving word-based cryptograms and numeric puzzles that require word-to-number conversion' },
-        { title: 'Cryptography Learners', description: 'Understanding how words are encoded numerically in encryption systems' },
-        { title: 'Students & Teachers', description: 'Educational tool for learning about character encoding and numerical representation of text' },
-        { title: 'Data Science Professionals', description: 'Converting categorical word data to numerical format for analysis and machine learning' }
+        { 
+          title: 'Word Puzzle & Cryptogram Enthusiasts', 
+          description: 'Solve word-based puzzles, cryptograms, and riddles using the word to number translator to convert words into numeric codes and discover hidden patterns.' 
+        },
+        { 
+          title: 'Cryptography & Security Learners', 
+          description: 'Learn fundamental cryptographic principles with the word to number translator to understand how words are converted to numbers in encryption and encoding systems.' 
+        },
+        { 
+          title: 'Students & Educators', 
+          description: 'Use the word to number translator as an educational tool to teach character encoding, numerical representation of text, and fundamental computer science concepts.' 
+        },
+        { 
+          title: 'Data Science & Analytics Professionals', 
+          description: 'Convert categorical word data to numerical format using the word to number translator for machine learning models, data analysis, and statistical computations.' 
+        },
+        { 
+          title: 'Game Designers & Puzzle Creators', 
+          description: 'Develop word-based games, codes, and challenges using the word to number translator to create engaging puzzles that require word-to-number conversions.' 
+        },
+        { 
+          title: 'Language & Linguistics Students', 
+          description: 'Study character encoding, text representation, and linguistic analysis using the word to number translator to explore how words map to numeric values.' 
+        }
       ]
     },
     'cmyk-to-pantone-color-converter': {
@@ -336,41 +490,72 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'batch-file-editor': {
-      howItWorks: 'Write or paste batch file commands into the editor. The tool provides real-time syntax highlighting, line numbering, and instant file statistics. Analyze your batch scripts by character count, word count, line count, and file size. Download your batch files directly or copy to clipboard for easy sharing and execution.',
+      howItWorks: 'Our batch file editor lets you write, edit, and analyze batch files with ease. Simply type or paste your batch script commands into the editor and watch real-time syntax highlighting update as you work. The batch file editor provides instant statistics for your script including character count, word count, line count, and total file size. Once your batch file is complete, easily download it as a .bat file or copy the entire script to your clipboard. Perfect for Windows batch scripting, command automation, and system administration tasks requiring batch file creation.',
       features: [
-        'Full-featured batch file code editor',
-        'Line numbering with real-time display',
-        'Character, word, line, and size statistics',
-        'Dark theme editor for coding comfort',
-        'Copy to clipboard functionality',
-        'Download as .bat file directly',
-        'Batch file syntax-aware editing',
-        'File size calculation in B/KB/MB'
+        'Full-featured batch file code editor with syntax highlighting',
+        'Batch file line numbering with real-time display',
+        'Real-time character, word, line, and size statistics',
+        'Dark theme editor optimized for batch script coding',
+        'Copy batch script to clipboard with one click',
+        'Download batch files as .bat format directly',
+        'Batch file syntax-aware editing and validation',
+        'File size calculation in B/KB/MB formats',
+        'Batch script command recommendations and helpers',
+        'Support for Windows batch commands and parameters',
+        'Batch file formatting and indentation tools',
+        'Common batch file templates and snippets'
       ],
       whoIsItFor: [
-        { title: 'Windows System Administrators', description: 'Creating and editing batch scripts for system automation and maintenance' },
-        { title: 'System Developers', description: 'Writing batch files for deployment, backups, and scheduled tasks' },
-        { title: 'IT Professionals', description: 'Managing batch file libraries and scripts for server administration' },
-        { title: 'Students & Learners', description: 'Learning batch scripting and Windows command-line programming' }
+        { title: 'Windows System Administrators', description: 'Create batch scripts for system automation, maintenance tasks, and managing multiple computers. Use our batch file editor to develop batch files for scheduled tasks, system updates, and server administration.' },
+        { title: 'Software Developers', description: 'Write batch files for deployment automation, build scripts, and development environment setup. Our batch file editor streamlines the creation of batch scripts for Windows development workflows.' },
+        { title: 'IT Professionals', description: 'Maintain batch file libraries and develop command scripts for server administration. The batch file editor helps IT teams manage and create batch files for network management and system maintenance.' },
+        { title: 'DevOps Engineers', description: 'Build batch scripts for CI/CD pipelines and automated deployment. Use the batch file editor to create Windows-compatible batch files for continuous integration environments.' },
+        { title: 'Students & Learners', description: 'Learn batch scripting, Windows command-line programming, and batch file syntax. The batch file editor provides an interactive environment for studying batch commands and creating practice batch files.' }
       ]
     },
     'rgb-to-pantone-converter': {
-      howItWorks: 'Enter RGB color values (Red, Green, Blue) using the sliders or numeric inputs (0-255) on the left. The converter instantly calculates the closest Pantone (PMS) color match and displays the equivalent hex color code with a distance metric. The interactive color picker allows you to select colors visually, and the tool shows multiple Pantone alternatives for precise color matching.',
+      howItWorks: 'Our RGB to Pantone Color Converter transforms digital RGB colors into professional Pantone (PMS) codes for accurate print production. Enter RGB values (0-255) using interactive sliders or numeric inputs, or use the visual color picker to select colors directly. The RGB to Pantone converter instantly calculates the closest Pantone color match, displays the equivalent hex code, and shows alternative Pantone matches with color distance metrics for precision. Perfect for digital-to-print workflows, ensuring brand color consistency across all media and production methods.',
       features: [
-        'Convert RGB to Pantone (PMS) color format',
-        'Interactive RGB sliders (0-255 range)',
-        'Real-time color preview display',
+        'Convert RGB colors to Pantone (PMS) format instantly',
+        'RGB to Pantone color matching algorithm',
+        'Interactive RGB sliders with 0-255 range control',
         'Visual color picker with gradient selector',
-        'Distance metric for color accuracy',
-        'Shows closest Pantone match plus alternatives',
-        'Hex color code conversion and display',
-        'Copy Pantone PMS code to clipboard'
+        'Real-time color preview and display',
+        'Multiple Pantone color alternatives and variants',
+        'Distance metric for color accuracy measurement',
+        'Hex color code conversion from RGB values',
+        'CMYK color format support for print workflows',
+        'Copy Pantone PMS codes to clipboard instantly',
+        'Color name identification and suggestions',
+        'Professional print color matching accuracy',
+        'Batch color conversion for multiple RGB values',
+        'Color harmony and complementary color suggestions'
       ],
       whoIsItFor: [
-        { title: 'Web Designers', description: 'Converting RGB web colors to Pantone for print mockups and branding consistency' },
-        { title: 'Graphic Designers', description: 'Bridging digital RGB colors to print-ready Pantone specifications' },
-        { title: 'Brand Managers', description: 'Ensuring accurate color reproduction across digital and print materials' },
-        { title: 'Print & Marketing Professionals', description: 'Matching screen colors to print production requirements and standards' }
+        { 
+          title: 'Web & Graphic Designers', 
+          description: 'Use the RGB to Pantone converter to bridge digital design work with print production, ensuring your web colors translate accurately to Pantone specifications for printed materials.' 
+        },
+        { 
+          title: 'Brand & Marketing Professionals', 
+          description: 'Maintain color consistency across digital and print channels using the RGB to Pantone converter to ensure brand colors remain accurate in all media and promotional materials.' 
+        },
+        { 
+          title: 'Print Shop Managers & Printers', 
+          description: 'Convert digital RGB color specifications to Pantone matching system codes using the RGB to Pantone converter for accurate print production and color matching.' 
+        },
+        { 
+          title: 'Product Packaging Designers', 
+          description: 'Use the RGB to Pantone converter to ensure package designs display accurately when printed, maintaining color fidelity from design mockup to physical product.' 
+        },
+        { 
+          title: 'UI/UX Designers', 
+          description: 'Convert RGB interface colors to Pantone specifications using the RGB to Pantone converter when creating digital products that will have physical printed counterparts.' 
+        },
+        { 
+          title: 'Marketing Agencies & Creative Teams', 
+          description: 'Streamline color workflows with the RGB to Pantone converter for seamless collaboration between digital designers and print vendors ensuring consistent brand representation.' 
+        }
       ]
     },
     'pantone-to-hex-converter': {

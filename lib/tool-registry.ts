@@ -443,6 +443,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Video Tools',
     href: '/tools/webm-compressor',
   },
+  'online-random-string-generator': {
+    name: 'Online Random String Generator',
+    description: 'Generate unlimited random strings with customizable characters, length, and formatting. Perfect for passwords, API keys, and testing.',
+    category: 'Generators',
+    href: '/tools/online-random-string-generator',
+  },
 }
 
 export function getToolRegistry() {

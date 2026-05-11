@@ -425,6 +425,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Image Tools',
     href: '/tools/placeholder-image-creator',
   },
+  'text-frequency-analysis': {
+    name: 'Text Frequency Analysis',
+    description: 'Analyze character and word frequency in text with detailed statistics',
+    category: 'Text Tools',
+    href: '/tools/text-frequency-analysis',
+  },
 }
 
 export function getToolRegistry() {

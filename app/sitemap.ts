@@ -83,6 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogRoutes = [
     'a0z25-cipher',
+    'a1z26-cipher-examples',
     'a1z26-cipher-for-escape-rooms',
     'a1z26-translator',
     'abc-to-number-code',

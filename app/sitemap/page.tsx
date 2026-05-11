@@ -133,6 +133,11 @@ export default function Sitemap() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/tools/ppt-compressor" className="text-primary hover:underline">
+                    PPT Compressor - Compress PowerPoint Files
+                  </Link>
+                </li>
+                <li>
                   <Link href="/tools/letter-number-converter" className="text-primary hover:underline">
                     Letter to Number Converter
                   </Link>

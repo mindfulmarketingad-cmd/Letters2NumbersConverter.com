@@ -431,6 +431,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Text Tools',
     href: '/tools/text-frequency-analysis',
   },
+  'ppt-compressor': {
+    name: 'PPT Compressor',
+    description: 'Compress PowerPoint presentations instantly. Reduce .ppt and .pptx file sizes without losing quality.',
+    category: 'File Tools',
+    href: '/tools/ppt-compressor',
+  },
 }
 
 export function getToolRegistry() {

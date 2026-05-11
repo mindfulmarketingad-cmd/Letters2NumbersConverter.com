@@ -24,7 +24,7 @@ export default function TapcodePage() {
     <ToolLayout
       toolId="tapcode-translator"
       toolName="Tapcode Translator"
-      toolDescription="Convert your messages into rhythmic tap patterns using the tap code system. This simple yet effective communication method uses a 5×5 grid and was historically used by POW prisoners during the Vietnam War."
+      toolDescription="Convert your messages into rhythmic tap patterns also called knock codes using the tap code system. This simple yet effective communication method uses a 5×5 grid and was historically used by POW prisoners during the Vietnam War."
       toolComponent={<TapcodeTranslator />}
       toolData={toolData}
     />

@@ -151,12 +151,46 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'egyptian-numbers-converter': {
-      howItWorks: 'Enter any decimal number and convert it to ancient Egyptian hieroglyphic numerals. The tool displays the symbolic representation using authentic Egyptian number glyphs.',
-      features: ['Decimal to Egyptian numeral conversion', 'Authentic hieroglyphic symbol display', 'Value breakdown explanation', 'Historical context', 'Symbol reference guide', 'Beautiful visual representation'],
+      howItWorks: 'Our Egyptian Numbers Converter transforms decimal numbers into authentic ancient Egyptian hieroglyphic numerals. Simply enter any number and the converter instantly displays the Egyptian hieroglyphic representation using symbols that ancient Egyptians used in the Nile Valley. Learn how the Egyptian numeral system worked with its base-10 structure. The converter includes detailed explanations of each hieroglyphic symbol and its value, providing insight into how ancient Egyptian mathematicians counted and recorded numbers on papyrus and temple walls.',
+      features: [
+        'Convert decimal numbers to Egyptian hieroglyphic numerals',
+        'Display authentic ancient Egyptian number symbols',
+        'Detailed breakdown of each hieroglyphic value',
+        'Historical context for Egyptian number systems',
+        'Visual representation of Egyptian mathematical symbols',
+        'Educational explanations of ancient Egyptian mathematics',
+        'Symbol reference guide with meanings',
+        'Support for large numbers in Egyptian numerals',
+        'Beautiful visual hieroglyphic display',
+        'Learn ancient Egyptian counting methods',
+        'Compare modern vs. ancient Egyptian numbers',
+        'Perfect for Egyptology research and education'
+      ],
       whoIsItFor: [
-        { title: 'Egyptology Enthusiasts', description: 'Learning ancient Egyptian mathematics' },
-        { title: 'History Teachers', description: 'Creating engaging lessons on ancient numerals' },
-        { title: 'Art Students', description: 'Studying hieroglyphic design and symbolism' }
+        { 
+          title: 'Egyptology Enthusiasts & Scholars', 
+          description: 'Explore ancient Egyptian mathematics and numeral systems using the Egyptian Numbers Converter to understand how pharaohs and scribes represented numbers with hieroglyphic symbols.' 
+        },
+        { 
+          title: 'History & Ancient Civilization Teachers', 
+          description: 'Use the Egyptian Numbers Converter to create engaging lessons on ancient Egyptian culture, mathematics, and numerals. Demonstrate how ancient Egyptians counted and recorded numbers without the modern decimal system.' 
+        },
+        { 
+          title: 'Art & Design Students', 
+          description: 'Study hieroglyphic design elements and symbolism through the Egyptian Numbers Converter. Learn authentic Egyptian artistic representations of numbers and mathematical concepts.' 
+        },
+        { 
+          title: 'Academic Researchers', 
+          description: 'Reference the Egyptian Numbers Converter for accurate Egyptian hieroglyphic numeral conversions in research papers, archaeological studies, and academic publications on ancient Egypt.' 
+        },
+        { 
+          title: 'Museum Educators & Curators', 
+          description: 'Enhance museum exhibits and educational programs using the Egyptian Numbers Converter to demonstrate how ancient Egyptian numbers worked to museum visitors and students.' 
+        },
+        { 
+          title: 'Students Learning Ancient Languages', 
+          description: 'Study Egyptian hieroglyphics and ancient languages with the Egyptian Numbers Converter as an educational tool for understanding numerals in historical context.' 
+        }
       ]
     },
     'enigma-machine-emulator': {

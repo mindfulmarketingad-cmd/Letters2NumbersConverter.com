@@ -1024,7 +1024,6 @@ function CreateProfile({ user, onProfileCreated }: { user: User | null; onProfil
 // Main HackMate Component
 export default function HackMatePage() {
   const [user, setUser] = useState<User | null>(null)
-  const [userProfile, setUserProfile] = useState<HackerProfile | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -1035,18 +1034,6 @@ export default function HackMatePage() {
           data: { user: authUser },
         } = await supabase.auth.getUser()
         setUser(authUser ? { id: authUser.id, email: authUser.email || '' } : null)
-
-        if (authUser) {
-          const { data: profiles, error } = await supabase
-            .from('hackmate_profiles')
-            .select('*')
-            .eq('user_id', authUser.id)
-
-          // Set profile if found
-          if (profiles && profiles.length > 0) {
-            setUserProfile(profiles[0])
-          }
-        }
       } catch (err) {
         console.error('Error getting user:', err)
       } finally {
@@ -1061,23 +1048,6 @@ export default function HackMatePage() {
     const supabase = createClient()
     await supabase.auth.signOut()
     setUser(null)
-    setUserProfile(null)
-  }
-
-  const handleProfileCreated = async () => {
-    if (!user) return
-    try {
-      const supabase = createClient()
-      const { data: profiles } = await supabase
-        .from('hackmate_profiles')
-        .select('*')
-        .eq('user_id', user.id)
-      if (profiles && profiles.length > 0) {
-        setUserProfile(profiles[0])
-      }
-    } catch (err) {
-      console.error('Error updating profile:', err)
-    }
   }
 
   if (loading) {
@@ -1116,14 +1086,9 @@ export default function HackMatePage() {
         </div>
 
         <Tabs defaultValue="find-hackers" className="w-full">
-          <TabsList className={`grid w-full mb-8 ${userProfile ? 'grid-cols-2' : 'grid-cols-3'}`}>
+          <TabsList className="grid w-full grid-cols-2 mb-8">
             <TabsTrigger value="find-hackers">Find Hackers</TabsTrigger>
             <TabsTrigger value="projects">Projects</TabsTrigger>
-            {!userProfile && (
-              <TabsTrigger value="create-profile">
-                {user ? 'My Profile' : 'Create Profile'}
-              </TabsTrigger>
-            )}
           </TabsList>
 
           <TabsContent value="find-hackers" className="space-y-4">
@@ -1131,14 +1096,8 @@ export default function HackMatePage() {
           </TabsContent>
 
           <TabsContent value="projects" className="space-y-4">
-            <Projects user={user} userProfile={userProfile} />
+            <Projects user={user} userProfile={null} />
           </TabsContent>
-
-          {!userProfile && (
-            <TabsContent value="create-profile" className="space-y-4">
-              <CreateProfile user={user} onProfileCreated={handleProfileCreated} />
-            </TabsContent>
-          )}
         </Tabs>
       </main>
 

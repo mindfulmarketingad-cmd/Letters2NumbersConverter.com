@@ -86,6 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'a1z26-translator',
     'abc-to-number-code',
     'alphabet-to-numbers-converter',
+    'alpha-bravo-charlie-code-list',
     'alphanumeric-converter',
     'best-cipher-locks',
     'best-decoder',

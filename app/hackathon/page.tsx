@@ -1,29 +1,27 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Mail, Linkedin, AlertCircle } from 'lucide-react'
+import { Mail, AlertCircle, LogOut } from 'lucide-react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { createClient } from '@/lib/supabase/client'
+import Link from 'next/link'
 
 // Types
 interface HackerProfile {
   id: string
+  user_id: string
   name: string
   role: string
   skills: string[]
-  contact: string
   looking_for: string
   created_at: string
 }
 
-interface ProfileSubmission {
-  name: string
-  role: string
-  contact: string
-  skills: string[]
-  lookingFor: string
+interface User {
+  id: string
+  email: string
 }
 
 // Hacker Card
@@ -65,13 +63,10 @@ function HackerCard({ hacker }: { hacker: HackerProfile }) {
         </p>
       )}
 
-      <a
-        href={`mailto:${hacker.contact}`}
-        className="w-full bg-primary text-primary-foreground font-medium py-2 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 text-sm"
-      >
+      <button className="w-full bg-primary text-primary-foreground font-medium py-2 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 text-sm cursor-not-allowed opacity-60">
         <Mail size={16} />
-        Connect
-      </a>
+        View Profile
+      </button>
     </div>
   )
 }
@@ -146,7 +141,7 @@ function FindHackers() {
         <div className="text-center py-12 bg-card rounded-lg border border-border">
           <p className="text-muted-foreground mb-2">No hackers yet!</p>
           <p className="text-sm text-muted-foreground">
-            Be the first to create a profile in the Create Profile tab.
+            Be the first to create a profile.
           </p>
         </div>
       ) : filteredHackers.length === 0 ? (
@@ -164,22 +159,59 @@ function FindHackers() {
   )
 }
 
-// Create Profile Tab
-function CreateProfile() {
+// Create/Edit Profile Tab
+function CreateProfile({ user, onProfileCreated }: { user: User | null; onProfileCreated: () => void }) {
+  const [profile, setProfile] = useState<HackerProfile | null>(null)
   const [formData, setFormData] = useState({
     name: '',
     role: 'Frontend',
-    contact: '',
     skills: '',
     lookingFor: '',
   })
   const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
+  const [submitLoading, setSubmitLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  // Load existing profile
+  useEffect(() => {
+    if (!user) return
+
+    const fetchProfile = async () => {
+      try {
+        const supabase = createClient()
+        const { data, error } = await supabase
+          .from('hackmate_profiles')
+          .select('*')
+          .eq('user_id', user.id)
+          .single()
+
+        if (error && error.code !== 'PGRST116') throw error
+
+        if (data) {
+          setProfile(data)
+          setFormData({
+            name: data.name,
+            role: data.role,
+            skills: data.skills.join(', '),
+            lookingFor: data.looking_for || '',
+          })
+        }
+      } catch (err) {
+        console.error('Error loading profile:', err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchProfile()
+  }, [user])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setLoading(true)
+    if (!user) return
+
+    setSubmitLoading(true)
     setError(null)
 
     try {
@@ -193,40 +225,69 @@ function CreateProfile() {
         throw new Error('Please add at least one skill')
       }
 
-      const { error: insertError } = await supabase.from('hackmate_profiles').insert([
-        {
-          name: formData.name,
-          role: formData.role,
-          contact: formData.contact,
-          skills,
-          looking_for: formData.lookingFor,
-        },
-      ])
+      if (profile) {
+        // Update existing profile
+        const { error: updateError } = await supabase
+          .from('hackmate_profiles')
+          .update({
+            name: formData.name,
+            role: formData.role,
+            skills,
+            looking_for: formData.lookingFor,
+            updated_at: new Date().toISOString(),
+          })
+          .eq('user_id', user.id)
 
-      if (insertError) throw insertError
+        if (updateError) throw updateError
+      } else {
+        // Create new profile
+        const { error: insertError } = await supabase.from('hackmate_profiles').insert([
+          {
+            user_id: user.id,
+            name: formData.name,
+            role: formData.role,
+            skills,
+            looking_for: formData.lookingFor,
+          },
+        ])
+
+        if (insertError) throw insertError
+      }
 
       setSubmitted(true)
-      setFormData({
-        name: '',
-        role: 'Frontend',
-        contact: '',
-        skills: '',
-        lookingFor: '',
-      })
-
+      onProfileCreated()
       setTimeout(() => setSubmitted(false), 3000)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to create profile')
+      setError(err instanceof Error ? err.message : 'Failed to save profile')
     } finally {
-      setLoading(false)
+      setSubmitLoading(false)
     }
+  }
+
+  if (!user) {
+    return (
+      <div className="text-center py-12">
+        <p className="text-muted-foreground mb-4">You must be signed in to create a profile.</p>
+        <Link href="/?mode=signin" className="text-primary hover:underline">
+          Sign in now
+        </Link>
+      </div>
+    )
+  }
+
+  if (loading) {
+    return (
+      <div className="text-center py-12">
+        <p className="text-muted-foreground">Loading your profile...</p>
+      </div>
+    )
   }
 
   return (
     <div className="max-w-2xl">
       {submitted && (
         <div className="mb-6 p-4 bg-primary/10 text-primary rounded-lg border border-primary/20">
-          ✓ Profile created successfully! You can now connect with other hackers.
+          ✓ Profile {profile ? 'updated' : 'created'} successfully!
         </div>
       )}
 
@@ -274,20 +335,6 @@ function CreateProfile() {
 
         <div>
           <label className="block text-sm font-medium text-foreground mb-1">
-            Contact (Email or LinkedIn) *
-          </label>
-          <input
-            type="text"
-            required
-            value={formData.contact}
-            onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
-            className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-muted-foreground"
-            placeholder="your@email.com or linkedin.com/in/yourprofile"
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-foreground mb-1">
             Top Skills (comma-separated) *
           </label>
           <input
@@ -315,10 +362,10 @@ function CreateProfile() {
 
         <button
           type="submit"
-          disabled={loading}
+          disabled={submitLoading}
           className="w-full bg-primary text-primary-foreground font-medium py-2 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {loading ? 'Creating Profile...' : 'Create Profile'}
+          {submitLoading ? 'Saving...' : profile ? 'Update Profile' : 'Create Profile'}
         </button>
       </form>
     </div>
@@ -327,22 +374,75 @@ function CreateProfile() {
 
 // Main HackMate Component
 export default function HackMatePage() {
+  const [user, setUser] = useState<User | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [profileRefresh, setProfileRefresh] = useState(0)
+
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const supabase = createClient()
+        const {
+          data: { user: authUser },
+        } = await supabase.auth.getUser()
+        setUser(authUser ? { id: authUser.id, email: authUser.email || '' } : null)
+      } catch (err) {
+        console.error('Error getting user:', err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    getUser()
+  }, [])
+
+  const handleSignOut = async () => {
+    const supabase = createClient()
+    await supabase.auth.signOut()
+    setUser(null)
+  }
+
+  if (loading) {
+    return (
+      <div className="flex flex-col min-h-screen bg-background">
+        <SiteHeader />
+        <main className="flex-1 container mx-auto px-4 py-12 max-w-6xl">
+          <p className="text-muted-foreground">Loading...</p>
+        </main>
+        <SiteFooter />
+      </div>
+    )
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <SiteHeader />
 
       <main className="flex-1 container mx-auto px-4 py-12 max-w-6xl">
-        <div className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">HackMate</h1>
-          <p className="text-lg text-muted-foreground">
-            Create your profile, find teammates, and build something amazing together.
-          </p>
+        <div className="mb-8 flex items-start justify-between">
+          <div>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">HackMate</h1>
+            <p className="text-lg text-muted-foreground">
+              Create your profile, find teammates, and build something amazing together.
+            </p>
+          </div>
+          {user && (
+            <button
+              onClick={handleSignOut}
+              className="flex items-center gap-2 px-4 py-2 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <LogOut size={18} />
+              Sign Out
+            </button>
+          )}
         </div>
 
         <Tabs defaultValue="find-hackers" className="w-full">
           <TabsList className="grid w-full grid-cols-2 mb-8">
             <TabsTrigger value="find-hackers">Find Hackers</TabsTrigger>
-            <TabsTrigger value="create-profile">Create Profile</TabsTrigger>
+            <TabsTrigger value="create-profile">
+              {user ? 'My Profile' : 'Create Profile'}
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="find-hackers" className="space-y-4">
@@ -350,7 +450,10 @@ export default function HackMatePage() {
           </TabsContent>
 
           <TabsContent value="create-profile" className="space-y-4">
-            <CreateProfile />
+            <CreateProfile
+              user={user}
+              onProfileCreated={() => setProfileRefresh((p) => p + 1)}
+            />
           </TabsContent>
         </Tabs>
       </main>

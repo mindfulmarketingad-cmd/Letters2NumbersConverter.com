@@ -16,6 +16,13 @@ export function SignInForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [isSignUp, setIsSignUp] = useState(false)
+  
+  // Hackathon profile fields
+  const [name, setName] = useState('')
+  const [role, setRole] = useState('Frontend')
+  const [skills, setSkills] = useState('')
+  const [lookingFor, setLookingFor] = useState('')
+  
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -56,7 +63,8 @@ export function SignInForm() {
     setLoading(true)
 
     try {
-      const { error: signUpError } = await supabase.auth.signUp({
+      // Sign up user
+      const { data: authData, error: signUpError } = await supabase.auth.signUp({
         email,
         password,
         options: {
@@ -67,6 +75,31 @@ export function SignInForm() {
       if (signUpError) {
         setError(signUpError.message)
         return
+      }
+
+      // If user is created, create hackmate profile
+      if (authData.user) {
+        const skillsArray = skills
+          .split(',')
+          .map((s) => s.trim())
+          .filter(Boolean)
+
+        const { error: profileError } = await supabase
+          .from('hackmate_profiles')
+          .insert([
+            {
+              user_id: authData.user.id,
+              name,
+              role,
+              skills: skillsArray,
+              looking_for: lookingFor,
+            },
+          ])
+
+        if (profileError) {
+          console.error('Profile creation error:', profileError)
+          // Don't fail signup if profile creation fails
+        }
       }
 
       setError('')
@@ -84,11 +117,11 @@ export function SignInForm() {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-foreground mb-2">{isSignUp ? 'Create Account' : 'Sign In'}</h1>
           <p className="text-sm text-muted-foreground">
-            {isSignUp ? 'Get 25 free tool uses when you sign up' : 'Create an account to get 25 free tool uses'}
+            {isSignUp ? 'Join HackMate and find your team' : 'Create an account to get started'}
           </p>
         </div>
 
-        <form onSubmit={isSignUp ? handleSignUp : handleSignIn} className="space-y-4">
+        <form onSubmit={isSignUp ? handleSignUp : handleSignIn} className="space-y-4 max-h-96 overflow-y-auto">
           {error && (
             <div className="p-3 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900 rounded-lg">
               <p className="text-sm text-red-800 dark:text-red-200">{error}</p>
@@ -128,6 +161,71 @@ export function SignInForm() {
               />
             </div>
           </div>
+
+          {isSignUp && (
+            <>
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-foreground">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={e => setName(e.target.value)}
+                  placeholder="Your name"
+                  className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                  required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-foreground">
+                  Role
+                </label>
+                <select
+                  value={role}
+                  onChange={e => setRole(e.target.value)}
+                  className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                >
+                  <option>Frontend</option>
+                  <option>Backend</option>
+                  <option>ML/AI</option>
+                  <option>Designer</option>
+                  <option>Web3</option>
+                  <option>Mobile</option>
+                  <option>DevOps</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-foreground">
+                  Top Skills (comma-separated)
+                </label>
+                <input
+                  type="text"
+                  value={skills}
+                  onChange={e => setSkills(e.target.value)}
+                  placeholder="e.g. React, Node.js, PostgreSQL"
+                  className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                  required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-foreground">
+                  Looking For (optional)
+                </label>
+                <textarea
+                  value={lookingFor}
+                  onChange={e => setLookingFor(e.target.value)}
+                  placeholder="What are you looking for in teammates or projects?"
+                  className="w-full px-4 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none"
+                  rows={2}
+                />
+              </div>
+            </>
+          )}
 
           <button
             type="submit"

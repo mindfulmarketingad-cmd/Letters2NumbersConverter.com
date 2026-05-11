@@ -1338,41 +1338,33 @@ export default function HackMatePage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const getUser = async () => {
-      try {
-        const supabase = createClient()
-        const {
-          data: { user: authUser },
-        } = await supabase.auth.getUser()
+    const supabase = createClient()
+    
+    // Set up auth state listener
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (session?.user) {
+        setUser({ id: session.user.id, email: session.user.email || '' })
         
-        console.log("[v0] Auth user:", authUser)
+        // Fetch user's profile
+        const { data: profiles } = await supabase
+          .from('hackmate_profiles')
+          .select('*')
+          .eq('user_id', session.user.id)
         
-        if (authUser) {
-          setUser({ id: authUser.id, email: authUser.email || '' })
-          
-          // Fetch user's profile
-          const { data: profiles } = await supabase
-            .from('hackmate_profiles')
-            .select('*')
-            .eq('user_id', authUser.id)
-          
-          console.log("[v0] User profiles:", profiles)
-          
-          if (profiles && profiles.length > 0) {
-            setUserProfile(profiles[0])
-          }
-        } else {
-          setUser(null)
-          setUserProfile(null)
+        if (profiles && profiles.length > 0) {
+          setUserProfile(profiles[0])
         }
-      } catch (err) {
-        console.error('Error getting user:', err)
-      } finally {
-        setLoading(false)
+      } else {
+        setUser(null)
+        setUserProfile(null)
       }
-    }
+      
+      setLoading(false)
+    })
 
-    getUser()
+    return () => {
+      subscription?.unsubscribe()
+    }
   }, [])
 
   const handleSignOut = async () => {

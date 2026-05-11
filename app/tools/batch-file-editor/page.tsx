@@ -5,8 +5,8 @@ import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
-  title: "Batch File Editor | Letters2NumbersConverter.com",
-  description: "Instant Batch File Editor for creating and editing .bat files with real-time file statistics. Write batch scripts, download as .bat files, and analyze file metrics instantly.",
+  title: "Batch File Editor - Create & Edit .BAT Files Online",
+  description: "Free online batch file editor for creating and editing .bat files. Write batch scripts with syntax highlighting, real-time statistics, and instant download. Perfect for Windows automation, system administration, and batch scripting.",
   keywords: [
     "batch file editor",
     "batch script editor",
@@ -14,12 +14,16 @@ export const metadata: Metadata = {
     "Windows batch editor",
     "batch script creator",
     "batch file analyzer",
-    "command line script editor",
-    "batch programming tool"
+    "batch file writer",
+    "online batch editor",
+    "batch command editor",
+    "batch file generator",
+    "batch script tool",
+    "Windows .bat editor"
   ],
   openGraph: {
-    title: "Batch File Editor - Create & Edit Batch Scripts Instantly",
-    description: "Edit batch files with real-time statistics, syntax highlighting, and instant download. Perfect for Windows administrators and developers.",
+    title: "Batch File Editor - Create & Edit Batch Scripts Online",
+    description: "Free batch file editor with syntax highlighting, real-time statistics, and .bat file download. Create Windows batch scripts instantly for automation and system administration.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/batch-file-editor",
   },
@@ -59,7 +63,7 @@ export default function BatchFileEditorPage() {
       <ToolLayout
         toolId="batch-file-editor"
         toolName="Batch File Editor"
-        toolDescription="Batch File Editor - Create, edit, and analyze batch files instantly. Write .bat scripts with real-time statistics showing character count, word count, lines, and file size. Download batch files directly or copy to clipboard for immediate use in Windows automation and system administration."
+        toolDescription="Free Batch File Editor for creating and editing .bat files online. Write batch scripts with real-time syntax highlighting, line numbering, and instant statistics. Download batch files directly or copy to clipboard. Perfect for Windows automation, batch scripting, system administration, and creating batch commands for scheduled tasks and deployment automation."
         toolComponent={<BatchFileEditor />}
         toolData={toolData}
       />

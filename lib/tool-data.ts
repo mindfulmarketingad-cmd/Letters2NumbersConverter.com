@@ -360,22 +360,27 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'batch-file-editor': {
-      howItWorks: 'Write or paste batch file commands into the editor. The tool provides real-time syntax highlighting, line numbering, and instant file statistics. Analyze your batch scripts by character count, word count, line count, and file size. Download your batch files directly or copy to clipboard for easy sharing and execution.',
+      howItWorks: 'Our batch file editor lets you write, edit, and analyze batch files with ease. Simply type or paste your batch script commands into the editor and watch real-time syntax highlighting update as you work. The batch file editor provides instant statistics for your script including character count, word count, line count, and total file size. Once your batch file is complete, easily download it as a .bat file or copy the entire script to your clipboard. Perfect for Windows batch scripting, command automation, and system administration tasks requiring batch file creation.',
       features: [
-        'Full-featured batch file code editor',
-        'Line numbering with real-time display',
-        'Character, word, line, and size statistics',
-        'Dark theme editor for coding comfort',
-        'Copy to clipboard functionality',
-        'Download as .bat file directly',
-        'Batch file syntax-aware editing',
-        'File size calculation in B/KB/MB'
+        'Full-featured batch file code editor with syntax highlighting',
+        'Batch file line numbering with real-time display',
+        'Real-time character, word, line, and size statistics',
+        'Dark theme editor optimized for batch script coding',
+        'Copy batch script to clipboard with one click',
+        'Download batch files as .bat format directly',
+        'Batch file syntax-aware editing and validation',
+        'File size calculation in B/KB/MB formats',
+        'Batch script command recommendations and helpers',
+        'Support for Windows batch commands and parameters',
+        'Batch file formatting and indentation tools',
+        'Common batch file templates and snippets'
       ],
       whoIsItFor: [
-        { title: 'Windows System Administrators', description: 'Creating and editing batch scripts for system automation and maintenance' },
-        { title: 'System Developers', description: 'Writing batch files for deployment, backups, and scheduled tasks' },
-        { title: 'IT Professionals', description: 'Managing batch file libraries and scripts for server administration' },
-        { title: 'Students & Learners', description: 'Learning batch scripting and Windows command-line programming' }
+        { title: 'Windows System Administrators', description: 'Create batch scripts for system automation, maintenance tasks, and managing multiple computers. Use our batch file editor to develop batch files for scheduled tasks, system updates, and server administration.' },
+        { title: 'Software Developers', description: 'Write batch files for deployment automation, build scripts, and development environment setup. Our batch file editor streamlines the creation of batch scripts for Windows development workflows.' },
+        { title: 'IT Professionals', description: 'Maintain batch file libraries and develop command scripts for server administration. The batch file editor helps IT teams manage and create batch files for network management and system maintenance.' },
+        { title: 'DevOps Engineers', description: 'Build batch scripts for CI/CD pipelines and automated deployment. Use the batch file editor to create Windows-compatible batch files for continuous integration environments.' },
+        { title: 'Students & Learners', description: 'Learn batch scripting, Windows command-line programming, and batch file syntax. The batch file editor provides an interactive environment for studying batch commands and creating practice batch files.' }
       ]
     },
     'rgb-to-pantone-converter': {

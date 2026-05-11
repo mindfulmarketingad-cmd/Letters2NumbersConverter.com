@@ -455,6 +455,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Data Visualization',
     href: '/tools/pie-graph-maker',
   },
+  'tcg-proxy-creator': {
+    name: 'TCG Proxy Creator',
+    description: 'Create professional trading card game proxy sheets online. Support for Yu-Gi-Oh!, Pokémon, MTG with custom spacing and print quality.',
+    category: 'Card Games',
+    href: '/tools/tcg-proxy-creator',
+  },
 }
 
 export function getToolRegistry() {

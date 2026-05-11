@@ -153,6 +153,11 @@ export default function Sitemap() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/tools/tcg-proxy-creator" className="text-primary hover:underline">
+                    TCG Proxy Creator - Print Trading Card Game Proxies
+                  </Link>
+                </li>
+                <li>
                   <Link href="/tools/letter-number-converter" className="text-primary hover:underline">
                     Letter to Number Converter
                   </Link>

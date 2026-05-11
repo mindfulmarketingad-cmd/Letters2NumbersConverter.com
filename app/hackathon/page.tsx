@@ -1253,224 +1253,11 @@ function FindHackers() {
   )
 }
 
-// Create/Edit Profile Tab
-function CreateProfile({ user, onProfileCreated }: { user: User | null; onProfileCreated: () => void }) {
-  const [profile, setProfile] = useState<HackerProfile | null>(null)
-  const [formData, setFormData] = useState({
-    name: '',
-    role: 'Frontend',
-    skills: '',
-    lookingFor: '',
-  })
-  const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(true)
-  const [submitLoading, setSubmitLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-
-  // Load existing profile
-  useEffect(() => {
-    if (!user) return
-
-    const fetchProfile = async () => {
-      try {
-        const supabase = createClient()
-        const { data, error } = await supabase
-          .from('hackmate_profiles')
-          .select('*')
-          .eq('user_id', user.id)
-          .single()
-
-        if (error && error.code !== 'PGRST116') throw error
-
-        if (data) {
-          setProfile(data)
-          setFormData({
-            name: data.name,
-            role: data.role,
-            skills: data.skills.join(', '),
-            lookingFor: data.looking_for || '',
-          })
-        }
-      } catch (err) {
-        console.error('Error loading profile:', err)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchProfile()
-  }, [user])
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!user) return
-
-    setSubmitLoading(true)
-    setError(null)
-
-    try {
-      const supabase = createClient()
-      const skills = formData.skills
-        .split(',')
-        .map((s) => s.trim())
-        .filter(Boolean)
-
-      if (skills.length === 0) {
-        throw new Error('Please add at least one skill')
-      }
-
-      if (profile) {
-        // Update existing profile
-        const { error: updateError } = await supabase
-          .from('hackmate_profiles')
-          .update({
-            name: formData.name,
-            role: formData.role,
-            skills,
-            looking_for: formData.lookingFor,
-            updated_at: new Date().toISOString(),
-          })
-          .eq('user_id', user.id)
-
-        if (updateError) throw updateError
-      } else {
-        // Create new profile
-        const { error: insertError } = await supabase.from('hackmate_profiles').insert([
-          {
-            user_id: user.id,
-            name: formData.name,
-            role: formData.role,
-            skills,
-            looking_for: formData.lookingFor,
-          },
-        ])
-
-        if (insertError) throw insertError
-      }
-
-      setSubmitted(true)
-      onProfileCreated()
-      setTimeout(() => setSubmitted(false), 3000)
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to save profile')
-    } finally {
-      setSubmitLoading(false)
-    }
-  }
-
-  if (!user) {
-    return (
-      <div className="text-center py-12">
-        <p className="text-muted-foreground mb-4">You must be signed in to create a profile.</p>
-        <Link href="/?mode=signin" className="text-primary hover:underline">
-          Sign in now
-        </Link>
-      </div>
-    )
-  }
-
-  if (loading) {
-    return (
-      <div className="text-center py-12">
-        <p className="text-muted-foreground">Loading your profile...</p>
-      </div>
-    )
-  }
-
-  return (
-    <div className="max-w-2xl">
-      {submitted && (
-        <div className="mb-6 p-4 bg-primary/10 text-primary rounded-lg border border-primary/20">
-          ✓ Profile {profile ? 'updated' : 'created'} successfully!
-        </div>
-      )}
-
-      {error && (
-        <div className="mb-6 p-4 bg-destructive/10 text-destructive rounded-lg border border-destructive/20 flex gap-2 items-start">
-          <AlertCircle size={18} className="mt-0.5 flex-shrink-0" />
-          <p className="text-sm">{error}</p>
-        </div>
-      )}
-
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-5 bg-card p-6 rounded-lg border border-border"
-      >
-        <div>
-          <label className="block text-sm font-medium text-foreground mb-1">Full Name *</label>
-          <input
-            type="text"
-            required
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-muted-foreground"
-            placeholder="Your name"
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-foreground mb-1">Role *</label>
-          <select
-            required
-            value={formData.role}
-            onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-            className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-          >
-            <option>Frontend</option>
-            <option>Backend</option>
-            <option>ML/AI</option>
-            <option>Designer</option>
-            <option>Web3</option>
-            <option>Mobile</option>
-            <option>DevOps</option>
-            <option>Other</option>
-          </select>
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-foreground mb-1">
-            Top Skills (comma-separated) *
-          </label>
-          <input
-            type="text"
-            required
-            value={formData.skills}
-            onChange={(e) => setFormData({ ...formData, skills: e.target.value })}
-            className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-muted-foreground"
-            placeholder="e.g. React, Node.js, PostgreSQL"
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-foreground mb-1">
-            What are you looking for?
-          </label>
-          <textarea
-            value={formData.lookingFor}
-            onChange={(e) => setFormData({ ...formData, lookingFor: e.target.value })}
-            className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none placeholder:text-muted-foreground"
-            rows={4}
-            placeholder="Describe what you're looking for in teammates or projects..."
-          />
-        </div>
-
-        <button
-          type="submit"
-          disabled={submitLoading}
-          className="w-full bg-primary text-primary-foreground font-medium py-2 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {submitLoading ? 'Saving...' : profile ? 'Update Profile' : 'Create Profile'}
-        </button>
-      </form>
-    </div>
-  )
-}
-
 // Main HackMate Component
 export default function HackMatePage() {
   const [user, setUser] = useState<User | null>(null)
+  const [userProfile, setUserProfile] = useState<HackerProfile | null>(null)
   const [loading, setLoading] = useState(true)
-  const [profileRefresh, setProfileRefresh] = useState(0)
 
   useEffect(() => {
     const getUser = async () => {
@@ -1480,6 +1267,18 @@ export default function HackMatePage() {
           data: { user: authUser },
         } = await supabase.auth.getUser()
         setUser(authUser ? { id: authUser.id, email: authUser.email || '' } : null)
+
+        if (authUser) {
+          const { data: profile } = await supabase
+            .from('hackmate_profiles')
+            .select('*')
+            .eq('user_id', authUser.id)
+            .single()
+
+          if (profile) {
+            setUserProfile(profile)
+          }
+        }
       } catch (err) {
         console.error('Error getting user:', err)
       } finally {
@@ -1494,6 +1293,24 @@ export default function HackMatePage() {
     const supabase = createClient()
     await supabase.auth.signOut()
     setUser(null)
+    setUserProfile(null)
+  }
+
+  const handleProfileCreated = async () => {
+    if (!user) return
+    try {
+      const supabase = createClient()
+      const { data } = await supabase
+        .from('hackmate_profiles')
+        .select('*')
+        .eq('user_id', user.id)
+        .single()
+      if (data) {
+        setUserProfile(data)
+      }
+    } catch (err) {
+      console.error('Error updating profile:', err)
+    }
   }
 
   if (loading) {
@@ -1517,7 +1334,7 @@ export default function HackMatePage() {
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">HackMate</h1>
             <p className="text-lg text-muted-foreground">
-              Create your profile, find teammates, and build something amazing together.
+              Connect with hackers, collaborate on projects, and build your community.
             </p>
           </div>
           {user && (
@@ -1532,8 +1349,9 @@ export default function HackMatePage() {
         </div>
 
         <Tabs defaultValue="find-hackers" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 mb-8">
+          <TabsList className="grid w-full grid-cols-3 mb-8">
             <TabsTrigger value="find-hackers">Find Hackers</TabsTrigger>
+            <TabsTrigger value="projects">Projects</TabsTrigger>
             <TabsTrigger value="create-profile">
               {user ? 'My Profile' : 'Create Profile'}
             </TabsTrigger>
@@ -1543,11 +1361,12 @@ export default function HackMatePage() {
             <FindHackers />
           </TabsContent>
 
+          <TabsContent value="projects" className="space-y-4">
+            <Projects user={user} userProfile={userProfile} />
+          </TabsContent>
+
           <TabsContent value="create-profile" className="space-y-4">
-            <CreateProfile
-              user={user}
-              onProfileCreated={() => setProfileRefresh((p) => p + 1)}
-            />
+            <CreateProfile user={user} onProfileCreated={handleProfileCreated} />
           </TabsContent>
         </Tabs>
       </main>

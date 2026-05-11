@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { SiteHeader } from '@/components/site-header';
+import { SiteFooter } from '@/components/site-footer';
 
 export const metadata: Metadata = {
   title: 'Alphanumeric Code Translator — Decoder Walkthrough',
@@ -33,8 +35,11 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="flex-1 w-full">
-      <article className="w-full max-w-4xl mx-auto px-4 py-8">
+    <div className="flex flex-col min-h-screen bg-background">
+      <SiteHeader />
+
+      <main className="flex-1 w-full">
+        <article className="w-full max-w-4xl mx-auto px-4 py-8">
         <div className="prose prose-invert max-w-none">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-center text-balance">
             Alphanumeric Code Translator — Decoder Walkthrough
@@ -246,6 +251,9 @@ export default function Page() {
           </p>
         </div>
       </article>
-    </main>
+      </main>
+
+      <SiteFooter />
+    </div>
   );
 }

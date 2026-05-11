@@ -891,7 +891,7 @@ function CreateProfile({ user, onProfileCreated }: { user: User | null; onProfil
     return (
       <div className="text-center py-12">
         <p className="text-muted-foreground mb-4">You must be signed in to create a profile.</p>
-        <Link href="/?mode=signin" className="text-primary hover:underline">
+        <Link href="/sign-in" className="text-primary hover:underline">
           Sign in now
         </Link>
       </div>

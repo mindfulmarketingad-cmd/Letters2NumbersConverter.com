@@ -8,7 +8,7 @@ import { ShareButton } from "@/components/share-button"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Understanding ASCII and Character Encoding",
+  title: "ASCII Encoding",
   description: "Learn about ASCII character encoding, how letters are converted to numbers in computers, and the history of character encoding systems. Use our letters to numbers converter tool for instant conversions.",
   keywords: ["ASCII encoding", "character encoding", "ASCII table", "text to ASCII converter", "letters to numbers converter tool", "binary encoding"],
   authors: [{ name: "Neo" }],
@@ -42,7 +42,7 @@ export default function UnderstandingAsciiCharacterEncoding() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-balance">
-              Understanding ASCII and Character Encoding
+              ASCII Encoding
             </h1>
             <div className="mb-8">
               <ShareButton title="Understanding ASCII and Character Encoding" />

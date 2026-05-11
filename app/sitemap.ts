@@ -91,6 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'abc-to-number-code',
     'alphabet-to-numbers-converter',
     'alpha-bravo-charlie-code-list',
+    'alphanumeric-code-translator',
     'alphanumeric-converter',
     'best-cipher-locks',
     'best-decoder',

@@ -108,6 +108,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'letter-number-substitution-puzzles',
     'letter-to-numbers-code',
     'letters-to-numbers-translator',
+    'military-abc-codes-list',
     'nato-alphanumeric-alphabet',
     'number-word-games-activities',
     'puzzle-solving-letter-number-conversion',

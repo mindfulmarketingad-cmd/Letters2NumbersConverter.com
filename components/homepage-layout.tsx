@@ -19,7 +19,7 @@ export function HomepageLayout() {
         </section>
 
         {/* Tools In Use Viewer Section */}
-        <section className="py-12 md:py-16 border-b border-border/50">
+        <section className="py-12 md:py-[60px] border-b border-border/50">
           <ToolsInUseViewer />
         </section>
 

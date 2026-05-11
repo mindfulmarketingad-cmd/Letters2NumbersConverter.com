@@ -123,6 +123,33 @@ export default function Sitemap() {
               </ul>
             </section>
 
+            {/* Tools */}
+            <section>
+              <h2 className="text-xl font-bold text-foreground mb-4">Tools</h2>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/tools/text-frequency-analysis" className="text-primary hover:underline">
+                    Text Frequency Analysis - Character & Word Counter
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/letter-number-converter" className="text-primary hover:underline">
+                    Letter to Number Converter
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/a1z26-translator" className="text-primary hover:underline">
+                    A1Z26 Translator
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/letter-number-converter" className="text-primary hover:underline">
+                    Numbers to Letters Converter
+                  </Link>
+                </li>
+              </ul>
+            </section>
+
             {/* Legal Pages */}
             <section>
               <h2 className="text-xl font-bold text-foreground mb-4">Legal</h2>

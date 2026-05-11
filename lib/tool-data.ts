@@ -354,12 +354,48 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'px-vw-converter': {
-      howItWorks: 'Enter a pixel value and viewport width to calculate the equivalent viewport unit (vw). Or enter a vw value to calculate pixels. Useful for responsive design calculations.',
-      features: ['Bidirectional px ↔ vw conversion', 'Multiple viewport presets', 'Custom viewport calculations', 'Formula explanation', 'Common breakpoint values', 'Copy results instantly'],
+      howItWorks: 'Our PX to VW converter instantly transforms pixel measurements into viewport width units and vice versa. Enter a pixel value and select your viewport width (or use preset device sizes), and the calculator converts to vw units using the formula: vw = (px / viewport width) × 100. The px to vw converter supports custom viewport widths for any device, predefined breakpoints for mobile, tablet, and desktop, and real-time conversion as you type. Perfect for creating responsive CSS, fluid typography, scalable designs that adapt across all screen sizes and devices.',
+      features: [
+        'Bidirectional px to vw and vw to px conversion',
+        'Support for multiple viewport presets and breakpoints',
+        'Custom viewport width calculation',
+        'Real-time px-vw converter calculations',
+        'Common device sizes (iPhone, iPad, desktop)',
+        'Responsive design breakpoint conversion',
+        'Fluid typography CSS calculations',
+        'Copy converted values to clipboard instantly',
+        'PX to VW formula display and explanation',
+        'Batch conversion for multiple values',
+        'Mobile-first responsive design support',
+        'Viewport width visualization',
+        'Pixel to viewport width converter with precision',
+        'CSS scaling and animation calculations'
+      ],
       whoIsItFor: [
-        { title: 'Web Designers', description: 'Creating responsive layouts' },
-        { title: 'Frontend Developers', description: 'Converting between CSS units' },
-        { title: 'UI Engineers', description: 'Scaling designs across devices' }
+        {
+          title: 'Front-End Web Developers',
+          description: 'Use the px to vw converter to transform pixel measurements into viewport-relative units for responsive CSS, media queries, and fluid layouts that scale seamlessly across devices.'
+        },
+        {
+          title: 'Responsive Web Design Specialists',
+          description: 'Convert between px and vw units efficiently using the px to vw converter to create mobile-first responsive designs that maintain visual consistency across mobile, tablet, and desktop screens.'
+        },
+        {
+          title: 'UI/UX Designers',
+          description: 'Calculate vw values from pixel measurements using the px to vw converter to translate design specifications into responsive CSS that maintains proportions across different viewport sizes.'
+        },
+        {
+          title: 'Full-Stack Developers',
+          description: 'Streamline CSS development using the px to vw converter for converting fixed pixel values to relative viewport width units when building scalable web applications.'
+        },
+        {
+          title: 'CSS Framework Developers',
+          description: 'Build responsive component systems with the px to vw converter by calculating viewport-relative measurements for typography, spacing, and flexible layouts.'
+        },
+        {
+          title: 'Mobile-First Development Teams',
+          description: 'Accelerate responsive development workflows using the px to vw converter to quickly calculate viewport-width measurements for adaptive designs starting from mobile screens.'
+        }
       ]
     },
     'skip-cipher': {

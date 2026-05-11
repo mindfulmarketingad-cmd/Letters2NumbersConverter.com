@@ -7,9 +7,9 @@ export function ToolsInUseViewer() {
   const [count, setCount] = useState(42)
 
   useEffect(() => {
-    // Generate random count between 10 and 75
+    // Generate random count between 333 and 370
     const generateRandomCount = () => {
-      return Math.floor(Math.random() * (75 - 10 + 1)) + 10
+      return Math.floor(Math.random() * (370 - 333 + 1)) + 333
     }
 
     // Set initial count

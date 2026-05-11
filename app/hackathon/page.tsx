@@ -1345,6 +1345,8 @@ export default function HackMatePage() {
           data: { user: authUser },
         } = await supabase.auth.getUser()
         
+        console.log("[v0] Auth user:", authUser)
+        
         if (authUser) {
           setUser({ id: authUser.id, email: authUser.email || '' })
           
@@ -1353,6 +1355,8 @@ export default function HackMatePage() {
             .from('hackmate_profiles')
             .select('*')
             .eq('user_id', authUser.id)
+          
+          console.log("[v0] User profiles:", profiles)
           
           if (profiles && profiles.length > 0) {
             setUserProfile(profiles[0])

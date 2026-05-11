@@ -239,6 +239,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Medical',
     href: '/tools/medicare-prefix-converter',
   },
+  'mbi-converter': {
+    name: 'MBI Converter',
+    description: 'Convert Medicare Beneficiary Identifier numbers and names to telephone keypad sequences',
+    category: 'Medical',
+    href: '/tools/mbi-converter',
+  },
   'monoalphabetic-substitution-cipher': {
     name: 'Monoalphabetic Substitution Cipher',
     description: 'Encrypt and decrypt using monoalphabetic ciphers',

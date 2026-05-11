@@ -49,6 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'make-grayscale-image-online',
     'meq-to-mg-calculator',
     'medicare-prefix-converter',
+    'mbi-converter',
     'monoalphabetic-substitution-cipher',
     'morse-code-to-base64',
     'nato-phonetic-alphabet',

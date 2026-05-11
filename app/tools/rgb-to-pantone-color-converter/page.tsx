@@ -5,21 +5,27 @@ import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
-  title: "RGB To Pantone Color Converter | Letters2NumbersConverter.com",
-  description: "Instant RGB To Pantone Color Converter - Easily convert your RGB color codes to Pantone (PMS) format with multiple matching variants. Enter RGB values and instantly find the closest Pantone color match for accurate print production.",
+  title: "RGB To Pantone Color Converter - Convert RGB to PMS Colors",
+  description: "Free RGB to Pantone Color Converter for converting RGB colors to PMS (Pantone Matching System) codes. Find the closest Pantone color match for digital-to-print workflows. Includes multiple color variants, visual color picker, and hex conversion.",
   keywords: [
     "RGB to Pantone converter",
-    "RGB to PMS",
+    "RGB to PMS converter",
+    "Pantone color converter",
+    "RGB to Pantone matching",
     "color converter",
+    "digital to print color",
     "Pantone color matching",
-    "print color converter",
-    "RGB to hex",
-    "color conversion tool",
-    "digital to print color"
+    "RGB to hex converter",
+    "print color conversion",
+    "PMS color finder",
+    "color matching tool",
+    "Pantone color codes",
+    "RGB color conversion",
+    "color picker tool"
   ],
   openGraph: {
-    title: "RGB To Pantone Color Converter",
-    description: "Convert RGB colors to Pantone (PMS) format instantly with visual color picker and multiple matching options.",
+    title: "RGB To Pantone Color Converter - Convert RGB to PMS Instantly",
+    description: "Convert RGB colors to Pantone (PMS) format instantly with visual color picker and multiple matching variants for accurate print color reproduction.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/rgb-to-pantone-color-converter",
   },
@@ -59,7 +65,7 @@ export default function RGBToPantoneConverterPage() {
       <ToolLayout
         toolId="rgb-to-pantone-converter"
         toolName="RGB To Pantone Color Converter"
-        toolDescription="RGB To Pantone Color Converter - Our versatile RGB to Pantone converter seamlessly converts your RGB color codes to Pantone (PMS) color codes while providing multiple matching variants, including visual representations for every variant."
+        toolDescription="Free RGB to Pantone Color Converter for converting RGB and hex colors to PMS (Pantone Matching System) codes. Find the closest Pantone color matches for accurate digital-to-print workflows, branding consistency, and professional print production. Supports multiple color variants, visual color picker, and instant PMS matching for designers, printers, and marketing professionals."
         toolComponent={<RGBToPantoneConverter />}
         toolData={toolData}
       />

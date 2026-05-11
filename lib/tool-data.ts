@@ -488,22 +488,48 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'rgb-to-pantone-converter': {
-      howItWorks: 'Enter RGB color values (Red, Green, Blue) using the sliders or numeric inputs (0-255) on the left. The converter instantly calculates the closest Pantone (PMS) color match and displays the equivalent hex color code with a distance metric. The interactive color picker allows you to select colors visually, and the tool shows multiple Pantone alternatives for precise color matching.',
+      howItWorks: 'Our RGB to Pantone Color Converter transforms digital RGB colors into professional Pantone (PMS) codes for accurate print production. Enter RGB values (0-255) using interactive sliders or numeric inputs, or use the visual color picker to select colors directly. The RGB to Pantone converter instantly calculates the closest Pantone color match, displays the equivalent hex code, and shows alternative Pantone matches with color distance metrics for precision. Perfect for digital-to-print workflows, ensuring brand color consistency across all media and production methods.',
       features: [
-        'Convert RGB to Pantone (PMS) color format',
-        'Interactive RGB sliders (0-255 range)',
-        'Real-time color preview display',
+        'Convert RGB colors to Pantone (PMS) format instantly',
+        'RGB to Pantone color matching algorithm',
+        'Interactive RGB sliders with 0-255 range control',
         'Visual color picker with gradient selector',
-        'Distance metric for color accuracy',
-        'Shows closest Pantone match plus alternatives',
-        'Hex color code conversion and display',
-        'Copy Pantone PMS code to clipboard'
+        'Real-time color preview and display',
+        'Multiple Pantone color alternatives and variants',
+        'Distance metric for color accuracy measurement',
+        'Hex color code conversion from RGB values',
+        'CMYK color format support for print workflows',
+        'Copy Pantone PMS codes to clipboard instantly',
+        'Color name identification and suggestions',
+        'Professional print color matching accuracy',
+        'Batch color conversion for multiple RGB values',
+        'Color harmony and complementary color suggestions'
       ],
       whoIsItFor: [
-        { title: 'Web Designers', description: 'Converting RGB web colors to Pantone for print mockups and branding consistency' },
-        { title: 'Graphic Designers', description: 'Bridging digital RGB colors to print-ready Pantone specifications' },
-        { title: 'Brand Managers', description: 'Ensuring accurate color reproduction across digital and print materials' },
-        { title: 'Print & Marketing Professionals', description: 'Matching screen colors to print production requirements and standards' }
+        { 
+          title: 'Web & Graphic Designers', 
+          description: 'Use the RGB to Pantone converter to bridge digital design work with print production, ensuring your web colors translate accurately to Pantone specifications for printed materials.' 
+        },
+        { 
+          title: 'Brand & Marketing Professionals', 
+          description: 'Maintain color consistency across digital and print channels using the RGB to Pantone converter to ensure brand colors remain accurate in all media and promotional materials.' 
+        },
+        { 
+          title: 'Print Shop Managers & Printers', 
+          description: 'Convert digital RGB color specifications to Pantone matching system codes using the RGB to Pantone converter for accurate print production and color matching.' 
+        },
+        { 
+          title: 'Product Packaging Designers', 
+          description: 'Use the RGB to Pantone converter to ensure package designs display accurately when printed, maintaining color fidelity from design mockup to physical product.' 
+        },
+        { 
+          title: 'UI/UX Designers', 
+          description: 'Convert RGB interface colors to Pantone specifications using the RGB to Pantone converter when creating digital products that will have physical printed counterparts.' 
+        },
+        { 
+          title: 'Marketing Agencies & Creative Teams', 
+          description: 'Streamline color workflows with the RGB to Pantone converter for seamless collaboration between digital designers and print vendors ensuring consistent brand representation.' 
+        }
       ]
     },
     'pantone-to-hex-converter': {

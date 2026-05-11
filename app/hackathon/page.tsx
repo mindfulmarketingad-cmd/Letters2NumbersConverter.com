@@ -1037,12 +1037,14 @@ export default function HackMatePage() {
         setUser(authUser ? { id: authUser.id, email: authUser.email || '' } : null)
 
         if (authUser) {
-          const { data: profile } = await supabase
+          const { data: profile, error } = await supabase
             .from('hackmate_profiles')
             .select('*')
             .eq('user_id', authUser.id)
             .single()
 
+          console.log("[v0] Profile query result:", { profile, error, userId: authUser.id })
+          // Only set profile if found (error code PGRST116 means not found, which is fine)
           if (profile) {
             setUserProfile(profile)
           }

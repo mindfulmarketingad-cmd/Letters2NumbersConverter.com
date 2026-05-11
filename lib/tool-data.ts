@@ -266,12 +266,46 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'mayan-numeral-converter': {
-      howItWorks: 'Enter a decimal number and convert to ancient Mayan base-20 numerals. The tool displays the iconic dot-and-bar representation with visual clarity and historical context.',
-      features: ['Decimal to Mayan base-20 conversion', 'Dot-and-bar symbol display', 'Value breakdown by position', 'Historical explanations', 'Support for large numbers', 'Educational annotations'],
+      howItWorks: 'Our Mayan Numeral Converter transforms decimal numbers into authentic ancient Mayan base-20 numerals. Simply enter any number and the converter instantly displays the Mayan representation using the iconic dot-and-bar notation system used by Mesoamerican civilizations. The Mayan numeral converter explains the unique base-20 (vigesimal) structure and shows how ancient Mayans used dots (representing 1) and bars (representing 5) to perform sophisticated mathematical calculations. Learn how Mayan numerals related to their calendar systems and astronomical observations.',
+      features: [
+        'Convert decimal numbers to Mayan base-20 numerals',
+        'Authentic dot-and-bar symbol representation',
+        'Display of Mayan numeral notation system',
+        'Value breakdown by vertical position',
+        'Historical context for Mayan mathematics',
+        'Support for large numbers in Mayan converter',
+        'Vigesimal (base-20) system explanation',
+        'Visual representation of Mayan numerals',
+        'Educational annotations for learning',
+        'Connection to Mayan calendar systems',
+        'Mesoamerican number system demonstration',
+        'Perfect for archaeological research and education'
+      ],
       whoIsItFor: [
-        { title: 'Archaeology Students', description: 'Learning Mesoamerican number systems' },
-        { title: 'History Enthusiasts', description: 'Understanding Mayan civilization math' },
-        { title: 'Comparative Numeral System Learners', description: 'Studying different cultural counting methods' }
+        { 
+          title: 'Archaeology & Anthropology Students', 
+          description: 'Use the Mayan numeral converter to study Mesoamerican civilizations, understand how ancient Mayans performed mathematics, and learn the base-20 numeral system used in Mayan astronomical calculations.' 
+        },
+        { 
+          title: 'History & Ancient Civilization Educators', 
+          description: 'Teach students about Mayan numerals and base-20 mathematics using the Mayan numeral converter as an interactive educational tool to demonstrate ancient Mesoamerican numerical systems.' 
+        },
+        { 
+          title: 'Comparative Mathematics Enthusiasts', 
+          description: 'Study different cultural approaches to mathematics with the Mayan numeral converter, comparing vigesimal systems to modern decimal and exploring ancient civilizations\' mathematical sophistication.' 
+        },
+        { 
+          title: 'Archaeology Researchers & Scholars', 
+          description: 'Reference the Mayan numeral converter when analyzing Mayan texts, codices, and archaeological findings that contain numerical information and calendar calculations.' 
+        },
+        { 
+          title: 'Museum Educators & Curators', 
+          description: 'Enhance museum exhibits and educational programs with the Mayan numeral converter to demonstrate how ancient Mayans represented numbers and performed calculations.' 
+        },
+        { 
+          title: 'Students Learning Ancient History', 
+          description: 'Deepen your understanding of Mayan civilization by using the Mayan numeral converter to explore the mathematical sophistication and numerical systems of Mesoamerican cultures.' 
+        }
       ]
     },
     'monoalphabetic-substitution-cipher': {

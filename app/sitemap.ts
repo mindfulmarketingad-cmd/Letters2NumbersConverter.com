@@ -40,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'hexahue-cipher',
     'ivr-alphanumeric-conversion-tool',
     'json-to-java-code-generator',
+    'json-to-ini-converter',
     'letter-number-converter',
     'letter-to-phone-number-converter',
     'line-ending-converter',

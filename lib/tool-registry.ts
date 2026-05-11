@@ -191,6 +191,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Code Generators',
     href: '/tools/json-to-java-code-generator',
   },
+  'json-to-ini-converter': {
+    name: 'JSON to INI Converter',
+    description: 'Convert JSON configuration files to INI format instantly',
+    category: 'Data Conversion',
+    href: '/tools/json-to-ini-converter',
+  },
   'letter-to-phone-converter': {
     name: 'Phone Number Converter',
     description: 'Convert letters to phone number digits using T9',

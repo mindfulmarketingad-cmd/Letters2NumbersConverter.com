@@ -3,6 +3,7 @@
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { HomepageSearch } from '@/components/homepage-search'
+import { ToolsInUseViewer } from '@/components/tools-in-use-viewer'
 import { SeoPanel } from '@/components/seo-panel'
 
 export function HomepageLayout() {
@@ -15,6 +16,11 @@ export function HomepageLayout() {
         {/* Search Bar Section */}
         <section className="py-12 md:py-20 border-b border-border/50 bg-gradient-to-b from-background to-secondary/10">
           <HomepageSearch />
+        </section>
+
+        {/* Tools In Use Viewer Section */}
+        <section className="py-12 md:py-[60px] border-b border-border/50">
+          <ToolsInUseViewer />
         </section>
 
         {/* SEO Content Section */}

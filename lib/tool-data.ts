@@ -55,12 +55,36 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'blossom-solver': {
-      howItWorks: 'Enter the seven letters from the Merriam-Webster Blossom puzzle. The solver finds all valid words including the center letter, starting with simpler words and progressing to the target pangram.',
-      features: ['Instant word finding from 7 letters', 'Filter by word length', 'Highlight the center letter requirement', 'Pangram identification', 'Word definitions (when available)', 'Difficulty level ranking'],
+      howItWorks: 'Our blossom solver finds all valid blossom answers from your 7 letters (one center letter and six petal letters). Enter your puzzle letters and the blossom puzzle solver instantly generates all possible words, organized by length and score. The solver identifies the target pangram - a word using all seven letters for maximum points. Perfect for tackling daily Merriam-Webster Blossom challenges and mastering blossom answers.',
+      features: [
+        'Find all blossom answers from any 7-letter combination',
+        'Instant blossom puzzle solving with comprehensive word lists',
+        'Identify the target pangram in your blossom puzzle',
+        'Filter blossom answers by word length',
+        'Highlight center letter requirement for blossom solver',
+        'Score calculation for each blossom answer',
+        'Difficulty level ranking for blossom puzzle words',
+        'Dictionary-validated blossom answers',
+        'Common word vs. all words toggle for blossom puzzles',
+        'Word definitions to learn from blossom puzzle solutions'
+      ],
       whoIsItFor: [
-        { title: 'Daily Puzzle Players', description: 'Solving the Merriam-Webster Blossom daily challenge' },
-        { title: 'Word Game Addicts', description: 'Finding all possible words quickly' },
-        { title: 'Competitive Players', description: 'Reaching high scores and finding the pangram' }
+        { 
+          title: 'Daily Puzzle Players', 
+          description: 'Solve your Merriam-Webster Blossom daily challenges using our blossom solver to find all valid blossom answers and reach the pangram goal.' 
+        },
+        { 
+          title: 'Word Game Enthusiasts', 
+          description: 'Use the blossom puzzle solver to maximize your score by discovering every possible word from your blossom puzzle letters.' 
+        },
+        { 
+          title: 'Competitive Blossom Players', 
+          description: 'Master Merriam-Webster Blossom by using our blossom answers finder to consistently reach perfect scores and identify all blossom puzzle solutions.' 
+        },
+        { 
+          title: 'Word Learners', 
+          description: 'Expand your vocabulary through the blossom solver by discovering new words and learning blossom puzzle strategies.' 
+        }
       ]
     },
     'book-cipher-decoder': {

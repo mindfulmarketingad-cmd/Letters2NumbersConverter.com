@@ -694,6 +694,25 @@ function Projects({ user, userProfile }: { user: User | null; userProfile: Hacke
             />
           </div>
 
+          {user && (
+            <button
+              onClick={() => setShowCreateForm(!showCreateForm)}
+              className="w-full px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+            >
+              {showCreateForm ? (
+                <>
+                  <X size={18} />
+                  Cancel
+                </>
+              ) : (
+                <>
+                  <Plus size={18} />
+                  Create New Project
+                </>
+              )}
+            </button>
+          )}
+
           {showCreateForm && user && (
             <form
               onSubmit={handleCreateProject}

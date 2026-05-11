@@ -449,6 +449,18 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Generators',
     href: '/tools/online-random-string-generator',
   },
+  'pie-graph-maker': {
+    name: 'Pie Graph Maker',
+    description: 'Create beautiful interactive pie charts online with customizable colors, labels, and styles. Download as PNG instantly.',
+    category: 'Data Visualization',
+    href: '/tools/pie-graph-maker',
+  },
+  'tcg-proxy-creator': {
+    name: 'TCG Proxy Creator',
+    description: 'Create professional trading card game proxy sheets online. Support for Yu-Gi-Oh!, Pokémon, MTG with custom spacing and print quality.',
+    category: 'Card Games',
+    href: '/tools/tcg-proxy-creator',
+  },
 }
 
 export function getToolRegistry() {

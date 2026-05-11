@@ -94,10 +94,19 @@ export function HomepageSearch() {
 
         {/* No Results Message */}
         {showNoResults && (
-          <div className="absolute top-full left-0 right-0 mt-2 bg-background border border-border rounded-lg shadow-lg p-4 text-center z-50">
-            <p className="text-muted-foreground">
+          <div className="absolute top-full left-0 right-0 mt-2 bg-background border border-border rounded-lg shadow-lg p-6 text-center z-50">
+            <p className="text-muted-foreground mb-4">
               No tools found for &quot;{query}&quot;. Try a different search term.
             </p>
+            <p className="text-sm text-muted-foreground mb-3">
+              Can&apos;t find what you&apos;re looking for?
+            </p>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
+            >
+              Contact Us
+            </Link>
           </div>
         )}
       </div>

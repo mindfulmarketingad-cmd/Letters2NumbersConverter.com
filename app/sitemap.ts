@@ -101,6 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'best-decoder-online',
     'best-decoder-web-app',
     'best-letter-number-ciphers',
+    'boxentriq-vs-letters2numbersconverter',
     'build-your-own-escape-room',
     'cryptii-vs-letters2numbersconverter',
     'educational-uses-letter-number-conversion',

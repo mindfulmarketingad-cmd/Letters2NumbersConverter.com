@@ -323,6 +323,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Data Conversion',
     href: '/tools/yaml-to-ini-converter',
   },
+  'yaml-to-xml-converter': {
+    name: 'YAML to XML Converter',
+    description: 'Convert YAML configuration files to XML format instantly',
+    category: 'Data Conversion',
+    href: '/tools/yaml-to-xml-converter',
+  },
   'word-to-number-translator': {
     name: 'Word To Number Translator',
     description: 'Convert words to numbers and numbers to words with multiple encoding methods',

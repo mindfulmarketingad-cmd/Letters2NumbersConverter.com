@@ -426,22 +426,48 @@ export const getToolData = (toolId: string) => {
       ]
     },
     'word-to-number-translator': {
-      howItWorks: 'Enter words or numeric text in the left panel and choose your encoding method to convert words to numbers or numbers back to words. The translator instantly processes the conversion and displays the result with a character-by-character breakdown. Supports multiple encoding systems including A1Z26, A0Z25, ASCII, and more.',
+      howItWorks: 'Our word to number translator instantly converts English words and phrases into numerical sequences. Simply type any word in the input panel and select your desired encoding method: A1Z26 (A=1, Z=26), A0Z25 (A=0, Z=25), ASCII, HEX, or BINARY. The word to number converter displays real-time conversion results with a detailed character-by-character breakdown showing exactly how each letter maps to its numeric value. Works bidirectionally—convert words to numbers or reverse the process by entering numeric sequences to get words back. Perfect for cryptography, word puzzle solving, understanding text encoding, and data analysis.',
       features: [
-        'Convert English words to numerical sequences instantly',
-        'Support for multiple encoding methods (A1Z26, A0Z25, ASCII, HEX, BINARY)',
-        'Bidirectional conversion - words to numbers and numbers to words',
-        'Real-time conversion as you type',
-        'Character-by-character breakdown visualization',
-        'Copy results to clipboard with one click',
+        'Convert words to numbers using multiple encoding methods',
+        'A1Z26 word to number conversion (A=1 through Z=26)',
+        'A0Z25 word encoding format (A=0 through Z=25)',
+        'ASCII character code conversion from words',
+        'Hexadecimal (HEX) word to number encoding',
+        'Binary (BINARY) word encoding and conversion',
+        'Bidirectional word-to-number and number-to-word translator',
+        'Real-time conversion as you type words or numbers',
+        'Character-by-character numeric breakdown visualization',
+        'Support for phrases and multi-word text conversion',
+        'Copy converted word numbers to clipboard instantly',
         'Works completely offline - no data sent to servers',
-        'Perfect for cryptography, puzzles, and data encoding'
+        'Perfect for cryptography, word puzzles, and cryptograms',
+        'Understanding text encoding and numerical representation'
       ],
       whoIsItFor: [
-        { title: 'Puzzle Enthusiasts', description: 'Solving word-based cryptograms and numeric puzzles that require word-to-number conversion' },
-        { title: 'Cryptography Learners', description: 'Understanding how words are encoded numerically in encryption systems' },
-        { title: 'Students & Teachers', description: 'Educational tool for learning about character encoding and numerical representation of text' },
-        { title: 'Data Science Professionals', description: 'Converting categorical word data to numerical format for analysis and machine learning' }
+        { 
+          title: 'Word Puzzle & Cryptogram Enthusiasts', 
+          description: 'Solve word-based puzzles, cryptograms, and riddles using the word to number translator to convert words into numeric codes and discover hidden patterns.' 
+        },
+        { 
+          title: 'Cryptography & Security Learners', 
+          description: 'Learn fundamental cryptographic principles with the word to number translator to understand how words are converted to numbers in encryption and encoding systems.' 
+        },
+        { 
+          title: 'Students & Educators', 
+          description: 'Use the word to number translator as an educational tool to teach character encoding, numerical representation of text, and fundamental computer science concepts.' 
+        },
+        { 
+          title: 'Data Science & Analytics Professionals', 
+          description: 'Convert categorical word data to numerical format using the word to number translator for machine learning models, data analysis, and statistical computations.' 
+        },
+        { 
+          title: 'Game Designers & Puzzle Creators', 
+          description: 'Develop word-based games, codes, and challenges using the word to number translator to create engaging puzzles that require word-to-number conversions.' 
+        },
+        { 
+          title: 'Language & Linguistics Students', 
+          description: 'Study character encoding, text representation, and linguistic analysis using the word to number translator to explore how words map to numeric values.' 
+        }
       ]
     },
     'cmyk-to-pantone-color-converter': {

@@ -50,6 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'meq-to-mg-calculator',
     'medicare-prefix-converter',
     'mbi-converter',
+    'medicare-id-converter',
     'monoalphabetic-substitution-cipher',
     'morse-code-to-base64',
     'nato-phonetic-alphabet',

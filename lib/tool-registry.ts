@@ -245,6 +245,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Medical',
     href: '/tools/mbi-converter',
   },
+  'medicare-id-converter': {
+    name: 'Medicare ID Converter',
+    description: 'Identify and validate Medicare ID numbers - distinguish between HIC and MBI formats',
+    category: 'Medical',
+    href: '/tools/medicare-id-converter',
+  },
   'monoalphabetic-substitution-cipher': {
     name: 'Monoalphabetic Substitution Cipher',
     description: 'Encrypt and decrypt using monoalphabetic ciphers',

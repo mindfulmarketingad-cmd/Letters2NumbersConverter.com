@@ -86,6 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'a1z26-cipher-decoder-guide',
     'a1z26-cipher-examples',
     'a1z26-cipher-for-escape-rooms',
+    'a1z26-conversion-chart',
     'a1z26-translator',
     'abc-to-number-code',
     'alphabet-to-numbers-converter',

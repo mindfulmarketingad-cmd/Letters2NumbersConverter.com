@@ -15,9 +15,10 @@ export function HomepageSearch() {
   }))
 
   const filteredTools = useMemo(() => {
-    if (!query.trim()) return []
-    
     const searchTerm = query.toLowerCase()
+    if (!searchTerm.trim()) {
+      return tools.slice(0, 8) // Show first 8 tools by default
+    }
     return tools
       .filter(tool => 
         tool.name.toLowerCase().includes(searchTerm) ||
@@ -58,7 +59,7 @@ export function HomepageSearch() {
         </div>
 
         {/* Search Results Dropdown */}
-        {query && filteredTools.length > 0 && (
+        {filteredTools.length > 0 && (
           <div className="absolute top-full left-0 right-0 mt-2 bg-background border border-border rounded-lg shadow-lg z-50">
             <div className="max-h-96 overflow-y-auto">
               {filteredTools.map((tool) => (

@@ -305,6 +305,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/tapcode-translator',
   },
+  'txt-to-ini-converter': {
+    name: 'TXT to INI Converter',
+    description: 'Convert plain text files to INI configuration format instantly',
+    category: 'Conversion',
+    href: '/tools/txt-to-ini-converter',
+  },
   'url-percent-encoding-decoding': {
     name: 'URL Percent Encoding and Decoding',
     description: 'Instantly encode and decode URLs with percent encoding support',

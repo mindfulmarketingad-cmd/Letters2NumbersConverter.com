@@ -148,6 +148,11 @@ export default function Sitemap() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/tools/pie-graph-maker" className="text-primary hover:underline">
+                    Pie Graph Maker - Create Interactive Pie Charts
+                  </Link>
+                </li>
+                <li>
                   <Link href="/tools/letter-number-converter" className="text-primary hover:underline">
                     Letter to Number Converter
                   </Link>

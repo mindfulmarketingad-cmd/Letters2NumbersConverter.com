@@ -133,6 +133,21 @@ export default function Sitemap() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/tools/ppt-compressor" className="text-primary hover:underline">
+                    PPT Compressor - Compress PowerPoint Files
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/webm-compressor" className="text-primary hover:underline">
+                    WEBM Compressor - Compress Video Files
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/online-random-string-generator" className="text-primary hover:underline">
+                    Online Random String Generator
+                  </Link>
+                </li>
+                <li>
                   <Link href="/tools/letter-number-converter" className="text-primary hover:underline">
                     Letter to Number Converter
                   </Link>

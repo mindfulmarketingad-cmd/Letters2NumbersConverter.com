@@ -431,6 +431,24 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Text Tools',
     href: '/tools/text-frequency-analysis',
   },
+  'ppt-compressor': {
+    name: 'PPT Compressor',
+    description: 'Compress PowerPoint presentations instantly. Reduce .ppt and .pptx file sizes without losing quality.',
+    category: 'File Tools',
+    href: '/tools/ppt-compressor',
+  },
+  'webm-compressor': {
+    name: 'WEBM Compressor',
+    description: 'Compress WebM video files with advanced quality controls. Reduce file size without quality loss - all processing in your browser.',
+    category: 'Video Tools',
+    href: '/tools/webm-compressor',
+  },
+  'online-random-string-generator': {
+    name: 'Online Random String Generator',
+    description: 'Generate unlimited random strings with customizable characters, length, and formatting. Perfect for passwords, API keys, and testing.',
+    category: 'Generators',
+    href: '/tools/online-random-string-generator',
+  },
 }
 
 export function getToolRegistry() {

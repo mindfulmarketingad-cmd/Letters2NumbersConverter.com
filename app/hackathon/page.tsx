@@ -94,6 +94,7 @@ function HackerCard({ hacker }: { hacker: HackerProfile }) {
 // Project Card
 function ProjectCard({ 
   project, 
+  user,
   userHasProfile, 
   isCreator, 
   hasApplied, 
@@ -102,6 +103,7 @@ function ProjectCard({
   onManageClick 
 }: { 
   project: Project
+  user: User | null
   userHasProfile: boolean
   isCreator: boolean
   hasApplied: boolean
@@ -160,6 +162,13 @@ function ProjectCard({
               <Trash2 size={18} className="text-destructive" />
             </button>
           </>
+        ) : !user ? (
+          <Link
+            href="/sign-in"
+            className="w-full font-medium py-2 rounded-lg transition-colors text-sm bg-primary text-primary-foreground hover:opacity-90 text-center block"
+          >
+            Sign In to Apply
+          </Link>
         ) : (
           <button
             onClick={() => onApply(project.id)}
@@ -469,6 +478,22 @@ function Projects({ user, userProfile }: { user: User | null; userProfile: Hacke
 
       {!managingProject && (
         <>
+          {!user && (
+            <div className="p-4 bg-secondary/50 rounded-lg border border-border mb-4">
+              <p className="text-sm text-muted-foreground">
+                <Link href="/sign-in" className="text-primary hover:underline font-medium">Sign in</Link> to create projects or apply to existing ones.
+              </p>
+            </div>
+          )}
+
+          {user && !userProfile && (
+            <div className="p-4 bg-secondary/50 rounded-lg border border-border mb-4">
+              <p className="text-sm text-muted-foreground">
+                Create a profile first to create projects or apply to existing ones.
+              </p>
+            </div>
+          )}
+
           <div className="flex gap-2">
             <input
               type="text"
@@ -583,6 +608,7 @@ function Projects({ user, userProfile }: { user: User | null; userProfile: Hacke
                   <ProjectCard
                     key={project.id}
                     project={project}
+                    user={user}
                     userHasProfile={!!userProfile}
                     isCreator={isCreator}
                     hasApplied={!!userApplication}
@@ -1091,12 +1117,14 @@ export default function HackMatePage() {
         </div>
 
         <Tabs defaultValue="find-hackers" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
+          <TabsList className={`grid w-full mb-8 ${userProfile ? 'grid-cols-2' : 'grid-cols-3'}`}>
             <TabsTrigger value="find-hackers">Find Hackers</TabsTrigger>
             <TabsTrigger value="projects">Projects</TabsTrigger>
-            <TabsTrigger value="create-profile">
-              {user ? 'My Profile' : 'Create Profile'}
-            </TabsTrigger>
+            {!userProfile && (
+              <TabsTrigger value="create-profile">
+                {user ? 'My Profile' : 'Create Profile'}
+              </TabsTrigger>
+            )}
           </TabsList>
 
           <TabsContent value="find-hackers" className="space-y-4">
@@ -1107,9 +1135,11 @@ export default function HackMatePage() {
             <Projects user={user} userProfile={userProfile} />
           </TabsContent>
 
-          <TabsContent value="create-profile" className="space-y-4">
-            <CreateProfile user={user} onProfileCreated={handleProfileCreated} />
-          </TabsContent>
+          {!userProfile && (
+            <TabsContent value="create-profile" className="space-y-4">
+              <CreateProfile user={user} onProfileCreated={handleProfileCreated} />
+            </TabsContent>
+          )}
         </Tabs>
       </main>
 

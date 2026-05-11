@@ -61,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'rgb-to-pantone-color-converter',
     'reverse-text-converter',
     'skip-cipher',
+    'skip-cipher-decoder',
     'scan-words-from-image',
     'steganography-image-decoder',
     'tapcode-translator',

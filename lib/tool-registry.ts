@@ -437,6 +437,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'File Tools',
     href: '/tools/ppt-compressor',
   },
+  'webm-compressor': {
+    name: 'WEBM Compressor',
+    description: 'Compress WebM video files with advanced quality controls. Reduce file size without quality loss - all processing in your browser.',
+    category: 'Video Tools',
+    href: '/tools/webm-compressor',
+  },
 }
 
 export function getToolRegistry() {

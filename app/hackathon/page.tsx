@@ -479,17 +479,25 @@ function Projects({ user, userProfile }: { user: User | null; userProfile: Hacke
       {!managingProject && (
         <>
           {!user && (
-            <div className="p-4 bg-secondary/50 rounded-lg border border-border mb-4">
-              <p className="text-sm text-muted-foreground">
-                <Link href="/sign-in" className="text-primary hover:underline font-medium">Sign in</Link> to create projects or apply to existing ones.
+            <div className="p-4 bg-blue-100 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-lg mb-4">
+              <p className="text-sm text-blue-900 dark:text-blue-300">
+                <Link href="/sign-in" className="font-medium hover:underline">Sign in</Link> to create projects, find teammates, and collaborate with the community.
               </p>
             </div>
           )}
 
           {user && !userProfile && (
-            <div className="p-4 bg-secondary/50 rounded-lg border border-border mb-4">
-              <p className="text-sm text-muted-foreground">
-                Create a profile first to create projects or apply to existing ones.
+            <div className="p-4 bg-amber-100 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900 rounded-lg mb-4">
+              <p className="text-sm text-amber-900 dark:text-amber-300">
+                <a href="/profile" className="font-medium hover:underline">Create a profile</a> to create projects and apply to existing ones.
+              </p>
+            </div>
+          )}
+
+          {user && userProfile && (
+            <div className="p-4 bg-green-100 dark:bg-green-950/30 border border-green-200 dark:border-green-900 rounded-lg mb-4">
+              <p className="text-sm text-green-900 dark:text-green-300">
+                ✓ You&apos;re all set! Browse projects below, create a new one, or find teammates to collaborate with.
               </p>
             </div>
           )}
@@ -1024,6 +1032,7 @@ function CreateProfile({ user, onProfileCreated }: { user: User | null; onProfil
 // Main HackMate Component
 export default function HackMatePage() {
   const [user, setUser] = useState<User | null>(null)
+  const [userProfile, setUserProfile] = useState<HackerProfile | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -1033,7 +1042,23 @@ export default function HackMatePage() {
         const {
           data: { user: authUser },
         } = await supabase.auth.getUser()
-        setUser(authUser ? { id: authUser.id, email: authUser.email || '' } : null)
+        
+        if (authUser) {
+          setUser({ id: authUser.id, email: authUser.email || '' })
+          
+          // Fetch user's profile
+          const { data: profiles } = await supabase
+            .from('hackmate_profiles')
+            .select('*')
+            .eq('user_id', authUser.id)
+          
+          if (profiles && profiles.length > 0) {
+            setUserProfile(profiles[0])
+          }
+        } else {
+          setUser(null)
+          setUserProfile(null)
+        }
       } catch (err) {
         console.error('Error getting user:', err)
       } finally {
@@ -1048,6 +1073,7 @@ export default function HackMatePage() {
     const supabase = createClient()
     await supabase.auth.signOut()
     setUser(null)
+    setUserProfile(null)
   }
 
   if (loading) {
@@ -1096,7 +1122,7 @@ export default function HackMatePage() {
           </TabsContent>
 
           <TabsContent value="projects" className="space-y-4">
-            <Projects user={user} userProfile={null} />
+            <Projects user={user} userProfile={userProfile} />
           </TabsContent>
         </Tabs>
       </main>

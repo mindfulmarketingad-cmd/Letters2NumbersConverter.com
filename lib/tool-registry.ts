@@ -281,6 +281,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/skip-cipher',
   },
+  'skip-cipher-decoder': {
+    name: 'Skip Cipher Decoder',
+    description: 'Decode skip cipher messages with automatic brute force detection',
+    category: 'Cipher',
+    href: '/tools/skip-cipher-decoder',
+  },
   'scan-words-from-image': {
     name: 'Scan Words From Image',
     description: 'Extract text from images using advanced OCR technology',

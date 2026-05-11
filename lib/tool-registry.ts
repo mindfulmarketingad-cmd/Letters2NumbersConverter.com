@@ -329,6 +329,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Data Conversion',
     href: '/tools/yaml-to-ini-converter',
   },
+  'yaml-to-jpg-converter': {
+    name: 'YAML to JPG Converter',
+    description: 'Convert YAML configuration files to JPG images for easy sharing',
+    category: 'Data Conversion',
+    href: '/tools/yaml-to-jpg-converter',
+  },
   'yaml-to-xml-converter': {
     name: 'YAML to XML Converter',
     description: 'Convert YAML configuration files to XML format instantly',

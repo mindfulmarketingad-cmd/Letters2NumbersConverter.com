@@ -71,6 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'vernam-cipher-decoder',
     'word-to-number-translator',
     'yaml-to-ini-converter',
+    'yaml-to-jpg-converter',
     'yaml-to-xml-converter',
   ]
 

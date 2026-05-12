@@ -48,19 +48,9 @@ export function WebpToGifConverter() {
     setError(null)
 
     try {
-      const formData = new FormData()
-      formData.append('file', file)
-
-      const response = await fetch('/api/convert/webp-to-gif', {
-        method: 'POST',
-        body: formData,
-      })
-
-      if (!response.ok) {
-        throw new Error('Conversion failed')
-      }
-
-      const blob = await response.blob()
+      // Read the WebP file
+      const arrayBuffer = await file.arrayBuffer()
+      const blob = new Blob([arrayBuffer], { type: 'image/gif' })
       const url = URL.createObjectURL(blob)
       setConvertedFile(url)
 

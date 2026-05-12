@@ -491,6 +491,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Generators',
     href: '/tools/online-random-string-generator',
   },
+  'base32-converter': {
+    name: 'Base32 Converter',
+    description: 'Encode or decode Base32 instantly. Supports RFC 4648, Base32 Hex, z-base-32, and Crockford\'s Base32.',
+    category: 'Encoding & Decoding',
+    href: '/tools/base32-converter',
+  },
   'text-to-roman-numerals': {
     name: 'Text to Roman Numerals',
     description: 'Convert text or numbers to Roman numerals instantly. Supports ASCII-to-Roman, number-to-Roman, reverse decoding, and custom separators.',

@@ -729,6 +729,25 @@ export const getToolData = (toolId: string) => {
         { title: 'IT Professionals', description: 'Converting WebP files to GIF for system compatibility and archival purposes across legacy systems' }
       ]
     },
+    'base32-converter': {
+      howItWorks: 'Select Encode or Decode in the middle panel, then choose your Base32 variant from the dropdown. Type or paste your input in the left panel — the tool processes it instantly using a pure JavaScript implementation with no server calls. For encoding, every 5 bytes of input are grouped into 8 Base32 characters; padding (=) is added if needed. For decoding, Base32 characters are mapped back to their 5-bit values, reassembled into bytes, and decoded as UTF-8 text. The alphabet reference at the bottom shows exactly which characters the selected variant uses.',
+      features: [
+        'Encode text to Base32 or decode Base32 back to text',
+        'Four variants: RFC 4648, Base32 Hex, z-base-32, Crockford\'s Base32',
+        'Three-panel layout: input, operation settings, output — matching industry-standard encoder UIs',
+        'Live character count showing encoded/decoded length',
+        'Alphabet reference panel showing the full character set for each variant',
+        'One-click copy to clipboard',
+        '100% browser-based — no data ever leaves your device',
+      ],
+      whoIsItFor: [
+        { title: 'Developers & Engineers', description: 'Encoding API tokens, secret keys, and binary data in Base32 for use in URLs, QR codes, and case-insensitive systems.' },
+        { title: 'Security & Cryptography Students', description: 'Understanding binary-to-text encoding schemes and the differences between Base32 variants as part of cryptography coursework.' },
+        { title: 'DevOps & SRE Teams', description: 'Decoding Base32-encoded configuration values, TOTP secrets, and OTP tokens when troubleshooting authentication systems.' },
+        { title: 'Data Engineers', description: 'Working with Base32-encoded identifiers in data pipelines, distributed systems, and storage keys.' },
+        { title: 'CTF & Puzzle Solvers', description: 'Decoding Base32-encoded clues in capture-the-flag competitions and online puzzle challenges.' },
+      ],
+    },
     'text-to-roman-numerals': {
       howItWorks: 'Select your input mode — "Text (ASCII)" converts each character to its ASCII numeric value and then to Roman numerals (e.g. "hi" → h=104=CIV, i=105=CV → "CIV CV"), while "Numbers" converts space or comma-separated integers directly. The separator dropdown lets you choose how Roman numerals are delimited in the output. Switch "Convert to" to decode mode and paste Roman numerals to reverse the process back to numbers or text. Everything runs instantly in your browser.',
       features: [

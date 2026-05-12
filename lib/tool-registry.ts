@@ -461,6 +461,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Video Tools',
     href: '/tools/webm-compressor',
   },
+  'xps-to-pdf-converter': {
+    name: 'XPS File To PDF',
+    description: 'Convert XPS documents to PDF format instantly. Preserves formatting and supports all file sizes - completely free.',
+    category: 'File Tools',
+    href: '/tools/xps-to-pdf-converter',
+  },
   'online-random-string-generator': {
     name: 'Online Random String Generator',
     description: 'Generate unlimited random strings with customizable characters, length, and formatting. Perfect for passwords, API keys, and testing.',

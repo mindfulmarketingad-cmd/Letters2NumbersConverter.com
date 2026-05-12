@@ -36,60 +36,105 @@ export default function XpsToPdfPage() {
       <SiteHeader />
 
       <main className="flex-1 w-full">
-        <div className="w-full max-w-7xl mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <div className="w-full max-w-7xl mx-auto px-4 py-8 lg:py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Main Tool */}
             <div className="lg:col-span-2">
               <XpsToPdfConverter />
             </div>
 
-            {/* Sidebar */}
-            <div className="space-y-6">
-              <div className="bg-secondary/50 rounded-lg border border-border p-6">
-                <h2 className="text-lg font-bold text-foreground mb-4">About This Tool</h2>
+            {/* Sidebar - Right Column */}
+            <div className="lg:col-span-1 space-y-4">
+              {/* About This Tool */}
+              <div className="bg-secondary/50 rounded-lg border border-border p-5">
+                <h2 className="text-lg font-bold text-foreground mb-3">About This Tool</h2>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   XPS File To PDF is a free online converter that transforms XPS (XML Paper Specification) documents into universally compatible PDF format. Perfect for sharing documents across different platforms and devices.
                 </p>
               </div>
 
-              <div className="bg-secondary/50 rounded-lg border border-border p-6">
-                <h2 className="text-lg font-bold text-foreground mb-4">Why Convert XPS to PDF?</h2>
-                <ul className="space-y-3 text-sm text-muted-foreground">
+              {/* Why Convert XPS to PDF */}
+              <div className="bg-secondary/50 rounded-lg border border-border p-5">
+                <h2 className="text-lg font-bold text-foreground mb-3">Why Convert XPS to PDF?</h2>
+                <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex gap-2">
-                    <span className="text-primary">•</span>
+                    <span className="text-primary flex-shrink-0">•</span>
                     <span>PDF is more universally supported</span>
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-primary">•</span>
+                    <span className="text-primary flex-shrink-0">•</span>
                     <span>Better compatibility across devices</span>
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-primary">•</span>
+                    <span className="text-primary flex-shrink-0">•</span>
                     <span>Easier sharing and distribution</span>
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-primary">•</span>
+                    <span className="text-primary flex-shrink-0">•</span>
                     <span>Preserves formatting and layout</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-secondary/50 rounded-lg border border-border p-6">
-                <h2 className="text-lg font-bold text-foreground mb-4">Privacy & Security</h2>
+              {/* Privacy & Security */}
+              <div className="bg-secondary/50 rounded-lg border border-border p-5">
+                <h2 className="text-lg font-bold text-foreground mb-3">Privacy & Security</h2>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Your files are processed securely and deleted immediately after conversion. We never store or share your documents.
                 </p>
+              </div>
+
+              {/* Who It's For */}
+              <div className="bg-secondary/50 rounded-lg border border-border p-5">
+                <h2 className="text-lg font-bold text-foreground mb-3">Who It&apos;s For</h2>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex gap-2">
+                    <span className="text-primary flex-shrink-0">→</span>
+                    <span>Business professionals</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary flex-shrink-0">→</span>
+                    <span>Students and educators</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary flex-shrink-0">→</span>
+                    <span>Document managers</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary flex-shrink-0">→</span>
+                    <span>Anyone needing format conversion</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* How It Works */}
+              <div className="bg-secondary/50 rounded-lg border border-border p-5">
+                <h2 className="text-lg font-bold text-foreground mb-3">How It Works</h2>
+                <ol className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex gap-2">
+                    <span className="text-primary flex-shrink-0">1.</span>
+                    <span>Upload your XPS file</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary flex-shrink-0">2.</span>
+                    <span>Click convert button</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary flex-shrink-0">3.</span>
+                    <span>Download your PDF</span>
+                  </li>
+                </ol>
               </div>
             </div>
           </div>
 
           {/* FAQ Section */}
-          <div className="bg-secondary/50 rounded-lg border border-border p-8 mb-12">
+          <div className="bg-secondary/50 rounded-lg border border-border p-8 mt-12">
             <h2 className="text-2xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="font-semibold text-foreground mb-2">What is an XPS file?</h3>
-                <p className="text-sm text-muted-foreground">XPS (XML Paper Specification) is a document format developed by Microsoft that preserves document formatting. It's similar to PDF but less universally supported.</p>
+                <p className="text-sm text-muted-foreground">XPS (XML Paper Specification) is a document format developed by Microsoft that preserves document formatting. It&apos;s similar to PDF but less universally supported.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Is the conversion free?</h3>
@@ -100,8 +145,8 @@ export default function XpsToPdfPage() {
                 <p className="text-sm text-muted-foreground">Yes, our converter preserves all formatting, fonts, images, and layout from the original XPS document in the PDF output.</p>
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-2">What's the file size limit?</h3>
-                <p className="text-sm text-muted-foreground">There's no file size limit! You can convert small or large XPS documents without any restrictions.</p>
+                <h3 className="font-semibold text-foreground mb-2">What&apos;s the file size limit?</h3>
+                <p className="text-sm text-muted-foreground">There&apos;s no file size limit! You can convert small or large XPS documents without any restrictions.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Can I convert multiple files?</h3>

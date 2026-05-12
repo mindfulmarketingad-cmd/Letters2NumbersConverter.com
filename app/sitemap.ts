@@ -96,6 +96,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'id3-metadata-viewer',
     'exif-metadata-viewer',
     'certificate-decoder',
+    'get-song-bpm',
+    'tempo-tapper',
+    'lufs-meter',
   ]
 
   const blogRoutes = [

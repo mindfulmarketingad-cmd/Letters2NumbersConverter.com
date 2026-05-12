@@ -93,6 +93,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'word-to-pdf-converter',
     'morse-code-translator',
     'pie-graph-maker',
+    'id3-metadata-viewer',
+    'exif-metadata-viewer',
+    'certificate-decoder',
   ]
 
   const blogRoutes = [

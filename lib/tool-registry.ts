@@ -545,6 +545,24 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Card Games',
     href: '/tools/tcg-proxy-creator',
   },
+  'id3-metadata-viewer': {
+    name: 'ID3 Metadata Viewer',
+    description: 'Inspect ID3 tags in MP3, MP4/M4A, AIFF, WAV, OGG, and FLAC files. View title, artist, album, cover art, BPM, and more — all in your browser.',
+    category: 'Audio Tools',
+    href: '/tools/id3-metadata-viewer',
+  },
+  'exif-metadata-viewer': {
+    name: 'Exif Metadata Viewer',
+    description: 'View all EXIF metadata in JPEG, TIFF, and WebP images — camera, GPS, date, focal length, ISO, and more. No uploads. Your data stays local.',
+    category: 'Image Tools',
+    href: '/tools/exif-metadata-viewer',
+  },
+  'certificate-decoder': {
+    name: 'Certificate Decoder',
+    description: 'Decode SSL/TLS certificates, CSRs, and private keys instantly in your browser. Supports PEM, DER, Base64, and hex formats. Your data stays local.',
+    category: 'Security Tools',
+    href: '/tools/certificate-decoder',
+  },
 }
 
 export function getToolRegistry() {

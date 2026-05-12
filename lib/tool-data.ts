@@ -869,6 +869,66 @@ export const getToolData = (toolId: string) => {
         { title: 'Small Business Owners', description: 'Repurposing product catalogues, invoices, or brochures received as PDFs into editable Word files without paying for costly software.' },
       ],
     },
+    'id3-metadata-viewer': {
+      howItWorks: 'Drop or select any audio file (MP3, MP4/M4A, AIFF, WAV, OGG, or FLAC). Click "View metadata" and the tool loads the jsmediatags library in your browser to parse all embedded ID3 tags instantly — nothing is sent to a server. The right panel displays the track title, artist, album, year, genre, BPM, composer, lyrics, and any embedded cover artwork alongside file-level details.',
+      features: [
+        'Reads ID3v1, ID3v2, and equivalent metadata tags',
+        'Supports MP3, MP4/M4A, AIFF, WAV, OGG, and FLAC formats',
+        'Displays embedded album artwork in full colour',
+        'Shows title, artist, album, year, genre, track number, BPM, composer, and lyrics',
+        'File-level info: name, size, MIME type, and last-modified date',
+        'Drag & drop or click-to-select file input',
+        '100% browser-based — your audio file never leaves your device',
+        'No sign-up or installation required',
+      ],
+      whoIsItFor: [
+        { title: 'Music Producers & DJs', description: 'Quickly verifying that exported tracks have correct BPM, key, artist, and album art tags before distributing or uploading to streaming platforms.' },
+        { title: 'Music Library Managers', description: 'Auditing large audio collections for missing or incorrect ID3 tags without needing desktop software like MusicBrainz Picard.' },
+        { title: 'Podcast Creators', description: 'Confirming that episode files carry the right title, author, and description tags required by podcast directories.' },
+        { title: 'Developers & QA Engineers', description: 'Inspecting ID3 output from audio processing pipelines, encoders, or DAW exports to verify correct tag embedding.' },
+        { title: 'Music Enthusiasts', description: 'Checking the embedded metadata of downloaded or ripped audio files to ensure accurate track information and artwork.' },
+      ],
+    },
+    'exif-metadata-viewer': {
+      howItWorks: 'Drop or select any image file (JPEG, TIFF, WebP, or PNG). Click "View metadata" and the tool parses the EXIF data directly in your browser using a built-in reader — no external libraries, no uploads. The right panel groups all found EXIF fields into File Info, Camera, Date & Time, and Camera Settings sections for easy inspection.',
+      features: [
+        'Built-in EXIF parser — no external library or upload required',
+        'Supports JPEG, TIFF, WebP, PNG, HEIC, and HEIF image formats',
+        'Groups fields into File Info, Camera, Date & Time, and Camera Settings',
+        'Shows camera make/model, focal length, ISO, shutter speed, aperture, and flash',
+        'Displays GPS coordinates if present in the image',
+        'Image thumbnail preview in the drop zone',
+        '100% browser-based — your image never leaves your device',
+        'No sign-up or installation required',
+      ],
+      whoIsItFor: [
+        { title: 'Photographers & Photo Editors', description: 'Reviewing shooting parameters (ISO, aperture, shutter speed) embedded in RAW or JPEG exports to analyse what settings produced a given result.' },
+        { title: 'Journalists & Fact-Checkers', description: 'Verifying image authenticity by inspecting the embedded camera make/model, date taken, and GPS coordinates.' },
+        { title: 'Privacy-Conscious Users', description: 'Checking whether a photo contains GPS location data before sharing it online, and confirming EXIF data has been stripped.' },
+        { title: 'Legal & Insurance Professionals', description: 'Extracting date-taken and GPS metadata from photographs for use as evidence in cases or claims.' },
+        { title: 'Developers & Digital Forensics', description: 'Inspecting raw EXIF IFD entries from camera output to debug metadata pipelines or analyse image provenance.' },
+      ],
+    },
+    'certificate-decoder': {
+      howItWorks: 'Paste a PEM block, raw Base64, or hex-encoded DER certificate, CSR, or private key into the text area — or switch to "File / binary" mode and drop a .pem, .crt, .cer, .der, .p7b, or .pfx file. Click "Decode" and the tool parses the ASN.1 structure entirely in your browser, displaying the subject, issuer, validity dates, SANs, public key details, signature algorithm, and all extensions in a clean grouped panel. No data is ever sent to a server.',
+      features: [
+        'Decodes X.509 certificates, CSRs (certificate signing requests), and PKCS#7 chains',
+        'Supports PEM blocks, raw Base64, and hex-encoded DER input',
+        'File / binary mode accepts .pem, .crt, .cer, .der, .p7b, and .pfx files',
+        'Displays subject, issuer, serial number, validity dates, and fingerprints (SHA-1, SHA-256)',
+        'Shows all Subject Alternative Names (SANs) and key usage extensions',
+        'Public key details: algorithm, key size, and curve (for EC keys)',
+        '100% browser-based — your certificate data never leaves your device',
+        'Optional password field for encrypted PFX/P12 files',
+      ],
+      whoIsItFor: [
+        { title: 'DevOps & Site Reliability Engineers', description: 'Quickly inspecting SSL/TLS certificates on servers to verify expiry dates, SANs, and issuer chains without needing openssl commands.' },
+        { title: 'Security Engineers & Pentesters', description: 'Analysing certificates during security assessments to spot weak key sizes, expired certs, or misconfigured SANs.' },
+        { title: 'Web Developers', description: 'Debugging HTTPS configuration issues by decoding certificates to confirm the correct domain names and validity periods.' },
+        { title: 'Certificate Authority Users', description: 'Verifying CSR contents before submitting them to a CA, ensuring the correct CN, SANs, and key algorithm are present.' },
+        { title: 'IT Administrators', description: 'Auditing internal PKI infrastructure certificates to track expiry and ensure compliance with security policies.' },
+      ],
+    },
   }
 
   return toolDataMap[toolId] || {

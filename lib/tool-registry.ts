@@ -131,6 +131,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Puzzle Games',
     href: '/tools/cryptogram-solver-free',
   },
+  'convert-ogg-to-wav': {
+    name: 'Convert OGG to WAV',
+    description: 'Convert OGG audio files to WAV format instantly with quality preservation - free and secure.',
+    category: 'Audio Tools',
+    href: '/tools/convert-ogg-to-wav',
+  },
   'decimal-to-hexadecimal-converter': {
     name: 'Decimal to Hexadecimal Converter',
     description: 'Convert between decimal, hex, binary, and octal',

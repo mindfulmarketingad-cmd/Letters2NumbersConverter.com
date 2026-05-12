@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'cryptogram-generator',
     'cryptogram-solver',
     'cryptogram-solver-free',
+    'convert-ogg-to-wav',
     'decimal-to-hexadecimal-converter-online',
     'egyptian-numbers-converter',
     'enigma-machine-emulator',

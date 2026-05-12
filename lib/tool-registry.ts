@@ -473,6 +473,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Video Tools',
     href: '/tools/webm-compressor',
   },
+  'webp-to-gif': {
+    name: 'WebP to GIF',
+    description: 'Convert WebP images to GIF format instantly with quality preservation - free and works in browser.',
+    category: 'Image Tools',
+    href: '/tools/webp-to-gif',
+  },
   'xps-to-pdf-converter': {
     name: 'XPS File To PDF',
     description: 'Convert XPS documents to PDF format instantly. Preserves formatting and supports all file sizes - completely free.',

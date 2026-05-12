@@ -79,6 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'url-percent-encoding-decoding',
     'vernam-cipher-decoder',
     'webm-compressor',
+    'webp-to-gif',
     'xps-to-pdf-converter',
     'word-to-number-translator',
     'yaml-to-ini-converter',

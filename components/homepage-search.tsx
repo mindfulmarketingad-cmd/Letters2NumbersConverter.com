@@ -33,6 +33,13 @@ export function HomepageSearch() {
     setIsFocused(false)
   }
 
+  const handleBlur = () => {
+    // Delay blur to allow click to register on link
+    setTimeout(() => {
+      setIsFocused(false)
+    }, 100)
+  }
+
   // Show dropdown only when focused, has query, and has results
   const showDropdown = isFocused && query.trim() && filteredTools.length > 0
   const showNoResults = isFocused && query.trim() && filteredTools.length === 0
@@ -61,7 +68,7 @@ export function HomepageSearch() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setIsFocused(true)}
-            onBlur={() => setIsFocused(false)}
+            onBlur={handleBlur}
             className="w-full pl-12 pr-6 py-4 md:py-5 rounded-full border border-border bg-secondary/50 hover:bg-secondary/70 focus:bg-secondary/80 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder-muted-foreground text-foreground text-base md:text-lg shadow-sm hover:shadow-md"
           />
         </div>

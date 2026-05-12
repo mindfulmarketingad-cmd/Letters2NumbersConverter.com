@@ -86,6 +86,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'yaml-to-jpg-converter',
     'yaml-to-xml-converter',
     'pdf-to-word-converter',
+    'word-to-pdf-converter',
+    'morse-code-translator',
     'pie-graph-maker',
   ]
 

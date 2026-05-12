@@ -729,6 +729,46 @@ export const getToolData = (toolId: string) => {
         { title: 'IT Professionals', description: 'Converting WebP files to GIF for system compatibility and archival purposes across legacy systems' }
       ]
     },
+    'word-to-pdf-converter': {
+      howItWorks: 'Upload any .docx or .doc Word file by clicking the button or dragging and dropping it. Mammoth.js (loaded in your browser) converts the Word document to HTML, preserving headings, paragraphs, and text formatting. html2pdf then renders that HTML as a properly paginated A4 PDF, which you can download instantly — nothing is ever sent to a server.',
+      features: [
+        '100% browser-based — your document never leaves your device',
+        'Supports both .docx and .doc Word formats',
+        'Preserves headings, paragraphs, and basic text formatting',
+        'A4 page layout with standard margins',
+        'High-quality PDF output (2× resolution rendering)',
+        'Supports files up to 100 MB',
+        'No sign-up or software installation required',
+        'Workspace history — re-download previous conversions within the session',
+      ],
+      whoIsItFor: [
+        { title: 'Students & Academics', description: 'Submitting assignments, theses, or reports as PDFs when institutions require a non-editable format.' },
+        { title: 'Office Workers & Admins', description: 'Sending contracts, proposals, and reports as PDFs to clients or colleagues without needing Adobe Acrobat.' },
+        { title: 'Job Seekers', description: 'Converting resumes and cover letters from Word to PDF to ensure consistent formatting across all devices.' },
+        { title: 'Small Business Owners', description: 'Creating professional-looking PDF invoices, quotes, and brochures from existing Word templates.' },
+        { title: 'Legal & HR Professionals', description: 'Locking down document formatting before sending agreements or policies for review or signature.' },
+      ],
+    },
+    'morse-code-translator': {
+      howItWorks: 'Type any text into the input box and the translator instantly converts each character to its Morse code equivalent using the international Morse code standard (dots and dashes, spaces between letters, word separators between words). Switch to decode mode to paste Morse code and get the plain text back. Hit "Play audio" to hear the Morse code played as audible tones at 15 WPM using the Web Audio API — no plugins needed.',
+      features: [
+        'Bidirectional translation: text → Morse and Morse → text',
+        'Real-time output as you type',
+        'Audio playback of Morse code at 15 WPM using the Web Audio API',
+        'Swap button to reverse input and output instantly',
+        'Supports A–Z, 0–9, and common punctuation',
+        'Expandable Morse code reference chart for all characters',
+        'One-click copy to clipboard',
+        '100% browser-based — no data sent to servers',
+      ],
+      whoIsItFor: [
+        { title: 'Amateur Radio Operators (Hams)', description: 'Practising CW (continuous wave) Morse code sending and receiving for licensing exams and on-air operation.' },
+        { title: 'Escape Room Enthusiasts & Puzzle Solvers', description: 'Decoding Morse code clues in escape rooms, treasure hunts, and online puzzle challenges.' },
+        { title: 'Students & History Buffs', description: 'Learning about Morse code as part of telecommunications history, WWII studies, or communications technology curricula.' },
+        { title: 'Survival & Outdoors Enthusiasts', description: 'Learning SOS (... --- ...) and basic emergency Morse signals for wilderness situations.' },
+        { title: 'Game Developers & Writers', description: 'Encoding hidden messages in Morse code for ARGs (alternate reality games), puzzles, or fictional narratives.' },
+      ],
+    },
     'pdf-to-word-converter': {
       howItWorks: 'Upload any PDF file by clicking the button or dragging and dropping it onto the upload area. The tool uses PDF.js — running entirely in your browser — to extract all text content page by page. It then packages that text into a properly structured Office Open XML (.docx) file, complete with paragraph styles and page breaks, which you can download and open in Microsoft Word, Google Docs, or LibreOffice instantly.',
       features: [

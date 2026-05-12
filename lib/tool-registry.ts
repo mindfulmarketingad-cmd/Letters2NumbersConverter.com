@@ -497,6 +497,18 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Document Conversion',
     href: '/tools/pdf-to-word-converter',
   },
+  'word-to-pdf-converter': {
+    name: 'Word to PDF Converter',
+    description: 'Convert Word documents (.docx, .doc) to PDF instantly in your browser. No uploads, no software required.',
+    category: 'Document Conversion',
+    href: '/tools/word-to-pdf-converter',
+  },
+  'morse-code-translator': {
+    name: 'Morse Code Translator',
+    description: 'Translate text to Morse code and decode Morse code to text instantly, with audio playback and a full reference chart.',
+    category: 'Cipher',
+    href: '/tools/morse-code-translator',
+  },
   'pie-graph-maker': {
     name: 'Pie Graph Maker',
     description: 'Create beautiful interactive pie charts online with customizable colors, labels, and styles. Download as PNG instantly.',

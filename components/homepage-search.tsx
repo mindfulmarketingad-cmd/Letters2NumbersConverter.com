@@ -33,11 +33,16 @@ export function HomepageSearch() {
     setIsFocused(false)
   }
 
-  const handleBlur = () => {
+  const handleBlur = (e: React.FocusEvent) => {
+    // Check if the related target is within the dropdown
+    const dropdown = document.querySelector('[data-search-dropdown]')
+    if (dropdown?.contains(e.relatedTarget as Node)) {
+      return // Don't close if clicking within dropdown
+    }
     // Delay blur to allow click to register on link
     setTimeout(() => {
       setIsFocused(false)
-    }, 100)
+    }, 200)
   }
 
   // Show dropdown only when focused, has query, and has results
@@ -75,14 +80,19 @@ export function HomepageSearch() {
 
         {/* Search Results Dropdown */}
         {showDropdown && (
-          <div className="absolute top-full left-0 right-0 mt-2 bg-background border border-border rounded-lg shadow-lg z-50">
+          <div 
+            data-search-dropdown
+            className="absolute top-full left-0 right-0 mt-2 bg-background border border-border rounded-lg shadow-lg z-50"
+            onMouseDown={(e) => e.preventDefault()}
+          >
             <div className="max-h-96 overflow-y-auto">
               {filteredTools.map((tool) => (
                 <Link
                   key={tool.id}
                   href={tool.href}
                   onClick={handleToolClick}
-                  className="flex items-center justify-between p-4 hover:bg-secondary/50 border-b border-border/50 last:border-b-0 transition-colors group"
+                  onMouseDown={(e) => e.stopPropagation()}
+                  className="flex items-center justify-between p-4 hover:bg-secondary/50 border-b border-border/50 last:border-b-0 transition-colors group cursor-pointer"
                 >
                   <div className="flex-1">
                     <div className="font-medium text-foreground group-hover:text-primary transition-colors">

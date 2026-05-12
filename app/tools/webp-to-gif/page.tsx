@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { WebpToGifConverter } from '@/components/webp-to-gif-converter'
-import { ToolLayout, ToolPageWrapper } from '@/components/tool-layout'
+import { ToolLayout } from '@/components/tool-layout'
+import { ToolPageWrapper } from '@/components/tool-page-wrapper'
 import { getToolData } from '@/lib/tool-data'
 
 export const metadata: Metadata = {
@@ -35,18 +36,10 @@ export default function WebpToGifPage() {
     <ToolPageWrapper>
       <ToolLayout
         toolId="webp-to-gif"
+        toolName="WebP to GIF"
+        toolDescription="WebP to GIF conversion tool that transforms WebP images to GIF format instantly. Free online converter with quality preservation - no registration needed. Perfect for converting modern WebP images to widely compatible GIF format."
         toolComponent={<WebpToGifConverter />}
-        title="WebP to GIF"
-        highlightWord="GIF"
         toolData={toolData}
-        schema={{
-          '@context': 'https://schema.org',
-          '@type': 'WebApplication',
-          name: 'WebP to GIF Converter',
-          description: 'Free online WebP to GIF image converter with quality preservation',
-          url: 'https://www.letters2numbersconverter.com/tools/webp-to-gif',
-          applicationCategory: 'UtilityApplication',
-        }}
       />
     </ToolPageWrapper>
   )

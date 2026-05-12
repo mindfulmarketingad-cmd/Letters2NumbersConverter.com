@@ -691,6 +691,44 @@ export const getToolData = (toolId: string) => {
         { title: 'Content Managers', description: 'Creating quick visual placeholders for content planning and documentation' }
       ]
     },
+    'convert-oxps-to-pdf': {
+      howItWorks: 'Upload your OXPS file by clicking the upload button or dragging and dropping into the converter. The tool processes your Open XML Paper Specification document and transforms it into a universally compatible PDF format. Once conversion completes, download your PDF file instantly. All processing happens securely with files deleted immediately after conversion.',
+      features: [
+        'Convert OXPS to PDF instantly online',
+        'Drag and drop file upload support',
+        'Preserves all formatting, fonts, and images',
+        'No software installation required',
+        'Works directly in your browser',
+        'Supports files up to 100 MB',
+        'Secure processing with automatic file deletion',
+        'Free with no registration needed'
+      ],
+      whoIsItFor: [
+        { title: 'Business Professionals', description: 'Converting OXPS documents received from Windows systems to universally compatible PDF for sharing with clients and colleagues' },
+        { title: 'IT Administrators', description: 'Batch converting legacy OXPS files to PDF format for document management and archival purposes' },
+        { title: 'Students & Educators', description: 'Converting OXPS school documents and assignments to PDF for easier submission and compatibility across devices' },
+        { title: 'Legal & Compliance Teams', description: 'Transforming OXPS files to PDF format for standardized document storage and regulatory compliance' }
+      ]
+    },
+    'webp-to-gif': {
+      howItWorks: 'Upload your WebP image by clicking the upload button or dragging and dropping into the converter. The tool processes your WebP file and transforms it into a widely compatible GIF format while preserving image quality and animation data. Once conversion completes, download your GIF file instantly. All processing happens securely with files deleted immediately after conversion.',
+      features: [
+        'Convert WebP to GIF instantly online',
+        'Drag and drop file upload support',
+        'Preserves image quality and animations',
+        'No software installation required',
+        'Works directly in your browser',
+        'Supports files up to 100 MB',
+        'Secure processing with automatic file deletion',
+        'Free with no registration needed'
+      ],
+      whoIsItFor: [
+        { title: 'Web Designers & Developers', description: 'Converting WebP images to GIF format for broader browser compatibility and better support across older platforms' },
+        { title: 'Content Creators', description: 'Transforming WebP images and animations into GIF format for social media posting and better compatibility with various platforms' },
+        { title: 'Digital Marketers', description: 'Converting WebP promotional images to GIF format for email campaigns and platforms that have limited WebP support' },
+        { title: 'IT Professionals', description: 'Converting WebP files to GIF for system compatibility and archival purposes across legacy systems' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

@@ -131,6 +131,18 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Puzzle Games',
     href: '/tools/cryptogram-solver-free',
   },
+  'convert-ogg-to-wav': {
+    name: 'Convert OGG to WAV',
+    description: 'Convert OGG audio files to WAV format instantly with quality preservation - free and secure.',
+    category: 'Audio Tools',
+    href: '/tools/convert-ogg-to-wav',
+  },
+  'convert-oxps-to-pdf': {
+    name: 'Convert OXPS to PDF',
+    description: 'Convert OXPS files to PDF format instantly. Preserves formatting, free and works in browser.',
+    category: 'File Tools',
+    href: '/tools/convert-oxps-to-pdf',
+  },
   'decimal-to-hexadecimal-converter': {
     name: 'Decimal to Hexadecimal Converter',
     description: 'Convert between decimal, hex, binary, and octal',
@@ -460,6 +472,18 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Compress WebM video files with advanced quality controls. Reduce file size without quality loss - all processing in your browser.',
     category: 'Video Tools',
     href: '/tools/webm-compressor',
+  },
+  'webp-to-gif': {
+    name: 'WebP to GIF',
+    description: 'Convert WebP images to GIF format instantly with quality preservation - free and works in browser.',
+    category: 'Image Tools',
+    href: '/tools/webp-to-gif',
+  },
+  'xps-to-pdf-converter': {
+    name: 'XPS File To PDF',
+    description: 'Convert XPS documents to PDF format instantly. Preserves formatting and supports all file sizes - completely free.',
+    category: 'File Tools',
+    href: '/tools/xps-to-pdf-converter',
   },
   'online-random-string-generator': {
     name: 'Online Random String Generator',

@@ -4,12 +4,21 @@ import type { Metadata } from "next"
 import { generateWebPageSchema, generateHowToSchema, generateFAQSchema } from "@/lib/schema-markup"
 
 export const metadata: Metadata = {
-  title: "#1 Letters to Numbers Converter | Free Online A1Z26 Decoder",
-  description: "Free letters to numbers converter tool. Convert A=1, B=2 through Z=26 instantly. Supports A1Z26, ASCII, hexadecimal, and binary encoding for puzzles, cryptography, geocaching, and data science.",
-  keywords: ["letters to numbers converter tool", "letter to number converter", "A1Z26 cipher decoder", "alphabet to numbers", "text to numbers converter"],
+  title: "Letters to Numbers Converter — 100+ Free Online Tools",
+  description: "Free Letters to Numbers Converter — convert A=1, B=2 … Z=26 instantly. Plus 100+ online tools for ciphers, file conversion, image editing, and word games. No sign-up. Works in your browser.",
+  keywords: [
+    "letters to numbers converter",
+    "letter to number converter",
+    "A1Z26 cipher decoder",
+    "alphabet to numbers",
+    "text to numbers converter",
+    "free online tools",
+    "cipher decoder",
+    "encode decode online",
+  ],
   openGraph: {
-    title: "Letters to Numbers Converter Tool | Free Online A1Z26 Decoder",
-    description: "Free letters to numbers converter. Convert A=1, B=2 through Z=26 instantly with multiple encoding formats.",
+    title: "Letters to Numbers Converter — 100+ Free Online Tools",
+    description: "Convert letters to numbers instantly with A1Z26, ASCII, hex, and binary. Plus 100+ free browser-based tools for ciphers, files, images, and word games.",
     url: "https://www.letters2numbersconverter.com",
     type: "website",
     images: [
@@ -17,14 +26,14 @@ export const metadata: Metadata = {
         url: "https://www.letters2numbersconverter.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Letters to Numbers Converter Tool",
+        alt: "Letters to Numbers Converter — Free Online Tools",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Letters to Numbers Converter | Free A1Z26 Decoder",
-    description: "Convert letters to numbers instantly with our free online A1Z26 converter",
+    title: "Letters to Numbers Converter — 100+ Free Online Tools",
+    description: "Convert letters to numbers instantly. Plus ciphers, file tools, image editors, and word games — all free, all in your browser.",
     images: ["https://www.letters2numbersconverter.com/og-image.png"],
   },
   alternates: {
@@ -34,8 +43,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const homePageSchema = generateWebPageSchema(
-    "Letters to Numbers Converter Tool | Free Online A1Z26 Decoder",
-    "Free letters to numbers converter tool. Convert A=1, B=2 through Z=26 instantly. Supports A1Z26, ASCII, hexadecimal, and binary encoding.",
+    "Letters to Numbers Converter — 100+ Free Online Tools",
+    "Free Letters to Numbers Converter and 100+ browser-based online tools. Convert A=1 B=2 Z=26 instantly. Supports A1Z26, ASCII, hex, binary, ciphers, file conversion, image tools, and word games.",
     "https://www.letters2numbersconverter.com",
     undefined,
     undefined,
@@ -44,43 +53,35 @@ export default function Home() {
 
   const howToSchema = generateHowToSchema(
     "How to Convert Letters to Numbers",
-    "Learn how to convert letters to numbers using various encoding methods",
+    "Use our free Letters to Numbers Converter to instantly translate any text to its numeric equivalent.",
     [
-      {
-        name: "Enter Your Text",
-        description: "Type or paste the text you want to convert into the input field",
-      },
-      {
-        name: "Choose Encoding Type",
-        description: "Select your preferred encoding format: A1Z26, ASCII, Hexadecimal, or Binary",
-      },
-      {
-        name: "View Results",
-        description: "The converter instantly displays the converted numbers",
-      },
-      {
-        name: "Copy or Download",
-        description: "Copy the results to clipboard or download as needed",
-      },
+      { name: "Open the Letters to Numbers Converter", description: "Visit the tool at letters2numbersconverter.com or search for it in the site search bar." },
+      { name: "Type or paste your text", description: "Enter the letters or message you want to convert in the input panel on the left." },
+      { name: "Choose your encoding format", description: "Select A1Z26 (A=1), A0Z25 (A=0), ASCII, Hexadecimal, or Binary from the format options." },
+      { name: "Copy your result", description: "The converted numbers appear instantly in the output panel. Click Copy to clipboard or download the result." },
     ]
   )
 
   const faqSchema = generateFAQSchema([
     {
-      question: "What is a letters to numbers converter?",
-      answer: "A letters to numbers converter is a tool that transforms alphabetic characters into their numeric equivalents. The most common method is A1Z26 where A=1, B=2, up to Z=26.",
+      question: "What is a Letters to Numbers Converter?",
+      answer: "A Letters to Numbers Converter transforms alphabetic characters into their numeric equivalents. The most common standard is A1Z26, where A=1, B=2, up to Z=26. Our tool also supports A0Z25, ASCII, hexadecimal, and binary.",
     },
     {
-      question: "What encoding formats are supported?",
-      answer: "Our converter supports A1Z26, A0Z25, ASCII codes, Hexadecimal, and Binary encoding methods.",
+      question: "Is the Letters to Numbers Converter free?",
+      answer: "Yes, our Letters to Numbers Converter and all 100+ tools are completely free. No registration or payment is required.",
     },
     {
-      question: "Is the converter free to use?",
-      answer: "Yes, our letters to numbers converter is completely free. No registration or payment required.",
+      question: "Is my data private?",
+      answer: "Yes. All conversions happen entirely in your browser. We never store, send, or log any data you enter.",
     },
     {
-      question: "Are my texts stored or monitored?",
-      answer: "No, all conversions happen in your browser. We do not store, monitor, or track any data you enter.",
+      question: "Can I decode numbers back to letters?",
+      answer: "Yes. All tools support bidirectional conversion. Enter numbers in decode mode to get the original letters back.",
+    },
+    {
+      question: "What other tools does the site offer?",
+      answer: "Beyond the Letters to Numbers Converter, the site offers 100+ tools including cipher decoders, Morse code translator, PDF/Word converters, image tools, word game solvers, Base32 converter, Roman numeral converter, and much more.",
     },
   ])
 

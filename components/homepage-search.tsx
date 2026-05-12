@@ -1,14 +1,75 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import { Search, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getToolRegistry } from '@/lib/tool-registry'
 
+const EXAMPLE_SEARCHES = [
+  'Letters To Numbers Converter',
+  'Morse Code Translator',
+  'A0Z25 Decoder',
+  'Placeholder Image Creator',
+  'Sims Language Translator',
+  'PDF to Word Converter',
+  'Base32 Converter',
+  'Sentence Unscrambler',
+]
+
+function useTypingPlaceholder(active: boolean) {
+  const [placeholder, setPlaceholder] = useState('')
+  const indexRef = useRef(0)
+  const charRef = useRef(0)
+  const deletingRef = useRef(false)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => {
+    if (!active) {
+      if (timerRef.current) clearTimeout(timerRef.current)
+      setPlaceholder('')
+      return
+    }
+
+    function tick() {
+      const word = EXAMPLE_SEARCHES[indexRef.current]
+
+      if (!deletingRef.current) {
+        // Typing
+        charRef.current += 1
+        setPlaceholder(word.slice(0, charRef.current))
+        if (charRef.current === word.length) {
+          // Pause then start deleting
+          deletingRef.current = true
+          timerRef.current = setTimeout(tick, 1800)
+        } else {
+          timerRef.current = setTimeout(tick, 60)
+        }
+      } else {
+        // Deleting
+        charRef.current -= 1
+        setPlaceholder(word.slice(0, charRef.current))
+        if (charRef.current === 0) {
+          deletingRef.current = false
+          indexRef.current = (indexRef.current + 1) % EXAMPLE_SEARCHES.length
+          timerRef.current = setTimeout(tick, 400)
+        } else {
+          timerRef.current = setTimeout(tick, 30)
+        }
+      }
+    }
+
+    timerRef.current = setTimeout(tick, 600)
+    return () => { if (timerRef.current) clearTimeout(timerRef.current) }
+  }, [active])
+
+  return placeholder
+}
+
 export function HomepageSearch() {
   const [query, setQuery] = useState('')
   const [isFocused, setIsFocused] = useState(false)
+  const animatedPlaceholder = useTypingPlaceholder(!isFocused && !query)
   const toolRegistry = getToolRegistry()
   const tools = Object.entries(toolRegistry).map(([id, data]) => ({
     id,
@@ -69,7 +130,7 @@ export function HomepageSearch() {
           </div>
           <input
             type="text"
-            placeholder="Search for a tool..."
+            placeholder={isFocused || query ? 'Search for a tool...' : animatedPlaceholder || 'Search for a tool...'}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setIsFocused(true)}

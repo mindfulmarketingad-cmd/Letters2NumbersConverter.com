@@ -110,6 +110,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'cryptii-vs-letters2numbersconverter',
     'educational-uses-letter-number-conversion',
     'escape-room-letter-codes',
+    'find-hackathon-team-members',
     'history-letter-number-systems',
     'how-to-change-photo-to-high-resolution',
     'how-to-convert-image-to-text-in-excel',

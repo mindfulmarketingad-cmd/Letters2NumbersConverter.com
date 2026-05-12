@@ -117,7 +117,7 @@ export default function RootLayout({
         />
         <Script
           src="https://js.stripe.com/v3/"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
       </head>
       <body className="font-sans antialiased min-h-screen bg-background">

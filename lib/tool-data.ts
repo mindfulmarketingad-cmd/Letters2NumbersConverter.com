@@ -729,6 +729,26 @@ export const getToolData = (toolId: string) => {
         { title: 'IT Professionals', description: 'Converting WebP files to GIF for system compatibility and archival purposes across legacy systems' }
       ]
     },
+    'text-to-roman-numerals': {
+      howItWorks: 'Select your input mode — "Text (ASCII)" converts each character to its ASCII numeric value and then to Roman numerals (e.g. "hi" → h=104=CIV, i=105=CV → "CIV CV"), while "Numbers" converts space or comma-separated integers directly. The separator dropdown lets you choose how Roman numerals are delimited in the output. Switch "Convert to" to decode mode and paste Roman numerals to reverse the process back to numbers or text. Everything runs instantly in your browser.',
+      features: [
+        'Two input modes: Text (ASCII values) and Numbers (direct integers)',
+        'Bidirectional: encode to Roman numerals or decode back to text/numbers',
+        'Customisable separator — space, comma, hyphen, period, newline, or custom',
+        'Real-time output as you type',
+        'Character count badges on both panels',
+        'Expandable Roman numeral reference chart (I through M)',
+        'One-click copy to clipboard',
+        '100% browser-based — no data sent to servers',
+      ],
+      whoIsItFor: [
+        { title: 'Students & Educators', description: 'Learning Roman numerals, practising conversions, and checking homework answers instantly.' },
+        { title: 'Designers & Typographers', description: 'Generating Roman numeral sequences for clock faces, chapter headings, wedding invitations, and decorative numbering.' },
+        { title: 'Puzzle & Cipher Enthusiasts', description: 'Encoding or decoding text using Roman numeral ASCII substitution for escape room puzzles and ARGs.' },
+        { title: 'Historians & Classicists', description: 'Converting dates, inscriptions, and ancient numbering systems for research or academic writing.' },
+        { title: 'Developers & QA Engineers', description: 'Testing Roman numeral parsing logic and generating test data for numeral conversion algorithms.' },
+      ],
+    },
     'sims-language-translator': {
       howItWorks: 'Type or paste any English text into the left panel and the translator instantly maps each word against a 200+ word confirmed Simlish dictionary compiled from across The Sims game series. Known words are replaced with their official Simlish equivalents; words not in the dictionary are converted using Simlish phonetic rules (consonant-vowel-consonant patterns, characteristic sound substitutions like "th"→"f" and "-tion"→"sha") to produce plausible-sounding Simlish output. Switch to "Simlish → English" mode to reverse-translate. Hit "Generate Random Sentence" for a pre-built example, or tap any phrase chip to insert a common Simlish expression.',
       features: [

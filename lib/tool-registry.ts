@@ -491,6 +491,18 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Generators',
     href: '/tools/online-random-string-generator',
   },
+  'sims-language-translator': {
+    name: 'Sims Language Translator',
+    description: 'Translate English to Simlish or decode Simlish to English. 200+ confirmed Simlish words, random sentence generator, and phrase chips.',
+    category: 'Language & Fun',
+    href: '/tools/sims-language-translator',
+  },
+  'sentence-unscrambler': {
+    name: 'Sentence Unscrambler',
+    description: 'Instantly rearrange scrambled words into a correct, readable sentence. Free, browser-based, with character and word stats.',
+    category: 'Text & Language',
+    href: '/tools/sentence-unscrambler',
+  },
   'pdf-to-word-converter': {
     name: 'PDF to Word Converter',
     description: 'Convert PDF files to editable Word (.docx) documents instantly in your browser. No uploads, no software required.',

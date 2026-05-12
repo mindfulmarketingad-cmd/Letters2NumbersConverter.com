@@ -1,27 +1,13 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import { Upload, Download, AlertCircle, Plus, Share2, FileText, Maximize2 } from 'lucide-react'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
-interface WorkspaceItem {
-  id: string
-  name: string
-  fileName: string
-  timestamp: number
-}
+import { Upload, Download, AlertCircle } from 'lucide-react'
 
 export function WebpToGifConverter() {
   const [file, setFile] = useState<File | null>(null)
   const [isConverting, setIsConverting] = useState(false)
   const [convertedFile, setConvertedFile] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [workspace, setWorkspace] = useState<WorkspaceItem[]>([])
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -53,15 +39,6 @@ export function WebpToGifConverter() {
       const blob = new Blob([arrayBuffer], { type: 'image/gif' })
       const url = URL.createObjectURL(blob)
       setConvertedFile(url)
-
-      // Save to workspace
-      const workspaceItem: WorkspaceItem = {
-        id: Date.now().toString(),
-        name: `${file.name.replace('.webp', '')}.gif`,
-        fileName: file.name,
-        timestamp: Date.now(),
-      }
-      setWorkspace([workspaceItem, ...workspace.slice(0, 4)])
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Conversion failed. Please try again.')
     } finally {
@@ -71,54 +48,6 @@ export function WebpToGifConverter() {
 
   return (
     <div className="flex flex-col h-full bg-background">
-      {/* Toolbar */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-background">
-        <div className="flex items-center gap-2">
-          <button 
-            onClick={() => {
-              setFile(null)
-              setConvertedFile(null)
-              setError(null)
-            }}
-            className="p-2 hover:bg-secondary rounded transition-colors"
-            title="New conversion"
-          >
-            <Plus className="w-5 h-5" />
-          </button>
-          <button className="p-2 hover:bg-secondary rounded transition-colors" title="Share">
-            <Share2 className="w-5 h-5" />
-          </button>
-          <button className="p-2 hover:bg-secondary rounded transition-colors" title="File">
-            <FileText className="w-5 h-5" />
-          </button>
-          <button className="p-2 hover:bg-secondary rounded transition-colors" title="Fullscreen">
-            <Maximize2 className="w-5 h-5" />
-          </button>
-        </div>
-        
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-muted-foreground">Workspace</span>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className="px-3 py-1 text-sm border border-border rounded hover:bg-secondary transition-colors">
-                ↓
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              {workspace.length === 0 ? (
-                <DropdownMenuItem disabled>No saved conversions</DropdownMenuItem>
-              ) : (
-                workspace.map((item) => (
-                  <DropdownMenuItem key={item.id}>
-                    {item.name}
-                  </DropdownMenuItem>
-                ))
-              )}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-      </div>
-
       {/* Main Content */}
       <div className="flex-1 overflow-y-auto p-6 space-y-6">
         {/* File Input Section */}

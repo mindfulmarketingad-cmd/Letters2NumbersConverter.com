@@ -491,6 +491,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Generators',
     href: '/tools/online-random-string-generator',
   },
+  'pdf-to-word-converter': {
+    name: 'PDF to Word Converter',
+    description: 'Convert PDF files to editable Word (.docx) documents instantly in your browser. No uploads, no software required.',
+    category: 'Document Conversion',
+    href: '/tools/pdf-to-word-converter',
+  },
   'pie-graph-maker': {
     name: 'Pie Graph Maker',
     description: 'Create beautiful interactive pie charts online with customizable colors, labels, and styles. Download as PNG instantly.',

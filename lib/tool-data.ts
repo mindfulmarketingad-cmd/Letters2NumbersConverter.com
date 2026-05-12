@@ -729,6 +729,26 @@ export const getToolData = (toolId: string) => {
         { title: 'IT Professionals', description: 'Converting WebP files to GIF for system compatibility and archival purposes across legacy systems' }
       ]
     },
+    'pdf-to-word-converter': {
+      howItWorks: 'Upload any PDF file by clicking the button or dragging and dropping it onto the upload area. The tool uses PDF.js — running entirely in your browser — to extract all text content page by page. It then packages that text into a properly structured Office Open XML (.docx) file, complete with paragraph styles and page breaks, which you can download and open in Microsoft Word, Google Docs, or LibreOffice instantly.',
+      features: [
+        '100% browser-based — your PDF never leaves your device',
+        'Extracts text from all pages of multi-page PDFs',
+        'Outputs a valid .docx file compatible with Microsoft Word, Google Docs, and LibreOffice',
+        'Automatic heading detection for all-caps lines',
+        'Page breaks preserved between PDF pages',
+        'Supports PDF files up to 100 MB',
+        'No sign-up or software installation required',
+        'Workspace history — re-download previous conversions within the session',
+      ],
+      whoIsItFor: [
+        { title: 'Students & Researchers', description: 'Editing and annotating academic PDFs, research papers, and textbook chapters in a familiar word processor.' },
+        { title: 'Office Workers & Admins', description: 'Updating contracts, reports, and forms that were sent as PDFs when the original Word file is unavailable.' },
+        { title: 'Legal & HR Professionals', description: 'Extracting and editing text from PDF agreements, policies, and compliance documents for revision or repurposing.' },
+        { title: 'Journalists & Writers', description: 'Converting press releases, PDFs, and source documents into editable drafts to speed up research and writing.' },
+        { title: 'Small Business Owners', description: 'Repurposing product catalogues, invoices, or brochures received as PDFs into editable Word files without paying for costly software.' },
+      ],
+    },
   }
 
   return toolDataMap[toolId] || {

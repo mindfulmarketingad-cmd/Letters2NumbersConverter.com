@@ -729,6 +729,27 @@ export const getToolData = (toolId: string) => {
         { title: 'IT Professionals', description: 'Converting WebP files to GIF for system compatibility and archival purposes across legacy systems' }
       ]
     },
+    'sentence-unscrambler': {
+      howItWorks: 'Paste your scrambled words or sentences into the input box and press "Generate Output". The tool splits your text into individual sentences using punctuation boundaries, then evaluates candidate word orderings using capitalisation, punctuation placement, and grammatical heuristics (content words before stop words, proper capitalisation at the start, punctuation at the end). The highest-scoring arrangement is returned instantly, all computed in your browser with no server calls.',
+      features: [
+        'Instantly unscrambles single sentences and multi-sentence paragraphs',
+        'Smart scoring based on capitalisation, punctuation, and word type',
+        'Exhaustive permutation search for sentences up to 7 words',
+        'Heuristic fast-path for longer sentences',
+        'Language selector (English, Spanish, French, German, and more)',
+        'Advanced options: case-sensitive ordering and punctuation preservation',
+        'Live character, word, sentence, and paragraph counters',
+        'One-click copy to clipboard',
+        '100% browser-based — your text never leaves your device',
+      ],
+      whoIsItFor: [
+        { title: 'Students & Language Learners', description: 'Practising sentence construction and grammar by unscrambling example sentences from textbooks or worksheets.' },
+        { title: 'Teachers & Educators', description: 'Quickly checking answers to scrambled-sentence exercises or generating correctly ordered examples for lesson plans.' },
+        { title: 'Puzzle & Game Enthusiasts', description: 'Solving word scramble puzzles, escape room challenges, and ARG (alternate reality game) clues that involve shuffled sentences.' },
+        { title: 'Writers & Editors', description: 'Fixing accidentally shuffled text caused by copy-paste errors, OCR misreads, or document conversion artefacts.' },
+        { title: 'Developers & QA Testers', description: 'Testing NLP pipelines and text-processing tools with scrambled sentence inputs and expected outputs.' },
+      ],
+    },
     'word-to-pdf-converter': {
       howItWorks: 'Upload any .docx or .doc Word file by clicking the button or dragging and dropping it. Mammoth.js (loaded in your browser) converts the Word document to HTML, preserving headings, paragraphs, and text formatting. html2pdf then renders that HTML as a properly paginated A4 PDF, which you can download instantly — nothing is ever sent to a server.',
       features: [

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useCallback, useRef } from 'react'
-import { Copy, RotateCcw, Volume2, ArrowLeftRight, Plus, Share2, FileText, Maximize2 } from 'lucide-react'
+import { Copy, RotateCcw, Volume2, ArrowLeftRight } from 'lucide-react'
 
 const MORSE: Record<string, string> = {
   A: '.-', B: '-...', C: '-.-.', D: '-..', E: '.', F: '..-.', G: '--.', H: '....',
@@ -126,24 +126,8 @@ export function MorseCodeTranslator() {
 
   return (
     <div className="flex flex-col h-full bg-background">
-      {/* Toolbar */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-background">
-        <div className="flex items-center gap-1">
-          <button onClick={handleReset} className="p-2 hover:bg-secondary rounded transition-colors" title="Clear">
-            <Plus className="w-5 h-5" />
-          </button>
-          <button className="p-2 hover:bg-secondary rounded transition-colors" title="Share">
-            <Share2 className="w-5 h-5" />
-          </button>
-          <button className="p-2 hover:bg-secondary rounded transition-colors" title="Info">
-            <FileText className="w-5 h-5" />
-          </button>
-          <button className="p-2 hover:bg-secondary rounded transition-colors" title="Fullscreen">
-            <Maximize2 className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Mode toggle */}
+      {/* Mode toggle */}
+      <div className="flex justify-end px-4 py-3 border-b border-border">
         <div className="flex items-center gap-1 bg-secondary rounded-lg p-1">
           <button
             onClick={() => { setMode('encode'); setInput('') }}

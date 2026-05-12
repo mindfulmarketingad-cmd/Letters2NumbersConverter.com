@@ -1,14 +1,8 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { Upload, Download, AlertCircle, Plus, Share2, FileText, Maximize2, Trash2, Loader2, CheckCircle } from 'lucide-react'
+import { Upload, Download, AlertCircle, FileText, Trash2, Loader2, CheckCircle } from 'lucide-react'
 import pako from 'pako'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
 
 interface WorkspaceItem {
   id: string
@@ -328,52 +322,6 @@ export function PdfToWordConverter() {
 
   return (
     <div className="flex flex-col h-full bg-background">
-      {/* Toolbar */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-background">
-        <div className="flex items-center gap-1">
-          <button
-            onClick={handleReset}
-            className="p-2 hover:bg-secondary rounded transition-colors"
-            title="New conversion"
-          >
-            <Plus className="w-5 h-5" />
-          </button>
-          <button className="p-2 hover:bg-secondary rounded transition-colors" title="Share">
-            <Share2 className="w-5 h-5" />
-          </button>
-          <button className="p-2 hover:bg-secondary rounded transition-colors" title="File info">
-            <FileText className="w-5 h-5" />
-          </button>
-          <button className="p-2 hover:bg-secondary rounded transition-colors" title="Fullscreen">
-            <Maximize2 className="w-5 h-5" />
-          </button>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-muted-foreground">Workspace</span>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className="px-3 py-1 text-sm border border-border rounded hover:bg-secondary transition-colors">
-                {workspace.length > 0 ? `${workspace.length} file${workspace.length !== 1 ? 's' : ''}` : 'Empty'}
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              {workspace.length === 0 ? (
-                <DropdownMenuItem disabled>No saved conversions</DropdownMenuItem>
-              ) : (
-                workspace.map(item => (
-                  <DropdownMenuItem key={item.id} asChild>
-                    <a href={item.url} download={item.name} className="cursor-pointer">
-                      {item.name}
-                    </a>
-                  </DropdownMenuItem>
-                ))
-              )}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-      </div>
-
       {/* Content */}
       <div className="flex-1 overflow-y-auto p-6 space-y-6">
         {/* Upload */}

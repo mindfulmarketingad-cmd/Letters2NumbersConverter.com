@@ -563,6 +563,24 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Security Tools',
     href: '/tools/certificate-decoder',
   },
+  'get-song-bpm': {
+    name: 'Get Song BPM',
+    description: 'Detect the BPM of any audio file instantly in your browser. Upload MP3, WAV, FLAC, or M4A and get an accurate tempo reading with confidence score. No uploads.',
+    category: 'Audio Tools',
+    href: '/tools/get-song-bpm',
+  },
+  'tempo-tapper': {
+    name: 'Tempo Tapper',
+    description: 'Tap the button or press Space in time with any song to instantly calculate BPM. Shows rolling average, interval history, half-time, double-time, and tempo feel.',
+    category: 'Audio Tools',
+    href: '/tools/tempo-tapper',
+  },
+  'lufs-meter': {
+    name: 'LUFS Meter',
+    description: 'Measure integrated loudness, momentary peak, short-term peak, true peak (dBTP), and loudness range (LRA) of any audio file using ITU-R BS.1770-4. Compare against streaming platform targets.',
+    category: 'Audio Tools',
+    href: '/tools/lufs-meter',
+  },
 }
 
 export function getToolRegistry() {

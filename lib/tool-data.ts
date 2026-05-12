@@ -691,6 +691,25 @@ export const getToolData = (toolId: string) => {
         { title: 'Content Managers', description: 'Creating quick visual placeholders for content planning and documentation' }
       ]
     },
+    'convert-oxps-to-pdf': {
+      howItWorks: 'Upload your OXPS file by clicking the upload button or dragging and dropping into the converter. The tool processes your Open XML Paper Specification document and transforms it into a universally compatible PDF format. Once conversion completes, download your PDF file instantly. All processing happens securely with files deleted immediately after conversion.',
+      features: [
+        'Convert OXPS to PDF instantly online',
+        'Drag and drop file upload support',
+        'Preserves all formatting, fonts, and images',
+        'No software installation required',
+        'Works directly in your browser',
+        'Supports files up to 100 MB',
+        'Secure processing with automatic file deletion',
+        'Free with no registration needed'
+      ],
+      whoIsItFor: [
+        { title: 'Business Professionals', description: 'Converting OXPS documents received from Windows systems to universally compatible PDF for sharing with clients and colleagues' },
+        { title: 'IT Administrators', description: 'Batch converting legacy OXPS files to PDF format for document management and archival purposes' },
+        { title: 'Students & Educators', description: 'Converting OXPS school documents and assignments to PDF for easier submission and compatibility across devices' },
+        { title: 'Legal & Compliance Teams', description: 'Transforming OXPS files to PDF format for standardized document storage and regulatory compliance' }
+      ]
+    },
   }
 
   return toolDataMap[toolId] || {

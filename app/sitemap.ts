@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'cryptogram-solver',
     'cryptogram-solver-free',
     'convert-ogg-to-wav',
+    'convert-oxps-to-pdf',
     'decimal-to-hexadecimal-converter-online',
     'egyptian-numbers-converter',
     'enigma-machine-emulator',

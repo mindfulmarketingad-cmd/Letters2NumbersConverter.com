@@ -137,6 +137,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Audio Tools',
     href: '/tools/convert-ogg-to-wav',
   },
+  'convert-oxps-to-pdf': {
+    name: 'Convert OXPS to PDF',
+    description: 'Convert OXPS files to PDF format instantly. Preserves formatting, free and works in browser.',
+    category: 'File Tools',
+    href: '/tools/convert-oxps-to-pdf',
+  },
   'decimal-to-hexadecimal-converter': {
     name: 'Decimal to Hexadecimal Converter',
     description: 'Convert between decimal, hex, binary, and octal',

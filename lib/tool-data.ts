@@ -1009,6 +1009,46 @@ export const getToolData = (toolId: string) => {
         { title: 'Writers & Game Designers', description: 'Encoding secret messages, puzzle answers, or in-game lore with any shift value and verifying the ciphertext is correctly reversible.' },
       ],
     },
+    'morse-code-decoder-and-encoder': {
+      howItWorks: 'Select "Text → Morse" to encode or "Morse → Text" to decode using the mode toggle. Type or paste your message into the input box and the translation appears instantly in the output panel. Click "Play audio" to hear the Morse code as actual beeps — useful for learning or verifying. Use the Swap button to move the output back to input and continue chaining translations.',
+      features: [
+        'Real-time encoding: text to Morse code as you type',
+        'Real-time decoding: Morse code to text as you type',
+        'Audio playback at 15 WPM — hear the actual Morse beeps',
+        'Supports full A–Z alphabet, digits 0–9, and common punctuation',
+        'Swap button to flip input and output and reverse direction',
+        'Copy to clipboard with one click',
+        '100% browser-based — no file uploads',
+        'No sign-up required',
+      ],
+      whoIsItFor: [
+        { title: 'Ham Radio Operators & Enthusiasts', description: 'Encoding messages to practice Morse transmission or decoding received transmissions to verify their content.' },
+        { title: 'Students & Educators', description: 'Learning the Morse code alphabet interactively — type a letter and immediately hear and see its Morse representation.' },
+        { title: 'Puzzle & Escape Room Players', description: 'Decoding Morse code clues embedded in puzzles, escape rooms, ARGs, or geocaching hides.' },
+        { title: 'Emergency Preparedness Enthusiasts', description: 'Practising encoding SOS and other emergency signals in Morse code for survival communication scenarios.' },
+        { title: 'Developers & Accessibility Researchers', description: 'Testing Morse code input methods for accessibility applications, or verifying Morse encoding in software projects.' },
+      ],
+    },
+    'saml-encoder': {
+      howItWorks: 'Select the SAML type (SAMLRequest or SAMLResponse) and mode (Encode or Decode). To decode: paste the raw parameter value — URL-decoding is applied automatically, then the tool Base64-decodes and (for SAMLRequest) inflates the deflated payload to reveal the XML. To encode: paste your XML and the tool applies raw DEFLATE compression (for SAMLRequest) or skips compression (for SAMLResponse), then Base64-encodes the result. An optional URL-encode step can be applied for use in redirect URLs.',
+      features: [
+        'Decodes SAMLRequest (deflate-raw + Base64) back to XML',
+        'Decodes SAMLResponse (Base64 only) back to XML',
+        'Encodes XML to SAMLRequest or SAMLResponse format',
+        'Automatic URL-decoding on paste — no manual step needed',
+        'Optional URL-encode output for use in redirect URLs',
+        'Pretty-prints decoded XML for readability',
+        'Swap button to reverse encode/decode direction',
+        '100% browser-based using CompressionStream API — no server uploads',
+      ],
+      whoIsItFor: [
+        { title: 'Identity & SSO Engineers', description: 'Debugging SAML SSO flows by decoding SAMLRequest and SAMLResponse parameters to inspect the XML assertions, conditions, and attribute statements.' },
+        { title: 'Security Analysts & Pentesters', description: 'Inspecting SAML tokens during security assessments to identify misconfigured assertions, weak conditions, or missing signature validation.' },
+        { title: 'Integration Developers', description: 'Encoding test XML into SAML format for simulating IdP or SP requests during development and integration testing of SAML-based systems.' },
+        { title: 'IT Administrators', description: 'Troubleshooting SAML login failures by decoding the raw parameters captured from browser network logs or proxy tools like Burp Suite.' },
+        { title: 'QA Engineers', description: 'Verifying that encoded SAML assertions match expected XML schemas and contain the correct attributes and conditions.' },
+      ],
+    },
     'certificate-decoder': {
       howItWorks: 'Paste a PEM block, raw Base64, or hex-encoded DER certificate, CSR, or private key into the text area — or switch to "File / binary" mode and drop a .pem, .crt, .cer, .der, .p7b, or .pfx file. Click "Decode" and the tool parses the ASN.1 structure entirely in your browser, displaying the subject, issuer, validity dates, SANs, public key details, signature algorithm, and all extensions in a clean grouped panel. No data is ever sent to a server.',
       features: [

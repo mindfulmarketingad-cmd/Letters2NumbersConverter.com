@@ -59,7 +59,8 @@ function storeSessions(slug: string, sessions: SavedSession[]) {
 export function SaveProvider({ children }: { children: ReactNode }) {
   const getterRef = useRef<StateGetter | null>(null)
   const restorerRef = useRef<StateRestorer | null>(null)
-  const [canSave, setCanSave] = useState(false)
+  // Start true — WorkAreaInner always registers a DOM fallback on mount
+  const [canSave, setCanSave] = useState(true)
 
   const register = useCallback((getter: StateGetter, restorer: StateRestorer) => {
     // Wrap in stable functions that always delegate to the latest closures

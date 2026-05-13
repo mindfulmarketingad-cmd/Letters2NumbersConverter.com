@@ -593,6 +593,18 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/caesar-cipher-decoder',
   },
+  'morse-code-decoder-and-encoder': {
+    name: 'Morse Code Decoder and Encoder',
+    description: 'Translate text to Morse code or decode Morse code back to text instantly. Includes audio playback and the full Morse alphabet.',
+    category: 'Cipher',
+    href: '/tools/morse-code-decoder-and-encoder',
+  },
+  'saml-encoder': {
+    name: 'SAML Encoder and Decoder',
+    description: 'Encode XML to SAMLRequest or SAMLResponse format, or decode either parameter back to readable XML. Handles deflate and Base64 automatically.',
+    category: 'Encoder',
+    href: '/tools/saml-encoder',
+  },
 }
 
 export function getToolRegistry() {

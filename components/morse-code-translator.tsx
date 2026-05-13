@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef } from 'react'
 import { Copy, RotateCcw, Volume2, ArrowLeftRight } from 'lucide-react'
+import { useSaveState } from '@/lib/save-context'
 
 const MORSE: Record<string, string> = {
   A: '.-', B: '-...', C: '-.-.', D: '-..', E: '.', F: '..-.', G: '--.', H: '....',
@@ -87,6 +88,14 @@ export function MorseCodeTranslator() {
   const [mode, setMode] = useState<Mode>('encode')
   const [input, setInput] = useState('')
   const [copied, setCopied] = useState(false)
+
+  useSaveState(
+    () => ({ input, mode }),
+    (s) => {
+      setInput((s.input as string) ?? '')
+      setMode(((s.mode as string) === 'decode' ? 'decode' : 'encode'))
+    }
+  )
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   const output = useCallback(() => {

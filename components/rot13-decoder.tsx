@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react'
 import { Copy, Check, RotateCcw, Info, ArrowLeftRight } from 'lucide-react'
+import { useSaveState } from '@/lib/save-context'
 
 function rot13(input: string): string {
   return input.replace(/[a-zA-Z]/g, (ch) => {
@@ -19,6 +20,11 @@ export function ROT13Decoder() {
   const [input, setInput] = useState('')
   const [copied, setCopied] = useState(false)
   const [showTable, setShowTable] = useState(false)
+
+  useSaveState(
+    () => ({ input }),
+    (s) => setInput((s.input as string) ?? '')
+  )
 
   const output = rot13(input)
 

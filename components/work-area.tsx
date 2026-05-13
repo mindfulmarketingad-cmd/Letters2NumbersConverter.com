@@ -1,21 +1,18 @@
 'use client'
 
-import { Save, Maximize2 } from 'lucide-react'
+import { Maximize2 } from 'lucide-react'
 import { ToolSelector } from '@/components/tool-selector'
 import { ShareMenu } from '@/components/share-menu'
+import { SaveButton } from '@/components/save-button'
+import { SaveProvider } from '@/lib/save-context'
 
 interface WorkAreaProps {
   toolComponent?: React.ReactNode
+  toolName?: string
 }
 
-export function WorkArea({ toolComponent }: WorkAreaProps) {
-  const handleSave = () => {
-    // Save functionality
-    console.log('[v0] Save button clicked')
-  }
-
+function WorkAreaInner({ toolComponent, toolName }: WorkAreaProps) {
   const handleFullscreen = () => {
-    // Fullscreen functionality
     try {
       const element = document.querySelector('[data-workarea]')
       if (element?.requestFullscreen) {
@@ -34,13 +31,7 @@ export function WorkArea({ toolComponent }: WorkAreaProps) {
 
         <ShareMenu />
 
-        <button
-          onClick={handleSave}
-          className="p-2 hover:bg-background rounded-lg transition-colors"
-          title="Save"
-        >
-          <Save className="w-5 h-5" />
-        </button>
+        <SaveButton toolName={toolName ?? 'Tool'} />
 
         <button
           onClick={handleFullscreen}
@@ -74,5 +65,13 @@ export function WorkArea({ toolComponent }: WorkAreaProps) {
         )}
       </div>
     </div>
+  )
+}
+
+export function WorkArea(props: WorkAreaProps) {
+  return (
+    <SaveProvider>
+      <WorkAreaInner {...props} />
+    </SaveProvider>
   )
 }

@@ -1,11 +1,12 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 import { Maximize2 } from 'lucide-react'
 import { ToolSelector } from '@/components/tool-selector'
 import { ShareMenu } from '@/components/share-menu'
 import { SaveButton } from '@/components/save-button'
-import { SaveProvider, useSaveContext } from '@/lib/save-context'
+import { SaveProvider, useSaveContext, type SavedSession } from '@/lib/save-context'
 
 interface WorkAreaProps {
   toolComponent?: React.ReactNode
@@ -27,8 +28,10 @@ function setReactValue(el: HTMLInputElement | HTMLTextAreaElement | HTMLSelectEl
 }
 
 function WorkAreaInner({ toolComponent, toolName }: WorkAreaProps) {
-  const { register } = useSaveContext()
+  const { register, restore } = useSaveContext()
   const contentRef = useRef<HTMLDivElement>(null)
+  const pathname = usePathname()
+  const toolSlug = pathname?.split('/').filter(Boolean).pop() ?? ''
 
   // Universal DOM-based fallback — runs once on mount so the save button is
   // always active. Tool components that call useSaveState() will override this
@@ -72,6 +75,24 @@ function WorkAreaInner({ toolComponent, toolName }: WorkAreaProps) {
 
     register(get, restore)
   }, [register])
+
+  // Auto-restore a session queued by the dashboard's "Restore" button.
+  // Delay 50ms so child useSaveState() effects run first and override the DOM
+  // fallback with the tool's own richer restorer before we call restore().
+  useEffect(() => {
+    if (!toolSlug) return
+    const pendingKey = `l2n:pending-restore:${toolSlug}`
+    const raw = localStorage.getItem(pendingKey)
+    if (!raw) return
+    const timer = setTimeout(() => {
+      try {
+        const session = JSON.parse(raw) as SavedSession
+        localStorage.removeItem(pendingKey)
+        restore(session)
+      } catch {}
+    }, 50)
+    return () => clearTimeout(timer)
+  }, [toolSlug, restore])
 
   const handleFullscreen = () => {
     try {

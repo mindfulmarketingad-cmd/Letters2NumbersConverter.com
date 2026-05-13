@@ -581,6 +581,18 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Audio Tools',
     href: '/tools/lufs-meter',
   },
+  'rot13-decoder': {
+    name: 'ROT13 Decoder & Encoder',
+    description: 'Instantly decode or encode any text with ROT13 — the self-inverse cipher used for Reddit spoilers, Usenet posts, and puzzle hints. No sign-up. Works in your browser.',
+    category: 'Cipher',
+    href: '/tools/rot13-decoder',
+  },
+  'caesar-cipher-decoder': {
+    name: 'Caesar Cipher Decoder & Encoder',
+    description: 'Decode or encode any Caesar cipher with a shift slider (1–25) and instant brute-force mode that shows all 25 shifts ranked by English likelihood.',
+    category: 'Cipher',
+    href: '/tools/caesar-cipher-decoder',
+  },
 }
 
 export function getToolRegistry() {

@@ -99,6 +99,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'get-song-bpm',
     'tempo-tapper',
     'lufs-meter',
+    'rot13-decoder',
+    'caesar-cipher-decoder',
   ]
 
   const blogRoutes = [
@@ -145,6 +147,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'skip-cipher',
     'understanding-ascii-character-encoding',
     'what-is-url-encoding',
+    'rot13-cipher-explained',
+    'rot13-python',
+    'rot13-vs-caesar-cipher',
+    'rot13-reddit-decoder',
+    'caesar-cipher-examples',
+    'caesar-cipher-history',
+    'caesar-cipher-shift-13',
+    'how-to-crack-caesar-cipher',
   ]
 
   const playRoutes = [

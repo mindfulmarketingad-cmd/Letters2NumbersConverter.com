@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     description: "Decode Morse code and convert to Base64 format instantly.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/morse-code-to-base64",
-  },
+  images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'Morse Code to Base64 Converter | Letters2NumbersConverter.com' }],
+    },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/morse-code-to-base64",
   },

@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     description: "Decrypt Vernam (one-time pad) ciphertext with the original key. Supports Vigenere and XOR decryption modes.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/vernam-cipher-decoder",
-  },
+  images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'Vernam Cipher Decoder | Letters2NumbersConverter.com' }],
+    },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/vernam-cipher-decoder",
   },

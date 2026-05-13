@@ -2,6 +2,7 @@
 
 import { ToolLayout } from '@/components/tool-layout'
 import { RandomStringGenerator } from '@/components/random-string-generator'
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
 
 export default function RandomStringGeneratorPage() {
   return (

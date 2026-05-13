@@ -3,6 +3,24 @@ import { getToolData } from "@/lib/tool-data"
 import { AudioSpectrogram } from "@/components/audio-spectrogram"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
 import { ToolPageWrapper } from "@/components/tool-page-wrapper"
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/audio-spectrogram-decoder`
+
+const toolSchema = generateToolPageSchema(
+  "Spectrogram Decoder",
+  "Decode audio spectrograms and analyze frequencies with advanced visualization",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Spectrogram Decoder", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: "Spectrogram Decoder",
@@ -12,7 +30,11 @@ export const metadata: Metadata = {
     title: "Spectrogram Decoder",
     description: "Decode audio spectrograms and analyze frequencies with advanced visualization",
     type: "website",
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "Spectrogram Decoder" }],
   },
+  alternates: { canonical: PAGE_URL },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "Spectrogram Decoder", description: "Decode audio spectrograms and analyze frequencies with advanced visualization", images: [`${BASE_URL}/og-image.png`] },
 }
 
 
@@ -20,7 +42,10 @@ const toolData: ToolData = getToolData("audio-spectrogram-decoder")
 
 export default function AudioSpectrogramDecoderPage() {
   return (
-    <ToolPageWrapper toolSlug="audio-spectrogram-decoder">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="audio-spectrogram-decoder">
     <ToolLayout
       toolId="audio-spectrogram-decoder"
       toolName="Spectrogram Decoder"
@@ -29,5 +54,6 @@ export default function AudioSpectrogramDecoderPage() {
       toolData={toolData}
     />
     </ToolPageWrapper>
+    </>
   )
 }

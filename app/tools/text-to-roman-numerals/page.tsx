@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'Text to Roman Numerals | Free Converter & Decoder',
     description: 'Convert any text or number to Roman numerals instantly. Choose your separator, decode Roman numerals back to text, and view the full reference chart.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Text to Roman Numerals' }],
     url: PAGE_URL,
   },
   twitter: {

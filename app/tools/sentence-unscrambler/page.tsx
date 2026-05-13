@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'Sentence Unscrambler | Fix Scrambled Words Instantly',
     description: 'Paste any scrambled sentence and get a correctly ordered result in seconds. Free, private, and browser-based.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Sentence Unscrambler' }],
     url: PAGE_URL,
   },
   twitter: {

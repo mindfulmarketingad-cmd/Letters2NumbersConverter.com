@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'Tempo Tapper | Free Online BPM Tap Tempo Calculator',
     description: 'Tap or press Space in time with the music to calculate BPM instantly. No audio file needed. Works entirely in your browser.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Tempo Tapper — Free Online BPM Tap Tempo Tool' }],
     url: PAGE_URL,
   },
   twitter: {

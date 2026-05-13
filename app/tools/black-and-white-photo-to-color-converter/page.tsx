@@ -3,6 +3,24 @@ import { BlackAndWhitePhotoToColorConverter } from '@/components/black-and-white
 import { ToolPageWrapper } from '@/components/tool-page-wrapper'
 import { ToolLayout, type ToolData } from '@/components/tool-layout'
 import { getToolData } from '@/lib/tool-data'
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/black-and-white-photo-to-color-converter`
+
+const toolSchema = generateToolPageSchema(
+  "black and white photo to color converter | Letters2NumbersConverter.com",
+  "Black and white photo to color converter - Transform your grayscale photos into vibrant color images instantly. Free online tool for restoring vintage photographs.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "black and white photo to color converter | Letters2NumbersConverter.com", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: 'black and white photo to color converter | Letters2NumbersConverter.com',
@@ -13,6 +31,7 @@ export const metadata: Metadata = {
     description: 'Transform black and white photos into vibrant color images using advanced colorization technology.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/black-and-white-photo-to-color-converter',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'black and white photo to color converter | Letters2NumbersConverter.com' }],
     images: [
       {
         url: '/images/black-and-white-photo-to-color-converter-preview.jpg',
@@ -31,13 +50,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.letters2numbersconverter.com/tools/black-and-white-photo-to-color-converter',
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 }
 
 const toolData: ToolData = getToolData('black-and-white-photo-to-color-converter')
 
 export default function BlackAndWhitePhotoToColorConverterPage() {
   return (
-    <ToolPageWrapper toolSlug="black-and-white-photo-to-color-converter">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="black-and-white-photo-to-color-converter">
       <ToolLayout
         toolId="black-and-white-photo-to-color-converter"
         toolName="Black and White Photo to Color Converter"
@@ -46,5 +69,6 @@ export default function BlackAndWhitePhotoToColorConverterPage() {
         toolData={toolData}
       />
     </ToolPageWrapper>
+    </>
   )
 }

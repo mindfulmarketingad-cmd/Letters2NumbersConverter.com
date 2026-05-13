@@ -3,6 +3,24 @@ import { getToolData } from "@/lib/tool-data"
 import { PxVwConverter } from "@/components/px-vw-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
 import { ToolPageWrapper } from "@/components/tool-page-wrapper"
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/px-vw-converter`
+
+const toolSchema = generateToolPageSchema(
+  "PX to VW Converter - Pixels to Viewport Width Calculator",
+  "Free online PX to VW converter for converting pixels to viewport width units. Calculate responsive CSS units for fluid typography, responsive design, and mobile-first layouts. Support for multiple breakpoints and device sizes.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "PX to VW Converter - Pixels to Viewport Width Calculator", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: "PX to VW Converter - Pixels to Viewport Width Calculator",
@@ -27,10 +45,13 @@ export const metadata: Metadata = {
     description: "Convert between pixels (px) and viewport width (vw) units instantly. Perfect for responsive web design, fluid typography, and CSS calculations.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/px-vw-converter",
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "PX to VW Converter - Pixels to Viewport Width Calculator" }],
   },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/px-vw-converter",
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "PX to VW Converter - Pixels to Viewport Width Calculator", description: "Free online PX to VW converter for converting pixels to viewport width units. Calculate responsive CSS units for fluid typography, responsive design, and mobile-first layouts. Support for multiple bre", images: [`${BASE_URL}/og-image.png`] },
 }
 
 
@@ -38,7 +59,10 @@ const toolData: ToolData = getToolData("px-vw-converter")
 
 export default function PxVwConverterPage() {
   return (
-    <ToolPageWrapper toolSlug="px-vw-converter">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="px-vw-converter">
     <ToolLayout
       toolId="px-vw-converter"
       toolName="PX To VW Converter"
@@ -47,5 +71,6 @@ export default function PxVwConverterPage() {
       toolData={toolData}
     />
     </ToolPageWrapper>
+    </>
   )
 }

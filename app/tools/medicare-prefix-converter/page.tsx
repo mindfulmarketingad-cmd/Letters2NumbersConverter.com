@@ -2,6 +2,24 @@ import { Metadata } from "next"
 import { MedicarePrefixConverter } from "@/components/medicare-prefix-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
 import { ToolPageWrapper } from "@/components/tool-page-wrapper"
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/medicare-prefix-converter`
+
+const toolSchema = generateToolPageSchema(
+  "Medicare Prefix Converter - Decode Medicare ID Prefixes",
+  "Free Medicare prefix converter to identify and decode Medicare prefixes (A-T letters). Understand what each Medicare prefix means, beneficiary types, and eligibility information with our easy-to-use converter tool.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Medicare Prefix Converter - Decode Medicare ID Prefixes", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: "Medicare Prefix Converter - Decode Medicare ID Prefixes",
@@ -23,10 +41,13 @@ export const metadata: Metadata = {
     description: "Convert and identify Medicare prefixes with our free online tool. Understand beneficiary types and coverage eligibility.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/medicare-prefix-converter",
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "Medicare Prefix Converter - Decode Medicare ID Prefixes" }],
   },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/medicare-prefix-converter",
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "Medicare Prefix Converter - Decode Medicare ID Prefixes", description: "Free Medicare prefix converter to identify and decode Medicare prefixes (A-T letters). Understand what each Medicare prefix means, beneficiary types, and eligibility information with our easy-to-use c", images: [`${BASE_URL}/og-image.png`] },
 }
 
 const toolData: ToolData = {
@@ -75,7 +96,10 @@ const toolData: ToolData = {
 
 export default function MedicarePrefixConverterPage() {
   return (
-    <ToolPageWrapper toolSlug="medicare-prefix-converter">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="medicare-prefix-converter">
       <ToolLayout
         toolId="medicare-prefix-converter"
         toolName="Medicare Prefix Converter"
@@ -84,5 +108,6 @@ export default function MedicarePrefixConverterPage() {
         toolData={toolData}
       />
     </ToolPageWrapper>
+    </>
   )
 }

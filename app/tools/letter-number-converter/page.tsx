@@ -2,6 +2,24 @@ import { Metadata } from "next"
 import { LetterNumberConverter } from "@/components/letter-number-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
 import { ToolPageWrapper } from "@/components/tool-page-wrapper"
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/letter-number-converter`
+
+const toolSchema = generateToolPageSchema(
+  "Letter to Number Converter - A1Z26 Cipher & Alphanumeric Encoding",
+  "Free online letter to number converter using A1Z26 cipher. Convert letters to numbers, numbers to letters with multiple encoding methods (ASCII, HEX, BINARY, A0Z25). Supports 25+ languages. Perfect for cryptography, coding, puzzles, and educational use.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Letter to Number Converter - A1Z26 Cipher & Alphanumeric Encoding", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: "Letter to Number Converter - A1Z26 Cipher & Alphanumeric Encoding",
@@ -27,10 +45,13 @@ export const metadata: Metadata = {
     description: "Convert letters to numbers and numbers to letters using A1Z26 and other encoding methods. Free online converter with 25+ language support.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/letter-number-converter",
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "Letter to Number Converter - A1Z26 Cipher & Alphanumeric Encoding" }],
   },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/letter-number-converter",
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "Letter to Number Converter - A1Z26 Cipher & Alphanumeric Encoding", description: "Free online letter to number converter using A1Z26 cipher. Convert letters to numbers, numbers to letters with multiple encoding methods (ASCII, HEX, BINARY, A0Z25). Supports 25+ languages. Perfect fo", images: [`${BASE_URL}/og-image.png`] },
 }
 
 const toolData: ToolData = {
@@ -83,7 +104,10 @@ const toolData: ToolData = {
 
 export default function LetterNumberConverterPage() {
   return (
-    <ToolPageWrapper toolSlug="letter-number-converter">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="letter-number-converter">
     <ToolLayout
       toolId="letters-to-numbers"
       toolName="Letter to Number Converter"
@@ -92,5 +116,6 @@ export default function LetterNumberConverterPage() {
       toolData={toolData}
     />
     </ToolPageWrapper>
+    </>
   )
 }

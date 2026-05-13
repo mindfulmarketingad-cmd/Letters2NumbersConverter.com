@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'ID3 Metadata Viewer | Free Audio Tag Inspector',
     description: 'Inspect ID3 tags in MP3, MP4, M4A, AIFF, and WAV files. View title, artist, album art, BPM, and more — all in your browser.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'ID3 Metadata Viewer' }],
     url: PAGE_URL,
   },
   twitter: {

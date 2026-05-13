@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     description: "Convert Medicare IDs, PTAN, and DCN to IVR telephone keypad sequences quickly and accurately.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/ivr-alphanumeric-conversion-tool",
-  },
+  images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'IVR Alphanumeric Conversion Tool | Letters2NumbersConverter.com' }],
+    },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/ivr-alphanumeric-conversion-tool",
   },

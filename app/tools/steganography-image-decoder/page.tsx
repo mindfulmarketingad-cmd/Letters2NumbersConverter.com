@@ -22,6 +22,7 @@ export const metadata: Metadata = {
       'Extract hidden information from steganographic images. Decode text, messages, and embedded images with our free online tool.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/steganography-image-decoder',
+    images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'Steganography Image Decoder' }],
     images: [
       {
         url: 'https://www.letters2numbersconverter.com/images/steganography-decoder-preview.jpg',

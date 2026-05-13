@@ -28,7 +28,8 @@ export const metadata: Metadata = {
     description: "Convert RGB colors to Pantone (PMS) format instantly with visual color picker and multiple matching variants for accurate print color reproduction.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/rgb-to-pantone-color-converter",
-  },
+  images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'RGB To Pantone Color Converter - Convert RGB to PMS Colors' }],
+    },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/rgb-to-pantone-color-converter",
   },

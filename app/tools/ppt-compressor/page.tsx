@@ -3,6 +3,24 @@ import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { ToolLayout } from '@/components/tool-layout'
 import { PPTCompressor } from '@/components/ppt-compressor'
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/ppt-compressor`
+
+const toolSchema = generateToolPageSchema(
+  "PPT Compressor - Free Online PowerPoint File Compression",
+  "PPT Compressor compresses PowerPoint presentations instantly. Reduce .ppt and .pptx file sizes without losing quality. No upload required - processes entirely in your browser.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "PPT Compressor - Free Online PowerPoint File Compression", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: 'PPT Compressor - Free Online PowerPoint File Compression',
@@ -12,7 +30,11 @@ export const metadata: Metadata = {
     title: 'PPT Compressor | Compress PowerPoint Files Online',
     description: 'Compress your PowerPoint presentations instantly with our free online PPT compressor. Works with .ppt and .pptx files.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "PPT Compressor - Free Online PowerPoint File Compression" }],
   },
+  alternates: { canonical: PAGE_URL },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "PPT Compressor - Free Online PowerPoint File Compression", description: "PPT Compressor compresses PowerPoint presentations instantly. Reduce .ppt and .pptx file sizes without losing quality. No upload required - processes entirely in your browser.", images: [`${BASE_URL}/og-image.png`] },
 }
 
 export default function PPTCompressorPage() {

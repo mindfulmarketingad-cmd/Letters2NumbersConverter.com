@@ -3,6 +3,24 @@ import { AlphanumericConversionTool } from "@/components/alphanumeric-conversion
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
 import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/alphanumeric-conversion-tool`
+
+const toolSchema = generateToolPageSchema(
+  "Alphanumeric Conversion Tool",
+  "Alphanumeric Conversion Tool - Free online converter to transform letters to numbers and numbers to letters instantly. Support for multiple encoding formats including A=1, ASCII, HEX, and Binary.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Alphanumeric Conversion Tool", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: "Alphanumeric Conversion Tool",
@@ -13,6 +31,7 @@ export const metadata: Metadata = {
     description: "Convert between letters and numbers instantly with the Alphanumeric Conversion Tool. Multiple encoding formats supported.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/alphanumeric-conversion-tool",
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Alphanumeric Conversion Tool' }],
     images: [
       {
         url: "/images/alphanumeric-conversion-tool-preview.jpg",
@@ -31,13 +50,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/alphanumeric-conversion-tool",
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 }
 
 const toolData: ToolData = getToolData("alphanumeric-conversion-tool")
 
 export default function AlphanumericConversionToolPage() {
   return (
-    <ToolPageWrapper toolSlug="alphanumeric-conversion-tool">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="alphanumeric-conversion-tool">
       <ToolLayout
         toolId="alphanumeric-conversion-tool"
         toolName="What Is An Alphanumeric Conversion Tool?"
@@ -46,5 +69,6 @@ export default function AlphanumericConversionToolPage() {
         toolData={toolData}
       />
     </ToolPageWrapper>
+    </>
   )
 }

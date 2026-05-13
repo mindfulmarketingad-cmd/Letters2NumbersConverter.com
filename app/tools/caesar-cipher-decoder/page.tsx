@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'Caesar Cipher Decoder & Encoder | Free Online Tool',
     description: 'Decode or encode any Caesar cipher with a shift slider (1–25) and instant brute-force mode that shows all 25 shifts ranked by English likelihood.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Caesar Cipher Decoder & Encoder — Decode Any Shift Online Free' }],
     url: PAGE_URL,
   },
   twitter: {

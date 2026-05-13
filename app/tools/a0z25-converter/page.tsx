@@ -3,6 +3,24 @@ import { A0Z25Converter } from '@/components/a0z25-converter'
 import { ToolPageWrapper } from '@/components/tool-page-wrapper'
 import { ToolLayout, type ToolData } from '@/components/tool-layout'
 import { getToolData } from '@/lib/tool-data'
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/a0z25-converter`
+
+const toolSchema = generateToolPageSchema(
+  "A0Z25 Converter | Convert Letters to Numbers Online",
+  "A0Z25 Converter - Free online tool to convert letters to numbers (A=0, Z=25) and decode numbers back to letters. Perfect for cryptography, coding, and text encoding.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "A0Z25 Converter | Convert Letters to Numbers Online", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: 'A0Z25 Converter | Convert Letters to Numbers Online',
@@ -13,6 +31,7 @@ export const metadata: Metadata = {
     description: 'Convert between letters and A0Z25 numbers instantly with this free online converter.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/a0z25-converter',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'A0Z25 Converter | Convert Letters to Numbers Online' }],
     images: [
       {
         url: '/images/a0z25-converter-preview.jpg',
@@ -31,13 +50,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.letters2numbersconverter.com/tools/a0z25-converter',
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 }
 
 const toolData: ToolData = getToolData('a0z25-converter')
 
 export default function A0Z25ConverterPage() {
   return (
-    <ToolPageWrapper toolSlug="a0z25-converter">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="a0z25-converter">
       <ToolLayout
         toolId="a0z25-converter"
         toolName="A0Z25 Converter"
@@ -46,5 +69,6 @@ export default function A0Z25ConverterPage() {
         toolData={toolData}
       />
     </ToolPageWrapper>
+    </>
   )
 }

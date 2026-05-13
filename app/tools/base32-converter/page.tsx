@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     title: 'Base32 Converter - Decode Encode Instantly',
     description: 'Encode or decode Base32 instantly. Supports all major variants — RFC 4648, Base32 Hex, z-base-32, and Crockford\'s Base32.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Base32 Converter - Decode Encode Instantly' }],
     url: PAGE_URL,
   },
   twitter: {

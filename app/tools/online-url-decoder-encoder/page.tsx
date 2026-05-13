@@ -3,6 +3,24 @@ import { OnlineUrlDecoderEncoder } from '@/components/online-url-decoder-encoder
 import { ToolPageWrapper } from '@/components/tool-page-wrapper'
 import { ToolLayout, type ToolData } from '@/components/tool-layout'
 import { getToolData } from '@/lib/tool-data'
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/online-url-decoder-encoder`
+
+const toolSchema = generateToolPageSchema(
+  "Online URL Decoder Encoder | Instant URL Encoding/Decoding",
+  "Online URL Decoder Encoder - Instantly decode and encode URLs. Free tool for web developers, API testing, and security professionals. Supports recursive decoding and batch processing.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Online URL Decoder Encoder | Instant URL Encoding/Decoding", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: 'Online URL Decoder Encoder | Instant URL Encoding/Decoding',
@@ -13,6 +31,7 @@ export const metadata: Metadata = {
     description: 'Decode and encode URLs instantly with our free online tool. Perfect for web development and API testing.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/online-url-decoder-encoder',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Online URL Decoder Encoder | Instant URL Encoding/Decoding' }],
     images: [
       {
         url: '/images/online-url-decoder-encoder-preview.jpg',
@@ -31,13 +50,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.letters2numbersconverter.com/tools/online-url-decoder-encoder',
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 }
 
 const toolData: ToolData = getToolData('online-url-decoder-encoder')
 
 export default function OnlineUrlDecoderEncoderPage() {
   return (
-    <ToolPageWrapper toolSlug="online-url-decoder-encoder">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="online-url-decoder-encoder">
       <ToolLayout
         toolId="online-url-decoder-encoder"
         toolName="Online URL Decoder Encoder"
@@ -46,5 +69,6 @@ export default function OnlineUrlDecoderEncoderPage() {
         toolData={toolData}
       />
     </ToolPageWrapper>
+    </>
   )
 }

@@ -1,6 +1,24 @@
 import type { Metadata } from 'next';
 import { ToolLayout } from '@/components/tool-layout';
 import MedicareIdConverter from '@/components/medicare-id-converter';
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/medicare-id-converter`
+
+const toolSchema = generateToolPageSchema(
+  "Medicare ID Converter - HIC vs MBI Identifier Tool",
+  "Free online Medicare ID Converter to identify and validate Medicare numbers. Distinguish between HIC (old format) and MBI (new format) identifiers with detailed information.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Medicare ID Converter - HIC vs MBI Identifier Tool", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: 'Medicare ID Converter - HIC vs MBI Identifier Tool',
@@ -20,10 +38,13 @@ export const metadata: Metadata = {
     description: 'Convert and validate Medicare ID numbers - identify HIC vs MBI formats instantly',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/medicare-id-converter',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "Medicare ID Converter - HIC vs MBI Identifier Tool" }],
   },
   alternates: {
     canonical: 'https://www.letters2numbersconverter.com/tools/medicare-id-converter',
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "Medicare ID Converter - HIC vs MBI Identifier Tool", description: "Free online Medicare ID Converter to identify and validate Medicare numbers. Distinguish between HIC (old format) and MBI (new format) identifiers with detailed information.", images: [`${BASE_URL}/og-image.png`] },
 };
 
 const toolData = {

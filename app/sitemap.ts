@@ -158,6 +158,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'caesar-cipher-history',
     'caesar-cipher-shift-13',
     'how-to-crack-caesar-cipher',
+    'vigenere-cipher-decoder',
   ]
 
   const playRoutes = [

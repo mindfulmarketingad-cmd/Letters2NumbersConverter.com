@@ -989,6 +989,26 @@ export const getToolData = (toolId: string) => {
         { title: 'Independent Artists & Bedroom Producers', description: 'Getting professional loudness analysis without expensive metering plugins — understanding whether a mix is too hot or too quiet for streaming before release.' },
       ],
     },
+    'caesar-cipher-decoder': {
+      howItWorks: 'Type or paste ciphertext into the input box. Use the shift slider (1–25) or +/− buttons to set the shift value, then select Decode to reverse the shift or Encode to apply it. The output updates instantly. If you do not know the shift, click "Show all 25 shifts" to reveal every possible decoded version simultaneously, each scored by English-language likelihood. The most probable shift is marked with a star — click it to apply.',
+      features: [
+        'Shift slider from 1 to 25 with keyboard-accessible +/− buttons',
+        'Encode and Decode modes — switch without clearing text',
+        '"13 = ROT13" label on the slider highlights the self-inverse shift',
+        'Best-guess chip auto-detects the most likely shift for unknown ciphers',
+        'Brute-force panel shows all 25 shifts ranked by English-likelihood score',
+        'Click any brute-force row to instantly apply that shift',
+        'Copy to clipboard and clear buttons',
+        '100% browser-based — your text never leaves your device',
+      ],
+      whoIsItFor: [
+        { title: 'Puzzle & Escape Room Enthusiasts', description: 'Cracking Caesar-shifted clues, hints, and answers without knowing the shift in advance — just paste the ciphertext and use brute-force mode.' },
+        { title: 'CTF Competitors', description: 'Quickly testing all 25 Caesar shifts against captured ciphertext during Capture the Flag cryptography challenges.' },
+        { title: 'Students & Cryptography Learners', description: 'Learning how Caesar ciphers work by encoding and decoding messages, exploring all 25 shift possibilities, and seeing how English-likelihood scoring identifies plaintext.' },
+        { title: 'Teachers & Educators', description: 'Creating and grading Caesar cipher exercises by encoding messages with a chosen shift and decoding submitted answers.' },
+        { title: 'Writers & Game Designers', description: 'Encoding secret messages, puzzle answers, or in-game lore with any shift value and verifying the ciphertext is correctly reversible.' },
+      ],
+    },
     'certificate-decoder': {
       howItWorks: 'Paste a PEM block, raw Base64, or hex-encoded DER certificate, CSR, or private key into the text area — or switch to "File / binary" mode and drop a .pem, .crt, .cer, .der, .p7b, or .pfx file. Click "Decode" and the tool parses the ASN.1 structure entirely in your browser, displaying the subject, issuer, validity dates, SANs, public key details, signature algorithm, and all extensions in a clean grouped panel. No data is ever sent to a server.',
       features: [

@@ -100,6 +100,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'tempo-tapper',
     'lufs-meter',
     'rot13-decoder',
+    'caesar-cipher-decoder',
   ]
 
   const blogRoutes = [
@@ -150,6 +151,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'rot13-python',
     'rot13-vs-caesar-cipher',
     'rot13-reddit-decoder',
+    'caesar-cipher-examples',
+    'caesar-cipher-history',
+    'caesar-cipher-shift-13',
+    'how-to-crack-caesar-cipher',
   ]
 
   const playRoutes = [

@@ -1049,6 +1049,27 @@ export const getToolData = (toolId: string) => {
         { title: 'QA Engineers', description: 'Verifying that encoded SAML assertions match expected XML schemas and contain the correct attributes and conditions.' },
       ],
     },
+    'ascii-decoder': {
+      howItWorks: 'Choose a mode (Decode or Encode) and a number format (Decimal, Hex, Binary, or Octal). In Decode mode, paste space- or comma-separated ASCII codes and the tool converts each code to the corresponding character. In Encode mode, type any ASCII text and the tool outputs the numeric codes in your chosen format with your preferred separator. Invalid codes and non-ASCII characters are flagged with descriptive error messages. Click any row in the ASCII reference table to insert that character or code directly into the input.',
+      features: [
+        'Decode decimal, hex, binary, or octal ASCII codes to text',
+        'Encode any ASCII text to codes in any supported format',
+        'Handles space-, comma-, and newline-separated token input',
+        'Separator options for output: Space, Comma, Newline, or None',
+        'Descriptive error messages for invalid or out-of-range codes',
+        'Clickable ASCII reference table (characters 32–126)',
+        'Swap button to flip input and output instantly',
+        'Copy output to clipboard in one click',
+        '100% browser-based — no data leaves your device',
+      ],
+      whoIsItFor: [
+        { title: 'Developers & Programmers', description: 'Quickly decoding ASCII code dumps from logs, network captures, or debugging sessions to readable text without writing a script.' },
+        { title: 'Students & Educators', description: 'Learning and teaching character encoding fundamentals — how letters map to numbers in decimal, hex, binary, and octal bases.' },
+        { title: 'CTF & Puzzle Solvers', description: 'Decoding ASCII-encoded strings in Capture the Flag challenges, escape rooms, and cipher puzzles.' },
+        { title: 'Security Analysts', description: 'Decoding obfuscated payloads or shellcode stored as ASCII decimal or hex sequences during malware analysis.' },
+        { title: 'Hobbyist Coders', description: 'Exploring how computers represent text as numbers and experimenting with different numeric bases.' },
+      ],
+    },
     'certificate-decoder': {
       howItWorks: 'Paste a PEM block, raw Base64, or hex-encoded DER certificate, CSR, or private key into the text area — or switch to "File / binary" mode and drop a .pem, .crt, .cer, .der, .p7b, or .pfx file. Click "Decode" and the tool parses the ASN.1 structure entirely in your browser, displaying the subject, issuer, validity dates, SANs, public key details, signature algorithm, and all extensions in a clean grouped panel. No data is ever sent to a server.',
       features: [

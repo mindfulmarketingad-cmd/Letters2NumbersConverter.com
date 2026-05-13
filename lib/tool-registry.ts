@@ -605,6 +605,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Encoder',
     href: '/tools/saml-encoder',
   },
+  'ascii-decoder': {
+    name: 'ASCII Decoder and Encoder',
+    description: 'Decode ASCII codes (decimal, hex, binary, octal) to readable text, or encode text back to ASCII codes. Includes a clickable ASCII reference table.',
+    category: 'Decoder',
+    href: '/tools/ascii-decoder',
+  },
 }
 
 export function getToolRegistry() {

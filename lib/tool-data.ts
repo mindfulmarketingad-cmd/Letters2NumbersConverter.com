@@ -1049,6 +1049,26 @@ export const getToolData = (toolId: string) => {
         { title: 'QA Engineers', description: 'Verifying that encoded SAML assertions match expected XML schemas and contain the correct attributes and conditions.' },
       ],
     },
+    'base64-encoder-decoder': {
+      howItWorks: 'Select a mode (Encode or Decode) and a charset (Standard or URL-safe). In Encode mode, type or paste any text — the tool converts it to UTF-8 bytes first, then produces the Base64 string instantly. In Decode mode, paste a Base64 string and the tool reverses the process, decoding the bytes back to readable UTF-8 text. Switch to URL-safe mode when your Base64 output will appear in a URL or filename — it replaces + with -, / with _, and omits = padding.',
+      features: [
+        'Encode any text to Standard Base64 (RFC 4648 §4)',
+        'Encode to URL-safe Base64 (RFC 4648 §5) with - and _ instead of + and /',
+        'Decode Standard and URL-safe Base64 back to text',
+        'Full UTF-8 support — handles emoji, accented letters, CJK, and all Unicode',
+        'Shows input/output character counts and encoding size ratio',
+        'Swap button to instantly flip encode ↔ decode with current output',
+        'Clear error messages for invalid Base64 input',
+        '100% browser-based — no data leaves your device',
+      ],
+      whoIsItFor: [
+        { title: 'Developers & Engineers', description: 'Encoding API keys, tokens, binary payloads, and credentials for use in HTTP headers, JSON configs, or environment variables.' },
+        { title: 'Security Analysts', description: 'Decoding Base64-encoded payloads found in malware samples, phishing emails, SAML assertions, or JWT tokens during security analysis.' },
+        { title: 'Web Developers', description: 'Encoding images or fonts as Base64 data URIs for embedding directly in HTML/CSS, or decoding Base64 strings from API responses.' },
+        { title: 'DevOps & SREs', description: 'Decoding Kubernetes secrets (which are Base64-encoded), Docker credentials, or TLS certificate data stored in base64 format.' },
+        { title: 'Students & Learners', description: 'Understanding how Base64 encoding works as a fundamental part of learning about data encoding, email protocols (MIME), and web security.' },
+      ],
+    },
     'ascii-decoder': {
       howItWorks: 'Choose a mode (Decode or Encode) and a number format (Decimal, Hex, Binary, or Octal). In Decode mode, paste space- or comma-separated ASCII codes and the tool converts each code to the corresponding character. In Encode mode, type any ASCII text and the tool outputs the numeric codes in your chosen format with your preferred separator. Invalid codes and non-ASCII characters are flagged with descriptive error messages. Click any row in the ASCII reference table to insert that character or code directly into the input.',
       features: [

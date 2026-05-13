@@ -1,8 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from "next"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
   title: "Blog | Letters to Numbers Converter Tool",
@@ -184,7 +182,6 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <main className="min-h-screen bg-background">
-      <SiteHeader />
       
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -246,7 +243,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <SiteFooter />
     </main>
   )
 }

@@ -2,8 +2,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
 import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
@@ -17,7 +15,6 @@ export const metadata: Metadata = {
 export default function AlphanumericConverterPage() {
   return (
     <div className="min-h-screen bg-background">
-      <SiteHeader />
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         <article>
           <Link 
@@ -203,7 +200,6 @@ export default function AlphanumericConverterPage() {
           </div>
         </article>
       </main>
-      <SiteFooter />
     </div>
   )
 }

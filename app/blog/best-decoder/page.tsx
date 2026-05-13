@@ -2,8 +2,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
 import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
@@ -47,7 +45,6 @@ const structuredData = {
 export default function BestDecoderPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <SiteHeader />
 
       <main className="flex-1">
         <article className="py-12 sm:py-16">
@@ -227,7 +224,6 @@ export default function BestDecoderPage() {
       </main>
 
       <AllToolsSection />
-      <SiteFooter />
     </div>
   )
 }

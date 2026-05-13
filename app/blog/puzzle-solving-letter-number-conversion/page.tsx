@@ -1,8 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
 import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 import type { Metadata } from "next"
@@ -17,7 +15,6 @@ export const metadata: Metadata = {
 export default function PuzzleSolvingLetterNumberConversion() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <SiteHeader />
 
       <main className="flex-1">
         <article className="py-12 sm:py-16">
@@ -114,7 +111,6 @@ export default function PuzzleSolvingLetterNumberConversion() {
         </article>
       </main>
 
-      <SiteFooter />
     </div>
   )
 }

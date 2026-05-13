@@ -101,6 +101,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'lufs-meter',
     'rot13-decoder',
     'caesar-cipher-decoder',
+    'morse-code-decoder-and-encoder',
+    'saml-encoder',
+    'ascii-decoder',
   ]
 
   const blogRoutes = [

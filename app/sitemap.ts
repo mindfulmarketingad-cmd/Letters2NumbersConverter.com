@@ -99,6 +99,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'get-song-bpm',
     'tempo-tapper',
     'lufs-meter',
+    'rot13-decoder',
   ]
 
   const blogRoutes = [
@@ -145,6 +146,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'skip-cipher',
     'understanding-ascii-character-encoding',
     'what-is-url-encoding',
+    'rot13-cipher-explained',
+    'rot13-python',
+    'rot13-vs-caesar-cipher',
+    'rot13-reddit-decoder',
   ]
 
   const playRoutes = [

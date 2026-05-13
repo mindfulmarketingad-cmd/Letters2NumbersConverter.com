@@ -909,6 +909,26 @@ export const getToolData = (toolId: string) => {
         { title: 'Developers & Digital Forensics', description: 'Inspecting raw EXIF IFD entries from camera output to debug metadata pipelines or analyse image provenance.' },
       ],
     },
+    'rot13-decoder': {
+      howItWorks: 'Paste any plain text or ROT13-encoded text into the input box and the transformed version appears instantly in the output panel — no button press needed. ROT13 is self-inverse: it shifts every letter 13 positions along the alphabet, and because the alphabet has 26 letters, applying the shift twice returns to the original. The same operation encodes and decodes. Non-letter characters (numbers, punctuation, spaces) pass through unchanged.',
+      features: [
+        'Real-time ROT13 encoding and decoding as you type',
+        'Self-inverse — the same tool encodes and decodes',
+        'Swap button to move output back to input for chaining',
+        'Character, word, and shifted-letter statistics',
+        'Expandable full ROT13 alphabet reference table',
+        'One-click copy to clipboard',
+        '100% browser-based — your text never leaves your device',
+        'No sign-up or installation required',
+      ],
+      whoIsItFor: [
+        { title: 'Reddit & Forum Users', description: 'Decoding ROT13 spoiler text in Reddit comments, Usenet posts, and forum threads where ROT13 was used before native spoiler tags existed.' },
+        { title: 'Puzzle & Escape Room Enthusiasts', description: 'Decoding ROT13-encoded hints, answers, or clues embedded in puzzle games, escape rooms, and alternate reality games.' },
+        { title: 'Developers & Programmers', description: 'Quickly verifying ROT13 output from code, decoding obfuscated strings in source files, or testing cipher implementations.' },
+        { title: 'Students & Cryptography Learners', description: 'Understanding the simplest self-inverse cipher as a foundation for learning more complex substitution and transposition ciphers.' },
+        { title: 'Writers & Game Designers', description: 'Encoding spoilers, hints, and puzzle answers in ROT13 for publication in forums, blog posts, or game documentation.' },
+      ],
+    },
     'get-song-bpm': {
       howItWorks: 'Upload any audio file and click "Detect BPM". The tool decodes the audio entirely in your browser, mixes it down to mono, computes an energy envelope by windowing the signal, calculates onset strength (the rate of energy change between windows), and runs autocorrelation over the onset signal to find the dominant beat period. Parabolic interpolation refines the peak for sub-sample precision, and the period is converted to BPM. The confidence score indicates how clearly the beat period stands out.',
       features: [

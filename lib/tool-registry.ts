@@ -581,6 +581,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Audio Tools',
     href: '/tools/lufs-meter',
   },
+  'rot13-decoder': {
+    name: 'ROT13 Decoder & Encoder',
+    description: 'Instantly decode or encode any text with ROT13 — the self-inverse cipher used for Reddit spoilers, Usenet posts, and puzzle hints. No sign-up. Works in your browser.',
+    category: 'Cipher',
+    href: '/tools/rot13-decoder',
+  },
 }
 
 export function getToolRegistry() {

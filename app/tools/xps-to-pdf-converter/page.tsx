@@ -24,7 +24,8 @@ export const metadata: Metadata = {
     description: 'Convert XPS files to PDF format instantly with our free online tool.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/xps-to-pdf-converter',
-  },
+  images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'XPS File To PDF - Convert XPS To PDF Online' }],
+    },
   alternates: {
     canonical: 'https://www.letters2numbersconverter.com/tools/xps-to-pdf-converter',
   },

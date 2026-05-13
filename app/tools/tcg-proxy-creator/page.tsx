@@ -3,6 +3,7 @@
 import type { Metadata } from 'next'
 import { ToolLayout } from '@/components/tool-layout'
 import { TCGProxyCreator } from '@/components/tcg-proxy-creator'
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
 
 export default function TCGProxyCreatorPage() {
   return (

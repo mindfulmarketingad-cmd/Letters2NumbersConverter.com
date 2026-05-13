@@ -1,6 +1,24 @@
 import type { Metadata } from 'next'
 import { ToolLayout } from '@/components/tool-layout'
 import { PieGraphMaker } from '@/components/pie-graph-maker'
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/pie-graph-maker`
+
+const toolSchema = generateToolPageSchema(
+  "Pie Graph Maker | Free Online Pie Chart Creator",
+  "Pie Graph Maker - Create beautiful, interactive pie charts online instantly. Customize colors, labels, and styles. No signup needed. Download as PNG or embed on your website.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Pie Graph Maker | Free Online Pie Chart Creator", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: 'Pie Graph Maker | Free Online Pie Chart Creator',
@@ -20,10 +38,13 @@ export const metadata: Metadata = {
     description: 'Create, customize, and download professional pie charts instantly with our free online pie graph maker.',
     type: 'website',
     url: 'https://letters2numbersconverter.com/tools/pie-graph-maker',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "Pie Graph Maker | Free Online Pie Chart Creator" }],
   },
   alternates: {
     canonical: 'https://letters2numbersconverter.com/tools/pie-graph-maker',
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "Pie Graph Maker | Free Online Pie Chart Creator", description: "Pie Graph Maker - Create beautiful, interactive pie charts online instantly. Customize colors, labels, and styles. No signup needed. Download as PNG or embed on your website.", images: [`${BASE_URL}/og-image.png`] },
 }
 
 export default function PieGraphMakerPage() {

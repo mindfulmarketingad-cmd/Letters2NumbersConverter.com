@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     title: 'Sims Language Translator | English ↔ Simlish',
     description: 'Translate English to Simlish or decode Simlish back to English. Includes 200+ confirmed words, random sentence generator, and audio-ready phrases.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Sims Language Translator' }],
     url: PAGE_URL,
   },
   twitter: {

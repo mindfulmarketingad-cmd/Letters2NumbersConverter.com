@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'Get Song BPM | Free Online Audio Tempo Detector',
     description: 'Upload any audio file and instantly detect its BPM. Supports MP3, WAV, FLAC, M4A, OGG, and more. All processing happens in your browser.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Get Song BPM — Free Online Audio BPM Detector' }],
     url: PAGE_URL,
   },
   twitter: {

@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     description: "Accurate cm to px conversion for web design, print media, and screen resolution calculations",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/cm-to-pixels-converter",
-  },
+  images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'CM To Pixels Converter | Letters2NumbersConverter.com' }],
+    },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/cm-to-pixels-converter",
   },

@@ -24,7 +24,8 @@ export const metadata: Metadata = {
     description: 'Instantly convert OGG audio files to WAV format with superior quality preservation. Free, fast, and secure conversion up to 100 MB.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/convert-ogg-to-wav',
-  },
+  images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'Convert OGG to WAV' }],
+    },
   alternates: {
     canonical: 'https://www.letters2numbersconverter.com/tools/convert-ogg-to-wav',
   },

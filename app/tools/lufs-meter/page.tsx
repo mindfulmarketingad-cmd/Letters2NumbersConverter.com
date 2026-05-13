@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'LUFS Meter | Free Online BS.1770-4 Loudness Analyser',
     description: 'Measure integrated LUFS, momentary/short-term peaks, true peak, and LRA for any audio file. Compare against Spotify, YouTube, Apple Music targets. All in your browser.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'LUFS Meter — Free Online Loudness Analyser (BS.1770-4)' }],
     url: PAGE_URL,
   },
   twitter: {

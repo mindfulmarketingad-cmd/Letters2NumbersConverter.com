@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'Exif Metadata Viewer | Free Image EXIF Inspector',
     description: 'View all EXIF metadata in JPEG, TIFF, and WebP images — camera, GPS, date, focal length, ISO, and more. No uploads. Your data stays local.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Exif Metadata Viewer' }],
     url: PAGE_URL,
   },
   twitter: {

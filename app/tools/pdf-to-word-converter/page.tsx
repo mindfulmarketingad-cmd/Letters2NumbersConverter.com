@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     title: 'PDF to Word Converter | Free & Private',
     description: 'Convert any PDF to an editable Word document instantly — no uploads, no sign-up, works 100% in your browser.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'PDF to Word Converter' }],
     url: PAGE_URL,
   },
   twitter: {

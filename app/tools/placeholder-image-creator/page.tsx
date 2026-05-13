@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     description: "Generate custom placeholder images with text, colors, and download options",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/placeholder-image-creator",
-  },
+  images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'Placeholder Image Creator | Letters2NumbersConverter.com' }],
+    },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/placeholder-image-creator",
   },

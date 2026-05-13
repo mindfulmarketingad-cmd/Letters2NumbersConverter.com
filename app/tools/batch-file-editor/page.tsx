@@ -26,7 +26,8 @@ export const metadata: Metadata = {
     description: "Free batch file editor with syntax highlighting, real-time statistics, and .bat file download. Create Windows batch scripts instantly for automation and system administration.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/batch-file-editor",
-  },
+  images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'Batch File Editor - Create & Edit .BAT Files Online' }],
+    },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/batch-file-editor",
   },

@@ -2,6 +2,24 @@ import { Metadata } from "next"
 import MBIConverter from "@/components/mbi-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
 import { ToolPageWrapper } from "@/components/tool-page-wrapper"
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/mbi-converter`
+
+const toolSchema = generateToolPageSchema(
+  "MBI Converter - Medicare Beneficiary Identifier to Telephone Keypad",
+  "Free MBI converter tool to convert Medicare Beneficiary Identifier numbers and names to telephone keypad sequences. Perfect for IVR systems, customer support lines, and automated phone systems. Convert MBI digits and letters to numeric keypad codes instantly.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "MBI Converter - Medicare Beneficiary Identifier to Telephone Keypad", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: "MBI Converter - Medicare Beneficiary Identifier to Telephone Keypad",
@@ -24,10 +42,13 @@ export const metadata: Metadata = {
     description: "Convert Medicare Beneficiary Identifier and names to telephone keypad numbers for IVR and automated phone systems.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/mbi-converter",
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "MBI Converter - Medicare Beneficiary Identifier to Telephone Keypad" }],
   },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/mbi-converter",
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "MBI Converter - Medicare Beneficiary Identifier to Telephone Keypad", description: "Free MBI converter tool to convert Medicare Beneficiary Identifier numbers and names to telephone keypad sequences. Perfect for IVR systems, customer support lines, and automated phone systems. Conver", images: [`${BASE_URL}/og-image.png`] },
 }
 
 const toolData: ToolData = {
@@ -76,7 +97,10 @@ const toolData: ToolData = {
 
 export default function MBIConverterPage() {
   return (
-    <ToolPageWrapper toolSlug="mbi-converter">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="mbi-converter">
       <ToolLayout
         toolId="mbi-converter"
         toolName="MBI Converter"
@@ -85,5 +109,6 @@ export default function MBIConverterPage() {
         toolData={toolData}
       />
     </ToolPageWrapper>
+    </>
   )
 }

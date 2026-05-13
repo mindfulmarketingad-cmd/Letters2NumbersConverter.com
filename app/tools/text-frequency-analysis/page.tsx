@@ -2,6 +2,24 @@ import { Metadata } from "next"
 import { TextFrequencyAnalyzer } from "@/components/text-frequency-analyzer"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
 import { ToolPageWrapper } from "@/components/tool-page-wrapper"
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/text-frequency-analysis`
+
+const toolSchema = generateToolPageSchema(
+  "Text Frequency Analysis | Character & Word Counter",
+  "Analyze text frequency with our free online Text Frequency Analysis tool. Count characters, words, and their frequencies instantly. Perfect for linguistic analysis, cryptography, and data science.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Text Frequency Analysis | Character & Word Counter", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: "Text Frequency Analysis | Character & Word Counter",
@@ -11,7 +29,11 @@ export const metadata: Metadata = {
     title: "Text Frequency Analysis",
     description: "Analyze the frequency of characters and words in any text instantly",
     type: "website",
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "Text Frequency Analysis | Character & Word Counter" }],
   },
+  alternates: { canonical: PAGE_URL },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "Text Frequency Analysis | Character & Word Counter", description: "Analyze text frequency with our free online Text Frequency Analysis tool. Count characters, words, and their frequencies instantly. Perfect for linguistic analysis, cryptography, and data science.", images: [`${BASE_URL}/og-image.png`] },
 }
 
 const toolData: ToolData = {
@@ -58,7 +80,10 @@ const toolData: ToolData = {
 
 export default function TextFrequencyAnalysisPage() {
   return (
-    <ToolPageWrapper toolSlug="text-frequency-analysis">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="text-frequency-analysis">
       <ToolLayout
         toolId="text-frequency-analysis"
         toolName="Text Frequency Analysis"
@@ -67,5 +92,6 @@ export default function TextFrequencyAnalysisPage() {
         toolData={toolData}
       />
     </ToolPageWrapper>
+    </>
   )
 }

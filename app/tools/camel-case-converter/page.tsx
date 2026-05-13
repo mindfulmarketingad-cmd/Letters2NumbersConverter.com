@@ -2,6 +2,24 @@ import { Metadata } from "next"
 import { CamelCaseConverter } from "@/components/camel-case-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
 import { ToolPageWrapper } from "@/components/tool-page-wrapper"
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/camel-case-converter`
+
+const toolSchema = generateToolPageSchema(
+  "Camel Case Converter - Convert to camelCase, PascalCase & More",
+  "Free online Camel Case Converter tool. Convert text to camelCase, PascalCase, snake_case, kebab-case and other naming conventions. Supports batch processing, multiple formats, and is perfect for developers, programmers, and technical writers managing variable and function names.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Camel Case Converter - Convert to camelCase, PascalCase & More", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: "Camel Case Converter - Convert to camelCase, PascalCase & More",
@@ -25,10 +43,13 @@ export const metadata: Metadata = {
     description: "Convert any text format to camelCase, PascalCase, snake_case, kebab-case and more. Free online camel case converter with batch processing support.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/camel-case-converter",
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "Camel Case Converter - Convert to camelCase, PascalCase & More" }],
   },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/camel-case-converter",
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "Camel Case Converter - Convert to camelCase, PascalCase & More", description: "Free online Camel Case Converter tool. Convert text to camelCase, PascalCase, snake_case, kebab-case and other naming conventions. Supports batch processing, multiple formats, and is perfect for devel", images: [`${BASE_URL}/og-image.png`] },
 }
 
 const toolData: ToolData = {
@@ -80,7 +101,10 @@ const toolData: ToolData = {
 
 export default function CamelCaseConverterPage() {
   return (
-    <ToolPageWrapper toolSlug="camel-case-converter">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="camel-case-converter">
       <ToolLayout
         toolId="camel-case-converter"
         toolName="Camel Case Converter"
@@ -89,5 +113,6 @@ export default function CamelCaseConverterPage() {
         toolData={toolData}
       />
     </ToolPageWrapper>
+    </>
   )
 }

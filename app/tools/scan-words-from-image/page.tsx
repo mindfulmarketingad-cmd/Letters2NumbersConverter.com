@@ -3,6 +3,24 @@ import { ScanWordsFromImage } from '@/components/scan-words-from-image'
 import { ToolPageWrapper } from '@/components/tool-page-wrapper'
 import { ToolLayout, type ToolData } from '@/components/tool-layout'
 import { getToolData } from '@/lib/tool-data'
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/scan-words-from-image`
+
+const toolSchema = generateToolPageSchema(
+  "Scan Words From Image | Free OCR Text Extractor",
+  "Scan Words From Image - Extract text from images using advanced OCR technology. Instantly convert images to editable text. Free online tool with privacy protection.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Scan Words From Image | Free OCR Text Extractor", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: 'Scan Words From Image | Free OCR Text Extractor',
@@ -13,6 +31,7 @@ export const metadata: Metadata = {
     description: 'Extract text from images instantly using advanced OCR technology. Free online tool.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/scan-words-from-image',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Scan Words From Image | Free OCR Text Extractor' }],
     images: [
       {
         url: '/images/scan-words-from-image-preview.jpg',
@@ -31,13 +50,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.letters2numbersconverter.com/tools/scan-words-from-image',
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 }
 
 const toolData: ToolData = getToolData('scan-words-from-image')
 
 export default function ScanWordsFromImagePage() {
   return (
-    <ToolPageWrapper toolSlug="scan-words-from-image">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="scan-words-from-image">
       <ToolLayout
         toolId="scan-words-from-image"
         toolName="Scan Words From Image"
@@ -46,5 +69,6 @@ export default function ScanWordsFromImagePage() {
         toolData={toolData}
       />
     </ToolPageWrapper>
+    </>
   )
 }

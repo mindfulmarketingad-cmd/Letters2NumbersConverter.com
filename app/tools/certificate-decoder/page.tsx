@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'Certificate Decoder | Free SSL/TLS Certificate Inspector',
     description: 'Decode SSL/TLS certificates, CSRs, and keys online. View subject, issuer, SANs, expiry, fingerprints, and key details — all in your browser.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Certificate Decoder — Decode SSL/TLS Certs, CSRs & Keys Online' }],
     url: PAGE_URL,
   },
   twitter: {

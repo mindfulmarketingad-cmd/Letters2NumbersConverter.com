@@ -3,6 +3,24 @@ import { getToolData } from "@/lib/tool-data"
 import { BabylonianNumeralConverter } from "@/components/babylonian-numeral-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
 import { ToolPageWrapper } from "@/components/tool-page-wrapper"
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/babylonian-numeral-converter`
+
+const toolSchema = generateToolPageSchema(
+  "Babylonian Numeral Converter",
+  "Babylonian Numeral Converter - Convert decimal numbers to Babylonian base-60 numerals. Learn about the ancient sexagesimal system used by Babylonians.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Babylonian Numeral Converter", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: "Babylonian Numeral Converter",
@@ -12,7 +30,11 @@ export const metadata: Metadata = {
     title: "Babylonian Numeral Converter",
     description: "Convert decimal to Babylonian base-60 system with cuneiform symbols.",
     type: "website",
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "Babylonian Numeral Converter" }],
   },
+  alternates: { canonical: PAGE_URL },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "Babylonian Numeral Converter", description: "Babylonian Numeral Converter - Convert decimal numbers to Babylonian base-60 numerals. Learn about the ancient sexagesimal system used by Babylonians.", images: [`${BASE_URL}/og-image.png`] },
 }
 
 
@@ -20,7 +42,10 @@ const toolData: ToolData = getToolData("babylonian-numeral-converter")
 
 export default function BabylonianNumeralConverterPage() {
   return (
-    <ToolPageWrapper toolSlug="babylonian-numeral-converter">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="babylonian-numeral-converter">
     <ToolLayout
       toolId="babylonian-numeral-converter"
       toolName="Babylonian Numeral Converter"
@@ -29,5 +54,6 @@ export default function BabylonianNumeralConverterPage() {
       toolData={toolData}
     />
     </ToolPageWrapper>
+    </>
   )
 }

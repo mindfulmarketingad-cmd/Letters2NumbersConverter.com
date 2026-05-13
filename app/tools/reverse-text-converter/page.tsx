@@ -3,6 +3,24 @@ import { ReverseTextConverter } from '@/components/reverse-text-converter'
 import { ToolPageWrapper } from '@/components/tool-page-wrapper'
 import { ToolLayout, type ToolData } from '@/components/tool-layout'
 import { getToolData } from '@/lib/tool-data'
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/reverse-text-converter`
+
+const toolSchema = generateToolPageSchema(
+  "Reverse Text Converter | Free Online Tool",
+  "Reverse Text Converter - Free online tool to reverse any text, string, or message instantly. Perfect for palindromes, string manipulation, and text analysis.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Reverse Text Converter | Free Online Tool", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: 'Reverse Text Converter | Free Online Tool',
@@ -13,6 +31,7 @@ export const metadata: Metadata = {
     description: 'Reverse any text or string instantly with this free online Reverse Text Converter.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/reverse-text-converter',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Reverse Text Converter | Free Online Tool' }],
     images: [
       {
         url: '/images/reverse-text-converter-preview.jpg',
@@ -31,13 +50,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.letters2numbersconverter.com/tools/reverse-text-converter',
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 }
 
 const toolData: ToolData = getToolData('reverse-text-converter')
 
 export default function ReverseTextConverterPage() {
   return (
-    <ToolPageWrapper toolSlug="reverse-text-converter">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="reverse-text-converter">
       <ToolLayout
         toolId="reverse-text-converter"
         toolName="Reverse Text Converter"
@@ -46,5 +69,6 @@ export default function ReverseTextConverterPage() {
         toolData={toolData}
       />
     </ToolPageWrapper>
+    </>
   )
 }

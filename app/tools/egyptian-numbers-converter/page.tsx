@@ -3,6 +3,24 @@ import { getToolData } from "@/lib/tool-data"
 import { EgyptianConverter } from "@/components/egyptian-converter"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
 import { ToolPageWrapper } from "@/components/tool-page-wrapper"
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/egyptian-numbers-converter`
+
+const toolSchema = generateToolPageSchema(
+  "Egyptian Numbers Converter - Ancient Egyptian Hieroglyphic Numerals",
+  "Free online Egyptian Numbers Converter to convert decimal numbers to ancient Egyptian hieroglyphic numerals. Learn how ancient Egyptians represented numbers using symbols and hieroglyphics. Educational tool for history, Egyptology, and ancient mathematics.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Egyptian Numbers Converter - Ancient Egyptian Hieroglyphic Numerals", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: "Egyptian Numbers Converter - Ancient Egyptian Hieroglyphic Numerals",
@@ -26,10 +44,13 @@ export const metadata: Metadata = {
     description: "Convert decimal numbers to authentic ancient Egyptian hieroglyphic numerals. Explore the Egyptian number system used by pharaohs and scribes.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/egyptian-numbers-converter",
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "Egyptian Numbers Converter - Ancient Egyptian Hieroglyphic Numerals" }],
   },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/egyptian-numbers-converter",
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "Egyptian Numbers Converter - Ancient Egyptian Hieroglyphic Numerals", description: "Free online Egyptian Numbers Converter to convert decimal numbers to ancient Egyptian hieroglyphic numerals. Learn how ancient Egyptians represented numbers using symbols and hieroglyphics. Educationa", images: [`${BASE_URL}/og-image.png`] },
 }
 
 
@@ -37,7 +58,10 @@ const toolData: ToolData = getToolData("egyptian-numbers-converter")
 
 export default function EgyptianNumbersConverterPage() {
   return (
-    <ToolPageWrapper toolSlug="egyptian-numbers-converter">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="egyptian-numbers-converter">
     <ToolLayout
       toolId="egyptian-numbers-converter"
       toolName="Egyptian Numbers Converter"
@@ -46,5 +70,6 @@ export default function EgyptianNumbersConverterPage() {
       toolData={toolData}
     />
     </ToolPageWrapper>
+    </>
   )
 }

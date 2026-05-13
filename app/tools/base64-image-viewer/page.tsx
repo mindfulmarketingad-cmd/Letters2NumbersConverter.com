@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     description: "Decode and view base64-encoded images instantly with our free Base64 Image Viewer.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/base64-image-viewer",
-  },
+  images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'Base64 Image Viewer | Letters2NumbersConverter.com' }],
+    },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/base64-image-viewer",
   },

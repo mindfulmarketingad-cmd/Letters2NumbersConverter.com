@@ -1,6 +1,24 @@
 import type { Metadata } from 'next'
 import { ToolLayout } from '@/components/tool-layout'
 import { WebMCompressor } from '@/components/webm-compressor'
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/webm-compressor`
+
+const toolSchema = generateToolPageSchema(
+  "WEBM Compressor | Letters2NumbersConverter.com",
+  "WEBM Compressor - Compress WebM video files online instantly. Reduce file size without losing quality. Browser-based, no upload, no signup required.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "WEBM Compressor | Letters2NumbersConverter.com", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: 'WEBM Compressor | Letters2NumbersConverter.com',
@@ -19,10 +37,13 @@ export const metadata: Metadata = {
     description: 'Compress WebM videos instantly with advanced quality controls and no file size limits.',
     type: 'website',
     url: 'https://letters2numbersconverter.com/tools/webm-compressor',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "WEBM Compressor | Letters2NumbersConverter.com" }],
   },
   alternates: {
     canonical: 'https://letters2numbersconverter.com/tools/webm-compressor',
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "WEBM Compressor | Letters2NumbersConverter.com", description: "WEBM Compressor - Compress WebM video files online instantly. Reduce file size without losing quality. Browser-based, no upload, no signup required.", images: [`${BASE_URL}/og-image.png`] },
 }
 
 export default function WebMCompressorPage() {

@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'ROT13 Decoder & Encoder | Free Online ROT13 Tool',
     description: 'Decode or encode any text with ROT13 instantly. Perfect for Reddit spoilers, Usenet posts, and cipher puzzles. All processing happens in your browser.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'ROT13 Decoder & Encoder — Decode ROT13 Online Free' }],
     url: PAGE_URL,
   },
   twitter: {

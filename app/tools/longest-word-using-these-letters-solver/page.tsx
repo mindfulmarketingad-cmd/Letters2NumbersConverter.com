@@ -3,6 +3,24 @@ import { getToolData } from "@/lib/tool-data"
 import { LongestWordSolver } from "@/components/longest-word-solver"
 import { ToolLayout, type ToolData } from "@/components/tool-layout"
 import { ToolPageWrapper } from "@/components/tool-page-wrapper"
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/longest-word-using-these-letters-solver`
+
+const toolSchema = generateToolPageSchema(
+  "Longest Word Using These Letters Solver",
+  "Longest Word Using These Letters Solver - Find the longest words you can make from any set of letters. Instantly discover all possible words ranked by length with filtering options. Free online word game helper.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Longest Word Using These Letters Solver", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: "Longest Word Using These Letters Solver",
@@ -12,7 +30,11 @@ export const metadata: Metadata = {
     title: "Longest Word Using These Letters Solver",
     description: "Find the longest words you can make from any set of letters instantly",
     type: "website",
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: "Longest Word Using These Letters Solver" }],
   },
+  alternates: { canonical: PAGE_URL },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  twitter: { card: 'summary_large_image', title: "Longest Word Using These Letters Solver", description: "Longest Word Using These Letters Solver - Find the longest words you can make from any set of letters. Instantly discover all possible words ranked by length with filtering options. Free online word g", images: [`${BASE_URL}/og-image.png`] },
 }
 
 
@@ -20,7 +42,10 @@ const toolData: ToolData = getToolData("longest-word-using-these-letters-solver"
 
 export default function LongestWordPage() {
   return (
-    <ToolPageWrapper toolSlug="longest-word-using-these-letters-solver">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="longest-word-using-these-letters-solver">
     <ToolLayout
       toolId="longest-word-solver"
       toolName="Longest Word Using These Letters Solver"
@@ -29,5 +54,6 @@ export default function LongestWordPage() {
       toolData={toolData}
     />
     </ToolPageWrapper>
+    </>
   )
 }

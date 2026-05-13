@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     description: "Convert CMYK colors to Pantone (PMS) format instantly for accurate print production and color matching.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/cmyk-to-pantone-color-converter",
-  },
+  images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'CMYK to Pantone Color Converter | Letters2NumbersConverter.com' }],
+    },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/cmyk-to-pantone-color-converter",
   },

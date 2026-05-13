@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     title: 'Morse Code Translator | Free Text ↔ Morse Converter',
     description: 'Instantly translate text to Morse code or decode Morse code back to text. Includes audio playback and full reference chart.',
     type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Morse Code Translator' }],
     url: PAGE_URL,
   },
   twitter: {

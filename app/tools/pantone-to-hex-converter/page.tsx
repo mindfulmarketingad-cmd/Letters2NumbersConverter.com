@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     description: "Search Pantone colors and convert to hex format instantly with our free online tool.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/pantone-to-hex-converter",
-  },
+  images: [{ url: 'https://www.letters2numbersconverter.com/og-image.png', width: 1200, height: 630, alt: 'Pantone to Hex Converter | Letters2NumbersConverter.com' }],
+    },
   alternates: {
     canonical: "https://www.letters2numbersconverter.com/tools/pantone-to-hex-converter",
   },

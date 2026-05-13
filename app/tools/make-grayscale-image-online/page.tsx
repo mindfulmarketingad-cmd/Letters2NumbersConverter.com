@@ -3,6 +3,24 @@ import { GrayscaleImageConverter } from '@/components/grayscale-image-converter'
 import { ToolPageWrapper } from '@/components/tool-page-wrapper'
 import { ToolLayout, type ToolData } from '@/components/tool-layout'
 import { getToolData } from '@/lib/tool-data'
+import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
+
+
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/make-grayscale-image-online`
+
+const toolSchema = generateToolPageSchema(
+  "Grayscale Image Online | Free Image to Black & White Converter",
+  "Convert any image to grayscale online instantly. Free tool to transform colored photos to black and white. No installation needed, works in your browser.",
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: "Grayscale Image Online | Free Image to Black & White Converter", url: PAGE_URL },
+])
 
 export const metadata: Metadata = {
   title: 'Grayscale Image Online | Free Image to Black & White Converter',
@@ -13,6 +31,7 @@ export const metadata: Metadata = {
     description: 'Convert your images to grayscale instantly with our free online tool. Perfect for photographers, designers, and anyone needing professional grayscale conversion.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/make-grayscale-image-online',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Grayscale Image Online | Free Image to Black & White Converter' }],
     images: [
       {
         url: '/images/make-grayscale-image-online-preview.jpg',
@@ -31,13 +50,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.letters2numbersconverter.com/tools/make-grayscale-image-online',
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 }
 
 const toolData: ToolData = getToolData('make-grayscale-image-online')
 
 export default function GrayscaleImageOnlinePage() {
   return (
-    <ToolPageWrapper toolSlug="make-grayscale-image-online">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ToolPageWrapper toolSlug="make-grayscale-image-online">
       <ToolLayout
         toolId="make-grayscale-image-online"
         toolName="Grayscale Image Online"
@@ -46,5 +69,6 @@ export default function GrayscaleImageOnlinePage() {
         toolData={toolData}
       />
     </ToolPageWrapper>
+    </>
   )
 }

@@ -1,66 +1,244 @@
-# Letters to Numbers Converter Tool
+# Letters2NumbersConverter.com
 
-> A free online tool for converting letters to numbers and numbers to letters using various encoding systems.
+> A free, browser-based collection of 100+ cipher, encoding, decoding, and conversion tools. No sign-up required. All processing happens client-side — no data is sent to any server.
 
 ## About This Site
 
-Letters to Numbers Converter Tool is a free utility for encoding and decoding text using letter-number substitution ciphers. The tool supports multiple encoding formats:
-
-- **A1Z26 (Standard)**: A=1, B=2, through Z=26
-- **A0Z25 (Zero-based)**: A=0, B=1, through Z=25
-- **ASCII**: Decimal ASCII codes (A=65 through Z=90)
-- **Hex ASCII**: Hexadecimal ASCII codes (A=41 through Z=5A)
-- **Binary ASCII**: 8-bit binary representation
-
-## Primary Use Cases
-
-- Solving geocaching puzzle caches
-- Escape room puzzle solving
-- CTF (Capture the Flag) competitions
-- Educational activities for learning the alphabet
-- Cryptography education
-- Secret message encoding/decoding
-- Data science and text encoding
-
-## Main Features
-
-- Instant letter-to-number conversion
-- Multiple encoding format support
-- Copy to clipboard functionality
-- Workspace for saving conversions
-- Large editor mode
-- Download conversion results
+Letters2NumbersConverter.com is a multi-tool web application built with Next.js and hosted on Vercel. It provides free online tools for cryptography, classical ciphers, character encoding, audio analysis, image processing, puzzle solving, and text conversion. The site targets developers, students, CTF competitors, escape room enthusiasts, and cryptography learners.
 
 ## Site Structure
 
-- `/` - Main converter tool
-- `/about` - Information about the tool
-- `/contact` - Contact form
-- `/blog/` - Educational articles about letter-number conversion
-- `/cookie-policy` - Cookie usage policy
-- `/privacy-policy` - Privacy policy
-- `/terms-of-service` - Terms of service
-- `/sitemap` - Site navigation
+- `/` — Homepage with featured tools and interactive Morse code section
+- `/tools` — Full directory of all 100+ tools
+- `/blog` — Educational articles on ciphers, encoding, and puzzle-solving
+- `/play` — Interactive games (cryptogram game, escape room)
+- `/faq` — Frequently asked questions
+- `/about` — About the site
+- `/contact` — Contact form
+- `/sitemap` — Full site navigation
+- `/privacy-policy`, `/terms-of-service`, `/cookie-policy`, `/disclaimer` — Legal pages
 
-## Blog Topics
+## Tools — Cipher & Classical Cryptography
 
-The site includes educational content covering:
-- Letter to numbers code systems
-- How to solve letter number puzzles
-- Letter number substitution puzzles
-- ABC to number code for education
-- Applications in data science
-- Understanding ASCII encoding
-- Cryptography fundamentals
-- Manual conversion techniques
+- `/tools/a1z26-translator` — A1Z26: A=1, B=2 … Z=26 encoder/decoder
+- `/tools/a1z26-decoder-and-encoder` — Bidirectional A1Z26 converter
+- `/tools/a0z25-cipher-translator` — A0Z25: A=0, B=1 … Z=25 encoder
+- `/tools/a0z25-decoder` — A0Z25 decoder
+- `/tools/a0z25-converter` — A0Z25 converter
+- `/tools/caesar-cipher-decoder` — Caesar cipher encoder/decoder with brute-force all-25-shifts mode
+- `/tools/rot13-decoder` — ROT13 encoder/decoder (Caesar shift 13)
+- `/tools/atbash-cipher-decoder` — Atbash mirror-alphabet cipher
+- `/tools/baconian-cipher` — Bacon's 5-bit binary cipher (A/B or 0/1)
+- `/tools/playfair-cipher-solver` — Playfair digraph substitution cipher
+- `/tools/monoalphabetic-substitution-cipher` — Custom alphabet mapping cipher
+- `/tools/skip-cipher` — Skip/rail-fence style cipher
+- `/tools/skip-cipher-decoder` — Skip cipher decoder
+- `/tools/vernam-cipher-decoder` — Vernam one-time-pad cipher
+- `/tools/enigma-machine-emulator` — WWII Enigma machine emulator
+- `/tools/hexahue-cipher` — Hexahue colour-based cipher
+- `/tools/book-cipher-decoder` — Book cipher (page/line/word references)
+- `/tools/cipher-identifier` — Identifies the cipher type from ciphertext
 
-## Contact
+## Tools — Encoding & Decoding
 
-For inquiries, use the contact form at /contact or email mindfulmarketingad@gmail.com
+- `/tools/ascii-decoder` — ASCII codes ↔ text (decimal, hex, binary, octal)
+- `/tools/html-encoder-decoder` — HTML entity encoder/decoder
+- `/tools/online-url-decoder-encoder` — URL encode/decode
+- `/tools/url-percent-encoding-decoding` — Percent-encoding encoder/decoder
+- `/tools/base32-converter` — Base32 encoder/decoder
+- `/tools/base64-image-viewer` — View Base64-encoded images
+- `/tools/saml-encoder` — SAML encoder/decoder (SAMLRequest deflate+Base64, SAMLResponse Base64)
+- `/tools/morse-code-translator` — Morse code translator with audio playback
+- `/tools/morse-code-decoder-and-encoder` — Morse code decoder and encoder
+- `/tools/morse-code-to-base64` — Convert Morse code to Base64
+- `/tools/tapcode-translator` — Tap code (Polybius-based prison cipher)
+- `/tools/nato-phonetic-alphabet` — NATO phonetic alphabet (Alpha, Bravo, Charlie…)
+- `/tools/baconian-cipher` — Baconian binary cipher
+
+## Tools — Number Systems & Converters
+
+- `/tools/letter-number-converter` — Letters ↔ numbers (A1Z26)
+- `/tools/numbers-to-letters` — Numbers to letters converter
+- `/tools/word-to-number-translator` — Words to numbers
+- `/tools/alphanumeric-conversion-tool` — Multi-format alphanumeric converter
+- `/tools/ivr-alphanumeric-conversion-tool` — IVR phone keypad alphanumeric conversion
+- `/tools/decimal-to-hexadecimal-converter-online` — Decimal to hex converter
+- `/tools/text-to-roman-numerals` — Text/numbers to Roman numerals
+- `/tools/babylonian-numeral-converter` — Decimal ↔ Babylonian base-60 numerals
+- `/tools/egyptian-numbers-converter` — Decimal ↔ Egyptian hieroglyphic numerals
+- `/tools/mayan-numeral-converter` — Decimal ↔ Mayan numerals
+- `/tools/cistercian-numerals-converter` — Decimal ↔ Cistercian medieval numerals
+- `/tools/medicare-prefix-converter` — Medicare prefix decoder
+- `/tools/medicare-id-converter` — Medicare ID converter
+- `/tools/mbi-converter` — Medicare Beneficiary Identifier converter
+
+## Tools — Text & String Processing
+
+- `/tools/anagram-solver` — Anagram solver and word finder
+- `/tools/reverse-text-converter` — Reverse text/words/lines
+- `/tools/camel-case-converter` — camelCase, snake_case, PascalCase converter
+- `/tools/sentence-unscrambler` — Unscramble jumbled sentences
+- `/tools/longest-word-using-these-letters-solver` — Find longest word from a set of letters
+- `/tools/text-frequency-analysis` — Letter/word frequency analysis
+- `/tools/online-random-string-generator` — Random string generator
+- `/tools/sims-language-translator` — Simlish translator
+- `/tools/letter-to-phone-number-converter` — Letters to phone number digits
+- `/tools/password-strength-tester` — Password strength checker
+
+## Tools — Cryptogram & Puzzle Solving
+
+- `/tools/cryptogram-solver` — Cryptogram puzzle solver
+- `/tools/cryptogram-solver-free` — Free cryptogram solver
+- `/tools/cryptogram-generator` — Generate cryptogram puzzles
+- `/tools/blossom-solver` — Merriam-Webster Blossom word puzzle solver
+- `/tools/fill-in-the-blanks-equation-solver` — Fill-in-the-blanks equation solver
+- `/tools/escape-room-builder` — Escape room puzzle builder
+
+## Tools — Audio Analysis
+
+- `/tools/audio-spectrogram` — Audio spectrogram visualizer
+- `/tools/audio-spectrogram-decoder` — Spectrogram decoder
+- `/tools/morse-code-translator` — Morse code with audio playback
+- `/tools/get-song-bpm` — BPM (beats per minute) detector
+- `/tools/tempo-tapper` — Tap to find BPM
+- `/tools/lufs-meter` — LUFS loudness meter (broadcast standards)
+- `/tools/id3-metadata-viewer` — ID3 audio tag viewer (MP3 metadata)
+- `/tools/convert-ogg-to-wav` — OGG to WAV converter
+- `/tools/playback-speed-calculator` — Playback speed calculator
+
+## Tools — Image Processing
+
+- `/tools/black-and-white-photo-to-color-converter` — Colorize B&W photos
+- `/tools/make-grayscale-image-online` — Convert image to grayscale
+- `/tools/base64-image-viewer` — View Base64-encoded images
+- `/tools/steganography-image-decoder` — Decode hidden data in images
+- `/tools/scan-words-from-image` — OCR: extract text from images
+- `/tools/placeholder-image-creator` — Generate placeholder images
+- `/tools/tcg-proxy-creator` — Trading card game proxy image creator
+- `/tools/webp-to-gif` — WebP to GIF converter
+- `/tools/cm-to-pixels-converter` — Centimetres to pixels converter
+- `/tools/px-vw-converter` — Pixels to viewport-width converter
+- `/tools/cmyk-to-pantone-color-converter` — CMYK to Pantone converter
+- `/tools/pantone-to-hex-converter` — Pantone to hex converter
+- `/tools/rgb-to-pantone-color-converter` — RGB to Pantone converter
+
+## Tools — File & Document Conversion
+
+- `/tools/pdf-to-word-converter` — PDF to Word (.docx) converter
+- `/tools/word-to-pdf-converter` — Word to PDF converter
+- `/tools/convert-oxps-to-pdf` — OXPS to PDF converter
+- `/tools/xps-to-pdf-converter` — XPS to PDF converter
+- `/tools/ppt-compressor` — PowerPoint file compressor
+- `/tools/webm-compressor` — WebM video compressor
+- `/tools/batch-file-editor` — Batch file editor
+
+## Tools — Developer & Data Tools
+
+- `/tools/json-to-java-code-generator` — JSON to Java class generator
+- `/tools/json-to-ini-converter` — JSON to INI converter
+- `/tools/yaml-to-ini-converter` — YAML to INI converter
+- `/tools/yaml-to-jpg-converter` — YAML to JPG converter
+- `/tools/yaml-to-xml-converter` — YAML to XML converter
+- `/tools/txt-to-ini-converter` — TXT to INI converter
+- `/tools/line-ending-converter` — CRLF/LF line ending converter
+- `/tools/html-encoder-decoder` — HTML entity encoder/decoder
+- `/tools/certificate-decoder` — X.509 certificate / CSR decoder (PEM, DER, Base64)
+- `/tools/saml-encoder` — SAML 2.0 request/response encoder and decoder
+- `/tools/exif-metadata-viewer` — EXIF metadata viewer for images
+
+## Tools — Calculators & Utilities
+
+- `/tools/grade-curve-calculator` — Grade curve calculator
+- `/tools/half-birthday-calculator` — Half-birthday calculator
+- `/tools/meq-to-mg-calculator` — mEq to mg unit converter
+- `/tools/pie-graph-maker` — Pie chart / graph maker
+
+## Play
+
+- `/play/cryptogram-game-online` — Interactive cryptogram word game
+- `/play/escape-room` — Browser-based escape room puzzle
+
+## Blog — Cipher & Cryptography Articles
+
+- `/blog/vigenere-cipher-decoder` — How to encode and decode the Vigenère cipher
+- `/blog/caesar-cipher-examples` — Caesar cipher worked examples (shifts 3, 7, 13, 21)
+- `/blog/caesar-cipher-history` — History of the Caesar cipher
+- `/blog/caesar-cipher-shift-13` — Caesar shift 13 / ROT13 explained
+- `/blog/how-to-crack-caesar-cipher` — How to crack the Caesar cipher
+- `/blog/rot13-cipher-explained` — ROT13 cipher explained
+- `/blog/rot13-python` — ROT13 in Python
+- `/blog/rot13-vs-caesar-cipher` — ROT13 vs Caesar cipher comparison
+- `/blog/rot13-reddit-decoder` — ROT13 on Reddit
+- `/blog/a1z26-cipher-decoder-guide` — A1Z26 cipher decoder guide
+- `/blog/a1z26-cipher-examples` — A1Z26 cipher examples
+- `/blog/a1z26-cipher-for-escape-rooms` — A1Z26 for escape rooms
+- `/blog/a1z26-conversion-chart` — A1Z26 conversion chart (A=1 to Z=26)
+- `/blog/a1z26-translator` — A1Z26 translator guide
+- `/blog/a0z25-cipher` — A0Z25 cipher guide
+- `/blog/understanding-ascii-character-encoding` — ASCII character encoding explained
+- `/blog/what-is-url-encoding` — URL encoding explained
+- `/blog/skip-cipher` — Skip cipher guide
+- `/blog/best-letter-number-ciphers` — Best letter-number ciphers comparison
+- `/blog/history-letter-number-systems` — History of letter-number systems
+- `/blog/letter-number-converters-cryptography` — Letter-number converters in cryptography
+- `/blog/secret-codes-with-letters-numbers` — Secret codes with letters and numbers
+
+## Blog — Puzzle Solving & Escape Rooms
+
+- `/blog/how-to-solve-letter-number-puzzles` — How to solve letter-number puzzles
+- `/blog/letter-number-substitution-puzzles` — Letter-number substitution puzzles
+- `/blog/escape-room-letter-codes` — Escape room letter codes guide
+- `/blog/a1z26-cipher-for-escape-rooms` — Using A1Z26 in escape rooms
+- `/blog/build-your-own-escape-room` — How to build your own escape room
+- `/blog/puzzle-solving-letter-number-conversion` — Puzzle solving with letter-number conversion
+- `/blog/best-cipher-locks` — Best cipher locks for escape rooms
+- `/blog/number-word-games-activities` — Number and word games and activities
+
+## Blog — Geocaching & Games
+
+- `/blog/letter-number-codes-geocaching` — Letter-number codes for geocaching
+- `/blog/letter-to-numbers-code` — Letter to numbers code guide
+- `/blog/abc-to-number-code` — ABC to number code
+- `/blog/find-hackathon-team-members` — Finding hackathon team members
+
+## Blog — Alphabet & Phonetic Codes
+
+- `/blog/alpha-bravo-charlie-code-list` — NATO phonetic alphabet code list
+- `/blog/nato-alphanumeric-alphabet` — NATO alphanumeric alphabet guide
+- `/blog/military-abc-codes-list` — Military ABC codes list
+- `/blog/alphanumeric-code-translator` — Alphanumeric code translator guide
+- `/blog/alphanumeric-converter` — Alphanumeric converter guide
+
+## Blog — Image & File Processing
+
+- `/blog/how-to-make-an-image-grayscale` — How to make an image grayscale
+- `/blog/how-to-change-photo-to-high-resolution` — How to increase photo resolution
+- `/blog/how-to-convert-image-to-text-in-excel` — Convert image to text in Excel
+- `/blog/how-to-convert-image-to-word-text` — Convert image to Word text
+
+## Blog — Educational & Data Science
+
+- `/blog/educational-uses-letter-number-conversion` — Educational uses of letter-number conversion
+- `/blog/letter-number-conversion-data-science` — Letter-number conversion in data science
+- `/blog/how-to-manually-check-letter-number-conversion` — Manual letter-number conversion guide
+- `/blog/letters-to-numbers-translator` — Letters to numbers translator guide
+- `/blog/alphabet-to-numbers-converter` — Alphabet to numbers converter
+- `/blog/best-decoder` — Best decoder tools comparison
+- `/blog/best-decoder-online` — Best online decoder tools
+- `/blog/best-decoder-web-app` — Best decoder web apps
+- `/blog/boxentriq-vs-letters2numbersconverter` — Boxentriq vs Letters2NumbersConverter comparison
+- `/blog/cryptii-vs-letters2numbersconverter` — Cryptii vs Letters2NumbersConverter comparison
 
 ## Technical Details
 
-- Built with Next.js
-- Hosted on Vercel
-- No user data collection required for tool usage
-- Client-side processing (no server-side text storage)
+- Framework: Next.js (App Router), React 19, TypeScript
+- Hosting: Vercel
+- All tool processing is 100% client-side — no text, files, or user data are sent to any server
+- No account or sign-up required for any tool
+- Workspace save feature: users can save and restore tool state in browser localStorage
+- Supports dark mode
+
+## Contact
+
+Contact form: /contact
+Email: mindfulmarketingad@gmail.com

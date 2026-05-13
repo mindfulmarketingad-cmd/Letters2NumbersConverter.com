@@ -5,6 +5,7 @@ import useSWR from 'swr'
 import { useAuth } from '@/lib/auth-context'
 import { useRouter } from 'next/navigation'
 import { LogOut, Copy, RefreshCw } from 'lucide-react'
+import { DashboardWorkspaces } from '@/components/dashboard-workspaces'
 
 const fetcher = (url: string) => fetch(url).then(r => r.json())
 
@@ -190,6 +191,9 @@ export function DashboardContent() {
             )}
           </div>
         )}
+
+        {/* Saved Workspaces */}
+        <DashboardWorkspaces />
       </div>
     </div>
   )

@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { SiteHeader } from '@/components/site-header'
-import { SiteFooter } from '@/components/site-footer'
 
 export const metadata: Metadata = {
   title: 'Alpha Bravo Charlie Code List | Letters2NumbersConverter.com',
@@ -39,7 +37,6 @@ export const metadata: Metadata = {
 export default function AlphaBravioCharlieCodeListBlog() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <SiteHeader />
 
       <main className="flex-1 py-12 md:py-16 px-4">
         <article className="max-w-3xl mx-auto">
@@ -324,7 +321,6 @@ export default function AlphaBravioCharlieCodeListBlog() {
         </article>
       </main>
 
-      <SiteFooter />
     </div>
   )
 }

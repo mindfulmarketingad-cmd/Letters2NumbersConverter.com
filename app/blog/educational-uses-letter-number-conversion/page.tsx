@@ -2,8 +2,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
 import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
@@ -16,7 +14,6 @@ export const metadata: Metadata = {
 export default function EducationalUsesLetterNumberConversion() {
   return (
     <main className="min-h-screen bg-background">
-      <SiteHeader />
 
       <article className="py-12 sm:py-16">
         <div className="container mx-auto px-4 max-w-3xl">
@@ -125,7 +122,6 @@ export default function EducationalUsesLetterNumberConversion() {
         </div>
       </article>
 
-      <SiteFooter />
     </main>
   )
 }

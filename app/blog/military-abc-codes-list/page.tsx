@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { SiteHeader } from '@/components/site-header'
-import { SiteFooter } from '@/components/site-footer'
 
 export const metadata: Metadata = {
   title: 'Military ABC Codes List | Letters2NumbersConverter.com',
@@ -39,7 +37,6 @@ export const metadata: Metadata = {
 export default function MilitaryABCCodesListPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <SiteHeader />
 
       <main className="flex-1 flex flex-col">
         <article className="w-full max-w-4xl mx-auto px-4 py-12 md:py-16">
@@ -341,7 +338,6 @@ export default function MilitaryABCCodesListPage() {
         </article>
       </main>
 
-      <SiteFooter />
     </div>
   )
 }

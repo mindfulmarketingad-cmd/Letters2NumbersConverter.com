@@ -611,6 +611,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Decoder',
     href: '/tools/ascii-decoder',
   },
+  'base64-encoder-decoder': {
+    name: 'Base64 Encoder and Decoder',
+    description: 'Encode text to Base64 or decode Base64 back to readable text. Supports standard and URL-safe Base64, full UTF-8 including emoji.',
+    category: 'Encoder',
+    href: '/tools/base64-encoder-decoder',
+  },
 }
 
 export function getToolRegistry() {

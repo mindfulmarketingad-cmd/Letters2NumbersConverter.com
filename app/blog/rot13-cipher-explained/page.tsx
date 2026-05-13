@@ -137,7 +137,7 @@ export default function Page() {
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">1. Reddit Spoiler Tags</h3>
           <p className="text-base text-muted-foreground mb-4">
-            Older Reddit communities still use ROT13 manually. A user writes a spoiler, encodes it with ROT13, and posts the scrambled text. Readers who want to see the spoiler copy it into a decoder. Native spoiler tags (>!text!&lt;) have replaced this in most modern subreddits, but ROT13 remains common in older threads and certain communities.
+            Older Reddit communities still use ROT13 manually. A user writes a spoiler, encodes it with ROT13, and posts the scrambled text. Readers who want to see the spoiler copy it into a decoder. Native spoiler tags (&gt;!text!&lt;) have replaced this in most modern subreddits, but ROT13 remains common in older threads and certain communities.
           </p>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">2. Puzzle Hints and Escape Rooms</h3>

@@ -35,7 +35,7 @@ export function ToolLayout({
       <main className="flex-1 flex flex-col md:flex-row gap-0 overflow-hidden">
         {/* Left Column - Work Area (Static/Fixed) */}
         <div className="w-full md:w-[45%] flex flex-col bg-secondary/30 border-r border-border min-h-[50vh] md:min-h-auto overflow-hidden">
-          <WorkArea toolComponent={toolComponent} />
+          <WorkArea toolComponent={toolComponent} toolName={toolName} />
         </div>
 
         {/* Right Column - Content (Scrollable) */}

@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react'
 import { Copy, Check, RotateCcw, Info, ArrowLeftRight, List, ChevronDown, ChevronUp } from 'lucide-react'
+import { useSaveState } from '@/lib/save-context'
 
 function caesarShift(text: string, shift: number): string {
   const s = ((shift % 26) + 26) % 26
@@ -31,6 +32,15 @@ export function CaesarCipherDecoder() {
   const [mode, setMode] = useState<'encode' | 'decode'>('decode')
   const [showAll, setShowAll] = useState(false)
   const [copied, setCopied] = useState<number | 'main' | null>(null)
+
+  useSaveState(
+    () => ({ input, shift: String(shift), mode }),
+    (s) => {
+      setInput((s.input as string) ?? '')
+      setShift(Number(s.shift) || 3)
+      setMode(((s.mode as string) === 'encode' ? 'encode' : 'decode'))
+    }
+  )
 
   const effectiveShift = mode === 'decode' ? (26 - shift) % 26 : shift
   const output = caesarShift(input, effectiveShift)

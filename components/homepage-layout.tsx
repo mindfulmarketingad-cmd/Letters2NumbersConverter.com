@@ -4,6 +4,7 @@ import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { HomepageSearch } from '@/components/homepage-search'
 import { ToolsInUseViewer } from '@/components/tools-in-use-viewer'
+import { HomepageMorseSection } from '@/components/homepage-morse-section'
 import { SeoPanel } from '@/components/seo-panel'
 
 export function HomepageLayout() {
@@ -23,6 +24,9 @@ export function HomepageLayout() {
           <ToolsInUseViewer />
         </section>
 
+        {/* Featured Tool: Morse Code Translator */}
+        <HomepageMorseSection />
+
         {/* SEO Content Section */}
         <section className="flex-1 py-12 md:py-16">
           <div className="container mx-auto px-4 max-w-4xl">
@@ -35,4 +39,3 @@ export function HomepageLayout() {
     </div>
   )
 }
-

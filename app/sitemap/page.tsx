@@ -1,33 +1,18 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
-  title: "Sitemap | Letter2Num",
-  description: "Browse all pages on Letter2Num - your complete guide to letter-to-number conversion tools and resources.",
+  title: "Sitemap | Letters2NumbersConverter.com",
+  description: "Browse all pages on Letters2NumbersConverter.com — your complete guide to letter-to-number conversion tools, cipher decoders, and resources.",
 }
 
 export default function Sitemap() {
   return (
-    <main className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">A1</span>
-            </div>
-            <span className="font-semibold text-foreground hidden sm:inline">
-              Letter2Num
-            </span>
-          </Link>
-          <nav className="flex items-center gap-6 text-sm text-muted-foreground">
-            <Link href="/about" className="hover:text-foreground transition-colors">
-              About
-            </Link>
-          </nav>
-        </div>
-      </header>
+    <div className="min-h-screen bg-background flex flex-col">
+      <SiteHeader />
 
       <article className="py-12 sm:py-16">
         <div className="container mx-auto px-4 max-w-3xl">
@@ -601,33 +586,7 @@ export default function Sitemap() {
         </div>
       </article>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-8 mt-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center gap-4">
-            <nav className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-              <Link href="/cookie-policy" className="hover:text-foreground transition-colors">
-                Cookie Policy
-              </Link>
-              <Link href="/privacy-policy" className="hover:text-foreground transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/sitemap" className="hover:text-foreground transition-colors">
-                Sitemap
-              </Link>
-              <Link href="/contact" className="hover:text-foreground transition-colors">
-                Contact
-              </Link>
-              <Link href="/about" className="hover:text-foreground transition-colors">
-                About
-              </Link>
-            </nav>
-            <p className="text-muted-foreground text-sm">
-              &copy; 2026. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </main>
+      <SiteFooter />
+    </div>
   )
 }

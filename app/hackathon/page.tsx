@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import Image from 'next/image'
 import { Mail, AlertCircle, Trash2, Check, X, Users, Clock, Briefcase, Send, Plus, ChevronDown } from 'lucide-react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { SiteHeader } from '@/components/site-header'
@@ -1030,6 +1031,13 @@ export default function HackMatePage() {
       <main className="flex-1 container mx-auto px-4 py-12 max-w-6xl">
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
+            <Image
+              src="/images/hackmate-logo.svg"
+              alt="HackMate logo"
+              width={56}
+              height={56}
+              className="rounded-lg flex-shrink-0"
+            />
             <h1 className="text-4xl md:text-5xl font-bold text-foreground">HackMate</h1>
             <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-green-500 text-white">New</span>
           </div>

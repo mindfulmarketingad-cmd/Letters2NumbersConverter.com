@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <rect width="500" height="500" fill="#404040"/>
+
+  <!-- Left curly brace -->
+  <!-- Top arm -->
+  <rect x="148" y="120" width="30" height="22" rx="4" fill="white"/>
+  <!-- Top vertical -->
+  <rect x="148" y="140" width="22" height="60" rx="4" fill="white"/>
+  <!-- Top notch -->
+  <rect x="120" y="192" width="30" height="22" rx="4" fill="white"/>
+  <!-- Bottom notch -->
+  <rect x="120" y="286" width="30" height="22" rx="4" fill="white"/>
+  <!-- Bottom vertical -->
+  <rect x="148" y="300" width="22" height="60" rx="4" fill="white"/>
+  <!-- Bottom arm -->
+  <rect x="148" y="358" width="30" height="22" rx="4" fill="white"/>
+
+  <!-- Right curly brace -->
+  <!-- Top arm -->
+  <rect x="322" y="120" width="30" height="22" rx="4" fill="white"/>
+  <!-- Top vertical -->
+  <rect x="330" y="140" width="22" height="60" rx="4" fill="white"/>
+  <!-- Top notch -->
+  <rect x="350" y="192" width="30" height="22" rx="4" fill="white"/>
+  <!-- Bottom notch -->
+  <rect x="350" y="286" width="30" height="22" rx="4" fill="white"/>
+  <!-- Bottom vertical -->
+  <rect x="330" y="300" width="22" height="60" rx="4" fill="white"/>
+  <!-- Bottom arm -->
+  <rect x="322" y="358" width="30" height="22" rx="4" fill="white"/>
+
+  <!-- Plus sign in center -->
+  <!-- Vertical bar -->
+  <rect x="238" y="196" width="24" height="108" rx="4" fill="white"/>
+  <!-- Horizontal bar -->
+  <rect x="188" y="238" width="124" height="24" rx="4" fill="white"/>
+
+  <!-- HACKMATE text -->
+  <text x="250" y="448" font-family="Arial Black, Arial, sans-serif" font-size="58" font-weight="900" fill="white" text-anchor="middle" letter-spacing="10">HACKMATE</text>
+</svg>

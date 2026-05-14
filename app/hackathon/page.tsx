@@ -18,6 +18,13 @@ interface HackerProfile {
   role: string
   skills: string[]
   looking_for: string
+  links?: {
+    github?: string
+    portfolio?: string
+    linkedin?: string
+    twitter?: string
+    other?: string
+  }
   created_at: string
 }
 
@@ -73,7 +80,41 @@ function HackerCard({ hacker }: { hacker: HackerProfile }) {
         ))}
       </div>
       {hacker.looking_for && (
-        <p className="text-xs text-muted-foreground line-clamp-2">{hacker.looking_for}</p>
+        <p className="text-xs text-muted-foreground line-clamp-2 mb-3">{hacker.looking_for}</p>
+      )}
+      {hacker.links && Object.keys(hacker.links).length > 0 && (
+        <div className="flex flex-wrap gap-2 mt-auto pt-2 border-t border-border">
+          {hacker.links.github && (
+            <a href={hacker.links.github} target="_blank" rel="noopener noreferrer"
+              className="text-xs text-primary hover:underline flex items-center gap-1">
+              GitHub
+            </a>
+          )}
+          {hacker.links.portfolio && (
+            <a href={hacker.links.portfolio} target="_blank" rel="noopener noreferrer"
+              className="text-xs text-primary hover:underline flex items-center gap-1">
+              Portfolio
+            </a>
+          )}
+          {hacker.links.linkedin && (
+            <a href={hacker.links.linkedin} target="_blank" rel="noopener noreferrer"
+              className="text-xs text-primary hover:underline flex items-center gap-1">
+              LinkedIn
+            </a>
+          )}
+          {hacker.links.twitter && (
+            <a href={hacker.links.twitter} target="_blank" rel="noopener noreferrer"
+              className="text-xs text-primary hover:underline flex items-center gap-1">
+              Twitter
+            </a>
+          )}
+          {hacker.links.other && (
+            <a href={hacker.links.other} target="_blank" rel="noopener noreferrer"
+              className="text-xs text-primary hover:underline flex items-center gap-1">
+              Website
+            </a>
+          )}
+        </div>
       )}
     </div>
   )
@@ -852,7 +893,10 @@ function Projects({
 
 function MyProfile({ isLoggedIn, getToken }: { isLoggedIn: boolean; getToken: () => Promise<string | null> }) {
   const [profile, setProfile] = useState<HackerProfile | null>(null)
-  const [formData, setFormData] = useState({ name: '', role: 'Frontend', skills: '', lookingFor: '' })
+  const [formData, setFormData] = useState({
+    name: '', role: 'Frontend', skills: '', lookingFor: '',
+    github: '', portfolio: '', linkedin: '', twitter: '', other: '',
+  })
   const [loading, setLoading] = useState(true)
   const [submitLoading, setSubmitLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -867,7 +911,12 @@ function MyProfile({ isLoggedIn, getToken }: { isLoggedIn: boolean; getToken: ()
         .then((data) => {
           if (data && data.name) {
             setProfile(data)
-            setFormData({ name: data.name, role: data.role, skills: data.skills.join(', '), lookingFor: data.looking_for || '' })
+            setFormData({
+              name: data.name, role: data.role, skills: data.skills.join(', '), lookingFor: data.looking_for || '',
+              github: data.links?.github || '', portfolio: data.links?.portfolio || '',
+              linkedin: data.links?.linkedin || '', twitter: data.links?.twitter || '',
+              other: data.links?.other || '',
+            })
           }
         })
         .catch(() => {})
@@ -889,7 +938,13 @@ function MyProfile({ isLoggedIn, getToken }: { isLoggedIn: boolean; getToken: ()
     const res = await fetch('/api/hackathon/profiles/me', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
-      body: JSON.stringify({ name: formData.name, role: formData.role, skills, looking_for: formData.lookingFor }),
+      body: JSON.stringify({
+        name: formData.name, role: formData.role, skills, looking_for: formData.lookingFor,
+        links: {
+          github: formData.github, portfolio: formData.portfolio,
+          linkedin: formData.linkedin, twitter: formData.twitter, other: formData.other,
+        },
+      }),
     })
 
     const data = await res.json()
@@ -977,6 +1032,64 @@ function MyProfile({ isLoggedIn, getToken }: { isLoggedIn: boolean; getToken: ()
             rows={3}
             placeholder="Describe what you're looking for in teammates or projects..."
           />
+        </div>
+
+        <div className="space-y-3">
+          <label className="block text-sm font-medium text-foreground">
+            Project Links <span className="text-muted-foreground font-normal">(optional)</span>
+          </label>
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-muted-foreground w-20 flex-shrink-0">GitHub</span>
+              <input
+                type="url"
+                value={formData.github}
+                onChange={(e) => setFormData({ ...formData, github: e.target.value })}
+                className="flex-1 px-3 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-muted-foreground text-sm"
+                placeholder="https://github.com/username"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-muted-foreground w-20 flex-shrink-0">Portfolio</span>
+              <input
+                type="url"
+                value={formData.portfolio}
+                onChange={(e) => setFormData({ ...formData, portfolio: e.target.value })}
+                className="flex-1 px-3 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-muted-foreground text-sm"
+                placeholder="https://yoursite.com"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-muted-foreground w-20 flex-shrink-0">LinkedIn</span>
+              <input
+                type="url"
+                value={formData.linkedin}
+                onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })}
+                className="flex-1 px-3 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-muted-foreground text-sm"
+                placeholder="https://linkedin.com/in/username"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-muted-foreground w-20 flex-shrink-0">Twitter / X</span>
+              <input
+                type="url"
+                value={formData.twitter}
+                onChange={(e) => setFormData({ ...formData, twitter: e.target.value })}
+                className="flex-1 px-3 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-muted-foreground text-sm"
+                placeholder="https://x.com/username"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-muted-foreground w-20 flex-shrink-0">Other</span>
+              <input
+                type="url"
+                value={formData.other}
+                onChange={(e) => setFormData({ ...formData, other: e.target.value })}
+                className="flex-1 px-3 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-muted-foreground text-sm"
+                placeholder="Any other link"
+              />
+            </div>
+          </div>
         </div>
 
         <button

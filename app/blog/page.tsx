@@ -58,6 +58,11 @@ const blogPosts = [
   { slug: "how-to-decode-encoded-text", title: "How To Decode Encoded Text", description: "How to decode encoded text across all major formats: Base64, hex, URL encoding, Morse code, ROT13, A1Z26, and binary.", category: "Decoding Guides" },
   { slug: "how-to-decode-hex-file", title: "How To Decode Hex File", description: "How to decode a hex file: understand the hexadecimal number system, convert byte pairs to ASCII, and use JavaScript and Python to decode hex strings.", category: "Decoding Guides" },
 
+  // Encoding how-to guides
+  { slug: "how-to-encode-a-url", title: "How To Encode A URL", description: "How to encode a URL using percent-encoding (RFC 3986): which characters must be encoded, encodeURIComponent vs encodeURI in JavaScript, and Python/PHP equivalents.", category: "Decoding Guides" },
+  { slug: "how-to-encode-html-code", title: "How To Encode HTML Code", description: "How to encode HTML code: convert & < > \" ' to safe HTML entities, prevent XSS attacks, and use htmlspecialchars in PHP and html.escape in Python.", category: "Decoding Guides" },
+  { slug: "how-to-encode-php-code", title: "How To Encode PHP Code", description: "PHP encoding functions explained: urlencode, rawurlencode, htmlspecialchars, base64_encode, json_encode, and password_hash — with a decision table.", category: "Decoding Guides" },
+
   // Image & Media
   { slug: "how-to-change-photo-to-high-resolution", title: "How to Change a Photo to High Resolution", description: "Methods to upscale and improve photo resolution using AI tools and image editors.", category: "Image & Media" },
   { slug: "how-to-convert-image-to-text-in-excel", title: "How to Convert Image to Text in Excel", description: "Step-by-step guide to extracting text from images and importing it into Excel using OCR tools.", category: "Image & Media" },

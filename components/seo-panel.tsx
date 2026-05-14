@@ -151,7 +151,7 @@ export function SeoPanel() {
 
       {/* ── 1. H1 + Problem Statement ─────────────────────────── */}
       <div className="space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+        <h1 id="letters-to-numbers-converter" className="text-4xl md:text-5xl font-bold leading-tight">
           <span style={{ color: '#11a099' }}>Letters To Numbers Converter</span>
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl">
@@ -188,7 +188,7 @@ export function SeoPanel() {
 
       {/* ── 3. Product Screenshots ────────────────────────────── */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">See the tools in action</h2>
+        <h2 id="tools-in-action" className="text-2xl md:text-3xl font-bold mb-2">See the tools in action</h2>
         <p className="text-muted-foreground mb-6">Every tool has a clean two-column workspace — your input on the left, your result on the right. No clutter, no ads covering the controls.</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {TOOL_SCREENSHOTS.map((s) => (
@@ -213,7 +213,7 @@ export function SeoPanel() {
 
       {/* ── 4. Who Is It For ──────────────────────────────────── */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">Who is this website for?</h2>
+        <h2 id="who-is-it-for" className="text-2xl md:text-3xl font-bold mb-2">Who is this website for?</h2>
         <p className="text-muted-foreground mb-6">
           Letters2NumbersConverter.com started as a Letters to Numbers Converter and grew into a full toolkit. Here&apos;s who uses it every day:
         </p>
@@ -235,7 +235,7 @@ export function SeoPanel() {
 
       {/* ── 5. Tool Categories Grid ───────────────────────────── */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">More than a Letters to Numbers Converter</h2>
+        <h2 id="more-tools" className="text-2xl md:text-3xl font-bold mb-2">More than a Letters to Numbers Converter</h2>
         <p className="text-muted-foreground mb-6">
           Our toolkit covers six major categories. Every tool is free, instant, and runs entirely in your browser.
         </p>
@@ -266,7 +266,7 @@ export function SeoPanel() {
 
       {/* ── 6. Why Us (checklist) ─────────────────────────────── */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold mb-6">Why people choose Letters2NumbersConverter.com</h2>
+        <h2 id="why-choose-us" className="text-2xl md:text-3xl font-bold mb-6">Why people choose Letters2NumbersConverter.com</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {[
             ['Instant results — no page reloads', 'Output updates as you type across all tools.'],
@@ -291,7 +291,7 @@ export function SeoPanel() {
 
       {/* ── 7. How It Works ───────────────────────────────────── */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold mb-6">How it works — 3 steps</h2>
+        <h2 id="how-it-works" className="text-2xl md:text-3xl font-bold mb-6">How it works — 3 steps</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { step: '1', title: 'Find your tool', body: 'Search by name or browse by category. With 100+ tools organised across six categories, your tool is never more than a few seconds away.' },
@@ -317,7 +317,7 @@ export function SeoPanel() {
 
       {/* ── 9. FAQ ────────────────────────────────────────────── */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold mb-6">Frequently Asked Questions</h2>
+        <h2 id="faq" className="text-2xl md:text-3xl font-bold mb-6">Frequently Asked Questions</h2>
         <div className="space-y-5">
           {FAQS.map((item) => (
             <div key={item.q} className="border-b border-border/50 pb-5 last:border-0">

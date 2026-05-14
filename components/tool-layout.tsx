@@ -18,6 +18,7 @@ interface ToolLayoutProps {
   toolDescription: string
   toolComponent: ReactNode
   toolData?: ToolData
+  children?: ReactNode
 }
 
 export function ToolLayout({
@@ -26,6 +27,7 @@ export function ToolLayout({
   toolDescription,
   toolComponent,
   toolData,
+  children,
 }: ToolLayoutProps) {
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -44,6 +46,7 @@ export function ToolLayout({
             <div className="p-6 md:p-8 max-w-3xl">
               <ToolDescription toolName={toolName} toolDescription={toolDescription} toolData={toolData} />
             </div>
+            {children}
           </div>
         </div>
       </main>

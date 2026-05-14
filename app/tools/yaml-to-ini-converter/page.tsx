@@ -138,7 +138,7 @@ export default function YamlToIniConverterPage() {
           toolDescription="Free online YAML to INI converter. Paste any YAML or YML configuration file and instantly convert it to INI format. Supports bidirectional conversion, nested structures, and direct .ini file download — no sign-up required."
           toolComponent={<YamlIniConverter />}
           toolData={toolData}
-        />
+        >
 
         {/* SEO content section */}
         <section className="bg-background border-t border-border">
@@ -271,6 +271,7 @@ debug = true`}</pre>
 
           </div>
         </section>
+      </ToolLayout>
       </ToolPageWrapper>
     </>
   )

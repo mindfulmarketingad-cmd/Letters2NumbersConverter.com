@@ -130,8 +130,7 @@ export default function IVRAlphanumericPage() {
           toolDescription="Convert Medicare MBI, PTAN, DCN, and any other alphanumeric ID to the telephone keypad number sequence required by IVR systems. Enter the ID above and get the keypad sequence instantly — no more guessing which button to press for each letter."
           toolComponent={<IVRAlphanumericConverter />}
           toolData={toolData}
-        />
-
+        >
         {/* SEO content */}
         <section className="bg-background border-t border-border">
           <div className="max-w-4xl mx-auto px-4 py-12 space-y-10">
@@ -315,6 +314,7 @@ export default function IVRAlphanumericPage() {
 
           </div>
         </section>
+      </ToolLayout>
       </ToolPageWrapper>
     </>
   )

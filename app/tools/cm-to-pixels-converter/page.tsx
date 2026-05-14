@@ -124,7 +124,7 @@ export default function CMToPixelsPage() {
         toolDescription="Convert centimeters to pixels instantly at any DPI/PPI. Supports 72 PPI (print), 96 PPI (web/screen), 150 PPI (medium-res), and 300 PPI (high-res print) — the four standards used in web design, UI design, and professional print work."
         toolComponent={<CMToPixelsConverter />}
         toolData={toolData}
-      />
+      >
 
       {/* ── SEO Article Section ────────────────────────────────────────────── */}
       <section className="bg-background border-t border-border">
@@ -268,6 +268,7 @@ export default function CMToPixelsPage() {
 
         </div>
       </section>
+    </ToolLayout>
     </ToolPageWrapper>
   )
 }

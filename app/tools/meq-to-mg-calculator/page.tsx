@@ -156,7 +156,7 @@ export default function MEqToMgCalculatorPage() {
           toolDescription="Convert milliequivalents (mEq) to milligrams (mg) — and mg back to mEq — for potassium, sodium, calcium, magnesium, chloride, and more. Select the ion, enter the value, and get an instant result with the formula shown. Essential for medication dosing, electrolyte calculations, and pharmaceutical reference."
           toolComponent={<MEqToMgCalculator />}
           toolData={toolData}
-        />
+        >
 
         {/* SEO content section */}
         <section className="bg-background border-t border-border">
@@ -406,6 +406,7 @@ export default function MEqToMgCalculatorPage() {
 
           </div>
         </section>
+      </ToolLayout>
       </ToolPageWrapper>
     </>
   )

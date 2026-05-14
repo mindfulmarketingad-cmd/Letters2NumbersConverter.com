@@ -57,6 +57,9 @@ const blogPosts = [
   { slug: "how-to-decode-a-text-message", title: "How To Decode A Text Message", description: "How to decode a text message: identify the encoding (Base64, hex, URL, Morse, A1Z26) and decode it step by step.", category: "Decoding Guides" },
   { slug: "how-to-decode-encoded-text", title: "How To Decode Encoded Text", description: "How to decode encoded text across all major formats: Base64, hex, URL encoding, Morse code, ROT13, A1Z26, and binary.", category: "Decoding Guides" },
   { slug: "how-to-decode-hex-file", title: "How To Decode Hex File", description: "How to decode a hex file: understand the hexadecimal number system, convert byte pairs to ASCII, and use JavaScript and Python to decode hex strings.", category: "Decoding Guides" },
+  { slug: "how-to-decode-a-metar", title: "How To Decode a METAR", description: "How to decode a METAR field by field: airport code, date/time, wind, visibility, sky condition codes, temperature, altimeter, and remarks section explained.", category: "Decoding Guides" },
+  { slug: "how-to-decode-a-taf", title: "How To Decode a TAF", description: "How to decode a TAF: valid period, base conditions, FM/BECMG/TEMPO change groups, PROB, CAVOK, and NSW explained with a real example.", category: "Decoding Guides" },
+  { slug: "how-to-decode-computer-language", title: "How To Decode Computer Language", description: "How to decode computer language: identify hex, binary, Base64, and URL encoding, convert each format to readable text, and use Python and command-line tools.", category: "Decoding Guides" },
 
   // Encoding how-to guides
   { slug: "how-to-encode-a-url", title: "How To Encode A URL", description: "How to encode a URL using percent-encoding (RFC 3986): which characters must be encoded, encodeURIComponent vs encodeURI in JavaScript, and Python/PHP equivalents.", category: "Decoding Guides" },

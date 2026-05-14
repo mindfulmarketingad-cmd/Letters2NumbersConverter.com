@@ -16,8 +16,10 @@ export default function AuthCallbackPage() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    // Supabase JS v2 automatically exchanges the OAuth code or reads the hash
-    // fragment when getSession() is called in the browser.
+    // Supabase JS v2 automatically handles both:
+    // - PKCE flow: ?code= query param
+    // - Implicit flow: #access_token= hash fragment
+    // getSession() picks up whichever is present in the URL.
     supabase.auth.getSession().then(({ data: { session }, error: sessionError }) => {
       if (sessionError) {
         setError(sessionError.message)
@@ -25,20 +27,27 @@ export default function AuthCallbackPage() {
       }
       if (session) {
         router.replace('/dashboard')
-      } else {
-        // Code may still be processing — wait for onAuthStateChange
-        const { data: { subscription } } = supabase.auth.onAuthStateChange((event, s) => {
-          if (s) {
-            subscription.unsubscribe()
-            router.replace('/dashboard')
-          }
-        })
-        // Fallback: redirect to sign-in after 5 seconds if nothing happens
-        const timeout = setTimeout(() => {
+        return
+      }
+
+      // Session not immediately available — listen for auth state change.
+      // This handles cases where the hash is processed asynchronously.
+      const { data: { subscription } } = supabase.auth.onAuthStateChange((event, s) => {
+        if (s) {
           subscription.unsubscribe()
-          setError('Authentication timed out. Please try again.')
-        }, 5000)
-        return () => { clearTimeout(timeout); subscription.unsubscribe() }
+          router.replace('/dashboard')
+        }
+      })
+
+      // Fallback timeout
+      const timeout = setTimeout(() => {
+        subscription.unsubscribe()
+        setError('Authentication timed out. Please try signing in again.')
+      }, 8000)
+
+      return () => {
+        clearTimeout(timeout)
+        subscription.unsubscribe()
       }
     })
   }, [router])
@@ -51,7 +60,7 @@ export default function AuthCallbackPage() {
           {error ? (
             <>
               <p className="text-destructive font-medium">{error}</p>
-              <a href="/sign-in" className="text-primary hover:underline text-sm">
+              <a href="/sign-in" className="text-primary hover:underline text-sm block">
                 Back to sign in
               </a>
             </>

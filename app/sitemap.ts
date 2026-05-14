@@ -105,6 +105,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'saml-encoder',
     'ascii-decoder',
     'base64-encoder-decoder',
+    'gradient-palette-generator',
   ]
 
   const blogRoutes = [

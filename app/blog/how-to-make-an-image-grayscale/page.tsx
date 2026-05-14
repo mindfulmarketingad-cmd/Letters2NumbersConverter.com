@@ -166,7 +166,7 @@ export default function HowToMakeAnImageGrayscalePage() {
               Online Grayscale Converters
             </h2>
             <p className="text-foreground mb-4">
-              The easiest way to make an image grayscale is using online conversion tools that require no software installation. These browser-based tools are fast, convenient, and work on any device with internet access.
+              The easiest way to make an image grayscale is using online conversion tools that require no software installation. These browser-based tools are fast, convenient, and work on any device with internet access. Our free <Link href="/tools/make-grayscale-image-online" className="text-blue-600 hover:underline font-semibold">Grayscale Image Converter</Link> lets you convert any color image to black and white instantly — no signup, no download, just drag, drop, and save.
             </p>
             <h3 className="text-xl font-semibold text-black dark:text-white mt-6 mb-3">How to Use Online Tools:</h3>
             <ol className="list-decimal list-inside space-y-3 text-foreground mb-6">

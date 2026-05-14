@@ -623,6 +623,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Generator',
     href: '/tools/gradient-palette-generator',
   },
+  'gradient-maker-from-image': {
+    name: 'Gradient Maker from Image',
+    description: 'Upload any photo and extract its dominant colors into a CSS gradient. Uses k-means clustering on pixel data to generate a smooth gradient and palette you can copy in one click.',
+    category: 'Generator',
+    href: '/tools/gradient-maker-from-image',
+  },
 }
 
 export function getToolRegistry() {

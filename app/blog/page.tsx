@@ -62,6 +62,9 @@ const blogPosts = [
   { slug: "how-to-encode-a-url", title: "How To Encode A URL", description: "How to encode a URL using percent-encoding (RFC 3986): which characters must be encoded, encodeURIComponent vs encodeURI in JavaScript, and Python/PHP equivalents.", category: "Decoding Guides" },
   { slug: "how-to-encode-html-code", title: "How To Encode HTML Code", description: "How to encode HTML code: convert & < > \" ' to safe HTML entities, prevent XSS attacks, and use htmlspecialchars in PHP and html.escape in Python.", category: "Decoding Guides" },
   { slug: "how-to-encode-php-code", title: "How To Encode PHP Code", description: "PHP encoding functions explained: urlencode, rawurlencode, htmlspecialchars, base64_encode, json_encode, and password_hash — with a decision table.", category: "Decoding Guides" },
+  { slug: "how-to-url-encode", title: "How To URL Encode", description: "How to URL encode a string: percent-encoding explained with a character table, plus code examples in JavaScript (encodeURIComponent), Python (urllib.parse.quote), and PHP (rawurlencode).", category: "Decoding Guides" },
+  { slug: "how-to-use-unicode-in-html", title: "How To Use Unicode in HTML", description: "How to use Unicode in HTML: set UTF-8 charset, insert characters as direct text, named entities (&amp;euro;), or numeric references (&#x20AC;). Includes 15-row character reference table.", category: "Decoding Guides" },
+  { slug: "how-to-encode-python-code", title: "How To Encode Python Code", description: "Python encoding functions explained: base64, urllib.parse, html.escape, json.dumps, and str.encode — with real code examples and a use-case decision table.", category: "Decoding Guides" },
 
   // Image & Media
   { slug: "how-to-change-photo-to-high-resolution", title: "How to Change a Photo to High Resolution", description: "Methods to upscale and improve photo resolution using AI tools and image editors.", category: "Image & Media" },

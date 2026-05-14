@@ -170,6 +170,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-to-encode-a-url',
     'how-to-encode-html-code',
     'how-to-encode-php-code',
+    'how-to-url-encode',
+    'how-to-use-unicode-in-html',
+    'how-to-encode-python-code',
   ]
 
   const playRoutes = [

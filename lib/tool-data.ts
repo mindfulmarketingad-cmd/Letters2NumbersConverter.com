@@ -1110,6 +1110,28 @@ export const getToolData = (toolId: string) => {
         { title: 'IT Administrators', description: 'Auditing internal PKI infrastructure certificates to track expiry and ensure compliance with security policies.' },
       ],
     },
+    'gradient-maker-from-image': {
+      howItWorks: 'Upload any JPEG, PNG, WebP, or GIF image. The tool draws it onto an HTML5 Canvas, samples the pixel data, and runs k-means clustering to identify the most dominant colors. Those colors are sorted by luminance and arranged as gradient color stops. Choose Linear, Radial, or Conic gradient type, set the direction, adjust the palette swatch count, and copy the CSS gradient string or hex palette with one click — all inside your browser.',
+      features: [
+        'K-means color extraction from any uploaded image',
+        'Extract 2–8 dominant colors with adjustable slider',
+        'Colors sorted by luminance for a natural gradient flow',
+        'Linear, radial, and conic gradient types',
+        '8-direction compass for linear gradient angle',
+        '3–12 palette swatches generated through RGB interpolation',
+        'Click any color stop or swatch to copy its hex value',
+        'Copy CSS gradient string and hex palette list to clipboard',
+        '100% browser-based — image never leaves your device',
+        'No sign-up, no watermarks, no file size limits',
+      ],
+      whoIsItFor: [
+        { title: 'UI/UX Designers', description: 'Matching website gradients to a brand photo or hero image by extracting its exact dominant colors and converting them to CSS.' },
+        { title: 'Web Developers', description: 'Generating CSS gradient backgrounds that complement a product image or photography without manual color picking.' },
+        { title: 'Brand Designers', description: 'Building consistent color palettes sourced directly from brand photography or mood board images.' },
+        { title: 'Social Media Creators', description: 'Creating gradient backgrounds for posts, stories, and thumbnails that match the colors of a featured photo.' },
+        { title: 'Digital Artists', description: 'Deriving color palettes from reference images or artwork to use in Figma, Sketch, or Adobe tools.' },
+      ],
+    },
     'gradient-palette-generator': {
       howItWorks: 'Add between 2 and 6 color stops using the color pickers, then drag the position sliders to control where each color sits along the gradient. Choose Linear, Radial, or Conic gradient type and — for linear gradients — pick the direction using the 8-point compass. Adjust the Palette Swatches slider (3–12 steps) to expand or reduce the discrete color steps generated from your gradient. The live preview bar at the top updates instantly. Copy the ready-to-paste CSS gradient string or the full hex palette list with one click.',
       features: [

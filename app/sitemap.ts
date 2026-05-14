@@ -161,6 +161,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-to-crack-caesar-cipher',
     'vigenere-cipher-decoder',
     'pigpen-cipher',
+    'how-to-decode-qr-code-algorithm',
+    'how-decode-jwt-token',
+    'how-do-you-decode-numbers-to-letters',
+    'how-to-decode-a-text-message',
+    'how-to-decode-encoded-text',
+    'how-to-decode-hex-file',
+    'how-to-encode-a-url',
+    'how-to-encode-html-code',
+    'how-to-encode-php-code',
+    'how-to-url-encode',
+    'how-to-use-unicode-in-html',
+    'how-to-encode-python-code',
+    'what-is-a-enigma-machine',
+    'what-is-an-enigma-code',
+    'what-is-256-bit-aes-encryption',
   ]
 
   const playRoutes = [

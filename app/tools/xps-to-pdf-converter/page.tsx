@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
-import { ToolsGrid } from '@/components/tools-grid'
 import { XpsToPdfConverter } from '@/components/xps-to-pdf-converter'
 
 export const metadata: Metadata = {

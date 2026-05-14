@@ -107,6 +107,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'base64-encoder-decoder',
     'gradient-palette-generator',
     'gradient-maker-from-image',
+    'hackathon-team-name-generator',
   ]
 
   const blogRoutes = [
@@ -181,6 +182,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'what-is-a-enigma-machine',
     'what-is-an-enigma-code',
     'what-is-256-bit-aes-encryption',
+    'a0z25-chart',
+    'a1z26-chart',
+    'alphabet-letter-positions',
+    'best-decipherer-tool',
+    'hackathon-team-finder',
+    'hackathon-team-formation',
+    'how-to-do-well-in-a-hackathon',
+    'numeric-ciphers',
   ]
 
   const playRoutes = [
@@ -252,6 +261,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/hackathon`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
     },
     // Footer pages
     {

@@ -1110,6 +1110,28 @@ export const getToolData = (toolId: string) => {
         { title: 'IT Administrators', description: 'Auditing internal PKI infrastructure certificates to track expiry and ensure compliance with security policies.' },
       ],
     },
+    'gradient-palette-generator': {
+      howItWorks: 'Add between 2 and 6 color stops using the color pickers, then drag the position sliders to control where each color sits along the gradient. Choose Linear, Radial, or Conic gradient type and — for linear gradients — pick the direction using the 8-point compass. Adjust the Palette Swatches slider (3–12 steps) to expand or reduce the discrete color steps generated from your gradient. The live preview bar at the top updates instantly. Copy the ready-to-paste CSS gradient string or the full hex palette list with one click.',
+      features: [
+        'Up to 6 color stops with position control (0–100%)',
+        '4-color gradient default targeting "4 color gradient generator" searches',
+        'Linear, radial, and conic gradient types',
+        '8-direction compass for linear gradients',
+        '3–12 palette swatches generated from gradient interpolation',
+        '6 one-click presets: Sunset, Ocean, Forest, Aurora, 4-Stop, Neon',
+        'Random palette generator for instant inspiration',
+        'Copy CSS gradient string and hex palette list to clipboard',
+        'Click any swatch to copy its hex value instantly',
+        '100% browser-based — no uploads, no sign-up',
+      ],
+      whoIsItFor: [
+        { title: 'UI/UX Designers', description: 'Generating background gradients, button fills, and card overlays for web and app interfaces — then exporting ready-to-use CSS.' },
+        { title: 'Web Developers', description: 'Copying CSS gradient strings directly into stylesheets, Tailwind configs, or CSS-in-JS without manual calculations.' },
+        { title: 'Brand & Graphic Designers', description: 'Building consistent multi-color palettes that transition smoothly for presentations, print layouts, and social media graphics.' },
+        { title: 'Digital Artists & Illustrators', description: 'Exploring color harmony and generating swatch palettes that can be imported into Figma, Sketch, or Adobe tools.' },
+        { title: 'Social Media Creators', description: 'Creating gradient backgrounds for Instagram stories, YouTube thumbnails, and banner images using aesthetically matched color sets.' },
+      ],
+    },
   }
 
   return toolDataMap[toolId] || {

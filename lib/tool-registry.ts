@@ -617,6 +617,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Encoder',
     href: '/tools/base64-encoder-decoder',
   },
+  'gradient-palette-generator': {
+    name: 'Gradient Palette Generator',
+    description: 'Generate beautiful 4-color gradient palettes and export CSS. Pick color stops, choose linear/radial/conic type, preview swatches, and copy the gradient CSS in one click.',
+    category: 'Generator',
+    href: '/tools/gradient-palette-generator',
+  },
 }
 
 export function getToolRegistry() {

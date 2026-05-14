@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'The Sims language',
     'Simlish converter',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'Sims Language Translator | English ↔ Simlish',
     description: 'Translate English to Simlish or decode Simlish back to English. Includes 200+ confirmed words, random sentence generator, and audio-ready phrases.',

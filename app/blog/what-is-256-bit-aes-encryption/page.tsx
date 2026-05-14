@@ -183,7 +183,21 @@ export default function Page() {
 
             {/* ── 1. What AES Is ─────────────────────────────────────────────────── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-0 mb-4">
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-aes-is-the-advanced-encryption-standard" className="text-primary hover:underline">What AES Is — The Advanced Encryption Standard</a></li>
+            <li><a href="#what-ldquo256-bitrdquo-actually-means" className="text-primary hover:underline">What &ldquo;256-Bit&rdquo; Actually Means</a></li>
+            <li><a href="#how-aes-256-encrypts-data-the-four-round-operations" className="text-primary hover:underline">How AES-256 Encrypts Data — The Four Round Operations</a></li>
+            <li><a href="#aes-modes-of-operation-encrypting-more-than-one-block" className="text-primary hover:underline">AES Modes of Operation — Encrypting More Than One Block</a></li>
+            <li><a href="#where-aes-256-is-deployed-in-practice" className="text-primary hover:underline">Where AES-256 Is Deployed in Practice</a></li>
+            <li><a href="#is-aes-256-quantum-resistant" className="text-primary hover:underline">Is AES-256 Quantum-Resistant?</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#related-tools-and-articles" className="text-primary hover:underline">Related Tools and Articles</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-aes-is-the-advanced-encryption-standard" className="text-2xl font-bold text-foreground mt-0 mb-4 scroll-mt-20">
                 What AES Is — The Advanced Encryption Standard
               </h2>
               <p className="text-base text-muted-foreground mb-4">
@@ -227,7 +241,7 @@ export default function Page() {
 
             {/* ── 2. What "256-bit" Means ────────────────────────────────────────── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">
+              <h2 id="what-ldquo256-bitrdquo-actually-means" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">
                 What &ldquo;256-Bit&rdquo; Actually Means
               </h2>
               <p className="text-base text-muted-foreground mb-4">
@@ -243,7 +257,7 @@ export default function Page() {
 
             {/* ── 3. How AES-256 Works ───────────────────────────────────────────── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">
+              <h2 id="how-aes-256-encrypts-data-the-four-round-operations" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">
                 How AES-256 Encrypts Data — The Four Round Operations
               </h2>
               <p className="text-base text-muted-foreground mb-4">
@@ -287,7 +301,7 @@ export default function Page() {
 
             {/* ── 4. Modes of Operation ──────────────────────────────────────────── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">
+              <h2 id="aes-modes-of-operation-encrypting-more-than-one-block" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">
                 AES Modes of Operation — Encrypting More Than One Block
               </h2>
               <p className="text-base text-muted-foreground mb-4">
@@ -338,7 +352,7 @@ export default function Page() {
 
             {/* ── 5. Where AES-256 Is Used ──────────────────────────────────────── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">
+              <h2 id="where-aes-256-is-deployed-in-practice" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">
                 Where AES-256 Is Deployed in Practice
               </h2>
               <p className="text-base text-muted-foreground mb-4">
@@ -367,7 +381,7 @@ export default function Page() {
 
             {/* ── 6. Quantum Computing ──────────────────────────────────────────── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">
+              <h2 id="is-aes-256-quantum-resistant" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">
                 Is AES-256 Quantum-Resistant?
               </h2>
               <p className="text-base text-muted-foreground mb-4">
@@ -393,7 +407,7 @@ export default function Page() {
 
             {/* ── FAQ ───────────────────────────────────────────────────────────── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
+              <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mb-6 scroll-mt-20">Frequently Asked Questions</h2>
 
               <div className="space-y-6">
                 <div>
@@ -449,7 +463,7 @@ export default function Page() {
 
             {/* ── Related Links ─────────────────────────────────────────────────── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Related Tools and Articles</h2>
+              <h2 id="related-tools-and-articles" className="text-2xl font-bold text-foreground mb-6 scroll-mt-20">Related Tools and Articles</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   {

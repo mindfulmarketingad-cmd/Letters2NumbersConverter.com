@@ -154,7 +154,23 @@ export default function Page() {
             </p>
 
             {/* ------------------------------------------------------------------ */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#1-what-is-a-taf-and-how-is-it-different-from-a-metar" className="text-primary hover:underline">1. What Is a TAF and How Is It Different from a METAR?</a></li>
+            <li><a href="#2-decoding-the-taf-header-report-type-station-issue-time-valid-period" className="text-primary hover:underline">2. Decoding the TAF Header (Report Type, Station, Issue Time, Valid Period)</a></li>
+            <li><a href="#3-base-conditions-the-opening-forecast-group" className="text-primary hover:underline">3. Base Conditions — The Opening Forecast Group</a></li>
+            <li><a href="#4-change-indicators-fm-becmg-tempo-and-prob" className="text-primary hover:underline">4. Change Indicators: FM, BECMG, TEMPO, and PROB</a></li>
+            <li><a href="#5-cloud-visibility-and-weather-codes-in-a-taf" className="text-primary hover:underline">5. Cloud, Visibility, and Weather Codes in a TAF</a></li>
+            <li><a href="#6-cavok-nsw-and-other-special-designators" className="text-primary hover:underline">6. CAVOK, NSW, and Other Special Designators</a></li>
+            <li><a href="#7-amended-and-corrected-tafs" className="text-primary hover:underline">7. Amended and Corrected TAFs</a></li>
+            <li><a href="#8-free-tools-to-decode-a-taf-online" className="text-primary hover:underline">8. Free Tools to Decode a TAF Online</a></li>
+            <li><a href="#9-frequently-asked-questions" className="text-primary hover:underline">9. Frequently Asked Questions</a></li>
+            <li><a href="#further-reading" className="text-primary hover:underline">Further Reading</a></li>
+            </ol>
+          </nav>
+
+<h2 id="1-what-is-a-taf-and-how-is-it-different-from-a-metar" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               1. What Is a TAF and How Is It Different from a METAR?
             </h2>
 
@@ -198,7 +214,7 @@ export default function Page() {
             </div>
 
             {/* ------------------------------------------------------------------ */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="2-decoding-the-taf-header-report-type-station-issue-time-valid-period" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               2. Decoding the TAF Header (Report Type, Station, Issue Time, Valid Period)
             </h2>
 
@@ -240,7 +256,7 @@ export default function Page() {
             </p>
 
             {/* ------------------------------------------------------------------ */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="3-base-conditions-the-opening-forecast-group" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               3. Base Conditions — The Opening Forecast Group
             </h2>
 
@@ -309,7 +325,7 @@ export default function Page() {
             </p>
 
             {/* ------------------------------------------------------------------ */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="4-change-indicators-fm-becmg-tempo-and-prob" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               4. Change Indicators: FM, BECMG, TEMPO, and PROB
             </h2>
 
@@ -381,7 +397,7 @@ export default function Page() {
             </div>
 
             {/* ------------------------------------------------------------------ */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="5-cloud-visibility-and-weather-codes-in-a-taf" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               5. Cloud, Visibility, and Weather Codes in a TAF
             </h2>
 
@@ -452,7 +468,7 @@ export default function Page() {
             </p>
 
             {/* ------------------------------------------------------------------ */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="6-cavok-nsw-and-other-special-designators" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               6. CAVOK, NSW, and Other Special Designators
             </h2>
 
@@ -486,7 +502,7 @@ export default function Page() {
             </p>
 
             {/* ------------------------------------------------------------------ */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="7-amended-and-corrected-tafs" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               7. Amended and Corrected TAFs
             </h2>
 
@@ -512,7 +528,7 @@ export default function Page() {
             </p>
 
             {/* ------------------------------------------------------------------ */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="8-free-tools-to-decode-a-taf-online" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               8. Free Tools to Decode a TAF Online
             </h2>
 
@@ -541,7 +557,7 @@ export default function Page() {
             </p>
 
             {/* ------------------------------------------------------------------ */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="9-frequently-asked-questions" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               9. Frequently Asked Questions
             </h2>
 
@@ -585,7 +601,7 @@ export default function Page() {
 
             {/* ------------------------------------------------------------------ */}
             <div className="mt-10 pt-6 border-t border-border">
-              <h2 className="text-xl font-bold text-foreground mb-4">Further Reading</h2>
+              <h2 id="further-reading" className="text-xl font-bold text-foreground mb-4 scroll-mt-20">Further Reading</h2>
               <ul className="list-disc list-inside text-base text-muted-foreground space-y-2">
                 <li>
                   <Link href="/blog/how-to-decode-a-metar" className="text-primary hover:underline">

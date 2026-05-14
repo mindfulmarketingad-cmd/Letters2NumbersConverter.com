@@ -48,7 +48,20 @@ export default function EducationalUsesLetterNumberConversion() {
               Letter-to-number conversion offers a versatile teaching tool that spans multiple subjects and age groups. From elementary mathematics to computer science fundamentals, this simple concept provides engaging ways to develop essential skills while making learning fun and interactive.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Teaching Mathematics Through Letters</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#teaching-mathematics-through-letters" className="text-primary hover:underline">Teaching Mathematics Through Letters</a></li>
+            <li><a href="#introduction-to-computer-science-concepts" className="text-primary hover:underline">Introduction to Computer Science Concepts</a></li>
+            <li><a href="#literacy-and-reading-development" className="text-primary hover:underline">Literacy and Reading Development</a></li>
+            <li><a href="#critical-thinking-and-problem-solving" className="text-primary hover:underline">Critical Thinking and Problem Solving</a></li>
+            <li><a href="#cross-curricular-applications" className="text-primary hover:underline">Cross-Curricular Applications</a></li>
+            <li><a href="#classroom-activities-and-resources" className="text-primary hover:underline">Classroom Activities and Resources</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="teaching-mathematics-through-letters" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Teaching Mathematics Through Letters</h2>
             <p className="text-foreground leading-relaxed mb-6">
               One of the most effective educational applications of letter-number conversion is in mathematics instruction. Teachers use alphabet coding to create engaging arithmetic exercises where students calculate word values by adding letter positions. For example, finding that CAT = 3 + 1 + 20 = 24 combines spelling practice with addition skills.
             </p>
@@ -56,7 +69,7 @@ export default function EducationalUsesLetterNumberConversion() {
               More advanced exercises involve finding words with specific totals or comparing word values. Students might search for words that equal 100, encouraging both mathematical thinking and vocabulary exploration. These activities develop mental math skills while maintaining student engagement through the novelty of letter-based problems.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Introduction to Computer Science Concepts</h2>
+            <h2 id="introduction-to-computer-science-concepts" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Introduction to Computer Science Concepts</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Letter-number conversion provides an accessible entry point to computer science concepts. Teaching ASCII encoding helps students understand how computers represent text internally. This foundational knowledge prepares them for programming, where character manipulation is a common task.
             </p>
@@ -67,7 +80,7 @@ export default function EducationalUsesLetterNumberConversion() {
               Our <Link href="/" className="text-primary hover:underline">letter to number converter</Link> supports multiple encoding formats, making it an ideal classroom tool for demonstrating these concepts interactively.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Literacy and Reading Development</h2>
+            <h2 id="literacy-and-reading-development" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Literacy and Reading Development</h2>
             <p className="text-foreground leading-relaxed mb-6">
               For younger learners, letter-number activities reinforce alphabet knowledge and letter sequencing. Assigning numbers to letters helps children internalize alphabetical order while providing additional context for letter recognition. Activities like &quot;find the letter that equals 13&quot; turn alphabet practice into an engaging game.
             </p>
@@ -75,7 +88,7 @@ export default function EducationalUsesLetterNumberConversion() {
               Spelling exercises become more engaging when combined with number values. Students can be challenged to spell words using only letters that sum to a target number, or to find the highest-value word using a limited set of letters. These activities develop spelling skills while incorporating mathematical reasoning.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Critical Thinking and Problem Solving</h2>
+            <h2 id="critical-thinking-and-problem-solving" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Critical Thinking and Problem Solving</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Cryptography-based activities using letter-number conversion develop critical thinking skills. Students learn to recognize patterns, test hypotheses, and apply systematic approaches to problem-solving. Decoding simple substitution ciphers teaches logical reasoning and attention to detail.
             </p>
@@ -83,7 +96,7 @@ export default function EducationalUsesLetterNumberConversion() {
               Creating coded messages for classmates to solve encourages creativity while reinforcing encoding concepts. Students must think from both the encoder and decoder perspectives, developing empathy and communication skills alongside technical understanding.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Cross-Curricular Applications</h2>
+            <h2 id="cross-curricular-applications" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Cross-Curricular Applications</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Letter-number conversion naturally integrates multiple subjects. History lessons might include decoding messages using ciphers from different eras. Science classes can explore how genetic sequences are encoded. Language arts activities might analyze the &quot;numerical weight&quot; of words in poetry or literature.
             </p>
@@ -91,7 +104,7 @@ export default function EducationalUsesLetterNumberConversion() {
               STEAM education benefits particularly from these connections, as letter encoding bridges language arts with mathematics and computer science. Projects that combine writing with coding, or art with mathematics, become natural extensions of letter-number exploration.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Classroom Activities and Resources</h2>
+            <h2 id="classroom-activities-and-resources" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Classroom Activities and Resources</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Teachers can implement letter-number conversion in various formats. Worksheet activities work well for individual practice, while team competitions to find the highest-value word encourage collaboration. Interactive whiteboard demonstrations using online converters engage visual learners effectively.
             </p>
@@ -99,7 +112,7 @@ export default function EducationalUsesLetterNumberConversion() {
               Take-home puzzles extend learning beyond the classroom, and parent involvement increases when families can participate in decoding activities together. The simplicity of the A1Z26 system means no special materials are needed beyond paper and pencil, making these activities accessible to all schools.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Conclusion</h2>
+            <h2 id="conclusion" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Conclusion</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Letter-number conversion is a powerful educational tool that makes learning engaging across multiple subjects and grade levels. From basic arithmetic and alphabet skills to advanced computer science concepts, this simple technique opens doors to meaningful, cross-curricular learning experiences.
             </p>

@@ -129,7 +129,19 @@ export default function BestDecoderOnlinePage() {
 
           {/* Why Choose Us Section */}
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold">Why Letters2NumbersConverter.com is the Best Decoder Online</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#why-letters2numbersconvertercom-is-the-best-decoder-online" className="text-primary hover:underline">Why Letters2NumbersConverter.com is the Best Decoder Online</a></li>
+            <li><a href="#who-benefits-from-our-online-decoder" className="text-primary hover:underline">Who Benefits from Our Online Decoder?</a></li>
+            <li><a href="#our-most-popular-online-decoders" className="text-primary hover:underline">Our Most Popular Online Decoders</a></li>
+            <li><a href="#how-we-compare-to-other-online-decoders" className="text-primary hover:underline">How We Compare to Other Online Decoders</a></li>
+            <li><a href="#experience-the-best-decoder-online-today" className="text-primary hover:underline">Experience the Best Decoder Online Today</a></li>
+            <li><a href="#final-thoughts" className="text-primary hover:underline">Final Thoughts</a></li>
+            </ol>
+          </nav>
+
+<h2 id="why-letters2numbersconvertercom-is-the-best-decoder-online" className="text-3xl font-bold scroll-mt-20">Why Letters2NumbersConverter.com is the Best Decoder Online</h2>
             
             <div className="space-y-6">
               {/* Reason 1 */}
@@ -202,7 +214,7 @@ export default function BestDecoderOnlinePage() {
 
           {/* Who Benefits Section */}
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold">Who Benefits from Our Online Decoder?</h2>
+            <h2 id="who-benefits-from-our-online-decoder" className="text-3xl font-bold scroll-mt-20">Who Benefits from Our Online Decoder?</h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-primary/5 border border-primary/20 rounded-lg p-6">
@@ -251,7 +263,7 @@ export default function BestDecoderOnlinePage() {
 
           {/* Featured Tools */}
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold">Our Most Popular Online Decoders</h2>
+            <h2 id="our-most-popular-online-decoders" className="text-3xl font-bold scroll-mt-20">Our Most Popular Online Decoders</h2>
             
             <div className="space-y-4">
               <p className="text-muted-foreground">
@@ -310,7 +322,7 @@ export default function BestDecoderOnlinePage() {
 
           {/* Comparison */}
           <section className="space-y-6 bg-card border border-border rounded-lg p-8">
-            <h2 className="text-2xl font-bold">How We Compare to Other Online Decoders</h2>
+            <h2 id="how-we-compare-to-other-online-decoders" className="text-2xl font-bold scroll-mt-20">How We Compare to Other Online Decoders</h2>
             
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -359,7 +371,7 @@ export default function BestDecoderOnlinePage() {
 
           {/* Call to Action */}
           <section className="bg-primary/10 border border-primary/20 rounded-lg p-8 text-center space-y-4">
-            <h2 className="text-2xl font-bold">Experience the Best Decoder Online Today</h2>
+            <h2 id="experience-the-best-decoder-online-today" className="text-2xl font-bold scroll-mt-20">Experience the Best Decoder Online Today</h2>
             <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               Stop searching for multiple decoder tools and jumping between different websites. Get everything you need in one place with Letters2NumbersConverter.com – the best decoder online.
             </p>
@@ -381,7 +393,7 @@ export default function BestDecoderOnlinePage() {
 
           {/* Conclusion */}
           <section className="space-y-4">
-            <h2 className="text-3xl font-bold">Final Thoughts</h2>
+            <h2 id="final-thoughts" className="text-3xl font-bold scroll-mt-20">Final Thoughts</h2>
             <p className="text-base leading-relaxed text-muted-foreground">
               Best Decoder Online – that's not just a marketing claim; it's what our users tell us every day. With comprehensive format support, lightning-fast processing, uncompromising privacy, and a commitment to continuous improvement, Letters2NumbersConverter.com has earned its reputation as the go-to online decoder for millions of users worldwide.
             </p>

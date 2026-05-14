@@ -130,7 +130,18 @@ export default function A0Z25ChartPage() {
           <div className="prose dark:prose-invert max-w-none space-y-8">
             {/* What is A0Z25 */}
             <section>
-              <h2 className="text-6xl font-bold text-black dark:text-white mb-4">
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-the-a0z25-cipher" className="text-primary hover:underline">What is the A0Z25 Cipher?</a></li>
+            <li><a href="#a0z25-vs-a1z26-key-differences" className="text-primary hover:underline">A0Z25 vs A1Z26: Key Differences</a></li>
+            <li><a href="#real-world-uses-of-a0z25" className="text-primary hover:underline">Real-World Uses of A0Z25</a></li>
+            <li><a href="#why-choose-letters2numbersconvertercom" className="text-primary hover:underline">Why Choose Letters2NumbersConverter.com</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-the-a0z25-cipher" className="text-6xl font-bold text-black dark:text-white mb-4 scroll-mt-20">
                 What is the A0Z25 Cipher?
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
@@ -143,7 +154,7 @@ export default function A0Z25ChartPage() {
 
             {/* A1Z26 VS A0Z25 */}
             <section>
-              <h2 className="text-6xl font-bold text-black dark:text-white mb-4">
+              <h2 id="a0z25-vs-a1z26-key-differences" className="text-6xl font-bold text-black dark:text-white mb-4 scroll-mt-20">
                 A0Z25 vs A1Z26: Key Differences
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
@@ -202,7 +213,7 @@ export default function A0Z25ChartPage() {
 
             {/* Who uses A0Z25 */}
             <section>
-              <h2 className="text-6xl font-bold text-black dark:text-white mb-4">
+              <h2 id="real-world-uses-of-a0z25" className="text-6xl font-bold text-black dark:text-white mb-4 scroll-mt-20">
                 Real-World Uses of A0Z25
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
@@ -251,7 +262,7 @@ export default function A0Z25ChartPage() {
 
             {/* Best Tools Section */}
             <section>
-              <h2 className="text-3xl font-bold text-black dark:text-white mb-4">
+              <h2 id="why-choose-letters2numbersconvertercom" className="text-3xl font-bold text-black dark:text-white mb-4 scroll-mt-20">
                 Why Choose Letters2NumbersConverter.com
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
@@ -280,7 +291,7 @@ export default function A0Z25ChartPage() {
 
             {/* FAQ Section */}
             <section>
-              <h2 className="text-3xl font-bold text-black dark:text-white mb-4">
+              <h2 id="frequently-asked-questions" className="text-3xl font-bold text-black dark:text-white mb-4 scroll-mt-20">
                 Frequently Asked Questions
               </h2>
               

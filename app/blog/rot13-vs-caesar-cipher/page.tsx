@@ -40,7 +40,23 @@ export default function Page() {
             ROT13 and the Caesar cipher are closely related — in fact, ROT13 <em>is</em> a Caesar cipher. But there are important differences in how they are used, what makes ROT13 special, and why the two have evolved very differently in modern usage. This guide explains both ciphers, compares them side by side, and helps you choose the right tool for your situation. To try either cipher right now: <Link href="/tools/rot13-decoder" className="text-primary hover:underline">ROT13 Decoder</Link> | <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar Cipher Decoder</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Short Answer</h2>
+                    <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#the-short-answer" className="text-primary hover:underline">The Short Answer</a></li>
+            <li><a href="#what-is-the-caesar-cipher" className="text-primary hover:underline">What Is the Caesar Cipher?</a></li>
+            <li><a href="#what-is-rot13" className="text-primary hover:underline">What Is ROT13?</a></li>
+            <li><a href="#side-by-side-comparison" className="text-primary hover:underline">Side-by-Side Comparison</a></li>
+            <li><a href="#the-key-difference-self-inverse-vs-variable-shift" className="text-primary hover:underline">The Key Difference: Self-Inverse vs. Variable Shift</a></li>
+            <li><a href="#historical-origins-58-bc-vs-the-1980s" className="text-primary hover:underline">Historical Origins: 58 BC vs. the 1980s</a></li>
+            <li><a href="#when-to-use-each" className="text-primary hover:underline">When to Use Each</a></li>
+            <li><a href="#practical-examples" className="text-primary hover:underline">Practical Examples</a></li>
+            <li><a href="#try-both-ciphers" className="text-primary hover:underline">Try Both Ciphers</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="the-short-answer" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Short Answer</h2>
           <div className="p-4 rounded-lg bg-secondary/40 border border-border mb-6">
             <p className="text-base text-foreground mb-2">
               <strong>ROT13 is a Caesar cipher with a fixed shift of 13.</strong>
@@ -50,7 +66,7 @@ export default function Page() {
             </p>
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">What Is the Caesar Cipher?</h2>
+          <h2 id="what-is-the-caesar-cipher" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">What Is the Caesar Cipher?</h2>
           <p className="text-base text-muted-foreground mb-4">
             The Caesar cipher is a substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions further along the alphabet. The shift value (also called the key) can be any number from 1 to 25.
           </p>
@@ -68,7 +84,7 @@ export default function Page() {
             HELLO with shift 3 → KHOOR. To decode, shift back by 3: KHOOR → HELLO.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">What Is ROT13?</h2>
+          <h2 id="what-is-rot13" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">What Is ROT13?</h2>
           <p className="text-base text-muted-foreground mb-4">
             ROT13 is a Caesar cipher where the shift is always 13 — chosen specifically because 26 ÷ 2 = 13, which means the encoding and decoding operations are identical. Apply ROT13 once to encode; apply it again to decode. No separate &quot;reverse&quot; step is needed.
           </p>
@@ -80,7 +96,7 @@ export default function Page() {
             HELLO with ROT13 → URYYB. Apply ROT13 to URYYB → HELLO. The alphabet is split exactly in half, each letter pairing with its mirror: A↔N, B↔O, … M↔Z.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Side-by-Side Comparison</h2>
+          <h2 id="side-by-side-comparison" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Side-by-Side Comparison</h2>
 
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">
@@ -113,7 +129,7 @@ export default function Page() {
             </table>
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Key Difference: Self-Inverse vs. Variable Shift</h2>
+          <h2 id="the-key-difference-self-inverse-vs-variable-shift" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Key Difference: Self-Inverse vs. Variable Shift</h2>
           <p className="text-base text-muted-foreground mb-4">
             The fundamental distinction is the <strong className="text-foreground">self-inverse property</strong>. With any Caesar shift other than 13, you need to know two operations: &quot;shift forward by N to encode&quot; and &quot;shift back by N to decode.&quot; With ROT13, there is only one operation — applied twice, it cancels itself out.
           </p>
@@ -124,7 +140,7 @@ export default function Page() {
             A Caesar cipher with an unknown shift at least requires an attacker to try 25 possibilities (or use frequency analysis). ROT13 has no variable at all — anyone who recognises the scrambled text pattern can decode it immediately. This makes ROT13 <em>less</em> secure than a Caesar cipher, but ROT13 was never designed for security.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Historical Origins: 58 BC vs. the 1980s</h2>
+          <h2 id="historical-origins-58-bc-vs-the-1980s" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Historical Origins: 58 BC vs. the 1980s</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Julius Caesar and the Classical Cipher</h3>
           <p className="text-base text-muted-foreground mb-4">
@@ -142,7 +158,7 @@ export default function Page() {
             The practice carried forward to forums, IRC, Reddit, and the broader internet culture where it remains in occasional use today.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">When to Use Each</h2>
+          <h2 id="when-to-use-each" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">When to Use Each</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Use ROT13 when:</h3>
           <ul className="list-disc list-inside text-base text-muted-foreground mb-4 space-y-2">
@@ -166,7 +182,7 @@ export default function Page() {
             </p>
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Practical Examples</h2>
+          <h2 id="practical-examples" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Practical Examples</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">ROT13 Example</h3>
           <p className="text-base text-muted-foreground mb-2">Message: <span className="font-mono text-foreground">The butler did it</span></p>
@@ -178,7 +194,7 @@ export default function Page() {
           <p className="text-base text-muted-foreground mb-2">Caesar +7: <span className="font-mono text-green-600">Tlla ha khdu</span></p>
           <p className="text-base text-muted-foreground mb-4">To decode: you must know the shift is 7, then apply −7. Without the key, a brute-force attacker tries all 25 options.</p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Try Both Ciphers</h2>
+          <h2 id="try-both-ciphers" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Try Both Ciphers</h2>
           <p className="text-base text-muted-foreground mb-4">
             Use our free tools to encode or decode instantly:
           </p>
@@ -188,7 +204,7 @@ export default function Page() {
             <li><Link href="/tools/cipher-identifier" className="text-primary hover:underline">Cipher Identifier</Link> — not sure which cipher was used? This tool analyses the text</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Conclusion</h2>
+          <h2 id="conclusion" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Conclusion</h2>
           <p className="text-base text-muted-foreground mb-4">
             ROT13 and the Caesar cipher share the same underlying mechanism — shift every letter by a fixed number of positions. The only difference is whether that number is fixed at 13 (ROT13) or variable (Caesar). The fixed shift of 13 gives ROT13 its self-inverse property, which made it uniquely useful for internet communities that needed quick, key-free obfuscation.
           </p>

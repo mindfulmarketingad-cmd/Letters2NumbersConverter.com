@@ -65,7 +65,21 @@ export default function A1Z26CipherExamples() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Basic A1Z26 Cipher Examples</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#basic-a1z26-cipher-examples" className="text-primary hover:underline">Basic A1Z26 Cipher Examples</a></li>
+            <li><a href="#intermediate-a1z26-cipher-examples" className="text-primary hover:underline">Intermediate A1Z26 Cipher Examples</a></li>
+            <li><a href="#advanced-a1z26-cipher-examples" className="text-primary hover:underline">Advanced A1Z26 Cipher Examples</a></li>
+            <li><a href="#a1z26-cipher-examples-in-practice" className="text-primary hover:underline">A1Z26 Cipher Examples in Practice</a></li>
+            <li><a href="#common-challenges-with-a1z26-cipher-examples" className="text-primary hover:underline">Common Challenges with A1Z26 Cipher Examples</a></li>
+            <li><a href="#tools-for-mastering-a1z26-cipher-examples" className="text-primary hover:underline">Tools for Mastering A1Z26 Cipher Examples</a></li>
+            <li><a href="#practice-exercises-with-a1z26-cipher-examples" className="text-primary hover:underline">Practice Exercises with A1Z26 Cipher Examples</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="basic-a1z26-cipher-examples" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Basic A1Z26 Cipher Examples</h2>
               
               <p className="text-muted-foreground mb-4">
                 The foundation of understanding A1Z26 cipher examples starts with single-letter conversions and simple words. These basic examples demonstrate how the cipher works and establish the fundamental mapping between letters and numbers.
@@ -105,7 +119,7 @@ export default function A1Z26CipherExamples() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Intermediate A1Z26 Cipher Examples</h2>
+              <h2 id="intermediate-a1z26-cipher-examples" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Intermediate A1Z26 Cipher Examples</h2>
               
               <p className="text-muted-foreground mb-4">
                 As you advance, A1Z26 cipher examples become more complex with longer words, mixed case sensitivity, and multi-word phrases. These intermediate examples teach you how to handle real-world cipher scenarios and develop problem-solving strategies.
@@ -145,7 +159,7 @@ export default function A1Z26CipherExamples() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Advanced A1Z26 Cipher Examples</h2>
+              <h2 id="advanced-a1z26-cipher-examples" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Advanced A1Z26 Cipher Examples</h2>
               
               <p className="text-muted-foreground mb-4">
                 Advanced A1Z26 cipher examples include full sentences, special formatting, and challenging puzzles that require strategic thinking and careful analysis. These examples showcase the versatility of the A1Z26 cipher in complex cryptographic applications.
@@ -169,7 +183,7 @@ export default function A1Z26CipherExamples() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">A1Z26 Cipher Examples in Practice</h2>
+              <h2 id="a1z26-cipher-examples-in-practice" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">A1Z26 Cipher Examples in Practice</h2>
               
               <h3 className="text-xl font-semibold text-foreground mb-3">Escape Room Applications</h3>
               <p className="text-muted-foreground mb-4">
@@ -188,7 +202,7 @@ export default function A1Z26CipherExamples() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Common Challenges with A1Z26 Cipher Examples</h2>
+              <h2 id="common-challenges-with-a1z26-cipher-examples" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Common Challenges with A1Z26 Cipher Examples</h2>
               
               <div className="space-y-4 text-muted-foreground">
                 <div>
@@ -209,7 +223,7 @@ export default function A1Z26CipherExamples() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Tools for Mastering A1Z26 Cipher Examples</h2>
+              <h2 id="tools-for-mastering-a1z26-cipher-examples" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Tools for Mastering A1Z26 Cipher Examples</h2>
               
               <p className="text-muted-foreground mb-4">
                 Several specialized tools help you create, solve, and understand A1Z26 cipher examples:
@@ -232,7 +246,7 @@ export default function A1Z26CipherExamples() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Practice Exercises with A1Z26 Cipher Examples</h2>
+              <h2 id="practice-exercises-with-a1z26-cipher-examples" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Practice Exercises with A1Z26 Cipher Examples</h2>
               
               <div className="bg-muted/50 p-6 rounded-lg border border-muted">
                 <h3 className="text-lg font-semibold text-foreground mb-4">Try These A1Z26 Cipher Challenges:</h3>
@@ -255,7 +269,7 @@ export default function A1Z26CipherExamples() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Conclusion</h2>
+              <h2 id="conclusion" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Conclusion</h2>
               
               <p className="text-muted-foreground mb-4">
                 A1Z26 cipher examples provide an accessible entry point into cryptography and encoding systems. From simple single-word conversions to complex multi-word challenges, mastering these examples develops valuable problem-solving skills applicable to puzzles, escape rooms, cryptography, and data encoding. Whether you're creating engaging puzzles, teaching cryptographic concepts, or simply exploring encoding methods, understanding diverse A1Z26 cipher examples is fundamental to success in these fields.

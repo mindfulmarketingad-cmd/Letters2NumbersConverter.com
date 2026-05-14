@@ -133,7 +133,21 @@ export default function HowToChangePhotoToHighResolutionBlog() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-6">Understanding Image Resolution</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#understanding-image-resolution" className="text-primary hover:underline">Understanding Image Resolution</a></li>
+            <li><a href="#practical-uses-converting-image-to-text" className="text-primary hover:underline">Practical Uses Converting Image To Text</a></li>
+            <li><a href="#methods-to-change-photo-to-high-resolution" className="text-primary hover:underline">Methods To Change Photo To High Resolution</a></li>
+            <li><a href="#step-by-step-guide-to-upscaling-photos" className="text-primary hover:underline">Step-By-Step Guide To Upscaling Photos</a></li>
+            <li><a href="#best-practices-for-photo-resolution-enhancement" className="text-primary hover:underline">Best Practices For Photo Resolution Enhancement</a></li>
+            <li><a href="#common-questions-about-photo-resolution" className="text-primary hover:underline">Common Questions About Photo Resolution</a></li>
+            <li><a href="#recommended-tools-for-photo-enhancement" className="text-primary hover:underline">Recommended Tools For Photo Enhancement</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="understanding-image-resolution" className="text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Understanding Image Resolution</h2>
             <p className="text-foreground mb-4">
               Before diving into how to change photo resolution, it's important to understand what resolution actually means. Image resolution refers to the level of detail in a digital image, typically measured in pixels per inch (PPI) or dots per inch (DPI).
             </p>
@@ -145,7 +159,7 @@ export default function HowToChangePhotoToHighResolutionBlog() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-6">Practical Uses Converting Image To Text</h2>
+            <h2 id="practical-uses-converting-image-to-text" className="text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Practical Uses Converting Image To Text</h2>
             <p className="text-foreground mb-4">
               While upscaling images, it's worth noting that converting images to text is another powerful capability. If you have images containing text that need to be extracted, our <Link href="/tools/scan-words-from-image" className="text-blue-500 hover:text-blue-600 underline">Scan Words From Image tool</Link> uses advanced OCR technology to extract text from high-resolution photos, documents, and screenshots instantly.
             </p>
@@ -155,7 +169,7 @@ export default function HowToChangePhotoToHighResolutionBlog() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-6">Methods To Change Photo To High Resolution</h2>
+            <h2 id="methods-to-change-photo-to-high-resolution" className="text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Methods To Change Photo To High Resolution</h2>
 
             <h3 className="text-2xl font-semibold text-black dark:text-white mb-4 mt-8">1. AI-Powered Upscaling Tools</h3>
             <p className="text-foreground mb-4">
@@ -191,7 +205,7 @@ export default function HowToChangePhotoToHighResolutionBlog() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-6">Step-By-Step Guide To Upscaling Photos</h2>
+            <h2 id="step-by-step-guide-to-upscaling-photos" className="text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Step-By-Step Guide To Upscaling Photos</h2>
             <ol className="list-decimal list-inside space-y-4 text-foreground">
               <li><strong>Assess the Original Image:</strong> Determine the current resolution and identify what quality level you need</li>
               <li><strong>Choose Your Tool:</strong> Select an appropriate upscaling tool based on your budget and requirements</li>
@@ -204,7 +218,7 @@ export default function HowToChangePhotoToHighResolutionBlog() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-6">Best Practices For Photo Resolution Enhancement</h2>
+            <h2 id="best-practices-for-photo-resolution-enhancement" className="text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Best Practices For Photo Resolution Enhancement</h2>
             <div className="bg-blue-50 dark:bg-blue-950 p-6 rounded-lg border border-blue-200 dark:border-blue-800 mb-6">
               <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Pro Tips:</h3>
               <ul className="list-disc list-inside space-y-2 text-foreground">
@@ -220,7 +234,7 @@ export default function HowToChangePhotoToHighResolutionBlog() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-6">Common Questions About Photo Resolution</h2>
+            <h2 id="common-questions-about-photo-resolution" className="text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Common Questions About Photo Resolution</h2>
             <div className="space-y-6">
               <div className="border-l-4 border-blue-500 pl-4">
                 <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Can You Truly Add Detail To A Low-Resolution Image?</h3>
@@ -253,7 +267,7 @@ export default function HowToChangePhotoToHighResolutionBlog() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-6">Recommended Tools For Photo Enhancement</h2>
+            <h2 id="recommended-tools-for-photo-enhancement" className="text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Recommended Tools For Photo Enhancement</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div className="bg-secondary p-4 rounded-lg border border-border">
                 <h4 className="font-semibold text-black dark:text-white mb-2">Free Options</h4>
@@ -275,7 +289,7 @@ export default function HowToChangePhotoToHighResolutionBlog() {
           </section>
 
           <section className="bg-green-50 dark:bg-green-950 p-6 rounded-lg border border-green-200 dark:border-green-800">
-            <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Conclusion</h2>
+            <h2 id="conclusion" className="text-2xl font-bold text-black dark:text-white mb-4 scroll-mt-20">Conclusion</h2>
             <p className="text-foreground mb-4">
               Learning how to change photo to high resolution is an essential skill in today's digital world. Whether you're working with old photographs, screenshots, or images that need to be enlarged for various purposes, the right techniques and tools can significantly improve your results. AI-powered upscaling has made it easier than ever to enhance image quality, and with the best practices outlined in this guide, you'll be able to achieve professional-quality results.
             </p>

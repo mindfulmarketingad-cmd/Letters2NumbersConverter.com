@@ -79,7 +79,23 @@ export default function AlphaBravioCharlieCodeListBlog() {
 
           {/* What is Alpha Bravo Charlie Section */}
           <section className="mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-4">What Is Alpha Bravo Charlie?</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-alpha-bravo-charlie" className="text-primary hover:underline">What Is Alpha Bravo Charlie?</a></li>
+            <li><a href="#complete-alpha-bravo-charlie-code-list" className="text-primary hover:underline">Complete Alpha Bravo Charlie Code List</a></li>
+            <li><a href="#numbers-in-the-phonetic-alphabet" className="text-primary hover:underline">Numbers In The Phonetic Alphabet</a></li>
+            <li><a href="#history-and-evolution" className="text-primary hover:underline">History And Evolution</a></li>
+            <li><a href="#practical-applications-of-alpha-bravo-charlie" className="text-primary hover:underline">Practical Applications Of Alpha Bravo Charlie</a></li>
+            <li><a href="#how-to-use-the-alpha-bravo-charlie-code-list" className="text-primary hover:underline">How To Use The Alpha Bravo Charlie Code List</a></li>
+            <li><a href="#tools-and-resources-for-phonetic-codes" className="text-primary hover:underline">Tools And Resources For Phonetic Codes</a></li>
+            <li><a href="#common-mistakes-to-avoid" className="text-primary hover:underline">Common Mistakes To Avoid</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            <li><a href="#related-reading" className="text-primary hover:underline">Related Reading</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-alpha-bravo-charlie" className="text-3xl font-bold text-foreground mb-4 scroll-mt-20">What Is Alpha Bravo Charlie?</h2>
             <p className="text-foreground mb-4 leading-relaxed">
               Alpha, Bravo, and Charlie are the first three letters of the NATO phonetic alphabet. The Alpha Bravo Charlie code list is a standardized method of spelling out letters and numbers using distinctive code words that are universally recognized across military, aviation, and emergency services worldwide.
             </p>
@@ -90,7 +106,7 @@ export default function AlphaBravioCharlieCodeListBlog() {
 
           {/* Complete Code List Table */}
           <section className="mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Complete Alpha Bravo Charlie Code List</h2>
+            <h2 id="complete-alpha-bravo-charlie-code-list" className="text-3xl font-bold text-foreground mb-6 scroll-mt-20">Complete Alpha Bravo Charlie Code List</h2>
             <div className="overflow-x-auto rounded-lg border border-border/50">
               <table className="w-full">
                 <thead>
@@ -142,7 +158,7 @@ export default function AlphaBravioCharlieCodeListBlog() {
 
           {/* Number Codes Section */}
           <section className="mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Numbers In The Phonetic Alphabet</h2>
+            <h2 id="numbers-in-the-phonetic-alphabet" className="text-3xl font-bold text-foreground mb-4 scroll-mt-20">Numbers In The Phonetic Alphabet</h2>
             <p className="text-foreground mb-6 leading-relaxed">
               The Alpha Bravo Charlie code system extends beyond letters to include standardized pronunciations for numbers 0-9:
             </p>
@@ -170,7 +186,7 @@ export default function AlphaBravioCharlieCodeListBlog() {
 
           {/* History Section */}
           <section className="mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-4">History And Evolution</h2>
+            <h2 id="history-and-evolution" className="text-3xl font-bold text-foreground mb-4 scroll-mt-20">History And Evolution</h2>
             <p className="text-foreground mb-4 leading-relaxed">
               The NATO phonetic alphabet, including the Alpha Bravo Charlie system, was officially adopted by the International Civil Aviation Organization (ICAO) in 1955. However, its roots trace back to earlier radio communication protocols developed during World War II.
             </p>
@@ -181,7 +197,7 @@ export default function AlphaBravioCharlieCodeListBlog() {
 
           {/* Practical Applications Section */}
           <section className="mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Practical Applications Of Alpha Bravo Charlie</h2>
+            <h2 id="practical-applications-of-alpha-bravo-charlie" className="text-3xl font-bold text-foreground mb-4 scroll-mt-20">Practical Applications Of Alpha Bravo Charlie</h2>
             <div className="space-y-4">
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">Aviation Operations</h3>
@@ -218,7 +234,7 @@ export default function AlphaBravioCharlieCodeListBlog() {
 
           {/* How to Use Section */}
           <section className="mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-4">How To Use The Alpha Bravo Charlie Code List</h2>
+            <h2 id="how-to-use-the-alpha-bravo-charlie-code-list" className="text-3xl font-bold text-foreground mb-4 scroll-mt-20">How To Use The Alpha Bravo Charlie Code List</h2>
             <ol className="space-y-4 list-decimal list-inside">
               <li className="text-foreground leading-relaxed">
                 <span className="font-semibold">Identify the letter:</span> Determine which letter you need to communicate.
@@ -240,7 +256,7 @@ export default function AlphaBravioCharlieCodeListBlog() {
 
           {/* Tools and Resources Section */}
           <section className="mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Tools And Resources For Phonetic Codes</h2>
+            <h2 id="tools-and-resources-for-phonetic-codes" className="text-3xl font-bold text-foreground mb-4 scroll-mt-20">Tools And Resources For Phonetic Codes</h2>
             <p className="text-foreground mb-4 leading-relaxed">
               Our platform offers several complementary tools to help you master phonetic codes and letter-to-number conversion:
             </p>
@@ -268,7 +284,7 @@ export default function AlphaBravioCharlieCodeListBlog() {
 
           {/* Common Mistakes Section */}
           <section className="mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Common Mistakes To Avoid</h2>
+            <h2 id="common-mistakes-to-avoid" className="text-3xl font-bold text-foreground mb-4 scroll-mt-20">Common Mistakes To Avoid</h2>
             <div className="space-y-3">
               <div className="p-4 rounded-lg bg-secondary/20 border border-border/50">
                 <p className="text-foreground">
@@ -295,7 +311,7 @@ export default function AlphaBravioCharlieCodeListBlog() {
 
           {/* Conclusion */}
           <section className="mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Conclusion</h2>
+            <h2 id="conclusion" className="text-3xl font-bold text-foreground mb-4 scroll-mt-20">Conclusion</h2>
             <p className="text-foreground mb-4 leading-relaxed">
               The Alpha Bravo Charlie code list remains one of the most critical communication systems in the modern world. Whether you&apos;re a professional in aviation, military operations, emergency services, or simply interested in advanced communication systems, mastering this phonetic alphabet provides invaluable clarity and precision.
             </p>
@@ -306,7 +322,7 @@ export default function AlphaBravioCharlieCodeListBlog() {
 
           {/* Related Reading */}
           <section className="pt-8 border-t border-border/50">
-            <h2 className="text-2xl font-bold text-foreground mb-4">Related Reading</h2>
+            <h2 id="related-reading" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Related Reading</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <Link href="/blog/nato-alphanumeric-alphabet" className="p-4 rounded-lg border border-border hover:border-primary hover:shadow-lg transition-all">
                 <h3 className="font-semibold text-foreground">NATO Alphanumeric Alphabet</h3>

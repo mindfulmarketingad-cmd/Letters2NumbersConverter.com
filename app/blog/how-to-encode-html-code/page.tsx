@@ -158,7 +158,22 @@ export default function Page() {
 
             {/* ── What is HTML Encoding ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-0 mb-4">What Is HTML Entity Encoding?</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-html-entity-encoding" className="text-primary hover:underline">What Is HTML Entity Encoding?</a></li>
+            <li><a href="#the-five-characters-you-must-always-encode" className="text-primary hover:underline">The Five Characters You Must Always Encode</a></li>
+            <li><a href="#other-commonly-encoded-characters" className="text-primary hover:underline">Other Commonly Encoded Characters</a></li>
+            <li><a href="#xss-attacks-and-why-html-encoding-is-the-fix" className="text-primary hover:underline">XSS Attacks and Why HTML Encoding Is the Fix</a></li>
+            <li><a href="#how-to-html-encode-in-javascript" className="text-primary hover:underline">How To HTML-Encode in JavaScript</a></li>
+            <li><a href="#how-to-html-encode-in-php" className="text-primary hover:underline">How To HTML-Encode in PHP</a></li>
+            <li><a href="#how-to-html-encode-in-python" className="text-primary hover:underline">How To HTML-Encode in Python</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#related-tools-amp-guides" className="text-primary hover:underline">Related Tools &amp; Guides</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-html-entity-encoding" className="text-2xl font-bold text-foreground mt-0 mb-4 scroll-mt-20">What Is HTML Entity Encoding?</h2>
               <p className="text-base text-muted-foreground mb-4">
                 The <strong className="text-foreground">HTML Living Standard</strong> (maintained by WHATWG at
                 html.spec.whatwg.org) defines an <strong className="text-foreground">HTML character reference</strong> —
@@ -205,7 +220,7 @@ export default function Page() {
 
             {/* ── The Five Essential Characters ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">The Five Characters You Must Always Encode</h2>
+              <h2 id="the-five-characters-you-must-always-encode" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">The Five Characters You Must Always Encode</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Any content that may contain these five characters and is inserted into an HTML document must be encoded —
                 no exceptions. They form the minimum safe set for preventing HTML injection in element content and
@@ -252,7 +267,7 @@ export default function Page() {
 
             {/* ── Other Commonly Encoded Characters ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Other Commonly Encoded Characters</h2>
+              <h2 id="other-commonly-encoded-characters" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Other Commonly Encoded Characters</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Beyond the essential five, these named entities appear frequently in web content:
               </p>
@@ -292,7 +307,7 @@ export default function Page() {
 
             {/* ── XSS and Why Encoding Matters ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">XSS Attacks and Why HTML Encoding Is the Fix</h2>
+              <h2 id="xss-attacks-and-why-html-encoding-is-the-fix" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">XSS Attacks and Why HTML Encoding Is the Fix</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Cross-Site Scripting (XSS) is one of the most widespread web security vulnerabilities. It occurs when an
                 application inserts untrusted data — typically something a user typed — directly into an HTML page without
@@ -324,7 +339,7 @@ export default function Page() {
 
             {/* ── JavaScript ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">How To HTML-Encode in JavaScript</h2>
+              <h2 id="how-to-html-encode-in-javascript" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">How To HTML-Encode in JavaScript</h2>
               <p className="text-base text-muted-foreground mb-4">
                 JavaScript (in a browser context) has no built-in{' '}
                 <code className="font-mono text-sm bg-secondary/60 px-1 rounded">encodeHTML()</code> function. The
@@ -372,7 +387,7 @@ htmlDecode('&lt;b&gt;Hello &amp; world&lt;/b&gt;')
 
             {/* ── PHP ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">How To HTML-Encode in PHP</h2>
+              <h2 id="how-to-html-encode-in-php" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">How To HTML-Encode in PHP</h2>
               <p className="text-base text-muted-foreground mb-4">
                 PHP provides two built-in functions. Understanding the difference is important for choosing the right one:
               </p>
@@ -414,7 +429,7 @@ $original = html_entity_decode($safe, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 
             {/* ── Python ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">How To HTML-Encode in Python</h2>
+              <h2 id="how-to-html-encode-in-python" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">How To HTML-Encode in Python</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Python&apos;s standard library includes the{' '}
                 <code className="font-mono text-sm bg-secondary/60 px-1 rounded">html</code> module, available since
@@ -471,7 +486,7 @@ safe_markup = escape('<b>User input</b>')
 
             {/* ── FAQ ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
+              <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mb-6 scroll-mt-20">Frequently Asked Questions</h2>
 
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">What does it mean to encode HTML code?</h3>
               <p className="text-base text-muted-foreground mb-4">
@@ -528,7 +543,7 @@ safe_markup = escape('<b>User input</b>')
 
             {/* ── Related links grid ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Related Tools &amp; Guides</h2>
+              <h2 id="related-tools-amp-guides" className="text-2xl font-bold text-foreground mb-6 scroll-mt-20">Related Tools &amp; Guides</h2>
               <div className="grid sm:grid-cols-3 gap-4">
                 <Link
                   href="/tools/html-encoder-decoder"

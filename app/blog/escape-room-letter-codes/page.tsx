@@ -52,7 +52,19 @@ export default function EscapeRoomCodesPage() {
                   The clock is ticking. You have found a clue with letters, but the lock needs numbers. Letter-to-number codes are one of the most common puzzle types in escape rooms, and mastering them can be the difference between escaping in time or watching those final seconds slip away. Here is everything you need to know about solving letter code puzzles under pressure.
                 </p>
 
-                <h2 id="common-letter-codes" className="text-2xl font-bold text-foreground mt-12 mb-4">Common Letter Code Types in Escape Rooms</h2>
+                          <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#common-letter-code-types-in-escape-rooms" className="text-primary hover:underline">Common Letter Code Types in Escape Rooms</a></li>
+            <li><a href="#strategies-for-solving-under-pressure" className="text-primary hover:underline">Strategies for Solving Under Pressure</a></li>
+            <li><a href="#quick-reference-letter-number-values" className="text-primary hover:underline">Quick Reference: Letter Number Values</a></li>
+            <li><a href="#practice-before-your-next-escape" className="text-primary hover:underline">Practice Before Your Next Escape</a></li>
+            <li><a href="#phone-keypad-codes-in-escape-rooms" className="text-primary hover:underline">Phone Keypad Codes in Escape Rooms</a></li>
+            <li><a href="#team-strategies-for-code-heavy-rooms" className="text-primary hover:underline">Team Strategies for Code-Heavy Rooms</a></li>
+            </ol>
+          </nav>
+
+<h2 id="common-letter-codes" className="text-2xl font-bold text-foreground mt-12 mb-4">Common Letter Code Types in Escape Rooms</h2>
                 <p className="text-muted-foreground mb-4">
                   Escape room designers use several letter-to-number encoding methods. Recognizing the type quickly is half the battle:
                 </p>

@@ -69,7 +69,19 @@ export default function LettersToNumbersTranslatorPage() {
                 </Link>
               </div>
 
-              <h2 id="how-it-works" className="text-2xl font-bold text-foreground mt-10 mb-4">How the Letters to Numbers Translator Works</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#how-the-letters-to-numbers-translator-works" className="text-primary hover:underline">How the Letters to Numbers Translator Works</a></li>
+            <li><a href="#translation-examples" className="text-primary hover:underline">Translation Examples</a></li>
+            <li><a href="#why-translate-letters-to-numbers" className="text-primary hover:underline">Why Translate Letters to Numbers?</a></li>
+            <li><a href="#types-of-letter-number-translation" className="text-primary hover:underline">Types of Letter-Number Translation</a></li>
+            <li><a href="#tips-for-translating-letters-to-numbers" className="text-primary hover:underline">Tips for Translating Letters to Numbers</a></li>
+            <li><a href="#use-our-online-letters-to-numbers-translator" className="text-primary hover:underline">Use Our Online Letters to Numbers Translator</a></li>
+            </ol>
+          </nav>
+
+<h2 id="how-it-works" className="text-2xl font-bold text-foreground mt-10 mb-4">How the Letters to Numbers Translator Works</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 The letters to numbers translator uses a simple substitution method where each letter of the alphabet corresponds to a specific number. In the standard A1Z26 system, the translation follows the letter&apos;s position in the alphabet: A translates to 1, B translates to 2, C translates to 3, and so on until Z translates to 26.
               </p>

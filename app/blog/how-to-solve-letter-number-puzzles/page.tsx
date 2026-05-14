@@ -53,12 +53,24 @@ export default function HowToSolveLetterNumberPuzzlesPage() {
                 Learning <strong>how to solve letter number puzzles</strong> opens up a world of puzzle-solving adventures. From geocaching treasure hunts to escape room challenges, these puzzles appear everywhere. This comprehensive guide will teach you proven strategies to crack any letter number puzzle quickly and confidently.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Understanding Letter Number Puzzles</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#understanding-letter-number-puzzles" className="text-primary hover:underline">Understanding Letter Number Puzzles</a></li>
+            <li><a href="#step-by-step-guide-how-to-solve-letter-number-puzzles" className="text-primary hover:underline">Step-by-Step Guide: How to Solve Letter Number Puzzles</a></li>
+            <li><a href="#pro-tips-for-solving-letter-number-puzzles-faster" className="text-primary hover:underline">Pro Tips for Solving Letter Number Puzzles Faster</a></li>
+            <li><a href="#common-mistakes-when-solving-letter-number-puzzles" className="text-primary hover:underline">Common Mistakes When Solving Letter Number Puzzles</a></li>
+            <li><a href="#where-to-practice-solving-letter-number-puzzles" className="text-primary hover:underline">Where to Practice Solving Letter Number Puzzles</a></li>
+            <li><a href="#use-our-free-conversion-tool" className="text-primary hover:underline">Use Our Free Conversion Tool</a></li>
+            </ol>
+          </nav>
+
+<h2 id="understanding-letter-number-puzzles" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Understanding Letter Number Puzzles</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Before diving into how to solve letter number puzzles, it&apos;s important to understand what they are. Letter number puzzles use numerical codes to represent letters of the alphabet. The most common system is A1Z26, where A=1, B=2, continuing through Z=26. Recognizing the puzzle type is the first step to solving it efficiently.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Step-by-Step Guide: How to Solve Letter Number Puzzles</h2>
+              <h2 id="step-by-step-guide-how-to-solve-letter-number-puzzles" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Step-by-Step Guide: How to Solve Letter Number Puzzles</h2>
               
               <h3 className="text-xl font-semibold text-foreground mt-8 mb-3">Step 1: Identify the Encoding System</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -86,7 +98,7 @@ export default function HowToSolveLetterNumberPuzzlesPage() {
                 Work through the puzzle methodically. Convert each number to its corresponding letter, keeping track of spaces and punctuation markers. Write out your decoded message as you go.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Pro Tips for Solving Letter Number Puzzles Faster</h2>
+              <h2 id="pro-tips-for-solving-letter-number-puzzles-faster" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Pro Tips for Solving Letter Number Puzzles Faster</h2>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-6">
                 <li><strong>Memorize key positions:</strong> E=5, J=10, O=15, T=20, Y=25 (multiples of 5)</li>
                 <li><strong>Know common patterns:</strong> THE (20-8-5), AND (1-14-4), IS (9-19)</li>
@@ -94,7 +106,7 @@ export default function HowToSolveLetterNumberPuzzlesPage() {
                 <li><strong>Practice regularly:</strong> The more puzzles you solve, the faster you become</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Common Mistakes When Solving Letter Number Puzzles</h2>
+              <h2 id="common-mistakes-when-solving-letter-number-puzzles" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Common Mistakes When Solving Letter Number Puzzles</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 When learning how to solve letter number puzzles, avoid these common pitfalls:
               </p>
@@ -105,12 +117,12 @@ export default function HowToSolveLetterNumberPuzzlesPage() {
                 <li>Not considering that the message might be reversed or shifted</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Where to Practice Solving Letter Number Puzzles</h2>
+              <h2 id="where-to-practice-solving-letter-number-puzzles" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Where to Practice Solving Letter Number Puzzles</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Now that you know how to solve letter number puzzles, practice with geocaching puzzle caches, online CTF competitions, escape room prep sites, or puzzle books. The more you practice, the more intuitive decoding becomes.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Use Our Free Conversion Tool</h2>
+              <h2 id="use-our-free-conversion-tool" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Use Our Free Conversion Tool</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Speed up your puzzle solving with our free <Link href="/" className="text-primary hover:underline">letters to numbers converter tool</Link>. It instantly converts between letters and numbers in multiple formats, making it the perfect companion for any puzzle enthusiast.
               </p>

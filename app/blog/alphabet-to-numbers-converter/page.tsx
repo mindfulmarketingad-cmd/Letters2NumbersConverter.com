@@ -69,7 +69,20 @@ export default function AlphabetToNumbersConverterPage() {
                 </Link>
               </div>
 
-              <h2 id="conversion-chart" className="text-2xl font-bold text-foreground mt-10 mb-4">Complete Alphabet to Numbers Chart</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#complete-alphabet-to-numbers-chart" className="text-primary hover:underline">Complete Alphabet to Numbers Chart</a></li>
+            <li><a href="#how-to-convert-alphabet-to-numbers" className="text-primary hover:underline">How to Convert Alphabet to Numbers</a></li>
+            <li><a href="#uses-for-alphabet-to-numbers-conversion" className="text-primary hover:underline">Uses for Alphabet to Numbers Conversion</a></li>
+            <li><a href="#alphabet-to-numbers-examples" className="text-primary hover:underline">Alphabet to Numbers Examples</a></li>
+            <li><a href="#tips-for-quick-conversion" className="text-primary hover:underline">Tips for Quick Conversion</a></li>
+            <li><a href="#reverse-conversion-numbers-to-alphabet" className="text-primary hover:underline">Reverse Conversion: Numbers to Alphabet</a></li>
+            <li><a href="#free-online-alphabet-to-numbers-converter" className="text-primary hover:underline">Free Online Alphabet to Numbers Converter</a></li>
+            </ol>
+          </nav>
+
+<h2 id="conversion-chart" className="text-2xl font-bold text-foreground mt-10 mb-4">Complete Alphabet to Numbers Chart</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 The alphabet to numbers conversion follows a straightforward pattern: each letter equals its position in the alphabet. Here is the complete reference chart:
               </p>

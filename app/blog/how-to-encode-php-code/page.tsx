@@ -160,7 +160,21 @@ export default function Page() {
 
             {/* ── URL Encoding ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">URL Encoding in PHP</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#url-encoding-in-php" className="text-primary hover:underline">URL Encoding in PHP</a></li>
+            <li><a href="#html-encoding-in-php" className="text-primary hover:underline">HTML Encoding in PHP</a></li>
+            <li><a href="#base64-encoding-in-php" className="text-primary hover:underline">Base64 Encoding in PHP</a></li>
+            <li><a href="#json-encoding-in-php" className="text-primary hover:underline">JSON Encoding in PHP</a></li>
+            <li><a href="#hash-encoding-in-php-one-way-only" className="text-primary hover:underline">Hash Encoding in PHP — One-Way Only</a></li>
+            <li><a href="#choosing-the-right-php-encoding-function" className="text-primary hover:underline">Choosing the Right PHP Encoding Function</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#related-tools-and-guides" className="text-primary hover:underline">Related Tools and Guides</a></li>
+            </ol>
+          </nav>
+
+<h2 id="url-encoding-in-php" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">URL Encoding in PHP</h2>
               <p className="text-base text-muted-foreground mb-4">
                 PHP provides two single-value encoding functions and one array-level helper for building query strings.
                 The difference between the first two trips up developers more often than it should.
@@ -235,7 +249,7 @@ $url = 'https://api.example.com/search?' . http_build_query($params);`}</pre>
 
             {/* ── HTML Encoding ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">HTML Encoding in PHP</h2>
+              <h2 id="html-encoding-in-php" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">HTML Encoding in PHP</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Outputting untrusted user data directly into HTML is the root cause of the majority of XSS
                 vulnerabilities. PHP&apos;s HTML encoding functions neutralise the characters that HTML parsers treat
@@ -322,7 +336,7 @@ echo '<p>' . $safe . '</p>';
 
             {/* ── Base64 Encoding ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Base64 Encoding in PHP</h2>
+              <h2 id="base64-encoding-in-php" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Base64 Encoding in PHP</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Base64 encodes arbitrary binary data as a string of printable ASCII characters. PHP&apos;s built-in
                 functions make it straightforward.
@@ -369,7 +383,7 @@ $dataUri = 'data:image/png;base64,' . $base64Image;`}</pre>
 
             {/* ── JSON Encoding ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">JSON Encoding in PHP</h2>
+              <h2 id="json-encoding-in-php" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">JSON Encoding in PHP</h2>
               <p className="text-base text-muted-foreground mb-4">
                 JSON is the standard interchange format for REST APIs, and PHP&apos;s{' '}
                 <code className="font-mono text-sm bg-secondary/60 px-1 rounded">json_encode()</code> /{' '}
@@ -438,7 +452,7 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 
             {/* ── Hash Encoding ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Hash Encoding in PHP — One-Way Only</h2>
+              <h2 id="hash-encoding-in-php-one-way-only" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Hash Encoding in PHP — One-Way Only</h2>
 
               <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4 my-6">
                 <p className="text-sm font-semibold text-yellow-400 mb-1">Hashing is not encoding</p>
@@ -491,7 +505,7 @@ if (password_needs_rehash($hash, PASSWORD_BCRYPT)) {
 
             {/* ── Decision Table ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Choosing the Right PHP Encoding Function</h2>
+              <h2 id="choosing-the-right-php-encoding-function" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Choosing the Right PHP Encoding Function</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Use this table as a quick reference. The right choice depends entirely on where the output will be used.
               </p>
@@ -528,7 +542,7 @@ if (password_needs_rehash($hash, PASSWORD_BCRYPT)) {
 
             {/* ── FAQ ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Frequently Asked Questions</h2>
+              <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Frequently Asked Questions</h2>
 
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">
                 What is the difference between urlencode() and rawurlencode() in PHP?
@@ -597,7 +611,7 @@ if (password_needs_rehash($hash, PASSWORD_BCRYPT)) {
 
             {/* ── Related links ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-6">Related Tools and Guides</h2>
+              <h2 id="related-tools-and-guides" className="text-2xl font-bold text-foreground mt-10 mb-6 scroll-mt-20">Related Tools and Guides</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   {

@@ -85,7 +85,21 @@ export default function Page() {
             The A-Z to 1-26 conversion chart - Reference Page is an indispensable resource for anyone working with letter-to-number encoding systems, cryptography, puzzles, or educational projects requiring alphabet-to-number mapping. This comprehensive reference chart provides an instant lookup guide for converting any letter from A to Z into its corresponding numeric value from 1 to 26. Whether you're solving ciphers, creating puzzles, developing code, or learning cryptographic principles, having a reliable A-Z to 1-26 conversion chart ensures accuracy and efficiency in your work.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Complete A-Z to 1-26 Conversion Chart</h2>
+                    <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#complete-a-z-to-1-26-conversion-chart" className="text-primary hover:underline">Complete A-Z to 1-26 Conversion Chart</a></li>
+            <li><a href="#how-to-use-this-a-z-to-1-26-conversion-chart" className="text-primary hover:underline">How to Use This A-Z to 1-26 Conversion Chart</a></li>
+            <li><a href="#understanding-the-alphabet-to-number-system" className="text-primary hover:underline">Understanding the Alphabet to Number System</a></li>
+            <li><a href="#practical-examples-using-the-conversion-chart" className="text-primary hover:underline">Practical Examples Using the Conversion Chart</a></li>
+            <li><a href="#tools-to-complement-this-reference-chart" className="text-primary hover:underline">Tools to Complement This Reference Chart</a></li>
+            <li><a href="#tips-for-memorizing-the-conversion-chart" className="text-primary hover:underline">Tips for Memorizing the Conversion Chart</a></li>
+            <li><a href="#common-uses-in-different-fields" className="text-primary hover:underline">Common Uses in Different Fields</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="complete-a-z-to-1-26-conversion-chart" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Complete A-Z to 1-26 Conversion Chart</h2>
           <p className="text-base text-muted-foreground mb-6">
             This reference chart displays the complete mapping of the English alphabet to numeric values. Each letter corresponds to its sequential position in the alphabet, making it the foundation for A1Z26 cipher operations, letter-to-number conversion, and alphabet-based encoding systems.
           </p>
@@ -113,7 +127,7 @@ export default function Page() {
             </table>
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Use This A-Z to 1-26 Conversion Chart</h2>
+          <h2 id="how-to-use-this-a-z-to-1-26-conversion-chart" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Use This A-Z to 1-26 Conversion Chart</h2>
           <p className="text-base text-muted-foreground mb-4">
             Using this A-Z to 1-26 conversion chart is straightforward and intuitive. Simply locate the letter you want to convert in the chart, and read the corresponding number from the adjacent column. For example, if you need to find the numeric value for the letter M, you would look up M in the chart and find that it corresponds to 13. This systematic approach applies universally to all 26 letters of the English alphabet.
           </p>
@@ -128,7 +142,7 @@ export default function Page() {
             This A-Z to 1-26 conversion chart is essential for numerous applications including solving A1Z26 cipher puzzles, creating encoded messages, cryptography exercises, escape room challenges, word games, educational learning, data encoding, programming projects, and academic research. The chart serves as a reliable reference whenever you need instant letter-to-number conversion without mental calculation.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Understanding the Alphabet to Number System</h2>
+          <h2 id="understanding-the-alphabet-to-number-system" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Understanding the Alphabet to Number System</h2>
           <p className="text-base text-muted-foreground mb-4">
             The A-Z to 1-26 conversion system is the foundation of many cryptographic and encoding techniques. Understanding this mapping is crucial for working with substitution ciphers, alphanumeric codes, and text-to-number conversions. Each letter's numeric value corresponds to its position in the English alphabet, creating a consistent, predictable, and reversible conversion system that has been used in cryptography for centuries.
           </p>
@@ -138,7 +152,7 @@ export default function Page() {
             The A-Z to 1-26 conversion system is fundamental because it provides a systematic method for converting letters to numbers while maintaining alphabetical order and position. This makes it ideal for creating ciphers, encoding messages, teaching cryptographic principles, and solving puzzles that require letter-to-number mapping. The consistency and simplicity of this system make it an excellent starting point for understanding more complex encryption methods.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Practical Examples Using the Conversion Chart</h2>
+          <h2 id="practical-examples-using-the-conversion-chart" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Practical Examples Using the Conversion Chart</h2>
           <p className="text-base text-muted-foreground mb-4">
             Let's examine practical examples of using the A-Z to 1-26 conversion chart in real-world scenarios. These examples demonstrate how the chart facilitates quick and accurate letter-to-number conversions for various applications.
           </p>
@@ -172,7 +186,7 @@ export default function Page() {
             Result: "3-15-4-5" decodes to "CODE" using the reverse mapping from numbers to letters.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Tools to Complement This Reference Chart</h2>
+          <h2 id="tools-to-complement-this-reference-chart" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Tools to Complement This Reference Chart</h2>
           <p className="text-base text-muted-foreground mb-4">
             While this A-Z to 1-26 conversion chart is an excellent reference guide, several tools can enhance your letter-to-number conversion workflow and provide automated conversions.
           </p>
@@ -181,7 +195,7 @@ export default function Page() {
             The <Link href="/tools/letter-number-converter" className="text-primary hover:underline">Letter to Number Converter</Link> provides instant, automated conversion between letters and numbers using multiple encoding methods beyond just A1Z26. The <Link href="/tools/a1z26-decoder" className="text-primary hover:underline">A1Z26 Decoder</Link> helps quickly decode A1Z26 encoded messages, and the <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 Translator</Link> enables rapid encoding and decoding of messages. For puzzle solving, check out the <Link href="/tools/cryptogram-solver" className="text-primary hover:underline">Cryptogram Solver</Link> for solving word-based cipher challenges.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Tips for Memorizing the Conversion Chart</h2>
+          <h2 id="tips-for-memorizing-the-conversion-chart" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Tips for Memorizing the Conversion Chart</h2>
           <p className="text-base text-muted-foreground mb-4">
             While having the A-Z to 1-26 conversion chart available is convenient, many people find it helpful to memorize the basic mappings for common letters. Here are some memory aids and tips for learning the conversion system.
           </p>
@@ -196,7 +210,7 @@ export default function Page() {
             Remember a few checkpoint letters for quick calculation: M is the middle letter at 13, making it a useful reference point. A=1, J=10, T=20, and Z=26 serve as natural divisions that can help you estimate unknown letter values.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Common Uses in Different Fields</h2>
+          <h2 id="common-uses-in-different-fields" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Common Uses in Different Fields</h2>
           <p className="text-base text-muted-foreground mb-4">
             The A-Z to 1-26 conversion chart has applications across numerous fields and disciplines. Understanding these use cases can help you appreciate the chart's versatility and importance.
           </p>
@@ -221,7 +235,7 @@ export default function Page() {
             Programmers and developers use letter-to-number conversion for data encoding, character mapping, and creating alphanumeric codes in software applications, databases, and information systems.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Conclusion</h2>
+          <h2 id="conclusion" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Conclusion</h2>
           <p className="text-base text-muted-foreground mb-4">
             The A-Z to 1-26 conversion chart - Reference Page is an essential reference guide for anyone working with alphabet-to-number conversion systems. Whether you're solving ciphers, creating puzzles, learning cryptography, or working on data encoding projects, this chart provides quick, accurate reference data for converting any letter to its corresponding numeric value. Keep this conversion chart bookmarked for instant access whenever you need reliable letter-to-number mapping, and consider exploring automated conversion tools for more complex or batch conversion tasks.
           </p>

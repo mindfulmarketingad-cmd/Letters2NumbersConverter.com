@@ -156,7 +156,23 @@ export default function Page() {
             </p>
 
             {/* ── What is the Pigpen cipher ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">What Is the Pigpen Cipher?</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-the-pigpen-cipher" className="text-primary hover:underline">What Is the Pigpen Cipher?</a></li>
+            <li><a href="#the-two-reference-grids" className="text-primary hover:underline">The Two Reference Grids</a></li>
+            <li><a href="#the-full-pigpen-cipher-alphabet" className="text-primary hover:underline">The Full Pigpen Cipher Alphabet</a></li>
+            <li><a href="#how-to-encode-a-message-with-the-pigpen-cipher" className="text-primary hover:underline">How to Encode a Message with the Pigpen Cipher</a></li>
+            <li><a href="#how-to-decode-a-pigpen-cipher-message" className="text-primary hover:underline">How to Decode a Pigpen Cipher Message</a></li>
+            <li><a href="#pigpen-cipher-variants" className="text-primary hover:underline">Pigpen Cipher Variants</a></li>
+            <li><a href="#pigpen-cipher-in-escape-rooms-and-puzzles" className="text-primary hover:underline">Pigpen Cipher in Escape Rooms and Puzzles</a></li>
+            <li><a href="#pigpen-cipher-vs-other-classical-ciphers" className="text-primary hover:underline">Pigpen Cipher vs. Other Classical Ciphers</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#explore-more-cipher-tools-and-guides" className="text-primary hover:underline">Explore More Cipher Tools and Guides</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-the-pigpen-cipher" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">What Is the Pigpen Cipher?</h2>
             <p className="text-base text-muted-foreground mb-4">
               The Pigpen cipher is a <strong className="text-foreground">geometric monoalphabetic substitution cipher</strong>. Each of the 26 letters is assigned a symbol that is the outline of the cell or region in which that letter sits in one of two reference grids. There are no numbers or letters in the output — only angular shapes — making it superficially hard to recognise as a cipher at all.
             </p>
@@ -168,7 +184,7 @@ export default function Page() {
             </p>
 
             {/* ── The two grids ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Two Reference Grids</h2>
+            <h2 id="the-two-reference-grids" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Two Reference Grids</h2>
             <p className="text-base text-muted-foreground mb-4">
               The Pigpen cipher is built from two grids. The first is a standard <strong className="text-foreground">tic-tac-toe (noughts-and-crosses) grid</strong> containing 9 cells. The second is an <strong className="text-foreground">X-shaped (diagonal cross) grid</strong> containing 4 regions. Letters A–I fill the tic-tac-toe grid without dots; letters J–R fill it again with a dot added to each symbol. Letters S–V fill the X grid without dots; W–Z fill it again with dots.
             </p>
@@ -220,7 +236,7 @@ export default function Page() {
             </p>
 
             {/* ── Full alphabet table ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Full Pigpen Cipher Alphabet</h2>
+            <h2 id="the-full-pigpen-cipher-alphabet" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Full Pigpen Cipher Alphabet</h2>
             <p className="text-base text-muted-foreground mb-4">
               The table below shows every letter, which grid it comes from, whether a dot is present, and a description of the symbol. Use this as your <strong className="text-foreground">Pigpen cipher decoder key</strong>.
             </p>
@@ -312,7 +328,7 @@ export default function Page() {
 `.trim()}</pre>
 
             {/* ── How to encode ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Encode a Message with the Pigpen Cipher</h2>
+            <h2 id="how-to-encode-a-message-with-the-pigpen-cipher" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Encode a Message with the Pigpen Cipher</h2>
             <p className="text-base text-muted-foreground mb-4">
               Encoding is straightforward once you have the alphabet table memorised or in front of you:
             </p>
@@ -359,7 +375,7 @@ export default function Page() {
             </p>
 
             {/* ── How to decode ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Decode a Pigpen Cipher Message</h2>
+            <h2 id="how-to-decode-a-pigpen-cipher-message" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Decode a Pigpen Cipher Message</h2>
             <p className="text-base text-muted-foreground mb-4">
               Decoding reverses the process:
             </p>
@@ -379,7 +395,7 @@ export default function Page() {
             </div>
 
             {/* ── Variants ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Pigpen Cipher Variants</h2>
+            <h2 id="pigpen-cipher-variants" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Pigpen Cipher Variants</h2>
 
             <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Rosicrucian Cipher (Rose Cross Cipher)</h3>
             <p className="text-base text-muted-foreground mb-4">
@@ -406,7 +422,7 @@ export default function Page() {
             </p>
 
             {/* ── Escape rooms ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Pigpen Cipher in Escape Rooms and Puzzles</h2>
+            <h2 id="pigpen-cipher-in-escape-rooms-and-puzzles" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Pigpen Cipher in Escape Rooms and Puzzles</h2>
             <p className="text-base text-muted-foreground mb-4">
               The Pigpen cipher is a <strong className="text-foreground">staple of escape room design</strong> for good reason. Its symbols look like an alien script on first glance — creating a satisfying moment of confusion before the solve — but it is learnable in under five minutes once a player has the key. Here is how it typically appears:
             </p>
@@ -448,7 +464,7 @@ export default function Page() {
             </div>
 
             {/* ── Comparison table ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Pigpen Cipher vs. Other Classical Ciphers</h2>
+            <h2 id="pigpen-cipher-vs-other-classical-ciphers" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Pigpen Cipher vs. Other Classical Ciphers</h2>
             <div className="overflow-x-auto my-4 rounded-lg border border-border">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -480,7 +496,7 @@ export default function Page() {
             </div>
 
             {/* ── FAQ ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Frequently Asked Questions</h2>
+            <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Frequently Asked Questions</h2>
 
             <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">What is the Pigpen cipher?</h3>
             <p className="text-base text-muted-foreground mb-4">
@@ -513,7 +529,7 @@ export default function Page() {
             </p>
 
             {/* ── CTA ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Explore More Cipher Tools and Guides</h2>
+            <h2 id="explore-more-cipher-tools-and-guides" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Explore More Cipher Tools and Guides</h2>
             <p className="text-base text-muted-foreground mb-4">
               The Pigpen cipher is one entry in a rich world of classical cryptography. Explore these related tools and articles:
             </p>

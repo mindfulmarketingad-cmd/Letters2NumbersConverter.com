@@ -117,7 +117,21 @@ export default function BestDecoderWebAppBlog() {
 
           {/* Key Advantages Section */}
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold">Why Choose the Best Decoder Web App?</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#why-choose-the-best-decoder-web-app" className="text-primary hover:underline">Why Choose the Best Decoder Web App?</a></li>
+            <li><a href="#who-benefits-from-this-decoder-web-app" className="text-primary hover:underline">Who Benefits from This Decoder Web App?</a></li>
+            <li><a href="#explore-our-decoder-tools" className="text-primary hover:underline">Explore Our Decoder Tools</a></li>
+            <li><a href="#why-were-the-best" className="text-primary hover:underline">Why We're the Best</a></li>
+            <li><a href="#how-the-web-app-works" className="text-primary hover:underline">How the Web App Works</a></li>
+            <li><a href="#privacy-security-you-can-trust" className="text-primary hover:underline">Privacy & Security You Can Trust</a></li>
+            <li><a href="#start-using-the-best-decoder-web-app-today" className="text-primary hover:underline">Start Using the Best Decoder Web App Today</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="why-choose-the-best-decoder-web-app" className="text-3xl font-bold scroll-mt-20">Why Choose the Best Decoder Web App?</h2>
             
             <div className="grid md:grid-cols-2 gap-6">
               {/* Advantage 1 */}
@@ -172,7 +186,7 @@ export default function BestDecoderWebAppBlog() {
 
           {/* Use Cases Section */}
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold">Who Benefits from This Decoder Web App?</h2>
+            <h2 id="who-benefits-from-this-decoder-web-app" className="text-3xl font-bold scroll-mt-20">Who Benefits from This Decoder Web App?</h2>
             
             <div className="space-y-4">
               {/* Use Case 1 */}
@@ -227,7 +241,7 @@ export default function BestDecoderWebAppBlog() {
 
           {/* Featured Tools */}
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold">Explore Our Decoder Tools</h2>
+            <h2 id="explore-our-decoder-tools" className="text-3xl font-bold scroll-mt-20">Explore Our Decoder Tools</h2>
             
             <p className="text-muted-foreground">
               The best decoder web app includes a comprehensive suite of specialized tools:
@@ -268,7 +282,7 @@ export default function BestDecoderWebAppBlog() {
 
           {/* Comparison Table */}
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold">Why We're the Best</h2>
+            <h2 id="why-were-the-best" className="text-3xl font-bold scroll-mt-20">Why We're the Best</h2>
             
             <div className="overflow-x-auto border border-border rounded-lg">
               <table className="w-full text-sm">
@@ -327,7 +341,7 @@ export default function BestDecoderWebAppBlog() {
 
           {/* How It Works */}
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold">How the Web App Works</h2>
+            <h2 id="how-the-web-app-works" className="text-3xl font-bold scroll-mt-20">How the Web App Works</h2>
             
             <ol className="space-y-4 list-decimal list-inside">
               <li className="text-muted-foreground">
@@ -350,7 +364,7 @@ export default function BestDecoderWebAppBlog() {
 
           {/* Privacy & Security */}
           <section className="bg-card border border-border rounded-lg p-8 space-y-4">
-            <h2 className="text-2xl font-bold">Privacy & Security You Can Trust</h2>
+            <h2 id="privacy-security-you-can-trust" className="text-2xl font-bold scroll-mt-20">Privacy & Security You Can Trust</h2>
             <p className="text-muted-foreground">
               The best decoder web app prioritizes your privacy above all else. All data processing happens locally on your device using client-side JavaScript. Your sensitive information never leaves your browser, never reaches our servers, and is never stored anywhere. This makes our web app ideal for handling confidential information, trade secrets, and sensitive communications.
             </p>
@@ -358,7 +372,7 @@ export default function BestDecoderWebAppBlog() {
 
           {/* Call to Action */}
           <section className="bg-teal-600 text-white rounded-lg p-8 text-center space-y-6">
-            <h2 className="text-3xl font-bold">Start Using the Best Decoder Web App Today</h2>
+            <h2 id="start-using-the-best-decoder-web-app-today" className="text-3xl font-bold scroll-mt-20">Start Using the Best Decoder Web App Today</h2>
             <p className="text-lg opacity-90">
               Experience the most comprehensive, user-friendly decoder web application. Free, fast, secure, and no registration required.
             </p>
@@ -380,7 +394,7 @@ export default function BestDecoderWebAppBlog() {
 
           {/* Conclusion */}
           <section className="prose prose-lg max-w-none space-y-4">
-            <h2 className="text-3xl font-bold">Conclusion</h2>
+            <h2 id="conclusion" className="text-3xl font-bold scroll-mt-20">Conclusion</h2>
             <p>
               Finding the best decoder web app doesn't have to be complicated. Letters2NumbersConverter.com offers everything you need in a single, powerful, completely free online application. Whether you're a developer debugging code, a security professional analyzing data, an educator teaching encoding concepts, or a designer managing color formats, our decoder web app delivers unmatched functionality, speed, and reliability.
             </p>

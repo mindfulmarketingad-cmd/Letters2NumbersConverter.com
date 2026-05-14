@@ -47,7 +47,22 @@ export default function Page() {
             Among the 25 possible Caesar cipher shifts, one stands out as genuinely unique: <strong className="text-foreground">shift 13</strong>. It is the only shift value that makes encoding and decoding identical operations — the same action, applied twice, returns the original text. This is why shift 13 has its own name (ROT13) and its own place in internet culture. This guide explains why shift 13 is special, how the math works, and where you encounter it every day. To use it now: <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar Cipher Decoder (set shift to 13)</Link> or our dedicated <Link href="/tools/rot13-decoder" className="text-primary hover:underline">ROT13 Decoder</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Caesar Cipher: A Quick Recap</h2>
+                    <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#the-caesar-cipher-a-quick-recap" className="text-primary hover:underline">The Caesar Cipher: A Quick Recap</a></li>
+            <li><a href="#why-shift-13-is-self-inverse-the-math" className="text-primary hover:underline">Why Shift 13 Is Self-Inverse: The Math</a></li>
+            <li><a href="#shift-13-in-action-the-alphabet-split" className="text-primary hover:underline">Shift 13 in Action: The Alphabet Split</a></li>
+            <li><a href="#comparing-shift-13-to-other-shifts" className="text-primary hover:underline">Comparing Shift 13 to Other Shifts</a></li>
+            <li><a href="#rot13-the-name-shift-13-earned" className="text-primary hover:underline">ROT13: The Name Shift 13 Earned</a></li>
+            <li><a href="#worked-examples-shift-13-encoding-and-decoding" className="text-primary hover:underline">Worked Examples: Shift 13 Encoding and Decoding</a></li>
+            <li><a href="#where-you-encounter-caesar-shift-13-today" className="text-primary hover:underline">Where You Encounter Caesar Shift 13 Today</a></li>
+            <li><a href="#does-shift-13-exist-in-other-alphabets" className="text-primary hover:underline">Does Shift 13 Exist in Other Alphabets?</a></li>
+            <li><a href="#try-caesar-shift-13-now" className="text-primary hover:underline">Try Caesar Shift 13 Now</a></li>
+            </ol>
+          </nav>
+
+<h2 id="the-caesar-cipher-a-quick-recap" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Caesar Cipher: A Quick Recap</h2>
           <p className="text-base text-muted-foreground mb-4">
             A Caesar cipher replaces each letter with the letter N positions later in the alphabet. With shift 3 (the original Caesar), A→D, B→E, … Z→C. To decode, you reverse the shift — subtract N from each letter&apos;s position.
           </p>
@@ -55,7 +70,7 @@ export default function Page() {
             For any shift other than 13, encoding and decoding are genuinely different operations. You need to know whether to add or subtract. Shift 13 breaks this rule — and the reason is pure arithmetic.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Why Shift 13 Is Self-Inverse: The Math</h2>
+          <h2 id="why-shift-13-is-self-inverse-the-math" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Why Shift 13 Is Self-Inverse: The Math</h2>
           <p className="text-base text-muted-foreground mb-4">
             The English alphabet has exactly 26 letters. When you shift by 13 twice, you shift by 26 in total. Shifting by 26 in a 26-letter alphabet is the same as shifting by 0 — you return exactly to the starting position.
           </p>
@@ -69,7 +84,7 @@ export default function Page() {
             This only works because 26 ÷ 2 = 13 exactly. If the alphabet had 25 letters, there would be no self-inverse shift (since 25 is odd). If it had 28 letters, shift 14 would be self-inverse. The 26-letter English alphabet makes shift 13 the unique halfway point.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Shift 13 in Action: The Alphabet Split</h2>
+          <h2 id="shift-13-in-action-the-alphabet-split" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Shift 13 in Action: The Alphabet Split</h2>
           <p className="text-base text-muted-foreground mb-4">
             With shift 13, the 26 letters split into 13 pairs. Every letter maps to its exact mirror on the other side of the alphabet:
           </p>
@@ -86,7 +101,7 @@ export default function Page() {
             Notice: each pair uses the same arrow (↔) rather than a one-way arrow. There is no &quot;source&quot; or &quot;destination&quot; — each letter is simultaneously both. This symmetry is what makes the operation self-inverse.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Comparing Shift 13 to Other Shifts</h2>
+          <h2 id="comparing-shift-13-to-other-shifts" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Comparing Shift 13 to Other Shifts</h2>
           <p className="text-base text-muted-foreground mb-4">
             To appreciate why shift 13 is special, compare it to a few others:
           </p>
@@ -119,7 +134,7 @@ export default function Page() {
             </table>
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">ROT13: The Name Shift 13 Earned</h2>
+          <h2 id="rot13-the-name-shift-13-earned" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">ROT13: The Name Shift 13 Earned</h2>
           <p className="text-base text-muted-foreground mb-4">
             Because shift 13 is uniquely self-inverse, it earned its own name in computing culture: <strong className="text-foreground">ROT13</strong> (Rotate by 13). When internet communities needed a way to hide spoilers and punchlines on Usenet in the 1980s, ROT13 was the obvious choice:
           </p>
@@ -133,7 +148,7 @@ export default function Page() {
             For the full story of ROT13&apos;s cultural history, read: <Link href="/blog/rot13-cipher-explained" className="text-primary hover:underline">ROT13 Cipher Explained</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Worked Examples: Shift 13 Encoding and Decoding</h2>
+          <h2 id="worked-examples-shift-13-encoding-and-decoding" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Worked Examples: Shift 13 Encoding and Decoding</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Encoding</h3>
           <div className="space-y-2 mb-4">
@@ -165,7 +180,7 @@ export default function Page() {
             ))}
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Where You Encounter Caesar Shift 13 Today</h2>
+          <h2 id="where-you-encounter-caesar-shift-13-today" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Where You Encounter Caesar Shift 13 Today</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Reddit and Forum Spoilers</h3>
           <p className="text-base text-muted-foreground mb-4">
@@ -187,7 +202,7 @@ export default function Page() {
             Some developers use ROT13 to obfuscate strings in source code — for example, hardcoded configuration values or easter egg messages. It prevents immediate readability without adding real security, and can be quickly decoded by anyone who recognises it.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Does Shift 13 Exist in Other Alphabets?</h2>
+          <h2 id="does-shift-13-exist-in-other-alphabets" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Does Shift 13 Exist in Other Alphabets?</h2>
           <p className="text-base text-muted-foreground mb-4">
             The self-inverse property of shift 13 depends on having exactly 26 characters. Other writing systems have different alphabet lengths:
           </p>
@@ -201,7 +216,7 @@ export default function Page() {
             ROT13&apos;s elegance is partly an accident of English having exactly 26 letters — a coincidence that made the world&apos;s most widely-used alphabet uniquely suited to this cipher.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Try Caesar Shift 13 Now</h2>
+          <h2 id="try-caesar-shift-13-now" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Try Caesar Shift 13 Now</h2>
           <p className="text-base text-muted-foreground mb-4">
             You can use either of our tools to apply Caesar shift 13:
           </p>

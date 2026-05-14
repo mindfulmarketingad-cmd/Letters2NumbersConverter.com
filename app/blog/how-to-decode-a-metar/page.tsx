@@ -158,7 +158,21 @@ export default function Page() {
           </p>
 
           {/* Section 1 */}
-          <h2 className="text-2xl font-semibold mt-10 mb-4">What Is a METAR?</h2>
+                    <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-a-metar" className="text-primary hover:underline">What Is a METAR?</a></li>
+            <li><a href="#reading-a-metar-line-by-line" className="text-primary hover:underline">Reading a METAR Line by Line</a></li>
+            <li><a href="#metar-sky-condition-codes-explained" className="text-primary hover:underline">METAR Sky Condition Codes Explained</a></li>
+            <li><a href="#weather-phenomena-codes" className="text-primary hover:underline">Weather Phenomena Codes</a></li>
+            <li><a href="#understanding-the-remarks-section" className="text-primary hover:underline">Understanding the Remarks Section</a></li>
+            <li><a href="#common-metar-abbreviations-quick-reference" className="text-primary hover:underline">Common METAR Abbreviations Quick Reference</a></li>
+            <li><a href="#free-tools-to-decode-a-metar-automatically" className="text-primary hover:underline">Free Tools to Decode a METAR Automatically</a></li>
+            <li><a href="#frequently-asked-questions-about-decoding-metars" className="text-primary hover:underline">Frequently Asked Questions About Decoding METARs</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-a-metar" className="text-2xl font-semibold mt-10 mb-4 scroll-mt-20">What Is a METAR?</h2>
           <p className="mb-4">
             METAR stands for <strong>Meteorological Aerodrome Report</strong>. It is a standardized
             format for reporting surface weather observations at airports and aerodromes around the
@@ -184,7 +198,7 @@ export default function Page() {
           </p>
 
           {/* Section 2 */}
-          <h2 className="text-2xl font-semibold mt-10 mb-4">
+          <h2 id="reading-a-metar-line-by-line" className="text-2xl font-semibold mt-10 mb-4 scroll-mt-20">
             Reading a METAR Line by Line
           </h2>
           <p className="mb-4">
@@ -386,7 +400,7 @@ export default function Page() {
           </p>
 
           {/* Section 3 */}
-          <h2 className="text-2xl font-semibold mt-10 mb-4">
+          <h2 id="metar-sky-condition-codes-explained" className="text-2xl font-semibold mt-10 mb-4 scroll-mt-20">
             METAR Sky Condition Codes Explained
           </h2>
           <p className="mb-4">
@@ -479,7 +493,7 @@ export default function Page() {
           </ul>
 
           {/* Section 4 */}
-          <h2 className="text-2xl font-semibold mt-10 mb-4">Weather Phenomena Codes</h2>
+          <h2 id="weather-phenomena-codes" className="text-2xl font-semibold mt-10 mb-4 scroll-mt-20">Weather Phenomena Codes</h2>
           <p className="mb-4">
             Present weather is reported between the visibility field and the sky condition field
             when significant precipitation or other phenomena are occurring. The weather code uses a
@@ -592,7 +606,7 @@ export default function Page() {
           </p>
 
           {/* Section 5 */}
-          <h2 className="text-2xl font-semibold mt-10 mb-4">
+          <h2 id="understanding-the-remarks-section" className="text-2xl font-semibold mt-10 mb-4 scroll-mt-20">
             Understanding the Remarks Section
           </h2>
           <p className="mb-4">
@@ -672,7 +686,7 @@ export default function Page() {
           </p>
 
           {/* Section 6 */}
-          <h2 className="text-2xl font-semibold mt-10 mb-4">
+          <h2 id="common-metar-abbreviations-quick-reference" className="text-2xl font-semibold mt-10 mb-4 scroll-mt-20">
             Common METAR Abbreviations Quick Reference
           </h2>
           <p className="mb-4">
@@ -741,7 +755,7 @@ export default function Page() {
           </div>
 
           {/* Section 7 */}
-          <h2 className="text-2xl font-semibold mt-10 mb-4">
+          <h2 id="free-tools-to-decode-a-metar-automatically" className="text-2xl font-semibold mt-10 mb-4 scroll-mt-20">
             Free Tools to Decode a METAR Automatically
           </h2>
           <p className="mb-4">
@@ -793,7 +807,7 @@ export default function Page() {
 
         {/* FAQ Section */}
         <section className="mt-12">
-          <h2 className="text-2xl font-semibold mb-6">
+          <h2 id="frequently-asked-questions-about-decoding-metars" className="text-2xl font-semibold mb-6 scroll-mt-20">
             Frequently Asked Questions About Decoding METARs
           </h2>
 

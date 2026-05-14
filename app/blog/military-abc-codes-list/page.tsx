@@ -85,7 +85,21 @@ export default function MilitaryABCCodesListPage() {
 
           {/* What Are Military ABC Codes */}
           <section className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">What Are Military ABC Codes?</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-are-military-abc-codes" className="text-primary hover:underline">What Are Military ABC Codes?</a></li>
+            <li><a href="#complete-military-phonetic-alphabet" className="text-primary hover:underline">Complete Military Phonetic Alphabet</a></li>
+            <li><a href="#military-number-codes" className="text-primary hover:underline">Military Number Codes</a></li>
+            <li><a href="#where-military-abc-codes-are-used" className="text-primary hover:underline">Where Military ABC Codes Are Used</a></li>
+            <li><a href="#why-military-abc-codes-matter" className="text-primary hover:underline">Why Military ABC Codes Matter</a></li>
+            <li><a href="#how-to-practice-military-abc-codes" className="text-primary hover:underline">How To Practice Military ABC Codes</a></li>
+            <li><a href="#related-tools-resources" className="text-primary hover:underline">Related Tools & Resources</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-are-military-abc-codes" className="text-2xl md:text-3xl font-bold text-foreground mb-4 scroll-mt-20">What Are Military ABC Codes?</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Military ABC codes, formally known as the NATO Phonetic Alphabet or military phonetic alphabet, is a standardized system where each letter of the alphabet is replaced with a phonetic word. This system originated during World War II to eliminate confusion during radio communications when letters could be easily misheard or misunderstood.
             </p>
@@ -96,7 +110,7 @@ export default function MilitaryABCCodesListPage() {
 
           {/* Complete Military Alphabet Table */}
           <section className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Complete Military Phonetic Alphabet</h2>
+            <h2 id="complete-military-phonetic-alphabet" className="text-2xl md:text-3xl font-bold text-foreground mb-4 scroll-mt-20">Complete Military Phonetic Alphabet</h2>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-border/50 bg-secondary/5">
                 <thead>
@@ -148,7 +162,7 @@ export default function MilitaryABCCodesListPage() {
 
           {/* Military Numbers */}
           <section className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Military Number Codes</h2>
+            <h2 id="military-number-codes" className="text-2xl md:text-3xl font-bold text-foreground mb-4 scroll-mt-20">Military Number Codes</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Numbers in military communication also follow a standardized pronunciation system to avoid confusion. Each digit from 0-9 has a distinct phonetic representation:
             </p>
@@ -180,7 +194,7 @@ export default function MilitaryABCCodesListPage() {
 
           {/* Applications */}
           <section className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Where Military ABC Codes Are Used</h2>
+            <h2 id="where-military-abc-codes-are-used" className="text-2xl md:text-3xl font-bold text-foreground mb-4 scroll-mt-20">Where Military ABC Codes Are Used</h2>
             <div className="space-y-4">
               <div className="border-l-4 border-primary pl-4">
                 <h3 className="font-semibold text-foreground mb-2">Military Operations</h3>
@@ -217,7 +231,7 @@ export default function MilitaryABCCodesListPage() {
 
           {/* Why It Matters */}
           <section className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Why Military ABC Codes Matter</h2>
+            <h2 id="why-military-abc-codes-matter" className="text-2xl md:text-3xl font-bold text-foreground mb-4 scroll-mt-20">Why Military ABC Codes Matter</h2>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex gap-3">
                 <span className="text-primary font-bold">✓</span>
@@ -254,7 +268,7 @@ export default function MilitaryABCCodesListPage() {
 
           {/* Practice Tips */}
           <section className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">How To Practice Military ABC Codes</h2>
+            <h2 id="how-to-practice-military-abc-codes" className="text-2xl md:text-3xl font-bold text-foreground mb-4 scroll-mt-20">How To Practice Military ABC Codes</h2>
             <div className="bg-primary/5 border border-primary/20 rounded-lg p-6">
               <ol className="space-y-4 text-muted-foreground">
                 <li className="flex gap-3">
@@ -297,7 +311,7 @@ export default function MilitaryABCCodesListPage() {
 
           {/* Related Tools */}
           <section className="mb-10 bg-secondary/5 border border-border/50 rounded-lg p-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Related Tools & Resources</h2>
+            <h2 id="related-tools-resources" className="text-2xl md:text-3xl font-bold text-foreground mb-4 scroll-mt-20">Related Tools & Resources</h2>
             <p className="text-muted-foreground mb-6">
               Explore our suite of conversion and analysis tools designed for military personnel, emergency responders, and communication professionals:
             </p>
@@ -327,7 +341,7 @@ export default function MilitaryABCCodesListPage() {
 
           {/* Conclusion */}
           <section className="mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Conclusion</h2>
+            <h2 id="conclusion" className="text-2xl md:text-3xl font-bold text-foreground mb-4 scroll-mt-20">Conclusion</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               The Military ABC Codes List is far more than just a reference chart—it&apos;s a globally recognized communication standard that bridges language barriers, eliminates ambiguity, and saves lives. Whether you&apos;re in the military, emergency services, aviation, or maritime operations, mastering these codes is essential to professional competence and operational success.
             </p>

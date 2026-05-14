@@ -278,7 +278,19 @@ export default function Page() {
             </p>
 
             {/* Section 1: Why Text Gets Encoded */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#why-text-gets-encoded-in-the-first-place" className="text-primary hover:underline">Why Text Gets Encoded in the First Place</a></li>
+            <li><a href="#how-to-identify-the-encoding-type" className="text-primary hover:underline">How to Identify the Encoding Type</a></li>
+            <li><a href="#step-by-step-decoding-guides" className="text-primary hover:underline">Step-by-Step Decoding Guides</a></li>
+            <li><a href="#quick-identification-cheat-sheet" className="text-primary hover:underline">Quick Identification Cheat Sheet</a></li>
+            <li><a href="#free-online-tools-to-decode-encoded-text" className="text-primary hover:underline">Free Online Tools to Decode Encoded Text</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            </ol>
+          </nav>
+
+<h2 id="why-text-gets-encoded-in-the-first-place" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               Why Text Gets Encoded in the First Place
             </h2>
             <p className="text-base text-muted-foreground mb-4">
@@ -303,7 +315,7 @@ export default function Page() {
             </ul>
 
             {/* Section 2: How to Identify the Encoding Type */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="how-to-identify-the-encoding-type" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               How to Identify the Encoding Type
             </h2>
             <p className="text-base text-muted-foreground mb-4">
@@ -351,7 +363,7 @@ export default function Page() {
             </p>
 
             {/* Section 3: Step-by-step decoding guides */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="step-by-step-decoding-guides" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               Step-by-Step Decoding Guides
             </h2>
 
@@ -407,7 +419,7 @@ export default function Page() {
             </ol>
 
             {/* Section 4: Cheat Sheet Table */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="quick-identification-cheat-sheet" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               Quick Identification Cheat Sheet
             </h2>
             <p className="text-base text-muted-foreground mb-4">
@@ -438,7 +450,7 @@ export default function Page() {
             </div>
 
             {/* Section 5: Tools */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="free-online-tools-to-decode-encoded-text" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               Free Online Tools to Decode Encoded Text
             </h2>
             <p className="text-base text-muted-foreground mb-4">
@@ -468,7 +480,7 @@ export default function Page() {
             </ul>
 
             {/* FAQ Section */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+            <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
               Frequently Asked Questions
             </h2>
             <div className="space-y-6">

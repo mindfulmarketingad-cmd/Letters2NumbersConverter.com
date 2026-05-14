@@ -53,12 +53,24 @@ export default function LetterNumberSubstitutionPuzzlesPage() {
                 <strong>Letter number substitution puzzles</strong> have fascinated puzzle enthusiasts for centuries. These clever codes replace letters with numbers following specific rules, creating encrypted messages that challenge and delight solvers. Whether you&apos;re a beginner or experienced puzzler, this guide will help you master letter number substitution puzzles of all types.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">What Are Letter Number Substitution Puzzles?</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-are-letter-number-substitution-puzzles" className="text-primary hover:underline">What Are Letter Number Substitution Puzzles?</a></li>
+            <li><a href="#types-of-letter-number-substitution-puzzles" className="text-primary hover:underline">Types of Letter Number Substitution Puzzles</a></li>
+            <li><a href="#how-to-solve-letter-number-substitution-puzzles" className="text-primary hover:underline">How to Solve Letter Number Substitution Puzzles</a></li>
+            <li><a href="#practice-letter-number-substitution-puzzles" className="text-primary hover:underline">Practice Letter Number Substitution Puzzles</a></li>
+            <li><a href="#where-to-find-letter-number-substitution-puzzles" className="text-primary hover:underline">Where to Find Letter Number Substitution Puzzles</a></li>
+            <li><a href="#tools-for-solving-substitution-puzzles" className="text-primary hover:underline">Tools for Solving Substitution Puzzles</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-are-letter-number-substitution-puzzles" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">What Are Letter Number Substitution Puzzles?</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Letter number substitution puzzles are encoding systems where each letter in a message is replaced with a corresponding number. The most straightforward form uses alphabetical position (A=1, B=2, etc.), but many variations exist. These puzzles test logical thinking, pattern recognition, and persistence.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Types of Letter Number Substitution Puzzles</h2>
+              <h2 id="types-of-letter-number-substitution-puzzles" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Types of Letter Number Substitution Puzzles</h2>
               
               <h3 className="text-xl font-semibold text-foreground mt-8 mb-3">1. A1Z26 Cipher</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -89,7 +101,7 @@ export default function LetterNumberSubstitutionPuzzlesPage() {
                 Some letter number substitution puzzles add a constant to each letter&apos;s position (similar to a Caesar cipher with numbers). You might see A=4, B=5, C=6, etc.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">How to Solve Letter Number Substitution Puzzles</h2>
+              <h2 id="how-to-solve-letter-number-substitution-puzzles" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">How to Solve Letter Number Substitution Puzzles</h2>
               <ol className="list-decimal pl-6 text-muted-foreground space-y-3 mb-6">
                 <li><strong>Identify the range:</strong> Look at the highest and lowest numbers to determine the encoding type</li>
                 <li><strong>Check for patterns:</strong> Repeated numbers likely represent common letters (E, T, A)</li>
@@ -98,7 +110,7 @@ export default function LetterNumberSubstitutionPuzzlesPage() {
                 <li><strong>Verify the message:</strong> Does your decoded text make grammatical sense?</li>
               </ol>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Practice Letter Number Substitution Puzzles</h2>
+              <h2 id="practice-letter-number-substitution-puzzles" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Practice Letter Number Substitution Puzzles</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Try decoding these letter number substitution puzzles using our converter:
               </p>
@@ -108,7 +120,7 @@ export default function LetterNumberSubstitutionPuzzlesPage() {
                 <p className="text-muted-foreground">Hard: 25-15-21 19-15-12-22-5-4 9-20</p>
               </div>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Where to Find Letter Number Substitution Puzzles</h2>
+              <h2 id="where-to-find-letter-number-substitution-puzzles" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Where to Find Letter Number Substitution Puzzles</h2>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-6">
                 <li>Geocaching mystery caches and puzzle caches</li>
                 <li>Escape room experiences</li>
@@ -118,7 +130,7 @@ export default function LetterNumberSubstitutionPuzzlesPage() {
                 <li>Treasure hunt games and events</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Tools for Solving Substitution Puzzles</h2>
+              <h2 id="tools-for-solving-substitution-puzzles" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Tools for Solving Substitution Puzzles</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 While solving letter number substitution puzzles by hand is rewarding, having the right tools speeds up the process. Our free <Link href="/" className="text-primary hover:underline">letters to numbers converter tool</Link> supports multiple encoding types and provides instant conversions, making it perfect for both beginners and experts.
               </p>

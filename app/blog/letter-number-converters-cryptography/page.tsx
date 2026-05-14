@@ -48,7 +48,21 @@ export default function LetterNumberConvertersCryptography() {
               Cryptography, the art and science of secure communication, fundamentally relies on converting letters to numbers. From ancient substitution ciphers to modern encryption algorithms, this transformation enables mathematical operations on text that would otherwise be impossible. Understanding this connection illuminates both the history and future of secure communications.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Historical Ciphers and Letter Numbering</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#historical-ciphers-and-letter-numbering" className="text-primary hover:underline">Historical Ciphers and Letter Numbering</a></li>
+            <li><a href="#mathematical-operations-on-text" className="text-primary hover:underline">Mathematical Operations on Text</a></li>
+            <li><a href="#modern-encryption-standards" className="text-primary hover:underline">Modern Encryption Standards</a></li>
+            <li><a href="#hash-functions-and-digital-signatures" className="text-primary hover:underline">Hash Functions and Digital Signatures</a></li>
+            <li><a href="#encoding-standards-in-cryptography" className="text-primary hover:underline">Encoding Standards in Cryptography</a></li>
+            <li><a href="#cryptanalysis-and-number-patterns" className="text-primary hover:underline">Cryptanalysis and Number Patterns</a></li>
+            <li><a href="#practical-applications-today" className="text-primary hover:underline">Practical Applications Today</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="historical-ciphers-and-letter-numbering" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Historical Ciphers and Letter Numbering</h2>
             <p className="text-foreground leading-relaxed mb-6">
               The Caesar cipher, one of the oldest known encryption methods, operates by shifting letters through the alphabet. While often described in terms of letter substitution, the underlying mechanism is numerical: each letter is converted to a number (A=0, B=1, etc.), a shift value is added, and the result is converted back to a letter using modular arithmetic.
             </p>
@@ -56,7 +70,7 @@ export default function LetterNumberConvertersCryptography() {
               The Vigenere cipher extends this concept by using a keyword to determine variable shift values for each letter position. Both the plaintext and the key are converted to numbers, added together modulo 26, and the result converted back to letters. This numerical foundation made the cipher much stronger than simple substitution.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Mathematical Operations on Text</h2>
+            <h2 id="mathematical-operations-on-text" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Mathematical Operations on Text</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Converting letters to numbers enables mathematical transformations that form the basis of encryption. Addition, multiplication, exponentiation, and modular arithmetic all become possible once text is represented numerically. These operations can scramble messages in ways that are difficult to reverse without the correct key.
             </p>
@@ -67,7 +81,7 @@ export default function LetterNumberConvertersCryptography() {
               Try converting your own text to numbers using our <Link href="/" className="text-primary hover:underline">letters to numbers converter tool</Link> to see how different encoding schemes transform the same message.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Modern Encryption Standards</h2>
+            <h2 id="modern-encryption-standards" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Modern Encryption Standards</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Contemporary encryption algorithms like AES (Advanced Encryption Standard) operate entirely on numerical data. Text is first converted to numbers using ASCII or Unicode encoding, then processed through multiple rounds of mathematical transformations including substitution, permutation, and mixing operations.
             </p>
@@ -75,7 +89,7 @@ export default function LetterNumberConvertersCryptography() {
               RSA encryption, widely used for secure internet communications, relies on the difficulty of factoring large numbers. Messages are converted to numbers, then raised to large powers modulo even larger numbers. The mathematical properties of prime numbers make this practically impossible to reverse without the private key.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Hash Functions and Digital Signatures</h2>
+            <h2 id="hash-functions-and-digital-signatures" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Hash Functions and Digital Signatures</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Cryptographic hash functions convert arbitrary text (via numerical encoding) into fixed-length numerical digests. SHA-256, for instance, produces a 256-bit number from any input. These functions are essential for password storage, data integrity verification, and blockchain technology.
             </p>
@@ -83,7 +97,7 @@ export default function LetterNumberConvertersCryptography() {
               Digital signatures combine hashing with asymmetric encryption. A document is converted to numbers, hashed, then encrypted with a private key. Anyone can verify the signature by decrypting with the public key and comparing hashes, ensuring both authenticity and integrity.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Encoding Standards in Cryptography</h2>
+            <h2 id="encoding-standards-in-cryptography" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Encoding Standards in Cryptography</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Cryptographic systems must agree on how letters are converted to numbers. ASCII encoding is common for English text, while UTF-8 handles international characters. Base64 encoding converts binary data to printable characters for transmission through text-only channels, a crucial step in many cryptographic protocols.
             </p>
@@ -91,7 +105,7 @@ export default function LetterNumberConvertersCryptography() {
               Hexadecimal representation is frequently used to display cryptographic values like keys and hashes. A 256-bit hash becomes a 64-character hex string, more readable than 256 binary digits. Understanding these encodings is essential for working with cryptographic tools and analyzing security implementations.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Cryptanalysis and Number Patterns</h2>
+            <h2 id="cryptanalysis-and-number-patterns" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Cryptanalysis and Number Patterns</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Code breakers exploit the numerical properties of encrypted text. Frequency analysis works because the numerical patterns of common letters persist through simple substitution. More sophisticated attacks analyze mathematical relationships between ciphertext numbers to deduce keys or plaintext.
             </p>
@@ -99,7 +113,7 @@ export default function LetterNumberConvertersCryptography() {
               Modern cryptanalysis often involves statistical analysis of numerical distributions, searching for patterns that reveal information about the encryption algorithm or key. Understanding how letters become numbers helps cryptanalysts identify vulnerabilities in encryption schemes.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Practical Applications Today</h2>
+            <h2 id="practical-applications-today" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Practical Applications Today</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Every secure website connection, encrypted email, and digital signature relies on letter-to-number conversion. When you see HTTPS in your browser, TLS encryption is converting your data to numbers, encrypting those numbers, and converting them back on the receiving end.
             </p>
@@ -107,7 +121,7 @@ export default function LetterNumberConvertersCryptography() {
               Cryptocurrencies use these principles extensively. Bitcoin addresses, transaction signatures, and the blockchain itself all depend on cryptographic functions that operate on numerical representations of data. Understanding the letter-number connection provides insight into how these systems maintain security.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Conclusion</h2>
+            <h2 id="conclusion" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Conclusion</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Letter-to-number conversion is the foundational bridge that enables cryptography. From ancient ciphers to quantum-resistant encryption, the ability to transform text into numbers for mathematical manipulation remains central to secure communication. Understanding this relationship provides crucial insight into both historical codes and modern security systems.
             </p>

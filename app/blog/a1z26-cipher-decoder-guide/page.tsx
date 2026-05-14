@@ -57,7 +57,22 @@ export default function Page() {
             The A1Z26 cipher decoder — step-by-step how to decode is an essential skill for anyone interested in cryptography, puzzle solving, or data security. Whether you're tackling escape room challenges, solving word puzzles, or learning fundamental encryption concepts, understanding how to decode A1Z26 messages will enhance your cryptographic knowledge and problem-solving abilities. This comprehensive guide walks you through every step of the decoding process with practical examples and proven techniques.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">What is the A1Z26 Cipher?</h2>
+                    <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-the-a1z26-cipher" className="text-primary hover:underline">What is the A1Z26 Cipher?</a></li>
+            <li><a href="#step-by-step-a1z26-decoding-process" className="text-primary hover:underline">Step-By-Step A1Z26 Decoding Process</a></li>
+            <li><a href="#practical-a1z26-decoder-examples" className="text-primary hover:underline">Practical A1Z26 Decoder Examples</a></li>
+            <li><a href="#advanced-a1z26-decoder-techniques" className="text-primary hover:underline">Advanced A1Z26 Decoder Techniques</a></li>
+            <li><a href="#common-a1z26-decoder-mistakes-to-avoid" className="text-primary hover:underline">Common A1Z26 Decoder Mistakes to Avoid</a></li>
+            <li><a href="#using-tools-for-a1z26-decoder-assistance" className="text-primary hover:underline">Using Tools for A1Z26 Decoder Assistance</a></li>
+            <li><a href="#applications-for-a1z26-cipher-decoder-skills" className="text-primary hover:underline">Applications for A1Z26 Cipher Decoder Skills</a></li>
+            <li><a href="#practice-exercises-for-a1z26-cipher-decoder-mastery" className="text-primary hover:underline">Practice Exercises for A1Z26 Cipher Decoder Mastery</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-the-a1z26-cipher" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">What is the A1Z26 Cipher?</h2>
           <p className="text-base text-muted-foreground mb-4">
             The A1Z26 cipher, also known as the simple alphabet cipher, is one of the most straightforward yet effective substitution ciphers in cryptography. In this system, each letter of the alphabet corresponds to its position: A=1, B=2, C=3, and so on through Z=26. Messages encoded using A1Z26 appear as sequences of numbers separated by hyphens, dashes, or spaces.
           </p>
@@ -65,7 +80,7 @@ export default function Page() {
             Understanding the A1Z26 cipher decoder process begins with recognizing that this cipher maintains the structure and sequence of the original message. Unlike more complex encryption methods, A1Z26 provides a direct mapping between letters and numbers, making it ideal for educational purposes, puzzle design, and introductory cryptography exercises.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Step-By-Step A1Z26 Decoding Process</h2>
+          <h2 id="step-by-step-a1z26-decoding-process" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Step-By-Step A1Z26 Decoding Process</h2>
           <p className="text-base text-muted-foreground mb-4">
             Decoding A1Z26 cipher messages follows a systematic approach that becomes intuitive with practice. Here's the complete step-by-step process for how to decode A1Z26 messages effectively.
           </p>
@@ -115,7 +130,7 @@ export default function Page() {
             <li>Correct number-to-letter conversions throughout</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Practical A1Z26 Decoder Examples</h2>
+          <h2 id="practical-a1z26-decoder-examples" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Practical A1Z26 Decoder Examples</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Example 1: Simple Message Decoding</h3>
           <p className="text-base text-muted-foreground mb-4">
@@ -144,7 +159,7 @@ export default function Page() {
             <strong>Decoded:</strong> "ALWAYS IS FUN" - demonstrating multi-word A1Z26 cipher decoder practice.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Advanced A1Z26 Decoder Techniques</h2>
+          <h2 id="advanced-a1z26-decoder-techniques" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Advanced A1Z26 Decoder Techniques</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Pattern Recognition</h3>
           <p className="text-base text-muted-foreground mb-4">
@@ -161,7 +176,7 @@ export default function Page() {
             Use contextual information from the puzzle or communication to guide your A1Z26 decoder work. Understanding the theme, category, or purpose of the encoded message helps validate your decoded results and identify logical word choices.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Common A1Z26 Decoder Mistakes to Avoid</h2>
+          <h2 id="common-a1z26-decoder-mistakes-to-avoid" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Common A1Z26 Decoder Mistakes to Avoid</h2>
           <ul className="list-disc list-inside text-base text-muted-foreground mb-4 space-y-2">
             <li><strong>Ignoring Separators:</strong> Always pay attention to how numbers are separated—this determines individual letter boundaries.</li>
             <li><strong>Confusing Double Digits:</strong> Numbers 10-26 require careful attention. 10 is J, not 1-0 (A-A).</li>
@@ -170,7 +185,7 @@ export default function Page() {
             <li><strong>Forgetting Capitalization Rules:</strong> Remember standard A1Z26 produces uppercase letters initially.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Using Tools for A1Z26 Decoder Assistance</h2>
+          <h2 id="using-tools-for-a1z26-decoder-assistance" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Using Tools for A1Z26 Decoder Assistance</h2>
           <p className="text-base text-muted-foreground mb-4">
             While manual decoding builds strong cryptographic skills, our <Link href="/tools/a1z26-decoder-and-encoder" className="text-primary hover:underline">A1Z26 Decoder and Encoder tool</Link> provides instant verification and speeds up the decoding process for longer messages. This <Link href="/tools/letter-number-converter" className="text-primary hover:underline">letter to number converter</Link> supports quick validation of your manual work and helps identify decoding errors.
           </p>
@@ -178,7 +193,7 @@ export default function Page() {
             For solving related cipher types, explore our <Link href="/tools/cryptogram-solver" className="text-primary hover:underline">cryptogram solver</Link> tool which handles A1Z26 and other substitution ciphers automatically.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Applications for A1Z26 Cipher Decoder Skills</h2>
+          <h2 id="applications-for-a1z26-cipher-decoder-skills" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Applications for A1Z26 Cipher Decoder Skills</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Escape Room Challenges</h3>
           <p className="text-base text-muted-foreground mb-4">
@@ -200,7 +215,7 @@ export default function Page() {
             A1Z26 provides a simple method for encoding casual secret messages between friends, adding an element of fun to hidden communication.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Practice Exercises for A1Z26 Cipher Decoder Mastery</h2>
+          <h2 id="practice-exercises-for-a1z26-cipher-decoder-mastery" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Practice Exercises for A1Z26 Cipher Decoder Mastery</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Beginner Exercise</h3>
           <p className="text-base text-muted-foreground mb-4">
@@ -223,7 +238,7 @@ export default function Page() {
             Create your own A1Z26 cipher decoder challenges by taking common phrases and encoding them, then practicing decoding them without referencing the original text.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Conclusion</h2>
+          <h2 id="conclusion" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Conclusion</h2>
           <p className="text-base text-muted-foreground mb-4">
             Mastering the A1Z26 cipher decoder — step-by-step how to decode is a valuable skill that combines logical thinking, pattern recognition, and systematic problem-solving. Whether you're solving escape room puzzles, tackling cryptographic challenges, or exploring fascinating cipher systems, understanding the complete decoding process empowers you to unlock hidden messages confidently.
           </p>

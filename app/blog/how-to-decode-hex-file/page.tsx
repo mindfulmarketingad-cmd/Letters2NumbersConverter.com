@@ -151,7 +151,24 @@ export default function Page() {
             </p>
 
             {/* ── What Is a Hex File ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">What Is a Hex File?</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-a-hex-file" className="text-primary hover:underline">What Is a Hex File?</a></li>
+            <li><a href="#the-hexadecimal-number-system" className="text-primary hover:underline">The Hexadecimal Number System</a></li>
+            <li><a href="#how-hex-maps-to-ascii-text" className="text-primary hover:underline">How Hex Maps to ASCII Text</a></li>
+            <li><a href="#step-by-step-decode-a-hex-string-to-text-manually" className="text-primary hover:underline">Step-by-Step: Decode a Hex String to Text Manually</a></li>
+            <li><a href="#decoding-hex-in-javascript" className="text-primary hover:underline">Decoding Hex in JavaScript</a></li>
+            <li><a href="#decoding-hex-in-python" className="text-primary hover:underline">Decoding Hex in Python</a></li>
+            <li><a href="#intel-hex-file-format" className="text-primary hover:underline">Intel HEX File Format</a></li>
+            <li><a href="#common-tools-for-hex-decoding" className="text-primary hover:underline">Common Tools for Hex Decoding</a></li>
+            <li><a href="#common-pitfalls-when-decoding-hex-files" className="text-primary hover:underline">Common Pitfalls When Decoding Hex Files</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#related-tools-and-guides" className="text-primary hover:underline">Related Tools and Guides</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-a-hex-file" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">What Is a Hex File?</h2>
             <p className="text-base text-muted-foreground mb-4">
               A <strong className="text-foreground">hex file</strong> (short for hexadecimal file, sometimes called a <em>hex dump</em>) is a way of representing raw binary data in a human-readable format. Because every possible byte value (0–255) can be written as exactly two hexadecimal digits, a hex dump makes it possible to inspect binary content without a specialist binary viewer.
             </p>
@@ -174,7 +191,7 @@ export default function Page() {
             </p>
 
             {/* ── Hexadecimal Number System ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Hexadecimal Number System</h2>
+            <h2 id="the-hexadecimal-number-system" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Hexadecimal Number System</h2>
             <p className="text-base text-muted-foreground mb-4">
               Hexadecimal is a <strong className="text-foreground">base-16</strong> number system. Decimal uses digits 0–9 (ten symbols); hexadecimal extends this with six letters: A represents 10, B represents 11, C represents 12, D represents 13, E represents 14, and F represents 15.
             </p>
@@ -191,7 +208,7 @@ export default function Page() {
             </ul>
 
             {/* ── Hex to ASCII ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How Hex Maps to ASCII Text</h2>
+            <h2 id="how-hex-maps-to-ascii-text" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How Hex Maps to ASCII Text</h2>
             <p className="text-base text-muted-foreground mb-4">
               The <strong className="text-foreground">ASCII standard</strong> assigns a numeric value (0–127) to each printable character and control code. Because these values fit inside one byte, every ASCII character can be written as a two-digit hex pair. Our{' '}
               <Link href="/blog/understanding-ascii-character-encoding" className="text-primary hover:underline">
@@ -281,7 +298,7 @@ export default function Page() {
             </div>
 
             {/* ── Step by Step: Manual ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Step-by-Step: Decode a Hex String to Text Manually</h2>
+            <h2 id="step-by-step-decode-a-hex-string-to-text-manually" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Step-by-Step: Decode a Hex String to Text Manually</h2>
             <p className="text-base text-muted-foreground mb-4">
               Let&apos;s decode the hex string <code className="font-mono text-sm bg-secondary/60 px-1 rounded">48 65 6C 6C 6F</code> by hand. The same process applies whether the bytes are space-separated or written as a continuous string like <code className="font-mono text-sm bg-secondary/60 px-1 rounded">48656C6C6F</code>.
             </p>
@@ -319,7 +336,7 @@ export default function Page() {
             </ol>
 
             {/* ── JavaScript ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Decoding Hex in JavaScript</h2>
+            <h2 id="decoding-hex-in-javascript" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Decoding Hex in JavaScript</h2>
             <p className="text-base text-muted-foreground mb-4">
               JavaScript provides two built-in functions that make hex decoding straightforward:{' '}
               <code className="font-mono text-sm bg-secondary/60 px-1 rounded">parseInt(string, radix)</code> to convert a hex pair to a decimal integer, and{' '}
@@ -346,7 +363,7 @@ hexToText('48656C6C6F')      // → 'Hello'`}</pre>
             </p>
 
             {/* ── Python ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Decoding Hex in Python</h2>
+            <h2 id="decoding-hex-in-python" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Decoding Hex in Python</h2>
             <p className="text-base text-muted-foreground mb-4">
               Python&apos;s standard library has first-class support for hex decoding. The cleanest approach uses{' '}
               <code className="font-mono text-sm bg-secondary/60 px-1 rounded">bytes.fromhex()</code>, which accepts a hex string (with or without spaces, as of Python 3.7) and returns a <code className="font-mono text-sm bg-secondary/60 px-1 rounded">bytes</code> object. Calling <code className="font-mono text-sm bg-secondary/60 px-1 rounded">.decode()</code> on that object gives you a Python string.
@@ -371,7 +388,7 @@ print(result)  # → 'Hello World'`}</pre>
             </p>
 
             {/* ── Intel HEX ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Intel HEX File Format</h2>
+            <h2 id="intel-hex-file-format" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Intel HEX File Format</h2>
             <p className="text-base text-muted-foreground mb-4">
               The <strong className="text-foreground">Intel HEX format</strong> is a structured text representation widely used for distributing microcontroller firmware, EEPROM images, and programmable logic device configurations. Unlike a plain hex dump, each line in an Intel HEX file is a self-contained <em>record</em> with a defined structure:
             </p>
@@ -399,7 +416,7 @@ CC      — Checksum: two's complement of the sum of all bytes
             </p>
 
             {/* ── Tools ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Common Tools for Hex Decoding</h2>
+            <h2 id="common-tools-for-hex-decoding" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Common Tools for Hex Decoding</h2>
             <ul className="list-disc pl-6 space-y-3 text-muted-foreground mb-6">
               <li>
                 <strong className="text-foreground">Hex editors</strong> — <em>HxD</em> (Windows, free) and <em>Hex Fiend</em> (macOS, free) let you open any file, view its raw bytes in hex, and edit them. They also show the ASCII preview column so you can see readable text alongside the hex values.
@@ -418,7 +435,7 @@ CC      — Checksum: two's complement of the sum of all bytes
             </ul>
 
             {/* ── Pitfalls ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Common Pitfalls When Decoding Hex Files</h2>
+            <h2 id="common-pitfalls-when-decoding-hex-files" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Common Pitfalls When Decoding Hex Files</h2>
 
             <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4 my-6">
               <h3 className="text-lg font-bold text-yellow-400 mb-2">Not every hex file contains readable text</h3>
@@ -443,7 +460,7 @@ CC      — Checksum: two's complement of the sum of all bytes
             </ul>
 
             {/* ── FAQ ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Frequently Asked Questions</h2>
+            <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Frequently Asked Questions</h2>
 
             <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">What is a hex file?</h3>
             <p className="text-base text-muted-foreground mb-4">
@@ -473,7 +490,7 @@ CC      — Checksum: two's complement of the sum of all bytes
             </p>
 
             {/* ── Related Links ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Related Tools and Guides</h2>
+            <h2 id="related-tools-and-guides" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Related Tools and Guides</h2>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
               <li>
                 <Link href="/tools/ascii-decoder" className="text-primary hover:underline">ASCII Decoder Tool</Link>{' '}

@@ -71,7 +71,21 @@ export default function Page() {
             <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar Cipher Decoder</Link> automates the entire process with a single click.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Why the Caesar Cipher Is Easy to Crack</h2>
+                    <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#why-the-caesar-cipher-is-easy-to-crack" className="text-primary hover:underline">Why the Caesar Cipher Is Easy to Crack</a></li>
+            <li><a href="#method-1-brute-force-try-all-25-shifts" className="text-primary hover:underline">Method 1: Brute Force — Try All 25 Shifts</a></li>
+            <li><a href="#method-2-frequency-analysis-the-mathematical-approach" className="text-primary hover:underline">Method 2: Frequency Analysis — The Mathematical Approach</a></li>
+            <li><a href="#which-method-should-you-use" className="text-primary hover:underline">Which Method Should You Use?</a></li>
+            <li><a href="#crack-any-caesar-cipher-instantly-free-online-tool" className="text-primary hover:underline">Crack Any Caesar Cipher Instantly — Free Online Tool</a></li>
+            <li><a href="#limitations-of-frequency-analysis-on-caesar-ciphers" className="text-primary hover:underline">Limitations of Frequency Analysis on Caesar Ciphers</a></li>
+            <li><a href="#practice-crack-these-ciphertexts" className="text-primary hover:underline">Practice: Crack These Ciphertexts</a></li>
+            <li><a href="#further-reading" className="text-primary hover:underline">Further Reading</a></li>
+            </ol>
+          </nav>
+
+<h2 id="why-the-caesar-cipher-is-easy-to-crack" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Why the Caesar Cipher Is Easy to Crack</h2>
           <p className="text-base text-muted-foreground mb-4">
             Every Caesar cipher has a key space of exactly 25 (shifts 1 through 25 — shift 0 and shift 26 are the same as no shift). A human can read through 25 candidate decryptions in about two minutes. A computer can check all 25 in microseconds.
           </p>
@@ -79,7 +93,7 @@ export default function Page() {
             The 9th-century Arab mathematician Al-Kindi identified this weakness in his treatise on cryptanalysis, and the Caesar cipher has been considered broken — in the cryptographic sense — for over 1,000 years. It is taught today as an educational tool, not a security system.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Method 1: Brute Force — Try All 25 Shifts</h2>
+          <h2 id="method-1-brute-force-try-all-25-shifts" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Method 1: Brute Force — Try All 25 Shifts</h2>
           <p className="text-base text-muted-foreground mb-4">
             The simplest approach is to decode the ciphertext with every possible shift from 1 to 25 and look for the one that produces readable English.
           </p>
@@ -115,7 +129,7 @@ export default function Page() {
             <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar Cipher Decoder</Link> does this automatically: click &quot;Show all 25 shifts&quot; and the correct decryption is ranked first.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Method 2: Frequency Analysis — The Mathematical Approach</h2>
+          <h2 id="method-2-frequency-analysis-the-mathematical-approach" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Method 2: Frequency Analysis — The Mathematical Approach</h2>
           <p className="text-base text-muted-foreground mb-4">
             Frequency analysis works because letters in natural language do not appear with equal probability. In English, E appears in roughly 12.7% of all letters. T, A, O, I, and N are the next most frequent. Z, Q, X, and J appear rarely.
           </p>
@@ -175,7 +189,7 @@ export default function Page() {
             Decoding with shift {exampleShift}: <span className="font-mono text-foreground font-bold">{examplePlain}</span>
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Which Method Should You Use?</h2>
+          <h2 id="which-method-should-you-use" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Which Method Should You Use?</h2>
           <div className="overflow-x-auto my-4">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -203,7 +217,7 @@ export default function Page() {
             </table>
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Crack Any Caesar Cipher Instantly — Free Online Tool</h2>
+          <h2 id="crack-any-caesar-cipher-instantly-free-online-tool" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Crack Any Caesar Cipher Instantly — Free Online Tool</h2>
           <p className="text-base text-muted-foreground mb-4">
             Our <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar Cipher Decoder</Link> automates both methods:
           </p>
@@ -214,7 +228,7 @@ export default function Page() {
             <li>Click the row to apply that shift, or copy the decoded text directly</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Limitations of Frequency Analysis on Caesar Ciphers</h2>
+          <h2 id="limitations-of-frequency-analysis-on-caesar-ciphers" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Limitations of Frequency Analysis on Caesar Ciphers</h2>
           <p className="text-base text-muted-foreground mb-4">
             Frequency analysis becomes unreliable when:
           </p>
@@ -227,7 +241,7 @@ export default function Page() {
             In all these cases, fall back to brute force — 25 shifts is a small enough space to check manually or with our tool.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Practice: Crack These Ciphertexts</h2>
+          <h2 id="practice-crack-these-ciphertexts" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Practice: Crack These Ciphertexts</h2>
           <p className="text-base text-muted-foreground mb-2">
             Try decoding these using our <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar Cipher Decoder</Link>. Use brute-force mode to find each shift.
           </p>
@@ -244,7 +258,7 @@ export default function Page() {
             ))}
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Further Reading</h2>
+          <h2 id="further-reading" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Further Reading</h2>
           <ul className="list-disc list-inside text-base text-muted-foreground mb-4 space-y-2">
             <li><Link href="/blog/caesar-cipher-history" className="text-primary hover:underline">Caesar Cipher History</Link> — where the cipher came from and how it has been used</li>
             <li><Link href="/blog/caesar-cipher-examples" className="text-primary hover:underline">Caesar Cipher Examples</Link> — worked encoding and decoding for shifts 3, 7, 13, and 21</li>

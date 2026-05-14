@@ -115,7 +115,19 @@ export default function BestDeciphererToolPage() {
 
         {/* Section 1 */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">
+                    <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#best-decipherer-tool-online" className="text-primary hover:underline">Best Decipherer Tool Online</a></li>
+            <li><a href="#letters2numbers-converter-the-best-decipherer-tool" className="text-primary hover:underline">Letters2Numbers Converter - The Best Decipherer Tool</a></li>
+            <li><a href="#best-decipherer-tool-website-features" className="text-primary hover:underline">Best Decipherer Tool Website Features</a></li>
+            <li><a href="#why-our-platform-is-the-best-decipherer-tool" className="text-primary hover:underline">Why Our Platform is the Best Decipherer Tool</a></li>
+            <li><a href="#start-deciphering-today" className="text-primary hover:underline">Start Deciphering Today</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            </ol>
+          </nav>
+
+<h2 id="best-decipherer-tool-online" className="text-3xl font-bold mb-6 text-white scroll-mt-20">
             Best Decipherer Tool Online
           </h2>
           <p className="text-lg leading-relaxed text-foreground mb-4">
@@ -163,7 +175,7 @@ export default function BestDeciphererToolPage() {
 
         {/* Section 2 */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">
+          <h2 id="letters2numbers-converter-the-best-decipherer-tool" className="text-3xl font-bold mb-6 text-white scroll-mt-20">
             Letters2Numbers Converter - The Best Decipherer Tool
           </h2>
           <p className="text-lg leading-relaxed text-foreground mb-4">
@@ -217,7 +229,7 @@ export default function BestDeciphererToolPage() {
 
         {/* Section 3 */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">
+          <h2 id="best-decipherer-tool-website-features" className="text-3xl font-bold mb-6 text-white scroll-mt-20">
             Best Decipherer Tool Website Features
           </h2>
           <p className="text-lg leading-relaxed text-foreground mb-6">
@@ -275,7 +287,7 @@ export default function BestDeciphererToolPage() {
 
         {/* Why Choose Section */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">
+          <h2 id="why-our-platform-is-the-best-decipherer-tool" className="text-3xl font-bold mb-6 text-white scroll-mt-20">
             Why Our Platform is the Best Decipherer Tool
           </h2>
           <div className="bg-gradient-to-br from-teal-500/10 to-teal-500/5 border border-teal-500/20 rounded-lg p-8">
@@ -332,7 +344,7 @@ export default function BestDeciphererToolPage() {
         {/* CTA Section */}
         <section className="mb-12">
           <div className="bg-secondary border border-border rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4 text-white">
+            <h2 id="start-deciphering-today" className="text-2xl font-bold mb-4 text-white scroll-mt-20">
               Start Deciphering Today
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
@@ -357,7 +369,7 @@ export default function BestDeciphererToolPage() {
 
         {/* FAQ Section */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">
+          <h2 id="frequently-asked-questions" className="text-3xl font-bold mb-6 text-white scroll-mt-20">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">

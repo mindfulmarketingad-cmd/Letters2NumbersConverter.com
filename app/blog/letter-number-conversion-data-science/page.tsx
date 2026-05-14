@@ -50,7 +50,19 @@ export default function LetterNumberConversionDataScience() {
                 Letter-to-number conversion is a fundamental technique in data science that bridges the gap between human-readable text and machine-processable numerical data. As machine learning algorithms require numerical inputs, understanding how to effectively convert letters and text into numbers is essential for any data scientist working with textual data. Our <Link href="/" className="text-primary hover:underline">letters to numbers converter tool</Link> provides a quick way to understand these conversions before implementing them in code.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Feature Engineering with Letter Encoding</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#feature-engineering-with-letter-encoding" className="text-primary hover:underline">Feature Engineering with Letter Encoding</a></li>
+            <li><a href="#text-preprocessing-for-natural-language-processing" className="text-primary hover:underline">Text Preprocessing for Natural Language Processing</a></li>
+            <li><a href="#hashing-and-data-anonymization" className="text-primary hover:underline">Hashing and Data Anonymization</a></li>
+            <li><a href="#pattern-recognition-and-anomaly-detection" className="text-primary hover:underline">Pattern Recognition and Anomaly Detection</a></li>
+            <li><a href="#practical-implementation" className="text-primary hover:underline">Practical Implementation</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="feature-engineering-with-letter-encoding" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Feature Engineering with Letter Encoding</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 One of the most common applications of letter-number conversion in data science is feature engineering. When working with categorical data containing letters or text, data scientists must transform these into numerical representations. The simplest approach assigns each letter a number based on its alphabetical position (A=1, B=2, etc.), creating ordinal features that preserve the sequential nature of the alphabet.
               </p>
@@ -58,7 +70,7 @@ export default function LetterNumberConversionDataScience() {
                 This technique is particularly useful when analyzing datasets containing codes, abbreviations, or single-character categorical variables. For instance, product codes that use letters can be converted to numbers for regression analysis, and grade letters (A, B, C, D, F) can be numerically encoded while maintaining their ordinal relationship.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Text Preprocessing for Natural Language Processing</h2>
+              <h2 id="text-preprocessing-for-natural-language-processing" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Text Preprocessing for Natural Language Processing</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 In natural language processing (NLP), letter-to-number conversion serves as a preprocessing step before applying more sophisticated encoding techniques. While modern NLP often uses embeddings and tokenization, understanding basic character-level encoding remains valuable for certain applications like character-level language models and spelling correction algorithms.
               </p>
@@ -66,12 +78,12 @@ export default function LetterNumberConversionDataScience() {
                 ASCII encoding, which assigns unique numerical values to each character, is widely used in text processing pipelines. This standardized encoding ensures consistency across different systems and programming languages, making it ideal for data interchange in collaborative data science projects.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Hashing and Data Anonymization</h2>
+              <h2 id="hashing-and-data-anonymization" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Hashing and Data Anonymization</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 Letter-number conversion plays a role in data anonymization and hashing techniques. When sensitive textual data needs to be protected while maintaining analytical utility, converting letters to numbers is often the first step in creating hash functions or pseudonymization schemes. This allows data scientists to work with sensitive datasets while complying with privacy regulations like GDPR.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Pattern Recognition and Anomaly Detection</h2>
+              <h2 id="pattern-recognition-and-anomaly-detection" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Pattern Recognition and Anomaly Detection</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 Converting letters to numbers enables pattern recognition algorithms to identify regularities in textual data. For example, analyzing the numerical patterns in alphanumeric codes can help detect anomalies, fraud, or data entry errors. The numerical representation allows for statistical analysis that would be impossible with raw text.
               </p>
@@ -79,12 +91,12 @@ export default function LetterNumberConversionDataScience() {
                 Time series analysis of coded data also benefits from letter-number conversion. By transforming categorical codes into numerical sequences, data scientists can apply forecasting models and trend analysis techniques to identify patterns over time.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Practical Implementation</h2>
+              <h2 id="practical-implementation" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Practical Implementation</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 In Python, letter-to-number conversion can be implemented using the ord() function for ASCII values or custom mappings for positional encoding. Libraries like scikit-learn provide LabelEncoder and OrdinalEncoder classes that automate this process for machine learning pipelines. Our letters to numbers converter tool provides an instant way to test these conversions before implementing them in code.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Conclusion</h2>
+              <h2 id="conclusion" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Conclusion</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 Letter-number conversion remains a foundational skill in data science, enabling the transformation of textual data into formats suitable for machine learning and statistical analysis. Whether you are performing basic feature engineering or building complex NLP pipelines, understanding these conversion techniques is essential for effective data science practice.
               </p>

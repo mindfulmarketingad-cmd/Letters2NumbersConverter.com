@@ -92,7 +92,18 @@ export default function BestDecoderPage() {
                   Best Decoder tools are essential for anyone working with encoded data, from developers and cybersecurity professionals to hobbyists and students. Letters2NumbersConverter.com stands out as the best decoder platform available today, offering comprehensive decoding capabilities across multiple encoding formats with an intuitive, user-friendly interface.
                 </p>
 
-                <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">What Makes a Decoder the Best?</h2>
+                          <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-makes-a-decoder-the-best" className="text-primary hover:underline">What Makes a Decoder the Best?</a></li>
+            <li><a href="#why-letters2numbersconvertercom-is-the-best-decoder" className="text-primary hover:underline">Why Letters2NumbersConverter.com is the Best Decoder</a></li>
+            <li><a href="#popular-use-cases-for-the-best-decoder" className="text-primary hover:underline">Popular Use Cases for the Best Decoder</a></li>
+            <li><a href="#key-features-that-define-the-best-decoder" className="text-primary hover:underline">Key Features That Define the Best Decoder</a></li>
+            <li><a href="#start-using-the-best-decoder-today" className="text-primary hover:underline">Start Using the Best Decoder Today</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-makes-a-decoder-the-best" className="text-2xl font-bold text-foreground mt-12 mb-4 scroll-mt-20">What Makes a Decoder the Best?</h2>
                 <p className="mb-6">
                   A truly excellent decoder tool needs to balance multiple critical factors. The best decoder should support numerous encoding formats including Morse code, Base64, hexadecimal, binary, and advanced cryptographic formats. It must provide real-time conversion, accurate results, and an interface so intuitive that both beginners and experts can use it effectively.
                 </p>
@@ -101,7 +112,7 @@ export default function BestDecoderPage() {
                   Beyond functionality, the best decoder prioritizes user privacy and speed. All processing should happen offline on your device without sending data to servers. The tool should be completely free, accessible from any device, and require no software installation. Letters2NumbersConverter.com excels in every one of these areas.
                 </p>
 
-                <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Why Letters2NumbersConverter.com is the Best Decoder</h2>
+                <h2 id="why-letters2numbersconvertercom-is-the-best-decoder" className="text-2xl font-bold text-foreground mt-12 mb-4 scroll-mt-20">Why Letters2NumbersConverter.com is the Best Decoder</h2>
                 
                 <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">1. Comprehensive Encoding Format Support</h3>
                 <p className="mb-4">
@@ -140,7 +151,7 @@ export default function BestDecoderPage() {
                   As the best decoder platform, we stay current with the latest encoding standards and best practices. Our tools are regularly updated to support new formats, fix edge cases, and maintain compatibility across browsers and devices. Each decoder is carefully tested and optimized for accuracy.
                 </p>
 
-                <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Popular Use Cases for the Best Decoder</h2>
+                <h2 id="popular-use-cases-for-the-best-decoder" className="text-2xl font-bold text-foreground mt-12 mb-4 scroll-mt-20">Popular Use Cases for the Best Decoder</h2>
                 
                 <div className="bg-card border border-border rounded-lg p-6 my-8">
                   <h3 className="text-lg font-semibold text-foreground mb-4">For Developers</h3>
@@ -170,7 +181,7 @@ export default function BestDecoderPage() {
                   </p>
                 </div>
 
-                <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Key Features That Define the Best Decoder</h2>
+                <h2 id="key-features-that-define-the-best-decoder" className="text-2xl font-bold text-foreground mt-12 mb-4 scroll-mt-20">Key Features That Define the Best Decoder</h2>
                 <ul className="mb-6 space-y-3">
                   <li className="flex gap-3">
                     <span className="text-primary font-bold">✓</span>
@@ -198,7 +209,7 @@ export default function BestDecoderPage() {
                   </li>
                 </ul>
 
-                <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Start Using the Best Decoder Today</h2>
+                <h2 id="start-using-the-best-decoder-today" className="text-2xl font-bold text-foreground mt-12 mb-4 scroll-mt-20">Start Using the Best Decoder Today</h2>
                 <p className="mb-6">
                   Why struggle with limited decoder tools when Letters2NumbersConverter.com offers a complete, free solution? Whether you need to decode Morse code, analyze Base64 data, convert colors, or handle any encoding format, our platform has you covered.
                 </p>

@@ -48,7 +48,21 @@ export default function HowToManuallyCheckLetterNumberConversion() {
               While our <Link href="/" className="text-primary hover:underline">letter to number converter</Link> provides instant results, understanding how to manually perform these conversions is valuable for learning, verification, and situations where you do not have access to digital tools. This guide covers step-by-step methods for the most common encoding types.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">A1Z26 Standard Encoding (A=1 to Z=26)</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#a1z26-standard-encoding-a1-to-z26" className="text-primary hover:underline">A1Z26 Standard Encoding (A=1 to Z=26)</a></li>
+            <li><a href="#zero-based-encoding-a0-to-z25" className="text-primary hover:underline">Zero-Based Encoding (A=0 to Z=25)</a></li>
+            <li><a href="#ascii-decimal-encoding" className="text-primary hover:underline">ASCII Decimal Encoding</a></li>
+            <li><a href="#hexadecimal-ascii-encoding" className="text-primary hover:underline">Hexadecimal ASCII Encoding</a></li>
+            <li><a href="#binary-ascii-encoding" className="text-primary hover:underline">Binary ASCII Encoding</a></li>
+            <li><a href="#verification-tips" className="text-primary hover:underline">Verification Tips</a></li>
+            <li><a href="#practice-exercise" className="text-primary hover:underline">Practice Exercise</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="a1z26-standard-encoding-a1-to-z26" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">A1Z26 Standard Encoding (A=1 to Z=26)</h2>
             <p className="text-foreground leading-relaxed mb-6">
               The A1Z26 system is the simplest letter-number encoding. Each letter corresponds to its position in the alphabet: A=1, B=2, C=3, and so on until Z=26. Here is how to convert manually:
             </p>
@@ -62,7 +76,7 @@ export default function HowToManuallyCheckLetterNumberConversion() {
               <strong>Step 3:</strong> Write the number, separating multiple letters with spaces or dashes. &quot;HELLO&quot; becomes 8-5-12-12-15.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Zero-Based Encoding (A=0 to Z=25)</h2>
+            <h2 id="zero-based-encoding-a0-to-z25" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Zero-Based Encoding (A=0 to Z=25)</h2>
             <p className="text-foreground leading-relaxed mb-6">
               This variant starts counting from zero, common in programming contexts. The process is identical to A1Z26, but subtract 1 from each result. A=0, B=1, C=2, through Z=25.
             </p>
@@ -70,7 +84,7 @@ export default function HowToManuallyCheckLetterNumberConversion() {
               A quick trick: calculate the A1Z26 value first, then subtract 1. &quot;HELLO&quot; in zero-based becomes 7-4-11-11-14 (each value is one less than standard encoding).
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">ASCII Decimal Encoding</h2>
+            <h2 id="ascii-decimal-encoding" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">ASCII Decimal Encoding</h2>
             <p className="text-foreground leading-relaxed mb-6">
               ASCII assigns specific decimal values to each character. Uppercase letters range from 65 (A) to 90 (Z), and lowercase from 97 (a) to 122 (z). Here is the manual method:
             </p>
@@ -84,7 +98,7 @@ export default function HowToManuallyCheckLetterNumberConversion() {
               <strong>Step 3:</strong> &quot;Hi&quot; becomes: H(8+64=72), i(9+96=105), giving &quot;72 105&quot;.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Hexadecimal ASCII Encoding</h2>
+            <h2 id="hexadecimal-ascii-encoding" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Hexadecimal ASCII Encoding</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Hexadecimal (base-16) uses digits 0-9 and letters A-F. Converting requires knowing decimal-to-hex conversion:
             </p>
@@ -101,7 +115,7 @@ export default function HowToManuallyCheckLetterNumberConversion() {
               <strong>Quick reference:</strong> Uppercase letters in hex range from 41 (A) to 5A (Z). Lowercase from 61 (a) to 7A (z).
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Binary ASCII Encoding</h2>
+            <h2 id="binary-ascii-encoding" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Binary ASCII Encoding</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Binary encoding represents each character as 8 bits (0s and 1s). The manual conversion process:
             </p>
@@ -118,7 +132,7 @@ export default function HowToManuallyCheckLetterNumberConversion() {
               <strong>Shortcut:</strong> Learn the binary for A (01000001) and add the letter&apos;s position-1 in binary to the last 5 bits. B is A+1=01000010, C is A+2=01000011, etc.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Verification Tips</h2>
+            <h2 id="verification-tips" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Verification Tips</h2>
             <p className="text-foreground leading-relaxed mb-6">
               <strong>Sanity checks for A1Z26:</strong> Values should be 1-26. Any number outside this range indicates an error.
             </p>
@@ -132,7 +146,7 @@ export default function HowToManuallyCheckLetterNumberConversion() {
               <strong>Binary verification:</strong> All letter values start with 01 in ASCII binary encoding.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Practice Exercise</h2>
+            <h2 id="practice-exercise" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Practice Exercise</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Try converting &quot;CODE&quot; manually in all formats, then check your work with our converter:
             </p>
@@ -144,7 +158,7 @@ export default function HowToManuallyCheckLetterNumberConversion() {
               <li>ASCII binary: 01000011-01001111-01000100-01000101</li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Conclusion</h2>
+            <h2 id="conclusion" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Conclusion</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Manual letter-to-number conversion is a valuable skill that deepens understanding of encoding systems. While digital tools are faster for lengthy conversions, knowing the underlying methods helps with verification, learning, and situations where tools are unavailable. Practice with simple words to build fluency in each encoding type.
             </p>

@@ -75,7 +75,21 @@ export default function A1Z26CipherEscapeRoomsBlog() {
 
             {/* What is A1Z26 */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">What Is the A1Z26 Cipher?</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-the-a1z26-cipher" className="text-primary hover:underline">What Is the A1Z26 Cipher?</a></li>
+            <li><a href="#why-use-a1z26-cipher-in-escape-rooms" className="text-primary hover:underline">Why Use A1Z26 Cipher in Escape Rooms?</a></li>
+            <li><a href="#how-to-implement-a1z26-cipher-in-escape-rooms" className="text-primary hover:underline">How To Implement A1Z26 Cipher In Escape Rooms</a></li>
+            <li><a href="#best-practices-for-a1z26-escape-room-design" className="text-primary hover:underline">Best Practices For A1Z26 Escape Room Design</a></li>
+            <li><a href="#creative-applications-of-a1z26-in-escape-rooms" className="text-primary hover:underline">Creative Applications Of A1Z26 In Escape Rooms</a></li>
+            <li><a href="#useful-tools-for-a1z26-puzzle-design" className="text-primary hover:underline">Useful Tools For A1Z26 Puzzle Design</a></li>
+            <li><a href="#scaling-a1z26-difficulty-levels" className="text-primary hover:underline">Scaling A1Z26 Difficulty Levels</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-the-a1z26-cipher" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">What Is the A1Z26 Cipher?</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 The A1Z26 cipher is a straightforward substitution cipher where each letter of the alphabet corresponds to its position in the sequence. A=1, B=2, C=3, and so on until Z=26. When applied to escape rooms, this cipher becomes a powerful tool for hiding information, creating multi-layer puzzles, and engaging players in meaningful problem-solving.
               </p>
@@ -86,7 +100,7 @@ export default function A1Z26CipherEscapeRoomsBlog() {
 
             {/* Why Use A1Z26 in Escape Rooms */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Why Use A1Z26 Cipher in Escape Rooms?</h2>
+              <h2 id="why-use-a1z26-cipher-in-escape-rooms" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Why Use A1Z26 Cipher in Escape Rooms?</h2>
               <div className="space-y-4">
                 <div className="bg-muted/50 p-4 rounded-lg">
                   <h3 className="font-semibold text-foreground mb-2">Universal Appeal</h3>
@@ -117,7 +131,7 @@ export default function A1Z26CipherEscapeRoomsBlog() {
 
             {/* Implementing A1Z26 */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">How To Implement A1Z26 Cipher In Escape Rooms</h2>
+              <h2 id="how-to-implement-a1z26-cipher-in-escape-rooms" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">How To Implement A1Z26 Cipher In Escape Rooms</h2>
               <h3 className="text-xl font-semibold text-foreground mb-3">Direct Number Puzzles</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 The simplest implementation presents A1Z26 codes directly to players. Write number sequences and challenge players to decode them: "8-9-4-4-5-14 = HIDDEN." This method works well for tutorial puzzles or early-stage challenges where players are learning the cipher mechanism.
@@ -141,7 +155,7 @@ export default function A1Z26CipherEscapeRoomsBlog() {
 
             {/* Design Best Practices */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Best Practices For A1Z26 Escape Room Design</h2>
+              <h2 id="best-practices-for-a1z26-escape-room-design" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Best Practices For A1Z26 Escape Room Design</h2>
               <h3 className="text-xl font-semibold text-foreground mb-3">Provide Clear Hints</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Always include visual cues or hints that point players toward the A1Z26 cipher. Display "A=1, B=2, C=3" somewhere visible or hint at the pattern through previous puzzle solutions. Frustration diminishes the puzzle experience; clarity enhances it.
@@ -165,7 +179,7 @@ export default function A1Z26CipherEscapeRoomsBlog() {
 
             {/* Creative Applications */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Creative Applications Of A1Z26 In Escape Rooms</h2>
+              <h2 id="creative-applications-of-a1z26-in-escape-rooms" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Creative Applications Of A1Z26 In Escape Rooms</h2>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex gap-3">
                   <span className="text-primary font-bold">•</span>
@@ -192,7 +206,7 @@ export default function A1Z26CipherEscapeRoomsBlog() {
 
             {/* Tools and Resources */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Useful Tools For A1Z26 Puzzle Design</h2>
+              <h2 id="useful-tools-for-a1z26-puzzle-design" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Useful Tools For A1Z26 Puzzle Design</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Designing A1Z26 cipher puzzles becomes significantly easier with the right tools. Our <Link href="/tools/letter-number-converter" className="text-primary hover:underline">Letter to Number Converter</Link> allows you to instantly generate accurate A1Z26 codes, verify conversions, and experiment with different message combinations. Additionally, our <Link href="/tools/a1z26-decoder-and-encoder" className="text-primary hover:underline">A1Z26 Decoder and Encoder</Link> tool provides both encoding and decoding capabilities, essential for testing puzzle solutions before implementation.
               </p>
@@ -203,7 +217,7 @@ export default function A1Z26CipherEscapeRoomsBlog() {
 
             {/* Difficulty Scaling */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Scaling A1Z26 Difficulty Levels</h2>
+              <h2 id="scaling-a1z26-difficulty-levels" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Scaling A1Z26 Difficulty Levels</h2>
               <div className="bg-muted/50 p-6 rounded-lg space-y-4">
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">Beginner Level</h3>
@@ -222,7 +236,7 @@ export default function A1Z26CipherEscapeRoomsBlog() {
 
             {/* Conclusion */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Conclusion</h2>
+              <h2 id="conclusion" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Conclusion</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 The A1Z26 cipher for escape rooms represents an elegant balance between simplicity and engagement. Its intuitive nature makes it accessible to newcomers while its versatility satisfies experienced players seeking sophisticated challenges. By understanding the cipher's mechanics, implementing best practices, and leveraging creative applications, you can craft memorable puzzle experiences that keep players engaged and satisfied.
               </p>

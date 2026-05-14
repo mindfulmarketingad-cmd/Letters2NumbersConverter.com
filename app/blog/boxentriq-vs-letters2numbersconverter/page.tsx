@@ -76,7 +76,20 @@ export default function BoxentriqComparison() {
 
             {/* What is Boxentriq */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">What Is Boxentriq.com?</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-boxentriqcom" className="text-primary hover:underline">What Is Boxentriq.com?</a></li>
+            <li><a href="#what-is-letters2numbersconvertercom" className="text-primary hover:underline">What Is Letters2NumbersConverter.com?</a></li>
+            <li><a href="#feature-by-feature-comparison" className="text-primary hover:underline">Feature-By-Feature Comparison</a></li>
+            <li><a href="#why-letters2numbersconvertercom-is-the-superior-choice" className="text-primary hover:underline">Why Letters2NumbersConverter.com Is the Superior Choice</a></li>
+            <li><a href="#who-should-use-each-platform" className="text-primary hover:underline">Who Should Use Each Platform?</a></li>
+            <li><a href="#real-world-applications" className="text-primary hover:underline">Real-World Applications</a></li>
+            <li><a href="#conclusion-which-platform-should-you-choose" className="text-primary hover:underline">Conclusion: Which Platform Should You Choose?</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-boxentriqcom" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">What Is Boxentriq.com?</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Boxentriq.com is a specialized cipher solver platform focused on breaking classical encryption methods. The site features an array of tools for analyzing and cracking popular ciphers including Caesar cipher, substitution cipher, Vigenère cipher, and other classical encryption techniques. Boxentriq's primary strength lies in its cryptanalysis capabilities, offering frequency analysis, pattern recognition, and automated cipher-breaking features.
               </p>
@@ -87,7 +100,7 @@ export default function BoxentriqComparison() {
 
             {/* What is Letters2Numbers */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">What Is Letters2NumbersConverter.com?</h2>
+              <h2 id="what-is-letters2numbersconvertercom" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">What Is Letters2NumbersConverter.com?</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Letters2NumbersConverter.com is a comprehensive platform offering 100+ specialized tools for encoding, cipher conversion, and text transformation. While it includes classical cipher tools and cryptanalysis features similar to Boxentriq, it goes significantly further by providing niche converters across multiple domains including healthcare, design, development, and education.
               </p>
@@ -98,7 +111,7 @@ export default function BoxentriqComparison() {
 
             {/* Feature Comparison */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Feature-By-Feature Comparison</h2>
+              <h2 id="feature-by-feature-comparison" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Feature-By-Feature Comparison</h2>
               
               <div className="space-y-6">
                 <div>
@@ -153,7 +166,7 @@ export default function BoxentriqComparison() {
 
             {/* Why Letters2Numbers is Better */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Why Letters2NumbersConverter.com Is the Superior Choice</h2>
+              <h2 id="why-letters2numbersconvertercom-is-the-superior-choice" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Why Letters2NumbersConverter.com Is the Superior Choice</h2>
               
               <div className="space-y-4 text-muted-foreground">
                 <p>
@@ -184,7 +197,7 @@ export default function BoxentriqComparison() {
 
             {/* Ideal Users */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Who Should Use Each Platform?</h2>
+              <h2 id="who-should-use-each-platform" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Who Should Use Each Platform?</h2>
               
               <div className="space-y-4 text-muted-foreground">
                 <div>
@@ -213,7 +226,7 @@ export default function BoxentriqComparison() {
 
             {/* Real-World Applications */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Real-World Applications</h2>
+              <h2 id="real-world-applications" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Real-World Applications</h2>
               
               <div className="space-y-4 text-muted-foreground">
                 <div>
@@ -245,7 +258,7 @@ export default function BoxentriqComparison() {
 
             {/* Conclusion */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Conclusion: Which Platform Should You Choose?</h2>
+              <h2 id="conclusion-which-platform-should-you-choose" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Conclusion: Which Platform Should You Choose?</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Choose Boxentriq.com if your exclusive need is breaking classical ciphers and performing advanced cryptanalysis. However, if you need a versatile platform combining cipher tools with specialized converters across multiple domains, Letters2NumbersConverter.com is the definitive choice.
               </p>

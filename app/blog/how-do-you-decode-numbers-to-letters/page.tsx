@@ -173,7 +173,24 @@ export default function Page() {
           </p>
 
           {/* Section 1 */}
-          <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+                    <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#the-most-common-system-a1z26-a1-b2-z26" className="text-primary hover:underline">The Most Common System: A1Z26 (A=1, B=2 … Z=26)</a></li>
+            <li><a href="#step-by-step-decoding-example" className="text-primary hover:underline">Step-by-Step Decoding Example</a></li>
+            <li><a href="#decode-a-more-complex-message" className="text-primary hover:underline">Decode a More Complex Message</a></li>
+            <li><a href="#the-a0z25-system-a0-b1-z25" className="text-primary hover:underline">The A0Z25 System (A=0, B=1 … Z=25)</a></li>
+            <li><a href="#ascii-number-codes" className="text-primary hover:underline">ASCII Number Codes</a></li>
+            <li><a href="#phone-keypad-encoding" className="text-primary hover:underline">Phone Keypad Encoding</a></li>
+            <li><a href="#how-to-tell-which-system-was-used" className="text-primary hover:underline">How to Tell Which System Was Used</a></li>
+            <li><a href="#comparison-of-the-four-main-systems" className="text-primary hover:underline">Comparison of the Four Main Systems</a></li>
+            <li><a href="#full-a1z26-reference-table-126" className="text-primary hover:underline">Full A1Z26 Reference Table (1–26)</a></li>
+            <li><a href="#common-uses-for-number-to-letter-decoding" className="text-primary hover:underline">Common Uses for Number-to-Letter Decoding</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            </ol>
+          </nav>
+
+<h2 id="the-most-common-system-a1z26-a1-b2-z26" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
             The Most Common System: A1Z26 (A=1, B=2 … Z=26)
           </h2>
           <p className="text-base text-muted-foreground mb-4">
@@ -193,7 +210,7 @@ export default function Page() {
           </p>
 
           {/* Section 2 */}
-          <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+          <h2 id="step-by-step-decoding-example" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
             Step-by-Step Decoding Example
           </h2>
           <p className="text-base text-muted-foreground mb-4">
@@ -238,7 +255,7 @@ export default function Page() {
           </p>
 
           {/* Section 3 */}
-          <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+          <h2 id="decode-a-more-complex-message" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
             Decode a More Complex Message
           </h2>
           <p className="text-base text-muted-foreground mb-4">
@@ -278,7 +295,7 @@ export default function Page() {
           </p>
 
           {/* Section 4 */}
-          <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+          <h2 id="the-a0z25-system-a0-b1-z25" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
             The A0Z25 System (A=0, B=1 … Z=25)
           </h2>
           <p className="text-base text-muted-foreground mb-4">
@@ -302,7 +319,7 @@ export default function Page() {
           </p>
 
           {/* Section 5 */}
-          <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+          <h2 id="ascii-number-codes" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
             ASCII Number Codes
           </h2>
           <p className="text-base text-muted-foreground mb-4">
@@ -323,7 +340,7 @@ export default function Page() {
           </p>
 
           {/* Section 6 */}
-          <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+          <h2 id="phone-keypad-encoding" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
             Phone Keypad Encoding
           </h2>
           <p className="text-base text-muted-foreground mb-4">
@@ -344,7 +361,7 @@ export default function Page() {
           </p>
 
           {/* Section 7 */}
-          <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+          <h2 id="how-to-tell-which-system-was-used" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
             How to Tell Which System Was Used
           </h2>
           <p className="text-base text-muted-foreground mb-4">
@@ -364,7 +381,7 @@ export default function Page() {
           </p>
 
           {/* Section 8: Comparison Table */}
-          <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+          <h2 id="comparison-of-the-four-main-systems" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
             Comparison of the Four Main Systems
           </h2>
           <div className="overflow-x-auto mb-6">
@@ -416,7 +433,7 @@ export default function Page() {
           </div>
 
           {/* Section 8b: Full A1Z26 Reference Table */}
-          <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+          <h2 id="full-a1z26-reference-table-126" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
             Full A1Z26 Reference Table (1–26)
           </h2>
           <p className="text-base text-muted-foreground mb-4">
@@ -453,7 +470,7 @@ export default function Page() {
           </div>
 
           {/* Section 9 */}
-          <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+          <h2 id="common-uses-for-number-to-letter-decoding" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
             Common Uses for Number-to-Letter Decoding
           </h2>
           <p className="text-base text-muted-foreground mb-4">
@@ -473,7 +490,7 @@ export default function Page() {
           </p>
 
           {/* FAQ */}
-          <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
+          <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">

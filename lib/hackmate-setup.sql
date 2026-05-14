@@ -11,9 +11,13 @@ CREATE TABLE IF NOT EXISTS hackmate_profiles (
   role            TEXT NOT NULL,
   skills          TEXT[] NOT NULL DEFAULT '{}',
   looking_for     TEXT,
+  links           JSONB NOT NULL DEFAULT '{}',
   created_at      TIMESTAMPTZ DEFAULT NOW(),
   updated_at      TIMESTAMPTZ DEFAULT NOW()
 );
+
+-- Add links column to existing tables (safe to run on existing deployments)
+ALTER TABLE hackmate_profiles ADD COLUMN IF NOT EXISTS links JSONB NOT NULL DEFAULT '{}';
 
 CREATE TABLE IF NOT EXISTS hackmate_projects (
   id                UUID DEFAULT gen_random_uuid() PRIMARY KEY,

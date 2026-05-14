@@ -629,6 +629,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Generator',
     href: '/tools/gradient-maker-from-image',
   },
+  'hackathon-team-name-generator': {
+    name: 'Hackathon Team Name Generator',
+    description: 'Generate creative hackathon team names instantly. Choose from tech, space, nature, mythology, animal, and pun themes.',
+    category: 'Generators',
+    href: '/tools/hackathon-team-name-generator',
+  },
 }
 
 export function getToolRegistry() {

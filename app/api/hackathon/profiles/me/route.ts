@@ -36,10 +36,21 @@ export async function PUT(req: NextRequest) {
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const body = await req.json()
-  const { name, role, skills, looking_for } = body
+  const { name, role, skills, looking_for, links } = body
 
   if (!name || !role || !Array.isArray(skills) || skills.length === 0) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+  }
+
+  // Sanitise links: only keep known keys with string values
+  const sanitisedLinks: Record<string, string> = {}
+  const allowedLinkKeys = ['github', 'portfolio', 'linkedin', 'twitter', 'other']
+  if (links && typeof links === 'object') {
+    for (const key of allowedLinkKeys) {
+      if (typeof links[key] === 'string' && links[key].trim()) {
+        sanitisedLinks[key] = links[key].trim()
+      }
+    }
   }
 
   const { data, error } = await admin
@@ -50,6 +61,7 @@ export async function PUT(req: NextRequest) {
       role,
       skills,
       looking_for: looking_for || null,
+      links: sanitisedLinks,
       updated_at: new Date().toISOString(),
     }, { onConflict: 'user_id' })
     .select()

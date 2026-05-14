@@ -1154,6 +1154,22 @@ export const getToolData = (toolId: string) => {
         { title: 'Social Media Creators', description: 'Creating gradient backgrounds for Instagram stories, YouTube thumbnails, and banner images using aesthetically matched color sets.' },
       ],
     },
+    'hackathon-team-name-generator': {
+      howItWorks: 'Choose a theme (Tech, Space, Nature, Mythology, Animals, or Puns), set how many names you want, and click Generate. The tool combines themed adjectives and nouns to produce creative team names instantly. Click any name to copy it, or use Copy All to grab the full list.',
+      features: [
+        'Six themes: Tech, Space, Nature, Mythology, Animals, and Puns',
+        'Generate 1–50 names at once',
+        'One-click copy for individual names or the full list',
+        'Instant results — no page reload',
+        'Works offline, no sign-up needed',
+        'Regenerate as many times as you like',
+      ],
+      whoIsItFor: [
+        { title: 'Hackathon Participants', description: 'Quickly settling on a memorable team name so you can get back to building your project.' },
+        { title: 'Event Organisers', description: 'Generating a pool of pre-approved team name options to offer participants at the start of a hackathon.' },
+        { title: 'Student Teams', description: 'Finding a fun name for class projects, coding competitions, and group assignments.' },
+      ],
+    },
   }
 
   return toolDataMap[toolId] || {

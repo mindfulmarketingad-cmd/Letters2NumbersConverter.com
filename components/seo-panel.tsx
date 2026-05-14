@@ -152,13 +152,10 @@ export function SeoPanel() {
       {/* ── 1. H1 + Problem Statement ─────────────────────────── */}
       <div className="space-y-4">
         <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-          Free <span style={{ color: '#11a099' }}>Letters to Numbers Converter</span> — and 100+ Other Online Tools
+          <span style={{ color: '#11a099' }}>Letters To Numbers Converter</span>
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl">
-          Need to decode a cipher, convert a file, or crack a puzzle — <em>right now</em>?
-          You&apos;re in the right place. Letters2NumbersConverter.com gives you instant,
-          browser-based tools that solve the problem in front of you without software,
-          sign-ups, or waiting.
+          Letters To Numbers Converter is a free, browser-based tool that converts letters to numbers instantly using A1Z26 (A=1, B=2 … Z=26) and 100+ other encoding formats — no sign-up, no software required.
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
           <Link href="/tools/letter-number-converter"

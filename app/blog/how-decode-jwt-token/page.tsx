@@ -123,7 +123,22 @@ export default function Page() {
             </p>
 
             {/* ── What is a JWT ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">What Is a JWT Token?</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-a-jwt-token" className="text-primary hover:underline">What Is a JWT Token?</a></li>
+            <li><a href="#the-three-parts-of-a-jwt" className="text-primary hover:underline">The Three Parts of a JWT</a></li>
+            <li><a href="#how-to-decode-the-header-step-by-step" className="text-primary hover:underline">How to Decode the Header Step by Step</a></li>
+            <li><a href="#how-to-decode-the-payload-step-by-step" className="text-primary hover:underline">How to Decode the Payload Step by Step</a></li>
+            <li><a href="#the-signature-verified-not-decoded" className="text-primary hover:underline">The Signature — Verified, Not Decoded</a></li>
+            <li><a href="#common-jwt-payload-claims" className="text-primary hover:underline">Common JWT Payload Claims</a></li>
+            <li><a href="#full-example-jwt-and-its-decoded-parts" className="text-primary hover:underline">Full Example — JWT and Its Decoded Parts</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#related-tools-and-guides" className="text-primary hover:underline">Related Tools and Guides</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-a-jwt-token" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">What Is a JWT Token?</h2>
             <p className="text-base text-muted-foreground mb-4">
               A <strong className="text-foreground">JSON Web Token (JWT)</strong> is a compact, URL-safe way to represent claims between two parties. It is defined in <strong className="text-foreground">RFC 7519</strong> and is the de facto standard for stateless authentication and authorization in modern web APIs. When a user logs in, the server creates a JWT containing claims (assertions about the user), signs it with a secret key, and returns it to the client. The client sends the JWT back with every subsequent request — typically in the <code className="font-mono text-sm bg-secondary/60 px-1 rounded">Authorization: Bearer &lt;token&gt;</code> header — and the server verifies the signature to authenticate the request without needing to look up a session in a database.
             </p>
@@ -144,7 +159,7 @@ export default function Page() {
             </p>
 
             {/* ── The Three Parts ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Three Parts of a JWT</h2>
+            <h2 id="the-three-parts-of-a-jwt" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Three Parts of a JWT</h2>
 
             <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">1. Header</h3>
             <p className="text-base text-muted-foreground mb-4">
@@ -188,7 +203,7 @@ export default function Page() {
             </p>
 
             {/* ── How to Decode Header ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Decode the Header Step by Step</h2>
+            <h2 id="how-to-decode-the-header-step-by-step" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Decode the Header Step by Step</h2>
             <p className="text-base text-muted-foreground mb-4">
               The header is the first segment — the part before the first dot. Here is the exact process to decode it:
             </p>
@@ -222,7 +237,7 @@ console.log(header) // { alg: 'HS256', typ: 'JWT' }`}</pre>
             </div>
 
             {/* ── How to Decode Payload ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Decode the Payload Step by Step</h2>
+            <h2 id="how-to-decode-the-payload-step-by-step" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Decode the Payload Step by Step</h2>
             <p className="text-base text-muted-foreground mb-4">
               The process for decoding the payload is identical to decoding the header — only the segment index changes. The payload is the second segment (index 1) after splitting on <code className="font-mono text-sm bg-secondary/60 px-1 rounded">"."</code>.
             </p>
@@ -262,7 +277,7 @@ console.log(header) // { alg: 'HS256', typ: 'JWT' }`}</pre>
             </p>
 
             {/* ── The Signature ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Signature — Verified, Not Decoded</h2>
+            <h2 id="the-signature-verified-not-decoded" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Signature — Verified, Not Decoded</h2>
             <p className="text-base text-muted-foreground mb-4">
               The third segment is the <strong className="text-foreground">signature</strong>. Unlike the header and payload, the signature is <strong className="text-foreground">not decoded — it is verified</strong>. The distinction is fundamental:
             </p>
@@ -290,7 +305,7 @@ console.log(header) // { alg: 'HS256', typ: 'JWT' }`}</pre>
             </div>
 
             {/* ── Claims Table ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Common JWT Payload Claims</h2>
+            <h2 id="common-jwt-payload-claims" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Common JWT Payload Claims</h2>
             <p className="text-base text-muted-foreground mb-4">
               The JWT specification (RFC 7519) defines the following <strong className="text-foreground">registered claim names</strong>. Using these standard names ensures interoperability between different JWT libraries and frameworks.
             </p>
@@ -328,7 +343,7 @@ console.log(header) // { alg: 'HS256', typ: 'JWT' }`}</pre>
             </p>
 
             {/* ── Full Example ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Full Example — JWT and Its Decoded Parts</h2>
+            <h2 id="full-example-jwt-and-its-decoded-parts" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Full Example — JWT and Its Decoded Parts</h2>
             <p className="text-base text-muted-foreground mb-4">
               The following is a complete worked example. The token is signed with HMAC-SHA256 (HS256). The three colour-coded segments are shown first, followed by each decoded part.
             </p>
@@ -374,7 +389,7 @@ console.log(header) // { alg: 'HS256', typ: 'JWT' }`}</pre>
             </div>
 
             {/* ── FAQ ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Frequently Asked Questions</h2>
+            <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Frequently Asked Questions</h2>
 
             <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">How do I decode a JWT token manually?</h3>
             <p className="text-base text-muted-foreground mb-4">
@@ -406,7 +421,7 @@ console.log(header) // { alg: 'HS256', typ: 'JWT' }`}</pre>
             </p>
 
             {/* ── CTA / Related ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Related Tools and Guides</h2>
+            <h2 id="related-tools-and-guides" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Related Tools and Guides</h2>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
               <li>
                 <Link href="/tools/base64-encoder-decoder" className="text-primary hover:underline">Base64 Encoder and Decoder</Link>{' '}

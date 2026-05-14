@@ -53,12 +53,25 @@ export default function AbcToNumberCodePage() {
                 The <strong>ABC to number code</strong> is the simplest way to convert letters into numbers. It&apos;s perfect for kids learning the alphabet, teachers creating fun activities, and anyone who enjoys puzzles and codes. In this guide, you&apos;ll learn everything about the ABC to number code system and how to use it.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">What is ABC to Number Code?</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-abc-to-number-code" className="text-primary hover:underline">What is ABC to Number Code?</a></li>
+            <li><a href="#complete-abc-to-number-code-chart" className="text-primary hover:underline">Complete ABC to Number Code Chart</a></li>
+            <li><a href="#how-to-use-abc-to-number-code" className="text-primary hover:underline">How to Use ABC to Number Code</a></li>
+            <li><a href="#fun-activities-with-abc-to-number-code" className="text-primary hover:underline">Fun Activities with ABC to Number Code</a></li>
+            <li><a href="#tips-for-memorizing-abc-to-number-code" className="text-primary hover:underline">Tips for Memorizing ABC to Number Code</a></li>
+            <li><a href="#abc-to-number-code-for-education" className="text-primary hover:underline">ABC to Number Code for Education</a></li>
+            <li><a href="#try-our-free-abc-to-number-converter" className="text-primary hover:underline">Try Our Free ABC to Number Converter</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-abc-to-number-code" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">What is ABC to Number Code?</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 The ABC to number code assigns a number to each letter of the alphabet based on its position. A is 1, B is 2, C is 3, and so on until Z is 26. This simple system is also called A1Z26 or alphabetical position encoding. It&apos;s been used for centuries to create secret messages and fun coding activities.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Complete ABC to Number Code Chart</h2>
+              <h2 id="complete-abc-to-number-code-chart" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Complete ABC to Number Code Chart</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Here&apos;s the complete ABC to number code reference:
               </p>
@@ -94,7 +107,7 @@ export default function AbcToNumberCodePage() {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">How to Use ABC to Number Code</h2>
+              <h2 id="how-to-use-abc-to-number-code" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">How to Use ABC to Number Code</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Using the ABC to number code is easy! To encode a word, simply replace each letter with its number. For example:
               </p>
@@ -107,7 +120,7 @@ export default function AbcToNumberCodePage() {
                 To decode, convert each number back to its letter. Use our <Link href="/" className="text-primary hover:underline">letters to numbers converter tool</Link> to instantly encode or decode any message using the ABC to number code.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Fun Activities with ABC to Number Code</h2>
+              <h2 id="fun-activities-with-abc-to-number-code" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Fun Activities with ABC to Number Code</h2>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-6">
                 <li><strong>Secret messages:</strong> Write notes to friends using the ABC to number code</li>
                 <li><strong>Treasure hunts:</strong> Create clues that need to be decoded</li>
@@ -116,7 +129,7 @@ export default function AbcToNumberCodePage() {
                 <li><strong>Math practice:</strong> Add up the numbers in words to find totals</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Tips for Memorizing ABC to Number Code</h2>
+              <h2 id="tips-for-memorizing-abc-to-number-code" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Tips for Memorizing ABC to Number Code</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Here are some tricks to remember the ABC to number code quickly:
               </p>
@@ -127,12 +140,12 @@ export default function AbcToNumberCodePage() {
                 <li>Use songs or rhymes to remember positions</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">ABC to Number Code for Education</h2>
+              <h2 id="abc-to-number-code-for-education" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">ABC to Number Code for Education</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Teachers and parents love using the ABC to number code for learning activities. It helps children practice alphabetical order, introduces basic coding concepts, and makes learning fun. Many educational worksheets and games incorporate this simple encoding system to engage young learners.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Try Our Free ABC to Number Converter</h2>
+              <h2 id="try-our-free-abc-to-number-converter" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Try Our Free ABC to Number Converter</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Ready to start encoding and decoding? Our free <Link href="/" className="text-primary hover:underline">letters to numbers converter tool</Link> makes using the ABC to number code quick and easy. Simply type your text and see the conversion instantly!
               </p>

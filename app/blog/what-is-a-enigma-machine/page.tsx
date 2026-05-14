@@ -205,7 +205,23 @@ export default function Page() {
 
             {/* ── What the Enigma Machine Is ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Enigma Machine: An Overview</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#the-enigma-machine-an-overview" className="text-primary hover:underline">The Enigma Machine: An Overview</a></li>
+            <li><a href="#the-mechanical-components-explained" className="text-primary hover:underline">The Mechanical Components Explained</a></li>
+            <li><a href="#how-encryption-worked-step-by-step" className="text-primary hover:underline">How Encryption Worked: Step by Step</a></li>
+            <li><a href="#the-staggering-number-of-possible-configurations" className="text-primary hover:underline">The Staggering Number of Possible Configurations</a></li>
+            <li><a href="#breaking-the-enigma-from-warsaw-to-bletchley-park" className="text-primary hover:underline">Breaking the Enigma: From Warsaw to Bletchley Park</a></li>
+            <li><a href="#enigma-rotor-configurations-by-service" className="text-primary hover:underline">Enigma Rotor Configurations by Service</a></li>
+            <li><a href="#legacy-enigmaaposs-impact-on-computing-and-cryptography" className="text-primary hover:underline">Legacy: Enigma&apos;s Impact on Computing and Cryptography</a></li>
+            <li><a href="#enigma-history-timeline" className="text-primary hover:underline">Enigma History Timeline</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#explore-further" className="text-primary hover:underline">Explore Further</a></li>
+            </ol>
+          </nav>
+
+<h2 id="the-enigma-machine-an-overview" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Enigma Machine: An Overview</h2>
               <p className="text-base text-muted-foreground mb-4">
                 The Enigma machine was invented by German engineer <strong className="text-foreground">Arthur Scherbius</strong>. He patented the commercial Enigma A in 1918 and began selling it in 1923, initially marketing it to banks and businesses that wanted to protect sensitive correspondence. The machine performed <strong className="text-foreground">polyalphabetic substitution</strong> — meaning that the same plaintext letter produced a different ciphertext letter every time it was typed, because the rotors advanced with each keypress. This made frequency analysis, the classical tool for breaking substitution ciphers, essentially useless against it.
               </p>
@@ -226,7 +242,7 @@ export default function Page() {
 
             {/* ── Mechanical Components ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Mechanical Components Explained</h2>
+              <h2 id="the-mechanical-components-explained" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Mechanical Components Explained</h2>
 
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Rotors (Scrambler Wheels)</h3>
               <p className="text-base text-muted-foreground mb-4">
@@ -257,7 +273,7 @@ export default function Page() {
 
             {/* ── How Encryption Worked ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How Encryption Worked: Step by Step</h2>
+              <h2 id="how-encryption-worked-step-by-step" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How Encryption Worked: Step by Step</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Each morning, every Enigma operator on a given network received a <strong className="text-foreground">key sheet</strong> listing the day&apos;s settings: which three rotors to use and in which order, the ring settings (an internal offset for each rotor), the plugboard pairs, and the ground setting (the starting rotor positions). Operators had to destroy used key sheets immediately.
               </p>
@@ -285,7 +301,7 @@ export default function Page() {
 
             {/* ── Number of configurations ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Staggering Number of Possible Configurations</h2>
+              <h2 id="the-staggering-number-of-possible-configurations" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Staggering Number of Possible Configurations</h2>
               <p className="text-base text-muted-foreground mb-4">
                 German cryptographers calculated — correctly — that the number of possible Enigma settings was astronomically large. For the standard three-rotor Army/Air Force machine, accounting for rotor selection from a set of five, rotor order, ring settings, starting positions, and 10 plugboard pairs, the total comes to approximately:
               </p>
@@ -311,7 +327,7 @@ export default function Page() {
 
             {/* ── Breaking Enigma ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Breaking the Enigma: From Warsaw to Bletchley Park</h2>
+              <h2 id="breaking-the-enigma-from-warsaw-to-bletchley-park" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Breaking the Enigma: From Warsaw to Bletchley Park</h2>
               <p className="text-base text-muted-foreground mb-4">
                 The story of Enigma&apos;s defeat begins not in Britain but in Poland. In 1932, mathematician <strong className="text-foreground">Marian Rejewski</strong> — working for the Polish Cipher Bureau — made the first mathematical break into Enigma traffic. Working with barely any information, Rejewski used the algebraic structure of the cipher and the German practice of repeating message keys (a procedural weakness, not a hardware one) to deduce the rotor wiring. He was joined by colleagues <strong className="text-foreground">Jerzy Różycki</strong> and <strong className="text-foreground">Henryk Zygalski</strong>; together they built mechanical aids called <em>bomby</em> (bombas) and devised perforated paper sheets to search through possible settings.
               </p>
@@ -328,7 +344,7 @@ export default function Page() {
 
             {/* ── Key Rotor Configurations Table ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Enigma Rotor Configurations by Service</h2>
+              <h2 id="enigma-rotor-configurations-by-service" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Enigma Rotor Configurations by Service</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Different branches of the German military used different rotor sets, giving each network a measure of independence. The table below summarises the principal configurations:
               </p>
@@ -362,7 +378,7 @@ export default function Page() {
 
             {/* ── Legacy ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Legacy: Enigma&apos;s Impact on Computing and Cryptography</h2>
+              <h2 id="legacy-enigmaaposs-impact-on-computing-and-cryptography" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Legacy: Enigma&apos;s Impact on Computing and Cryptography</h2>
               <p className="text-base text-muted-foreground mb-4">
                 The Enigma story did not end with the war. Alan Turing&apos;s work at Bletchley Park — particularly his conceptual framework for the Bombe and his earlier theoretical paper on computable numbers — helped lay the intellectual foundations of modern computer science. The Bombe was not a general-purpose computer, but the problem it solved (systematically searching a structured problem space using mechanised logic) was a direct precursor to computational thinking.
               </p>
@@ -393,7 +409,7 @@ export default function Page() {
 
             {/* ── Timeline ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Enigma History Timeline</h2>
+              <h2 id="enigma-history-timeline" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Enigma History Timeline</h2>
               <div className="overflow-x-auto my-4 rounded-lg border border-border">
                 <table className="w-full text-sm border-collapse">
                   <thead>
@@ -416,7 +432,7 @@ export default function Page() {
 
             {/* ── FAQ ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-6">Frequently Asked Questions</h2>
+              <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-10 mb-6 scroll-mt-20">Frequently Asked Questions</h2>
 
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">What is a Enigma machine?</h3>
               <p className="text-base text-muted-foreground mb-4">
@@ -458,7 +474,7 @@ export default function Page() {
 
             {/* ── Related Links Grid ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-6">Explore Further</h2>
+              <h2 id="explore-further" className="text-2xl font-bold text-foreground mt-10 mb-6 scroll-mt-20">Explore Further</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   {

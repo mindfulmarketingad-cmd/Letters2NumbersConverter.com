@@ -169,7 +169,22 @@ export default function Page() {
 
             {/* ── What Unicode Is ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-0 mb-4">What Unicode Is (and Why It Matters for HTML)</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-unicode-is-and-why-it-matters-for-html" className="text-primary hover:underline">What Unicode Is (and Why It Matters for HTML)</a></li>
+            <li><a href="#the-charset-meta-tag-why-it-must-come-first" className="text-primary hover:underline">The Charset Meta Tag — Why It Must Come First</a></li>
+            <li><a href="#three-ways-to-include-a-unicode-character-in-html" className="text-primary hover:underline">Three Ways to Include a Unicode Character in HTML</a></li>
+            <li><a href="#common-unicode-characters-and-their-html-codes" className="text-primary hover:underline">Common Unicode Characters and Their HTML Codes</a></li>
+            <li><a href="#emoji-and-characters-above-uffff" className="text-primary hover:underline">Emoji and Characters Above U+FFFF</a></li>
+            <li><a href="#the-http-content-type-header" className="text-primary hover:underline">The HTTP Content-Type Header</a></li>
+            <li><a href="#best-practices-summary" className="text-primary hover:underline">Best Practices Summary</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#related-tools-amp-guides" className="text-primary hover:underline">Related Tools &amp; Guides</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-unicode-is-and-why-it-matters-for-html" className="text-2xl font-bold text-foreground mt-0 mb-4 scroll-mt-20">What Unicode Is (and Why It Matters for HTML)</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Unicode is a character encoding standard that assigns a unique{' '}
                 <strong className="text-foreground">code point</strong> to every character in every writing system. Code
@@ -200,7 +215,7 @@ export default function Page() {
 
             {/* ── The charset meta tag ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">The Charset Meta Tag — Why It Must Come First</h2>
+              <h2 id="the-charset-meta-tag-why-it-must-come-first" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">The Charset Meta Tag — Why It Must Come First</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Before you can safely use any Unicode character in HTML, you need to tell the browser how to interpret the
                 bytes it receives. That is exactly what the{' '}
@@ -246,7 +261,7 @@ export default function Page() {
 
             {/* ── Three Methods ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Three Ways to Include a Unicode Character in HTML</h2>
+              <h2 id="three-ways-to-include-a-unicode-character-in-html" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Three Ways to Include a Unicode Character in HTML</h2>
               <p className="text-base text-muted-foreground mb-4">
                 There are exactly three methods for getting a Unicode character into your HTML markup. Each has trade-offs
                 around readability, portability, and browser support.
@@ -335,7 +350,7 @@ export default function Page() {
 
             {/* ── Common characters table ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Common Unicode Characters and Their HTML Codes</h2>
+              <h2 id="common-unicode-characters-and-their-html-codes" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Common Unicode Characters and Their HTML Codes</h2>
               <p className="text-base text-muted-foreground mb-4">
                 These are the characters that come up most often in everyday HTML authoring. The named entity and decimal
                 numeric reference are both valid; use whichever is clearest in context. You can also use our{' '}
@@ -386,7 +401,7 @@ export default function Page() {
 
             {/* ── Emoji and supplementary characters ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Emoji and Characters Above U+FFFF</h2>
+              <h2 id="emoji-and-characters-above-uffff" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Emoji and Characters Above U+FFFF</h2>
               <p className="text-base text-muted-foreground mb-4">
                 The Unicode code space is divided into 17 planes. The first — the{' '}
                 <strong className="text-foreground">Basic Multilingual Plane (BMP)</strong> — covers U+0000 through U+FFFF
@@ -424,7 +439,7 @@ export default function Page() {
 
             {/* ── HTTP Content-Type header ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">The HTTP Content-Type Header</h2>
+              <h2 id="the-http-content-type-header" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">The HTTP Content-Type Header</h2>
               <p className="text-base text-muted-foreground mb-4">
                 The character encoding declaration has two locations: the{' '}
                 <code className="font-mono text-sm bg-secondary/60 px-1 rounded">meta charset</code> tag in the HTML and
@@ -454,7 +469,7 @@ export default function Page() {
 
             {/* ── Best practices ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Best Practices Summary</h2>
+              <h2 id="best-practices-summary" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Best Practices Summary</h2>
               <ul className="list-disc pl-6 space-y-3 text-muted-foreground mb-4">
                 <li>
                   <strong className="text-foreground">Always declare UTF-8.</strong> Put{' '}
@@ -507,7 +522,7 @@ export default function Page() {
 
             {/* ── FAQ ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
+              <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mb-6 scroll-mt-20">Frequently Asked Questions</h2>
 
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">What is the difference between UTF-8 and Unicode?</h3>
               <p className="text-base text-muted-foreground mb-4">
@@ -558,7 +573,7 @@ export default function Page() {
 
             {/* ── Related links grid ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Related Tools &amp; Guides</h2>
+              <h2 id="related-tools-amp-guides" className="text-2xl font-bold text-foreground mb-6 scroll-mt-20">Related Tools &amp; Guides</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 <Link
                   href="/tools/html-encoder-decoder"

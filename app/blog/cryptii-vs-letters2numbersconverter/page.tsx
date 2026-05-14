@@ -76,7 +76,20 @@ export default function CryptiiComparison() {
 
             {/* What is Cryptii */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">What Is Cryptii.com?</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-cryptiicom" className="text-primary hover:underline">What Is Cryptii.com?</a></li>
+            <li><a href="#what-is-letters2numbersconvertercom" className="text-primary hover:underline">What Is Letters2NumbersConverter.com?</a></li>
+            <li><a href="#feature-by-feature-comparison" className="text-primary hover:underline">Feature-By-Feature Comparison</a></li>
+            <li><a href="#why-letters2numbersconvertercom-is-the-better-choice" className="text-primary hover:underline">Why Letters2NumbersConverter.com Is the Better Choice</a></li>
+            <li><a href="#real-world-use-cases" className="text-primary hover:underline">Real-World Use Cases</a></li>
+            <li><a href="#pricing-accessibility" className="text-primary hover:underline">Pricing & Accessibility</a></li>
+            <li><a href="#conclusion-which-platform-should-you-choose" className="text-primary hover:underline">Conclusion: Which Platform Should You Choose?</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-cryptiicom" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">What Is Cryptii.com?</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Cryptii.com is a well-established cipher and encoding platform known for its clean interface and focus on classic cryptographic tools. The platform specializes in various cipher types including Caesar cipher, Vigenère cipher, Atbash cipher, and ROT13 encoding. Cryptii provides an interactive visual experience where users can explore different encoding methods and their practical applications in cryptography.
               </p>
@@ -87,7 +100,7 @@ export default function CryptiiComparison() {
 
             {/* What is Letters2Numbers */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">What Is Letters2NumbersConverter.com?</h2>
+              <h2 id="what-is-letters2numbersconvertercom" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">What Is Letters2NumbersConverter.com?</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Letters2NumbersConverter.com is a comprehensive platform offering over 100+ specialized tools designed for encoding, cipher conversion, and text transformation. The platform goes far beyond traditional cipher tools to include niche converters like the A1Z26 cipher translator, letter-to-number converters, Egyptian numeral converters, Mayan numeral systems, alphanumeric code translators, and many more unique tools.
               </p>
@@ -98,7 +111,7 @@ export default function CryptiiComparison() {
 
             {/* Feature Comparison */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Feature-By-Feature Comparison</h2>
+              <h2 id="feature-by-feature-comparison" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Feature-By-Feature Comparison</h2>
               
               <div className="space-y-6">
                 <div>
@@ -145,7 +158,7 @@ export default function CryptiiComparison() {
 
             {/* Why Letters2Numbers is Better */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Why Letters2NumbersConverter.com Is the Better Choice</h2>
+              <h2 id="why-letters2numbersconvertercom-is-the-better-choice" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Why Letters2NumbersConverter.com Is the Better Choice</h2>
               
               <div className="space-y-4 text-muted-foreground">
                 <p>
@@ -172,7 +185,7 @@ export default function CryptiiComparison() {
 
             {/* Use Cases */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Real-World Use Cases</h2>
+              <h2 id="real-world-use-cases" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Real-World Use Cases</h2>
               
               <div className="space-y-4 text-muted-foreground">
                 <div>
@@ -199,7 +212,7 @@ export default function CryptiiComparison() {
 
             {/* Pricing & Accessibility */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Pricing & Accessibility</h2>
+              <h2 id="pricing-accessibility" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Pricing & Accessibility</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Both platforms are completely free to use with no hidden charges or premium tiers. Letters2NumbersConverter.com and Cryptii both operate as free public services. However, Letters2NumbersConverter.com offers significantly more value through its extensive tool library, eliminating the need for multiple platform subscriptions or access to different specialized tools.
               </p>
@@ -207,7 +220,7 @@ export default function CryptiiComparison() {
 
             {/* Conclusion */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Conclusion: Which Platform Should You Choose?</h2>
+              <h2 id="conclusion-which-platform-should-you-choose" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Conclusion: Which Platform Should You Choose?</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Choose Cryptii.com if your focus is purely on classical cipher education and visual exploration of traditional cryptographic methods. However, if you need a comprehensive platform with diverse tools, niche converters, and the flexibility to handle multiple encoding tasks, Letters2NumbersConverter.com is the superior choice.
               </p>

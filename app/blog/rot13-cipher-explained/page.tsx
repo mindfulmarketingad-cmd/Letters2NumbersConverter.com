@@ -42,7 +42,24 @@ export default function Page() {
             <Link href="/tools/rot13-decoder" className="text-primary hover:underline">ROT13 decoder</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">What Is ROT13?</h2>
+                    <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-rot13" className="text-primary hover:underline">What Is ROT13?</a></li>
+            <li><a href="#the-rot13-alphabet-table" className="text-primary hover:underline">The ROT13 Alphabet Table</a></li>
+            <li><a href="#how-rot13-works-a-step-by-step-example" className="text-primary hover:underline">How ROT13 Works: A Step-by-Step Example</a></li>
+            <li><a href="#why-rot13-is-self-inverse-and-why-that-matters" className="text-primary hover:underline">Why ROT13 Is Self-Inverse (And Why That Matters)</a></li>
+            <li><a href="#where-did-rot13-come-from" className="text-primary hover:underline">Where Did ROT13 Come From?</a></li>
+            <li><a href="#common-uses-of-rot13-today" className="text-primary hover:underline">Common Uses of ROT13 Today</a></li>
+            <li><a href="#is-rot13-secure" className="text-primary hover:underline">Is ROT13 Secure?</a></li>
+            <li><a href="#rot13-vs-other-ciphers" className="text-primary hover:underline">ROT13 vs. Other Ciphers</a></li>
+            <li><a href="#how-to-decode-rot13-instantly" className="text-primary hover:underline">How to Decode ROT13 Instantly</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-rot13" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">What Is ROT13?</h2>
           <p className="text-base text-muted-foreground mb-4">
             ROT13 stands for <strong className="text-foreground">Rotate by 13</strong>. It is a simple letter substitution cipher that replaces each letter in a message with the letter that sits 13 positions later in the alphabet. When you reach the end of the alphabet, it wraps around — so the letter N (position 14) maps to A (position 1), and Z maps to M.
           </p>
@@ -53,7 +70,7 @@ export default function Page() {
             Only letters are transformed. Numbers, punctuation, spaces, and special characters pass through completely unchanged.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The ROT13 Alphabet Table</h2>
+          <h2 id="the-rot13-alphabet-table" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The ROT13 Alphabet Table</h2>
           <p className="text-base text-muted-foreground mb-4">
             Here is the complete mapping. Each letter in the top row becomes the letter directly below it:
           </p>
@@ -95,7 +112,7 @@ export default function Page() {
             </table>
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How ROT13 Works: A Step-by-Step Example</h2>
+          <h2 id="how-rot13-works-a-step-by-step-example" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How ROT13 Works: A Step-by-Step Example</h2>
           <p className="text-base text-muted-foreground mb-4">
             Let&apos;s encode the word <strong className="text-foreground">HELLO</strong>:
           </p>
@@ -113,7 +130,7 @@ export default function Page() {
             Now apply ROT13 to <strong className="text-foreground">URYYB</strong> and you get <strong className="text-green-600">HELLO</strong> back. That is the key property that makes ROT13 unique.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Why ROT13 Is Self-Inverse (And Why That Matters)</h2>
+          <h2 id="why-rot13-is-self-inverse-and-why-that-matters" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Why ROT13 Is Self-Inverse (And Why That Matters)</h2>
           <p className="text-base text-muted-foreground mb-4">
             The English alphabet has exactly 26 letters, and 26 divided by 2 is 13. That means shifting by 13 twice lands you exactly back at the start. No other single shift value has this property.
           </p>
@@ -121,7 +138,7 @@ export default function Page() {
             Practically, this means there is no separate &quot;decode&quot; function — you apply ROT13 once to encode, and apply ROT13 again to decode. This simplicity made it popular in early internet communities where encoding and decoding had to be fast and require no shared key.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Where Did ROT13 Come From?</h2>
+          <h2 id="where-did-rot13-come-from" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Where Did ROT13 Come From?</h2>
           <p className="text-base text-muted-foreground mb-4">
             ROT13 originated in the early 1980s on <strong className="text-foreground">Usenet</strong> — the precursor to modern internet forums. Users adopted it to hide punchlines in jokes, answers to riddles, and discussion of sensitive topics. Rather than inventing a new cipher, the community settled on ROT13 because it was trivially simple to implement in any programming language and required no key exchange.
           </p>
@@ -133,7 +150,7 @@ export default function Page() {
             <Link href="/blog/rot13-vs-caesar-cipher" className="text-primary hover:underline">ROT13 vs Caesar cipher comparison</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Common Uses of ROT13 Today</h2>
+          <h2 id="common-uses-of-rot13-today" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Common Uses of ROT13 Today</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">1. Reddit Spoiler Tags</h3>
           <p className="text-base text-muted-foreground mb-4">
@@ -156,7 +173,7 @@ export default function Page() {
             Tech communities on Hacker News, Stack Overflow, and various IRC channels have historically used ROT13 as a low-stakes way to obfuscate content that might be off-topic, offensive, or simply a punchline that works better as a surprise.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Is ROT13 Secure?</h2>
+          <h2 id="is-rot13-secure" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Is ROT13 Secure?</h2>
           <p className="text-base text-muted-foreground mb-4">
             No — ROT13 provides <strong className="text-foreground">zero cryptographic security</strong>. Anyone who recognises the pattern of scrambled text can decode it in seconds, either mentally (with a little practice) or with any online tool. It is not suitable for hiding sensitive information, protecting passwords, or any real security use case.
           </p>
@@ -164,7 +181,7 @@ export default function Page() {
             Think of ROT13 as a &quot;polite cover&quot; rather than a lock. It is the digital equivalent of turning a piece of paper face-down — it stops casual readers, but anyone motivated can easily flip it over.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">ROT13 vs. Other Ciphers</h2>
+          <h2 id="rot13-vs-other-ciphers" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">ROT13 vs. Other Ciphers</h2>
           <p className="text-base text-muted-foreground mb-4">
             ROT13 belongs to a family of simple substitution ciphers that includes the Caesar cipher, Atbash cipher, and the broader monoalphabetic substitution class. What distinguishes ROT13 from most is the self-inverse property — with Caesar shift 3, for example, you need a separate &quot;decode by shifting back 3&quot; operation.
           </p>
@@ -172,7 +189,7 @@ export default function Page() {
             Explore our full collection of cipher tools: <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar Cipher Decoder</Link>, <Link href="/tools/atbash-cipher" className="text-primary hover:underline">Atbash Cipher</Link>, <Link href="/tools/morse-code-translator" className="text-primary hover:underline">Morse Code Translator</Link>, and more in our <Link href="/tools" className="text-primary hover:underline">cipher tools library</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Decode ROT13 Instantly</h2>
+          <h2 id="how-to-decode-rot13-instantly" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Decode ROT13 Instantly</h2>
           <p className="text-base text-muted-foreground mb-4">
             The quickest way to decode ROT13 is to use our free{' '}
             <Link href="/tools/rot13-decoder" className="text-primary hover:underline">ROT13 Decoder &amp; Encoder</Link>. Paste any encoded text and the decoded version appears immediately — no button to press, no sign-up, no ads. The tool also shows the complete alphabet table and character/word statistics.
@@ -181,7 +198,7 @@ export default function Page() {
             If you prefer to decode manually: find each letter in the table above and swap it with its pair. With practice, common short words become recognisable at a glance — <span className="font-mono text-green-600">gur</span> is <span className="font-mono text-foreground">the</span>, <span className="font-mono text-green-600">naq</span> is <span className="font-mono text-foreground">and</span>, <span className="font-mono text-green-600">vf</span> is <span className="font-mono text-foreground">is</span>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Frequently Asked Questions</h2>
+          <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Frequently Asked Questions</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Does ROT13 work on lowercase letters?</h3>
           <p className="text-base text-muted-foreground mb-4">
@@ -204,7 +221,7 @@ export default function Page() {
             <Link href="/blog/rot13-vs-caesar-cipher" className="text-primary hover:underline">ROT13 vs Caesar cipher guide</Link> for a detailed comparison.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Conclusion</h2>
+          <h2 id="conclusion" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Conclusion</h2>
           <p className="text-base text-muted-foreground mb-4">
             ROT13 is one of the simplest and most culturally embedded ciphers in internet history. Its self-inverse nature, trivial implementation, and zero key-management requirement made it the go-to obfuscation method for Usenet and early Reddit. While it offers no real security, it remains a useful tool for politely hiding spoilers, puzzle answers, and punchlines.
           </p>

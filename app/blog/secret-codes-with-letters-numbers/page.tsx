@@ -52,7 +52,21 @@ export default function SecretCodesPage() {
                   Everyone loves a good secret code. Whether you want to pass notes to friends, keep a private journal, or just have fun with cryptography, learning to create secret codes with letters and numbers is a timeless skill. In this guide, we will walk through several methods from simple to sophisticated.
                 </p>
 
-                <h2 id="basic-a1z26" className="text-2xl font-bold text-foreground mt-12 mb-4">Method 1: The Basic A1Z26 Code</h2>
+                          <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#method-1-the-basic-a1z26-code" className="text-primary hover:underline">Method 1: The Basic A1Z26 Code</a></li>
+            <li><a href="#method-2-the-reverse-code" className="text-primary hover:underline">Method 2: The Reverse Code</a></li>
+            <li><a href="#method-3-the-offset-code" className="text-primary hover:underline">Method 3: The Offset Code</a></li>
+            <li><a href="#method-4-the-keyword-cipher" className="text-primary hover:underline">Method 4: The Keyword Cipher</a></li>
+            <li><a href="#method-5-double-encoding" className="text-primary hover:underline">Method 5: Double Encoding</a></li>
+            <li><a href="#tips-for-creating-harder-to-break-codes" className="text-primary hover:underline">Tips for Creating Harder-to-Break Codes</a></li>
+            <li><a href="#how-to-share-your-code-system-safely" className="text-primary hover:underline">How to Share Your Code System Safely</a></li>
+            <li><a href="#practice-your-encoding-skills" className="text-primary hover:underline">Practice Your Encoding Skills</a></li>
+            </ol>
+          </nav>
+
+<h2 id="basic-a1z26" className="text-2xl font-bold text-foreground mt-12 mb-4">Method 1: The Basic A1Z26 Code</h2>
                 <p className="text-muted-foreground mb-4">
                   The simplest secret code assigns each letter its position in the alphabet:
                 </p>

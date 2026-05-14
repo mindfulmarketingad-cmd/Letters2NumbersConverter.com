@@ -146,7 +146,20 @@ export default function HowToConvertImageToTextInExcelBlog() {
 
           {/* Practical Uses Section */}
           <div className="my-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6">Practical Uses Converting Image To Text</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#practical-uses-converting-image-to-text" className="text-primary hover:underline">Practical Uses Converting Image To Text</a></li>
+            <li><a href="#method-1-using-excelaposs-extract-text-feature" className="text-primary hover:underline">Method 1: Using Excel&apos;s Extract Text Feature</a></li>
+            <li><a href="#method-2-using-online-ocr-tools" className="text-primary hover:underline">Method 2: Using Online OCR Tools</a></li>
+            <li><a href="#method-3-desktop-ocr-software" className="text-primary hover:underline">Method 3: Desktop OCR Software</a></li>
+            <li><a href="#best-practices-for-converting-images-to-excel" className="text-primary hover:underline">Best Practices For Converting Images To Excel</a></li>
+            <li><a href="#troubleshooting-common-issues" className="text-primary hover:underline">Troubleshooting Common Issues</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="practical-uses-converting-image-to-text" className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Practical Uses Converting Image To Text</h2>
             
             <div className="space-y-4">
               <div>
@@ -188,7 +201,7 @@ export default function HowToConvertImageToTextInExcelBlog() {
 
           {/* Method 1: Excel Extract Text Feature */}
           <div className="my-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6">Method 1: Using Excel&apos;s Extract Text Feature</h2>
+            <h2 id="method-1-using-excelaposs-extract-text-feature" className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Method 1: Using Excel&apos;s Extract Text Feature</h2>
             
             <p className="text-foreground/90 mb-4">
               Modern versions of Excel (Microsoft 365) include a built-in Extract Text feature that uses AI-powered OCR technology.
@@ -212,7 +225,7 @@ export default function HowToConvertImageToTextInExcelBlog() {
 
           {/* Method 2: Using Online OCR Tools */}
           <div className="my-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6">Method 2: Using Online OCR Tools</h2>
+            <h2 id="method-2-using-online-ocr-tools" className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Method 2: Using Online OCR Tools</h2>
             
             <p className="text-foreground/90 mb-4">
               For older Excel versions or when you need more control, online OCR converters offer excellent alternatives.
@@ -236,7 +249,7 @@ export default function HowToConvertImageToTextInExcelBlog() {
 
           {/* Method 3: Using Desktop OCR Software */}
           <div className="my-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6">Method 3: Desktop OCR Software</h2>
+            <h2 id="method-3-desktop-ocr-software" className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Method 3: Desktop OCR Software</h2>
             
             <p className="text-foreground/90 mb-4">
               Professional OCR software offers advanced features for batch processing and integration with Excel workflows.
@@ -262,7 +275,7 @@ export default function HowToConvertImageToTextInExcelBlog() {
 
           {/* Best Practices */}
           <div className="my-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6">Best Practices For Converting Images To Excel</h2>
+            <h2 id="best-practices-for-converting-images-to-excel" className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Best Practices For Converting Images To Excel</h2>
             
             <div className="space-y-4">
               <div>
@@ -304,7 +317,7 @@ export default function HowToConvertImageToTextInExcelBlog() {
 
           {/* Troubleshooting */}
           <div className="my-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6">Troubleshooting Common Issues</h2>
+            <h2 id="troubleshooting-common-issues" className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6 scroll-mt-20">Troubleshooting Common Issues</h2>
             
             <div className="space-y-4">
               <div className="border-l-4 border-primary/50 pl-4">
@@ -339,7 +352,7 @@ export default function HowToConvertImageToTextInExcelBlog() {
 
           {/* Conclusion */}
           <div className="my-12 bg-blue-50 dark:bg-blue-950 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Conclusion</h2>
+            <h2 id="conclusion" className="text-2xl font-bold text-black dark:text-white mb-4 scroll-mt-20">Conclusion</h2>
             <p className="text-foreground/90">
               Converting images to text in Excel is now easier than ever with modern OCR technology. Whether you use Excel&apos;s built-in Extract Text feature, online tools like our <Link href="/tools/scan-words-from-image" className="text-primary hover:underline">Scan Words From Image</Link> tool, or desktop software, you can quickly digitize documents and streamline data entry workflows. Remember to verify accuracy, maintain consistent formatting, and choose the method that best fits your needs and workflow requirements.
             </p>

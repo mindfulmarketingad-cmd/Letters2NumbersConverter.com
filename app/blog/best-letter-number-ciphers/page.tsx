@@ -52,7 +52,20 @@ export default function BestLetterNumberCiphersPage() {
                   Letter number ciphers have been used for centuries to encode secret messages, create puzzles, and teach mathematical concepts. Whether you are a beginner exploring cryptography or an expert solving complex puzzles, understanding different cipher types is essential. In this comprehensive guide, we will explore the best letter number ciphers and help you choose the right one for your needs.
                 </p>
 
-                <h2 id="what-are-letter-ciphers" className="text-2xl font-bold text-foreground mt-12 mb-4">What Are Letter Number Ciphers?</h2>
+                          <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-are-letter-number-ciphers" className="text-primary hover:underline">What Are Letter Number Ciphers?</a></li>
+            <li><a href="#1-the-a1z26-cipher-best-for-beginners" className="text-primary hover:underline">1. The A1Z26 Cipher - Best for Beginners</a></li>
+            <li><a href="#2-the-a0z25-cipher-best-for-programmers" className="text-primary hover:underline">2. The A0Z25 Cipher - Best for Programmers</a></li>
+            <li><a href="#3-ascii-encoding-best-for-technical-applications" className="text-primary hover:underline">3. ASCII Encoding - Best for Technical Applications</a></li>
+            <li><a href="#4-hexadecimal-and-binary-best-for-advanced-users" className="text-primary hover:underline">4. Hexadecimal and Binary - Best for Advanced Users</a></li>
+            <li><a href="#how-to-choose-the-right-cipher" className="text-primary hover:underline">How to Choose the Right Cipher</a></li>
+            <li><a href="#try-our-free-converter" className="text-primary hover:underline">Try Our Free Converter</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-are-letter-ciphers" className="text-2xl font-bold text-foreground mt-12 mb-4">What Are Letter Number Ciphers?</h2>
                 <p className="text-muted-foreground mb-6">
                   A letter number cipher is any system that converts letters of the alphabet into numerical values. These ciphers range from simple substitution methods where A=1 and Z=26, to complex encoding systems used in computer science and cryptography. The beauty of letter number ciphers lies in their versatility and the different levels of complexity they offer.
                 </p>

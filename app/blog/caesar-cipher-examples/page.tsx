@@ -71,7 +71,23 @@ export default function Page() {
             <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar Cipher Decoder</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How the Caesar Cipher Works</h2>
+                    <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#how-the-caesar-cipher-works" className="text-primary hover:underline">How the Caesar Cipher Works</a></li>
+            <li><a href="#example-1-caesar-cipher-shift-3-the-classical-caesar" className="text-primary hover:underline">Example 1: Caesar Cipher Shift 3 (The Classical Caesar)</a></li>
+            <li><a href="#example-2-caesar-cipher-shift-7" className="text-primary hover:underline">Example 2: Caesar Cipher Shift 7</a></li>
+            <li><a href="#example-3-caesar-cipher-shift-13-rot13" className="text-primary hover:underline">Example 3: Caesar Cipher Shift 13 (ROT13)</a></li>
+            <li><a href="#example-4-caesar-cipher-shift-21-reverse-caesar" className="text-primary hover:underline">Example 4: Caesar Cipher Shift 21 (Reverse Caesar)</a></li>
+            <li><a href="#multi-word-encoding-examples" className="text-primary hover:underline">Multi-Word Encoding Examples</a></li>
+            <li><a href="#how-to-decode-without-knowing-the-shift" className="text-primary hover:underline">How to Decode Without Knowing the Shift</a></li>
+            <li><a href="#practise-with-these-puzzles" className="text-primary hover:underline">Practise With These Puzzles</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#encode-or-decode-any-caesar-cipher-now" className="text-primary hover:underline">Encode or Decode Any Caesar Cipher Now</a></li>
+            </ol>
+          </nav>
+
+<h2 id="how-the-caesar-cipher-works" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How the Caesar Cipher Works</h2>
           <p className="text-base text-muted-foreground mb-4">
             To encode a message, replace each letter with the letter a fixed number of positions later in the alphabet. When you reach Z, wrap back around to A. To decode, shift in the opposite direction by the same amount. The shift value is the cipher&apos;s key — both sender and recipient must know it.
           </p>
@@ -79,7 +95,7 @@ export default function Page() {
             The formula: <code className="font-mono text-foreground">encoded_position = (plain_position + shift) mod 26</code>, where positions run from 0 (A) to 25 (Z).
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Example 1: Caesar Cipher Shift 3 (The Classical Caesar)</h2>
+          <h2 id="example-1-caesar-cipher-shift-3-the-classical-caesar" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Example 1: Caesar Cipher Shift 3 (The Classical Caesar)</h2>
           <p className="text-base text-muted-foreground mb-2">Shift 3 is the original cipher used by Julius Caesar for his military dispatches.</p>
           <ShiftTable shift={3} />
 
@@ -101,7 +117,7 @@ export default function Page() {
             <span className="font-mono text-green-600 font-bold">{encode('THE EAGLE HAS LANDED', 3)}</span> → <span className="font-mono text-foreground font-bold">THE EAGLE HAS LANDED</span>
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Example 2: Caesar Cipher Shift 7</h2>
+          <h2 id="example-2-caesar-cipher-shift-7" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Example 2: Caesar Cipher Shift 7</h2>
           <p className="text-base text-muted-foreground mb-2">Shift 7 was historically used in puzzle design and is a common choice for escape room clues because it produces less recognisable patterns than shift 3.</p>
           <ShiftTable shift={7} />
 
@@ -123,7 +139,7 @@ export default function Page() {
             <span className="font-mono text-green-600 font-bold">{encode('MEET AT DAWN', 7)}</span> decoded with shift 7 → <span className="font-mono text-foreground font-bold">MEET AT DAWN</span>
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Example 3: Caesar Cipher Shift 13 (ROT13)</h2>
+          <h2 id="example-3-caesar-cipher-shift-13-rot13" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Example 3: Caesar Cipher Shift 13 (ROT13)</h2>
           <p className="text-base text-muted-foreground mb-2">
             Shift 13 is special: because 13 × 2 = 26, encoding and decoding are identical operations. This is ROT13 — used for Reddit spoilers and Usenet posts. See our full guide: <Link href="/blog/caesar-cipher-shift-13" className="text-primary hover:underline">Caesar Cipher Shift 13 explained</Link>.
           </p>
@@ -137,7 +153,7 @@ export default function Page() {
             Apply shift 13 again to decode: <span className="font-mono text-green-600 font-bold">{encode('SPOILER ALERT', 13)}</span> → <span className="font-mono text-foreground font-bold">SPOILER ALERT</span>. Same operation, same result.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Example 4: Caesar Cipher Shift 21 (Reverse Caesar)</h2>
+          <h2 id="example-4-caesar-cipher-shift-21-reverse-caesar" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Example 4: Caesar Cipher Shift 21 (Reverse Caesar)</h2>
           <p className="text-base text-muted-foreground mb-2">
             Shift 21 is equivalent to shifting backwards by 5 (since 26 − 21 = 5). It is sometimes called a &quot;reverse&quot; or &quot;negative 5&quot; Caesar, and appears in some puzzle books.
           </p>
@@ -151,7 +167,7 @@ export default function Page() {
             To decode, shift forward by 5: <span className="font-mono text-green-600 font-bold">{encode('FIND THE KEY', 21)}</span> → <span className="font-mono text-foreground font-bold">FIND THE KEY</span>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Multi-Word Encoding Examples</h2>
+          <h2 id="multi-word-encoding-examples" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Multi-Word Encoding Examples</h2>
           <p className="text-base text-muted-foreground mb-4">Spaces and punctuation pass through unchanged in all Caesar cipher variants.</p>
 
           <div className="overflow-x-auto my-4">
@@ -182,7 +198,7 @@ export default function Page() {
             </table>
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Decode Without Knowing the Shift</h2>
+          <h2 id="how-to-decode-without-knowing-the-shift" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Decode Without Knowing the Shift</h2>
           <p className="text-base text-muted-foreground mb-4">
             If you receive a Caesar-encoded message and don&apos;t know the shift, you have two options:
           </p>
@@ -196,7 +212,7 @@ export default function Page() {
             In English text, E is the most common letter (~12.7% frequency), followed by T, A, O, I, N. Find the most frequent letter in the ciphertext — it is most likely E. The difference between its position and E&apos;s position (5) gives you the shift. For a full walkthrough, read our guide to <Link href="/blog/how-to-crack-caesar-cipher" className="text-primary hover:underline">cracking the Caesar cipher</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Practise With These Puzzles</h2>
+          <h2 id="practise-with-these-puzzles" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Practise With These Puzzles</h2>
           <p className="text-base text-muted-foreground mb-2">Can you decode these? Paste them into our <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar Cipher Decoder</Link> and use brute-force mode to find the answers.</p>
           <div className="space-y-3 my-4">
             {[
@@ -211,7 +227,7 @@ export default function Page() {
             ))}
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Frequently Asked Questions</h2>
+          <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Frequently Asked Questions</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">What is the most common Caesar cipher shift?</h3>
           <p className="text-base text-muted-foreground mb-4">
@@ -228,7 +244,7 @@ export default function Page() {
             Yes — our tool preserves case. Uppercase letters encode to uppercase; lowercase to lowercase. The shift arithmetic is the same in both cases.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Encode or Decode Any Caesar Cipher Now</h2>
+          <h2 id="encode-or-decode-any-caesar-cipher-now" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Encode or Decode Any Caesar Cipher Now</h2>
           <p className="text-base text-muted-foreground mb-4">
             Our free <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar Cipher Decoder &amp; Encoder</Link> handles any shift from 1 to 25 — paste your text, drag the slider, and get the result instantly. The brute-force panel shows all 25 shifts at once, ranked by English likelihood, so you can crack any Caesar cipher even without knowing the key.
           </p>

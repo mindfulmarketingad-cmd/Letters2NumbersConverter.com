@@ -53,12 +53,24 @@ export default function LetterToNumbersCodePage() {
                 The <strong>letter to numbers code</strong> is one of the most fundamental and widely used encoding systems. Whether you&apos;re solving puzzles, learning about cryptography, or working with data encoding, understanding how to convert letters to numbers is an essential skill. This comprehensive guide covers everything you need to know about the letter to numbers code system.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">What is the Letter to Numbers Code?</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-the-letter-to-numbers-code" className="text-primary hover:underline">What is the Letter to Numbers Code?</a></li>
+            <li><a href="#the-complete-letter-to-numbers-code-chart" className="text-primary hover:underline">The Complete Letter to Numbers Code Chart</a></li>
+            <li><a href="#how-to-use-the-letter-to-numbers-code" className="text-primary hover:underline">How to Use the Letter to Numbers Code</a></li>
+            <li><a href="#common-applications-of-letter-to-numbers-code" className="text-primary hover:underline">Common Applications of Letter to Numbers Code</a></li>
+            <li><a href="#tips-for-working-with-letter-to-numbers-code" className="text-primary hover:underline">Tips for Working with Letter to Numbers Code</a></li>
+            <li><a href="#try-our-free-letter-to-numbers-converter" className="text-primary hover:underline">Try Our Free Letter to Numbers Converter</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-the-letter-to-numbers-code" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">What is the Letter to Numbers Code?</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 The letter to numbers code, commonly known as the A1Z26 cipher, is a simple substitution system where each letter of the alphabet is replaced by its numerical position. In this system, A equals 1, B equals 2, and so on until Z equals 26. This straightforward encoding method has been used for centuries in various applications, from secret messages to modern computing.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">The Complete Letter to Numbers Code Chart</h2>
+              <h2 id="the-complete-letter-to-numbers-code-chart" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">The Complete Letter to Numbers Code Chart</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Here is the complete reference for the letter to numbers code:
               </p>
@@ -74,7 +86,7 @@ export default function LetterToNumbersCodePage() {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">How to Use the Letter to Numbers Code</h2>
+              <h2 id="how-to-use-the-letter-to-numbers-code" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">How to Use the Letter to Numbers Code</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Converting letters to numbers using this code is simple. To encode a message, replace each letter with its corresponding number. For example, the word &quot;HELLO&quot; becomes &quot;8-5-12-12-15&quot; because H is the 8th letter, E is the 5th, L is the 12th, and O is the 15th letter of the alphabet.
               </p>
@@ -82,7 +94,7 @@ export default function LetterToNumbersCodePage() {
                 To decode, simply reverse the process by converting each number back to its corresponding letter. Use our free <Link href="/" className="text-primary hover:underline">letters to numbers converter tool</Link> for instant conversions.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Common Applications of Letter to Numbers Code</h2>
+              <h2 id="common-applications-of-letter-to-numbers-code" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Common Applications of Letter to Numbers Code</h2>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-6">
                 <li><strong>Puzzle solving:</strong> Geocaching, escape rooms, and treasure hunts frequently use letter to numbers codes</li>
                 <li><strong>Cryptography education:</strong> Learning the basics of cipher systems and encryption</li>
@@ -91,12 +103,12 @@ export default function LetterToNumbersCodePage() {
                 <li><strong>Data encoding:</strong> Converting text to numerical format for processing</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Tips for Working with Letter to Numbers Code</h2>
+              <h2 id="tips-for-working-with-letter-to-numbers-code" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Tips for Working with Letter to Numbers Code</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 When working with the letter to numbers code, remember that spaces and punctuation are typically ignored or represented separately. The code is case-insensitive, meaning both uppercase and lowercase letters convert to the same numbers. For quick mental conversions, remember that the letters in &quot;EJOTY&quot; fall on multiples of 5 (5, 10, 15, 20, 25).
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Try Our Free Letter to Numbers Converter</h2>
+              <h2 id="try-our-free-letter-to-numbers-converter" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Try Our Free Letter to Numbers Converter</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Ready to start converting? Our free <Link href="/" className="text-primary hover:underline">letters to numbers converter tool</Link> makes it easy to encode and decode messages instantly. Simply type or paste your text, select your preferred encoding type, and get your results immediately. The tool supports multiple encoding formats including A1Z26, ASCII, hexadecimal, and binary.
               </p>

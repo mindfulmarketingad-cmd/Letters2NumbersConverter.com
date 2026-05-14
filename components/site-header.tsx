@@ -41,8 +41,9 @@ export function SiteHeader() {
           <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
             Blog
           </Link>
-          <Link href="/hackathon" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="/hackathon" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5">
             Hackathon
+            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-green-500 text-white leading-none">New</span>
           </Link>
           <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
             About Us
@@ -111,10 +112,11 @@ export function SiteHeader() {
             </Link>
             <Link
               href="/hackathon"
-              className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
+              className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium flex items-center gap-1.5"
               onClick={() => setIsMenuOpen(false)}
             >
               Hackathon
+              <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-green-500 text-white leading-none">New</span>
             </Link>
             <Link
               href="/about"

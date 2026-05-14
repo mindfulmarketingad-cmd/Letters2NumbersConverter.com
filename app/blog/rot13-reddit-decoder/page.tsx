@@ -42,7 +42,23 @@ export default function Page() {
             <Link href="/tools/rot13-decoder" className="text-primary hover:underline">ROT13 decoder</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">What Is ROT13?</h2>
+                    <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-rot13" className="text-primary hover:underline">What Is ROT13?</a></li>
+            <li><a href="#why-did-reddit-use-rot13-for-spoilers" className="text-primary hover:underline">Why Did Reddit Use ROT13 for Spoilers?</a></li>
+            <li><a href="#how-to-recognise-rot13-text-on-reddit" className="text-primary hover:underline">How to Recognise ROT13 Text on Reddit</a></li>
+            <li><a href="#how-to-decode-rot13-reddit-text-3-methods" className="text-primary hover:underline">How to Decode ROT13 Reddit Text — 3 Methods</a></li>
+            <li><a href="#where-do-you-still-see-rot13-on-reddit-today" className="text-primary hover:underline">Where Do You Still See ROT13 on Reddit Today?</a></li>
+            <li><a href="#how-to-write-rot13-spoilers-on-reddit" className="text-primary hover:underline">How to Write ROT13 Spoilers on Reddit</a></li>
+            <li><a href="#rot13-across-other-platforms" className="text-primary hover:underline">ROT13 Across Other Platforms</a></li>
+            <li><a href="#is-rot13-the-same-as-the-reddit-spoiler-tag" className="text-primary hover:underline">Is ROT13 the Same as the Reddit Spoiler Tag?</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#decode-any-rot13-text-right-now" className="text-primary hover:underline">Decode Any ROT13 Text Right Now</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-rot13" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">What Is ROT13?</h2>
           <p className="text-base text-muted-foreground mb-4">
             ROT13 (short for &quot;Rotate by 13&quot;) is a letter substitution cipher that replaces each letter with the one 13 positions further along the alphabet. A becomes N, B becomes O, … M becomes Z, then N becomes A, and so on. Because the alphabet has 26 letters, applying ROT13 twice returns to the original — making the same operation both encode and decode.
           </p>
@@ -50,7 +66,7 @@ export default function Page() {
             Only letters are changed. Numbers, spaces, punctuation, and special characters pass through unchanged. For a full explanation of how the cipher works, read our guide: <Link href="/blog/rot13-cipher-explained" className="text-primary hover:underline">ROT13 cipher explained</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Why Did Reddit Use ROT13 for Spoilers?</h2>
+          <h2 id="why-did-reddit-use-rot13-for-spoilers" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Why Did Reddit Use ROT13 for Spoilers?</h2>
           <p className="text-base text-muted-foreground mb-4">
             Reddit inherited the ROT13 spoiler convention from earlier internet communities — particularly Usenet newsgroups from the 1980s, where it was standard practice to hide punchlines and sensitive content. When Reddit launched in 2005, it had no native spoiler formatting. Community members who wanted to post spoilers without ruining the experience for others adopted the Usenet convention.
           </p>
@@ -64,7 +80,7 @@ export default function Page() {
             <li><strong className="text-foreground">Self-reversing.</strong> Readers apply ROT13 once to reveal the spoiler, with no separate decode tool or method required.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Recognise ROT13 Text on Reddit</h2>
+          <h2 id="how-to-recognise-rot13-text-on-reddit" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Recognise ROT13 Text on Reddit</h2>
           <p className="text-base text-muted-foreground mb-4">
             ROT13 text is distinctive once you know what to look for. Common signs:
           </p>
@@ -107,7 +123,7 @@ export default function Page() {
             </table>
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Decode ROT13 Reddit Text — 3 Methods</h2>
+          <h2 id="how-to-decode-rot13-reddit-text-3-methods" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Decode ROT13 Reddit Text — 3 Methods</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Method 1: Use Our Free Online Decoder (Fastest)</h3>
           <p className="text-base text-muted-foreground mb-4">
@@ -131,7 +147,7 @@ export default function Page() {
             With practice you can decode short ROT13 snippets mentally using the cheat sheet above. Fluent ROT13 readers can often skim a sentence and understand it with only a few deliberate lookups. This is occasionally called &quot;ROT13 literacy&quot; in older internet communities.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Where Do You Still See ROT13 on Reddit Today?</h2>
+          <h2 id="where-do-you-still-see-rot13-on-reddit-today" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Where Do You Still See ROT13 on Reddit Today?</h2>
           <p className="text-base text-muted-foreground mb-4">
             Native Reddit spoiler tags (<code className="font-mono text-foreground">&gt;!spoiler text!&lt;</code>) were introduced in 2018 for New Reddit and have largely replaced ROT13 in most communities. However, ROT13 is still actively used in several places:
           </p>
@@ -143,7 +159,7 @@ export default function Page() {
             <li><strong className="text-foreground">Joke subreddits.</strong> Communities like r/shittyaskscience and similar humour subreddits occasionally use ROT13 for comedic effect.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Write ROT13 Spoilers on Reddit</h2>
+          <h2 id="how-to-write-rot13-spoilers-on-reddit" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Write ROT13 Spoilers on Reddit</h2>
           <p className="text-base text-muted-foreground mb-4">
             If you want to post a ROT13 spoiler the old-fashioned way:
           </p>
@@ -157,7 +173,7 @@ export default function Page() {
             For modern Reddit, the native spoiler tag is usually a better choice: type <code className="font-mono text-foreground">&gt;!your spoiler here!&lt;</code> in the comment and it renders as a click-to-reveal blurred block. ROT13 is mainly useful for subreddits that specifically request it in their rules, or for archival compatibility.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">ROT13 Across Other Platforms</h2>
+          <h2 id="rot13-across-other-platforms" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">ROT13 Across Other Platforms</h2>
           <p className="text-base text-muted-foreground mb-4">
             ROT13 is not exclusive to Reddit. You will find it in similar roles across:
           </p>
@@ -168,7 +184,7 @@ export default function Page() {
             <li><strong className="text-foreground">Email lists and Usenet archives.</strong> The original home of ROT13, where millions of encoded posts still sit in internet archives</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Is ROT13 the Same as the Reddit Spoiler Tag?</h2>
+          <h2 id="is-rot13-the-same-as-the-reddit-spoiler-tag" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Is ROT13 the Same as the Reddit Spoiler Tag?</h2>
           <p className="text-base text-muted-foreground mb-4">
             No — they are entirely different mechanisms. The native Reddit spoiler tag (<code className="font-mono text-foreground">&gt;!text!&lt;</code>) renders the text as a blurred block that you click to reveal. It is a presentation feature, not a cipher — the full text is in the page source and visible to screen readers and search engines.
           </p>
@@ -176,7 +192,7 @@ export default function Page() {
             ROT13, by contrast, actually transforms the text into a different set of characters. A search engine indexing the page would see the scrambled text, not the spoiler content. This is one reason some communities still prefer ROT13 — it genuinely hides the content from casual page indexing and search.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Frequently Asked Questions</h2>
+          <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Frequently Asked Questions</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Why does my Reddit comment look scrambled?</h3>
           <p className="text-base text-muted-foreground mb-4">
@@ -198,7 +214,7 @@ export default function Page() {
             No. ROT13 is a letter substitution cipher that shifts letters by 13. Base64 is an encoding scheme that converts binary data into ASCII text using 64 printable characters. Base64-encoded text looks very different from ROT13 — it typically ends in <code className="font-mono text-foreground">=</code> or <code className="font-mono text-foreground">==</code> padding and contains numbers, plus signs, and slashes alongside letters.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Decode Any ROT13 Text Right Now</h2>
+          <h2 id="decode-any-rot13-text-right-now" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Decode Any ROT13 Text Right Now</h2>
           <p className="text-base text-muted-foreground mb-4">
             Our free <Link href="/tools/rot13-decoder" className="text-primary hover:underline">ROT13 Decoder &amp; Encoder</Link> decodes any ROT13 text instantly — paste it in and the result appears immediately, with no sign-up or ads. It also works as an encoder: type your spoiler, copy the ROT13 output, and post it on Reddit.
           </p>

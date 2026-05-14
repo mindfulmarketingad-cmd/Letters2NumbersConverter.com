@@ -50,7 +50,19 @@ export default function UnderstandingAsciiCharacterEncoding() {
                 Every time you type a letter on your keyboard, your computer converts it into a number. This process, known as character encoding, is fundamental to how digital devices store and process text. ASCII (American Standard Code for Information Interchange) is the most influential character encoding system ever created, and understanding it provides insight into how computers handle text at the most basic level. Our <Link href="/" className="text-primary hover:underline">letters to numbers converter tool</Link> supports ASCII encoding for instant conversions.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">What is ASCII?</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-ascii" className="text-primary hover:underline">What is ASCII?</a></li>
+            <li><a href="#how-ascii-encodes-letters" className="text-primary hover:underline">How ASCII Encodes Letters</a></li>
+            <li><a href="#the-history-of-ascii" className="text-primary hover:underline">The History of ASCII</a></li>
+            <li><a href="#beyond-ascii-extended-encodings" className="text-primary hover:underline">Beyond ASCII: Extended Encodings</a></li>
+            <li><a href="#practical-applications-of-ascii" className="text-primary hover:underline">Practical Applications of ASCII</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-ascii" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">What is ASCII?</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 ASCII is a character encoding standard developed in the 1960s that assigns numerical values to 128 characters, including uppercase and lowercase letters, digits, punctuation marks, and control characters. Each character is represented by a 7-bit binary number, allowing values from 0 to 127.
               </p>
@@ -58,7 +70,7 @@ export default function UnderstandingAsciiCharacterEncoding() {
                 The standard ASCII table divides characters into several groups: control characters (0-31), printable characters including space (32), digits 0-9 (48-57), uppercase letters A-Z (65-90), and lowercase letters a-z (97-122). This logical organization makes it easy to perform operations like case conversion through simple arithmetic.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">How ASCII Encodes Letters</h2>
+              <h2 id="how-ascii-encodes-letters" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">How ASCII Encodes Letters</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 In ASCII, uppercase letters start at code 65 (A) and continue sequentially to 90 (Z). Lowercase letters begin at 97 (a) and end at 122 (z). The 32-point difference between uppercase and lowercase letters is intentional, allowing programmers to convert case by simply adding or subtracting 32 from the ASCII value.
               </p>
@@ -66,7 +78,7 @@ export default function UnderstandingAsciiCharacterEncoding() {
                 For example, the letter &quot;H&quot; has an ASCII value of 72. In binary, this is 01001000, and in hexadecimal, it is 48. Our letters to numbers converter tool can instantly show you these values for any text you enter.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">The History of ASCII</h2>
+              <h2 id="the-history-of-ascii" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">The History of ASCII</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 ASCII was developed by a committee of the American Standards Association (now ANSI) and first published in 1963. It was designed to provide a common standard for data communication between different computer systems and devices. Before ASCII, different manufacturers used incompatible encoding systems, making data exchange difficult.
               </p>
@@ -74,7 +86,7 @@ export default function UnderstandingAsciiCharacterEncoding() {
                 The standard underwent revisions in 1967 and 1986, with the final version becoming an international standard (ISO/IEC 646). Despite being over 60 years old, ASCII remains the foundation of modern character encoding and is fully compatible with UTF-8, the dominant encoding on the internet.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Beyond ASCII: Extended Encodings</h2>
+              <h2 id="beyond-ascii-extended-encodings" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Beyond ASCII: Extended Encodings</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 While ASCII covers 128 characters, extended ASCII uses 8 bits to represent 256 characters, adding support for accented letters and additional symbols. However, different extended ASCII standards (like ISO-8859-1 and Windows-1252) encoded these additional characters differently, leading to compatibility issues.
               </p>
@@ -82,12 +94,12 @@ export default function UnderstandingAsciiCharacterEncoding() {
                 Unicode was developed to solve these problems by providing a universal character set that can represent virtually every character from every writing system. UTF-8, the most common Unicode encoding, maintains backward compatibility with ASCII while supporting over 1 million characters.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Practical Applications of ASCII</h2>
+              <h2 id="practical-applications-of-ascii" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Practical Applications of ASCII</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 Understanding ASCII is valuable in many contexts. Programmers use ASCII values for string manipulation, sorting algorithms, and input validation. Security professionals analyze ASCII in network protocols and file formats. Puzzle enthusiasts and CTF competitors frequently encounter ASCII-encoded messages that need decoding.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Conclusion</h2>
+              <h2 id="conclusion" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Conclusion</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 ASCII character encoding is a cornerstone of modern computing that continues to influence how we process and transmit text data. From simple letter-to-number conversions to complex encoding systems, understanding ASCII provides a foundation for working with text in any digital context.
               </p>

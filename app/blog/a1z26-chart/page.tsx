@@ -117,7 +117,20 @@ export default function A1Z26ChartBlog() {
         <div className="prose prose-lg dark:prose-invert max-w-none mb-12">
           {/* What is A1Z26 Chart */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">What is A1Z26 Chart?</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-a1z26-chart" className="text-primary hover:underline">What is A1Z26 Chart?</a></li>
+            <li><a href="#a1z26-vs-a0z25" className="text-primary hover:underline">A1Z26 VS A0Z25</a></li>
+            <li><a href="#who-uses-a1z26-charts" className="text-primary hover:underline">Who Uses A1Z26 Charts</a></li>
+            <li><a href="#why-choose-our-tools-for-a1z26-encoding" className="text-primary hover:underline">Why Choose Our Tools for A1Z26 Encoding</a></li>
+            <li><a href="#common-a1z26-use-cases" className="text-primary hover:underline">Common A1Z26 Use Cases</a></li>
+            <li><a href="#start-encoding-with-a1z26-today" className="text-primary hover:underline">Start Encoding with A1Z26 Today</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-a1z26-chart" className="text-3xl font-bold mb-4 text-black dark:text-white scroll-mt-20">What is A1Z26 Chart?</h2>
             <p className="text-lg text-muted-foreground mb-4">
               A1Z26 Chart is a simple substitution cipher that converts each letter of the alphabet to its corresponding position number. The system is straightforward: A=1, B=2, C=3, and so on, all the way to Z=26. This encoding method has been used for centuries in cryptography, puzzle creation, and data representation.
             </p>
@@ -131,7 +144,7 @@ export default function A1Z26ChartBlog() {
 
           {/* A1Z26 vs A0Z25 */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">A1Z26 VS A0Z25</h2>
+            <h2 id="a1z26-vs-a0z25" className="text-3xl font-bold mb-4 text-black dark:text-white scroll-mt-20">A1Z26 VS A0Z25</h2>
             <p className="text-lg text-muted-foreground mb-6">
               While both A1Z26 and A0Z25 are alphabetic encoding systems, they differ in their starting position. Understanding the difference is crucial when working with various encoding systems and tools.
             </p>
@@ -165,7 +178,7 @@ export default function A1Z26ChartBlog() {
 
           {/* Who Uses A1Z26 */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">Who Uses A1Z26 Charts</h2>
+            <h2 id="who-uses-a1z26-charts" className="text-3xl font-bold mb-4 text-black dark:text-white scroll-mt-20">Who Uses A1Z26 Charts</h2>
             <p className="text-lg text-muted-foreground mb-6">
               A1Z26 Charts are used by a diverse range of professionals and enthusiasts across multiple fields and industries. Here's who benefits most from this encoding system:
             </p>
@@ -217,7 +230,7 @@ export default function A1Z26ChartBlog() {
 
           {/* Why Choose Our Tools */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">Why Choose Our Tools for A1Z26 Encoding</h2>
+            <h2 id="why-choose-our-tools-for-a1z26-encoding" className="text-3xl font-bold mb-4 text-black dark:text-white scroll-mt-20">Why Choose Our Tools for A1Z26 Encoding</h2>
             <p className="text-lg text-muted-foreground mb-6">
               Letters2NumbersConverter.com provides the most comprehensive suite of encoding and decoding tools for A1Z26 and beyond. Here's what makes us the best choice:
             </p>
@@ -267,7 +280,7 @@ export default function A1Z26ChartBlog() {
 
           {/* Common Use Cases */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">Common A1Z26 Use Cases</h2>
+            <h2 id="common-a1z26-use-cases" className="text-3xl font-bold mb-4 text-black dark:text-white scroll-mt-20">Common A1Z26 Use Cases</h2>
             <p className="text-lg text-muted-foreground mb-6">
               A1Z26 encoding is incredibly versatile. Here are some of the most popular applications:
             </p>
@@ -302,7 +315,7 @@ export default function A1Z26ChartBlog() {
 
           {/* Call to Action */}
           <section className="bg-secondary/50 border border-border rounded-lg p-8 text-center">
-            <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">Start Encoding with A1Z26 Today</h2>
+            <h2 id="start-encoding-with-a1z26-today" className="text-3xl font-bold mb-4 text-black dark:text-white scroll-mt-20">Start Encoding with A1Z26 Today</h2>
             <p className="text-lg text-muted-foreground mb-6">
               Ready to convert letters to numbers using A1Z26? Try our free, instant A1Z26 Translator today. No signup required, no limits, completely private.
             </p>
@@ -318,7 +331,7 @@ export default function A1Z26ChartBlog() {
 
         {/* FAQ Section */}
         <section className="mt-16 border-t border-border pt-12">
-          <h2 className="text-3xl font-bold mb-8 text-black dark:text-white">Frequently Asked Questions</h2>
+          <h2 id="frequently-asked-questions" className="text-3xl font-bold mb-8 text-black dark:text-white scroll-mt-20">Frequently Asked Questions</h2>
           <div className="space-y-6">
             <details className="group cursor-pointer">
               <summary className="font-bold text-lg text-black dark:text-white mb-2 list-none flex items-center gap-2">

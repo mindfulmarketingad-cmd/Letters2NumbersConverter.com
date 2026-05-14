@@ -52,7 +52,20 @@ export default function NumberWordGamesPage() {
                   Letter-to-number games combine literacy and numeracy skills in fun and engaging ways. Whether you are looking for classroom activities, family game night ideas, or party entertainment, these number word games offer something for everyone. The simple concept of A=1, B=2, Z=26 opens up a world of creative possibilities.
                 </p>
 
-                <h2 id="word-value-challenge" className="text-2xl font-bold text-foreground mt-12 mb-4">1. Word Value Challenge</h2>
+                          <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#1-word-value-challenge" className="text-primary hover:underline">1. Word Value Challenge</a></li>
+            <li><a href="#2-secret-message-relay" className="text-primary hover:underline">2. Secret Message Relay</a></li>
+            <li><a href="#3-target-number-game" className="text-primary hover:underline">3. Target Number Game</a></li>
+            <li><a href="#4-alphabet-math-puzzles" className="text-primary hover:underline">4. Alphabet Math Puzzles</a></li>
+            <li><a href="#5-name-value-game" className="text-primary hover:underline">5. Name Value Game</a></li>
+            <li><a href="#6-hidden-word-puzzles" className="text-primary hover:underline">6. Hidden Word Puzzles</a></li>
+            <li><a href="#classroom-activity-ideas" className="text-primary hover:underline">Classroom Activity Ideas</a></li>
+            </ol>
+          </nav>
+
+<h2 id="word-value-challenge" className="text-2xl font-bold text-foreground mt-12 mb-4">1. Word Value Challenge</h2>
                 <p className="text-muted-foreground mb-4">
                   In this game, each letter has its numerical value (A=1, B=2, etc.), and players compete to find words with the highest total value.
                 </p>

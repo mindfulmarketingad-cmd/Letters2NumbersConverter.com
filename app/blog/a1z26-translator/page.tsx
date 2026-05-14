@@ -65,7 +65,20 @@ export default function A1Z26TranslatorPage() {
               </Link>
             </div>
 
-            <h2 id="what-is" className="text-2xl font-bold text-foreground mt-10 mb-4">What is the A1Z26 Cipher?</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-the-a1z26-cipher" className="text-primary hover:underline">What is the A1Z26 Cipher?</a></li>
+            <li><a href="#complete-a1z26-translation-chart" className="text-primary hover:underline">Complete A1Z26 Translation Chart</a></li>
+            <li><a href="#how-to-use-an-a1z26-translator" className="text-primary hover:underline">How to Use an A1Z26 Translator</a></li>
+            <li><a href="#a1z26-translation-examples" className="text-primary hover:underline">A1Z26 Translation Examples</a></li>
+            <li><a href="#common-uses-for-a1z26-translation" className="text-primary hover:underline">Common Uses for A1Z26 Translation</a></li>
+            <li><a href="#quick-mental-translation-tips" className="text-primary hover:underline">Quick Mental Translation Tips</a></li>
+            <li><a href="#reverse-translation-numbers-to-letters" className="text-primary hover:underline">Reverse Translation: Numbers to Letters</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is" className="text-2xl font-bold text-foreground mt-10 mb-4">What is the A1Z26 Cipher?</h2>
             <p className="text-foreground leading-relaxed mb-4">
               The A1Z26 cipher is a simple substitution cipher where each letter of the English alphabet is replaced by its corresponding position number. The name &quot;A1Z26&quot; comes from the first and last mappings: A equals 1, and Z equals 26.
             </p>

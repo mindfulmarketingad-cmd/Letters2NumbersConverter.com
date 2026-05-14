@@ -100,7 +100,21 @@ export default function NATOAlphanumericAlphabetPage() {
               </Link>
             </div>
 
-            <h2 id="what-is" className="text-3xl font-bold text-foreground mt-12 mb-6">What Is the NATO Alphanumeric Alphabet?</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-the-nato-alphanumeric-alphabet" className="text-primary hover:underline">What Is the NATO Alphanumeric Alphabet?</a></li>
+            <li><a href="#complete-nato-alphanumeric-alphabet-chart" className="text-primary hover:underline">Complete NATO Alphanumeric Alphabet Chart</a></li>
+            <li><a href="#how-to-use-the-nato-alphanumeric-alphabet" className="text-primary hover:underline">How to Use the NATO Alphanumeric Alphabet</a></li>
+            <li><a href="#real-world-applications" className="text-primary hover:underline">Real-World Applications</a></li>
+            <li><a href="#nato-alphabet-examples" className="text-primary hover:underline">NATO Alphabet Examples</a></li>
+            <li><a href="#tips-for-using-nato-phonetic-alphabet-effectively" className="text-primary hover:underline">Tips for Using NATO Phonetic Alphabet Effectively</a></li>
+            <li><a href="#related-conversion-tools" className="text-primary hover:underline">Related Conversion Tools</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is" className="text-3xl font-bold text-foreground mt-12 mb-6">What Is the NATO Alphanumeric Alphabet?</h2>
             <p className="text-foreground leading-relaxed mb-6">
               The NATO alphanumeric alphabet is a phonetic code adopted by the North Atlantic Treaty Organization (NATO) to enable clear communication over telephone, radio, and other voice channels where sound quality may be compromised. It eliminates confusion between similar-sounding letters like &quot;B&quot; and &quot;D&quot;, or &quot;M&quot; and &quot;N&quot; by replacing them with distinctive words that are easy to pronounce and understand in multiple languages.
             </p>

@@ -50,7 +50,19 @@ export default function PuzzleSolvingLetterNumberConversion() {
                 Letter-to-number conversion is one of the most common techniques used in puzzles, from geocaching mystery caches to escape rooms and Capture The Flag (CTF) competitions. Whether you are a puzzle enthusiast or just starting out, mastering these conversion methods will significantly improve your solving abilities. Our <Link href="/" className="text-primary hover:underline">letters to numbers converter tool</Link> is the perfect companion for any puzzle solver.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Geocaching Mystery Caches</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#geocaching-mystery-caches" className="text-primary hover:underline">Geocaching Mystery Caches</a></li>
+            <li><a href="#escape-room-puzzles" className="text-primary hover:underline">Escape Room Puzzles</a></li>
+            <li><a href="#ctf-challenges" className="text-primary hover:underline">CTF Challenges</a></li>
+            <li><a href="#common-puzzle-patterns-to-recognize" className="text-primary hover:underline">Common Puzzle Patterns to Recognize</a></li>
+            <li><a href="#tips-for-faster-solving" className="text-primary hover:underline">Tips for Faster Solving</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="geocaching-mystery-caches" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Geocaching Mystery Caches</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 Geocaching mystery caches (also called puzzle caches) frequently use letter-number encoding to hide coordinates. The cache owner provides a puzzle that, when solved, reveals the true location. The most common encoding is A1Z26, where each letter corresponds to its position in the alphabet.
               </p>
@@ -61,7 +73,7 @@ export default function PuzzleSolvingLetterNumberConversion() {
                 Our letters to numbers converter tool is an essential tool for geocachers, allowing quick conversion of clue text to numerical values that can then be used to calculate final coordinates.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Escape Room Puzzles</h2>
+              <h2 id="escape-room-puzzles" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Escape Room Puzzles</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 Escape rooms frequently incorporate letter-number ciphers as puzzle elements. A common setup involves finding a word or phrase that must be converted to numbers to unlock a combination lock. The A1Z26 system is popular because it produces numbers in the 1-26 range, perfect for combination locks.
               </p>
@@ -69,7 +81,7 @@ export default function PuzzleSolvingLetterNumberConversion() {
                 Some escape rooms use more complex encodings like ASCII values or require multiple conversion steps. For instance, you might need to find a four-letter word, convert each letter to its alphabetical position, then use those digits for a padlock combination.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">CTF Challenges</h2>
+              <h2 id="ctf-challenges" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">CTF Challenges</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 Capture The Flag competitions often include cryptography challenges involving character encoding. Competitors might encounter flags encoded in ASCII decimal, hexadecimal, or binary. Recognizing these formats quickly is crucial for competitive solving.
               </p>
@@ -77,17 +89,17 @@ export default function PuzzleSolvingLetterNumberConversion() {
                 A common CTF pattern presents numbers in the 65-90 or 97-122 range, indicating ASCII-encoded uppercase or lowercase letters respectively. For example, &quot;67 84 70&quot; in decimal ASCII translates to &quot;CTF&quot;. Hexadecimal encoding (43 54 46) and binary encoding are also frequently used.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Common Puzzle Patterns to Recognize</h2>
+              <h2 id="common-puzzle-patterns-to-recognize" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Common Puzzle Patterns to Recognize</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 Experienced puzzle solvers learn to recognize encoding patterns quickly. Numbers in the 1-26 range likely indicate A1Z26 encoding. Numbers between 65-90 or 97-122 suggest ASCII. Long strings of 0s and 1s in groups of 7 or 8 are probably binary. Two-digit hexadecimal pairs starting with 4, 5, 6, or 7 often encode letters.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Tips for Faster Solving</h2>
+              <h2 id="tips-for-faster-solving" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Tips for Faster Solving</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 Memorize key reference points: A=1, M=13 (middle), Z=26 for standard encoding. For ASCII, remember A=65, a=97, 0=48. These anchors help you quickly validate your decoding approach without checking every character.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Conclusion</h2>
+              <h2 id="conclusion" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Conclusion</h2>
               <p className="text-foreground leading-relaxed mb-6">
                 Letter-number conversion is a fundamental puzzle-solving skill that appears across many recreational and competitive contexts. Whether you are hunting geocaches, escaping rooms, or competing in CTFs, these techniques will serve you well.
               </p>

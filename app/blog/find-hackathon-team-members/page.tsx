@@ -76,7 +76,23 @@ export default function FindHackathonTeamMembers() {
 
             {/* Why Team Composition Matters */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Why Team Composition Matters</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#why-team-composition-matters" className="text-primary hover:underline">Why Team Composition Matters</a></li>
+            <li><a href="#strategy-1-leverage-hackathon-community-platforms" className="text-primary hover:underline">Strategy 1: Leverage Hackathon Community Platforms</a></li>
+            <li><a href="#strategy-2-use-social-media-professional-networks" className="text-primary hover:underline">Strategy 2: Use Social Media & Professional Networks</a></li>
+            <li><a href="#strategy-3-network-at-meetups-tech-events" className="text-primary hover:underline">Strategy 3: Network at Meetups & Tech Events</a></li>
+            <li><a href="#strategy-4-post-on-tech-forums-communities" className="text-primary hover:underline">Strategy 4: Post on Tech Forums & Communities</a></li>
+            <li><a href="#strategy-5-start-your-own-team-building-initiative" className="text-primary hover:underline">Strategy 5: Start Your Own Team Building Initiative</a></li>
+            <li><a href="#building-your-ideal-hackathon-team" className="text-primary hover:underline">Building Your Ideal Hackathon Team</a></li>
+            <li><a href="#tips-for-successful-team-formation" className="text-primary hover:underline">Tips For Successful Team Formation</a></li>
+            <li><a href="#hackathon-resources" className="text-primary hover:underline">Hackathon Resources</a></li>
+            <li><a href="#conclusion-build-your-dream-hackathon-team" className="text-primary hover:underline">Conclusion: Build Your Dream Hackathon Team</a></li>
+            </ol>
+          </nav>
+
+<h2 id="why-team-composition-matters" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Why Team Composition Matters</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Hackathons are collaborative events where diverse skill sets create stronger solutions. The ideal hackathon team combines technical expertise, creative thinking, and complementary strengths. When you successfully find hackathon team members with varied backgrounds—such as frontend developers, backend engineers, designers, and project leads—your team gains diverse problem-solving approaches and creative solutions. A well-rounded team can tackle complex challenges more efficiently and produce more polished final projects.
               </p>
@@ -84,7 +100,7 @@ export default function FindHackathonTeamMembers() {
 
             {/* Strategy 1: Leverage Hackathon Community Platforms */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Strategy 1: Leverage Hackathon Community Platforms</h2>
+              <h2 id="strategy-1-leverage-hackathon-community-platforms" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Strategy 1: Leverage Hackathon Community Platforms</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Many hackathons have dedicated Discord servers, Slack channels, or online platforms where participants can find hackathon team members before the event starts. These platforms are goldmines for connecting with like-minded developers and building your team early.
               </p>
@@ -97,7 +113,7 @@ export default function FindHackathonTeamMembers() {
 
             {/* Strategy 2: Use Social Media & Professional Networks */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Strategy 2: Use Social Media & Professional Networks</h2>
+              <h2 id="strategy-2-use-social-media-professional-networks" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Strategy 2: Use Social Media & Professional Networks</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Social media platforms and professional networks are effective channels to find hackathon team members, especially when combined with specific hashtags and group searches.
               </p>
@@ -110,7 +126,7 @@ export default function FindHackathonTeamMembers() {
 
             {/* Strategy 3: Network at Meetups & Tech Events */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Strategy 3: Network at Meetups & Tech Events</h2>
+              <h2 id="strategy-3-network-at-meetups-tech-events" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Strategy 3: Network at Meetups & Tech Events</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 In-person networking is invaluable for finding hackathon team members. Local tech meetups, coding bootcamp events, and university tech clubs provide opportunities to meet potential teammates face-to-face.
               </p>
@@ -123,7 +139,7 @@ export default function FindHackathonTeamMembers() {
 
             {/* Strategy 4: Post on Tech Forums & Communities */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Strategy 4: Post on Tech Forums & Communities</h2>
+              <h2 id="strategy-4-post-on-tech-forums-communities" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Strategy 4: Post on Tech Forums & Communities</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Actively recruit team members by posting in relevant communities where hackers gather and collaborate.
               </p>
@@ -136,7 +152,7 @@ export default function FindHackathonTeamMembers() {
 
             {/* Strategy 5: Start Your Own Team Building Initiative */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Strategy 5: Start Your Own Team Building Initiative</h2>
+              <h2 id="strategy-5-start-your-own-team-building-initiative" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Strategy 5: Start Your Own Team Building Initiative</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Don't wait passively—take initiative and create your own team formation channels or groups.
               </p>
@@ -149,7 +165,7 @@ export default function FindHackathonTeamMembers() {
 
             {/* Building Your Ideal Hackathon Team */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Building Your Ideal Hackathon Team</h2>
+              <h2 id="building-your-ideal-hackathon-team" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Building Your Ideal Hackathon Team</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 When you find hackathon team members, look for specific complementary skills:
               </p>
@@ -163,7 +179,7 @@ export default function FindHackathonTeamMembers() {
 
             {/* Tips for Successful Team Formation */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Tips For Successful Team Formation</h2>
+              <h2 id="tips-for-successful-team-formation" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Tips For Successful Team Formation</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   <strong>1. Start Early:</strong> Begin searching for hackathon team members as soon as you know which event you'll attend. Early team formation allows time to discuss ideas and develop a cohesive strategy.
@@ -185,7 +201,7 @@ export default function FindHackathonTeamMembers() {
 
             {/* Hackathon Resources */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Hackathon Resources</h2>
+              <h2 id="hackathon-resources" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Hackathon Resources</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Beyond finding hackathon team members, you'll want to explore resources that help your team succeed. Check out the <Link href="/hackathon" className="text-primary hover:underline">Hackathon page</Link> for comprehensive guides, tools, and tips to maximize your hackathon experience.
               </p>
@@ -193,7 +209,7 @@ export default function FindHackathonTeamMembers() {
 
             {/* Conclusion */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Conclusion: Build Your Dream Hackathon Team</h2>
+              <h2 id="conclusion-build-your-dream-hackathon-team" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Conclusion: Build Your Dream Hackathon Team</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Finding hackathon team members doesn't have to be stressful. By leveraging community platforms, social networks, local meetups, and online forums, you can build a talented, diverse, and motivated team ready to tackle any hackathon challenge. Remember that the best teams combine technical skills with strong communication and mutual respect. Start your search early, be clear about your vision, and stay open to unexpected collaborations. With the right team in place and the determination to innovate, your hackathon project has the potential to shine. Begin networking today and find the perfect teammates for your next hackathon adventure.
               </p>

@@ -151,7 +151,22 @@ export default function Page() {
 
             {/* ── Section 1: What is URL encoding ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-0 mb-4">What Is URL Encoding (Percent-Encoding)?</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-url-encoding-percent-encoding" className="text-primary hover:underline">What Is URL Encoding (Percent-Encoding)?</a></li>
+            <li><a href="#why-url-encoding-is-necessary" className="text-primary hover:underline">Why URL Encoding Is Necessary</a></li>
+            <li><a href="#characters-that-must-be-encoded" className="text-primary hover:underline">Characters That Must Be Encoded</a></li>
+            <li><a href="#how-to-encode-a-url-in-javascript" className="text-primary hover:underline">How to Encode a URL in JavaScript</a></li>
+            <li><a href="#how-to-encode-a-url-in-python" className="text-primary hover:underline">How to Encode a URL in Python</a></li>
+            <li><a href="#how-to-encode-a-url-in-php" className="text-primary hover:underline">How to Encode a URL in PHP</a></li>
+            <li><a href="#common-mistakes-to-avoid" className="text-primary hover:underline">Common Mistakes to Avoid</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#related-tools-amp-guides" className="text-primary hover:underline">Related Tools &amp; Guides</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-url-encoding-percent-encoding" className="text-2xl font-bold text-foreground mt-0 mb-4 scroll-mt-20">What Is URL Encoding (Percent-Encoding)?</h2>
               <p className="text-base text-muted-foreground mb-4">
                 URL encoding — formally called <strong className="text-foreground">percent-encoding</strong> — is defined
                 in <strong className="text-foreground">RFC 3986</strong>, the specification that governs the syntax of
@@ -192,7 +207,7 @@ export default function Page() {
 
             {/* ── Section 2: Why is it necessary ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-0 mb-4">Why URL Encoding Is Necessary</h2>
+              <h2 id="why-url-encoding-is-necessary" className="text-2xl font-bold text-foreground mt-0 mb-4 scroll-mt-20">Why URL Encoding Is Necessary</h2>
               <p className="text-base text-muted-foreground mb-4">
                 URLs are transmitted as ASCII text. Any character outside the printable ASCII range — or inside it but
                 carrying structural meaning — can break the URL in one of three ways:
@@ -225,7 +240,7 @@ export default function Page() {
 
             {/* ── Section 3: Characters table ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-0 mb-4">Characters That Must Be Encoded</h2>
+              <h2 id="characters-that-must-be-encoded" className="text-2xl font-bold text-foreground mt-0 mb-4 scroll-mt-20">Characters That Must Be Encoded</h2>
               <p className="text-base text-muted-foreground mb-4">
                 The table below covers the characters you will most commonly need to encode when constructing query
                 strings and URL values. The &quot;When&quot; column clarifies the context in which encoding is required.
@@ -264,7 +279,7 @@ export default function Page() {
 
             {/* ── Section 4: JavaScript ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-0 mb-4">How to Encode a URL in JavaScript</h2>
+              <h2 id="how-to-encode-a-url-in-javascript" className="text-2xl font-bold text-foreground mt-0 mb-4 scroll-mt-20">How to Encode a URL in JavaScript</h2>
               <p className="text-base text-muted-foreground mb-4">
                 JavaScript provides two built-in functions for URL encoding, and choosing the wrong one is a common
                 source of bugs.
@@ -335,7 +350,7 @@ console.log(encodeURI(url))
 
             {/* ── Section 5: Python ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-0 mb-4">How to Encode a URL in Python</h2>
+              <h2 id="how-to-encode-a-url-in-python" className="text-2xl font-bold text-foreground mt-0 mb-4 scroll-mt-20">How to Encode a URL in Python</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Python&apos;s standard library provides URL encoding through the{' '}
                 <code className="font-mono text-sm bg-secondary/60 px-1 rounded">urllib.parse</code> module. The three
@@ -398,7 +413,7 @@ print(qs)
 
             {/* ── Section 6: PHP ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-0 mb-4">How to Encode a URL in PHP</h2>
+              <h2 id="how-to-encode-a-url-in-php" className="text-2xl font-bold text-foreground mt-0 mb-4 scroll-mt-20">How to Encode a URL in PHP</h2>
               <p className="text-base text-muted-foreground mb-4">
                 PHP ships three functions that cover URL encoding needs:
               </p>
@@ -453,7 +468,7 @@ echo $base . '?' . $qs;
 
             {/* ── Section 7: Common mistakes ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-0 mb-4">Common Mistakes to Avoid</h2>
+              <h2 id="common-mistakes-to-avoid" className="text-2xl font-bold text-foreground mt-0 mb-4 scroll-mt-20">Common Mistakes to Avoid</h2>
 
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">1. Double-encoding</h3>
               <p className="text-base text-muted-foreground mb-4">
@@ -493,7 +508,7 @@ echo $base . '?' . $qs;
 
             {/* ── FAQ ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-0 mb-6">Frequently Asked Questions</h2>
+              <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-0 mb-6 scroll-mt-20">Frequently Asked Questions</h2>
 
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">
                 What is the difference between encodeURI and encodeURIComponent in JavaScript?
@@ -572,7 +587,7 @@ echo $base . '?' . $qs;
 
             {/* ── Related links grid ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-0 mb-6">Related Tools &amp; Guides</h2>
+              <h2 id="related-tools-amp-guides" className="text-2xl font-bold text-foreground mt-0 mb-6 scroll-mt-20">Related Tools &amp; Guides</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 <Link
                   href="/"

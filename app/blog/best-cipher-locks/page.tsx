@@ -134,7 +134,21 @@ export default function BestCipherLocksPage() {
                   Best cipher locks combine security, durability, and user-friendly designs to protect your valuables while providing easy access. Whether you need a lock for your gym locker, storage unit, or personal items, our comprehensive guide reviews the top 5 cipher locks available on Amazon to help you make an informed purchase.
                 </p>
 
-                <h2 id="what-are-cipher-locks" className="text-2xl font-bold text-foreground mt-12 mb-4">What Are Cipher Locks?</h2>
+                          <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-are-cipher-locks" className="text-primary hover:underline">What Are Cipher Locks?</a></li>
+            <li><a href="#why-choose-cipher-locks" className="text-primary hover:underline">Why Choose Cipher Locks?</a></li>
+            <li><a href="#top-5-best-cipher-locks-review" className="text-primary hover:underline">Top 5 Best Cipher Locks Review</a></li>
+            <li><a href="#comparison-table" className="text-primary hover:underline">Comparison Table</a></li>
+            <li><a href="#cipher-lock-buying-guide" className="text-primary hover:underline">Cipher Lock Buying Guide</a></li>
+            <li><a href="#related-tools-games" className="text-primary hover:underline">Related Tools & Games</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-are-cipher-locks" className="text-2xl font-bold text-foreground mt-12 mb-4">What Are Cipher Locks?</h2>
                 <p className="mb-6">
                   Cipher locks, also known as combination locks or dial locks, are locking mechanisms that require users to input a specific sequence of numbers or characters to unlock them. Unlike traditional key-based locks, cipher locks eliminate the risk of losing keys and provide customizable security codes. They&apos;re commonly used for padlocks, gym lockers, storage units, and security applications.
                 </p>

@@ -146,7 +146,22 @@ export default function Page() {
             </p>
 
             {/* ── What is it ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">What Is the Vigenère Cipher?</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-is-the-vigenre-cipher" className="text-primary hover:underline">What Is the Vigenère Cipher?</a></li>
+            <li><a href="#how-to-encode-with-the-vigenre-cipher" className="text-primary hover:underline">How to Encode with the Vigenère Cipher</a></li>
+            <li><a href="#how-to-decode-the-vigenre-cipher" className="text-primary hover:underline">How to Decode the Vigenère Cipher</a></li>
+            <li><a href="#the-vigenre-square-tabula-recta" className="text-primary hover:underline">The Vigenère Square (Tabula Recta)</a></li>
+            <li><a href="#how-to-crack-the-vigenre-cipher-without-the-key" className="text-primary hover:underline">How to Crack the Vigenère Cipher Without the Key</a></li>
+            <li><a href="#more-vigenre-cipher-examples" className="text-primary hover:underline">More Vigenère Cipher Examples</a></li>
+            <li><a href="#vigenre-vs-caesar-key-differences" className="text-primary hover:underline">Vigenère vs. Caesar — Key Differences</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#explore-more-cipher-tools" className="text-primary hover:underline">Explore More Cipher Tools</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-is-the-vigenre-cipher" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">What Is the Vigenère Cipher?</h2>
             <p className="text-base text-muted-foreground mb-4">
               The Vigenère cipher is a <strong className="text-foreground">polyalphabetic substitution cipher</strong> — it uses multiple Caesar shifts instead of just one. The key is a word or phrase; each letter of the key determines the shift applied to the corresponding letter of the plaintext. When the key is shorter than the message, it simply repeats.
             </p>
@@ -164,7 +179,7 @@ export default function Page() {
             </p>
 
             {/* ── How to encode ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Encode with the Vigenère Cipher</h2>
+            <h2 id="how-to-encode-with-the-vigenre-cipher" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Encode with the Vigenère Cipher</h2>
             <p className="text-base text-muted-foreground mb-2">
               <strong className="text-foreground">Formula:</strong>{' '}
               <code className="font-mono text-foreground">C = (P + K) mod 26</code>, where P is the plaintext letter&apos;s position (A=0 … Z=25) and K is the key letter&apos;s position.
@@ -209,7 +224,7 @@ export default function Page() {
             </p>
 
             {/* ── How to decode ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Decode the Vigenère Cipher</h2>
+            <h2 id="how-to-decode-the-vigenre-cipher" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Decode the Vigenère Cipher</h2>
             <p className="text-base text-muted-foreground mb-2">
               <strong className="text-foreground">Formula:</strong>{' '}
               <code className="font-mono text-foreground">P = (C − K + 26) mod 26</code>. Subtract the key letter&apos;s position from the ciphertext letter&apos;s position (adding 26 to avoid negative numbers), then take mod 26.
@@ -254,7 +269,7 @@ export default function Page() {
             </p>
 
             {/* ── Vigenère square ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Vigenère Square (Tabula Recta)</h2>
+            <h2 id="the-vigenre-square-tabula-recta" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Vigenère Square (Tabula Recta)</h2>
             <p className="text-base text-muted-foreground mb-4">
               The Vigenère square is a 26×26 grid that makes manual encoding and decoding easier — no arithmetic needed. The rows are labelled by key letter (A–Z) and the columns by plaintext letter (A–Z).
             </p>
@@ -293,7 +308,7 @@ export default function Page() {
             </p>
 
             {/* ── Cracking it ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How to Crack the Vigenère Cipher Without the Key</h2>
+            <h2 id="how-to-crack-the-vigenre-cipher-without-the-key" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How to Crack the Vigenère Cipher Without the Key</h2>
             <p className="text-base text-muted-foreground mb-4">
               Breaking the Vigenère cipher is a two-step process: first find the key length, then crack each sub-cipher independently.
             </p>
@@ -315,7 +330,7 @@ export default function Page() {
             </p>
 
             {/* ── More examples ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">More Vigenère Cipher Examples</h2>
+            <h2 id="more-vigenre-cipher-examples" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">More Vigenère Cipher Examples</h2>
             <div className="overflow-x-auto my-4 rounded-lg border border-border">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -344,7 +359,7 @@ export default function Page() {
             </div>
 
             {/* ── Vs Caesar ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Vigenère vs. Caesar — Key Differences</h2>
+            <h2 id="vigenre-vs-caesar-key-differences" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Vigenère vs. Caesar — Key Differences</h2>
             <div className="overflow-x-auto my-4 rounded-lg border border-border">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -374,7 +389,7 @@ export default function Page() {
             </div>
 
             {/* ── FAQ ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Frequently Asked Questions</h2>
+            <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Frequently Asked Questions</h2>
 
             <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">What is the Vigenère cipher?</h3>
             <p className="text-base text-muted-foreground mb-4">
@@ -402,7 +417,7 @@ export default function Page() {
             </p>
 
             {/* ── CTA ── */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Explore More Cipher Tools</h2>
+            <h2 id="explore-more-cipher-tools" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Explore More Cipher Tools</h2>
             <p className="text-base text-muted-foreground mb-4">
               The Vigenère cipher is one of many classical ciphers worth learning. Try these free tools on our site:
             </p>

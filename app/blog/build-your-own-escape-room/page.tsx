@@ -54,7 +54,22 @@ export default function BuildYourOwnEscapeRoomPage() {
                 </p>
 
                 <section className="mb-12">
-                  <h2 id="why-build" className="text-2xl font-bold text-foreground mb-4">Why Build Your Own Escape Room?</h2>
+                            <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#why-build-your-own-escape-room" className="text-primary hover:underline">Why Build Your Own Escape Room?</a></li>
+            <li><a href="#step-1-plan-your-theme-and-story" className="text-primary hover:underline">Step 1: Plan Your Theme and Story</a></li>
+            <li><a href="#step-2-choose-your-puzzle-types" className="text-primary hover:underline">Step 2: Choose Your Puzzle Types</a></li>
+            <li><a href="#step-3-balance-the-difficulty" className="text-primary hover:underline">Step 3: Balance the Difficulty</a></li>
+            <li><a href="#step-4-use-our-free-escape-room-builder" className="text-primary hover:underline">Step 4: Use Our Free Escape Room Builder</a></li>
+            <li><a href="#try-quick-play-mode" className="text-primary hover:underline">Try Quick Play Mode</a></li>
+            <li><a href="#expert-tips-for-success" className="text-primary hover:underline">Expert Tips for Success</a></li>
+            <li><a href="#start-building-today" className="text-primary hover:underline">Start Building Today</a></li>
+            <li><a href="#related-tools" className="text-primary hover:underline">Related Tools</a></li>
+            </ol>
+          </nav>
+
+<h2 id="why-build" className="text-2xl font-bold text-foreground mb-4">Why Build Your Own Escape Room?</h2>
                   <p className="text-muted-foreground mb-4">
                     Commercial escape rooms can cost $25-40 per person, making them expensive for groups. By building your own, you get:
                   </p>
@@ -213,7 +228,7 @@ export default function BuildYourOwnEscapeRoomPage() {
 
               {/* Related Tools */}
               <div className="mt-16 pt-8 border-t border-border">
-                <h2 className="text-xl font-bold text-foreground mb-6">Related Tools</h2>
+                <h2 id="related-tools" className="text-xl font-bold text-foreground mb-6 scroll-mt-20">Related Tools</h2>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <Link
                     href="/tools/escape-room-builder"

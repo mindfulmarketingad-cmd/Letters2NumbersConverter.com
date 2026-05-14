@@ -192,7 +192,22 @@ export default function Page() {
             </p>
 
             {/* Section 1 — Types of encoded text */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Types of Encoded Text Messages</h2>
+                      <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#types-of-encoded-text-messages" className="text-primary hover:underline">Types of Encoded Text Messages</a></li>
+            <li><a href="#how-to-identify-which-encoding-you-have" className="text-primary hover:underline">How to Identify Which Encoding You Have</a></li>
+            <li><a href="#step-by-step-decoding-a-base64-text-message" className="text-primary hover:underline">Step-by-Step: Decoding a Base64 Text Message</a></li>
+            <li><a href="#step-by-step-decoding-a-hex-text-message" className="text-primary hover:underline">Step-by-Step: Decoding a Hex Text Message</a></li>
+            <li><a href="#step-by-step-decoding-an-a1z26-text-message" className="text-primary hover:underline">Step-by-Step: Decoding an A1Z26 Text Message</a></li>
+            <li><a href="#step-by-step-decoding-url-encoded-text" className="text-primary hover:underline">Step-by-Step: Decoding URL-Encoded Text</a></li>
+            <li><a href="#tools-to-decode-your-text-message" className="text-primary hover:underline">Tools to Decode Your Text Message</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#related-tools-and-guides" className="text-primary hover:underline">Related Tools and Guides</a></li>
+            </ol>
+          </nav>
+
+<h2 id="types-of-encoded-text-messages" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Types of Encoded Text Messages</h2>
             <p className="text-base text-muted-foreground mb-4">
               Not all "encoded" messages are the same. The word gets used for everything from teenage SMS shorthand to cryptographic transforms. Here are the main categories you are likely to encounter:
             </p>
@@ -263,7 +278,7 @@ export default function Page() {
             </ul>
 
             {/* Section 2 — How to identify */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">How to Identify Which Encoding You Have</h2>
+            <h2 id="how-to-identify-which-encoding-you-have" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">How to Identify Which Encoding You Have</h2>
             <p className="text-base text-muted-foreground mb-4">
               The fastest way to decode a message is to identify its type first. Here are the visual clues:
             </p>
@@ -297,7 +312,7 @@ export default function Page() {
             </div>
 
             {/* Section 3 — Decoding Base64 */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Step-by-Step: Decoding a Base64 Text Message</h2>
+            <h2 id="step-by-step-decoding-a-base64-text-message" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Step-by-Step: Decoding a Base64 Text Message</h2>
             <p className="text-base text-muted-foreground mb-4">
               Suppose you receive a message body that reads: <span className="font-mono text-foreground">SGVsbG8sIHdvcmxkIQ==</span>
             </p>
@@ -325,7 +340,7 @@ export default function Page() {
             </p>
 
             {/* Section 4 — Decoding hex */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Step-by-Step: Decoding a Hex Text Message</h2>
+            <h2 id="step-by-step-decoding-a-hex-text-message" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Step-by-Step: Decoding a Hex Text Message</h2>
             <p className="text-base text-muted-foreground mb-4">
               Take the hex string: <span className="font-mono text-foreground">48 65 6C 6C 6F</span>
             </p>
@@ -363,7 +378,7 @@ export default function Page() {
             </p>
 
             {/* Section 5 — Decoding A1Z26 */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Step-by-Step: Decoding an A1Z26 Text Message</h2>
+            <h2 id="step-by-step-decoding-an-a1z26-text-message" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Step-by-Step: Decoding an A1Z26 Text Message</h2>
             <p className="text-base text-muted-foreground mb-4">
               A1Z26 is the simplest number cipher: A=1, B=2, C=3, all the way to Z=26. Take the message: <span className="font-mono text-foreground">8 5 12 12 15</span>
             </p>
@@ -400,7 +415,7 @@ export default function Page() {
             </p>
 
             {/* Section 6 — Decoding URL encoding */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Step-by-Step: Decoding URL-Encoded Text</h2>
+            <h2 id="step-by-step-decoding-url-encoded-text" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Step-by-Step: Decoding URL-Encoded Text</h2>
             <p className="text-base text-muted-foreground mb-4">
               URL encoding (percent-encoding) replaces unsafe characters with a <code className="text-foreground font-bold">%</code> followed by two hex digits representing the character's ASCII code. Take: <span className="font-mono text-foreground">%48%65%6C%6C%6F</span>
             </p>
@@ -417,7 +432,7 @@ export default function Page() {
             </p>
 
             {/* Section 7 — Tools */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Tools to Decode Your Text Message</h2>
+            <h2 id="tools-to-decode-your-text-message" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Tools to Decode Your Text Message</h2>
             <p className="text-base text-muted-foreground mb-4">
               Once you have identified the encoding type, the right tool makes decoding effortless:
             </p>
@@ -452,7 +467,7 @@ export default function Page() {
             </div>
 
             {/* FAQ section */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-6">Frequently Asked Questions</h2>
+            <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-10 mb-6 scroll-mt-20">Frequently Asked Questions</h2>
 
             <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">How do I decode a text message with random letters and numbers?</h3>
             <p className="text-base text-muted-foreground mb-4">
@@ -486,7 +501,7 @@ export default function Page() {
             </p>
 
             {/* Related links */}
-            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Related Tools and Guides</h2>
+            <h2 id="related-tools-and-guides" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Related Tools and Guides</h2>
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-8">
               <li><Link href="/tools/base64-encoder-decoder" className="text-primary hover:underline">Base64 Encoder/Decoder</Link> — encode or decode Base64 text instantly</li>
               <li><Link href="/tools/letter-number-converter" className="text-primary hover:underline">Letter-Number Converter</Link> — A1Z26 numbers to letters and letters to numbers</li>

@@ -177,7 +177,22 @@ export default function Page() {
 
             {/* ── Base64 Encoding ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Base64 Encoding in Python</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#base64-encoding-in-python" className="text-primary hover:underline">Base64 Encoding in Python</a></li>
+            <li><a href="#url-encoding-in-python" className="text-primary hover:underline">URL Encoding in Python</a></li>
+            <li><a href="#html-encoding-in-python" className="text-primary hover:underline">HTML Encoding in Python</a></li>
+            <li><a href="#json-encoding-in-python" className="text-primary hover:underline">JSON Encoding in Python</a></li>
+            <li><a href="#string-and-text-encoding-str-bytes" className="text-primary hover:underline">String and Text Encoding (str → bytes)</a></li>
+            <li><a href="#hashing-in-python-one-way-only" className="text-primary hover:underline">Hashing in Python — One-Way Only</a></li>
+            <li><a href="#choosing-the-right-python-encoding-function" className="text-primary hover:underline">Choosing the Right Python Encoding Function</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#related-tools-and-guides" className="text-primary hover:underline">Related Tools and Guides</a></li>
+            </ol>
+          </nav>
+
+<h2 id="base64-encoding-in-python" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Base64 Encoding in Python</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Base64 encodes arbitrary binary data as a string of printable ASCII characters, making it safe to
                 transmit through text-only channels such as JSON payloads, email, or data URIs. The{' '}
@@ -240,7 +255,7 @@ base64.urlsafe_b64decode(b'SGVsbG8gV29ybGQ=')`}</pre>
 
             {/* ── URL Encoding ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">URL Encoding in Python</h2>
+              <h2 id="url-encoding-in-python" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">URL Encoding in Python</h2>
               <p className="text-base text-muted-foreground mb-4">
                 URL encoding (percent-encoding) converts characters that are not allowed in URLs into a safe{' '}
                 <code className="font-mono text-sm bg-secondary/60 px-1 rounded">%XX</code> hex representation.
@@ -298,7 +313,7 @@ full_url = base_url + '?' + urlencode(params)
 
             {/* ── HTML Encoding ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">HTML Encoding in Python</h2>
+              <h2 id="html-encoding-in-python" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">HTML Encoding in Python</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Outputting untrusted user data directly into HTML creates cross-site scripting (XSS) vulnerabilities.
                 Python&apos;s <code className="font-mono text-sm bg-secondary/60 px-1 rounded">html</code> module
@@ -344,7 +359,7 @@ html.unescape('&amp;copy; 2026')
 
             {/* ── JSON Encoding ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">JSON Encoding in Python</h2>
+              <h2 id="json-encoding-in-python" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">JSON Encoding in Python</h2>
               <p className="text-base text-muted-foreground mb-4">
                 JSON is the standard format for REST APIs and configuration files. Python&apos;s{' '}
                 <code className="font-mono text-sm bg-secondary/60 px-1 rounded">json</code> module serialises
@@ -386,7 +401,7 @@ json.loads(json_string)
 
             {/* ── String / Text Encoding ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">String and Text Encoding (str → bytes)</h2>
+              <h2 id="string-and-text-encoding-str-bytes" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">String and Text Encoding (str → bytes)</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Python 3&apos;s{' '}
                 <code className="font-mono text-sm bg-secondary/60 px-1 rounded">str</code> type holds Unicode
@@ -426,7 +441,7 @@ b'H\\xc3\\xa9llo'.decode('utf-8')
 
             {/* ── Hashing ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Hashing in Python — One-Way Only</h2>
+              <h2 id="hashing-in-python-one-way-only" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Hashing in Python — One-Way Only</h2>
 
               <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4 my-6">
                 <p className="text-sm font-semibold text-yellow-400 mb-1">Hashing is not encoding</p>
@@ -467,7 +482,7 @@ hashlib.algorithms_guaranteed
 
             {/* ── Decision Table ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Choosing the Right Python Encoding Function</h2>
+              <h2 id="choosing-the-right-python-encoding-function" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Choosing the Right Python Encoding Function</h2>
               <p className="text-base text-muted-foreground mb-4">
                 The right choice depends entirely on the destination of the encoded output. Use this table as a
                 quick reference.
@@ -506,7 +521,7 @@ hashlib.algorithms_guaranteed
 
             {/* ── FAQ ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Frequently Asked Questions</h2>
+              <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Frequently Asked Questions</h2>
 
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">
                 What is the difference between encoding and decoding in Python?
@@ -585,7 +600,7 @@ hashlib.algorithms_guaranteed
 
             {/* ── Related links ── */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-6">Related Tools and Guides</h2>
+              <h2 id="related-tools-and-guides" className="text-2xl font-bold text-foreground mt-10 mb-6 scroll-mt-20">Related Tools and Guides</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   {

@@ -200,7 +200,22 @@ export default function Page() {
 
             {/* Section 1 — What an Enigma code is */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">What Exactly Is an Enigma Code?</h2>
+                        <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#what-exactly-is-an-enigma-code" className="text-primary hover:underline">What Exactly Is an Enigma Code?</a></li>
+            <li><a href="#how-an-enigma-message-was-structured" className="text-primary hover:underline">How an Enigma Message Was Structured</a></li>
+            <li><a href="#the-daily-key-tagesschlssel" className="text-primary hover:underline">The Daily Key — Tagesschlüssel</a></li>
+            <li><a href="#why-enigma-codes-seemed-unbreakable" className="text-primary hover:underline">Why Enigma Codes Seemed Unbreakable</a></li>
+            <li><a href="#how-enigma-codes-were-broken" className="text-primary hover:underline">How Enigma Codes Were Broken</a></li>
+            <li><a href="#notable-enigma-operations-and-captures" className="text-primary hover:underline">Notable Enigma Operations and Captures</a></li>
+            <li><a href="#key-dates-in-the-breaking-of-enigma" className="text-primary hover:underline">Key Dates in the Breaking of Enigma</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#explore-further" className="text-primary hover:underline">Explore Further</a></li>
+            </ol>
+          </nav>
+
+<h2 id="what-exactly-is-an-enigma-code" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">What Exactly Is an Enigma Code?</h2>
               <p className="text-base text-muted-foreground mb-4">
                 The term &ldquo;Enigma code&rdquo; is widely used but often misunderstood. It does not refer to a single secret password or a fixed cipher alphabet. Rather, it refers to any encrypted message produced by the Enigma machine — and every message was encrypted differently, even if two operators transmitted the same plaintext on the same day.
               </p>
@@ -220,7 +235,7 @@ export default function Page() {
 
             {/* Section 2 — Structure of a message */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How an Enigma Message Was Structured</h2>
+              <h2 id="how-an-enigma-message-was-structured" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How an Enigma Message Was Structured</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Enigma messages were transmitted by radio as groups of four or five letters — a format that looked identical to random noise to anyone listening in. A typical intercept might read: <code className="font-mono text-foreground text-sm">BCMQL FVBSE DQHQF XVHLE YNRPQ</code>. Without the day&apos;s key settings, these groups were meaningless.
               </p>
@@ -243,7 +258,7 @@ export default function Page() {
 
             {/* Section 3 — Daily key */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Daily Key — Tagesschlüssel</h2>
+              <h2 id="the-daily-key-tagesschlssel" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">The Daily Key — Tagesschlüssel</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Every 24 hours, every Enigma operator on a given network received a new <em>Tagesschlüssel</em> — the daily key. These were printed on monthly key sheets, distributed physically to all stations in advance. At midnight, operators switched to the new settings. Yesterday&apos;s key was useless.
               </p>
@@ -263,7 +278,7 @@ export default function Page() {
 
             {/* Section 4 — Why it seemed unbreakable */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Why Enigma Codes Seemed Unbreakable</h2>
+              <h2 id="why-enigma-codes-seemed-unbreakable" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Why Enigma Codes Seemed Unbreakable</h2>
               <p className="text-base text-muted-foreground mb-4">
                 German signals officers were genuinely confident the Enigma cipher was beyond attack. Their confidence was not irrational. The arithmetic was staggering.
               </p>
@@ -284,7 +299,7 @@ export default function Page() {
 
             {/* Section 5 — How it was broken */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">How Enigma Codes Were Broken</h2>
+              <h2 id="how-enigma-codes-were-broken" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">How Enigma Codes Were Broken</h2>
               <p className="text-base text-muted-foreground mb-4">
                 The breaking of Enigma was not a single event — it was a decade-long, multi-national effort built on mathematics, espionage, and engineering.
               </p>
@@ -319,7 +334,7 @@ export default function Page() {
 
             {/* Section 6 — Notable operations */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Notable Enigma Operations and Captures</h2>
+              <h2 id="notable-enigma-operations-and-captures" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Notable Enigma Operations and Captures</h2>
               <p className="text-base text-muted-foreground mb-4">
                 Naval Enigma (the <em>Shark</em> key used by U-boats) was a separate and harder problem. U-boats used a four-rotor Enigma that the three-rotor Bombes could not attack directly. Breaking Naval Enigma required physical capture of key materials.
               </p>
@@ -338,7 +353,7 @@ export default function Page() {
 
             {/* Timeline table */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Key Dates in the Breaking of Enigma</h2>
+              <h2 id="key-dates-in-the-breaking-of-enigma" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Key Dates in the Breaking of Enigma</h2>
               <div className="overflow-x-auto rounded-lg border border-border">
                 <table className="w-full text-sm border-collapse">
                   <thead>
@@ -367,7 +382,7 @@ export default function Page() {
 
             {/* FAQ */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">Frequently Asked Questions</h2>
+              <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Frequently Asked Questions</h2>
 
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">What is an Enigma code?</h3>
               <p className="text-base text-muted-foreground mb-4">
@@ -397,7 +412,7 @@ export default function Page() {
 
             {/* Related links */}
             <section>
-              <h2 className="text-2xl font-bold text-foreground mt-10 mb-6">Explore Further</h2>
+              <h2 id="explore-further" className="text-2xl font-bold text-foreground mt-10 mb-6 scroll-mt-20">Explore Further</h2>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="rounded-lg border border-border bg-secondary/20 p-4 hover:bg-secondary/40 transition-colors">
                   <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold mb-1">On this site</p>

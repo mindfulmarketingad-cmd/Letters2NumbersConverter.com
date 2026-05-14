@@ -52,7 +52,19 @@ export default function GeoachingCodesPage() {
                   Geocaching puzzle caches (also known as mystery caches) are among the most rewarding finds in the geocaching community. Many of these puzzles use letter-to-number codes to hide coordinates or reveal clues. In this guide, you will learn how to identify, decode, and solve letter number puzzles in geocaching.
                 </p>
 
-                <h2 id="why-letter-codes" className="text-2xl font-bold text-foreground mt-12 mb-4">Why Letter Number Codes Are Popular in Geocaching</h2>
+                          <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#why-letter-number-codes-are-popular-in-geocaching" className="text-primary hover:underline">Why Letter Number Codes Are Popular in Geocaching</a></li>
+            <li><a href="#common-letter-number-patterns-in-puzzle-caches" className="text-primary hover:underline">Common Letter Number Patterns in Puzzle Caches</a></li>
+            <li><a href="#how-to-decode-coordinates-from-letter-codes" className="text-primary hover:underline">How to Decode Coordinates from Letter Codes</a></li>
+            <li><a href="#expert-tips-for-solving-geocaching-puzzles" className="text-primary hover:underline">Expert Tips for Solving Geocaching Puzzles</a></li>
+            <li><a href="#common-mistakes-to-avoid" className="text-primary hover:underline">Common Mistakes to Avoid</a></li>
+            <li><a href="#practice-your-decoding-skills" className="text-primary hover:underline">Practice Your Decoding Skills</a></li>
+            </ol>
+          </nav>
+
+<h2 id="why-letter-codes" className="text-2xl font-bold text-foreground mt-12 mb-4">Why Letter Number Codes Are Popular in Geocaching</h2>
                 <p className="text-muted-foreground mb-6">
                   Geocache owners love using letter number codes because they are accessible enough for beginners while still providing a satisfying challenge. The A1Z26 cipher is especially popular because it can be solved without special tools once you know the pattern. These codes often hide GPS coordinates, leading you to the actual cache location.
                 </p>

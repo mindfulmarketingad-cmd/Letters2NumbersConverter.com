@@ -55,12 +55,28 @@ export default function Page() {
             <Link href="/tools/rot13-decoder" className="text-primary hover:underline">ROT13 decoder</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Quick Recap: What Is ROT13?</h2>
+                    <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8" aria-label="Table of contents">
+            <p className="text-sm font-semibold text-foreground mb-3">Table of Contents</p>
+            <ol className="space-y-1.5 text-sm list-decimal list-inside">
+            <li><a href="#quick-recap-what-is-rot13" className="text-primary hover:underline">Quick Recap: What Is ROT13?</a></li>
+            <li><a href="#method-1-the-built-in-codecs-module-one-line" className="text-primary hover:underline">Method 1: The Built-in codecs Module (One Line)</a></li>
+            <li><a href="#method-2-strmaketrans-fast-and-explicit" className="text-primary hover:underline">Method 2: str.maketrans() — Fast and Explicit</a></li>
+            <li><a href="#method-3-manual-loop-best-for-learning" className="text-primary hover:underline">Method 3: Manual Loop — Best for Learning</a></li>
+            <li><a href="#generalising-to-a-caesar-cipher" className="text-primary hover:underline">Generalising to a Caesar Cipher</a></li>
+            <li><a href="#rot13-from-the-command-line" className="text-primary hover:underline">ROT13 From the Command Line</a></li>
+            <li><a href="#performance-comparison" className="text-primary hover:underline">Performance Comparison</a></li>
+            <li><a href="#no-code-use-our-free-online-rot13-tool" className="text-primary hover:underline">No Code? Use Our Free Online ROT13 Tool</a></li>
+            <li><a href="#frequently-asked-questions" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+            <li><a href="#conclusion" className="text-primary hover:underline">Conclusion</a></li>
+            </ol>
+          </nav>
+
+<h2 id="quick-recap-what-is-rot13" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Quick Recap: What Is ROT13?</h2>
           <p className="text-base text-muted-foreground mb-4">
             ROT13 replaces each letter with the letter 13 positions later in the alphabet. Because the alphabet has 26 letters, shifting by 13 twice returns to the start — making the same function work for both encoding and decoding. Only letters are affected; digits, punctuation, and spaces pass through unchanged. Full explanation: <Link href="/blog/rot13-cipher-explained" className="text-primary hover:underline">ROT13 cipher explained</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Method 1: The Built-in <code className="text-green-600 text-xl">codecs</code> Module (One Line)</h2>
+          <h2 id="method-1-the-built-in-codecs-module-one-line" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Method 1: The Built-in <code className="text-green-600 text-xl">codecs</code> Module (One Line)</h2>
           <p className="text-base text-muted-foreground mb-4">
             Python&apos;s standard library includes a <code className="text-foreground font-mono">codecs</code> module with a <code className="text-foreground font-mono">rot_13</code> codec. This is the fastest way to apply ROT13 in Python 3:
           </p>
@@ -83,7 +99,7 @@ print(decoded)  # Hello, World!`} />
             <strong className="text-foreground">Python 2 note:</strong> In Python 2, you could also write <code className="font-mono">&quot;text&quot;.encode(&apos;rot13&apos;)</code> directly on a string. This was removed in Python 3 — use <code className="font-mono">codecs.encode()</code> instead.
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Method 2: <code className="text-green-600 text-xl">str.maketrans()</code> — Fast and Explicit</h2>
+          <h2 id="method-2-strmaketrans-fast-and-explicit" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Method 2: <code className="text-green-600 text-xl">str.maketrans()</code> — Fast and Explicit</h2>
           <p className="text-base text-muted-foreground mb-4">
             The <code className="text-foreground font-mono">str.maketrans()</code> and <code className="text-foreground font-mono">str.translate()</code> combination builds a character-by-character lookup table. It is slightly more explicit than the codecs approach and runs very fast on long strings:
           </p>
@@ -108,7 +124,7 @@ print(rot13("Uryyb, Jbeyq!"))   # Hello, World!`} />
             <strong className="text-foreground">When to use this:</strong> When you want an explicit, readable implementation without importing <code className="font-mono text-foreground">codecs</code>, or when you need to process very large strings quickly.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Method 3: Manual Loop — Best for Learning</h2>
+          <h2 id="method-3-manual-loop-best-for-learning" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Method 3: Manual Loop — Best for Learning</h2>
           <p className="text-base text-muted-foreground mb-4">
             Writing ROT13 with an explicit loop is the best approach for understanding what the cipher actually does. This version shows the exact arithmetic behind each letter shift:
           </p>
@@ -145,7 +161,7 @@ print(rot13("Gur Dhvpx Oebja Sbk"))  # The Quick Brown Fox`} />
             <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar cipher</Link>).
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Generalising to a Caesar Cipher</h2>
+          <h2 id="generalising-to-a-caesar-cipher" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Generalising to a Caesar Cipher</h2>
           <p className="text-base text-muted-foreground mb-4">
             ROT13 is simply a Caesar cipher with a fixed shift of 13. You can turn Method 3 into a general Caesar cipher by making the shift a parameter:
           </p>
@@ -166,7 +182,7 @@ print(caesar("Hello", 13))   # Uryyb
 print(caesar("Hello", 3))    # Khoor  (classic Caesar)
 print(caesar("Khoor", -3))   # Hello  (decode Caesar 3)`} />
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">ROT13 From the Command Line</h2>
+          <h2 id="rot13-from-the-command-line" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">ROT13 From the Command Line</h2>
           <p className="text-base text-muted-foreground mb-4">
             Python also lets you run ROT13 directly in your terminal without writing a script:
           </p>
@@ -175,7 +191,7 @@ print(caesar("Khoor", -3))   # Hello  (decode Caesar 3)`} />
 echo "Hello, World!" | python3 -c "import codecs,sys; print(codecs.encode(sys.stdin.read().strip(), 'rot_13'))"
 # Output: Uryyb, Jbeyq!`} lang="bash" />
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Performance Comparison</h2>
+          <h2 id="performance-comparison" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Performance Comparison</h2>
           <p className="text-base text-muted-foreground mb-4">
             For most use cases all three methods are fast enough. If you are processing very large volumes of text:
           </p>
@@ -188,13 +204,13 @@ echo "Hello, World!" | python3 -c "import codecs,sys; print(codecs.encode(sys.st
             In practice the difference only matters for strings longer than a few megabytes.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">No Code? Use Our Free Online ROT13 Tool</h2>
+          <h2 id="no-code-use-our-free-online-rot13-tool" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">No Code? Use Our Free Online ROT13 Tool</h2>
           <p className="text-base text-muted-foreground mb-4">
             If you just need to decode a ROT13 message without writing Python, our free{' '}
             <Link href="/tools/rot13-decoder" className="text-primary hover:underline">ROT13 Decoder &amp; Encoder</Link> does the job instantly in your browser — paste text, get the result, copy it. No sign-up, no ads, no uploads.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Frequently Asked Questions</h2>
+          <h2 id="frequently-asked-questions" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Frequently Asked Questions</h2>
 
           <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Does <code className="text-green-600">codecs.encode(text, &apos;rot_13&apos;)</code> work in Python 3?</h3>
           <p className="text-base text-muted-foreground mb-4">
@@ -217,7 +233,7 @@ with open('output.txt', 'w') as f:
             ROT13 in Python&apos;s <code className="font-mono text-foreground">codecs</code> module works on str objects (Unicode text). For bytes, you would need to decode to a string first, apply ROT13, and re-encode.
           </p>
 
-          <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Conclusion</h2>
+          <h2 id="conclusion" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Conclusion</h2>
           <p className="text-base text-muted-foreground mb-4">
             Python gives you at least three clean ways to implement ROT13: the one-line <code className="font-mono text-foreground">codecs.encode()</code> approach, the fast <code className="font-mono text-foreground">str.maketrans()</code> lookup table, and a manual character loop that makes the cipher arithmetic explicit. For most real use, Method 1 or Method 2 is the right choice. Use Method 3 when you want to understand or extend the logic — it is only one parameter change away from a full Caesar cipher.
           </p>

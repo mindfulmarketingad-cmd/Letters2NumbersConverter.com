@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "A1Z26 Translator | Convert Letters to Numbers Instantly",
   description: "Use our free A1Z26 translator to convert letters to numbers and numbers to letters. The A1Z26 cipher assigns A=1, B=2 through Z=26 for easy encoding and decoding.",
   keywords: ["A1Z26 translator", "A1Z26 cipher", "letter to number", "alphabet cipher", "A1Z26 decoder", "A1Z26 encoder"],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
 }
 
 export default function A1Z26TranslatorPage() {

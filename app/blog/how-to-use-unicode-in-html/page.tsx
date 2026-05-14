@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'unicode code points html',
     'html emoji encoding',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'How To Use Unicode in HTML — Characters, Entities & UTF-8 Encoding',
     description:
@@ -52,7 +52,7 @@ const jsonLd = {
   datePublished: '2026-05-14T00:00:00.000Z',
   dateModified: '2026-05-14T00:00:00.000Z',
   image: `${BASE_URL}/images/blog/ascii-encoding.jpg`,
-  author: { '@type': 'Organization', name: 'Letters to Numbers Converter', url: BASE_URL },
+  author: { '@type': 'Person', name: 'John Reed', url: BASE_URL },
   publisher: { '@type': 'Organization', name: 'Letters to Numbers Converter', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
 }

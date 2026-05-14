@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'GSM 7-bit encoding',
     'text message encoding types',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'How To Decode A Text Message — SMS Codes, Abbreviations & Ciphers',
     description:
@@ -51,7 +51,7 @@ const jsonLd = {
   url: PAGE_URL,
   datePublished: PUBLISHED,
   dateModified: PUBLISHED,
-  author: { '@type': 'Organization', name: 'Letters2NumbersConverter.com', url: BASE_URL },
+  author: { '@type': 'Person', name: 'John Reed', url: BASE_URL },
   publisher: { '@type': 'Organization', name: 'Letters2NumbersConverter.com', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
 }

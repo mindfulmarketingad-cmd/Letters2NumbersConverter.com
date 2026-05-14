@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "hackathon community",
     "team formation strategies"
   ],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
   openGraph: {
     title: "Find Hackathon Team Members - Strategies & Tips",
     description: "Comprehensive guide to finding and assembling the perfect hackathon team. Learn networking strategies and community resources.",

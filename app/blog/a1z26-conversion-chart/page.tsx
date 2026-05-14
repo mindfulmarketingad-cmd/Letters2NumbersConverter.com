@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'A to Z number reference',
     'alphabet numbering system'
   ],
-  authors: [{ name: 'Neo' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'A-Z to 1-26 Conversion Chart - Reference Page',
     description: 'Complete alphabet to number conversion chart for quick reference. Perfect for cryptography, puzzles, coding, and educational use.',

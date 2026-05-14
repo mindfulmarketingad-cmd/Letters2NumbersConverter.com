@@ -234,7 +234,7 @@ export default function MilitaryABCCodesListPage() {
               <li className="flex gap-3">
                 <span className="text-primary font-bold">✓</span>
                 <span>
-                  <strong>International Standard:</strong> NATO phonetic alphabet is recognized globally, ensuring that military and emergency personnel from different countries can communicate seamlessly.
+                  <strong>International Standard:</strong> NATO phonetic alphabet is recognized globally, ensuring that military and emergency personnel from different countries can communicate clearly.
                 </span>
               </li>
               <li className="flex gap-3">

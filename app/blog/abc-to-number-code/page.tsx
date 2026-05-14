@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "ABC to Number Code: The Easy Guide to Converting Letters to Numbers",
   description: "Learn the ABC to number code system for converting alphabet letters to numbers. Perfect for kids, educators, and puzzle enthusiasts. A=1, B=2, C=3 and beyond.",
   keywords: ["abc to number code", "alphabet to number", "abc number conversion", "letter number code for kids", "alphabet code"],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
   openGraph: {
     title: "ABC to Number Code: The Easy Guide to Converting Letters to Numbers",
     description: "Learn the ABC to number code system for converting alphabet letters to numbers easily.",

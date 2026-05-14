@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'Caesar cipher with key',
     'Caesar cipher step by step',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'Caesar Cipher Examples — Encode & Decode with Any Shift',
     description: 'Step-by-step Caesar cipher examples for shifts 3, 7, 13, and 21. See exactly how encoding and decoding works, with full alphabet tables for each shift.',

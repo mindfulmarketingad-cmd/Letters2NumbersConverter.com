@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'What Is URL Encoding? | Letters2NumbersConverter.com',
   description: 'What Is URL Encoding? Comprehensive guide to URL encoding, percent encoding, special characters, and how to encode/decode URLs. Learn why URL encoding is essential for web development.',
   keywords: ['URL encoding', 'percent encoding', 'URL decode', 'URL encode', 'special characters', 'web development', 'percent-encoded'],
-  authors: [{ name: 'Neo' }],
+  authors: [{ name: 'John Reed' }],
   creator: 'Neo',
   openGraph: {
     title: 'What Is URL Encoding? | Letters2NumbersConverter.com',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         alt: 'URL Encoding visualization showing special characters converted to percent-encoded format',
       },
     ],
-    authors: ['Neo'],
+    authors: [{ name: 'John Reed' }],
   },
   twitter: {
     card: 'summary_large_image',

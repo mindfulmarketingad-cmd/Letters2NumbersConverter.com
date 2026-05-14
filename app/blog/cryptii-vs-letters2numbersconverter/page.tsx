@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "text cipher tools",
     "encode decode tools"
   ],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
   openGraph: {
     title: "Cryptii.com Vs. Letters2NumbersConverter.com - Complete Comparison",
     description: "Comprehensive comparison of Cryptii and Letters2NumbersConverter platforms. See which offers more niche tools and better features.",

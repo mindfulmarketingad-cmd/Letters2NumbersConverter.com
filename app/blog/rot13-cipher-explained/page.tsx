@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'ROT13 history',
     'ROT13 uses',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'ROT13 Cipher Explained — What It Is, How It Works & Why It\'s Used',
     description: 'A complete plain-English explanation of the ROT13 cipher — the shift-13 substitution used for Reddit spoilers, Usenet, and puzzle hints.',

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'FIPS 197',
     'quantum resistant encryption',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'What Is 256 Bit AES Encryption — How It Works & Why It Matters',
     description:
@@ -60,7 +60,7 @@ const jsonLd = {
   dateModified: PUBLISHED,
   image: `${BASE_URL}/images/blog/cryptography.jpg`,
   url: PAGE_URL,
-  author: { '@type': 'Organization', name: 'Letters to Numbers Converter', url: BASE_URL },
+  author: { '@type': 'Person', name: 'John Reed', url: BASE_URL },
   publisher: { '@type': 'Organization', name: 'Letters to Numbers Converter', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
 }

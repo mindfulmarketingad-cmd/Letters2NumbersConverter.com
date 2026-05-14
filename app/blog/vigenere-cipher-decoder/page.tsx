@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'vigenere cipher explained',
     'polyalphabetic cipher',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'Vigenère Cipher Decoder — How to Encode and Decode Step by Step',
     description: 'Step-by-step guide to encoding and decoding the Vigenère cipher. Worked examples, the Vigenère square, and how to crack it without the key using Kasiski examination.',
@@ -47,7 +47,7 @@ const articleSchema = {
   url: PAGE_URL,
   datePublished: PUBLISHED,
   dateModified: PUBLISHED,
-  author: { '@type': 'Organization', name: 'Letters2NumbersConverter.com', url: BASE_URL },
+  author: { '@type': 'Person', name: 'John Reed', url: BASE_URL },
   publisher: { '@type': 'Organization', name: 'Letters2NumbersConverter.com', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
 }

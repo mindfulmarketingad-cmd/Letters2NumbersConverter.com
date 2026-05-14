@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'encoding identification',
     'text decoding guide',
   ],
-  authors: [{ name: 'Neo' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'How To Decode Encoded Text — Base64, Hex, URL, Morse & More',
     description:

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'rosicrucian cipher',
     'pigpen cipher escape room',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'Pigpen Cipher — Complete Guide to the Masonic Cipher Alphabet',
     description: 'A full guide to the Pigpen cipher: the complete alphabet, step-by-step encoding and decoding, variants like the Rosicrucian cipher, and how it appears in escape rooms and puzzles.',
@@ -47,7 +47,7 @@ const articleSchema = {
   url: PAGE_URL,
   datePublished: PUBLISHED,
   dateModified: PUBLISHED,
-  author: { '@type': 'Organization', name: 'Letters2NumbersConverter.com', url: BASE_URL },
+  author: { '@type': 'Person', name: 'John Reed', url: BASE_URL },
   publisher: { '@type': 'Organization', name: 'Letters2NumbersConverter.com', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
 }

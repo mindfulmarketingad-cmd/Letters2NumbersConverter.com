@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'ROT13 Caesar 13',
     'cipher comparison',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'ROT13 vs Caesar Cipher — Key Differences Explained',
     description: 'A clear comparison of ROT13 and the Caesar cipher — what they share, what makes ROT13 unique, and when to use each.',

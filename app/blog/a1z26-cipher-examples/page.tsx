@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "encoding examples",
     "cryptography examples"
   ],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
   openGraph: {
     title: "A1Z26 Cipher Examples - Practical Encoding & Decoding Demonstrations",
     description: "Learn A1Z26 cipher through practical examples. From simple words to complex phrases, understand encoding, decoding, and puzzle-solving techniques.",

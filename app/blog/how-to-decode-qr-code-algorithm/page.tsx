@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'qr code byte mode ascii',
     'qr code format information',
   ],
-  authors: [{ name: 'Neo' }],
+  authors: [{ name: 'John Reed' }],
   creator: 'Neo',
   openGraph: {
     title: 'How To Decode QR Code Algorithm — Step-by-Step Guide',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         alt: 'Diagram showing QR code decoding algorithm steps including finder patterns and data regions',
       },
     ],
-    authors: ['Neo'],
+    authors: [{ name: 'John Reed' }],
   },
   twitter: {
     card: 'summary_large_image',

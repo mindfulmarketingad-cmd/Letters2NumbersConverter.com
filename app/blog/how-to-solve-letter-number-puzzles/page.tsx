@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "How to Solve Letter Number Puzzles: A Complete Strategy Guide",
   description: "Learn how to solve letter number puzzles with our expert guide. Discover strategies, tips, and techniques for decoding A1Z26 ciphers in geocaching, escape rooms, and CTFs.",
   keywords: ["how to solve letter number puzzles", "letter number puzzle solving", "decode letter puzzles", "A1Z26 puzzle tips", "cryptogram solving"],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
   openGraph: {
     title: "How to Solve Letter Number Puzzles: A Complete Strategy Guide",
     description: "Learn how to solve letter number puzzles with our expert guide covering strategies and techniques.",

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'who invented Caesar cipher',
     'Caesar cipher Suetonius',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'Caesar Cipher History — Julius Caesar, Roman Military & Origins',
     description: 'From Julius Caesar\'s military dispatches in 58 BC to modern cryptography textbooks — the complete history of the Caesar cipher.',

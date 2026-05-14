@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'json web token decode',
     'jwt security',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'How Decode JWT Token — Parse Header, Payload & Signature',
     description:
@@ -51,7 +51,7 @@ const articleSchema = {
   url: PAGE_URL,
   datePublished: PUBLISHED,
   dateModified: PUBLISHED,
-  author: { '@type': 'Organization', name: 'Letters2NumbersConverter.com', url: BASE_URL },
+  author: { '@type': 'Person', name: 'John Reed', url: BASE_URL },
   publisher: { '@type': 'Organization', name: 'Letters2NumbersConverter.com', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
 }

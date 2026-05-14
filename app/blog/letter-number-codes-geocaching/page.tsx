@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Letter Number Codes in Geocaching: Solve Mystery Caches Like a Pro",
   description: "Master letter number codes for geocaching puzzle caches. Learn how to decode A1Z26 ciphers, convert coordinates, and solve mystery caches with our expert guide.",
   keywords: ["geocaching letter codes", "mystery cache puzzles", "geocaching ciphers", "puzzle cache solving", "A1Z26 geocaching"],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
 }
 
 export default function GeoachingCodesPage() {

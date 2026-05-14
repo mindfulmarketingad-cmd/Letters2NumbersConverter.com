@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "puzzle creation",
     "escape room challenges"
   ],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
   openGraph: {
     title: "A1Z26 Cipher For Escape Rooms - Design Engaging Puzzles",
     description: "Master the A1Z26 cipher for creating challenging escape room puzzles. Learn cipher techniques, design strategies, and best practices for immersive puzzle experiences.",

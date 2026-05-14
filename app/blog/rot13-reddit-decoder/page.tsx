@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'Reddit spoiler ROT13',
     'decode spoiler Reddit',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'How to Decode ROT13 on Reddit — Spoiler Text Explained',
     description: 'The complete guide to Reddit\'s ROT13 spoiler system — why it exists, how to decode it instantly, and what replaced it on modern Reddit.',

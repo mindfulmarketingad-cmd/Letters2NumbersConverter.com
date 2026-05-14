@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'enigma rotors',
     'enigma plugboard',
   ],
-  authors: [{ name: 'Letters to Numbers Converter' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'What Is a Enigma Machine — History, Mechanics & How It Worked',
     description:
@@ -60,7 +60,7 @@ const jsonLd = {
   dateModified: PUBLISHED,
   image: `${BASE_URL}/images/blog/cryptography.jpg`,
   url: PAGE_URL,
-  author: { '@type': 'Organization', name: 'Letters to Numbers Converter', url: BASE_URL },
+  author: { '@type': 'Person', name: 'John Reed', url: BASE_URL },
   publisher: { '@type': 'Organization', name: 'Letters to Numbers Converter', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
 }

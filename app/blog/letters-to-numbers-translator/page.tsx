@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Letters to Numbers Translator",
   description: "Use our free letters to numbers translator to instantly convert any text to numerical values. Learn how letter-to-number translation works with A=1, B=2 through Z=26.",
   keywords: ["letters to numbers translator", "letter number translator", "translate letters to numbers", "text to number translator", "alphabet translator"],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
   openGraph: {
     title: "Letters to Numbers Translator",
     description: "Use our free letters to numbers translator to instantly convert any text to numerical values.",

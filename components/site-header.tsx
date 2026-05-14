@@ -27,9 +27,6 @@ export function SiteHeader() {
               className="w-10 h-10 rounded-lg shadow-sm group-hover:shadow-md transition-shadow"
               priority
             />
-            <span className="font-semibold text-foreground hidden sm:inline text-lg">
-              Letters to Numbers
-            </span>
           </Link>
         </div>
         
@@ -46,6 +43,12 @@ export function SiteHeader() {
           </Link>
           <Link href="/hackathon" className="text-muted-foreground hover:text-foreground transition-colors">
             Hackathon
+          </Link>
+          <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+            About Us
+          </Link>
+          <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+            Contact
           </Link>
         </nav>
 
@@ -113,7 +116,21 @@ export function SiteHeader() {
             >
               Hackathon
             </Link>
-            
+            <Link
+              href="/about"
+              className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About Us
+            </Link>
+            <Link
+              href="/contact"
+              className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
+
             {/* Mobile Auth Buttons */}
             <div className="border-t border-border pt-4 mt-2 flex flex-col gap-3">
               <HeaderUsageIndicator />

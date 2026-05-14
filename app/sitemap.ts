@@ -164,6 +164,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-to-decode-qr-code-algorithm',
     'how-decode-jwt-token',
     'how-do-you-decode-numbers-to-letters',
+    'how-to-decode-a-text-message',
+    'how-to-decode-encoded-text',
+    'how-to-decode-hex-file',
   ]
 
   const playRoutes = [

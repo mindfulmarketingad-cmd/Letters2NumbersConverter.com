@@ -106,7 +106,7 @@ export function HomepageMorseSection() {
                 Featured Tool
               </span>
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            <h2 id="morse-code-translator" className="text-2xl md:text-3xl font-bold text-foreground">
               Morse Code Translator
             </h2>
             <p className="text-muted-foreground mt-1 text-sm md:text-base max-w-md">

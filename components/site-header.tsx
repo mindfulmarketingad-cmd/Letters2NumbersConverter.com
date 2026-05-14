@@ -41,6 +41,9 @@ export function SiteHeader() {
           <Link href="/tools" className="text-muted-foreground hover:text-foreground transition-colors">
             Tools
           </Link>
+          <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
+            Blog
+          </Link>
           <Link href="/hackathon" className="text-muted-foreground hover:text-foreground transition-colors">
             Hackathon
           </Link>
@@ -89,15 +92,22 @@ export function SiteHeader() {
             >
               Pricing
             </Link>
-            <Link 
-              href="/tools" 
+            <Link
+              href="/tools"
               className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Tools
             </Link>
-            <Link 
-              href="/hackathon" 
+            <Link
+              href="/blog"
+              className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
+              href="/hackathon"
               className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
               onClick={() => setIsMenuOpen(false)}
             >

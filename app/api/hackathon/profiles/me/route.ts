@@ -36,7 +36,7 @@ export async function PUT(req: NextRequest) {
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const body = await req.json()
-  const { name, role, skills, looking_for, links } = body
+  const { name, role, skills, looking_for, links, hackathon } = body
 
   if (!name || !role || !Array.isArray(skills) || skills.length === 0) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
@@ -62,6 +62,7 @@ export async function PUT(req: NextRequest) {
       skills,
       looking_for: looking_for || null,
       links: sanitisedLinks,
+      hackathon: hackathon || null,
       updated_at: new Date().toISOString(),
     }, { onConflict: 'user_id' })
     .select()

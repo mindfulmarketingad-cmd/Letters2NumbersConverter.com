@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const body = await req.json()
-  const { name, description, skills_needed, team_size_needed } = body
+  const { name, description, skills_needed, team_size_needed, hackathon } = body
 
   if (!name || !description || !Array.isArray(skills_needed) || skills_needed.length === 0) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
@@ -44,6 +44,7 @@ export async function POST(req: NextRequest) {
       description: description.trim(),
       skills_needed,
       team_size_needed: Number(team_size_needed) || 3,
+      hackathon: hackathon || null,
     }])
     .select()
     .single()

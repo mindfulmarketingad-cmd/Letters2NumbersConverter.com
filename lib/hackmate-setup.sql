@@ -16,8 +16,10 @@ CREATE TABLE IF NOT EXISTS hackmate_profiles (
   updated_at      TIMESTAMPTZ DEFAULT NOW()
 );
 
--- Add links column to existing tables (safe to run on existing deployments)
+-- Add columns to existing tables (safe to run on existing deployments)
 ALTER TABLE hackmate_profiles ADD COLUMN IF NOT EXISTS links JSONB NOT NULL DEFAULT '{}';
+ALTER TABLE hackmate_profiles ADD COLUMN IF NOT EXISTS hackathon TEXT;
+ALTER TABLE hackmate_projects ADD COLUMN IF NOT EXISTS hackathon TEXT;
 
 CREATE TABLE IF NOT EXISTS hackmate_projects (
   id                UUID DEFAULT gen_random_uuid() PRIMARY KEY,

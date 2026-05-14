@@ -161,6 +161,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-to-crack-caesar-cipher',
     'vigenere-cipher-decoder',
     'pigpen-cipher',
+    'how-to-decode-qr-code-algorithm',
+    'how-decode-jwt-token',
+    'how-do-you-decode-numbers-to-letters',
   ]
 
   const playRoutes = [

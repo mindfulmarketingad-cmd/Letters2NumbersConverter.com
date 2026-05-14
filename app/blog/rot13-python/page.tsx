@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'ROT13 implementation Python',
     'Python string rotation',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'ROT13 in Python — 3 Ways to Encode and Decode (with Examples)',
     description: '3 complete Python approaches to ROT13: the built-in codecs method, str.maketrans, and a manual loop. All code examples work in Python 3.',

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'code decoding guide',
     'alphanumeric encoding decoder',
   ],
-  authors: [{ name: 'Neo' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'Alphanumeric Code Translator — Decoder Walkthrough',
     description: 'Learn complete alphanumeric code translator techniques with step-by-step decoder walkthrough. Master multiple encoding methods and practical decoding strategies.',

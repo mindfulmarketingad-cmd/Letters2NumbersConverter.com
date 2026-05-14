@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Fun Number Word Games and Activities for All Ages",
   description: "Discover engaging number word games and activities using letter-to-number codes. Perfect for families, classrooms, and parties. From simple A1Z26 games to creative word puzzles.",
   keywords: ["number word games", "letter number activities", "alphabet games", "educational word games", "family puzzle games"],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
 }
 
 export default function NumberWordGamesPage() {

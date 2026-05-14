@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "How to Create Secret Codes with Letters and Numbers",
   description: "Learn how to create your own secret codes using letters and numbers. Perfect for kids, friends, and anyone who wants to send encrypted messages. Step-by-step guide included.",
   keywords: ["secret codes", "letter number codes", "create secret messages", "cipher for kids", "encrypted messages"],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
 }
 
 export default function SecretCodesPage() {

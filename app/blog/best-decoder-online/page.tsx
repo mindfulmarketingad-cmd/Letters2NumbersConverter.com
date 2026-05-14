@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "secure decoder",
     "decoder tool website"
   ],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
   openGraph: {
     title: "Best Decoder Tool Online",
     description: "The most comprehensive free online decoder with instant processing for all your encoding and decoding needs.",

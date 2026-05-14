@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'self-inverse cipher',
     'Caesar cipher 13 positions',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'Caesar Cipher Shift 13 — Why ROT13 Is Special',
     description: 'Why shift 13 is the only self-inverse Caesar cipher, how it became ROT13, and where you encounter it every day on the internet.',

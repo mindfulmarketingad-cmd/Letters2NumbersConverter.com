@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Build Your Own Escape Room | Free Online Guide & Tools",
   description: "Learn how to build your own escape room with our complete guide. Create cipher puzzles, design challenges, and share with friends using our free escape room builder tool.",
   keywords: ["build your own escape room", "escape room builder", "DIY escape room", "create escape room puzzles", "homemade escape room", "escape room ideas"],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
 }
 
 export default function BuildYourOwnEscapeRoomPage() {

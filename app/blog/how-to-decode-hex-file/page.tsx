@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'xxd hex decode',
     'hex editor',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'How To Decode Hex File — Read Binary Data as Text Step by Step',
     description:
@@ -51,7 +51,7 @@ const articleJsonLd = {
   url: PAGE_URL,
   datePublished: PUBLISHED,
   dateModified: PUBLISHED,
-  author: { '@type': 'Organization', name: 'Letters2NumbersConverter.com', url: BASE_URL },
+  author: { '@type': 'Person', name: 'John Reed', url: BASE_URL },
   publisher: { '@type': 'Organization', name: 'Letters2NumbersConverter.com', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
   image: { '@type': 'ImageObject', url: `${BASE_URL}/og-image.png`, width: 1200, height: 630 },

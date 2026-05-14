@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'decode unknown Caesar cipher',
     'Caesar cipher solver',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'How to Crack a Caesar Cipher — Brute Force & Frequency Analysis',
     description: 'Step-by-step guide to cracking any Caesar cipher using brute force (25 shifts) or frequency analysis. Includes worked examples and a free online solver.',

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "encode decode",
     "codebreaker tools"
   ],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
   openGraph: {
     title: "Boxentriq.com Vs. Letters2NumbersConverter.com - Complete Comparison",
     description: "Comprehensive comparison of Boxentriq and Letters2NumbersConverter platforms. See which offers superior cipher solving and encoding conversion tools.",

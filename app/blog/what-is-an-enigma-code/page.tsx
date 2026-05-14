@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'enigma bombe machine',
     'ultra intelligence',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'What Is an Enigma Code — How the WWII Cipher Worked & Was Broken',
     description:

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'php html encoding',
     'php base64 encoding',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'How To Encode PHP Code — Base64, URL, HTML & JSON Encoding in PHP',
     description:
@@ -48,7 +48,7 @@ const jsonLd = {
   headline: 'How To Encode PHP Code — Base64, URL, HTML & JSON Encoding in PHP',
   datePublished: PUBLISHED,
   dateModified: PUBLISHED,
-  author: { '@type': 'Organization', name: 'Letters to Numbers Converter' },
+  author: { '@type': 'Person', name: 'John Reed' },
   publisher: { '@type': 'Organization', name: 'Letters to Numbers Converter', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
 }

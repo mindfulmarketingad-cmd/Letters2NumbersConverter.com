@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'python hashlib sha256',
     'python encoding guide',
   ],
-  authors: [{ name: 'Letters2NumbersConverter.com' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'How To Encode Python Code — Base64, URL, HTML, JSON & Unicode',
     description:
@@ -50,7 +50,7 @@ const jsonLd = {
   datePublished: PUBLISHED,
   dateModified: PUBLISHED,
   image: `${BASE_URL}/images/blog/ascii-encoding.jpg`,
-  author: { '@type': 'Organization', name: 'Letters to Numbers Converter' },
+  author: { '@type': 'Person', name: 'John Reed' },
   publisher: { '@type': 'Organization', name: 'Letters to Numbers Converter', url: BASE_URL },
   mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
 }

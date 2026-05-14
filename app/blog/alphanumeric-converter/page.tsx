@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Alphanumeric Converter | Convert Text to Numbers & Codes",
   description: "Free alphanumeric converter tool to transform text into numbers, ASCII codes, hex, and binary. Convert between letters and numeric representations instantly.",
   keywords: ["alphanumeric converter", "text to numbers", "letter converter", "ASCII converter", "hex converter", "binary converter"],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
 }
 
 export default function AlphanumericConverterPage() {

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Letter to Numbers Code: The Complete Guide to Converting Alphabet to Numbers",
   description: "Learn how the letter to numbers code works. Convert A=1, B=2 through Z=26 with our complete guide to the A1Z26 cipher system used in puzzles, cryptography, and encoding.",
   keywords: ["letter to numbers code", "A1Z26 cipher", "alphabet number code", "letter number encoding", "alphabet cipher"],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
   openGraph: {
     title: "Letter to Numbers Code: The Complete Guide to Converting Alphabet to Numbers",
     description: "Learn how the letter to numbers code works. Convert A=1, B=2 through Z=26 with our complete guide.",

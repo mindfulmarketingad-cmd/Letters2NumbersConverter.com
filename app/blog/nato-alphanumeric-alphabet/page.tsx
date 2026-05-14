@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "NATO Alphanumeric Alphabet | Complete Phonetic Guide",
   description: "Learn the NATO alphanumeric alphabet - the phonetic code used worldwide for clear communication. Complete guide with all 26 letters and their phonetic equivalents.",
   keywords: ["NATO alphanumeric alphabet", "NATO phonetic alphabet", "phonetic code", "military alphabet", "international phonetic", "communication code"],
-  authors: [{ name: "Neo" }],
+  authors: [{ name: "John Reed" }],
   openGraph: {
     title: "NATO Alphanumeric Alphabet",
     description: "Master the NATO alphanumeric alphabet used for clear communication across industries and militaries worldwide.",

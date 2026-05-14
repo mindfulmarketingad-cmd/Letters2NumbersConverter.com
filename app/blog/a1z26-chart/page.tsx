@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'A1Z26 Chart',
   description: 'A1Z26 Chart - Learn about the A1Z26 cipher, how it works, and why it\'s essential for encoding and decoding text. Explore the differences between A1Z26 and A0Z25 alphabetic encoding systems.',
   keywords: ['A1Z26 chart', 'A1Z26 cipher', 'A1Z26 encoding', 'alphabetic conversion', 'letters to numbers'],
-  authors: [{ name: 'Neo' }],
+  authors: [{ name: 'John Reed' }],
   creator: 'Neo',
   openGraph: {
     title: 'A1Z26 Chart',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         alt: 'A1Z26 Chart visualization showing letter to number conversion',
       },
     ],
-    authors: ['Neo'],
+    authors: [{ name: 'John Reed' }],
   },
   twitter: {
     card: 'summary_large_image',

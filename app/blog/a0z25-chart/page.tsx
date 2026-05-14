@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         alt: 'A0Z25 Chart - Alphabet to Numbers Encoding',
       },
     ],
-    authors: ['Neo'],
+    authors: [{ name: 'John Reed' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -206,7 +206,7 @@ export default function A0Z25ChartPage() {
                 Real-World Uses of A0Z25
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                A0Z25 encoding is utilized by a diverse range of professionals and enthusiasts:
+                A0Z25 encoding is used by a diverse range of professionals and enthusiasts:
               </p>
               
               <ul className="space-y-3 text-lg text-muted-foreground">
@@ -225,7 +225,7 @@ export default function A0Z25ChartPage() {
                 <li className="flex items-start gap-3">
                   <span className="text-teal-500 font-bold text-xl">→</span>
                   <div>
-                    <strong className="text-black dark:text-white">Data Scientists</strong> leverage it for text preprocessing and feature engineering
+                    <strong className="text-black dark:text-white">Data Scientists</strong> use it for text preprocessing and feature engineering
                   </div>
                 </li>
                 <li className="flex items-start gap-3">

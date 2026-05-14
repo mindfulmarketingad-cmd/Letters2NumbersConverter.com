@@ -33,7 +33,7 @@ const jsonLd = {
   headline: 'How To Encode A URL — Percent Encoding, Query Strings & Best Practices',
   datePublished: '2026-05-14T00:00:00.000Z',
   dateModified: '2026-05-14T00:00:00.000Z',
-  author: { '@type': 'Organization', name: 'Letters to Numbers Converter' },
+  author: { '@type': 'Person', name: 'John Reed' },
   publisher: {
     '@type': 'Organization',
     name: 'Letters to Numbers Converter',

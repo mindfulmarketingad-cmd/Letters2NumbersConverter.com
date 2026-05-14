@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'decode numbers to letters',
     'A1Z26 decoder tool',
   ],
-  authors: [{ name: 'Neo' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'A1Z26 Cipher Decoder — Step-by-Step How to Decode',
     description: 'Master A1Z26 cipher decoding with practical examples and step-by-step instructions. Learn decryption techniques for solving encoded messages.',

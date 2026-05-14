@@ -36,7 +36,7 @@ const jsonLd = {
   datePublished: '2026-05-14T00:00:00.000Z',
   dateModified: '2026-05-14T00:00:00.000Z',
   image: 'https://letters2numbersconverter.com/images/blog/ascii-encoding.jpg',
-  author: { '@type': 'Organization', name: 'Letters to Numbers Converter' },
+  author: { '@type': 'Person', name: 'John Reed' },
   publisher: {
     '@type': 'Organization',
     name: 'Letters to Numbers Converter',

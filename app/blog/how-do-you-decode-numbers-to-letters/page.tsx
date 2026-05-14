@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'phone keypad cipher',
     'number to letter converter',
   ],
-  authors: [{ name: 'Neo' }],
+  authors: [{ name: 'John Reed' }],
   openGraph: {
     title: 'How Do You Decode Numbers To Letters — Complete Guide',
     description:

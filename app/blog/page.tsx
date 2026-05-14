@@ -66,6 +66,11 @@ const blogPosts = [
   { slug: "how-to-use-unicode-in-html", title: "How To Use Unicode in HTML", description: "How to use Unicode in HTML: set UTF-8 charset, insert characters as direct text, named entities (&amp;euro;), or numeric references (&#x20AC;). Includes 15-row character reference table.", category: "Decoding Guides" },
   { slug: "how-to-encode-python-code", title: "How To Encode Python Code", description: "Python encoding functions explained: base64, urllib.parse, html.escape, json.dumps, and str.encode — with real code examples and a use-case decision table.", category: "Decoding Guides" },
 
+  // Cryptography deep dives
+  { slug: "what-is-a-enigma-machine", title: "What Is a Enigma Machine", description: "The history and mechanics of the Enigma machine: rotors, reflector, plugboard, how encryption worked, and how Polish and British codebreakers cracked it.", category: "Cryptography" },
+  { slug: "what-is-an-enigma-code", title: "What Is an Enigma Code", description: "What an Enigma code is, how messages were structured, the daily key system, why the cipher seemed unbreakable, and the timeline of how it was broken at Bletchley Park.", category: "Cryptography" },
+  { slug: "what-is-256-bit-aes-encryption", title: "What Is 256 Bit AES Encryption", description: "AES-256 explained: how the block cipher works, the four per-round operations, modes of operation (GCM, CBC, CTR), real-world use cases, and quantum resistance.", category: "Cryptography" },
+
   // Image & Media
   { slug: "how-to-change-photo-to-high-resolution", title: "How to Change a Photo to High Resolution", description: "Methods to upscale and improve photo resolution using AI tools and image editors.", category: "Image & Media" },
   { slug: "how-to-convert-image-to-text-in-excel", title: "How to Convert Image to Text in Excel", description: "Step-by-step guide to extracting text from images and importing it into Excel using OCR tools.", category: "Image & Media" },

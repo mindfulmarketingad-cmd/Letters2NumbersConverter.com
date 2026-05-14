@@ -173,6 +173,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-to-url-encode',
     'how-to-use-unicode-in-html',
     'how-to-encode-python-code',
+    'what-is-a-enigma-machine',
+    'what-is-an-enigma-code',
+    'what-is-256-bit-aes-encryption',
   ]
 
   const playRoutes = [

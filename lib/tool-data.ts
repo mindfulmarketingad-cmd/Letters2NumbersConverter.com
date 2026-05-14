@@ -1154,8 +1154,6 @@ export const getToolData = (toolId: string) => {
         { title: 'Social Media Creators', description: 'Creating gradient backgrounds for Instagram stories, YouTube thumbnails, and banner images using aesthetically matched color sets.' },
       ],
     },
-  }
-
     'hackathon-team-name-generator': {
       howItWorks: 'Choose a theme (Tech, Space, Nature, Mythology, Animals, or Puns), set how many names you want, and click Generate. The tool combines themed adjectives and nouns to produce creative team names instantly. Click any name to copy it, or use Copy All to grab the full list.',
       features: [

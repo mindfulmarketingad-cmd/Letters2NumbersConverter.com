@@ -635,6 +635,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Generators',
     href: '/tools/hackathon-team-name-generator',
   },
+  'bubble-text-generator': {
+    name: 'Bubble Text Generator',
+    description: 'Convert any text into bubble letters — circled outline, black filled, keycap, squared, fullwidth, and double struck. Copy for Instagram, Twitter, Discord, and TikTok.',
+    category: 'Text Tools',
+    href: '/tools/bubble-text-generator',
+  },
 }
 
 export function getToolRegistry() {

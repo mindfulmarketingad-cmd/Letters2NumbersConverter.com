@@ -108,6 +108,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'gradient-palette-generator',
     'gradient-maker-from-image',
     'hackathon-team-name-generator',
+    'bubble-text-generator',
   ]
 
   const blogRoutes = [

@@ -1170,6 +1170,25 @@ export const getToolData = (toolId: string) => {
         { title: 'Student Teams', description: 'Finding a fun name for class projects, coding competitions, and group assignments.' },
       ],
     },
+    'bubble-text-generator': {
+      howItWorks: 'Type or paste any text into the input field and the bubble text generator instantly converts it into 8 different bubble letter styles. Click Copy to grab any style to your clipboard, Preview to see it large, or Tweet to share directly on Twitter/X.',
+      features: [
+        '8 unique bubble text styles — circled, black bubble, alternating, parenthesis, squared, keycap, fullwidth, double struck',
+        'Instant real-time conversion as you type',
+        'One-click Copy to clipboard for every style',
+        'Full-size Preview modal for each style',
+        'Direct Tweet button to share on Twitter/X',
+        'Supports letters, numbers, and spaces',
+        'Works on Instagram, Discord, TikTok, WhatsApp, and more',
+        'No sign-up required — free and instant',
+      ],
+      whoIsItFor: [
+        { title: 'Social Media Creators', description: 'Stand out on Instagram, TikTok, and Twitter with bubble letters in bios, captions, and usernames.' },
+        { title: 'Discord & Gaming Communities', description: 'Use bubble text in server names, channel descriptions, and messages for a unique visual identity.' },
+        { title: 'Content Creators & Streamers', description: 'Add flair to YouTube descriptions, Twitch bios, and stream panels without design software.' },
+        { title: 'Students & Educators', description: 'Create visually engaging notes and flashcards with bubble text to highlight key terms.' },
+      ],
+    },
   }
 
   return toolDataMap[toolId] || {

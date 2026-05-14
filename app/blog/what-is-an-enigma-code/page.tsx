@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'What Is an Enigma Code — How the WWII Cipher Worked & Was Broken',
     description:
-      'A complete guide to Enigma codes: how the machine generated ciphertext, how the daily key system worked, and how Polish mathematicians and Alan Turing's Bombe cracked one of history's most complex ciphers.',
+      "A complete guide to Enigma codes: how the machine generated ciphertext, how the daily key system worked, and how Polish mathematicians and Alan Turing's Bombe cracked one of history's most complex ciphers.",
     type: 'article',
     url: PAGE_URL,
     publishedTime: PUBLISHED,

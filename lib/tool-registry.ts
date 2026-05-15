@@ -689,6 +689,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Writing Tools',
     href: '/tools/run-on-sentence-checker',
   },
+  'virality-checker': {
+    name: 'Virality Checker',
+    description: 'Score your content\'s viral potential across hook strength, emotional power, shareability, trending potential, and engagement. Free instant analysis.',
+    category: 'Writing Tools',
+    href: '/tools/virality-checker',
+  },
 }
 
 export function getToolRegistry() {

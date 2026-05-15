@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'YAML to JPG Converter | Letters2NumbersConverter.com',
+  title: { absolute: "YAML To JPG Converter" },
   description:
     'Convert YAML configuration files to beautifully formatted JPG images instantly. Visualize and share your YAML data as images.',
   keywords: [

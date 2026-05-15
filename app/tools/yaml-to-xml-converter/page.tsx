@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'YAML to XML Converter | Letters2NumbersConverter.com',
+  title: { absolute: "YAML To XML Converter" },
   description:
     'Convert YAML files to XML format instantly with our free online YAML to XML Converter. Supports nested structures, arrays, and special characters. No installation required.',
   keywords: [

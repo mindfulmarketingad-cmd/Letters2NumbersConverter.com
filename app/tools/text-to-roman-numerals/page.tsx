@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/text-to-roman-numerals`
 
 export const metadata: Metadata = {
-  title: 'Text to Roman Numerals',
+  title: { absolute: "Text To Roman Numerals" },
   description: 'Text to Roman Numerals converter — instantly translate any text or number into Roman numerals. Free, browser-based, with separator options and a reverse decoder.',
   keywords: [
     'text to roman numerals',

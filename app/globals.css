@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+/* Override dark variant to require .dark class — prevents prefers-color-scheme
+   from triggering dark: utilities on system-dark-mode devices. Since we never
+   add .dark to the DOM, dark: classes are effectively disabled site-wide. */
+@custom-variant dark (&:is(.dark *));
 :root {
   /* Color palette: Snow bg, Mint Leaf primary, Sky Aqua accent, Pearl Aqua muted */
   --background: #FFFBFA;

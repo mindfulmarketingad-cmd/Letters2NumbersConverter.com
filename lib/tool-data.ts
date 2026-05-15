@@ -1426,6 +1426,28 @@ export const getToolData = (toolId: string) => {
         { title: 'Students & Learners', description: 'Understanding the INI file format by seeing a live conversion of familiar key-value text into proper sections and entries.' },
       ],
     },
+    'ini-to-xml-converter': {
+      howItWorks: 'Paste your INI file into the left panel. The converter parses each [section] header into an XML parent element and converts every key = value pair beneath it into a child element with the key as the tag name and the value as its text content. Customise the root element name, indentation style, XML encoding declaration, and whether to render values as child elements or XML attributes. Download the output as a .xml file or copy it to your clipboard.',
+      features: [
+        'Real-time INI → XML conversion as you type or paste',
+        'Customisable root element name (config, settings, root, or any valid XML tag)',
+        'Indentation options: 2 spaces, 4 spaces, or tab',
+        'XML declaration toggle with encoding choice (UTF-8, UTF-16, ISO-8859-1)',
+        'Keys-as-attributes mode: render INI values as XML attributes instead of child elements',
+        'Automatic XML character escaping (&amp; &lt; &gt; &quot; &apos;)',
+        'Skips INI comments and blank lines silently',
+        'Download output as .xml file',
+        'Copy INI input or XML output to clipboard',
+        'Sample INI with database / server / cache sections',
+        'Fully private — converted entirely in your browser, nothing uploaded',
+      ],
+      whoIsItFor: [
+        { title: 'Developers', description: 'Converting INI-based application configs into XML for use with frameworks and parsers that require XML configuration (Spring, .NET, Maven).' },
+        { title: 'System Administrators', description: 'Reformatting legacy INI settings files into XML for modern deployment pipelines and configuration management tools.' },
+        { title: 'DevOps Engineers', description: 'Translating simple INI environment files into XML format during infrastructure migrations and cross-platform CI/CD setup.' },
+        { title: 'Students & Learners', description: 'Seeing how the flat INI structure maps to hierarchical XML to better understand configuration file formats.' },
+      ],
+    },
     'xml-to-ini-converter': {
       howItWorks: 'Paste your XML into the left panel. The converter uses the browser\'s built-in XML parser to read the document, then maps the structure to INI format: top-level child elements become INI sections, and their child elements become key = value pairs. Deeper nesting is either flattened with dotted key names (parent.child = value) or kept under the nearest section — your choice. XML attributes can be included with a configurable prefix. Copy the result or download it as a .ini file.',
       features: [

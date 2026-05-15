@@ -347,6 +347,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Conversion',
     href: '/tools/txt-to-ini-converter',
   },
+  'ini-to-xml-converter': {
+    name: 'INI To XML Converter',
+    description: 'Convert INI configuration files to well-formed XML instantly',
+    category: 'Conversion',
+    href: '/tools/ini-to-xml-converter',
+  },
   'xml-to-ini-converter': {
     name: 'XML To INI Converter',
     description: 'Convert XML configuration files to INI format instantly',

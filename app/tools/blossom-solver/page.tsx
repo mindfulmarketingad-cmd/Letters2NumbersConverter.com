@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/blossom-solver`
 
 const toolSchema = generateToolPageSchema(
-  "Blossom Solver - Merriam-Webster Blossom Answers & Helper",
+  "Blossom Solver",
   "Free online Blossom solver helps you find all valid words and blossom answers for Merriam-Webster Blossom daily puzzle. Enter 7 letters to get blossom answers, find pangrams, and maximize your score with our blossom puzzle solver.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Blossom Solver - Merriam-Webster Blossom Answers & Helper", url: PAGE_URL },
+  { name: "Blossom Solver", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Blossom Solver - Merriam-Webster Blossom Answers & Helper",
+  title: { absolute: "Blossom Solver" },
   description: "Free online Blossom solver helps you find all valid words and blossom answers for Merriam-Webster Blossom daily puzzle. Enter 7 letters to get blossom answers, find pangrams, and maximize your score with our blossom puzzle solver.",
   keywords: ["blossom solver", "blossom answers", "blossom game solver", "blossom puzzle", "merriam webster blossom", "blossom helper", "blossom word finder", "blossom puzzle solver"],
   openGraph: {
@@ -49,7 +49,7 @@ export default function BlossomSolverPage() {
     <ToolLayout
       toolId="blossom-solver"
       toolName="Blossom Solver"
-      toolDescription="Help solve Merriam-Webster Blossom daily word game puzzles. Enter your seven letters (one center letter and six petal letters) and discover all possible words to maximize your score and find high-scoring pangrams."
+      toolDescription="The Blossom Solver is purpose-built for Merriam-Webster's daily Blossom puzzle, finding every valid word that can be formed from the seven available letters while always including the mandatory center letter. Enter the center letter and the six petal letters and the solver instantly surfaces the full word list, sorted by length and score, so you can strategically work toward the highest possible point total. A dedicated pangram detector highlights any word that uses all seven letters, since pangrams earn bonus points and are often the key to completing the daily challenge. Whether you are stuck on today's puzzle or want to verify you have found every possible word, the Blossom Solver delivers comprehensive results in seconds."
       toolComponent={<BlossomSolver />}
       toolData={toolData}
     />

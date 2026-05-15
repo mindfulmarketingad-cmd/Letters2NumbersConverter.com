@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Book Cipher Decoder",
+  title: { absolute: "Book Cipher Decoder" },
   description: "Decode hidden messages from books",
   keywords: [],
   openGraph: {
@@ -49,7 +49,7 @@ export default function BookCipherDecoderPage() {
     <ToolLayout
       toolId="book-cipher-decoder"
       toolName="Book Cipher Decoder"
-      toolDescription="Decode hidden messages from books"
+      toolDescription="The Book Cipher Decoder encodes and decodes secret messages using any shared text as the cipher key, replicating one of history's most trusted covert communication methods used by spies, resistance fighters, and diplomats for centuries. In a book cipher, each number in the ciphertext points to a specific page, line, and word in the agreed-upon book, making the message completely unreadable to anyone without the exact same edition. Paste your reference text and your coded number sequence into the tool and it instantly resolves each coordinate to reveal the hidden plaintext, or works in reverse to encode a message you wish to conceal. The entire process runs in your browser without any server-side processing, so your secret texts and reference books never leave your device."
       toolComponent={<BookCipherDecoder />}
       toolData={toolData}
     />

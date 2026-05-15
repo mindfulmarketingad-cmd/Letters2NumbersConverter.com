@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Enigma Machine Emulator",
+  title: { absolute: "Enigma Machine Emulator" },
   description: "Simulate the historical Enigma machine cipher device",
   keywords: [],
   openGraph: {

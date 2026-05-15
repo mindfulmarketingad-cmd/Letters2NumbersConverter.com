@@ -1334,6 +1334,86 @@ export const getToolData = (toolId: string) => {
         { title: 'Non-Native English Speakers', description: 'Write a simple version, then expand into natural, fluent English with your chosen professional tone.' },
       ],
     },
+    'audio-spectrogram-decoder': {
+      howItWorks: 'Upload or drag an image of a spectrogram into the tool. It analyzes the frequency bands and timing patterns to extract hidden text or data encoded within the audio visualization. Results are displayed instantly without sending any data to servers.',
+      features: ['Decode hidden messages from spectrogram images', 'Supports PNG, JPG, and BMP spectrogram formats', 'Frequency band analysis and pattern recognition', 'Instant browser-based decoding — no uploads', 'Works with spectrograms from common audio editors', 'Copy decoded output to clipboard'],
+      whoIsItFor: [
+        { title: 'CTF Competitors', description: 'Solving steganography and audio challenges that hide flags inside spectrogram images.' },
+        { title: 'Security Researchers', description: 'Investigating covert audio communication channels and steganographic techniques.' },
+        { title: 'Musicians & Producers', description: 'Exploring artistic audio-visual encoding used in album art and music puzzles.' },
+        { title: 'Educators', description: 'Teaching students about signal processing and hidden-data techniques.' },
+      ],
+    },
+    'camel-case-converter': {
+      howItWorks: 'Paste any text into the input and select your target case format. The tool instantly converts between camelCase, PascalCase, snake_case, kebab-case, SCREAMING_SNAKE_CASE, and plain text — preserving words and removing unwanted punctuation automatically.',
+      features: ['Convert to camelCase, PascalCase, snake_case, kebab-case', 'SCREAMING_SNAKE_CASE and Title Case support', 'Handles spaces, hyphens, underscores as word separators', 'Real-time conversion as you type', 'Batch convert multiple identifiers at once', 'Copy result to clipboard instantly'],
+      whoIsItFor: [
+        { title: 'Software Developers', description: 'Quickly reformatting variable names, function names, and identifiers across different coding conventions.' },
+        { title: 'API Designers', description: 'Converting field names between JSON (camelCase) and database (snake_case) naming styles.' },
+        { title: 'Technical Writers', description: 'Standardizing terminology and identifiers in documentation and style guides.' },
+        { title: 'Data Engineers', description: 'Normalizing column and field names when migrating data between systems with different conventions.' },
+      ],
+    },
+    'convert-ogg-to-wav': {
+      howItWorks: 'Select or drag an OGG file into the tool. It decodes the Ogg Vorbis audio entirely in your browser using the Web Audio API and re-encodes it to uncompressed WAV format. No files leave your device — download the converted WAV instantly.',
+      features: ['Convert OGG to WAV entirely in the browser', 'Supports OGG Vorbis (most common OGG variant)', 'Preserves original sample rate and channel count', 'No file size limit imposed by servers', 'Download converted WAV immediately', 'Zero data sent to external servers — fully private'],
+      whoIsItFor: [
+        { title: 'Game Developers', description: 'Converting OGG audio assets to WAV for use in engines or tools that require uncompressed audio.' },
+        { title: 'Audio Engineers', description: 'Working with clients who deliver OGG files but need WAV for professional editing software.' },
+        { title: 'Podcast Producers', description: 'Converting listener-submitted OGG recordings to a universally compatible WAV format.' },
+        { title: 'Musicians', description: 'Preparing OGG stems for import into DAWs that prefer or require WAV input.' },
+      ],
+    },
+    'letter-number-converter': {
+      howItWorks: 'Type or paste text into the input panel and select your encoding format — A1Z26 (A=1), A0Z25 (A=0), ASCII, hexadecimal, or binary. The converter instantly outputs the number sequence. Switch to decode mode to reverse the process and convert numbers back to letters.',
+      features: ['A1Z26 (A=1 to Z=26) and A0Z25 (A=0 to Z=25) encoding', 'ASCII, hexadecimal, and binary conversion', 'Bidirectional — encode letters or decode numbers', 'Supports 25+ languages and character sets', 'Real-time results as you type', 'Copy output and download results'],
+      whoIsItFor: [
+        { title: 'Puzzle Enthusiasts', description: 'Encoding and decoding letter-number substitution ciphers for escape rooms, crosswords, and mystery games.' },
+        { title: 'Students', description: 'Learning about character encoding, number bases, and ASCII in computer science classes.' },
+        { title: 'Teachers', description: 'Creating number-coded activities, worksheets, and classroom cipher challenges.' },
+        { title: 'Developers', description: 'Quickly testing letter-to-number encoding logic without writing code.' },
+      ],
+    },
+    'longest-word-using-these-letters-solver': {
+      howItWorks: 'Enter your available letters into the input field. The solver searches its dictionary for the longest valid English word that can be formed using only those letters, without repeating any letter more than it appears in your set. Results are ranked by word length.',
+      features: ['Finds the longest possible word from your letters', 'Full English dictionary with 170,000+ words', 'Shows all words ranked from longest to shortest', 'Filter results by minimum word length', 'Works with any combination of letters including duplicates', 'Instant results with no page reload'],
+      whoIsItFor: [
+        { title: 'Scrabble Players', description: 'Maximizing point-scoring by finding the longest word playable from your current rack.' },
+        { title: 'Words with Friends Players', description: 'Discovering high-value long words from a hand of mixed letters.' },
+        { title: 'Word Game Enthusiasts', description: 'Solving challenges that ask you to make the longest word from a given set of letters.' },
+        { title: 'Educators', description: 'Creating vocabulary exercises that challenge students to find long words from letter sets.' },
+      ],
+    },
+    'playfair-cipher-solver': {
+      howItWorks: 'Enter your keyword to generate the 5×5 Playfair key square. Then type your plaintext to encrypt it, or paste ciphertext to decrypt. The tool handles I/J merging and the digraph substitution rules automatically, showing the full key square and step-by-step output.',
+      features: ['Encrypt and decrypt with any Playfair keyword', 'Automatic 5×5 key square generation', 'Handles I/J equivalence and double-letter rules', 'Displays the full key square visually', 'Step-by-step digraph breakdown', 'Supports uppercase and lowercase input'],
+      whoIsItFor: [
+        { title: 'Cryptography Students', description: 'Learning the Playfair cipher algorithm used historically in WWI and WWII communications.' },
+        { title: 'Puzzle Solvers', description: 'Deciphering Playfair-encoded messages in mystery games, escape rooms, and puzzle hunts.' },
+        { title: 'History Enthusiasts', description: 'Exploring classical cryptography and the role of the Playfair cipher in military history.' },
+        { title: 'Teachers', description: 'Demonstrating digraph substitution ciphers in cryptography and mathematics classes.' },
+      ],
+    },
+    'rgb-to-pantone-color-converter': {
+      howItWorks: 'Enter an RGB color value (0–255 for each channel) or paste a hex code. The tool calculates the perceptual color distance (delta-E) between your input and every color in the Pantone library, returning the closest Pantone match with its name and code.',
+      features: ['Match any RGB or hex color to the nearest Pantone swatch', 'Delta-E perceptual color distance algorithm', 'Shows top 5 closest Pantone matches with color previews', 'Supports both Pantone Coated and Uncoated swatches', 'Displays Pantone code, name, and hex equivalent', 'Instant results — no account required'],
+      whoIsItFor: [
+        { title: 'Graphic Designers', description: 'Bridging the gap between screen RGB colors and print Pantone colors for brand consistency.' },
+        { title: 'Brand Managers', description: 'Finding the Pantone equivalent of a digital brand color for use in printed materials.' },
+        { title: 'Print Production Specialists', description: 'Ensuring color accuracy when handing off digital designs to print vendors who require Pantone specifications.' },
+        { title: 'Marketing Teams', description: 'Standardizing brand colors across digital and physical media using Pantone as the common reference.' },
+      ],
+    },
+    'xps-to-pdf-converter': {
+      howItWorks: 'Upload your XPS (XML Paper Specification) file and the tool converts it to a standard PDF document entirely in your browser. It parses the XPS XML structure, renders each page, and outputs a downloadable PDF — no software installation or server upload required.',
+      features: ['Convert XPS and OXPS files to PDF in the browser', 'Preserves text, images, and page layout', 'Multi-page XPS documents fully supported', 'No file upload — conversion happens locally', 'Download the converted PDF instantly', 'Free with no file size limits imposed by servers'],
+      whoIsItFor: [
+        { title: 'Windows Users', description: 'Converting XPS documents created by Windows print-to-XPS into the universally compatible PDF format.' },
+        { title: 'Office Workers', description: 'Opening and sharing XPS files received from colleagues without needing XPS Viewer software.' },
+        { title: 'Students', description: 'Converting XPS homework or exam submissions to PDF for easier upload and sharing.' },
+        { title: 'IT Professionals', description: 'Batch-converting legacy XPS documents in workflows that have migrated to PDF-based systems.' },
+      ],
+    },
   }
 
   return toolDataMap[toolId] || {

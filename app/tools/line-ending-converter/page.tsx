@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Line Ending Converter",
+  title: { absolute: "Line Ending Converter" },
   description: "Line Ending Converter - Convert between different line ending formats (LF, CRLF, CR). Handle line break compatibility across Windows, Mac, and Unix systems for cross-platform text compatibility.",
   keywords: ["line ending converter", "CRLF", "LF", "CR", "line break converter", "newline converter"],
   openGraph: {
@@ -49,7 +49,7 @@ export default function LineEndingConverterPage() {
       <ToolLayout
         toolId="line-ending-converter"
         toolName="Line Ending Converter"
-        toolDescription="Convert between different line ending formats (LF, CRLF, CR) for cross-platform compatibility. Handle line break differences across Windows, Mac, and Unix systems effortlessly."
+        toolDescription="The Line Ending Converter solves one of the most common cross-platform text compatibility headaches by letting you convert freely between Windows CRLF (carriage return + line feed), Unix and Linux LF (line feed only), and classic Mac CR (carriage return) line endings. Mismatched line endings are a frequent cause of broken scripts, garbled config files, and noisy diffs in version control, and this tool resolves those issues instantly by normalizing any text to the format you need. Paste your content, choose the target line ending style, and get clean output ready for any operating system or text editor. Batch processing of large text blocks is fully supported, making it practical for developers, sysadmins, and anyone managing cross-platform documents."
         toolComponent={<LineEndingConverter />}
         toolData={toolData}
       />

@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/decimal-to-hexadecimal-converter-online`
 
 const toolSchema = generateToolPageSchema(
-  "Decimal to Hexadecimal Converter Online",
+  "Decimal to Hexadecimal Converter",
   "Convert between decimal, hexadecimal, binary, and octal number systems instantly. Perfect for programmers and developers.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Decimal to Hexadecimal Converter Online", url: PAGE_URL },
+  { name: "Decimal to Hexadecimal Converter", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Decimal to Hexadecimal Converter Online",
+  title: { absolute: "Decimal to Hexadecimal Converter" },
   description: "Convert between decimal, hexadecimal, binary, and octal number systems instantly. Perfect for programmers and developers.",
   keywords: ["decimal to hex", "hexadecimal converter", "number converter", "binary converter", "octal converter"],
   openGraph: {

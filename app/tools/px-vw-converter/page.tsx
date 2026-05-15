@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/px-vw-converter`
 
 const toolSchema = generateToolPageSchema(
-  "PX to VW Converter - Pixels to Viewport Width Calculator",
+  "PX to VW Converter",
   "Free online PX to VW converter for converting pixels to viewport width units. Calculate responsive CSS units for fluid typography, responsive design, and mobile-first layouts. Support for multiple breakpoints and device sizes.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "PX to VW Converter - Pixels to Viewport Width Calculator", url: PAGE_URL },
+  { name: "PX to VW Converter", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "PX to VW Converter - Pixels to Viewport Width Calculator",
+  title: { absolute: "PX to VW Converter" },
   description: "Free online PX to VW converter for converting pixels to viewport width units. Calculate responsive CSS units for fluid typography, responsive design, and mobile-first layouts. Support for multiple breakpoints and device sizes.",
   keywords: [
     "px to vw converter",

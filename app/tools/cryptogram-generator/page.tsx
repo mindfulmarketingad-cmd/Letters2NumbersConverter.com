@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/cryptogram-generator`
 
 const toolSchema = generateToolPageSchema(
-  "Cryptogram Generator | Create & Share Puzzle Cryptograms",
+  "Cryptogram Generator",
   "Create custom puzzle cryptograms using famous quotes or your own text. Share cryptograms with friends with adjustable difficulty levels.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Cryptogram Generator | Create & Share Puzzle Cryptograms", url: PAGE_URL },
+  { name: "Cryptogram Generator", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Cryptogram Generator | Create & Share Puzzle Cryptograms",
+  title: { absolute: "Cryptogram Generator" },
   description: "Create custom puzzle cryptograms using famous quotes or your own text. Share cryptograms with friends with adjustable difficulty levels.",
   keywords: ["cryptogram generator", "cryptogram puzzle", "cryptogram maker", "cipher puzzle", "substitution cipher"],
   openGraph: {

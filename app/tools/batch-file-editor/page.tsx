@@ -5,7 +5,7 @@ import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
-  title: "Batch File Editor - Create & Edit .BAT Files Online",
+  title: { absolute: "Batch File Editor" },
   description: "Free online batch file editor for creating and editing .bat files. Write batch scripts with syntax highlighting, real-time statistics, and instant download. Perfect for Windows automation, system administration, and batch scripting.",
   keywords: [
     "batch file editor",
@@ -64,7 +64,7 @@ export default function BatchFileEditorPage() {
       <ToolLayout
         toolId="batch-file-editor"
         toolName="Batch File Editor"
-        toolDescription="Free Batch File Editor for creating and editing .bat files online. Write batch scripts with real-time syntax highlighting, line numbering, and instant statistics. Download batch files directly or copy to clipboard. Perfect for Windows automation, batch scripting, system administration, and creating batch commands for scheduled tasks and deployment automation."
+        toolDescription="The Batch File Editor lets you create and edit multiple Windows .bat scripts simultaneously in your browser, with syntax highlighting, live line numbering, and real-time file statistics that keep your code clean and error-free. Development teams and system administrators can perform find-and-replace operations across entire batches of files at once, dramatically cutting down the time needed for large-scale refactoring or configuration updates. Content teams managing templated scripts or deployment pipelines benefit from the instant preview and one-click download, which removes the need for local editors or version control checkouts just to make a quick change. Every edit happens locally in your browser so no files are uploaded to external servers, keeping proprietary automation scripts completely private."
         toolComponent={<BatchFileEditor />}
         toolData={toolData}
       />

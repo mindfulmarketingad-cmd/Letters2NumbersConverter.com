@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/word-to-number-translator`
 
 const toolSchema = generateToolPageSchema(
-  "Word to Number Translator - Convert Words to Numbers Instantly",
+  "Word to Number Translator",
   "Free online Word to Number Translator converts words to numbers using A1Z26, A0Z25, ASCII, HEX, and BINARY encoding methods. Supports bidirectional conversion between words and numbers for cryptography, puzzles, and text encoding.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Word to Number Translator - Convert Words to Numbers Instantly", url: PAGE_URL },
+  { name: "Word to Number Translator", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Word to Number Translator - Convert Words to Numbers Instantly",
+  title: { absolute: "Word to Number Translator" },
   description: "Free online Word to Number Translator converts words to numbers using A1Z26, A0Z25, ASCII, HEX, and BINARY encoding methods. Supports bidirectional conversion between words and numbers for cryptography, puzzles, and text encoding.",
   keywords: [
     "word to number translator",

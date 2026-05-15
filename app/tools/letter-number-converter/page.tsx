@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/letter-number-converter`
 
 const toolSchema = generateToolPageSchema(
-  "Letter to Number Converter - A1Z26 Cipher & Alphanumeric Encoding",
+  "Letter Number Converter",
   "Free online letter to number converter using A1Z26 cipher. Convert letters to numbers, numbers to letters with multiple encoding methods (ASCII, HEX, BINARY, A0Z25). Supports 25+ languages. Perfect for cryptography, coding, puzzles, and educational use.",
   PAGE_URL,
   'Utility'
@@ -18,11 +18,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Letter to Number Converter - A1Z26 Cipher & Alphanumeric Encoding", url: PAGE_URL },
+  { name: "Letter Number Converter", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Letter to Number Converter - A1Z26 Cipher & Alphanumeric Encoding",
+  title: { absolute: "Letter Number Converter" },
   description: "Free online letter to number converter using A1Z26 cipher. Convert letters to numbers, numbers to letters with multiple encoding methods (ASCII, HEX, BINARY, A0Z25). Supports 25+ languages. Perfect for cryptography, coding, puzzles, and educational use.",
   keywords: [
     "letter to number converter",
@@ -111,7 +111,7 @@ export default function LetterNumberConverterPage() {
     <ToolLayout
       toolId="letters-to-numbers"
       toolName="Letter to Number Converter"
-      toolDescription="Comprehensive letter to number converter tool for converting letters to numbers using A1Z26 cipher and other encoding methods. Supports bidirectional conversion between letters and numbers with ASCII, HEX, BINARY, and A0Z25 encoding options. Works with 25+ languages. Perfect for cryptography, coding challenges, puzzle solving, and educational learning about character encoding and alphanumeric conversion."
+      toolDescription="The Letter Number Converter is a versatile bidirectional tool for converting letters to numbers and numbers back to letters using the most common encoding systems, including A1Z26 (where A=1 and Z=26), ASCII, hexadecimal, and binary formats. Whether you need to encode a message, decode an alphanumeric cipher, or explore character encoding for educational purposes, this tool delivers real-time results with zero delay. It supports over 25 languages and character sets, making it practical for international text and multilingual data. From cryptography enthusiasts to software developers debugging encoding issues, the letter number converter handles every use case in a single, easy-to-use interface."
       toolComponent={<LetterNumberConverter />}
       toolData={toolData}
     />

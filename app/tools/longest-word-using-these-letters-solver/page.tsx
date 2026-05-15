@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/longest-word-using-these-letters-solver`
 
 const toolSchema = generateToolPageSchema(
-  "Longest Word Using These Letters Solver",
+  "Longest Word Using These Letters",
   "Longest Word Using These Letters Solver - Find the longest words you can make from any set of letters. Instantly discover all possible words ranked by length with filtering options. Free online word game helper.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Longest Word Using These Letters Solver", url: PAGE_URL },
+  { name: "Longest Word Using These Letters", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Longest Word Using These Letters Solver",
+  title: { absolute: "Longest Word Using These Letters" },
   description: "Longest Word Using These Letters Solver - Find the longest words you can make from any set of letters. Instantly discover all possible words ranked by length with filtering options. Free online word game helper.",
   keywords: ["longest word solver", "word maker", "anagram solver", "words from letters", "letter combination solver", "word finder", "anagram generator"],
   openGraph: {

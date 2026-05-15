@@ -4,7 +4,7 @@ import { SiteFooter } from '@/components/site-footer'
 import { OggToWavConverter } from '@/components/ogg-to-wav-converter'
 
 export const metadata: Metadata = {
-  title: 'Convert OGG to WAV',
+  title: { absolute: 'Convert OGG to WAV' },
   description: 'Convert OGG audio files to WAV format instantly. Preserve original quality and convert files up to 100 MB for free with our browser-based tool.',
   keywords: [
     'convert OGG to WAV',

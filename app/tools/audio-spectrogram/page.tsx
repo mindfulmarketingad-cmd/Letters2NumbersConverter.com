@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/audio-spectrogram`
 
 const toolSchema = generateToolPageSchema(
-  "Audio Spectrogram Analyzer",
+  "Audio Spectrogram",
   "Visualize audio frequencies and analyze sound waves",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Audio Spectrogram Analyzer", url: PAGE_URL },
+  { name: "Audio Spectrogram", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Audio Spectrogram Analyzer",
+  title: { absolute: "Audio Spectrogram" },
   description: "Visualize audio frequencies and analyze sound waves",
   keywords: [],
   openGraph: {
@@ -49,7 +49,7 @@ export default function AudioSpectrogramPage() {
     <ToolLayout
       toolId="audio-spectrogram"
       toolName="Audio Spectrogram Analyzer"
-      toolDescription="Visualize audio frequencies and analyze sound waves"
+      toolDescription="The Audio Spectrogram tool transforms any audio file or live microphone input into a vivid frequency-vs-time visualization, letting you see every harmonic and transient that your ears might miss. Music producers, sound engineers, and acoustic researchers rely on spectrogram analysis to identify pitch, detect noise, and compare tonal qualities across recordings. Upload an audio file or record directly in the browser for a real-time display that updates as sound comes in, with no software installation required. Color-coded intensity mapping makes it easy to distinguish between quiet background hiss and dominant frequency bands across the full audible spectrum."
       toolComponent={<AudioSpectrogram />}
       toolData={toolData}
     />

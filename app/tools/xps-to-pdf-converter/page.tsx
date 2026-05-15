@@ -4,7 +4,7 @@ import { SiteFooter } from '@/components/site-footer'
 import { XpsToPdfConverter } from '@/components/xps-to-pdf-converter'
 
 export const metadata: Metadata = {
-  title: 'XPS File To PDF - Convert XPS To PDF Online',
+  title: { absolute: "XPS to PDF Converter" },
   description: 'Free online XPS File To PDF converter. Convert XPS documents to PDF format instantly with our easy-to-use web tool. No installation required.',
   keywords: [
     'XPS to PDF',

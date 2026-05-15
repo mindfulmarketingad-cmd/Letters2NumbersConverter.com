@@ -5,7 +5,7 @@ import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
-  title: "RGB To Pantone Color Converter - Convert RGB to PMS Colors",
+  title: { absolute: "RGB to Pantone Color Converter" },
   description: "Free RGB to Pantone Color Converter for converting RGB colors to PMS (Pantone Matching System) codes. Find the closest Pantone color match for digital-to-print workflows. Includes multiple color variants, visual color picker, and hex conversion.",
   keywords: [
     "RGB to Pantone converter",

@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/webp-to-gif`
 
 const toolSchema = generateToolPageSchema(
-  "WebP to GIF | Letters2NumbersConverter.com",
+  "WebP to GIF",
   "Convert WebP images to GIF format instantly. Free online converter with quality preservation - no registration needed.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "WebP to GIF | Letters2NumbersConverter.com", url: PAGE_URL },
+  { name: "WebP to GIF", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: 'WebP to GIF | Letters2NumbersConverter.com',
+  title: { absolute: "WebP to GIF" },
   description: 'Convert WebP images to GIF format instantly. Free online converter with quality preservation - no registration needed.',
   keywords: [
     'webp to gif',

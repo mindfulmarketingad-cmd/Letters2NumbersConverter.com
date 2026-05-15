@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/mayan-numeral-converter`
 
 const toolSchema = generateToolPageSchema(
-  "Mayan Numeral Converter - Ancient Mayan Base-20 Number System",
+  "Mayan Numeral Converter",
   "Free online Mayan Numeral Converter to convert decimal numbers to ancient Mayan base-20 numerals with dot-and-bar symbols. Learn Mesoamerican mathematics and Mayan number systems. Educational tool for archaeology, history, and ancient civilizations.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Mayan Numeral Converter - Ancient Mayan Base-20 Number System", url: PAGE_URL },
+  { name: "Mayan Numeral Converter", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Mayan Numeral Converter - Ancient Mayan Base-20 Number System",
+  title: { absolute: "Mayan Numeral Converter" },
   description: "Free online Mayan Numeral Converter to convert decimal numbers to ancient Mayan base-20 numerals with dot-and-bar symbols. Learn Mesoamerican mathematics and Mayan number systems. Educational tool for archaeology, history, and ancient civilizations.",
   keywords: [
     "Mayan numeral converter",

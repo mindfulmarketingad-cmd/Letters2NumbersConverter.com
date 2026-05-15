@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Fill In The Blanks Equation Solver",
+  title: { absolute: "Fill in the Blanks Equation Solver" },
   description: "Find missing digits and operators in equations",
   keywords: [],
   openGraph: {

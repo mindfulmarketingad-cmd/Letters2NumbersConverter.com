@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/audio-spectrogram-decoder`
 
 const toolSchema = generateToolPageSchema(
-  "Spectrogram Decoder",
+  "Audio Spectrogram Decoder",
   "Decode audio spectrograms and analyze frequencies with advanced visualization",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Spectrogram Decoder", url: PAGE_URL },
+  { name: "Audio Spectrogram Decoder", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Spectrogram Decoder",
+  title: { absolute: "Audio Spectrogram Decoder" },
   description: "Decode audio spectrograms and analyze frequencies with advanced visualization",
   keywords: [],
   openGraph: {
@@ -49,7 +49,7 @@ export default function AudioSpectrogramDecoderPage() {
     <ToolLayout
       toolId="audio-spectrogram-decoder"
       toolName="Spectrogram Decoder"
-      toolDescription="Decode audio spectrograms and analyze frequencies with advanced visualization"
+      toolDescription="The Audio Spectrogram Decoder reveals hidden messages, images, and encoded data embedded within the frequency domain of audio files, a technique widely used in steganography and puzzle challenges. Creators sometimes hide text or artwork in the spectrogram of a song or sound clip, invisible to the human ear but plainly visible when the frequency content is rendered visually. Simply upload or record your audio and the decoder performs an instant, browser-based analysis without sending your file to any server, keeping your data completely private. Whether you are investigating a CTF challenge, exploring a music mystery, or studying audio steganography techniques, this tool gives you the visual clarity to uncover what is hidden."
       toolComponent={<AudioSpectrogram />}
       toolData={toolData}
     />

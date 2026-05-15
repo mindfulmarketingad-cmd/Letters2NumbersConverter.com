@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/letter-to-phone-number-converter`
 
 const toolSchema = generateToolPageSchema(
-  "Phone Number Converter - Letters to Numbers Converter",
+  "Letter to Phone Number Converter",
   "Convert letters to phone number digits using T9/multi-tap phone keypad mapping. Decode phone-based text messages instantly.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Phone Number Converter - Letters to Numbers Converter", url: PAGE_URL },
+  { name: "Letter to Phone Number Converter", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Phone Number Converter - Letters to Numbers Converter",
+  title: { absolute: "Letter to Phone Number Converter" },
   description: "Convert letters to phone number digits using T9/multi-tap phone keypad mapping. Decode phone-based text messages instantly.",
   keywords: ["phone number converter", "letters to numbers", "T9 converter", "phone keypad", "text message decoder"],
   openGraph: {
@@ -49,7 +49,7 @@ export default function PhoneNumberConverterPage() {
       <ToolLayout
         toolId="phone-number-converter"
         toolName="Phone Number Converter"
-        toolDescription="Convert letters to phone number digits using T9/multi-tap phone keypad mapping. Perfect for decoding phone-based text messages and understanding legacy phone systems."
+        toolDescription="The Letter to Phone Number Converter maps letters to the corresponding digits on a standard telephone keypad using the classic T9 and alphanumeric encoding system — the same method used to create vanity phone numbers like 1-800-FLOWERS or 1-888-CALL-NOW. Simply type any word or phrase and instantly see which phone keypad numbers each letter corresponds to, making it effortless to decode or create memorable alphanumeric phone numbers. This tool is equally useful for reversing the process, helping you figure out what word a given number spells out on a keypad. Whether you are designing a marketing campaign or just satisfying curiosity about legacy phone systems, results appear instantly with no configuration needed."
         toolComponent={<PhoneNumberConverter />}
         toolData={toolData}
       />

@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Cistercian Numerals Converter",
+  title: { absolute: "Cistercian Numerals Converter" },
   description: "Convert numbers to and from Cistercian numeral notation",
   keywords: [],
   openGraph: {

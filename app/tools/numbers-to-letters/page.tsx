@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/numbers-to-letters`
 
 const toolSchema = generateToolPageSchema(
-  "Numbers to Letters Converter",
+  "Numbers to Letters",
   "Convert numbers back to letters",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Numbers to Letters Converter", url: PAGE_URL },
+  { name: "Numbers to Letters", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Numbers to Letters Converter",
+  title: { absolute: "Numbers to Letters" },
   description: "Convert numbers back to letters",
   keywords: [],
   openGraph: {

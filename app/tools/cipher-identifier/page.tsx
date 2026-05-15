@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/cipher-identifier`
 
 const toolSchema = generateToolPageSchema(
-  "Cipher Identifier Tool",
+  "Cipher Identifier",
   "Identify and analyze cipher types from encrypted text",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Cipher Identifier Tool", url: PAGE_URL },
+  { name: "Cipher Identifier", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Cipher Identifier Tool",
+  title: { absolute: "Cipher Identifier" },
   description: "Identify and analyze cipher types from encrypted text",
   keywords: [],
   openGraph: {
@@ -49,7 +49,7 @@ export default function CipherIdentifierPage() {
     <ToolLayout
       toolId="cipher-identifier"
       toolName="Cipher Identifier Tool"
-      toolDescription="Identify and analyze cipher types from encrypted text"
+      toolDescription="The Cipher Identifier automatically analyzes a block of encrypted text and determines which cipher type was most likely used, saving cryptographers and puzzle solvers the guesswork of manual identification. It applies multiple detection techniques in parallel — including index of coincidence, frequency analysis, pattern matching, and character distribution — then ranks each candidate cipher with a confidence score. Whether your ciphertext looks like a Caesar shift, Vigenere polyalphabetic cipher, Atbash substitution, Rail Fence transposition, or something more obscure, the identifier surfaces the most probable matches along with brief explanations of why each cipher fits. This makes it an invaluable first step before diving into full decryption, particularly for CTF competitions, escape room puzzles, and cryptography coursework."
       toolComponent={<CipherIdentifier />}
       toolData={toolData}
     />

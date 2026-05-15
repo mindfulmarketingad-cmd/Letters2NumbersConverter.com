@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Cryptogram Solver Free",
+  title: { absolute: "Cryptogram Solver Free" },
   description: "Solve substitution cipher cryptograms",
   keywords: [],
   openGraph: {

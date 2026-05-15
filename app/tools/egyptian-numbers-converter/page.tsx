@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/egyptian-numbers-converter`
 
 const toolSchema = generateToolPageSchema(
-  "Egyptian Numbers Converter - Ancient Egyptian Hieroglyphic Numerals",
+  "Egyptian Numbers Converter",
   "Free online Egyptian Numbers Converter to convert decimal numbers to ancient Egyptian hieroglyphic numerals. Learn how ancient Egyptians represented numbers using symbols and hieroglyphics. Educational tool for history, Egyptology, and ancient mathematics.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Egyptian Numbers Converter - Ancient Egyptian Hieroglyphic Numerals", url: PAGE_URL },
+  { name: "Egyptian Numbers Converter", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Egyptian Numbers Converter - Ancient Egyptian Hieroglyphic Numerals",
+  title: { absolute: "Egyptian Numbers Converter" },
   description: "Free online Egyptian Numbers Converter to convert decimal numbers to ancient Egyptian hieroglyphic numerals. Learn how ancient Egyptians represented numbers using symbols and hieroglyphics. Educational tool for history, Egyptology, and ancient mathematics.",
   keywords: [
     "Egyptian numbers converter",

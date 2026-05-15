@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/skip-cipher`
 
 const toolSchema = generateToolPageSchema(
-  "Skip Cipher - Jump Cipher Online Encrypt Decrypt",
+  "Skip Cipher",
   "Skip Cipher Online Tool - Encrypt and decrypt messages using the skip cipher (jump cipher) transposition cipher. Includes brute force cracking and parameter finder. Free online cryptography tool.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Skip Cipher - Jump Cipher Online Encrypt Decrypt", url: PAGE_URL },
+  { name: "Skip Cipher", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Skip Cipher - Jump Cipher Online Encrypt Decrypt",
+  title: { absolute: "Skip Cipher" },
   description: "Skip Cipher Online Tool - Encrypt and decrypt messages using the skip cipher (jump cipher) transposition cipher. Includes brute force cracking and parameter finder. Free online cryptography tool.",
   keywords: ["skip cipher", "jump cipher", "transposition cipher", "encryption", "decryption", "cryptography"],
   openGraph: {

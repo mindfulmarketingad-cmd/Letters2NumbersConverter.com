@@ -5,7 +5,7 @@ import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
-  title: "Pantone to Hex Converter | Letters2NumbersConverter.com",
+  title: { absolute: "Pantone to Hex Converter" },
   description: "Pantone to Hex Converter - Search and convert Pantone (PMS) colors to hex format instantly. Use our visual color picker to find the closest Pantone match for any color.",
   keywords: [
     "Pantone to hex converter",

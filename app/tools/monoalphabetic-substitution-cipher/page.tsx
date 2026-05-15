@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Monoalphabetic Substitution Cipher",
+  title: { absolute: "Monoalphabetic Substitution Cipher" },
   description: "Encrypt and decrypt using monoalphabetic ciphers",
   keywords: [],
   openGraph: {

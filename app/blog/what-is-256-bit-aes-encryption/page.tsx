@@ -7,7 +7,7 @@ const PAGE_URL = `${BASE_URL}/blog/what-is-256-bit-aes-encryption`
 const PUBLISHED = '2026-05-14T00:00:00.000Z'
 
 export const metadata: Metadata = {
-  title: 'What Is 256 Bit AES Encryption — How It Works & Why It Matters',
+  title: { absolute: 'What Is 256 Bit AES Encryption' },
   description:
     'Learn what 256 bit AES encryption is, how the 14-round cipher works, what the key size means in practice, which modes of operation to use, and why AES-256 is recommended for post-quantum security.',
   keywords: [

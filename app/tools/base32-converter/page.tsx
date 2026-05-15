@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/base32-converter`
 
 export const metadata: Metadata = {
-  title: 'Base32 Converter - Decode Encode Instantly',
+  title: { absolute: "Base32 Converter" },
   description: 'Base32 Converter — encode or decode Base32 instantly in your browser. Supports RFC 4648, Base32 Hex, z-base-32, and Crockford\'s Base32. Free, private, no uploads.',
   keywords: [
     'Base32 converter',

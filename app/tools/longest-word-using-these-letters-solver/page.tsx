@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: { absolute: "Longest Word Using These Letters" },
+  title: { absolute: "Longest Word Using These Letters Solver" },
   description: "Longest Word Using These Letters Solver - Find the longest words you can make from any set of letters. Instantly discover all possible words ranked by length with filtering options. Free online word game helper.",
   keywords: ["longest word solver", "word maker", "anagram solver", "words from letters", "letter combination solver", "word finder", "anagram generator"],
   openGraph: {

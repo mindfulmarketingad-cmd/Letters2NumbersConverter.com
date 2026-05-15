@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Atbash Cipher Decoder",
+  title: { absolute: "Atbash Cipher Decoder" },
   description: "Atbash Cipher Decoder - Encrypt and decrypt messages using the mirror alphabet substitution cipher. An involutory cipher where the same process works for both encryption and decryption.",
   keywords: ["Atbash cipher decoder", "Atbash cipher", "substitution cipher", "mirror cipher", "reverse alphabet"],
   openGraph: {

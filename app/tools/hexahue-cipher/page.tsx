@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Hexahue Cipher",
+  title: { absolute: "Hexahue Cipher" },
   description: "Hexahue Cipher - Translate text to colorful visual blocks. Invented by Josh Cramer, Hexahue uses combinations of common colors (red, green, blue) to create a unique encoding system. Try our free online Hexahue translator and reference chart.",
   keywords: ["hexahue cipher", "hexahue translator", "color cipher", "hexahue code", "visual encoding", "josh cramer"],
   openGraph: {

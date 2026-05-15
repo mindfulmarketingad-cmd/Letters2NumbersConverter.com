@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Password Strength Tester",
+  title: { absolute: "Password Strength Tester" },
   description: "Test and analyze password security",
   keywords: [],
   openGraph: {

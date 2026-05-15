@@ -6,7 +6,7 @@ import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
-  title: "Educational Uses of Letter-Number Conversion",
+  title: { absolute: "Educational Uses of Letter Number Conversion" },
   description: "Explore how letter-to-number conversion is used in education for teaching mathematics, coding concepts, reading skills, and critical thinking.",
   authors: [{ name: "John Reed" }],
 }

@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/gradient-palette-generator`
 
 export const metadata: Metadata = {
-  title: 'Gradient Palette Generator — 4 Color Gradient Maker Free Online',
+  title: { absolute: "Gradient Palette Generator" },
   description: 'Free gradient palette generator. Create beautiful 4 color gradients with up to 6 color stops, linear/radial/conic types, and export CSS instantly. No sign-up. Works in your browser.',
   keywords: [
     'gradient palette generator',

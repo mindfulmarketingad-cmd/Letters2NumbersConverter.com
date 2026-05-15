@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/base64-encoder-decoder`
 
 export const metadata: Metadata = {
-  title: 'Base64 Encoder and Decoder — Encode & Decode Online Free',
+  title: { absolute: "Base64 Encoder Decoder" },
   description: 'Free Base64 encoder and decoder. Convert text to Base64 or decode Base64 back to text instantly. Supports standard and URL-safe Base64, full UTF-8 including emoji. No sign-up. Works in your browser.',
   keywords: [
     'base64 decoder',

@@ -7,7 +7,7 @@ const PAGE_URL = `${BASE_URL}/blog/how-to-use-unicode-in-html`
 const PUBLISHED = '2026-05-14'
 
 export const metadata: Metadata = {
-  title: 'How To Use Unicode in HTML — Characters, Entities & UTF-8 Encoding',
+  title: { absolute: 'How To Use Unicode in HTML' },
   description:
     'Learn how to use Unicode in HTML: declare UTF-8 encoding, insert characters directly or via named and numeric HTML entities, and handle emoji and supplementary code points.',
   keywords: [

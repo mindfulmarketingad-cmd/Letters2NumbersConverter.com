@@ -5,7 +5,7 @@ import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
-  title: "Vernam Cipher Decoder | Letters2NumbersConverter.com",
+  title: { absolute: "Vernam Cipher Decoder" },
   description: "Vernam Cipher Decoder - Decrypt Vernam (one-time pad) ciphertext with the original key. Supports Vigenere and XOR decryption modes for mathematically unbreakable cipher analysis.",
   keywords: [
     "vernam cipher decoder",

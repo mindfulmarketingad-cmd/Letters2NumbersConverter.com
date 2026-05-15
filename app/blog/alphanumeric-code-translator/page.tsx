@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Alphanumeric Code Translator — Decoder Walkthrough',
+  title: { absolute: 'Alphanumeric Code Translator' },
   description: 'Master alphanumeric code translation with our comprehensive decoder walkthrough. Learn step-by-step decoding techniques, practical examples, and professional strategies for translating alphanumeric codes accurately and efficiently.',
   keywords: [
     'alphanumeric code translator',

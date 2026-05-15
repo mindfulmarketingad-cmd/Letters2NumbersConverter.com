@@ -21,7 +21,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Structural Formula Calculator — Visualize Molecular Structures Online',
+  title: { absolute: "Structural Formula Calculator" },
   description: 'Free structural formula calculator. Choose from 40+ molecules or enter any SMILES string to instantly render a 2D structural formula. Shows bonds, functional groups, molecular weight, and atom counts. No sign-up required.',
   keywords: [
     'structural formula calculator',

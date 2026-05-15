@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'URL Percent Encoding and Decoding | Instant URL Encoding Tool',
+  title: { absolute: "URL Percent Encoding Decoding" },
   description: 'URL Percent Encoding and Decoding - Instantly encode and decode URLs. Free online tool for developers, API testing, and web professionals. Convert special characters to percent-encoded format.',
   keywords: ['URL percent encoding', 'URL decoding', 'percent encoding', 'URL encoding', 'online URL encoder', 'online URL decoder', '%20 encoding', 'special characters'],
   openGraph: {

@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'HTML Encoder and Decoder | Instantly Encode/Decode HTML Entities',
+  title: { absolute: "HTML Encoder Decoder" },
   description: 'HTML Encoder and Decoder - Instantly encode and decode HTML entities. Free tool for web developers, content creators, and anyone working with HTML markup. Supports named and numeric entities.',
   keywords: ['HTML encoder', 'HTML decoder', 'HTML entity encoder', 'encode HTML', 'decode HTML', 'HTML entities', 'HTML encoding tool'],
   openGraph: {

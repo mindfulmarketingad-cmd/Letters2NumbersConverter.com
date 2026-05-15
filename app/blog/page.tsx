@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { BlogSearchContainer } from "@/components/blog-search-container"
 
 export const metadata: Metadata = {
-  title: "Blog | Letters to Numbers Converter Tool",
+  title: { absolute: "Blog" },
   description: "Explore our collection of articles about letter-to-number conversion, encoding systems, ciphers, decoding guides, puzzles, and cryptography.",
   keywords: ["letters to numbers blog", "letter number conversion articles", "A1Z26 guides", "cryptography tutorials", "cipher decoder guides", "puzzle solving tips"],
 }

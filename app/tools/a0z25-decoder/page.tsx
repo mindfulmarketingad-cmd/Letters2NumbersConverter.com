@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'A0Z25 Decoder | Decode Numbers to Letters',
+  title: { absolute: "A0Z25 Decoder" },
   description: 'A0Z25 Decoder - Free online tool to decode A0Z25 encoded text instantly. Convert numbers 0-25 back to letters. Perfect for cryptography and text analysis.',
   keywords: ['A0Z25 decoder', 'decode A0Z25', 'number to letter converter', 'cipher decoder', 'cryptography'],
   openGraph: {

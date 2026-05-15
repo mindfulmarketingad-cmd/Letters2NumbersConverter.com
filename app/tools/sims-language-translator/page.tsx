@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/sims-language-translator`
 
 export const metadata: Metadata = {
-  title: 'Sims Language Translator',
+  title: { absolute: "Sims Language Translator" },
   description: 'Sims Language Translator — instantly convert English to Simlish or decode Simlish back to English. Free, accurate, and browser-based with 200+ confirmed Simlish words.',
   keywords: [
     'Sims language translator',

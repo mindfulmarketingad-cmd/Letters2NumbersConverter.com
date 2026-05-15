@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Caesar Cipher Shift 13 — Why ROT13 Is Special',
+  title: { absolute: 'Caesar Cipher Shift 13' },
   description: 'Caesar cipher shift 13 explained: why shift 13 is unique among all Caesar shifts, how it equals ROT13, the self-inverse property, and where you\'ll find it in everyday internet use.',
   keywords: [
     'Caesar cipher shift 13',

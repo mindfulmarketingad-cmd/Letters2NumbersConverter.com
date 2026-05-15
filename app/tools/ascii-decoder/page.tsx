@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/ascii-decoder`
 
 export const metadata: Metadata = {
-  title: 'ASCII Decoder and Encoder — Convert ASCII Codes to Text Online',
+  title: { absolute: "ASCII Decoder" },
   description: 'Free ASCII decoder and encoder. Convert decimal, hex, binary, or octal ASCII codes to readable text, or encode any text back to ASCII codes. Works instantly in your browser. No sign-up required.',
   keywords: [
     'ascii decoder',

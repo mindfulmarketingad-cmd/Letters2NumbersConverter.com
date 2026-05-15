@@ -21,7 +21,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Medicare ID Converter - HIC vs MBI Identifier Tool',
+  title: { absolute: "Medicare ID Converter" },
   description: 'Free online Medicare ID Converter to identify and validate Medicare numbers. Distinguish between HIC (old format) and MBI (new format) identifiers with detailed information.',
   keywords: [
     'Medicare ID converter',

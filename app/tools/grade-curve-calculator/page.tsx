@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Grade Curve Calculator | Free Online Tool',
+  title: { absolute: "Grade Curve Calculator" },
   description: 'Grade Curve Calculator - Adjust student grades using normal, linear, or percentile distribution methods. Perfect for teachers and educators to fairly curve grades.',
   keywords: ['grade curve calculator', 'grade curving tool', 'normal distribution grades', 'grade adjustment', 'curve grades online'],
   openGraph: {

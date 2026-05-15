@@ -21,7 +21,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Pie Graph Maker | Free Online Pie Chart Creator',
+  title: { absolute: "Pie Graph Maker" },
   description:
     'Pie Graph Maker - Create beautiful, interactive pie charts online instantly. Customize colors, labels, and styles. No signup needed. Download as PNG or embed on your website.',
   keywords: [

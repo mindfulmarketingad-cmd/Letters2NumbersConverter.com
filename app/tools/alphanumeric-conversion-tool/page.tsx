@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Alphanumeric Conversion Tool",
+  title: { absolute: "Alphanumeric Conversion Tool" },
   description: "Alphanumeric Conversion Tool - Free online converter to transform letters to numbers and numbers to letters instantly. Support for multiple encoding formats including A=1, ASCII, HEX, and Binary.",
   keywords: ["alphanumeric conversion", "letters to numbers converter", "alphanumeric converter", "text to numbers", "number to text converter"],
   openGraph: {

@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "A1Z26 Cipher For Escape Rooms",
+  title: { absolute: "A1Z26 Cipher For Escape Rooms" },
   description: "Learn how to use the A1Z26 cipher for escape rooms to create engaging puzzles and challenges. Discover cipher techniques, implementation strategies, and puzzle design tips for immersive escape room experiences.",
   keywords: [
     "A1Z26 cipher for escape rooms",

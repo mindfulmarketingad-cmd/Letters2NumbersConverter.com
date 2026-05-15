@@ -69,7 +69,7 @@ const faqSchema = {
 }
 
 export const metadata: Metadata = {
-  title: "YAML to INI Converter — Free YML to INI Online Tool",
+  title: { absolute: "YAML To INI Converter" },
   description: "Free YAML to INI converter online. Paste any YAML or YML file and instantly convert it to INI format. Supports bidirectional conversion, nested structures, and direct download.",
   keywords: [
     "yaml to ini converter",

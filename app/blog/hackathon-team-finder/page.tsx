@@ -7,7 +7,7 @@ const PAGE_URL = `${BASE_URL}/blog/hackathon-team-finder`
 const PUBLISHED = '2026-05-14'
 
 export const metadata: Metadata = {
-  title: 'Hackathon Team Finder — How to Find Teammates for Any Hackathon',
+  title: { absolute: 'Hackathon Team Finder' },
   description: 'Learn how to find a hackathon team fast. Covers Discord servers, LinkedIn, event platforms, skill matching, and our free HackMate tool for creating profiles and project listings.',
   keywords: [
     'hackathon team finder',

@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Instant Tapcode Translator | Letters2NumbersConverter.com",
+  title: { absolute: "Tap Code Translator" },
   description: "Tapcode Translator - Convert messages to tap code patterns. Learn about this covert communication method used in POW camps. Encode/decode with dots, numbers, or knocks. Free online tool.",
   keywords: ["tapcode translator", "tap code encoder", "knock code", "Smitty code", "POW communication", "covert code"],
   openGraph: {

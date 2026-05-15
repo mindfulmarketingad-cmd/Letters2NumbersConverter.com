@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Grayscale Image Online | Free Image to Black & White Converter',
+  title: { absolute: "Make Grayscale Image Online" },
   description: 'Convert any image to grayscale online instantly. Free tool to transform colored photos to black and white. No installation needed, works in your browser.',
   keywords: ['grayscale image converter', 'image to grayscale', 'make image black and white', 'convert to grayscale', 'grayscale photo converter', 'online image converter'],
   openGraph: {

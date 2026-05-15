@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/id3-metadata-viewer`
 
 export const metadata: Metadata = {
-  title: 'ID3 Metadata Viewer',
+  title: { absolute: "ID3 Metadata Viewer" },
   description: 'Free ID3 Metadata Viewer — inspect MP3, MP4, M4A, AIFF, and WAV audio files. View title, artist, album, cover art, BPM, and all ID3 tags instantly. Your data stays local.',
   keywords: [
     'ID3 metadata viewer',

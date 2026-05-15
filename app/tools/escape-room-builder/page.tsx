@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Escape Room Builder",
+  title: { absolute: "Escape Room Builder" },
   description: "Create and design interactive escape room puzzles",
   keywords: [],
   openGraph: {

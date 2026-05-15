@@ -5,7 +5,7 @@ import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
-  title: "Morse Code to Base64 Converter | Letters2NumbersConverter.com",
+  title: { absolute: "Morse Code To Base64" },
   description: "Morse Code to Base64 Converter - Decode Morse code and instantly convert to Base64 format. Perfect for amateur radio operators, historians, and cryptography enthusiasts. Support for customizable separators.",
   keywords: [
     "morse code to base64",

@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Scan Words From Image | Free OCR Text Extractor',
+  title: { absolute: "Scan Words From Image" },
   description: 'Scan Words From Image - Extract text from images using advanced OCR technology. Instantly convert images to editable text. Free online tool with privacy protection.',
   keywords: ['scan words from image', 'OCR text extractor', 'image to text', 'extract text from image', 'optical character recognition', 'image text scanner', 'text recognition'],
   openGraph: {

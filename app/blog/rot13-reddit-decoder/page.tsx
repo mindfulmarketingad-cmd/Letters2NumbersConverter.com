@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Decode ROT13 on Reddit — Spoiler Text Explained',
+  title: { absolute: 'How To Decode ROT13 on Reddit' },
   description: 'Why Reddit uses ROT13 for spoilers, how to decode ROT13 Reddit text instantly online, and the history of ROT13 spoiler tags before native spoiler formatting existed.',
   keywords: [
     'ROT13 Reddit decoder',

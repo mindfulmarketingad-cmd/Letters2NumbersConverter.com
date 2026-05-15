@@ -6,7 +6,7 @@ import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
-  title: "Best Decoder Tool | Letters2NumbersConverter.com",
+  title: { absolute: "Best Decoder" },
   description: "Discover why Letters2NumbersConverter.com is the best decoder online. Convert between Morse code, Base64, binary, hex, and more. Free, fast, and completely offline decoding tools.",
   keywords: ["best decoder", "decoder tool", "code decoder", "online decoder", "morse code decoder", "base64 decoder", "hex decoder", "binary decoder", "free decoder"],
   openGraph: {

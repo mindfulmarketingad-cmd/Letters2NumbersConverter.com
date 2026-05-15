@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'PPT Compressor - Free Online PowerPoint File Compression',
+  title: { absolute: "PPT Compressor" },
   description: 'PPT Compressor compresses PowerPoint presentations instantly. Reduce .ppt and .pptx file sizes without losing quality. No upload required - processes entirely in your browser.',
   keywords: ['ppt compressor', 'compress pptx', 'powerpoint compressor', 'reduce ppt file size', 'compress presentation'],
   openGraph: {

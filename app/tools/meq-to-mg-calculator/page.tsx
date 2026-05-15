@@ -85,7 +85,7 @@ const faqSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'mEq to mg Calculator — Convert Milliequivalents to Milligrams',
+  title: { absolute: "mEq To mg Calculator" },
   description: 'Free mEq to mg calculator. Convert milliequivalents to milligrams for potassium, sodium, calcium, magnesium, and chloride. Includes the formula, reference tables, and bidirectional mg to mEq conversion.',
   keywords: [
     'meq to mg',

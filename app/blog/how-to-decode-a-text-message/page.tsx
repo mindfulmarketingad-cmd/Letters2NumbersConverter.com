@@ -6,7 +6,7 @@ const PAGE_URL = `${BASE_URL}/blog/how-to-decode-a-text-message`
 const PUBLISHED = '2026-05-14T00:00:00.000Z'
 
 export const metadata: Metadata = {
-  title: 'How To Decode A Text Message — SMS Codes, Abbreviations & Ciphers',
+  title: { absolute: 'How To Decode A Text Message' },
   description:
     'Learn how to decode a text message — from SMS abbreviations and GSM 7-bit PDU encoding to Base64, hex, URL encoding, and A1Z26 ciphers. Step-by-step guides with examples.',
   keywords: [

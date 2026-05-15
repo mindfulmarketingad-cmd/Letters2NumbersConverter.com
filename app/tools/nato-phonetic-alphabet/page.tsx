@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "NATO Phonetic Alphabet Translator",
+  title: { absolute: "NATO Phonetic Alphabet" },
   description: "Convert text to NATO phonetic alphabet spelling",
   keywords: [],
   openGraph: {

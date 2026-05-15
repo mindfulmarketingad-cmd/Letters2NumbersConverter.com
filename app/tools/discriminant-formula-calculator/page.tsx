@@ -21,7 +21,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Discriminant Formula Calculator — b² − 4ac with Step-by-Step Working',
+  title: { absolute: "Discriminant Formula Calculator" },
   description: 'Calculate the discriminant of any quadratic equation instantly. Enter a, b, c values to get the discriminant (b² − 4ac), nature of roots, full step-by-step working, and exact or decimal roots. Free, no sign-up.',
   keywords: [
     'discriminant calculator',

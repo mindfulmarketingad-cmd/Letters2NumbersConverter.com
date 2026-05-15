@@ -21,7 +21,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'PDF to Grayscale Converter — Convert PDF to Black & White Free',
+  title: { absolute: "PDF To Grayscale Converter" },
   description: 'Convert any PDF to grayscale online for free. All pages rendered and converted using the luminosity formula, then bundled into a downloadable grayscale PDF. No sign-up, no upload — runs in your browser.',
   keywords: [
     'PDF to grayscale converter',

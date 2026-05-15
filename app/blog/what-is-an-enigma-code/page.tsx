@@ -8,7 +8,7 @@ const PUBLISHED = '2026-05-14T00:00:00.000Z'
 const PUBLISHED_DISPLAY = '2026-05-14'
 
 export const metadata: Metadata = {
-  title: 'What Is an Enigma Code — How the WWII Cipher Worked & Was Broken',
+  title: { absolute: 'What Is An Enigma Code' },
   description:
     'What is an Enigma code? It is a ciphertext message produced by the Enigma machine — a polyalphabetic cipher used by the German military in WWII. Learn how Enigma messages were structured, why they seemed unbreakable, and how Polish and British cryptanalysts cracked them.',
   keywords: [

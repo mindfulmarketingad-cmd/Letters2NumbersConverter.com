@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/get-song-bpm`
 
 export const metadata: Metadata = {
-  title: 'Get Song BPM — Free Online Audio BPM Detector',
+  title: { absolute: "Get Song BPM" },
   description: 'Find the BPM of any song instantly. Upload MP3, WAV, FLAC, or M4A files and our free online BPM detector analyses the tempo using autocorrelation. No uploads to a server — your audio stays local.',
   keywords: [
     'get song BPM',

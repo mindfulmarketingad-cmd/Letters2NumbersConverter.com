@@ -22,7 +22,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Medicare Prefix Converter — Free Medicare ID Prefix Decoder",
+  title: { absolute: "Medicare Prefix Converter" },
   description: "Free Medicare prefix converter. Enter any Medicare prefix letter (A–T) to instantly decode the beneficiary type, coverage category, and Social Security relationship. Includes full A–T reference chart.",
   keywords: [
     "medicare prefix converter",

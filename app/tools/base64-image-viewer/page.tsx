@@ -5,7 +5,7 @@ import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
-  title: "Base64 Image Viewer | Letters2NumbersConverter.com",
+  title: { absolute: "Base64 Image Viewer" },
   description: "Base64 Image Viewer - Instantly decode and display base64-encoded images. Paste your base64 string and view the image preview in real-time. Supports PNG, JPEG, GIF, SVG, and WebP formats.",
   keywords: [
     "base64 image viewer",

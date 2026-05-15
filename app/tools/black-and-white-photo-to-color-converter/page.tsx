@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'black and white photo to color converter | Letters2NumbersConverter.com',
+  title: { absolute: "Black And White Photo To Color Converter" },
   description: 'Black and white photo to color converter - Transform your grayscale photos into vibrant color images instantly. Free online tool for restoring vintage photographs.',
   keywords: ['black and white to color', 'photo colorization', 'colorize photos', 'black and white converter', 'restore photos', 'vintage photo restoration', 'colorize black and white'],
   openGraph: {

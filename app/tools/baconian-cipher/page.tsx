@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Baconian Cipher | Encode & Decode Text',
+  title: { absolute: "Baconian Cipher" },
   description: 'Use the Baconian Cipher tool to encode messages using A/B patterns or decode A/B sequences back to plaintext. Support for original 24-letter alphabet and modern variants.',
   keywords: ['Baconian cipher', 'Baconian cipher encoder', 'Baconian cipher decoder', 'A/B cipher', 'classical cipher'],
   openGraph: {

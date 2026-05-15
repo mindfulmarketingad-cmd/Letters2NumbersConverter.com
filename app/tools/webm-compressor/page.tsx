@@ -21,7 +21,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'WEBM Compressor | Letters2NumbersConverter.com',
+  title: { absolute: "WEBM Compressor" },
   description:
     'WEBM Compressor - Compress WebM video files online instantly. Reduce file size without losing quality. Browser-based, no upload, no signup required.',
   keywords: [

@@ -22,7 +22,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "MBI Converter - Medicare Beneficiary Identifier to Telephone Keypad",
+  title: { absolute: "MBI Converter" },
   description: "Free MBI converter tool to convert Medicare Beneficiary Identifier numbers and names to telephone keypad sequences. Perfect for IVR systems, customer support lines, and automated phone systems. Convert MBI digits and letters to numeric keypad codes instantly.",
   keywords: [
     "MBI converter",

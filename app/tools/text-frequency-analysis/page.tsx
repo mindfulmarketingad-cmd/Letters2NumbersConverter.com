@@ -22,7 +22,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Text Frequency Analysis | Character & Word Counter",
+  title: { absolute: "Text Frequency Analysis" },
   description: "Analyze text frequency with our free online Text Frequency Analysis tool. Count characters, words, and their frequencies instantly. Perfect for linguistic analysis, cryptography, and data science.",
   keywords: ["text frequency analysis", "character frequency", "word frequency", "text analysis", "frequency counter", "character counter", "linguistic analysis"],
   openGraph: {

@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/caesar-cipher-decoder`
 
 export const metadata: Metadata = {
-  title: 'Caesar Cipher Decoder & Encoder — Decode Any Shift Online Free',
+  title: { absolute: "Caesar Cipher Decoder" },
   description: 'Free Caesar cipher decoder and encoder. Choose any shift (1–25), decode or encode instantly, or use brute-force mode to show all 25 shifts ranked by English likelihood. No sign-up. Works in your browser.',
   keywords: [
     'Caesar cipher decoder',

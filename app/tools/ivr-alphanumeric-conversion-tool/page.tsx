@@ -69,7 +69,7 @@ const faqSchema = {
 }
 
 export const metadata: Metadata = {
-  title: "IVR Alphanumeric Conversion Tool — Medicare IVR Translator for MBI, PTAN & DCN",
+  title: { absolute: "IVR Alphanumeric Conversion Tool" },
   description: "Free IVR alphanumeric conversion tool. Convert Medicare MBI, PTAN, and DCN letters to telephone keypad numbers for Medicare IVR systems. Instant results — no sign-up needed.",
   keywords: [
     "ivr alphanumeric conversion tool",

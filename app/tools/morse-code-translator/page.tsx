@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/morse-code-translator`
 
 export const metadata: Metadata = {
-  title: 'Morse Code Translator',
+  title: { absolute: "Morse Code Translator" },
   description: 'Translate text to Morse code and Morse code to text instantly. Free Morse Code Translator with audio playback — no downloads, works in your browser.',
   keywords: [
     'Morse code translator',

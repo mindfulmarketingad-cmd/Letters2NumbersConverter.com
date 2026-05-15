@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "JSON to Java Code Generator",
+  title: { absolute: "JSON To Java Code Generator" },
   description: "Generate Java code from JSON structure",
   keywords: [],
   openGraph: {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'ROT13 Cipher Explained — What It Is, How It Works & Why It\'s Used',
+  title: { absolute: 'ROT13 Cipher Explained' },
   description: 'ROT13 cipher explained simply: what it is, how the shift-13 substitution works, why Reddit uses it for spoilers, and how to decode any ROT13 text instantly online.',
   keywords: [
     'ROT13 cipher explained',

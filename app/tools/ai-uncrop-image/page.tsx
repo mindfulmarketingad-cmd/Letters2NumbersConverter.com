@@ -21,7 +21,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'AI Uncrop Image — Expand Any Photo with AI Outpainting',
+  title: { absolute: "AI Uncrop Image" },
   description: 'Free AI image uncropper. Upload a photo, choose how much to expand each edge (up to 512px per side), add an optional prompt, and download the seamlessly extended result. Powered by AI outpainting.',
   keywords: [
     'AI uncrop image',

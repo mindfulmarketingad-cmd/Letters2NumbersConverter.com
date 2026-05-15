@@ -6,7 +6,7 @@ const PAGE_URL = `${BASE_URL}/blog/how-to-decode-hex-file`
 const PUBLISHED = '2026-05-14'
 
 export const metadata: Metadata = {
-  title: 'How To Decode Hex File — Read Binary Data as Text Step by Step',
+  title: { absolute: 'How To Decode Hex File' },
   description:
     'Learn how to decode a hex file step by step: split hex pairs, convert each pair from base-16 to ASCII, use JavaScript parseInt and Python bytes.fromhex, and understand Intel HEX record structure.',
   keywords: [

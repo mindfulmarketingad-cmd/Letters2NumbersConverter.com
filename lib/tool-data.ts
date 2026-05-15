@@ -1404,6 +1404,28 @@ export const getToolData = (toolId: string) => {
         { title: 'Marketing Teams', description: 'Standardizing brand colors across digital and physical media using Pantone as the common reference.' },
       ],
     },
+    'txt-to-ini-converter': {
+      howItWorks: 'Paste your plain text into the left panel and the converter instantly produces a valid INI file in the right panel. Use the options bar to choose your delimiter character (=, :, tab, or space), set the default section name, pick a comment character (; or #), and toggle extras like blank-line section splitting, whitespace trimming, and value quoting. Click Download .ini to save the result, or Copy to grab it for your clipboard.',
+      features: [
+        'Real-time TXT → INI conversion as you type',
+        'Configurable delimiter: =, :, tab, or space',
+        'Blank line = new section toggle for automatic grouping',
+        'Custom default section name (e.g. General, Config, App)',
+        'Comment character choice: ; or #',
+        'Optional value quoting for strings with spaces',
+        'Whitespace trimming for clean key-value pairs',
+        'Download converted file as .ini',
+        'Copy input or output to clipboard',
+        'Sample TXT with realistic database / server / cache sections',
+        'Fully private — no file is uploaded to any server',
+      ],
+      whoIsItFor: [
+        { title: 'Developers', description: 'Converting plain key-value config files or environment dumps into structured INI files for use with parsers and frameworks.' },
+        { title: 'System Administrators', description: 'Reformatting flat configuration exports into sectioned INI files for application deployment and server configuration.' },
+        { title: 'DevOps Engineers', description: 'Transforming TXT-based config templates into INI format during CI/CD pipeline setup and environment provisioning.' },
+        { title: 'Students & Learners', description: 'Understanding the INI file format by seeing a live conversion of familiar key-value text into proper sections and entries.' },
+      ],
+    },
     'xps-to-pdf-converter': {
       howItWorks: 'Upload your XPS (XML Paper Specification) file and the tool converts it to a standard PDF document entirely in your browser. It parses the XPS XML structure, renders each page, and outputs a downloadable PDF — no software installation or server upload required.',
       features: ['Convert XPS and OXPS files to PDF in the browser', 'Preserves text, images, and page layout', 'Multi-page XPS documents fully supported', 'No file upload — conversion happens locally', 'Download the converted PDF instantly', 'Free with no file size limits imposed by servers'],

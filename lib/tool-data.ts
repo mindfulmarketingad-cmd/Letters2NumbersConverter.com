@@ -1212,6 +1212,25 @@ export const getToolData = (toolId: string) => {
         { title: 'HR & Hiring Teams', description: 'Screen cover letters and application essays for AI writing and verify headshots for AI generation artifacts.' },
       ],
     },
+    'jpg-to-grayscale-converter': {
+      howItWorks: 'Upload any JPG, PNG, or WebP image. The tool draws your image onto an HTML canvas and converts every pixel to grayscale using the luminosity formula (0.299 × R + 0.587 × G + 0.114 × B). The result is displayed side-by-side with the original so you can compare instantly. Adjust the JPG quality slider to choose between smaller file size and maximum sharpness, then download your grayscale JPG. Everything runs in your browser — your image is never sent to a server.',
+      features: [
+        'Side-by-side before/after preview',
+        'Luminosity formula for perceptually accurate grayscale',
+        'Adjustable JPG output quality (50–100%)',
+        'Before/after file size comparison with percentage change',
+        'Image dimensions display',
+        'Accepts JPG, PNG, WebP, BMP input — always outputs JPG',
+        '100% browser-based — image never leaves your device',
+        'No sign-up required — free and instant',
+      ],
+      whoIsItFor: [
+        { title: 'Photographers', description: 'Convert color photos to black and white for a classic or dramatic aesthetic, or to prepare images for monochrome publications.' },
+        { title: 'Web Designers', description: 'Convert images for UI mockups, grayscale placeholders, hover effects, or accessibility testing.' },
+        { title: 'Content Creators', description: 'Create black-and-white social media images without opening a full photo editor.' },
+        { title: 'Students & Educators', description: 'Prepare grayscale images for printed handouts and papers where color printing is unavailable or expensive.' },
+      ],
+    },
     'pdf-to-grayscale-converter': {
       howItWorks: 'Upload any PDF file (up to 100 MB). The tool renders each page using PDF.js at 2× resolution for sharpness, converts every pixel to grayscale using the luminosity formula (0.299 × R + 0.587 × G + 0.114 × B), then bundles all pages into a new PDF using jsPDF. Adjust the output quality slider to balance file size vs. sharpness. A preview of page 1 is shown after conversion. Download the finished grayscale PDF. Your file never leaves your browser.',
       features: [

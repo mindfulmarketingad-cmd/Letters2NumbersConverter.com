@@ -665,6 +665,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'PDF Tools',
     href: '/tools/pdf-to-grayscale-converter',
   },
+  'jpg-to-grayscale-converter': {
+    name: 'Convert JPG to Grayscale',
+    description: 'Convert any JPG to grayscale online for free. Side-by-side preview, adjustable output quality, and file size comparison. Luminosity formula for accurate tones. No sign-up, 100% private.',
+    category: 'Image Tools',
+    href: '/tools/jpg-to-grayscale-converter',
+  },
 }
 
 export function getToolRegistry() {

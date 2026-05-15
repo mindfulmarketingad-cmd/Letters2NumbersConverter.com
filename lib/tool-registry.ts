@@ -677,6 +677,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Math Tools',
     href: '/tools/discriminant-formula-calculator',
   },
+  'structural-formula-calculator': {
+    name: 'Structural Formula Calculator',
+    description: 'Visualize 2D structural formulas of any molecule. Choose from 40+ molecules or enter SMILES notation. Shows bonds, functional groups, molecular weight, and atom counts.',
+    category: 'Science Tools',
+    href: '/tools/structural-formula-calculator',
+  },
 }
 
 export function getToolRegistry() {

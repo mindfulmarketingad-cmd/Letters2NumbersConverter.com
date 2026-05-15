@@ -115,6 +115,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'pdf-to-grayscale-converter',
     'jpg-to-grayscale-converter',
     'discriminant-formula-calculator',
+    'structural-formula-calculator',
   ]
 
   const blogRoutes = [

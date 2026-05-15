@@ -1212,6 +1212,27 @@ export const getToolData = (toolId: string) => {
         { title: 'HR & Hiring Teams', description: 'Screen cover letters and application essays for AI writing and verify headshots for AI generation artifacts.' },
       ],
     },
+    'structural-formula-calculator': {
+      howItWorks: 'Select a molecule from the library of 40+ compounds (searchable by name, formula, or SMILES, filterable by category) or switch to Custom SMILES mode and enter any valid SMILES string. The 2D structural formula renders instantly showing all atoms, bonds, and spatial arrangement. The properties panel displays molecular formula, molecular weight, bond counts, and a molecule description. In Custom SMILES mode, the tool detects functional groups and counts heavy atoms from your input. Toggle between light and dark canvas themes and download the structural diagram as a PNG image.',
+      features: [
+        '40+ molecule library: inorganic, hydrocarbons, aromatic, alcohols, carboxylic acids, aldehydes, ketones, sugars, amino acids, drugs, and more',
+        'Custom SMILES input — render any molecule with valid SMILES notation',
+        'Real-time 2D structural formula rendering with SmilesDrawer',
+        'CPK color-coded atoms: oxygen (red), nitrogen (blue), sulfur (yellow), phosphorus (orange)',
+        'Single, double, triple, and aromatic bond rendering',
+        'Molecular properties: formula, molecular weight, bond counts, heavy atom count',
+        'Functional group detection for custom SMILES (hydroxyl, carbonyl, acid, amide, amine, alkene, alkyne, aromatic, and more)',
+        'Light and dark canvas themes',
+        'Download structural diagram as PNG',
+        'No sign-up required — free and instant',
+      ],
+      whoIsItFor: [
+        { title: 'Chemistry Students', description: 'Visualize structural formulas of molecules you are studying and identify functional groups, bond types, and molecular properties.' },
+        { title: 'Teachers & Educators', description: 'Generate 2D structural diagrams for slides and handouts without a full chemistry drawing application. Download as PNG.' },
+        { title: 'Researchers & Chemists', description: 'Quickly verify SMILES notation by rendering the structure and identifying functional groups.' },
+        { title: 'Pharmacy & Medical Students', description: 'Examine structural formulas of common drugs — aspirin, ibuprofen, paracetamol, caffeine, dopamine — with their functional groups.' },
+      ],
+    },
     'discriminant-formula-calculator': {
       howItWorks: 'Enter the three coefficients a, b, and c of your quadratic equation in the form ax² + bx + c = 0. The calculator instantly computes the discriminant D = b² − 4ac, shows full step-by-step working, identifies the nature of the roots (two distinct real, one repeated, or two complex), and solves for the roots using the quadratic formula. Exact rational roots are shown as simplified fractions; irrational roots as decimal approximations.',
       features: [

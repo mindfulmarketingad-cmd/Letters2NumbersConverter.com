@@ -683,6 +683,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Science Tools',
     href: '/tools/structural-formula-calculator',
   },
+  'run-on-sentence-checker': {
+    name: 'Run On Sentence Checker',
+    description: 'Instantly detect comma splices and run-on sentences in your text. Get clear explanations and numbered fix suggestions for every issue.',
+    category: 'Writing Tools',
+    href: '/tools/run-on-sentence-checker',
+  },
 }
 
 export function getToolRegistry() {

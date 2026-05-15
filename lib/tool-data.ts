@@ -1212,6 +1212,26 @@ export const getToolData = (toolId: string) => {
         { title: 'HR & Hiring Teams', description: 'Screen cover letters and application essays for AI writing and verify headshots for AI generation artifacts.' },
       ],
     },
+    'ai-uncrop-image': {
+      howItWorks: 'Upload any PNG, JPG, or WebP image. Choose how many pixels to add to each edge — Top, Bottom, Left, and Right — in steps from 64 to 512 pixels. Optionally enter a prompt describing what should fill the new space (e.g. "blurry forest background"). Adjust the creativity slider: lower keeps the fill faithful to existing edges, higher allows more imaginative generation. Click "Uncrop Image" and AI outpainting generates seamless new content to fill the expanded canvas. Toggle between original and result to compare, then download as WebP.',
+      features: [
+        'Expand any edge independently — top, bottom, left, right',
+        'Pixel increments from 64px to 512px per side',
+        'Optional text prompt to guide what fills the new space',
+        'Creativity slider — conservative to imaginative fill',
+        'Live dimension preview showing new output size',
+        'Before/after toggle to compare original and result',
+        'Download result as high-quality WebP',
+        'Supports PNG, JPG, and WebP uploads up to 20 MB',
+        'No sign-up required',
+      ],
+      whoIsItFor: [
+        { title: 'Photographers & Retouchers', description: 'Expand tightly cropped shots to give subjects more breathing room or recover composition space lost during cropping.' },
+        { title: 'Social Media Managers', description: 'Convert portrait crops to landscape (or vice versa) for different platforms without reshooting. Fit images to banner dimensions.' },
+        { title: 'E-commerce Sellers', description: 'Add white-space padding around product shots to match marketplace image ratio requirements.' },
+        { title: 'Graphic Designers', description: 'Extend hero images for wider banners, add space for text overlays, or generate a larger background from a reference crop.' },
+      ],
+    },
     'ai-paragraph-expander': {
       howItWorks: 'Paste any text, choose a tone (professional, casual, academic, creative, or persuasive), expansion style (natural, descriptive, add examples, add context, formal, or simplified), and target length (2×, 3×, or 4×). Click "Expand Paragraph" and the AI rewrites your text into a longer, richer version while preserving the original meaning. Copy the result, regenerate for a different take, or use the output as input to expand further.',
       features: [

@@ -111,6 +111,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'bubble-text-generator',
     'ai-slop-checker',
     'ai-paragraph-expander',
+    'ai-uncrop-image',
   ]
 
   const blogRoutes = [

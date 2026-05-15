@@ -653,6 +653,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Text Tools',
     href: '/tools/ai-paragraph-expander',
   },
+  'ai-uncrop-image': {
+    name: 'AI Uncrop Image',
+    description: 'Expand any photo beyond its original borders using AI outpainting. Choose how much to extend each edge, add an optional prompt, and download the seamlessly extended result.',
+    category: 'Image Tools',
+    href: '/tools/ai-uncrop-image',
+  },
 }
 
 export function getToolRegistry() {

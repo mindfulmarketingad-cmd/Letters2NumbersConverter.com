@@ -106,7 +106,7 @@ export function MedicarePrefixConverter() {
               </div>
               <div>
                 <p className="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wide">Beneficiary Type</p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-white">{result.meaning}</p>
+                <p className="text-2xl font-bold text-gray-900">{result.meaning}</p>
               </div>
               <div>
                 <p className="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wide mb-1">Description</p>
@@ -143,7 +143,7 @@ export function MedicarePrefixConverter() {
                 <div className="flex items-center gap-3 mb-2">
                   <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 min-w-12">{prefix.letter}</div>
                   <div>
-                    <p className="font-semibold text-gray-900 dark:text-white">{prefix.meaning}</p>
+                    <p className="font-semibold text-gray-900">{prefix.meaning}</p>
                   </div>
                 </div>
                 <p className="text-xs text-gray-600 dark:text-gray-400">{prefix.description}</p>

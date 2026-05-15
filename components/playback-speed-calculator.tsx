@@ -86,7 +86,7 @@ export function PlaybackSpeedCalculator() {
   return (
     <div className="w-full max-w-4xl mx-auto p-8 bg-background rounded-lg">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-black dark:text-white mb-2">Playback Speed Calculator</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-2">Playback Speed Calculator</h2>
         <p className="text-lg text-muted-foreground">
           Calculate adjusted duration and time saved when playing media at different speeds.
         </p>
@@ -100,7 +100,7 @@ export function PlaybackSpeedCalculator() {
 
         <TabsContent value="time" className="space-y-6 mt-6">
           <div className="bg-secondary/50 p-6 rounded-lg border border-border">
-            <h3 className="font-semibold text-black dark:text-white mb-4">Original Duration</h3>
+            <h3 className="font-semibold text-foreground mb-4">Original Duration</h3>
             <div className="grid grid-cols-3 gap-4 mb-6">
               <div>
                 <label className="block text-sm font-medium text-muted-foreground mb-2">Hours</label>
@@ -111,7 +111,7 @@ export function PlaybackSpeedCalculator() {
                   onChange={(e) => setHours(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="0"
-                  className="w-full px-4 py-2 border border-border rounded-lg bg-background text-black dark:text-white"
+                  className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground"
                 />
               </div>
               <div>
@@ -124,7 +124,7 @@ export function PlaybackSpeedCalculator() {
                   onChange={(e) => setMinutes(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="0"
-                  className="w-full px-4 py-2 border border-border rounded-lg bg-background text-black dark:text-white"
+                  className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground"
                 />
               </div>
               <div>
@@ -137,7 +137,7 @@ export function PlaybackSpeedCalculator() {
                   onChange={(e) => setSeconds(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="0"
-                  className="w-full px-4 py-2 border border-border rounded-lg bg-background text-black dark:text-white"
+                  className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground"
                 />
               </div>
             </div>
@@ -146,7 +146,7 @@ export function PlaybackSpeedCalculator() {
 
         <TabsContent value="seconds" className="space-y-6 mt-6">
           <div className="bg-secondary/50 p-6 rounded-lg border border-border">
-            <h3 className="font-semibold text-black dark:text-white mb-4">Original Duration</h3>
+            <h3 className="font-semibold text-foreground mb-4">Original Duration</h3>
             <div>
               <label className="block text-sm font-medium text-muted-foreground mb-2">Total Seconds</label>
               <input
@@ -156,7 +156,7 @@ export function PlaybackSpeedCalculator() {
                 onChange={(e) => setTotalSeconds(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="0"
-                className="w-full px-4 py-2 border border-border rounded-lg bg-background text-black dark:text-white"
+                className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground"
               />
             </div>
           </div>
@@ -164,7 +164,7 @@ export function PlaybackSpeedCalculator() {
       </Tabs>
 
       <div className="bg-secondary/50 p-6 rounded-lg border border-border mb-6">
-        <h3 className="font-semibold text-black dark:text-white mb-4">Playback Speed</h3>
+        <h3 className="font-semibold text-foreground mb-4">Playback Speed</h3>
         
         <div className="flex gap-2 mb-4">
           <input
@@ -176,7 +176,7 @@ export function PlaybackSpeedCalculator() {
             step="0.05"
             min="0.25"
             max="16"
-            className="flex-1 px-4 py-2 border border-border rounded-lg bg-background text-black dark:text-white"
+            className="flex-1 px-4 py-2 border border-border rounded-lg bg-background text-foreground"
           />
           <button
             onClick={clearSpeed}
@@ -196,7 +196,7 @@ export function PlaybackSpeedCalculator() {
               className={`px-3 py-2 rounded-lg font-medium transition ${
                 parseFloat(speed) === presetSpeed
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 dark:bg-gray-700 text-black dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'
+                  : 'bg-gray-200 dark:bg-gray-700 text-foreground hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
               {presetSpeed}x
@@ -223,7 +223,7 @@ export function PlaybackSpeedCalculator() {
 
       {result && (
         <div className="bg-green-50 dark:bg-green-950 p-6 rounded-lg border border-green-200 dark:border-green-800 mb-6">
-          <h3 className="text-lg font-semibold text-black dark:text-white mb-4">Results</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-4">Results</h3>
           
           <div className="space-y-3">
             <div className="flex justify-between items-center p-3 bg-white dark:bg-gray-800 rounded">
@@ -250,7 +250,7 @@ export function PlaybackSpeedCalculator() {
       )}
 
       <div className="bg-blue-50 dark:bg-blue-950 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-black dark:text-white mb-3">About This Calculator</h3>
+        <h3 className="text-lg font-semibold text-foreground mb-3">About This Calculator</h3>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
           The Playback Speed Calculator helps you understand how adjusting playback speed affects the duration of your media consumption. Whether you're watching educational videos, podcasts, or lectures, this tool shows:
         </p>

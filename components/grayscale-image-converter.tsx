@@ -103,7 +103,7 @@ export function GrayscaleImageConverter() {
   return (
     <div className="w-full max-w-6xl mx-auto p-8 bg-background rounded-lg">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-black dark:text-white mb-2">Grayscale Image Online</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-2">Grayscale Image Online</h2>
         <p className="text-lg text-muted-foreground">
           Scan Words From Image and convert any image to grayscale instantly. Our online tool transforms colored images to black and white with just one click. Perfect for web design, professional photography, creative projects, and document processing.
         </p>
@@ -117,7 +117,7 @@ export function GrayscaleImageConverter() {
           className="border-2 border-dashed border-border rounded-lg p-12 text-center bg-secondary/50 mb-8 cursor-pointer hover:border-primary transition-colors"
         >
           <Upload className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
-          <h3 className="text-xl font-semibold text-black dark:text-white mb-2">Drop Your Image Here</h3>
+          <h3 className="text-xl font-semibold text-foreground mb-2">Drop Your Image Here</h3>
           <p className="text-muted-foreground mb-4">or click to browse</p>
           <input
             ref={fileInputRef}
@@ -145,7 +145,7 @@ export function GrayscaleImageConverter() {
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             {/* Original Image */}
             <div className="bg-secondary/50 rounded-lg p-4">
-              <h3 className="text-sm font-semibold text-black dark:text-white mb-3">Original Image</h3>
+              <h3 className="text-sm font-semibold text-foreground mb-3">Original Image</h3>
               <div className="relative w-full aspect-video bg-background rounded-lg overflow-hidden flex items-center justify-center">
                 {originalImage && (
                   <img
@@ -160,7 +160,7 @@ export function GrayscaleImageConverter() {
 
             {/* Grayscale Image */}
             <div className="bg-secondary/50 rounded-lg p-4">
-              <h3 className="text-sm font-semibold text-black dark:text-white mb-3">Grayscale Result</h3>
+              <h3 className="text-sm font-semibold text-foreground mb-3">Grayscale Result</h3>
               <div className="relative w-full aspect-video bg-background rounded-lg overflow-hidden flex items-center justify-center">
                 {isProcessing ? (
                   <div className="text-center">
@@ -205,7 +205,7 @@ export function GrayscaleImageConverter() {
 
       {/* Info Section */}
       <div className="bg-blue-50 dark:bg-blue-950 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-black dark:text-white mb-3">About Grayscale Image Conversion</h3>
+        <h3 className="text-lg font-semibold text-foreground mb-3">About Grayscale Image Conversion</h3>
         <div className="text-sm text-gray-700 dark:text-gray-300 space-y-3">
           <p>
             <strong>What it does:</strong> Convert any colored image to grayscale (black and white) instantly using advanced image processing technology.

@@ -80,7 +80,7 @@ export function UrlPercentEncodingDecoding() {
   return (
     <div className="w-full max-w-6xl mx-auto p-8 bg-background rounded-lg">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-black dark:text-white mb-2">URL Percent Encoding and Decoding</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-2">URL Percent Encoding and Decoding</h2>
         <p className="text-lg text-muted-foreground">
           Convert text to and from URL-safe percent-encoded format instantly. Perfect for developers, API testing, and web professionals.
         </p>
@@ -96,23 +96,23 @@ export function UrlPercentEncodingDecoding() {
       <div className="grid grid-cols-2 gap-6 mb-6">
         {/* Input Column */}
         <div className="flex flex-col">
-          <label className="block text-sm font-semibold text-black dark:text-white mb-3">Input</label>
+          <label className="block text-sm font-semibold text-foreground mb-3">Input</label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Enter the text that you wish to encode or decode."
-            className="flex-1 px-4 py-3 border border-border rounded-lg bg-background text-black dark:text-white placeholder-muted-foreground resize-none font-mono text-sm min-h-96"
+            className="flex-1 px-4 py-3 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground resize-none font-mono text-sm min-h-96"
           />
         </div>
 
         {/* Output Column */}
         <div className="flex flex-col">
-          <label className="block text-sm font-semibold text-black dark:text-white mb-3">Result</label>
+          <label className="block text-sm font-semibold text-foreground mb-3">Result</label>
           <textarea
             value={output}
             readOnly
             placeholder="Your results will appear here."
-            className="flex-1 px-4 py-3 border border-border rounded-lg bg-secondary/50 text-black dark:text-white placeholder-muted-foreground resize-none font-mono text-sm min-h-96"
+            className="flex-1 px-4 py-3 border border-border rounded-lg bg-secondary/50 text-foreground placeholder-muted-foreground resize-none font-mono text-sm min-h-96"
           />
         </div>
       </div>
@@ -163,7 +163,7 @@ export function UrlPercentEncodingDecoding() {
 
       {/* Information Section */}
       <div className="bg-blue-50 dark:bg-blue-950 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-black dark:text-white mb-3">About URL Percent Encoding</h3>
+        <h3 className="text-lg font-semibold text-foreground mb-3">About URL Percent Encoding</h3>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
           URL percent encoding (also known as URL encoding or percent-encoding) is a mechanism for encoding information in a URL. This tool helps you:
         </p>

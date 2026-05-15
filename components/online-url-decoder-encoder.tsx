@@ -119,7 +119,7 @@ export function OnlineUrlDecoderEncoder() {
   return (
     <div className="w-full max-w-4xl mx-auto p-8 bg-background rounded-lg">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-black dark:text-white mb-2">Online URL Decoder Encoder</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-2">Online URL Decoder Encoder</h2>
         <p className="text-lg text-muted-foreground">
           Instantly encode and decode URLs. Perfect for web developers, security professionals, and anyone working with URL-encoded data.
         </p>
@@ -133,7 +133,7 @@ export function OnlineUrlDecoderEncoder() {
 
         <TabsContent value="decode" className="space-y-6 mt-6">
           <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h3 className="font-bold text-black dark:text-white mb-2">Decode from URL-encoded format</h3>
+            <h3 className="font-bold text-foreground mb-2">Decode from URL-encoded format</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Simply enter your data then push the decode button.
             </p>
@@ -142,7 +142,7 @@ export function OnlineUrlDecoderEncoder() {
 
         <TabsContent value="encode" className="space-y-6 mt-6">
           <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg border border-green-200 dark:border-green-800">
-            <h3 className="font-bold text-black dark:text-white mb-2">Encode to URL-encoded format</h3>
+            <h3 className="font-bold text-foreground mb-2">Encode to URL-encoded format</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Convert your text to URL-safe format instantly.
             </p>
@@ -152,14 +152,14 @@ export function OnlineUrlDecoderEncoder() {
 
       {/* Input Section */}
       <div className="bg-secondary/50 p-6 rounded-lg border border-border mb-6">
-        <label className="block text-sm font-semibold text-black dark:text-white mb-3">
+        <label className="block text-sm font-semibold text-foreground mb-3">
           {mode === 'decode' ? 'URL-Encoded Text' : 'Text to Encode'}
         </label>
         <textarea
           value={input}
           onChange={(e) => handleInputChange(e.target.value)}
           placeholder="Type (or paste) here..."
-          className="w-full h-40 px-4 py-3 border border-border rounded-lg bg-background text-black dark:text-white placeholder-muted-foreground resize-none font-mono text-sm"
+          className="w-full h-40 px-4 py-3 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground resize-none font-mono text-sm"
         />
       </div>
 
@@ -233,7 +233,7 @@ export function OnlineUrlDecoderEncoder() {
       {/* Output Section */}
       <div className="bg-secondary/50 p-6 rounded-lg border border-border mb-6">
         <div className="flex justify-between items-center mb-3">
-          <label className="text-sm font-semibold text-black dark:text-white">
+          <label className="text-sm font-semibold text-foreground">
             Result
             {decodeRecursively && recursionCount > 1 && (
               <span className="ml-2 text-xs text-muted-foreground">
@@ -246,7 +246,7 @@ export function OnlineUrlDecoderEncoder() {
           value={output}
           readOnly
           placeholder="Result goes here..."
-          className="w-full h-40 px-4 py-3 border border-border rounded-lg bg-background text-black dark:text-white placeholder-muted-foreground resize-none font-mono text-sm"
+          className="w-full h-40 px-4 py-3 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground resize-none font-mono text-sm"
         />
       </div>
 
@@ -272,7 +272,7 @@ export function OnlineUrlDecoderEncoder() {
 
       {/* Info Section */}
       <div className="bg-blue-50 dark:bg-blue-950 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-black dark:text-white mb-3">About URL Encoding/Decoding</h3>
+        <h3 className="text-lg font-semibold text-foreground mb-3">About URL Encoding/Decoding</h3>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
           URL encoding converts special characters into a format that is safe for URLs and web transmission. This tool helps you:
         </p>

@@ -114,7 +114,7 @@ export function HomepageSearch() {
     <div className="w-full max-w-4xl mx-auto px-4 py-12 md:py-20">
       {/* Logo/Branding */}
       <div className="text-center mb-12 md:mb-16">
-        <h2 id="search-tools" className="text-2xl md:text-3xl font-bold mb-2 text-foreground dark:text-white">
+        <h2 id="search-tools" className="text-2xl md:text-3xl font-bold mb-2 text-foreground">
           Letters To Numbers Converter
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

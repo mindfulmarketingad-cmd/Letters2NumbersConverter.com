@@ -123,7 +123,7 @@ export function HtmlEncoderDecoder() {
       <div className="mb-8">
         <div className="flex justify-between items-start mb-4">
           <div>
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-2">HTML Encoder and Decoder</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-2">HTML Encoder and Decoder</h2>
             <p className="text-lg text-muted-foreground">
               Instantly encode and decode HTML entities. Perfect for web developers, content creators, and anyone working with HTML markup.
             </p>
@@ -148,13 +148,13 @@ export function HtmlEncoderDecoder() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         {/* Input Column */}
         <div className="flex flex-col">
-          <label className="text-sm font-semibold text-black dark:text-white mb-3">Input</label>
+          <label className="text-sm font-semibold text-foreground mb-3">Input</label>
           <div className="flex-1 border border-border rounded-lg overflow-hidden bg-secondary/50">
             <textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Enter HTML code or text to encode..."
-              className="w-full h-96 p-4 bg-background text-black dark:text-white placeholder-muted-foreground resize-none font-mono text-sm border-none focus:outline-none"
+              className="w-full h-96 p-4 bg-background text-foreground placeholder-muted-foreground resize-none font-mono text-sm border-none focus:outline-none"
             />
           </div>
           {input && (
@@ -170,13 +170,13 @@ export function HtmlEncoderDecoder() {
 
         {/* Output Column */}
         <div className="flex flex-col">
-          <label className="text-sm font-semibold text-black dark:text-white mb-3">Output</label>
+          <label className="text-sm font-semibold text-foreground mb-3">Output</label>
           <div className="flex-1 border border-border rounded-lg overflow-hidden bg-yellow-50 dark:bg-yellow-950">
             <textarea
               value={output}
               readOnly
               placeholder="Encoded or decoded result will appear here..."
-              className="w-full h-96 p-4 bg-background text-black dark:text-white placeholder-muted-foreground resize-none font-mono text-sm border-none focus:outline-none"
+              className="w-full h-96 p-4 bg-background text-foreground placeholder-muted-foreground resize-none font-mono text-sm border-none focus:outline-none"
             />
           </div>
           {output && (
@@ -216,7 +216,7 @@ export function HtmlEncoderDecoder() {
         </button>
         <button
           onClick={handleClear}
-          className="px-6 py-3 border-2 border-gray-400 hover:border-gray-500 text-black dark:text-white rounded-lg font-semibold transition"
+          className="px-6 py-3 border-2 border-gray-400 hover:border-gray-500 text-foreground rounded-lg font-semibold transition"
         >
           Clear
         </button>
@@ -224,7 +224,7 @@ export function HtmlEncoderDecoder() {
 
       {/* Information Section */}
       <div className="bg-blue-50 dark:bg-blue-950 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-black dark:text-white mb-3">About HTML Encoding/Decoding</h3>
+        <h3 className="text-lg font-semibold text-foreground mb-3">About HTML Encoding/Decoding</h3>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
           HTML encoding converts special characters and symbols into HTML entities, making them safe for use in web pages. This tool helps you:
         </p>

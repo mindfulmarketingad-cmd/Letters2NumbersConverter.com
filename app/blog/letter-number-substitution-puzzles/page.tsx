@@ -6,7 +6,7 @@ import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
-  title: "Letter Number Substitution Puzzles: Your Complete Guide to Cipher Solving",
+  title: { absolute: "Letter Number Substitution Puzzles" },
   description: "Master letter number substitution puzzles with our complete guide. Learn different cipher types, see worked examples, and discover solving techniques for cryptograms and codes.",
   keywords: ["letter number substitution puzzles", "substitution cipher", "cryptogram puzzles", "letter substitution", "number cipher puzzles"],
   authors: [{ name: "John Reed" }],

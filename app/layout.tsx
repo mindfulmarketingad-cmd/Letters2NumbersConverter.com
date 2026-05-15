@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { FloatingToc } from '@/components/floating-toc'
-import { ThemeProvider } from '@/components/theme-provider'
 import { SchemaMarkup } from '@/components/schema-markup'
 import { AuthProvider } from '@/lib/auth-context'
 import Script from 'next/script'
@@ -85,7 +84,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <SchemaMarkup />
         {/* Google Analytics */}
@@ -122,15 +121,8 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased min-h-screen bg-background">
         <AuthProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-            <FloatingToc />
-          </ThemeProvider>
+          {children}
+          <FloatingToc />
         </AuthProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

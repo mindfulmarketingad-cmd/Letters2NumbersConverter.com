@@ -4,7 +4,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { useAuth } from "@/lib/auth-context"
 import { ProfileDropdown } from "@/components/profile-dropdown"
 import { HeaderUsageIndicator } from "@/components/header-usage-indicator"
@@ -17,7 +16,6 @@ export function SiteHeader() {
     <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <ThemeToggle />
           <Link href="/" className="flex items-center gap-3 group">
             <Image 
               src="/logo.png" 

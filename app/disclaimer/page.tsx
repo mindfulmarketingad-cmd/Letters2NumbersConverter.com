@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site-footer"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Disclaimer",
+  title: { absolute: "Disclaimer" },
   description: "Disclaimer for Letters2NumbersConverter.com. Important information about the use of our free online tools and content.",
 }
 

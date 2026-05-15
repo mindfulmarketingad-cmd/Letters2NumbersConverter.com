@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "A1Z26 Translator",
+  title: { absolute: "A1Z26 Translator" },
   description: "Translate letters to numbers with the A1Z26 alphabet cipher. Convert any text to number sequences.",
   keywords: ["A1Z26", "translator", "letter to number", "cipher", "alphabet"],
   openGraph: {

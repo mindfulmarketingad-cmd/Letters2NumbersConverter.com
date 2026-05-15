@@ -6,7 +6,7 @@ import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
-  title: "Letters to Numbers Translator",
+  title: { absolute: "Letters to Numbers Translator" },
   description: "Use our free letters to numbers translator to instantly convert any text to numerical values. Learn how letter-to-number translation works with A=1, B=2 through Z=26.",
   keywords: ["letters to numbers translator", "letter number translator", "translate letters to numbers", "text to number translator", "alphabet translator"],
   authors: [{ name: "John Reed" }],
@@ -171,6 +171,22 @@ export default function LettersToNumbersTranslatorPage() {
                 Our free <Link href="/" className="text-primary hover:underline">letters to numbers translator</Link> makes translation instant and effortless. Simply type or paste your text, select your preferred translation format, and get your results immediately. The tool works both ways - translate letters to numbers or numbers back to letters with a single click.
               </p>
             </div>
+
+              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">How a Letters to Numbers Translator Works</h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Under the hood, a letters to numbers translator applies a simple lookup operation to each character in the input text. For the most common encoding standard, A1Z26, the translator reads each letter, determines its ordinal position in the English alphabet, and outputs that position as a number. The letter A is at position 1, B at position 2, and so on through Z at position 26. Spaces between words are typically preserved as-is or replaced with a visible separator so the decoder can reconstruct word boundaries correctly.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                For more technically oriented encoding types such as ASCII, the translator references the American Standard Code for Information Interchange table, which assigns a unique integer between 0 and 127 to every printable character. Uppercase A maps to 65, uppercase Z to 90, lowercase a to 97, and lowercase z to 122. The translator performs this lookup for every character in the input, including punctuation and digits that have their own ASCII codes. Hexadecimal and binary translators take the ASCII decimal output as an intermediate step and then convert those decimal values into base-16 or base-2 representations respectively. Our <Link href="/" className="text-primary hover:underline">letters to numbers translator</Link> handles all of these encoding types automatically, so you can switch between them without recalculating anything manually.
+              </p>
+
+              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">When to Use a Letters to Numbers Translator</h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                The most immediate use case is puzzle solving. Geocachers regularly encounter mystery caches where the coordinates are encoded as a number sequence rather than given directly. Escape room designers embed number codes in padlocks, combination safes, and printed clue sheets, relying on the A1Z26 system because it is accessible to anyone who knows the alphabet. A letters to numbers translator lets you quickly encode a phrase into a number string that forms a puzzle answer, or decode an existing string you have found in the field without having to count through the alphabet letter by letter.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Beyond puzzles, the translator is useful in programming and data analysis contexts. Numeric representations of text can be fed into mathematical functions — summing the number values of a word&apos;s letters, for instance, is the basis of simple numerical wordplay and numerology calculations. In education, teachers use the translator to create worksheets that simultaneously reinforce alphabet order and basic arithmetic. In data engineering, text-to-number encoding is a preprocessing step in certain machine learning pipelines where features must be numeric. Whatever your use case, having an instant translator at hand removes the tedious manual lookup work and lets you focus on the actual task.
+              </p>
 
             <div className="mt-12 p-6 bg-muted/30 rounded-lg">
               <h3 className="text-lg font-semibold text-foreground mb-2">Ready to Translate?</h3>

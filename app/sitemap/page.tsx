@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
-  title: "Sitemap | Letters2NumbersConverter.com",
+  title: { absolute: "Sitemap" },
   description: "Browse all pages on Letters2NumbersConverter.com — your complete guide to letter-to-number conversion tools, cipher decoders, and resources.",
 }
 

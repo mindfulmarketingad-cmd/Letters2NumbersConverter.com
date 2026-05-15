@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/site-header"
 const BASE_URL = 'https://www.letters2numbersconverter.com'
 
 export const metadata: Metadata = {
-  title: "About John Reed — Letters to Numbers Converter",
+  title: { absolute: "About" },
   description: "Letters2NumbersConverter.com was built by John Reed to make cipher decoding, letter-number conversion, and text encoding tools free and accessible to everyone.",
   alternates: { canonical: `${BASE_URL}/about` },
 }

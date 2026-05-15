@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'A1Z26 Decoder and Encoder | Convert Letters to Numbers Online',
+  title: { absolute: "A1Z26 Decoder and Encoder" },
   description: 'A1Z26 Decoder and Encoder - Free online tool to convert letters to numbers (A=1, Z=26) and decode numbers back to letters instantly. Perfect for cryptography, puzzles, and data conversion.',
   keywords: ['A1Z26 decoder', 'A1Z26 encoder', 'A1Z26 converter', 'letter to number converter', 'cipher decoder'],
   openGraph: {

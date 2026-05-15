@@ -21,7 +21,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'AI Slop Checker — Free AI Text & Image Detector',
+  title: { absolute: "AI Slop Checker" },
   description: 'Check if text or images are AI-generated. Our free AI slop detector analyzes writing for ChatGPT, Gemini, and GPT-4 patterns, detects deepfake images, shows readability scores, and strips hidden AI fingerprints.',
   keywords: [
     'AI slop checker',

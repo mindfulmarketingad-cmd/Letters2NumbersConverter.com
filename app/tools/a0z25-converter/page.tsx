@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'A0Z25 Converter | Convert Letters to Numbers Online',
+  title: { absolute: "A0Z25 Converter" },
   description: 'A0Z25 Converter - Free online tool to convert letters to numbers (A=0, Z=25) and decode numbers back to letters. Perfect for cryptography, coding, and text encoding.',
   keywords: ['A0Z25 converter', 'letters to numbers', 'A0Z25 encoder', 'A0Z25 decoder', 'text converter'],
   openGraph: {

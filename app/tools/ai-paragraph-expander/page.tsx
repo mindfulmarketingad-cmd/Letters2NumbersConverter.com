@@ -21,7 +21,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'AI Paragraph Expander — Expand Text Instantly, Free',
+  title: { absolute: "AI Paragraph Expander" },
   description: 'Free AI paragraph expander. Paste any text and expand it 2×, 3×, or 4× longer in seconds. Choose your tone (professional, casual, academic, creative) and expansion style. No sign-up needed.',
   keywords: [
     'AI paragraph expander',

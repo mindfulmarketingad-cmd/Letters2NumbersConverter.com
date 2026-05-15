@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "A0Z25 Cipher Translator",
+  title: { absolute: "A0Z25 Cipher Translator" },
   description: "A0Z25 Cipher Translator - Free online zero-indexed letter-to-number encoding tool where A=0, B=1, through Z=25. Perfect for programming, cryptography, and cipher solving.",
   keywords: ["A0Z25 cipher translator", "A0Z25 encoder", "zero-indexed cipher", "A=0 B=1 translator", "programming cipher", "letter to number converter"],
   openGraph: {

@@ -6,7 +6,7 @@ import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
-  title: "How to Manually Check Letter to Number Conversion",
+  title: { absolute: "How to Manually Check Letter Number Conversion" },
   description: "Learn step-by-step methods for manually converting letters to numbers using A1Z26, ASCII, hexadecimal, and binary encoding without tools.",
   authors: [{ name: "John Reed" }],
 }
@@ -161,6 +161,22 @@ export default function HowToManuallyCheckLetterNumberConversion() {
             <h2 id="conclusion" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Conclusion</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Manual letter-to-number conversion is a valuable skill that deepens understanding of encoding systems. While digital tools are faster for lengthy conversions, knowing the underlying methods helps with verification, learning, and situations where tools are unavailable. Practice with simple words to build fluency in each encoding type.
+            </p>
+
+            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Step-by-Step Manual Conversion Guide</h2>
+            <p className="text-foreground leading-relaxed mb-6">
+              A reliable manual conversion workflow starts with preparation. Before you touch a single letter, write out or recall your anchor points: A=1, E=5, J=10, M=13, O=15, T=20, Y=25, Z=26. These eight values are easy to memorise and let you compute any other letter by counting forward or backward from the nearest anchor. For the letter R, you know T=20 and count back two steps to reach R=18. For the letter P, you know O=15 and count forward one step to reach P=16. With anchor points, you rarely need to count all the way from A.
+            </p>
+            <p className="text-foreground leading-relaxed mb-6">
+              Work through your text one character at a time and write each number below its corresponding letter. Use a dash or space to separate the numbers clearly — this prevents ambiguity when a sequence like 1 and 12 might otherwise be read as 112. Once you have written every number, read back through the sequence and check each value against your anchor points. If a value falls outside the range 1–26 for A1Z26 encoding, an error has occurred and you can trace back to the specific character that caused it. This systematic, character-by-character approach is slower than using a digital tool but produces accurate results and builds the kind of number sense that makes future conversions faster.
+            </p>
+
+            <h2 className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Common Mistakes When Converting Letters to Numbers</h2>
+            <p className="text-foreground leading-relaxed mb-6">
+              The most frequent error in manual A1Z26 conversion is an off-by-one mistake: counting A as 0 instead of 1 and arriving at values that are consistently one less than the correct answer. This often happens because counting in everyday life starts at zero in many programming contexts, and the habit carries over. The fix is simple — remind yourself that A is position 1, not position 0, and verify a known anchor point like M=13 before proceeding with a long conversion.
+            </p>
+            <p className="text-foreground leading-relaxed mb-6">
+              Another common mistake is conflating encoding systems mid-conversion. If you start thinking in ASCII and accidentally add 64 to a few letters while doing A1Z26 for the rest, the result will be a mixed-up sequence that is impossible to decode correctly. Decide which system you are using before you begin and stick to it for the entire message. Separators are another source of error: writing numbers without any delimiter between them forces the decoder to guess where one number ends and the next begins. The sequence 112 could mean A-A-B (1-1-2), A-L (1-12), or K-B (11-2). Always use dashes, spaces, or commas. Finally, be careful with letters that have two-digit values (J through Z): it is easy to write 1 when you mean 10, or 2 when you mean 20, especially when working quickly.
             </p>
 
             <div className="bg-muted/50 border border-border rounded-lg p-6 mt-10">

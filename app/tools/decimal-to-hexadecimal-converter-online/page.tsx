@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/decimal-to-hexadecimal-converter-online`
 
 const toolSchema = generateToolPageSchema(
-  "Decimal to Hexadecimal Converter Online",
+  "Decimal to Hexadecimal Converter",
   "Convert between decimal, hexadecimal, binary, and octal number systems instantly. Perfect for programmers and developers.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Decimal to Hexadecimal Converter Online", url: PAGE_URL },
+  { name: "Decimal to Hexadecimal Converter", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Decimal to Hexadecimal Converter Online",
+  title: { absolute: "Decimal to Hexadecimal Converter" },
   description: "Convert between decimal, hexadecimal, binary, and octal number systems instantly. Perfect for programmers and developers.",
   keywords: ["decimal to hex", "hexadecimal converter", "number converter", "binary converter", "octal converter"],
   openGraph: {
@@ -49,7 +49,7 @@ export default function DecimalHexConverterPage() {
     <ToolLayout
       toolId="decimal-hex-converter"
       toolName="Decimal to Hexadecimal Converter"
-      toolDescription="Convert between decimal, hexadecimal, binary, and octal number systems. Perfect for programmers, developers, and anyone working with different numeral systems."
+      toolDescription="The Decimal to Hexadecimal Converter instantly translates any decimal (base-10) number into its hexadecimal (base-16) equivalent, which is the notation used throughout programming, web color codes, memory addresses, and low-level hardware specifications. Hexadecimal's compact representation of binary data makes it the language of choice in HTML/CSS color values like #FF5733, in assembly language programming, and in network packet analysis, so fluent conversion between bases is a foundational skill for every developer. The tool also converts to binary and octal in the same operation, letting you see all common number-system representations side by side without running multiple calculations. Batch input support lets you paste a list of decimal values and receive all their hexadecimal equivalents at once, saving significant time during debugging sessions or data migration work."
       toolComponent={<DecimalHexConverter />}
       toolData={toolData}
     />

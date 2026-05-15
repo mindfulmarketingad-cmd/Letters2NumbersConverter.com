@@ -6,7 +6,7 @@ import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
-  title: "Letter Number Substitution Puzzles: Your Complete Guide to Cipher Solving",
+  title: { absolute: "Letter Number Substitution Puzzles" },
   description: "Master letter number substitution puzzles with our complete guide. Learn different cipher types, see worked examples, and discover solving techniques for cryptograms and codes.",
   keywords: ["letter number substitution puzzles", "substitution cipher", "cryptogram puzzles", "letter substitution", "number cipher puzzles"],
   authors: [{ name: "John Reed" }],
@@ -135,6 +135,22 @@ export default function LetterNumberSubstitutionPuzzlesPage() {
                 While solving letter number substitution puzzles by hand is rewarding, having the right tools speeds up the process. Our free <Link href="/" className="text-primary hover:underline">letters to numbers converter tool</Link> supports multiple encoding types and provides instant conversions, making it perfect for both beginners and experts.
               </p>
             </div>
+
+              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">How to Solve Letter-Number Substitution Puzzles</h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Approaching an unfamiliar letter-number substitution puzzle systematically is the difference between solving it in minutes and staring at it indefinitely. The first step is to survey the entire puzzle and note the range of numbers present. If all values fall between 1 and 26, you are almost certainly looking at an A1Z26 cipher. If values extend into the 60s and 90s, ASCII encoding is likely. Values in the range of 0–25 suggest zero-based encoding. A range of 0–255 with no clear clustering points toward binary or hexadecimal representation.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Once you have identified the probable system, look for short number groups — single-number groups are almost always the letter A (1 in A1Z26) or the letter I. Two-number groups that repeat frequently in English are likely to be common two-letter words like &quot;to,&quot; &quot;of,&quot; &quot;in,&quot; or &quot;is.&quot; Apply your hypothesis to decode a few groups and check whether the resulting letters form recognizable fragments. If the decoded text looks like random letters, revisit your assumption about the encoding system. Most amateur-level puzzles use standard A1Z26, so testing that first is usually the fastest path to a solution. Our <Link href="/" className="text-primary hover:underline">letters to numbers converter</Link> supports all major encoding types and can instantly test your hypothesis by decoding the entire sequence with a single click.
+              </p>
+
+              <h2 className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Popular Letter-Number Puzzle Formats</h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Letter-number substitution appears across a wide variety of puzzle formats, each with its own conventions and presentation style. Cryptarithmetic puzzles, sometimes called alphametics, represent arithmetic equations where each letter stands for a unique digit — the goal is to find the digit assignment that makes the equation true. These are purely mathematical rather than linguistic, but they share the same core mechanic of mapping symbols to numbers. The classic example is SEND + MORE = MONEY, where each letter represents a distinct digit from 0 to 9.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Cryptogram puzzles as traditionally published in newspapers and puzzle books use a letter-to-letter substitution, but many puzzle designers convert the result to numbers for an extra layer of difficulty. The solver must first reverse the number substitution to recover the scrambled letters, then apply frequency analysis to break the letter substitution. Geocaching puzzle caches, escape room installations, and ARG (alternate reality game) sequences use number codes extensively, often embedding them in images, audio files, or seemingly unrelated documents. Recognising that a string of numbers might be a letter-number substitution — rather than a date, a coordinate, or a random sequence — is itself a key puzzle-solving skill that develops with experience.
+              </p>
 
             <div className="mt-12 p-6 bg-muted/30 rounded-lg">
               <h3 className="text-lg font-semibold text-foreground mb-2">Decode Your Puzzles Instantly</h3>

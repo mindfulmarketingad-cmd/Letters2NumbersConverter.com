@@ -4,7 +4,7 @@ import { SiteFooter } from '@/components/site-footer'
 import { OggToWavConverter } from '@/components/ogg-to-wav-converter'
 
 export const metadata: Metadata = {
-  title: 'Convert OGG to WAV',
+  title: { absolute: 'Convert OGG to WAV' },
   description: 'Convert OGG audio files to WAV format instantly. Preserve original quality and convert files up to 100 MB for free with our browser-based tool.',
   keywords: [
     'convert OGG to WAV',
@@ -61,7 +61,7 @@ export default function ConvertOggToWav() {
                     Convert OGG to <span className="text-primary">WAV</span>
                   </h1>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Instantly convert OGG audio files to WAV format with superior quality preservation. Our free online audio converter supports files up to 100 MB and works directly in your browser. Perfect for converting compressed audio to uncompressed WAV format without any quality loss, ideal for professional audio work, archiving, and compatibility with various audio applications.
+                    Convert OGG to WAV entirely in your browser with no file uploads to external servers, giving you complete privacy while transforming compressed Vorbis audio into the uncompressed WAV format demanded by professional audio software, DAWs, and legacy hardware. OGG's lossy compression makes it ideal for streaming and storage, but many audio editing applications, game engines, and broadcast pipelines require the uncompressed PCM data that WAV provides, making conversion an everyday necessity. The tool supports files up to 100 MB and preserves the original sample rate and bit depth throughout the conversion, ensuring the output WAV is as faithful as possible to the decoded audio. No account, no install, and no waiting — simply drop your OGG file in, and download the converted WAV within seconds.
                   </p>
                 </div>
 

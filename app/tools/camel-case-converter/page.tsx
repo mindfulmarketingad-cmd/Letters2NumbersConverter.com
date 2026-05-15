@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/camel-case-converter`
 
 const toolSchema = generateToolPageSchema(
-  "Camel Case Converter - Convert to camelCase, PascalCase & More",
+  "Camel Case Converter",
   "Free online Camel Case Converter tool. Convert text to camelCase, PascalCase, snake_case, kebab-case and other naming conventions. Supports batch processing, multiple formats, and is perfect for developers, programmers, and technical writers managing variable and function names.",
   PAGE_URL,
   'Utility'
@@ -18,11 +18,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Camel Case Converter - Convert to camelCase, PascalCase & More", url: PAGE_URL },
+  { name: "Camel Case Converter", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Camel Case Converter - Convert to camelCase, PascalCase & More",
+  title: { absolute: "Camel Case Converter" },
   description: "Free online Camel Case Converter tool. Convert text to camelCase, PascalCase, snake_case, kebab-case and other naming conventions. Supports batch processing, multiple formats, and is perfect for developers, programmers, and technical writers managing variable and function names.",
   keywords: [
     "camel case converter",
@@ -108,7 +108,7 @@ export default function CamelCaseConverterPage() {
       <ToolLayout
         toolId="camel-case-converter"
         toolName="Camel Case Converter"
-        toolDescription="Free Camel Case Converter tool for transforming text between camelCase, PascalCase, snake_case, kebab-case and other naming conventions. Convert variable names, function names, database columns, and URLs instantly. Perfect for developers, programmers, and technical writers who need to convert naming conventions quickly and accurately with batch processing support."
+        toolDescription="The Camel Case Converter transforms text between every major programming naming convention — camelCase, PascalCase, snake_case, kebab-case, SCREAMING_SNAKE_CASE, and more — with a single click, eliminating the tedious manual renaming that slows down developers during refactoring or cross-language work. Paste any phrase, sentence, or identifier in any format and the tool intelligently detects word boundaries, strips special characters, and applies the exact casing pattern you select, delivering a clean result instantly. Batch mode lets you convert dozens of variable names or database column identifiers at once, making it ideal for migrating a codebase from one convention to another or aligning a REST API with a new style guide. The results copy to your clipboard immediately, integrating seamlessly into whatever editor, terminal, or document you are working in."
         toolComponent={<CamelCaseConverter />}
         toolData={toolData}
       />

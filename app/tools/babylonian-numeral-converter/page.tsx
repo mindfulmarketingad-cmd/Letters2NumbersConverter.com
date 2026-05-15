@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Babylonian Numeral Converter",
+  title: { absolute: "Babylonian Numeral Converter" },
   description: "Babylonian Numeral Converter - Convert decimal numbers to Babylonian base-60 numerals. Learn about the ancient sexagesimal system used by Babylonians.",
   keywords: ["Babylonian numerals", "base-60 converter", "sexagesimal system", "ancient numerals"],
   openGraph: {
@@ -49,7 +49,7 @@ export default function BabylonianNumeralConverterPage() {
     <ToolLayout
       toolId="babylonian-numeral-converter"
       toolName="Babylonian Numeral Converter"
-      toolDescription="Convert between decimal numbers and ancient Babylonian sexagesimal (base-60) numerals. Explore the sophisticated mathematical system used by Babylonians, Sumerians, and Akkadians."
+      toolDescription="The Babylonian Numeral Converter translates any modern decimal number into the ancient cuneiform notation used by Babylonian, Sumerian, and Akkadian scholars more than four thousand years ago, revealing the elegance of history's first positional number system. Babylonian mathematics operated in base-60, or sexagesimal, a system so effective that it still governs our measurement of time and angles today. Each converted result is displayed using authentic wedge-shaped cuneiform symbols, making this an invaluable educational resource for history students, mathematics enthusiasts, and anyone studying the origins of Western numeracy. Instantly convert numbers from 1 into the millions and explore the two-symbol vocabulary that powered ancient Mesopotamian astronomy, commerce, and architecture."
       toolComponent={<BabylonianNumeralConverter />}
       toolData={toolData}
     />

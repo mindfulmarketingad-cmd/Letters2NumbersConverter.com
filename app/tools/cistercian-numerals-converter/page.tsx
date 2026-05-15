@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Cistercian Numerals Converter",
+  title: { absolute: "Cistercian Numerals Converter" },
   description: "Convert numbers to and from Cistercian numeral notation",
   keywords: [],
   openGraph: {
@@ -49,7 +49,7 @@ export default function CistercianNumeralsConverterPage() {
     <ToolLayout
       toolId="cistercian-numerals-converter"
       toolName="Cistercian Numerals Converter"
-      toolDescription="Convert numbers to and from Cistercian numeral notation"
+      toolDescription="The Cistercian Numerals Converter translates any integer from 1 to 9999 into the elegant single-glyph notation invented by medieval Cistercian monks in thirteenth-century Europe, where a single vertical staff with four quadrant markings can express any four-digit number. This compact system allowed monks to label manuscript pages, date documents, and record quantities with remarkable efficiency, and it remains one of the most visually striking numeral systems ever devised. Each converted result is rendered as a clear visual glyph so you can immediately see how the units, tens, hundreds, and thousands combine into one unified symbol. Historians, medievalists, typography enthusiasts, and puzzle creators will find this tool equally useful for research, classroom demonstrations, and generating unique decorative number art."
       toolComponent={<CistercianConverter />}
       toolData={toolData}
     />

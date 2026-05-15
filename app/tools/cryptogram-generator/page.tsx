@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/cryptogram-generator`
 
 const toolSchema = generateToolPageSchema(
-  "Cryptogram Generator | Create & Share Puzzle Cryptograms",
+  "Cryptogram Generator",
   "Create custom puzzle cryptograms using famous quotes or your own text. Share cryptograms with friends with adjustable difficulty levels.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Cryptogram Generator | Create & Share Puzzle Cryptograms", url: PAGE_URL },
+  { name: "Cryptogram Generator", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Cryptogram Generator | Create & Share Puzzle Cryptograms",
+  title: { absolute: "Cryptogram Generator" },
   description: "Create custom puzzle cryptograms using famous quotes or your own text. Share cryptograms with friends with adjustable difficulty levels.",
   keywords: ["cryptogram generator", "cryptogram puzzle", "cryptogram maker", "cipher puzzle", "substitution cipher"],
   openGraph: {
@@ -49,7 +49,7 @@ export default function CryptogramGeneratorPage() {
     <ToolLayout
       toolId="cryptogram-generator"
       toolName="Cryptogram Generator"
-      toolDescription="Create, customize, and share puzzle cryptograms with this interactive tool. Generate substitution cipher puzzles perfect for word games and entertainment."
+      toolDescription="The Cryptogram Generator creates custom substitution cipher puzzles from any text you provide — famous quotes, original phrases, classroom vocabulary, or personal messages — turning plain language into a challenging letter-swap puzzle in seconds. Teachers use it to craft engaging word puzzles for students of all ages, while puzzle book authors rely on it to produce printable cryptograms with adjustable difficulty by controlling how many letter hints are revealed upfront. Each generated cryptogram uses a randomized but consistent substitution alphabet, ensuring every puzzle has a unique solution that players must deduce through pattern recognition and frequency analysis. Share puzzles instantly via a generated link or download a print-ready version, making it easy to distribute to friends, classrooms, or puzzle enthusiasts anywhere."
       toolComponent={<CryptogramGenerator />}
       toolData={toolData}/>
     </ToolPageWrapper>

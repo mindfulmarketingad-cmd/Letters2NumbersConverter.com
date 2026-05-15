@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Find Hackathon Team Members",
+  title: { absolute: "Find Hackathon Team Members" },
   description: "Learn effective strategies to find hackathon team members. Discover networking tips, online communities, and proven methods to build your ideal hackathon team for success.",
   keywords: [
     "find hackathon team members",
@@ -204,6 +204,28 @@ export default function FindHackathonTeamMembers() {
               <h2 id="hackathon-resources" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Hackathon Resources</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Beyond finding hackathon team members, you'll want to explore resources that help your team succeed. Check out the <Link href="/hackathon" className="text-primary hover:underline">Hackathon page</Link> for comprehensive guides, tools, and tips to maximize your hackathon experience.
+              </p>
+            </section>
+
+            {/* Where to Find Online */}
+            <section>
+              <h2 className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Where to Find Hackathon Teammates Online</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                The internet has made it easier than ever to assemble a hackathon team without geographic limitations. DevPost remains one of the most reliable starting points: every listed hackathon has a participant feed, and many events include a dedicated team-formation forum or chat channel where you can post a short bio and your skill set. Reading those threads carefully often reveals people with complementary expertise — a backend developer searching for a frontend partner, or a data scientist who needs a product manager to help frame the problem.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-4">
+                Beyond DevPost, GitHub itself hosts numerous hackathon-related repositories and discussion boards. Searching GitHub for the hackathon name often turns up pre-formed groups who are publicly recruiting. Slack communities tied to specific technologies — React, Python, machine learning — frequently run hackathon channels where members announce participation and seek teammates. Joining two or three such communities before each event and staying active in conversations well before team formation is announced gives you a warm network of potential collaborators rather than cold outreach on the day. Twitter and LinkedIn, when used with event-specific hashtags published by the organizers, can also surface enthusiastic participants who are still looking for a team.
+              </p>
+            </section>
+
+            {/* What to Look For */}
+            <section>
+              <h2 className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">What to Look for in a Hackathon Partner</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Technical skill is only one dimension of a good hackathon partner. In the compressed timeline of a hackathon — often 24 to 48 hours — work style and communication habits matter just as much as coding ability. A highly skilled developer who goes quiet for six-hour stretches and does not communicate blockers can derail a project just as effectively as someone who lacks the technical skills. When evaluating potential teammates, ask about their availability during the event, their preferred working hours, and how they handle disagreements about technical direction. These conversations feel awkward before a casual side project but are entirely normal in a competitive hackathon context.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-4">
+                Look for people who are honest about what they do not know. A candidate who claims expertise in every area is a red flag; someone who says &quot;I can handle the database layer but I will need help with the ML model&quot; is telling you exactly where the team&apos;s strengths and gaps are. That transparency makes planning far easier. Also consider whether a potential partner has participated in hackathons before. First-timers can be excellent contributors, but veterans bring knowledge of pacing — knowing when to cut scope, when to start the final presentation, and how to make a working demo feel polished in limited time. Mixing experienced and first-time participants often produces teams that balance ambition with pragmatism.
               </p>
             </section>
 

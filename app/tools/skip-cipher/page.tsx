@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/skip-cipher`
 
 const toolSchema = generateToolPageSchema(
-  "Skip Cipher - Jump Cipher Online Encrypt Decrypt",
+  "Skip Cipher",
   "Skip Cipher Online Tool - Encrypt and decrypt messages using the skip cipher (jump cipher) transposition cipher. Includes brute force cracking and parameter finder. Free online cryptography tool.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Skip Cipher - Jump Cipher Online Encrypt Decrypt", url: PAGE_URL },
+  { name: "Skip Cipher", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Skip Cipher - Jump Cipher Online Encrypt Decrypt",
+  title: { absolute: "Skip Cipher" },
   description: "Skip Cipher Online Tool - Encrypt and decrypt messages using the skip cipher (jump cipher) transposition cipher. Includes brute force cracking and parameter finder. Free online cryptography tool.",
   keywords: ["skip cipher", "jump cipher", "transposition cipher", "encryption", "decryption", "cryptography"],
   openGraph: {
@@ -49,7 +49,7 @@ export default function SkipCipherPage() {
     <ToolLayout
       toolId="skip-cipher"
       toolName="Skip Cipher"
-      toolDescription="The Skip Cipher (Jump Cipher) is a transposition cipher that reorders letters by extracting every nth character. Use this online tool to encrypt, decrypt, and analyze skip cipher messages with advanced brute force capabilities."
+      toolDescription="The Skip Cipher tool encodes and decodes messages using a transposition technique that reads through the text by jumping a fixed number of characters at a time, producing a scrambled ciphertext that looks random but can be reversed with the correct skip interval. Unlike substitution ciphers such as Caesar or Vigenère that replace individual letters, transposition ciphers like the skip cipher rearrange the positions of letters without altering their identities, which creates a fundamentally different type of cryptographic transformation. The skip cipher shares conceptual roots with the rail-fence cipher and columnar transposition, and it was historically used for its simplicity in field communications where no encryption machinery was available. This tool supports both encryption and decryption with any skip value, and includes brute-force analysis to help you crack intercepted skip cipher messages when the interval is unknown."
       toolComponent={<SkipCipherTool />}
       toolData={toolData}
     />

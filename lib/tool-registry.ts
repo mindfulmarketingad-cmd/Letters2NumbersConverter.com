@@ -347,6 +347,24 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Conversion',
     href: '/tools/txt-to-ini-converter',
   },
+  'ini-to-xml-converter': {
+    name: 'INI To XML Converter',
+    description: 'Convert INI configuration files to well-formed XML instantly',
+    category: 'Conversion',
+    href: '/tools/ini-to-xml-converter',
+  },
+  'xml-to-ini-converter': {
+    name: 'XML To INI Converter',
+    description: 'Convert XML configuration files to INI format instantly',
+    category: 'Conversion',
+    href: '/tools/xml-to-ini-converter',
+  },
+  'word-to-phone-number-converter': {
+    name: 'Word To Phone Number Converter',
+    description: 'Convert any word or phrase to phone keypad digits for vanity phone numbers',
+    category: 'Conversion',
+    href: '/tools/word-to-phone-number-converter',
+  },
   'url-percent-encoding-decoding': {
     name: 'URL Percent Encoding and Decoding',
     description: 'Instantly encode and decode URLs with percent encoding support',
@@ -682,6 +700,18 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Visualize 2D structural formulas of any molecule. Choose from 40+ molecules or enter SMILES notation. Shows bonds, functional groups, molecular weight, and atom counts.',
     category: 'Science Tools',
     href: '/tools/structural-formula-calculator',
+  },
+  'run-on-sentence-checker': {
+    name: 'Run On Sentence Checker',
+    description: 'Instantly detect comma splices and run-on sentences in your text. Get clear explanations and numbered fix suggestions for every issue.',
+    category: 'Writing Tools',
+    href: '/tools/run-on-sentence-checker',
+  },
+  'virality-checker': {
+    name: 'Virality Checker',
+    description: 'Score your content\'s viral potential across hook strength, emotional power, shareability, trending potential, and engagement. Free instant analysis.',
+    category: 'Writing Tools',
+    href: '/tools/virality-checker',
   },
 }
 

@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/site-header"
 import { GamepadIcon, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Play Games | Letters to Numbers Converter",
+  title: { absolute: "Play" },
   description: "Play our collection of free online word and puzzle games. Including cryptogram games, anagram challenges, and more brain-teasing games.",
   keywords: ["online games", "word games", "puzzle games", "free games", "brain games"],
   openGraph: {

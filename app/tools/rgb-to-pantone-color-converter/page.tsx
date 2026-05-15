@@ -5,7 +5,7 @@ import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
-  title: "RGB To Pantone Color Converter - Convert RGB to PMS Colors",
+  title: { absolute: "RGB to Pantone Color Converter" },
   description: "Free RGB to Pantone Color Converter for converting RGB colors to PMS (Pantone Matching System) codes. Find the closest Pantone color match for digital-to-print workflows. Includes multiple color variants, visual color picker, and hex conversion.",
   keywords: [
     "RGB to Pantone converter",
@@ -66,7 +66,7 @@ export default function RGBToPantoneConverterPage() {
       <ToolLayout
         toolId="rgb-to-pantone-converter"
         toolName="RGB To Pantone Color Converter"
-        toolDescription="Free RGB to Pantone Color Converter for converting RGB and hex colors to PMS (Pantone Matching System) codes. Find the closest Pantone color matches for accurate digital-to-print workflows, branding consistency, and professional print production. Supports multiple color variants, visual color picker, and instant PMS matching for designers, printers, and marketing professionals."
+        toolDescription="The RGB to Pantone Color Converter finds the closest Pantone Matching System (PMS) color to any RGB value you provide, making it indispensable for designers who need to bridge the gap between screen colors and physical print production. Digital designs are defined in RGB or hex, but printers use Pantone spot colors to guarantee consistency across print runs, packaging, and branded materials — and this tool performs that critical translation automatically using a delta-E color matching algorithm to ensure perceptually accurate results. The converter searches across the full Pantone library, returning the nearest PMS match along with its hex, RGB, and CMYK equivalents so you have everything you need to hand off accurate color specs to print vendors. Whether you are matching a brand color, adapting a digital identity for print, or verifying Pantone equivalents during a rebrand, results appear instantly with multiple nearby Pantone alternatives displayed for comparison."
         toolComponent={<RGBToPantoneConverter />}
         toolData={toolData}
       />

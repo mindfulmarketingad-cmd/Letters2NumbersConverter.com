@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/egyptian-numbers-converter`
 
 const toolSchema = generateToolPageSchema(
-  "Egyptian Numbers Converter - Ancient Egyptian Hieroglyphic Numerals",
+  "Egyptian Numbers Converter",
   "Free online Egyptian Numbers Converter to convert decimal numbers to ancient Egyptian hieroglyphic numerals. Learn how ancient Egyptians represented numbers using symbols and hieroglyphics. Educational tool for history, Egyptology, and ancient mathematics.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Egyptian Numbers Converter - Ancient Egyptian Hieroglyphic Numerals", url: PAGE_URL },
+  { name: "Egyptian Numbers Converter", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Egyptian Numbers Converter - Ancient Egyptian Hieroglyphic Numerals",
+  title: { absolute: "Egyptian Numbers Converter" },
   description: "Free online Egyptian Numbers Converter to convert decimal numbers to ancient Egyptian hieroglyphic numerals. Learn how ancient Egyptians represented numbers using symbols and hieroglyphics. Educational tool for history, Egyptology, and ancient mathematics.",
   keywords: [
     "Egyptian numbers converter",
@@ -65,7 +65,7 @@ export default function EgyptianNumbersConverterPage() {
     <ToolLayout
       toolId="egyptian-numbers-converter"
       toolName="Egyptian Numbers Converter"
-      toolDescription="Free Egyptian Numbers Converter tool for converting decimal numbers to ancient Egyptian hieroglyphic numerals. Learn how ancient Egyptians represented numbers using authentic hieroglyphic symbols. Perfect for history students, Egyptology enthusiasts, educators, and anyone interested in ancient Egyptian mathematics and numeral systems."
+      toolDescription="The Egyptian Numbers Converter translates any decimal integer into authentic ancient Egyptian hieroglyphic numerals, using the same additive symbol system that pharaonic scribes employed along the Nile for over three thousand years. Each hieroglyphic symbol — the stroke for one, the heel bone for ten, the coil of rope for one hundred, the lotus plant for one thousand, and beyond — is rendered visually so you can appreciate the pictographic beauty of this non-positional numeral system. This makes the tool invaluable for Egyptology students, history educators, museum exhibit designers, and anyone curious about how one of the world's earliest civilizations performed mathematics. Enter any number and instantly see how it would have appeared carved in stone or painted on papyrus in ancient Egypt."
       toolComponent={<EgyptianConverter />}
       toolData={toolData}
     />

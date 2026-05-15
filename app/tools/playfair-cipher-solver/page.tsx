@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Playfair Cipher Solver",
+  title: { absolute: "Playfair Cipher Solver" },
   description: "Playfair Cipher Solver - Encrypt and decrypt text using the classic Playfair digraph substitution cipher. Learn about this historic cipher invented by Charles Wheatstone and explore its mechanics with our free online tool.",
   keywords: ["playfair cipher", "playfair cipher solver", "playfair encryption", "playfair decryption", "digraph cipher", "charles wheatstone"],
   openGraph: {
@@ -49,7 +49,7 @@ export default function PlayfairCipherSolverPage() {
     <ToolLayout
       toolId="playfair-cipher"
       toolName="Playfair Cipher Solver"
-      toolDescription="Encrypt and decrypt text using the classic Playfair digraph substitution cipher invented by Charles Wheatstone. This historic cipher uses a 5×5 key square to encrypt letter pairs, making it significantly more secure than simple substitution ciphers."
+      toolDescription="The Playfair Cipher Solver lets you encode and decode messages using the Playfair digraph substitution cipher, one of the most historically significant manual encryption systems, widely used during World War I and World War II for field communications. Unlike simple letter-for-letter substitution ciphers, Playfair encrypts letters in pairs using a 5x5 key square constructed from a custom keyword, which dramatically increases resistance to basic frequency analysis attacks. You can supply any keyword to generate a unique cipher grid and then encrypt or decrypt arbitrary plaintext, with the tool automatically handling the standard Playfair rules for duplicate letters and end-of-message padding. This makes the Playfair Cipher Solver an ideal learning tool for students of cryptography history as well as a practical instrument for anyone solving cipher challenges or recreating historical encryption techniques."
       toolComponent={<PlayfairCipherSolver />}
       toolData={toolData}
     />

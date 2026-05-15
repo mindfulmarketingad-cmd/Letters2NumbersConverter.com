@@ -10,7 +10,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/anagram-solver`
 
 const toolSchema = generateToolPageSchema(
-  "Anagram Solver with Wildcard | Find All Possible Words",
+  "Anagram Solver",
   "Use our free anagram solver with wildcard to find all possible words from your letters. Supports up to 3 wildcards (?). Filter by starts, ends, contains, or exact length.",
   PAGE_URL,
   'Utility'
@@ -19,11 +19,11 @@ const toolSchema = generateToolPageSchema(
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Home', url: BASE_URL },
   { name: 'Tools', url: `${BASE_URL}/tools` },
-  { name: "Anagram Solver with Wildcard | Find All Possible Words", url: PAGE_URL },
+  { name: "Anagram Solver", url: PAGE_URL },
 ])
 
 export const metadata: Metadata = {
-  title: "Anagram Solver with Wildcard | Find All Possible Words",
+  title: { absolute: "Anagram Solver" },
   description: "Use our free anagram solver with wildcard to find all possible words from your letters. Supports up to 3 wildcards (?). Filter by starts, ends, contains, or exact length.",
   keywords: ["anagram solver", "anagram solver with wildcard", "anagram finder", "word anagram", "wildcard anagram", "find words from letters"],
   openGraph: {
@@ -49,7 +49,7 @@ export default function AnagramSolverPage() {
       <ToolLayout
         toolId="anagram-solver"
         toolName="Anagram Solver"
-        toolDescription="Find all possible words from your letters with wildcard support. This powerful anagram solver helps you discover words for word games, crosswords, and language puzzles. Supports up to 3 wildcards (?) for advanced searching."
+        toolDescription="The Anagram Solver instantly unscrambles any set of letters to reveal every valid word hiding within them, making it indispensable for Scrabble, Words With Friends, crossword puzzles, and word jumble challenges. You can use up to three wildcard characters (?) to represent unknown or blank tiles, dramatically expanding your search results. Filter words by starting letters, ending letters, contained substrings, or exact length so you can zero in on the precise word you need. Results are delivered in real time from a comprehensive dictionary, ensuring you never miss a high-scoring play or elusive crossword answer."
         toolComponent={<AnagramSolver />}
         toolData={toolData}/>
     </ToolPageWrapper>

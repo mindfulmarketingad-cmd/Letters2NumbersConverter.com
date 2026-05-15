@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 import { generateWebPageSchema, generateHowToSchema, generateFAQSchema } from "@/lib/schema-markup"
 
 export const metadata: Metadata = {
-  title: "Letters To Numbers Converter — Free Online A1Z26 Tool",
+  title: { absolute: "Letters To Numbers Converter" },
   description: "Letters To Numbers Converter — convert A=1, B=2 … Z=26 instantly. Free browser-based tool with 100+ encoders, decoders, cipher solvers, and converters. No sign-up required.",
   keywords: [
     "letters to numbers converter",

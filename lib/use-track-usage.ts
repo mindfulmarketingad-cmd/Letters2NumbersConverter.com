@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
  * @returns Object with trackUsage function and current limits
  */
 export function useTrackUsage(toolName: string) {
-  const { user, sessionId } = useAuth()
+  const { user } = useAuth()
   const [remainingUses, setRemainingUses] = useState<number | null>(null)
   const [isLimitExceeded, setIsLimitExceeded] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -17,18 +17,15 @@ export function useTrackUsage(toolName: string) {
   // Check current usage on mount
   useEffect(() => {
     checkUsage()
-  }, [user, sessionId])
+  }, [user])
 
   const checkUsage = async () => {
     try {
-      const identifier = user?.id || sessionId
-      if (!identifier) return
+      if (!user?.id) return
 
-      const response = await fetch(
-        `/api/usage/track?${user?.id ? `userId=${user.id}` : `sessionId=${sessionId}`}`
-      )
+      const response = await fetch(`/api/usage/track?userId=${user.id}`)
       const data = await response.json()
-      
+
       setRemainingUses(data.remainingUsage)
       setIsLimitExceeded(data.remainingUsage <= 0)
     } catch (error) {
@@ -43,17 +40,17 @@ export function useTrackUsage(toolName: string) {
 
     setIsLoading(true)
     try {
-      const identifier = user?.id || sessionId
-      if (!identifier) {
-        return { allowed: false, message: 'Could not identify user' }
+      if (!user?.id) {
+        // Anonymous users: fail open — ToolPageWrapper handles limit enforcement
+        return { allowed: true }
       }
 
       const response = await fetch('/api/usage/track', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          userId: user?.id || null,
-          sessionId: !user?.id ? sessionId : null,
+          userId: user.id,
+          sessionId: null,
         }),
       })
 

@@ -34,12 +34,10 @@ export function useInstantTrackUsage(toolName: string, debounceMs: number = 2000
     // Set new timer
     debounceTimer.current = setTimeout(async () => {
       const result = await trackUsage()
-      
+
       if (result.allowed) {
         hasTracked.current = true
-        setRemainingUses(result.remainingUses)
       } else {
-        // Show upgrade modal if limit exceeded
         setShowUpgradeModal(true)
       }
     }, debounceMs)

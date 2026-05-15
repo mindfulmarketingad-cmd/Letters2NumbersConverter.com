@@ -347,6 +347,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Conversion',
     href: '/tools/txt-to-ini-converter',
   },
+  'word-to-phone-number-converter': {
+    name: 'Word To Phone Number Converter',
+    description: 'Convert any word or phrase to phone keypad digits for vanity phone numbers',
+    category: 'Conversion',
+    href: '/tools/word-to-phone-number-converter',
+  },
   'url-percent-encoding-decoding': {
     name: 'URL Percent Encoding and Decoding',
     description: 'Instantly encode and decode URLs with percent encoding support',

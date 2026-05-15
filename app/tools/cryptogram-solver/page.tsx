@@ -49,7 +49,7 @@ export default function CryptogramSolverPage() {
     <ToolLayout
       toolId="cryptogram-solver"
       toolName="Cryptogram Solver"
-      toolDescription="Solve complex cryptogram puzzles"
+      toolDescription="The Cryptogram Solver automatically cracks substitution cipher puzzles by applying sophisticated pattern recognition and letter frequency analysis to identify the most likely plaintext behind any encoded message. It scans the ciphertext for common English patterns — single-letter words, frequent digraphs, word endings, and apostrophe positions — then iteratively refines its solution until the decoded text reads as natural language. Users can also guide the solver manually by locking in letters they have already deduced, combining human intuition with algorithmic power for the fastest possible solution. Whether you are working through a newspaper cryptogram, a puzzle book challenge, or an online word game, this solver delivers clear, readable results without requiring any cryptography knowledge."
       toolComponent={<CryptogramSolver />}
       toolData={toolData}/>
     </ToolPageWrapper>

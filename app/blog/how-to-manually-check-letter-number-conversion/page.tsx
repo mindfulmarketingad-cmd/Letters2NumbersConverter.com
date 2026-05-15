@@ -6,7 +6,7 @@ import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
-  title: "How to Manually Check Letter to Number Conversion",
+  title: { absolute: "How to Manually Check Letter Number Conversion" },
   description: "Learn step-by-step methods for manually converting letters to numbers using A1Z26, ASCII, hexadecimal, and binary encoding without tools.",
   authors: [{ name: "John Reed" }],
 }

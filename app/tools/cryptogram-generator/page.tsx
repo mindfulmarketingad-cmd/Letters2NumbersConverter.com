@@ -49,7 +49,7 @@ export default function CryptogramGeneratorPage() {
     <ToolLayout
       toolId="cryptogram-generator"
       toolName="Cryptogram Generator"
-      toolDescription="Create, customize, and share puzzle cryptograms with this interactive tool. Generate substitution cipher puzzles perfect for word games and entertainment."
+      toolDescription="The Cryptogram Generator creates custom substitution cipher puzzles from any text you provide — famous quotes, original phrases, classroom vocabulary, or personal messages — turning plain language into a challenging letter-swap puzzle in seconds. Teachers use it to craft engaging word puzzles for students of all ages, while puzzle book authors rely on it to produce printable cryptograms with adjustable difficulty by controlling how many letter hints are revealed upfront. Each generated cryptogram uses a randomized but consistent substitution alphabet, ensuring every puzzle has a unique solution that players must deduce through pattern recognition and frequency analysis. Share puzzles instantly via a generated link or download a print-ready version, making it easy to distribute to friends, classrooms, or puzzle enthusiasts anywhere."
       toolComponent={<CryptogramGenerator />}
       toolData={toolData}/>
     </ToolPageWrapper>

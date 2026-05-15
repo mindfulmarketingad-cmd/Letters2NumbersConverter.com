@@ -49,7 +49,7 @@ export default function CryptogramSolverFreePage() {
     <ToolLayout
       toolId="cryptogram-solver-free"
       toolName="Cryptogram Solver Free"
-      toolDescription="Solve substitution cipher cryptograms"
+      toolDescription="Cryptogram Solver Free gives you full-featured cryptogram solving at absolutely no cost — no account required, no subscription, no paywalled features, just instant results directly in your browser. The tool runs entirely client-side, meaning your puzzle text is processed locally on your device and never transmitted to any server, so even sensitive or private messages remain completely confidential. Frequency analysis, pattern matching, and word-boundary detection all work together automatically to decode substitution cipher puzzles in moments, and the solver functions offline once the page has loaded. Whether you are a casual puzzle fan or a cryptography student practicing decryption skills, this free tool removes every barrier between you and the solution."
       toolComponent={<CryptogramSolver />}
       toolData={toolData}/>
     </ToolPageWrapper>

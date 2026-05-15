@@ -49,7 +49,7 @@ export default function LongestWordPage() {
     <ToolLayout
       toolId="longest-word-solver"
       toolName="Longest Word Using These Letters Solver"
-      toolDescription="Find the longest words you can make from any set of letters. Instantly discover all possible words ranked by length with advanced filtering options for word games and puzzles."
+      toolDescription="The Longest Word Using These Letters solver scans a comprehensive word dictionary to find every valid word you can build from a given set of letters, ranking results from longest to shortest so you can immediately spot your highest-scoring play. Word game players who want to dominate Scrabble, Words with Friends, or Wordle-style challenges will find this tool invaluable for strategically using difficult letter combinations and rare tiles. Unlike simple anagram finders, this solver is specifically optimized to surface the longest possible words first, maximizing your point potential in length-based scoring games. Enter your available letters, hit solve, and get an instant ranked list of all playable words with advanced filtering by minimum length."
       toolComponent={<LongestWordSolver />}
       toolData={toolData}
     />

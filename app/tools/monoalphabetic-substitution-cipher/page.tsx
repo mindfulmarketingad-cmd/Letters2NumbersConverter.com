@@ -49,7 +49,7 @@ export default function MonoalphabeticSubstitutionCipherPage() {
     <ToolLayout
       toolId="monoalphabetic-substitution-cipher"
       toolName="Monoalphabetic Substitution Cipher"
-      toolDescription="Encrypt and decrypt using monoalphabetic ciphers"
+      toolDescription="The Monoalphabetic Substitution Cipher tool lets you encode and decode secret messages by replacing each letter in the plaintext with a different, fixed letter from a scrambled substitution alphabet of your choice. This classical cipher, one of the oldest forms of encryption in history, works by establishing a one-to-one mapping between the standard alphabet and a custom cipher alphabet, so every occurrence of a given letter is always replaced by the same substitute throughout the entire message. While monoalphabetic substitution ciphers are elegant and easy to understand, they are also famously vulnerable to frequency analysis — a technique where patterns in letter usage reveal the underlying mapping — making them an ideal teaching tool for understanding both basic cryptography and its limitations. Whether you are learning about classical ciphers, solving a cryptogram puzzle, or building a custom encoded message for fun, this tool handles encryption and decryption instantly with any substitution alphabet you define."
       toolComponent={<MonoalphabeticSubstitutionCipher />}
       toolData={toolData}
     />

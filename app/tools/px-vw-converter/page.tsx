@@ -66,7 +66,7 @@ export default function PxVwConverterPage() {
     <ToolLayout
       toolId="px-vw-converter"
       toolName="PX To VW Converter"
-      toolDescription="Free PX to VW Converter tool for converting pixels to viewport width units and vice versa. Calculate responsive CSS measurements for fluid typography, mobile-first layouts, and scalable web design. Supports multiple breakpoints, device sizes, and viewport presets. Essential calculator for responsive design, CSS animations, and creating layouts that adapt seamlessly across all screen sizes."
+      toolDescription="The PX to VW Converter helps web developers and designers translate fixed pixel values into responsive viewport width (vw) units, the CSS measurement that scales proportionally to the width of the browser window on any device. Converting px to vw is essential for building fluid layouts and responsive typography that automatically adapts from mobile phones to wide desktop monitors without requiring multiple breakpoints or media query overrides. The tool lets you set a custom viewport width base — defaulting to 1440px for desktop or 375px for mobile — so the conversion accurately reflects your design system's reference frame. Results update in real time as you type, making it fast to iterate through spacing, font sizes, and layout dimensions during responsive CSS development."
       toolComponent={<PxVwConverter />}
       toolData={toolData}
     />

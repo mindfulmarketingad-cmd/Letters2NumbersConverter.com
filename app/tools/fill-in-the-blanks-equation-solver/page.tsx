@@ -49,7 +49,7 @@ export default function EquationSolverPage() {
     <ToolLayout
       toolId="fill-in-the-blanks-equation-solver"
       toolName="Fill In The Blanks Equation Solver"
-      toolDescription="Find missing digits and operators in equations"
+      toolDescription="The Fill in the Blanks Equation Solver finds all values that correctly complete a mathematical equation when one or more numbers or operators are left unknown, making it an ideal study tool for students working through algebra, arithmetic puzzles, and number-sense exercises. Simply enter the equation with placeholders for the missing elements and the solver systematically tests every valid candidate, returning all solutions that make the equation true. Teachers can use it to verify puzzle answers or generate fill-in-the-blank math problems at adjustable difficulty levels for worksheets and classroom assessments. The browser-based tool handles a wide range of arithmetic operations and equation structures, delivering instant feedback that helps learners understand the relationship between the known and unknown quantities in any expression."
       toolComponent={<EquationSolver />}
       toolData={toolData}
     />

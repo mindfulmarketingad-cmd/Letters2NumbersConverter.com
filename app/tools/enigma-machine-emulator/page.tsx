@@ -49,7 +49,7 @@ export default function EnigmaMachineEmulatorPage() {
     <ToolLayout
       toolId="enigma-machine-emulator"
       toolName="Enigma Machine Emulator"
-      toolDescription="Simulate the historical Enigma machine cipher device"
+      toolDescription="The Enigma Machine Emulator faithfully replicates the electromechanical cipher device used by Nazi Germany during World War II, whose breaking by Alan Turing and the codebreakers at Bletchley Park is credited with shortening the war by years. Configure the three-rotor assembly, select a reflector, and set your plugboard connections exactly as a wartime operator would have done, then type any message to watch it transform through the machine's famously complex substitution process. Because the Enigma cipher is symmetric, the same settings can decode messages just as easily as encoding them, demonstrating the elegant but ultimately flawed logic that Allied cryptanalysts exploited. Whether you are a history enthusiast, a cryptography student, or an educator building lessons around WWII intelligence, this emulator brings a pivotal chapter of computing history to life in your browser."
       toolComponent={<EnigmaMachineEmulator />}
       toolData={toolData}
     />

@@ -61,7 +61,7 @@ export default function WebpToGifPage() {
       <ToolLayout
         toolId="webp-to-gif"
         toolName="WebP to GIF"
-        toolDescription="WebP to GIF conversion tool that transforms WebP images to GIF format instantly. Free online converter with quality preservation - no registration needed. Perfect for converting modern WebP images to widely compatible GIF format."
+        toolDescription="WebP to GIF is a browser-based image converter that transforms static and animated WebP files into widely compatible GIF format entirely on your device, with no file uploads to any server and no account or registration required. WebP is a modern, efficient image format favored by web platforms, but GIF remains the standard for animated images on social media, messaging apps, email clients, and older platforms that do not yet support WebP playback. This tool handles both static WebP images and animated WebP sequences, faithfully converting frame timing and transparency for animated files so the resulting GIF plays correctly wherever GIFs are supported. The conversion runs locally in your browser for instant results, keeping your images private and eliminating any wait times associated with server-side processing."
         toolComponent={<WebpToGifConverter />}
         toolData={toolData}
       />

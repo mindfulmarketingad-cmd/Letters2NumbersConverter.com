@@ -65,7 +65,7 @@ export default function WordToNumberTranslatorPage() {
     <ToolLayout
       toolId="word-to-number-translator"
       toolName="Word To Number Translator"
-      toolDescription="Free Word to Number Translator for converting words and phrases into numbers using multiple encoding methods. Supports A1Z26, A0Z25, ASCII, HEX, and BINARY formats with instant bidirectional conversion. Perfect for solving cryptograms, word puzzles, understanding character encoding, and data analysis. Instantly translate between words and numbers with real-time character breakdown and clipboard copy."
+      toolDescription="The Word to Number Translator converts written number words — such as one, twenty-three, or four hundred fifty-two — directly into their numeric digit equivalents, making it easy to parse natural language number expressions into structured data for spreadsheets, databases, and NLP pipelines. This tool supports a wide range of number word formats, from simple single-digit words all the way through complex compound expressions involving hundreds, thousands, millions, and beyond, handling both cardinal and hyphenated forms correctly. It is particularly useful for data cleaning tasks where numeric values have been entered as words in a survey response or document, as well as for developers building text processing workflows that need to normalize written numbers into integers or floats. Results are generated instantly with no configuration required, so you can paste a list of number words and get clean numeric output in seconds."
       toolComponent={<LetterNumberConverter />}
       toolData={toolData}
     />

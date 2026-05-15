@@ -49,7 +49,7 @@ export default function NumbersToLettersConverterPage() {
       <ToolLayout
         toolId="numbers-to-letters"
         toolName="Numbers to Letters Converter"
-        toolDescription="Convert numbers back to letters"
+        toolDescription="Numbers to Letters is a straightforward yet powerful decoding tool that translates numeric sequences back into their alphabetic equivalents using the most widely recognized systems, including A1Z26 (where 1=A, 2=B, and 26=Z), ASCII character codes, hexadecimal values, and binary encoding. This bidirectional converter is essential for solving cipher puzzles, decoding alphanumeric messages, and understanding how different encoding schemes represent text as numbers. It handles everything from simple A1Z26 substitutions used in treasure hunts and escape rooms to the precise ASCII and binary values that define how computers store and transmit text. Real-time conversion ensures results appear instantly as you type, making iterative decoding of number sequences fast and effortless."
         toolComponent={<LetterNumberConverter />}
         toolData={toolData}
       />

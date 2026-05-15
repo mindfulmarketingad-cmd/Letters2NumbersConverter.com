@@ -5,7 +5,7 @@ import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
-  title: "Placeholder Image Creator | Letters2NumbersConverter.com",
+  title: { absolute: "Placeholder Image Creator" },
   description: "Placeholder Image Creator - Generate custom placeholder images with custom dimensions, text, colors, and fonts. Download or get Data URI for direct embedding.",
   keywords: [
     "placeholder image creator",

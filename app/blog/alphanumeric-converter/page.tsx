@@ -9,7 +9,7 @@ const PAGE_URL = `${BASE_URL}/blog/alphanumeric-converter`
 const PUBLISHED = "2026-05-14T00:00:00.000Z"
 
 export const metadata: Metadata = {
-  title: "Alphanumeric Converter — Convert Text to Numbers, ASCII, Hex & Binary",
+  title: { absolute: "Alphanumeric Converter" },
   description: "Complete guide to alphanumeric conversion: A1Z26, A0Z25, ASCII, hexadecimal, and binary explained with examples. Free online alphanumeric converter tool included.",
   keywords: [
     "alphanumeric converter",

@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/rot13-decoder`
 
 export const metadata: Metadata = {
-  title: 'ROT13 Decoder & Encoder — Decode ROT13 Online Free',
+  title: { absolute: "ROT13 Decoder" },
   description: 'Free ROT13 decoder and encoder. Instantly decode or encode any text with ROT13 — the cipher used for Reddit spoilers, Usenet posts, and puzzle hints. No sign-up. Works in your browser.',
   keywords: [
     'ROT13 decoder',

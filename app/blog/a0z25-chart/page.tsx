@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { CTAButton } from '@/components/cta-button'
 
 export const metadata: Metadata = {
-  title: 'A0Z25 Chart',
+  title: { absolute: 'A0Z25 Chart' },
   description: 'A0Z25 Chart - The complete guide to A0Z25 encoding. Learn how A0Z25 differs from A1Z26, who uses it, and how to use our free online conversion tools.',
   keywords: ['A0Z25 chart', 'A0Z25 encoding', 'A0Z25 conversion', 'alphabet to numbers'],
   openGraph: {

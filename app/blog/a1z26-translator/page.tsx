@@ -7,7 +7,7 @@ const PAGE_URL = `${BASE_URL}/blog/a1z26-translator`
 const PUBLISHED = '2026-05-14'
 
 export const metadata: Metadata = {
-  title: 'A1Z26 Translator — Complete A1Z26 Cipher Chart, Decoder & Examples',
+  title: { absolute: 'A1Z26 Translator' },
   description: 'Everything about the A1Z26 cipher: the full A=1 to Z=26 alphabet chart, how to encode and decode, letter number mapping, worked examples, and a free online A1Z26 translator tool.',
   keywords: [
     'a1z26 translator',

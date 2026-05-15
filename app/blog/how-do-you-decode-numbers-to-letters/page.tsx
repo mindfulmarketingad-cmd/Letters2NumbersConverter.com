@@ -7,7 +7,7 @@ const PAGE_URL = `${BASE_URL}/blog/how-do-you-decode-numbers-to-letters`
 const PUBLISHED = '2026-05-14'
 
 export const metadata: Metadata = {
-  title: 'How Do You Decode Numbers To Letters — Complete Guide',
+  title: { absolute: 'How Do You Decode Numbers To Letters' },
   description:
     'Learn how to decode numbers to letters using A1Z26, A0Z25, ASCII, and phone keypad systems. Step-by-step examples, reference tables, and free online decoder tools.',
   keywords: [

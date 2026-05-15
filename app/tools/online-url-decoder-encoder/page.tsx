@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Online URL Decoder Encoder | Instant URL Encoding/Decoding',
+  title: { absolute: "Online URL Decoder Encoder" },
   description: 'Online URL Decoder Encoder - Instantly decode and encode URLs. Free tool for web developers, API testing, and security professionals. Supports recursive decoding and batch processing.',
   keywords: ['URL decoder', 'URL encoder', 'online URL decoder', 'URL decoding', 'URL encoding', 'encode URL', 'decode URL', 'percent encoding'],
   openGraph: {

@@ -6,7 +6,7 @@ import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
-  title: "NATO Alphanumeric Alphabet | Complete Phonetic Guide",
+  title: { absolute: "NATO Alphanumeric Alphabet" },
   description: "Learn the NATO alphanumeric alphabet - the phonetic code used worldwide for clear communication. Complete guide with all 26 letters and their phonetic equivalents.",
   keywords: ["NATO alphanumeric alphabet", "NATO phonetic alphabet", "phonetic code", "military alphabet", "international phonetic", "communication code"],
   authors: [{ name: "John Reed" }],

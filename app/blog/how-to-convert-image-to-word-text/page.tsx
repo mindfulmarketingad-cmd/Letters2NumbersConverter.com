@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How To Convert Image To Word Text | Letters2NumbersConverter.com',
+  title: { absolute: 'How To Convert Image To Word Text' },
   description: 'Learn how to convert image to word text using OCR technology. Discover the best methods, tools, and techniques for extracting text from images with accuracy and efficiency.',
   keywords: ['convert image to text', 'image to word', 'OCR technology', 'text extraction', 'extract text from image', 'image to word converter'],
   openGraph: {

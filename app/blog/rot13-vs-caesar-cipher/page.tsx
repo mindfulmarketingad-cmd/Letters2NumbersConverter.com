@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'ROT13 vs Caesar Cipher — Key Differences Explained',
+  title: { absolute: 'ROT13 vs Caesar Cipher' },
   description: 'ROT13 vs Caesar cipher: what makes them different, why ROT13 is self-inverse, when to use each, and how both relate to modern cryptography. Includes tool links for instant encoding.',
   keywords: [
     'ROT13 vs Caesar cipher',

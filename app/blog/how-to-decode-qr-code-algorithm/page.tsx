@@ -7,7 +7,7 @@ const PAGE_URL = `${BASE_URL}/blog/how-to-decode-qr-code-algorithm`
 const PUBLISHED = '2026-05-14'
 
 export const metadata: Metadata = {
-  title: 'How To Decode QR Code Algorithm — Step-by-Step Guide',
+  title: { absolute: 'How To Decode QR Code Algorithm' },
   description:
     'Learn how to decode QR code algorithm step by step: finder patterns, format info, mask XOR, Reed-Solomon error correction, and data extraction modes explained.',
   keywords: [

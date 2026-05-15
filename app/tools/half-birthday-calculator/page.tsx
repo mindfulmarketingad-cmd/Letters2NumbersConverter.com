@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Half Birthday Calculator | Find Your Half Birthday Date',
+  title: { absolute: "Half Birthday Calculator" },
   description: 'Half Birthday Calculator - Instantly find out when your half birthday is. Celebrate twice a year with this free online calculator that determines your half birthday date.',
   keywords: ['half birthday', 'half birthday calculator', 'half birthday date', 'when is my half birthday', 'celebrate half birthday'],
   openGraph: {

@@ -22,7 +22,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: { absolute: "Letter Number Converter" },
+  title: { absolute: "Letter To Number Converter" },
   description: "Free online letter to number converter using A1Z26 cipher. Convert letters to numbers, numbers to letters with multiple encoding methods (ASCII, HEX, BINARY, A0Z25). Supports 25+ languages. Perfect for cryptography, coding, puzzles, and educational use.",
   keywords: [
     "letter to number converter",

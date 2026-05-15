@@ -22,7 +22,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: "Hackathon Team Name Generator — Creative Team Names for Hackers",
+  title: { absolute: "Hackathon Team Name Generator" },
   description: "Generate cool hackathon team names instantly. Tech, space, nature, mythology, animal, and pun themes. Pick a name, copy it, and get back to building.",
   keywords: [
     "hackathon team name generator",

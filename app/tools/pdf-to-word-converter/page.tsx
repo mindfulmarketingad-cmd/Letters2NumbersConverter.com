@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/pdf-to-word-converter`
 
 export const metadata: Metadata = {
-  title: 'PDF to Word Converter',
+  title: { absolute: "PDF To Word Converter" },
   description: 'Convert PDF to Word (.docx) instantly in your browser. Free PDF to Word Converter — no uploads, no software, 100% private. Preserves text and formatting.',
   keywords: [
     'PDF to Word converter',

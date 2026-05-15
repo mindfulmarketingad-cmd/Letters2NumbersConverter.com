@@ -6,7 +6,7 @@ import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
-  title: "Best Letter Number Ciphers for Beginners and Experts",
+  title: { absolute: "Best Letter Number Ciphers" },
   description: "Discover the best letter number ciphers from simple A1Z26 to complex ASCII encoding. Learn which cipher is right for your puzzle solving, cryptography, or educational needs.",
   keywords: ["letter number ciphers", "best ciphers", "A1Z26 cipher", "alphabet cipher", "cryptography ciphers"],
   authors: [{ name: "John Reed" }],

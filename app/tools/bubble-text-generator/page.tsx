@@ -21,7 +21,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Bubble Text Generator — Convert Text to ⓑⓤⓑⓑⓛⓔ Letters',
+  title: { absolute: "Bubble Text Generator" },
   description: 'Free bubble text generator. Instantly convert any text into circled bubble letters, black bubble text, keycap style, squared, fullwidth, and double struck. Copy & paste for Instagram, Twitter, Discord, and TikTok.',
   keywords: [
     'bubble text generator',

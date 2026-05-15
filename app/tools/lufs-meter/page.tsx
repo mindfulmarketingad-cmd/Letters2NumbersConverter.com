@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/lufs-meter`
 
 export const metadata: Metadata = {
-  title: 'LUFS Meter — Free Online Loudness Analyser (BS.1770-4)',
+  title: { absolute: "LUFS Meter" },
   description: 'Free online LUFS Meter. Measure integrated loudness, momentary peak, short-term peak, true peak (dBTP), and loudness range (LRA) of any audio file using ITU-R BS.1770-4. Compare against Spotify, YouTube, Apple Music targets. Your audio stays local.',
   keywords: [
     'LUFS meter online',

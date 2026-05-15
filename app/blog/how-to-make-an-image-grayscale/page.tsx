@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How To Make An Image Grayscale | Letters2NumbersConverter.com',
+  title: { absolute: 'How To Make An Image Grayscale' },
   description: 'How to make an image grayscale - Learn multiple methods to convert color images to grayscale. Discover online tools, desktop software, and step-by-step guides for image conversion.',
   keywords: ['how to make an image grayscale', 'convert image to grayscale', 'grayscale image converter', 'black and white image', 'image grayscale tool', 'convert color to black and white'],
   openGraph: {

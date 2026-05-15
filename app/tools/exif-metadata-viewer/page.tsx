@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/exif-metadata-viewer`
 
 export const metadata: Metadata = {
-  title: 'Exif Metadata Viewer',
+  title: { absolute: "EXIF Metadata Viewer" },
   description: 'Free Exif Metadata Viewer — inspect JPEG, TIFF, and WebP images. View camera make/model, GPS, date taken, focal length, ISO, shutter speed, and all EXIF tags instantly. Your data stays local.',
   keywords: [
     'Exif metadata viewer',

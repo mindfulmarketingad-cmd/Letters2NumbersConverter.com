@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Reverse Text Converter | Free Online Tool',
+  title: { absolute: "Reverse Text Converter" },
   description: 'Reverse Text Converter - Free online tool to reverse any text, string, or message instantly. Perfect for palindromes, string manipulation, and text analysis.',
   keywords: ['reverse text', 'text reverser', 'reverse string', 'palindrome checker', 'string reversal'],
   openGraph: {

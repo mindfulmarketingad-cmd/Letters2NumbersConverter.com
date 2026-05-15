@@ -21,7 +21,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Convert JPG to Grayscale — Free Online Black & White Image Converter',
+  title: { absolute: "JPG To Grayscale Converter" },
   description: 'Convert any JPG to grayscale online for free. Upload your image, adjust output quality, and download a high-quality grayscale JPG in seconds. No sign-up. 100% private — runs in your browser.',
   keywords: [
     'convert JPG to grayscale',

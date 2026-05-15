@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Playback Speed Calculator | Calculate Duration & Time Saved',
+  title: { absolute: "Playback Speed Calculator" },
   description: 'Playback Speed Calculator - Calculate adjusted duration and time saved when playing media at different speeds. Free online tool for students, podcast listeners, and video watchers.',
   keywords: ['playback speed calculator', 'video speed calculator', 'podcast speed calculator', 'media duration calculator', 'time saved calculator', 'watch time calculator'],
   openGraph: {

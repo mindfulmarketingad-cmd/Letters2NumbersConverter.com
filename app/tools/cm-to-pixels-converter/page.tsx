@@ -6,7 +6,7 @@ import { getToolData } from "@/lib/tool-data"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "CM to Pixels Converter — Convert Centimeters to Pixels (Any DPI/PPI)",
+  title: { absolute: "CM To Pixels Converter" },
   description: "Free CM to pixels converter. Instantly convert centimeters to pixels at 72, 96, 150, and 300 DPI/PPI. Essential for web design, print layout, UI design, and screen resolution work.",
   keywords: [
     "cm to pixels",

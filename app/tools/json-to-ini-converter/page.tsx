@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'JSON to INI Converter | Letters2NumbersConverter.com',
+  title: { absolute: "JSON To INI Converter" },
   description:
     'Convert JSON to INI configuration format instantly. Perfect for developers converting JSON configs to INI format for applications.',
   keywords: [

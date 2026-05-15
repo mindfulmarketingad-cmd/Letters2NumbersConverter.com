@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/certificate-decoder`
 
 export const metadata: Metadata = {
-  title: 'Certificate Decoder — Decode SSL/TLS Certs, CSRs & Keys Online',
+  title: { absolute: "Certificate Decoder" },
   description: 'Free online Certificate Decoder. Instantly decode SSL/TLS certificates, CSRs, and private keys in PEM, DER, Base64, or hex format. View subject, issuer, SANs, expiry, key size, and fingerprints. Your data stays local.',
   keywords: [
     'certificate decoder',

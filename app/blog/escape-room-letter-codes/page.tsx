@@ -6,7 +6,7 @@ import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
-  title: "Escape Room Letter Codes: Master Every Number Lock Puzzle",
+  title: { absolute: "Escape Room Letter Codes" },
   description: "Learn how to solve escape room letter codes and number lock puzzles. Expert strategies for decoding A1Z26 ciphers, combination locks, and cryptic clues under pressure.",
   keywords: ["escape room codes", "letter to number puzzle", "combination lock solving", "escape room tips", "cipher puzzles"],
   authors: [{ name: "John Reed" }],

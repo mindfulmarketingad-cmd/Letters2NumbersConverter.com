@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/gradient-maker-from-image`
 
 export const metadata: Metadata = {
-  title: 'Gradient Maker from Image — Extract Color Palette & CSS Free Online',
+  title: { absolute: "Gradient Maker From Image" },
   description: 'Free gradient maker from image. Upload any photo and instantly extract dominant colors, generate a CSS gradient, and download a color palette. No sign-up. Runs 100% in your browser.',
   keywords: [
     'gradient maker from image',

@@ -6,7 +6,7 @@ import { AllToolsSection } from "@/components/all-tools-section"
 import { ShareButton } from "@/components/share-button"
 
 export const metadata: Metadata = {
-  title: "Alphabet to Numbers Converter",
+  title: { absolute: "Alphabet To Numbers Converter" },
   description: "Free alphabet to numbers converter tool. Convert any letter A-Z to its numerical position 1-26 instantly. Perfect for puzzles, codes, education, and cryptography.",
   keywords: ["alphabet to numbers converter", "alphabet to number", "convert alphabet to numbers", "letter position converter", "a-z to 1-26"],
   authors: [{ name: "John Reed" }],

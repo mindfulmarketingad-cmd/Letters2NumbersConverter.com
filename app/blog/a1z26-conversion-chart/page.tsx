@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'A-Z to 1-26 Conversion Chart - Reference Page',
+  title: { absolute: 'A1Z26 Conversion Chart' },
   description: 'Complete A-Z to 1-26 conversion chart reference page. Printable alphabet to number mapping for cryptography, coding, and educational purposes. Instant reference guide for letter-to-number conversions.',
   keywords: [
     'A-Z to 1-26 conversion chart',

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Caesar Cipher Examples — Encode & Decode with Any Shift',
+  title: { absolute: 'Caesar Cipher Examples' },
   description: 'Caesar cipher examples with step-by-step working for shifts 3, 7, 13, and more. Includes full alphabet tables, encode and decode walkthroughs, and a free online Caesar cipher tool.',
   keywords: [
     'Caesar cipher examples',

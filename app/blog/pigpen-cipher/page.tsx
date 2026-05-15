@@ -7,7 +7,7 @@ const PAGE_URL = `${BASE_URL}/blog/pigpen-cipher`
 const PUBLISHED = '2026-05-13'
 
 export const metadata: Metadata = {
-  title: 'Pigpen Cipher — Complete Guide to the Masonic Cipher Alphabet',
+  title: { absolute: 'Pigpen Cipher' },
   description: 'Learn what the Pigpen cipher is, how to encode and decode messages step by step, and see the full Pigpen alphabet. Includes the Masonic cipher, tic-tac-toe cipher variants, escape room tips, and FAQ.',
   keywords: [
     'pigpen cipher',

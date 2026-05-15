@@ -5,7 +5,7 @@ import { ToolPageWrapper } from "@/components/tool-page-wrapper"
 import { getToolData } from "@/lib/tool-data"
 
 export const metadata: Metadata = {
-  title: "CMYK to Pantone Color Converter | Letters2NumbersConverter.com",
+  title: { absolute: "CMYK To Pantone Color Converter" },
   description: "Easily convert your CMYK to Pantone (PMS) color format with our CMYK to Pantone Converter. Enter the CMYK color values below and instantly find the closest Pantone color match for accurate print production.",
   keywords: [
     "CMYK to Pantone converter",

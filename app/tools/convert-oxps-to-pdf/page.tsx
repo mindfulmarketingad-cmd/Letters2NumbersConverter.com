@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/convert-oxps-to-pdf`
 
 export const metadata: Metadata = {
-  title: "Convert OXPS to PDF — Free Online OXPS to PDF Converter",
+  title: { absolute: "Convert OXPS To PDF" },
   description: "Convert OXPS to PDF instantly online. Upload any Open XML Paper Specification (.oxps) file and download a compatible PDF in seconds. Free, no install, no sign-up. Works in your browser.",
   keywords: [
     "convert oxps to pdf",

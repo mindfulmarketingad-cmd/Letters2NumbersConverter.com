@@ -5,7 +5,7 @@ import { ToolLayout } from '@/components/tool-layout'
 import { getToolData } from '@/lib/tool-data'
 
 export const metadata: Metadata = {
-  title: 'Steganography Image Decoder',
+  title: { absolute: "Steganography Image Decoder" },
   description:
     'Free online Steganography Image Decoder tool. Extract hidden information, text, messages, and images embedded in carrier images using LSB (Least Significant Bit) extraction. Decode steganographic images instantly.',
   keywords: [

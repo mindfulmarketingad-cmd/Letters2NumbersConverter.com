@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/sentence-unscrambler`
 
 export const metadata: Metadata = {
-  title: 'Sentence Unscrambler',
+  title: { absolute: "Sentence Unscrambler" },
   description: 'Sentence Unscrambler — instantly rearrange scrambled words into a correct, readable sentence. Free, browser-based, no sign-up required.',
   keywords: [
     'sentence unscrambler',

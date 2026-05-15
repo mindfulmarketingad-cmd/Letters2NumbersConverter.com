@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/saml-encoder`
 
 export const metadata: Metadata = {
-  title: 'SAML Encoder and Decoder — Encode & Decode SAMLRequest / SAMLResponse',
+  title: { absolute: "SAML Encoder and Decoder" },
   description: 'Free SAML encoder and decoder. Encode XML to Base64 SAMLResponse or deflated SAMLRequest. Decode SAMLRequest and SAMLResponse parameters back to XML instantly. No uploads, works in your browser.',
   keywords: [
     'saml encoder',

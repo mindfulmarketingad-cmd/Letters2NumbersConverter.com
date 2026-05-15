@@ -23,7 +23,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Skip Cipher Decoder | Letters2NumbersConverter.com',
+  title: { absolute: "Skip Cipher Decoder" },
   description:
     'Decode skip cipher messages instantly with automatic brute force or manual parameters. Crack jump cipher codes online.',
   keywords: [

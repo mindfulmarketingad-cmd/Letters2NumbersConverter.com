@@ -671,6 +671,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Image Tools',
     href: '/tools/jpg-to-grayscale-converter',
   },
+  'discriminant-formula-calculator': {
+    name: 'Discriminant Formula Calculator',
+    description: 'Calculate the discriminant (b² − 4ac) of any quadratic equation. Enter a, b, c to get the discriminant value, nature of roots, step-by-step working, and exact or decimal roots.',
+    category: 'Math Tools',
+    href: '/tools/discriminant-formula-calculator',
+  },
 }
 
 export function getToolRegistry() {

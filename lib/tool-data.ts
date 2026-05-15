@@ -1212,6 +1212,27 @@ export const getToolData = (toolId: string) => {
         { title: 'HR & Hiring Teams', description: 'Screen cover letters and application essays for AI writing and verify headshots for AI generation artifacts.' },
       ],
     },
+    'discriminant-formula-calculator': {
+      howItWorks: 'Enter the three coefficients a, b, and c of your quadratic equation in the form ax² + bx + c = 0. The calculator instantly computes the discriminant D = b² − 4ac, shows full step-by-step working, identifies the nature of the roots (two distinct real, one repeated, or two complex), and solves for the roots using the quadratic formula. Exact rational roots are shown as simplified fractions; irrational roots as decimal approximations.',
+      features: [
+        'Real-time calculation — updates instantly as you type',
+        'Full step-by-step discriminant working (6 numbered steps)',
+        'Color-coded root nature result (two real, repeated, or complex)',
+        'Exact rational roots shown as simplified fractions',
+        'Decimal approximations for irrational roots (6 d.p.)',
+        'Complex roots displayed in a ± bi form',
+        'Quadratic formula shown with substituted values',
+        'Parabola interpretation (upward/downward, x-axis relationship)',
+        'Copy individual results or all results at once',
+        'Handles negative, fractional, and decimal coefficients',
+      ],
+      whoIsItFor: [
+        { title: 'High School Students', description: 'Check discriminant calculations for algebra homework and follow step-by-step working to understand the method.' },
+        { title: 'Teachers & Tutors', description: 'Generate worked examples for any quadratic equation instantly for use in lessons or to check student answers.' },
+        { title: 'Exam Preparation', description: 'Practice identifying the nature of roots across many equations efficiently before exams.' },
+        { title: 'Engineers & Scientists', description: 'Evaluate discriminants from characteristic equations and systems analysis without manual calculation.' },
+      ],
+    },
     'jpg-to-grayscale-converter': {
       howItWorks: 'Upload any JPG, PNG, or WebP image. The tool draws your image onto an HTML canvas and converts every pixel to grayscale using the luminosity formula (0.299 × R + 0.587 × G + 0.114 × B). The result is displayed side-by-side with the original so you can compare instantly. Adjust the JPG quality slider to choose between smaller file size and maximum sharpness, then download your grayscale JPG. Everything runs in your browser — your image is never sent to a server.',
       features: [

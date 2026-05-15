@@ -82,12 +82,12 @@ export function PricingPage() {
 
     // Fallback for free plan
     if (!plan.planType) {
-      router.push(user ? '/dashboard' : '/auth/signup')
+      router.push(user ? '/dashboard' : '/sign-in?mode=signup')
       return
     }
 
     if (!user) {
-      router.push('/auth/signup')
+      router.push('/sign-in?mode=signup')
       return
     }
 

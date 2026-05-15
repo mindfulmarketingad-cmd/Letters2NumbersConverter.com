@@ -23,7 +23,7 @@ export function UpgradeModal({ isOpen, onClose, remaining }: UpgradeModalProps) 
   }
 
   const handleCreateAccount = () => {
-    router.push('/auth/signup')
+    router.push('/sign-in?mode=signup')
     onClose()
   }
 

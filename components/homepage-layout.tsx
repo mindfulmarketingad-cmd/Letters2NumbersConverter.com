@@ -6,7 +6,7 @@ import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { HomepageSearch } from '@/components/homepage-search'
 import { ToolsInUseViewer } from '@/components/tools-in-use-viewer'
-import { HomepageMorseSection } from '@/components/homepage-morse-section'
+import { HomepageLetterNumberSection } from '@/components/homepage-letter-number-section'
 import { SeoPanel } from '@/components/seo-panel'
 
 export function HomepageLayout() {
@@ -26,8 +26,8 @@ export function HomepageLayout() {
           <ToolsInUseViewer />
         </section>
 
-        {/* Featured Tool: Morse Code Translator */}
-        <HomepageMorseSection />
+        {/* Featured Tool: Letters To Numbers Converter */}
+        <HomepageLetterNumberSection />
 
         {/* Hackathon Feature Section */}
         <section className="py-12 md:py-16 border-b border-border/50 bg-gradient-to-br from-primary/5 via-background to-secondary/20">

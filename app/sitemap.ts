@@ -110,6 +110,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'hackathon-team-name-generator',
     'bubble-text-generator',
     'ai-slop-checker',
+    'ai-paragraph-expander',
   ]
 
   const blogRoutes = [

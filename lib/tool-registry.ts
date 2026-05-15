@@ -647,6 +647,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Text Tools',
     href: '/tools/ai-slop-checker',
   },
+  'ai-paragraph-expander': {
+    name: 'AI Paragraph Expander',
+    description: 'Expand any paragraph into a longer, richer version. Choose your tone, expansion style, and target length (2×, 3×, or 4×). Free AI writing tool.',
+    category: 'Text Tools',
+    href: '/tools/ai-paragraph-expander',
+  },
 }
 
 export function getToolRegistry() {

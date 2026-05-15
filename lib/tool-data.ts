@@ -1212,6 +1212,27 @@ export const getToolData = (toolId: string) => {
         { title: 'HR & Hiring Teams', description: 'Screen cover letters and application essays for AI writing and verify headshots for AI generation artifacts.' },
       ],
     },
+    'ai-paragraph-expander': {
+      howItWorks: 'Paste any text, choose a tone (professional, casual, academic, creative, or persuasive), expansion style (natural, descriptive, add examples, add context, formal, or simplified), and target length (2×, 3×, or 4×). Click "Expand Paragraph" and the AI rewrites your text into a longer, richer version while preserving the original meaning. Copy the result, regenerate for a different take, or use the output as input to expand further.',
+      features: [
+        '5 tone options — professional, casual, academic, creative, persuasive',
+        '6 expansion styles — natural, descriptive, examples, context, formal, simplified',
+        '3 target lengths — 2×, 3×, or 4× the original word count',
+        'Live word count comparison with expansion ratio display',
+        'One-click copy to clipboard',
+        'Regenerate for a fresh alternative expansion',
+        'Chain expand — use output as new input for further expansion',
+        'Preserves core meaning, key facts, and original intent',
+        'Works on emails, essays, product descriptions, social posts, and more',
+        'No sign-up required — free and instant',
+      ],
+      whoIsItFor: [
+        { title: 'Students & Academic Writers', description: 'Expand thesis statements and body paragraphs to meet word count requirements without losing academic tone.' },
+        { title: 'Content Marketers & Bloggers', description: 'Turn bullet points and short notes into full paragraphs, blog posts, and product pages with the right tone.' },
+        { title: 'Business Professionals', description: 'Expand concise email drafts and proposal outlines into polished professional communications.' },
+        { title: 'Non-Native English Speakers', description: 'Write a simple version, then expand into natural, fluent English with your chosen professional tone.' },
+      ],
+    },
   }
 
   return toolDataMap[toolId] || {

@@ -49,7 +49,7 @@ export default function A1Z26TranslatorPage() {
       <ToolLayout
         toolId="a1z26-translator"
         toolName="A1Z26 Translator"
-        toolDescription="Translate letters to numbers with the A1Z26 alphabet cipher. Convert any text to number sequences and decode numbers back to letters."
+        toolDescription="Use this A1Z26 translator to convert letters to numbers — A=1, B=2, up to Z=26. Encode any text to a number sequence and decode numbers back to letters."
         toolComponent={<LetterNumberConverter />}
         toolData={toolData}
       />

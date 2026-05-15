@@ -57,7 +57,7 @@ export function A0Z25Decoder() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Input Section */}
         <div className="space-y-3">
-          <label className="block text-sm font-semibold text-black dark:text-white">
+          <label className="block text-sm font-semibold text-foreground">
             A0Z25 Encoded Input
           </label>
           <textarea
@@ -73,7 +73,7 @@ export function A0Z25Decoder() {
 
         {/* Output Section */}
         <div className="space-y-3">
-          <label className="block text-sm font-semibold text-black dark:text-white">
+          <label className="block text-sm font-semibold text-foreground">
             Decoded Output
           </label>
           <textarea
@@ -121,7 +121,7 @@ export function A0Z25Decoder() {
 
       {/* Info Section */}
       <div className="bg-secondary/50 border border-border rounded-lg p-6 space-y-4">
-        <h3 className="font-semibold text-black dark:text-white">How A0Z25 Decoding Works</h3>
+        <h3 className="font-semibold text-foreground">How A0Z25 Decoding Works</h3>
         <p className="text-sm text-muted-foreground">
           The A0Z25 decoder converts numbers (0-25) back into their corresponding letters:
           0=A, 1=B, 2=C... up to 25=Z. Simply enter your encoded numbers separated by spaces
@@ -129,7 +129,7 @@ export function A0Z25Decoder() {
         </p>
         <div className="grid grid-cols-2 gap-4 text-xs">
           <div>
-            <p className="font-semibold text-black dark:text-white mb-2">Supported Formats:</p>
+            <p className="font-semibold text-foreground mb-2">Supported Formats:</p>
             <ul className="space-y-1 text-muted-foreground">
               <li>• Space-separated: 7 4 11 11 14</li>
               <li>• Comma-separated: 7,4,11,11,14</li>
@@ -137,7 +137,7 @@ export function A0Z25Decoder() {
             </ul>
           </div>
           <div>
-            <p className="font-semibold text-black dark:text-white mb-2">Example:</p>
+            <p className="font-semibold text-foreground mb-2">Example:</p>
             <ul className="space-y-1 text-muted-foreground">
               <li>• 7 4 11 11 14 → HELLO</li>
               <li>• 22 14 18 11 3 → WORLD</li>

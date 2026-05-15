@@ -86,7 +86,7 @@ export function HalfBirthdayCalculator() {
       <div className="text-center mb-8">
         <div className="flex items-center justify-center gap-3 mb-4">
           <Gift className="w-8 h-8" style={{ color: '#11a099' }} />
-          <h2 className="text-4xl font-bold text-black dark:text-white">Half Birthday Calculator</h2>
+          <h2 className="text-4xl font-bold text-foreground">Half Birthday Calculator</h2>
         </div>
         <p className="text-lg text-muted-foreground">
           Find out when your half birthday is and celebrate twice a year!
@@ -94,15 +94,15 @@ export function HalfBirthdayCalculator() {
       </div>
 
       <div className="bg-secondary/50 p-6 rounded-lg mb-6">
-        <h3 className="text-xl font-semibold text-black dark:text-white mb-4">Choose Your Birth Date</h3>
+        <h3 className="text-xl font-semibold text-foreground mb-4">Choose Your Birth Date</h3>
         
         <div className="grid grid-cols-3 gap-4 mb-6">
           <div>
-            <label className="block text-sm font-medium text-black dark:text-white mb-2">Year</label>
+            <label className="block text-sm font-medium text-foreground mb-2">Year</label>
             <select
               value={year}
               onChange={(e) => setYear(e.target.value)}
-              className="w-full px-4 py-2 border border-border rounded-lg bg-background text-black dark:text-white"
+              className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground"
             >
               <option value="">Year</option>
               {years.map(y => (
@@ -112,11 +112,11 @@ export function HalfBirthdayCalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-black dark:text-white mb-2">Month</label>
+            <label className="block text-sm font-medium text-foreground mb-2">Month</label>
             <select
               value={month}
               onChange={(e) => setMonth(e.target.value)}
-              className="w-full px-4 py-2 border border-border rounded-lg bg-background text-black dark:text-white"
+              className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground"
             >
               <option value="">Month</option>
               {months.map((m, i) => (
@@ -126,11 +126,11 @@ export function HalfBirthdayCalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-black dark:text-white mb-2">Day</label>
+            <label className="block text-sm font-medium text-foreground mb-2">Day</label>
             <select
               value={day}
               onChange={(e) => setDay(e.target.value)}
-              className="w-full px-4 py-2 border border-border rounded-lg bg-background text-black dark:text-white"
+              className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground"
               disabled={!month}
             >
               <option value="">Day</option>
@@ -160,7 +160,7 @@ export function HalfBirthdayCalculator() {
 
       {result && (
         <div className="bg-green-50 dark:bg-green-950 p-6 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="text-lg font-semibold text-black dark:text-white mb-4">Your Half Birthday</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-4">Your Half Birthday</h3>
           
           <div className="space-y-3">
             <div className="flex justify-between items-center p-3 bg-white dark:bg-gray-800 rounded">
@@ -183,7 +183,7 @@ export function HalfBirthdayCalculator() {
       )}
 
       <div className="mt-8 bg-blue-50 dark:bg-blue-950 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-black dark:text-white mb-3">About Half Birthdays</h3>
+        <h3 className="text-lg font-semibold text-foreground mb-3">About Half Birthdays</h3>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
           A half birthday is celebrated exactly 6 months before or after your actual birthday. It's a fun way to:
         </p>

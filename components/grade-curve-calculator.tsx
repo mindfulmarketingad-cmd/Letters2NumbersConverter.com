@@ -93,7 +93,7 @@ export function GradeCurveCalculator() {
   return (
     <div className="w-full max-w-4xl mx-auto p-6 bg-background rounded-lg">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-black dark:text-white mb-2">Grade Curve Calculator</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-2">Grade Curve Calculator</h2>
         <p className="text-muted-foreground">
           Adjust grades using normal, linear, or percentile distribution methods.
         </p>
@@ -108,7 +108,7 @@ export function GradeCurveCalculator() {
 
         <TabsContent value="normal" className="space-y-6">
           <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h3 className="font-bold text-black dark:text-white mb-2">Normal Distribution Calculator</h3>
+            <h3 className="font-bold text-foreground mb-2">Normal Distribution Calculator</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Transform your raw grades using the normal distribution (bell curve) method. This statistical approach
               normalizes grade distribution, ensuring fair assessment while maintaining academic standards.
@@ -118,7 +118,7 @@ export function GradeCurveCalculator() {
 
         <TabsContent value="linear" className="space-y-6">
           <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h3 className="font-bold text-black dark:text-white mb-2">Linear Distribution Calculator</h3>
+            <h3 className="font-bold text-foreground mb-2">Linear Distribution Calculator</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Apply a linear grade curve where all grades are adjusted proportionally by a fixed amount, creating an
               even distribution across all grade levels.
@@ -128,7 +128,7 @@ export function GradeCurveCalculator() {
 
         <TabsContent value="percentile" className="space-y-6">
           <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h3 className="font-bold text-black dark:text-white mb-2">Percentile Distribution Calculator</h3>
+            <h3 className="font-bold text-foreground mb-2">Percentile Distribution Calculator</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Curve grades based on percentile rankings, where each grade represents a specific percentile of student
               performance, ensuring consistent standards across assessments.
@@ -140,7 +140,7 @@ export function GradeCurveCalculator() {
       <div className="space-y-6 mt-6">
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block font-semibold text-black dark:text-white mb-2">Total Test Population</label>
+            <label className="block font-semibold text-foreground mb-2">Total Test Population</label>
             <Input
               type="number"
               value={population}
@@ -150,7 +150,7 @@ export function GradeCurveCalculator() {
             />
           </div>
           <div>
-            <label className="block font-semibold text-black dark:text-white mb-2">Mean Shift (Optional)</label>
+            <label className="block font-semibold text-foreground mb-2">Mean Shift (Optional)</label>
             <Input
               type="number"
               value={meanShift}
@@ -163,7 +163,7 @@ export function GradeCurveCalculator() {
 
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block font-semibold text-black dark:text-white mb-2">Highest Score</label>
+            <label className="block font-semibold text-foreground mb-2">Highest Score</label>
             <Input
               type="number"
               value={highestScore}
@@ -173,7 +173,7 @@ export function GradeCurveCalculator() {
             />
           </div>
           <div>
-            <label className="block font-semibold text-black dark:text-white mb-2">Lowest Score</label>
+            <label className="block font-semibold text-foreground mb-2">Lowest Score</label>
             <Input
               type="number"
               value={lowestScore}
@@ -186,7 +186,7 @@ export function GradeCurveCalculator() {
 
         <div>
           <div className="flex justify-between items-center mb-4">
-            <label className="font-semibold text-black dark:text-white">Grade Proportions (%)</label>
+            <label className="font-semibold text-foreground">Grade Proportions (%)</label>
             <span className="text-green-600 font-semibold">Total: {totalPercentage.toFixed(2)}%</span>
           </div>
 
@@ -237,11 +237,11 @@ export function GradeCurveCalculator() {
 
         {results && (
           <div className="bg-green-50 dark:bg-green-950 p-6 rounded-lg border border-green-200 dark:border-green-800">
-            <h3 className="font-bold text-black dark:text-white mb-4">Curved Grade Thresholds</h3>
+            <h3 className="font-bold text-foreground mb-4">Curved Grade Thresholds</h3>
             <div className="grid grid-cols-2 gap-4">
               {Object.entries(results).map(([grade, threshold]) => (
                 <div key={grade} className="flex justify-between bg-white dark:bg-gray-800 p-3 rounded">
-                  <span className="font-semibold text-black dark:text-white">Grade {grade}:</span>
+                  <span className="font-semibold text-foreground">Grade {grade}:</span>
                   <span className="text-green-600 font-bold">{Math.round(threshold)}</span>
                 </div>
               ))}

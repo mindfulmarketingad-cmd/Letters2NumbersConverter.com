@@ -123,7 +123,7 @@ export function BlackAndWhitePhotoToColorConverter() {
   return (
     <div className="w-full max-w-6xl mx-auto p-8">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-black dark:text-white mb-2">Black and White Photo to Color Converter</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-2">Black and White Photo to Color Converter</h2>
         <p className="text-lg text-muted-foreground">
           Transform your black and white photos into vibrant color images using advanced colorization technology. Perfect for restoring vintage photographs and bringing old memories to life.
         </p>
@@ -138,7 +138,7 @@ export function BlackAndWhitePhotoToColorConverter() {
       >
         <div className="text-center">
           <Upload className="w-12 h-12 mx-auto mb-4 text-muted-foreground" />
-          <h3 className="text-xl font-semibold text-black dark:text-white mb-2">Upload Black and White Photo</h3>
+          <h3 className="text-xl font-semibold text-foreground mb-2">Upload Black and White Photo</h3>
           <p className="text-muted-foreground mb-4">Drag and drop your image or click to browse</p>
           <p className="text-sm text-muted-foreground">Supported formats: JPG, PNG, GIF, WebP (Max 50MB)</p>
         </div>
@@ -160,7 +160,7 @@ export function BlackAndWhitePhotoToColorConverter() {
       {/* Original Image Display */}
       {originalImage && (
         <div className="mb-8">
-          <h3 className="text-lg font-semibold text-black dark:text-white mb-4">Original Black and White Photo</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-4">Original Black and White Photo</h3>
           <div className="relative bg-secondary/50 rounded-lg overflow-hidden max-h-96">
             <img src={originalImage} alt="Original B&W" className="w-full h-auto object-contain" />
           </div>
@@ -188,7 +188,7 @@ export function BlackAndWhitePhotoToColorConverter() {
       {/* Colorized Image Display */}
       {colorizedImage && (
         <div className="mb-8">
-          <h3 className="text-lg font-semibold text-black dark:text-white mb-4">Colorized Photo</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-4">Colorized Photo</h3>
           <div className="relative bg-secondary/50 rounded-lg overflow-hidden max-h-96 mb-6">
             <img src={colorizedImage} alt="Colorized" className="w-full h-auto object-contain" />
           </div>
@@ -216,7 +216,7 @@ export function BlackAndWhitePhotoToColorConverter() {
 
       {/* Information Section */}
       <div className="bg-blue-50 dark:bg-blue-950 p-6 rounded-lg border border-blue-200 dark:border-blue-800 mt-8">
-        <h3 className="text-lg font-semibold text-black dark:text-white mb-3">About This Tool</h3>
+        <h3 className="text-lg font-semibold text-foreground mb-3">About This Tool</h3>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
           The Black and White Photo to Color Converter uses advanced colorization algorithms to automatically add realistic color to your grayscale photographs. This tool is perfect for:
         </p>

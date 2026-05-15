@@ -126,7 +126,7 @@ export function ScanWordsFromImage() {
   return (
     <div className="w-full max-w-6xl mx-auto p-8 bg-background rounded-lg">
       <div className="mb-8 text-center">
-        <h2 className="text-3xl font-bold text-black dark:text-white mb-2">Scan Words From Image</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-2">Scan Words From Image</h2>
         <p className="text-lg text-muted-foreground">
           Extract text from images using advanced OCR technology. Upload an image and instantly get the text content.
         </p>
@@ -142,7 +142,7 @@ export function ScanWordsFromImage() {
         >
           <div className="text-center">
             <Upload className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
-            <h3 className="text-2xl font-semibold text-black dark:text-white mb-2">
+            <h3 className="text-2xl font-semibold text-foreground mb-2">
               Drop, Upload or Paste Images
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
@@ -184,7 +184,7 @@ export function ScanWordsFromImage() {
         {/* Results Section */}
         <div className="space-y-4">
           <div className="border border-border rounded-lg p-6 bg-secondary/50 min-h-96">
-            <h3 className="font-semibold text-black dark:text-white mb-3">Extracted Text</h3>
+            <h3 className="font-semibold text-foreground mb-3">Extracted Text</h3>
 
             {isProcessing && (
               <div className="flex items-center justify-center gap-3 h-64">
@@ -206,7 +206,7 @@ export function ScanWordsFromImage() {
               <textarea
                 value={extractedText}
                 readOnly
-                className="w-full h-64 p-4 border border-border rounded-lg bg-background text-black dark:text-white resize-none font-mono text-sm"
+                className="w-full h-64 p-4 border border-border rounded-lg bg-background text-foreground resize-none font-mono text-sm"
               />
             )}
 
@@ -241,7 +241,7 @@ export function ScanWordsFromImage() {
               </button>
               <button
                 onClick={clearAll}
-                className="flex-1 px-4 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-black dark:text-white rounded-lg font-medium transition"
+                className="flex-1 px-4 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-foreground rounded-lg font-medium transition"
               >
                 Clear
               </button>
@@ -252,7 +252,7 @@ export function ScanWordsFromImage() {
 
       {/* Info Section */}
       <div className="bg-blue-50 dark:bg-blue-950 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-black dark:text-white mb-3">About This Tool</h3>
+        <h3 className="text-lg font-semibold text-foreground mb-3">About This Tool</h3>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
           Scan Words From Image uses advanced OCR (Optical Character Recognition) technology to extract text from images instantly. This tool is perfect for:
         </p>

@@ -1426,6 +1426,27 @@ export const getToolData = (toolId: string) => {
         { title: 'Students & Learners', description: 'Understanding the INI file format by seeing a live conversion of familiar key-value text into proper sections and entries.' },
       ],
     },
+    'xml-to-ini-converter': {
+      howItWorks: 'Paste your XML into the left panel. The converter uses the browser\'s built-in XML parser to read the document, then maps the structure to INI format: top-level child elements become INI sections, and their child elements become key = value pairs. Deeper nesting is either flattened with dotted key names (parent.child = value) or kept under the nearest section — your choice. XML attributes can be included with a configurable prefix. Copy the result or download it as a .ini file.',
+      features: [
+        'Real-time XML → INI conversion as you type or paste',
+        'Two nesting modes: top-level elements as sections, or full dotted-key flattening',
+        'Optional XML attribute inclusion with configurable prefix (e.g. @id, @type)',
+        'Delimiter choice: = or :',
+        'Comment character choice: ; or #',
+        'Inline XML validation with clear error messages',
+        'Download converted file as .ini',
+        'Copy XML input or INI output to clipboard',
+        'Sample XML with database / server / cache sections',
+        'Fully private — parsed entirely in your browser, nothing uploaded',
+      ],
+      whoIsItFor: [
+        { title: 'Developers', description: 'Converting XML-based application configs (Spring, .NET, Maven) to INI format for tools and frameworks that require it.' },
+        { title: 'System Administrators', description: 'Reformatting XML configuration exports from servers and services into the simpler INI format for legacy application deployment.' },
+        { title: 'DevOps Engineers', description: 'Translating XML pipeline and environment configurations into INI files during CI/CD setup or cross-platform migrations.' },
+        { title: 'Students & Learners', description: 'Understanding the structural differences between XML and INI by seeing a live, side-by-side conversion.' },
+      ],
+    },
     'xps-to-pdf-converter': {
       howItWorks: 'Upload your XPS (XML Paper Specification) file and the tool converts it to a standard PDF document entirely in your browser. It parses the XPS XML structure, renders each page, and outputs a downloadable PDF — no software installation or server upload required.',
       features: ['Convert XPS and OXPS files to PDF in the browser', 'Preserves text, images, and page layout', 'Multi-page XPS documents fully supported', 'No file upload — conversion happens locally', 'Download the converted PDF instantly', 'Free with no file size limits imposed by servers'],

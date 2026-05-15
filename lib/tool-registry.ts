@@ -347,6 +347,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Conversion',
     href: '/tools/txt-to-ini-converter',
   },
+  'xml-to-ini-converter': {
+    name: 'XML To INI Converter',
+    description: 'Convert XML configuration files to INI format instantly',
+    category: 'Conversion',
+    href: '/tools/xml-to-ini-converter',
+  },
   'word-to-phone-number-converter': {
     name: 'Word To Phone Number Converter',
     description: 'Convert any word or phrase to phone keypad digits for vanity phone numbers',

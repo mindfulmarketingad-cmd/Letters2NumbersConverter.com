@@ -1189,6 +1189,29 @@ export const getToolData = (toolId: string) => {
         { title: 'Students & Educators', description: 'Create visually engaging notes and flashcards with bubble text to highlight key terms.' },
       ],
     },
+    'ai-slop-checker': {
+      howItWorks: 'Paste any text or upload an image, then click "Check." The AI Slop Checker sends your content to an advanced language model that analyzes linguistic patterns, stylistic fingerprints, and visual artifacts to determine whether a human or AI created it. Results include a 0–100 confidence score, a clear verdict, specific detected patterns, readability scores for text, and a one-click button to strip hidden AI fingerprints.',
+      features: [
+        'AI text detection — identifies ChatGPT, Gemini, Claude, and GPT-4 writing patterns',
+        'AI image detection — spots deepfakes, AI faces, and synthetic photography',
+        '0–100 AI confidence score with color-coded verdict label',
+        'Detected patterns list with specific linguistic or visual signals',
+        'Flesch Reading Ease score for pasted text',
+        'Flesch-Kincaid Grade Level readability metric',
+        'Clean AI Fingerprints — strips zero-width spaces, homoglyphs, and invisible characters',
+        'Word count, sentence count, and avg sentence length stats',
+        'Two-tab interface: Text analysis and Image analysis',
+        'Drag-and-drop image upload',
+        'No account required for basic checks',
+        'Instant results — no queue, no waiting',
+      ],
+      whoIsItFor: [
+        { title: 'Teachers & Professors', description: 'Detect AI-written student essays and homework without expensive plagiarism services. Paste any length of text for an instant AI score.' },
+        { title: 'Journalists & Fact-Checkers', description: 'Verify whether quotes, press releases, or photos were human-authored. Check images for deepfake artifacts before publishing.' },
+        { title: 'Online Daters', description: 'Check profile photos for AI-generated faces and detect chatbot-written messages before connecting with someone you met online.' },
+        { title: 'HR & Hiring Teams', description: 'Screen cover letters and application essays for AI writing and verify headshots for AI generation artifacts.' },
+      ],
+    },
   }
 
   return toolDataMap[toolId] || {

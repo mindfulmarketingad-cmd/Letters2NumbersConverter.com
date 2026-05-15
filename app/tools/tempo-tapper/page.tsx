@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.letters2numbersconverter.com'
 const PAGE_URL = `${BASE_URL}/tools/tempo-tapper`
 
 export const metadata: Metadata = {
-  title: 'Tempo Tapper — Free Online BPM Tap Tempo Tool',
+  title: { absolute: "Tempo Tapper" },
   description: 'Free online Tempo Tapper. Tap the button or press Space in time with any song to instantly calculate BPM. Shows rolling average, interval history, half-time, double-time, and tempo feel. No audio needed.',
   keywords: [
     'tempo tapper',

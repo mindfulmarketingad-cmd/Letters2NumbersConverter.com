@@ -112,6 +112,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ai-slop-checker',
     'ai-paragraph-expander',
     'ai-uncrop-image',
+    'pdf-to-grayscale-converter',
   ]
 
   const blogRoutes = [

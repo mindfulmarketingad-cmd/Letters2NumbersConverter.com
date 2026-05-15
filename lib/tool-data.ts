@@ -1212,6 +1212,26 @@ export const getToolData = (toolId: string) => {
         { title: 'HR & Hiring Teams', description: 'Screen cover letters and application essays for AI writing and verify headshots for AI generation artifacts.' },
       ],
     },
+    'pdf-to-grayscale-converter': {
+      howItWorks: 'Upload any PDF file (up to 100 MB). The tool renders each page using PDF.js at 2× resolution for sharpness, converts every pixel to grayscale using the luminosity formula (0.299 × R + 0.587 × G + 0.114 × B), then bundles all pages into a new PDF using jsPDF. Adjust the output quality slider to balance file size vs. sharpness. A preview of page 1 is shown after conversion. Download the finished grayscale PDF. Your file never leaves your browser.',
+      features: [
+        'Converts all pages of any multi-page PDF to grayscale',
+        'Luminosity formula for perceptually accurate grayscale conversion',
+        'Renders at 2× resolution for sharp, print-quality output',
+        'Adjustable output quality — balance file size and visual fidelity',
+        'Page 1 preview after conversion',
+        'Progress bar with page-by-page status',
+        '100% browser-based — PDF never uploaded to any server',
+        'Supports PDFs up to 100 MB',
+        'No sign-up required — free and instant',
+      ],
+      whoIsItFor: [
+        { title: 'Office & Business Users', description: 'Reduce printing costs by converting color reports and presentations to grayscale before printing.' },
+        { title: 'Students & Educators', description: 'Convert colorful handouts and slides to grayscale to save on printing costs or share on monochrome printers.' },
+        { title: 'Designers & Publishers', description: 'Check how a designed PDF looks when printed in grayscale to identify readability issues before printing.' },
+        { title: 'Legal & Administrative', description: 'Many legal filings and administrative submissions require black-and-white documents. Convert color PDFs to meet requirements.' },
+      ],
+    },
     'ai-uncrop-image': {
       howItWorks: 'Upload any PNG, JPG, or WebP image. Choose how many pixels to add to each edge — Top, Bottom, Left, and Right — in steps from 64 to 512 pixels. Optionally enter a prompt describing what should fill the new space (e.g. "blurry forest background"). Adjust the creativity slider: lower keeps the fill faithful to existing edges, higher allows more imaginative generation. Click "Uncrop Image" and AI outpainting generates seamless new content to fill the expanded canvas. Toggle between original and result to compare, then download as WebP.',
       features: [

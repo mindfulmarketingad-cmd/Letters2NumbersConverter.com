@@ -659,6 +659,12 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Image Tools',
     href: '/tools/ai-uncrop-image',
   },
+  'pdf-to-grayscale-converter': {
+    name: 'PDF to Grayscale Converter',
+    description: 'Convert any PDF to grayscale online for free. All pages converted using the luminosity formula and bundled into a downloadable grayscale PDF. Runs entirely in your browser — no upload.',
+    category: 'PDF Tools',
+    href: '/tools/pdf-to-grayscale-converter',
+  },
 }
 
 export function getToolRegistry() {

@@ -1,173 +1,151 @@
 'use client'
 
 import { useState } from 'react'
-import { Copy, Download, Trash2 } from 'lucide-react'
+import { Copy, Download, RotateCcw, ImageIcon } from 'lucide-react'
+
+function getImageSrc(input: string): string {
+  const clean = input.trim()
+  if (!clean) return ''
+  if (clean.startsWith('data:')) return clean
+  return `data:image/png;base64,${clean}`
+}
+
+function detectFormat(input: string): string {
+  if (input.includes('jpeg') || input.includes('jpg')) return 'JPEG'
+  if (input.includes('gif')) return 'GIF'
+  if (input.includes('svg')) return 'SVG'
+  if (input.includes('webp')) return 'WebP'
+  if (input.includes('png')) return 'PNG'
+  return 'PNG'
+}
+
+function formatSize(chars: number): string {
+  if (chars >= 1024 * 1024) return `${(chars / (1024 * 1024)).toFixed(2)} MB`
+  if (chars >= 1024) return `${(chars / 1024).toFixed(2)} KB`
+  return `${chars} B`
+}
 
 export function Base64ImageViewer() {
-  const [base64Input, setBase64Input] = useState('')
-  const [imageError, setImageError] = useState('')
-  const [copied, setCopied] = useState('')
+  const [input, setInput] = useState('')
+  const [error, setError] = useState(false)
+  const [copied, setCopied] = useState(false)
 
-  // Handle the base64 string - support both with and without data URI prefix
-  const getImageSrc = (): string => {
-    if (!base64Input.trim()) return ''
-    
-    const cleanInput = base64Input.trim()
-    
-    // Check if it already has a data URI prefix
-    if (cleanInput.startsWith('data:')) {
-      return cleanInput
-    }
-    
-    // Try to detect the image type from the base64 string or use a generic prefix
-    return `data:image/png;base64,${cleanInput}`
-  }
+  const imageSrc = getImageSrc(input)
 
-  const imageSrc = getImageSrc()
-
-  const handleImageError = () => {
-    setImageError('Invalid base64 string. Please check your input and try again.')
-  }
-
-  const handleImageLoad = () => {
-    setImageError('')
-  }
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(base64Input)
-    setCopied('base64')
-    setTimeout(() => setCopied(''), 2000)
+  const handleCopy = async () => {
+    if (!input) return
+    await navigator.clipboard.writeText(input)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 1500)
   }
 
   const handleDownload = () => {
-    if (!imageSrc) return
-    
-    const link = document.createElement('a')
-    link.href = imageSrc
-    link.download = 'image.png'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
-
-  const handleClear = () => {
-    setBase64Input('')
-    setImageError('')
-  }
-
-  const getBase64Size = (): string => {
-    if (!base64Input) return '0 B'
-    const bytes = base64Input.length
-    if (bytes >= 1024 * 1024) {
-      return `${(bytes / (1024 * 1024)).toFixed(2)} MB`
-    } else if (bytes >= 1024) {
-      return `${(bytes / 1024).toFixed(2)} KB`
-    }
-    return `${bytes} B`
+    if (!imageSrc || error) return
+    const a = document.createElement('a')
+    a.href = imageSrc
+    a.download = `image.${detectFormat(input).toLowerCase()}`
+    a.click()
   }
 
   return (
-    <div className="w-full space-y-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Left Column - Base64 Input */}
-        <div className="space-y-4">
-          <div>
-            <h3 className="text-sm font-semibold mb-2">Base64 Image String</h3>
-            <textarea
-              value={base64Input}
-              onChange={e => {
-                setBase64Input(e.target.value)
-                if (e.target.value) setImageError('')
-              }}
-              placeholder="Paste your base64 image string here (with or without 'data:image/...' prefix)..."
-              className="w-full h-48 px-4 py-3 border border-border rounded-lg bg-background font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary"
-              spellCheck="false"
-            />
+    <div className="flex flex-col gap-4">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        {/* Left — input */}
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center justify-between">
+            <span className="text-sm font-medium text-gray-700">Base64 String</span>
+            <div className="flex gap-2">
+              <button
+                onClick={handleCopy}
+                disabled={!input}
+                className="flex items-center gap-1 rounded-lg border border-gray-200 bg-white px-3 py-1 text-xs text-gray-600 transition-colors hover:border-[#00BD9D] hover:text-[#00BD9D] disabled:opacity-40"
+              >
+                <Copy className="h-3 w-3" />
+                {copied ? 'Copied!' : 'Copy'}
+              </button>
+              <button
+                onClick={handleDownload}
+                disabled={!imageSrc || error}
+                className="flex items-center gap-1 rounded-lg border border-gray-200 bg-white px-3 py-1 text-xs text-gray-600 transition-colors hover:border-[#49C6E5] hover:text-[#49C6E5] disabled:opacity-40"
+              >
+                <Download className="h-3 w-3" />
+                Download
+              </button>
+              <button
+                onClick={() => { setInput(''); setError(false) }}
+                disabled={!input}
+                className="flex items-center gap-1 rounded-lg border border-gray-200 bg-white px-3 py-1 text-xs text-gray-600 transition-colors hover:border-red-400 hover:text-red-500 disabled:opacity-40"
+              >
+                <RotateCcw className="h-3 w-3" />
+                Clear
+              </button>
+            </div>
           </div>
 
-          {/* Input Stats */}
-          <div className="flex items-center justify-between text-xs text-muted-foreground">
-            <span>{base64Input.length} characters</span>
-            <span>{getBase64Size()}</span>
-          </div>
+          <textarea
+            value={input}
+            onChange={e => { setInput(e.target.value); setError(false) }}
+            placeholder="Paste your base64 image string here — with or without the data:image/... prefix…"
+            spellCheck={false}
+            className="h-[360px] w-full resize-none rounded-xl border border-gray-200 bg-white p-4 font-mono text-sm text-gray-800 placeholder:text-gray-400 focus:border-[#00BD9D] focus:outline-none focus:ring-2 focus:ring-[#00BD9D]/20"
+          />
 
-          {/* Action Buttons */}
-          <div className="flex gap-2">
-            <button
-              onClick={handleCopy}
-              disabled={!base64Input}
-              className="flex-1 px-3 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity flex items-center justify-center gap-2"
-            >
-              <Copy className="w-4 h-4" />
-              Copy
-            </button>
-            <button
-              onClick={handleDownload}
-              disabled={!imageSrc || imageError}
-              className="flex-1 px-3 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity flex items-center justify-center gap-2"
-            >
-              <Download className="w-4 h-4" />
-              Download
-            </button>
-            <button
-              onClick={handleClear}
-              disabled={!base64Input}
-              className="flex-1 px-3 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
-            >
-              <Trash2 className="w-4 h-4" />
-              Clear
-            </button>
+          <div className="flex items-center justify-between text-xs text-gray-400">
+            <span>{input.length.toLocaleString()} characters</span>
+            <span>{formatSize(input.length)}</span>
           </div>
 
           {/* Tips */}
-          <div className="bg-card border border-border rounded-lg p-4 space-y-2">
-            <h4 className="text-sm font-semibold">Tips:</h4>
-            <ul className="text-sm text-muted-foreground space-y-1">
-              <li>• Paste base64 strings with or without the <code className="bg-background px-1.5 py-0.5 rounded text-xs">data:image/...</code> prefix</li>
-              <li>• Supports PNG, JPEG, GIF, SVG, WebP and more</li>
-              <li>• Works completely offline</li>
-              <li>• Max size depends on your browser</li>
+          <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500">Tips</p>
+            <ul className="space-y-1 text-sm text-gray-600">
+              <li>Paste with or without the <code className="rounded bg-white px-1 py-0.5 text-xs font-mono border border-gray-200">data:image/...</code> prefix</li>
+              <li>Supports PNG, JPEG, GIF, SVG, WebP and more</li>
+              <li>Runs entirely in your browser — nothing is uploaded</li>
             </ul>
           </div>
         </div>
 
-        {/* Right Column - Image Display */}
-        <div className="space-y-4">
-          <h3 className="text-sm font-semibold">Image</h3>
-          
-          {/* Image Display Area */}
-          <div className="border border-border rounded-lg bg-background p-4 min-h-96 flex items-center justify-center overflow-auto">
-            {imageError ? (
-              <div className="text-center text-red-500 space-y-2">
-                <p className="text-sm font-semibold">Error: Invalid Base64</p>
-                <p className="text-xs">{imageError}</p>
+        {/* Right — preview */}
+        <div className="flex flex-col gap-2">
+          <span className="text-sm font-medium text-gray-700">Image Preview</span>
+
+          <div className="flex h-[360px] items-center justify-center overflow-auto rounded-xl border border-gray-200 bg-gray-50 p-4">
+            {error ? (
+              <div className="text-center">
+                <p className="text-sm font-semibold text-red-500">Invalid base64 string</p>
+                <p className="mt-1 text-xs text-gray-500">Check your input and try again.</p>
               </div>
             ) : imageSrc ? (
               <img
                 src={imageSrc}
-                alt="Decoded base64 image"
-                onError={handleImageError}
-                onLoad={handleImageLoad}
-                className="max-w-full max-h-96 object-contain rounded"
-                style={{ maxHeight: '400px' }}
+                alt="Decoded base64"
+                onError={() => setError(true)}
+                onLoad={() => setError(false)}
+                className="max-h-full max-w-full rounded-lg object-contain"
               />
             ) : (
-              <div className="text-center text-muted-foreground">
-                <p className="text-sm">Paste a base64 image string to preview</p>
+              <div className="flex flex-col items-center gap-3 text-gray-400">
+                <ImageIcon className="h-10 w-10" />
+                <p className="text-sm">Paste a base64 string to preview</p>
               </div>
             )}
           </div>
 
-          {/* Image Info */}
-          {imageSrc && !imageError && (
-            <div className="bg-card border border-border rounded-lg p-4 space-y-2 text-sm">
-              <div className="flex justify-between items-center">
-                <span className="text-muted-foreground">Base64 Size:</span>
-                <span className="font-semibold">{getBase64Size()}</span>
+          {/* Image info */}
+          {imageSrc && !error && (
+            <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+              <div className="flex justify-between py-1 text-sm">
+                <span className="text-gray-500">Format</span>
+                <span className="font-medium text-gray-800">{detectFormat(input)}</span>
               </div>
-              <div className="flex justify-between items-center">
-                <span className="text-muted-foreground">Format:</span>
-                <span className="font-semibold">{base64Input.includes('jpeg') ? 'JPEG' : base64Input.includes('gif') ? 'GIF' : base64Input.includes('svg') ? 'SVG' : base64Input.includes('webp') ? 'WebP' : 'PNG'}</span>
+              <div className="flex justify-between py-1 text-sm">
+                <span className="text-gray-500">Base64 size</span>
+                <span className="font-medium text-gray-800">{formatSize(input.length)}</span>
+              </div>
+              <div className="flex justify-between py-1 text-sm">
+                <span className="text-gray-500">Has data URI prefix</span>
+                <span className="font-medium text-gray-800">{input.trim().startsWith('data:') ? 'Yes' : 'No'}</span>
               </div>
             </div>
           )}

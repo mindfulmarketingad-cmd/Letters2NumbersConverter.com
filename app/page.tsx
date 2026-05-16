@@ -1,16 +1,21 @@
-export default function Home() {
+import Navbar from '@/components/navbar'
+import Hero from '@/components/hero'
+import BrowseCities from '@/components/browse-cities'
+import BrowseBroth from '@/components/browse-broth'
+import LeadGenBanner from '@/components/lead-gen-banner'
+import RecentlyAdded from '@/components/recently-added'
+import Footer from '@/components/footer'
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center font-sans">
-      <main className="flex w-full max-w-3xl flex-col items-center gap-8 px-6 py-16 text-center sm:items-start sm:text-left">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-4xl font-bold tracking-tight">
-            RamenNearYou.com
-          </h1>
-          <p className="max-w-md text-lg text-muted-foreground">
-            To get started, send a prompt or modify this page directly.
-          </p>
-        </div>
-      </main>
-    </div>
-  );
+    <main className="min-h-screen bg-[#2F323A]">
+      <Navbar />
+      <Hero />
+      <BrowseCities />
+      <BrowseBroth />
+      <LeadGenBanner />
+      <RecentlyAdded />
+      <Footer />
+    </main>
+  )
 }

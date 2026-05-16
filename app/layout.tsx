@@ -1,31 +1,28 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Playfair_Display, DM_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+})
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+})
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'RamenNearYou — Find the Best Local Ramen Restaurants',
+  description:
+    'Discover top-rated ramen restaurants near you. Browse by city, neighborhood, or broth type. Starting in Atlanta, GA — expanding nationwide.',
   generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  keywords: ['ramen', 'ramen near me', 'ramen restaurants', 'Atlanta ramen', 'tonkotsu', 'shoyu', 'miso ramen'],
+  openGraph: {
+    title: 'RamenNearYou — Find the Best Local Ramen',
+    description: 'The #1 ramen directory, one city at a time.',
+    type: 'website',
   },
 }
 
@@ -35,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">
+    <html lang="en" className={`${playfair.variable} ${dmSans.variable} bg-jet-black`}>
+      <body className="font-sans antialiased bg-jet-black text-white">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

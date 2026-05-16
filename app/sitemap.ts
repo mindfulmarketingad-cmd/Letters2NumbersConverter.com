@@ -116,6 +116,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'jpg-to-grayscale-converter',
     'discriminant-formula-calculator',
     'structural-formula-calculator',
+    'xml-to-ini-converter',
+    'ini-to-xml-converter',
+    'word-to-phone-number-converter',
+    'run-on-sentence-checker',
+    'virality-checker',
   ]
 
   const blogRoutes = [
@@ -198,6 +203,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'hackathon-team-formation',
     'how-to-do-well-in-a-hackathon',
     'numeric-ciphers',
+    'one-time-pad-cipher-example',
+    'caesar-cipher-to-english',
+    'frequency-analysis-substitution-cipher',
+    'types-of-cipher-codes',
+    'types-of-ciphers-and-codes',
+    'aes-256-encryption-in-java',
+    'different-types-of-codes-and-ciphers',
+    'feistel-cipher-example',
   ]
 
   const playRoutes = [

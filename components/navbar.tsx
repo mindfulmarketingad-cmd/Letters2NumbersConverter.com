@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Menu, X, UtensilsCrossed } from 'lucide-react'
 
 const navLinks = [
-  { label: 'Browse Cities', href: '#cities' },
+  { label: 'Browse Cities', href: '/cities' },
   { label: 'Broth Types', href: '#broth' },
   { label: 'Catering', href: '#catering' },
   { label: 'Submit a Restaurant', href: '#submit' },

@@ -5,8 +5,9 @@ import Footer from '@/components/footer'
 import { blogPosts } from '@/lib/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Ramen Blog — Tips, Recipes & More | RamenNearYou',
-  description: 'Learn how to make ramen at home, discover broth types, and explore the culture behind the bowl.',
+  title: 'Ramen Blog — Recipes, Tips & Guides',
+  description: 'Learn how to make ramen at home, discover broth types, and explore the culture behind the bowl. Recipes, guides, and more.',
+  alternates: { canonical: 'https://www.ramennearyou.com/blog' },
 }
 
 export default function BlogPage() {

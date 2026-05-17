@@ -17,9 +17,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = getBlogPost(slug)
   if (!post) return {}
+  const url = `https://www.ramennearyou.com/blog/${post.slug}`
   return {
-    title: `${post.title} | RamenNearYou`,
+    title: post.title,
     description: post.description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: 'article',
+      url,
+      publishedTime: post.date,
+    },
   }
 }
 
@@ -28,8 +37,31 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPost(slug)
   if (!post) notFound()
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    author: {
+      '@type': 'Organization',
+      name: 'RamenNearYou',
+      url: 'https://www.ramennearyou.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'RamenNearYou',
+      url: 'https://www.ramennearyou.com',
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.ramennearyou.com/blog/${post.slug}`,
+    },
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Navbar />
       <main className="min-h-screen bg-[#1a1c22] pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">

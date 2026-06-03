@@ -1,9 +1,7 @@
 'use client'
 
-import Link from 'next/link'
-import { ArrowRight, Hash } from 'lucide-react'
 import { useState, useCallback } from 'react'
-import { Copy, RotateCcw, ArrowLeftRight } from 'lucide-react'
+import { Copy, RotateCcw, ArrowLeftRight, Hash } from 'lucide-react'
 
 /* ─── Conversion logic ───────────────────────────────────────────────────── */
 
@@ -97,34 +95,26 @@ export function HomepageLetterNumberSection() {
     : 'Enter numbers to convert to letters…'
 
   return (
-    <section className="py-14 md:py-20 border-b border-border/50 bg-gradient-to-b from-secondary/5 to-background">
+    <section className="py-16 md:py-24 border-b border-border/50 bg-gradient-to-b from-secondary/10 to-background">
       <div className="container mx-auto px-4 max-w-5xl">
 
-        {/* Header row */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Hash className="w-4 h-4 text-primary" />
-              </div>
-              <span className="text-xs font-semibold text-primary uppercase tracking-widest">
-                Featured Tool
-              </span>
+        {/* Hero header */}
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+              <Hash className="w-4 h-4 text-primary" />
             </div>
-            <h2 id="letters-to-numbers-converter" className="text-2xl md:text-3xl font-bold text-foreground">
-              Letters To Numbers Converter
-            </h2>
-            <p className="text-muted-foreground mt-1 text-sm md:text-base max-w-md">
-              Convert letters to numbers and back — A=1, ASCII, hex, binary, and more.
-            </p>
+            <span className="text-xs font-semibold text-primary uppercase tracking-widest">
+              Free Online Tool
+            </span>
           </div>
-          <Link
-            href="/tools/letters-to-numbers-converter"
-            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline flex-shrink-0"
-          >
-            Open full tool
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <h1 id="letters-to-numbers-converter" className="text-3xl md:text-5xl font-bold text-foreground tracking-tight">
+            Letters To Numbers Converter
+          </h1>
+          <p className="text-muted-foreground mt-4 text-base md:text-lg max-w-2xl mx-auto">
+            Convert letters to numbers and back instantly — A=1, ASCII, hex, binary, and more.
+            Free, private, and runs entirely in your browser.
+          </p>
         </div>
 
         {/* Tool card */}

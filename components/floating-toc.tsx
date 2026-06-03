@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState, useCallback } from "react"
+import { usePathname } from "next/navigation"
 import { List, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -11,6 +12,7 @@ interface TocItem {
 }
 
 export function FloatingToc() {
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [tocItems, setTocItems] = useState<TocItem[]>([])
   const [activeId, setActiveId] = useState<string>("")
@@ -80,6 +82,11 @@ export function FloatingToc() {
       setIsOpen(false)
     }
   }, [])
+
+  // Don't render on the homepage
+  if (pathname === "/") {
+    return null
+  }
 
   // Don't render if no headings with IDs
   if (tocItems.length === 0) {

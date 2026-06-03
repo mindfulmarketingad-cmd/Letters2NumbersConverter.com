@@ -264,6 +264,22 @@ export function SeoPanel() {
         </div>
       </div>
 
+      {/* ── 5b. A1Z26 Cipher ──────────────────────────────────── */}
+      <div className="space-y-4">
+        <h2 id="a1z26-cipher" className="text-2xl md:text-3xl font-bold">A1Z26 Cipher</h2>
+        <p className="text-muted-foreground max-w-3xl">
+          The A1Z26 cipher is the most common letters-to-numbers substitution, mapping each letter of the alphabet to its position: A=1, B=2, C=3, all the way to Z=26. Because it&apos;s simple and intuitive, the A1Z26 cipher shows up constantly in puzzles, escape rooms, geocaching clues, and beginner cryptography lessons. Use the converter above in <strong>A=1</strong> mode to encode words into number sequences or decode numbers back into letters instantly.
+        </p>
+      </div>
+
+      {/* ── 5c. A0Z25 Cipher ──────────────────────────────────── */}
+      <div className="space-y-4">
+        <h2 id="a0z25-cipher" className="text-2xl md:text-3xl font-bold">A0Z25 Cipher</h2>
+        <p className="text-muted-foreground max-w-3xl">
+          The A0Z25 cipher is a zero-indexed variant of A1Z26 where counting starts at zero: A=0, B=1, C=2, up to Z=25. This mapping is especially useful in programming and modular arithmetic, since it aligns directly with array indexes and the math behind shift ciphers like Caesar and Vigenère (mod 26). Switch the converter above to <strong>A=0</strong> mode to encode and decode using the A0Z25 standard.
+        </p>
+      </div>
+
       {/* ── 6. Why Us (checklist) ─────────────────────────────── */}
       <div>
         <h2 id="why-choose-us" className="text-2xl md:text-3xl font-bold mb-6">Why people choose Letters2NumbersConverter.com</h2>

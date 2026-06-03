@@ -30,18 +30,11 @@ export function SiteHeader() {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
-            Pricing
-          </Link>
           <Link href="/tools" className="text-muted-foreground hover:text-foreground transition-colors">
             Tools
           </Link>
           <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
             Blog
-          </Link>
-          <Link href="/hackathon" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5">
-            Hackathon
-            <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-green-500 text-white leading-none">New</span>
           </Link>
           <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
             About Us
@@ -82,13 +75,6 @@ export function SiteHeader() {
       {isMenuOpen && (
         <div className="md:hidden border-t border-border bg-background">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            <Link 
-              href="/pricing" 
-              className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Pricing
-            </Link>
             <Link
               href="/tools"
               className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium"
@@ -102,14 +88,6 @@ export function SiteHeader() {
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
-            </Link>
-            <Link
-              href="/hackathon"
-              className="text-muted-foreground hover:text-foreground transition-colors py-2 font-medium flex items-center gap-1.5"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Hackathon
-              <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-green-500 text-white leading-none">New</span>
             </Link>
             <Link
               href="/about"

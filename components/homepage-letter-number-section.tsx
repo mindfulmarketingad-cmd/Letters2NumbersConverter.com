@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useCallback } from 'react'
-import { Copy, RotateCcw, ArrowLeftRight, Hash } from 'lucide-react'
+import { Copy, RotateCcw, ArrowLeftRight } from 'lucide-react'
 
 /* ─── Conversion logic ───────────────────────────────────────────────────── */
 
@@ -100,14 +100,6 @@ export function HomepageLetterNumberSection() {
 
         {/* Hero header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-              <Hash className="w-4 h-4 text-primary" />
-            </div>
-            <span className="text-xs font-semibold text-primary uppercase tracking-widest">
-              Free Online Tool
-            </span>
-          </div>
           <h1 id="letters-to-numbers-converter" className="text-3xl md:text-5xl font-bold text-foreground tracking-tight">
             Letters To Numbers Converter
           </h1>

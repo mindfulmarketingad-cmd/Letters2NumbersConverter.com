@@ -87,6 +87,19 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <SchemaMarkup />
+        {/* SEO Agent Installation Script */}
+        <Script
+          id="seo-agent"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              const script = document.createElement('script');
+              script.src = \`https://api.arvow.com/olayer/8b04fea6-d6d6-437a-ab08-c78c4ac5eb3d?path=\${window.location.pathname}\`;
+              script.defer = true;
+              document.head.appendChild(script);
+            `,
+          }}
+        />
         {/* Google Analytics */}
         <Script
           async

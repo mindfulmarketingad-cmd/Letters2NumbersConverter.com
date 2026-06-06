@@ -7,6 +7,7 @@ import { ShareButton } from "@/components/share-button"
 const BASE_URL = "https://www.letters2numbersconverter.com"
 const PAGE_URL = `${BASE_URL}/blog/alphanumeric-converter`
 const PUBLISHED = "2026-05-14T00:00:00.000Z"
+const AUTHOR_ID = `${BASE_URL}/blog/alphanumeric-converter#author`
 
 export const metadata: Metadata = {
   title: { absolute: "Alphanumeric Converter" },
@@ -43,7 +44,17 @@ const articleSchema = {
   image: `${BASE_URL}/images/blog/alphanumeric-converter-hero.jpg`,
   datePublished: PUBLISHED,
   dateModified: PUBLISHED,
-  author: { "@type": "Person", name: "John Reed", url: BASE_URL },
+  author: {
+    "@type": "Person",
+    "@id": AUTHOR_ID,
+    name: "John Reed",
+    url: AUTHOR_ID,
+    jobTitle: "Cryptography & Encoding Writer",
+    description:
+      "John Reed writes about ciphers, character encoding, and number systems. He has spent over a decade building puzzles and explaining how computers represent text, from A1Z26 to ASCII and binary.",
+    knowsAbout: ["Alphanumeric conversion", "ASCII encoding", "Classical ciphers", "Number systems", "Cryptography"],
+    worksFor: { "@type": "Organization", name: "Letters2NumbersConverter.com" },
+  },
   publisher: {
     "@type": "Organization",
     name: "Letters2NumbersConverter.com",
@@ -118,7 +129,7 @@ export default function AlphanumericConverterPage() {
               The complete guide to converting between letters, numbers, and digital encoding formats
             </p>
             <p className="text-sm text-muted-foreground mb-4">
-              By <strong className="text-foreground">John Reed</strong> · May 14, 2026
+              By <a href="#author" className="font-semibold text-foreground hover:text-primary hover:underline">John Reed</a> · May 14, 2026
             </p>
             <ShareButton title="Alphanumeric Converter" />
           </header>
@@ -198,6 +209,20 @@ export default function AlphanumericConverterPage() {
               The four most common alphanumeric conversion formats each serve a different purpose:
             </p>
 
+            <figure className="not-prose my-8">
+              <div className="relative w-full h-56 sm:h-72 rounded-xl overflow-hidden">
+                <Image
+                  src="/images/blog/ascii-encoding.jpg"
+                  alt="ASCII encoding chart mapping letters and characters to their decimal, hexadecimal, and binary values"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="text-center text-sm text-muted-foreground mt-2">
+                ASCII assigns every typeable character a number — the basis of most digital alphanumeric conversion.
+              </figcaption>
+            </figure>
+
             <div className="space-y-6 mb-8 not-prose">
               <div className="bg-card border border-border rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -252,6 +277,21 @@ export default function AlphanumericConverterPage() {
             <p className="text-foreground leading-relaxed mb-4">
               Choosing the right format depends on what you're doing. This table maps each format to its typical context:
             </p>
+
+            <figure className="not-prose my-8">
+              <div className="relative w-full h-56 sm:h-72 rounded-xl overflow-hidden">
+                <Image
+                  src="/images/blog/best-letter-number-ciphers-comparison.jpg"
+                  alt="Side-by-side comparison of A1Z26, A0Z25, ASCII, hexadecimal, and binary encoding formats for the same text"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="text-center text-sm text-muted-foreground mt-2">
+                The same word looks completely different across A1Z26, ASCII, hex, and binary encodings.
+              </figcaption>
+            </figure>
+
             <div className="overflow-x-auto mb-8 not-prose">
               <table className="w-full border-collapse text-sm">
                 <thead>
@@ -286,6 +326,21 @@ export default function AlphanumericConverterPage() {
             </p>
 
             <h2 id="uses" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Practical Uses of Alphanumeric Conversion</h2>
+
+            <figure className="not-prose my-8">
+              <div className="relative w-full h-56 sm:h-72 rounded-xl overflow-hidden">
+                <Image
+                  src="/images/blog/cryptography.jpg"
+                  alt="Encrypted message being decoded, illustrating how alphanumeric conversion underpins ciphers and cryptography"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="text-center text-sm text-muted-foreground mt-2">
+                From classical ciphers to CTF challenges, alphanumeric conversion is the first step in turning text into math.
+              </figcaption>
+            </figure>
+
             <ul className="list-disc pl-6 space-y-3 text-foreground mb-6">
               <li>
                 <strong>Programming & development</strong> — Character encoding is everywhere in code: parsing CSV files, handling form input, building APIs. Understanding that 'A' and 65 are the same thing in ASCII prevents a class of encoding bugs. The <Link href="/blog/letter-number-conversion-data-science" className="text-primary hover:underline">letter-number conversion in data science</Link> guide covers practical programming applications.
@@ -425,6 +480,25 @@ export default function AlphanumericConverterPage() {
                   <p className="text-muted-foreground leading-relaxed">{a}</p>
                 </div>
               ))}
+            </div>
+
+            {/* About the Author */}
+            <div id="author" className="mt-12 p-6 bg-card border border-border rounded-xl not-prose scroll-mt-20">
+              <h2 className="text-lg font-semibold text-foreground mb-4">About the Author</h2>
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/15 text-primary flex items-center justify-center text-xl font-bold">
+                  JR
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">John Reed</p>
+                  <p className="text-sm text-primary mb-2">Cryptography &amp; Encoding Writer</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    John Reed writes about ciphers, character encoding, and number systems. He has spent over a decade
+                    building puzzles and explaining how computers represent text — from A1Z26 and ASCII to hexadecimal and
+                    binary — for puzzlers, students, and developers alike.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Bottom CTA */}

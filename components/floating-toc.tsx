@@ -83,8 +83,9 @@ export function FloatingToc() {
     }
   }, [])
 
-  // Don't render on the homepage
-  if (pathname === "/") {
+  // Don't render on the homepage or pages that opt out
+  const HIDDEN_PATHS = ["/", "/blog/alphanumeric-converter"]
+  if (HIDDEN_PATHS.includes(pathname)) {
     return null
   }
 

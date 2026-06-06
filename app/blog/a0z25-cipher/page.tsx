@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
 import { ShareButton } from "@/components/share-button"
@@ -137,16 +136,6 @@ export default function A0Z25CipherPage() {
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               The A0Z25 Cipher is a zero-indexed letter-to-number encoding system where each letter of the alphabet maps to a value from 0 to 25 — A=0, B=1, all the way to Z=25. Unlike the traditional <Link href="/blog/a1z26-cipher-decoder-guide" className="text-primary hover:underline">A1Z26 cipher</Link>, the A0Z25 cipher starts counting from zero, making it the preferred choice for programmers, cryptographers, and anyone working with cipher algorithms that rely on modular arithmetic.
             </p>
-          </div>
-
-          <div className="relative aspect-video rounded-xl overflow-hidden mb-10">
-            <Image
-              src="/images/blog/a0z25-cipher-hero.jpg"
-              alt="A0Z25 cipher chart showing zero-indexed alphabet A=0 through Z=25"
-              fill
-              className="object-cover"
-              priority
-            />
           </div>
 
           {/* Table of Contents */}

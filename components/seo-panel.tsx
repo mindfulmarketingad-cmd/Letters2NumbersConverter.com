@@ -149,11 +149,11 @@ export function SeoPanel() {
   return (
     <div className="space-y-16">
 
-      {/* ── 1. H1 + Problem Statement ─────────────────────────── */}
+      {/* ── 1. Heading + Problem Statement ─────────────────────── */}
       <div className="space-y-4">
-        <h1 id="letters-to-numbers-converter" className="text-4xl md:text-5xl font-bold leading-tight">
+        <h2 id="about-letters-to-numbers-converter" className="text-4xl md:text-5xl font-bold leading-tight">
           <span style={{ color: '#11a099' }}>Letters To Numbers Converter</span>
-        </h1>
+        </h2>
         <p className="text-lg text-muted-foreground max-w-3xl">
           Letters To Numbers Converter is a free, browser-based tool that converts letters to numbers instantly using A1Z26 (A=1, B=2 … Z=26) and 100+ other encoding formats — no sign-up, no software required.
         </p>

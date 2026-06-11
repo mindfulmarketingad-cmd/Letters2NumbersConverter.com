@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useCallback } from 'react'
-import { Copy, RotateCcw, ArrowLeftRight } from 'lucide-react'
+import { Copy, RotateCcw, ArrowLeftRight, UtensilsCrossed } from 'lucide-react'
+import { CateringModal } from '@/components/catering-modal'
 
 /* ─── Conversion logic ───────────────────────────────────────────────────── */
 
@@ -73,6 +74,7 @@ export function HomepageLetterNumberSection() {
   const [codeType, setCodeType] = useState<CodeType>('a1')
   const [input, setInput] = useState('')
   const [copied, setCopied] = useState(false)
+  const [cateringOpen, setCateringOpen] = useState(false)
 
   const result = mode === 'encode'
     ? lettersToNumbers(input, codeType)
@@ -221,6 +223,20 @@ export function HomepageLetterNumberSection() {
           ))}
           <span className="flex items-center text-xs text-muted-foreground px-2">← try these</span>
         </div>
+
+        {/* Catering CTA */}
+        <div className="mt-8 flex justify-center">
+          <button
+            onClick={() => setCateringOpen(true)}
+            className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl border-2 border-primary/30 bg-primary/5 hover:bg-primary/10 hover:border-primary/60 text-foreground font-semibold text-sm transition-all group"
+          >
+            <UtensilsCrossed className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
+            Order Catering for Your Event
+            <span className="text-xs text-muted-foreground font-normal">— Free quote, 24hr response</span>
+          </button>
+        </div>
+
+        {cateringOpen && <CateringModal onClose={() => setCateringOpen(false)} />}
       </div>
     </section>
   )

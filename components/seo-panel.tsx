@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { CheckCircle, Zap, Lock, Globe, Users, BookOpen, Code2, Puzzle, Compass, FlaskConical } from 'lucide-react'
-import { TestimonialsCarousel } from '@/components/testimonials-carousel'
 
 const TOOL_SCREENSHOTS = [
   {
@@ -291,7 +290,7 @@ export function SeoPanel() {
             ['Works offline', 'Once loaded, tools continue working without an internet connection.'],
             ['100+ tools in one place', 'From A1Z26 to PDF conversion — one bookmark covers everything.'],
             ['Mobile-friendly', 'Fully responsive design works on phones, tablets, and desktops.'],
-            ['Google-friendly schemas', 'Every tool page includes structured data for better search visibility.'],
+            ['No ads covering controls', 'The workspace stays clean so you can focus on your conversion.'],
             ['Constantly growing', 'New tools added every week based on what users actually need.'],
           ].map(([title, desc]) => (
             <div key={title} className="flex items-start gap-3 p-3 rounded-lg bg-secondary/30">
@@ -326,12 +325,7 @@ export function SeoPanel() {
         </div>
       </div>
 
-      {/* ── 8. Testimonials ───────────────────────────────────── */}
-      <div>
-        <TestimonialsCarousel />
-      </div>
-
-      {/* ── 9. FAQ ────────────────────────────────────────────── */}
+      {/* ── 8. FAQ ────────────────────────────────────────────── */}
       <div>
         <h2 id="faq" className="text-2xl md:text-3xl font-bold mb-6">Frequently Asked Questions</h2>
         <div className="space-y-5">

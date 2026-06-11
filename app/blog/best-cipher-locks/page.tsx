@@ -40,50 +40,6 @@ const structuredData = {
     },
   },
   articleBody: "Best cipher locks combine security with user-friendly designs...",
-  mainEntity: {
-    "@type": "ItemList",
-    itemListElement: [
-      {
-        "@type": "Product",
-        position: 1,
-        name: "ORIA Combination Padlock",
-        description: "Premium 4-digit combination cipher lock with precision engineering",
-        image: "https://via.amazon.com/oria-padlock",
-        offers: {
-          "@type": "AggregateOffer",
-          priceCurrency: "USD",
-          lowPrice: "12.99",
-          highPrice: "18.99",
-        },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.6",
-          bestRating: "5",
-          worstRating: "1",
-          ratingCount: "2500",
-        },
-      },
-      {
-        "@type": "Product",
-        position: 2,
-        name: "MASTER LOCK Set Your Own Combination",
-        description: "Customizable combination padlock with durable construction",
-        offers: {
-          "@type": "AggregateOffer",
-          priceCurrency: "USD",
-          lowPrice: "14.99",
-          highPrice: "22.99",
-        },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.5",
-          bestRating: "5",
-          worstRating: "1",
-          ratingCount: "3200",
-        },
-      },
-    ],
-  },
 }
 
 export default function BestCipherLocksPage() {

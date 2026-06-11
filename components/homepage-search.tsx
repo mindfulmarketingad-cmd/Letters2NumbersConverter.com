@@ -3,7 +3,6 @@
 import { useState, useMemo, useEffect, useRef } from 'react'
 import { Search, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { getToolRegistry } from '@/lib/tool-registry'
 
 const EXAMPLE_SEARCHES = [
@@ -221,23 +220,6 @@ export function HomepageSearch() {
                   </div>
                 </Link>
               ))}
-            </div>
-          </div>
-
-          {/* Trust Logos Section */}
-          <div className="border-t border-border/50 pt-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-foreground">
-              Our Tools Are Trusted By:
-            </h2>
-            <div className="flex justify-center">
-              <Image
-                src="/images/trust-logos.png"
-                alt="Companies that trust our tools: L'Oreal, Dolby, Payoneer, Library of Congress, Hasbro, Fujitsu, Home Office, Fiverr, Ironman, Wegmans, T-Mobile, ICE, Der Spiegel, Nestle, Accenture, Australian Government, Orange, Universität Basel, Motorola, US House, The New York Times, and NYC"
-                width={1200}
-                height={400}
-                className="w-full max-w-5xl h-auto"
-                priority={false}
-              />
             </div>
           </div>
         </div>

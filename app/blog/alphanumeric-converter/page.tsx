@@ -49,9 +49,9 @@ const articleSchema = {
     "@id": AUTHOR_ID,
     name: "John Reed",
     url: AUTHOR_ID,
-    jobTitle: "Cryptography & Encoding Writer",
+    jobTitle: "Contributing Writer",
     description:
-      "John Reed writes about ciphers, character encoding, and number systems. He has spent over a decade building puzzles and explaining how computers represent text, from A1Z26 to ASCII and binary.",
+      "John Reed writes about ciphers, character encoding, and number systems for Letters2NumbersConverter.com.",
     knowsAbout: ["Alphanumeric conversion", "ASCII encoding", "Classical ciphers", "Number systems", "Cryptography"],
     worksFor: { "@type": "Organization", name: "Letters2NumbersConverter.com" },
   },
@@ -491,11 +491,10 @@ export default function AlphanumericConverterPage() {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">John Reed</p>
-                  <p className="text-sm text-primary mb-2">Cryptography &amp; Encoding Writer</p>
+                  <p className="text-sm text-primary mb-2">Contributing Writer</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    John Reed writes about ciphers, character encoding, and number systems. He has spent over a decade
-                    building puzzles and explaining how computers represent text — from A1Z26 and ASCII to hexadecimal and
-                    binary — for puzzlers, students, and developers alike.
+                    John Reed writes about ciphers, character encoding, and number systems — from A1Z26 and ASCII to
+                    hexadecimal and binary — for Letters2NumbersConverter.com.
                   </p>
                 </div>
               </div>

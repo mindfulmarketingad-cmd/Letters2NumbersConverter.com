@@ -304,9 +304,9 @@ export default function BestDeciphererToolPage() {
               <li className="flex gap-4">
                 <span className="text-teal-500 font-bold text-xl">2.</span>
                 <div>
-                  <h3 className="font-bold mb-1">Professional-Grade Accuracy</h3>
+                  <h3 className="font-bold mb-1">Reliable Accuracy</h3>
                   <p className="text-muted-foreground">
-                    Military-strength algorithms ensure perfect decoding accuracy on every conversion, making our best decipherer tool trusted by professionals.
+                    Each conversion follows the published specification for its encoding, so the output you get matches what standard decoders produce.
                   </p>
                 </div>
               </li>

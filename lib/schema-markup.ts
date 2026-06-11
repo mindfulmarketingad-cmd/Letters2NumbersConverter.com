@@ -18,7 +18,6 @@ export const generateOrganizationSchema = () => ({
   ],
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+1-XXX-XXX-XXXX',
     contactType: 'Customer Support',
     email: 'support@letters2numbersconverter.com',
     availableLanguage: ['en'],
@@ -118,11 +117,6 @@ export const generateToolPageSchema = (
     availability: 'https://schema.org/InStock',
   },
   operatingSystem: operatingSystem,
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    ratingCount: '1250',
-  },
   isPartOf: {
     '@id': 'https://www.letters2numbersconverter.com#website',
   },

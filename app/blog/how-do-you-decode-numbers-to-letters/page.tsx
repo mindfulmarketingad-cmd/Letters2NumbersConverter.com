@@ -205,7 +205,7 @@ export default function Page() {
           </p>
           <p className="text-base text-muted-foreground mb-4">
             Numbers are typically separated by spaces, hyphens, or commas. A forward slash or double-space usually marks a word boundary. Our{' '}
-            <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 Translator</Link>{' '}
+            <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Translator</Link>{' '}
             handles this automatically — just paste in your numbers and get the decoded text instantly.
           </p>
 
@@ -290,7 +290,7 @@ export default function Page() {
           </p>
           <p className="text-base text-muted-foreground mb-4">
             For longer messages like this, our{' '}
-            <Link href="/tools/a1z26-decoder-and-encoder" className="text-primary hover:underline">A1Z26 Decoder and Encoder</Link>{' '}
+            <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Decoder and Encoder</Link>{' '}
             handles multi-word messages with automatic word-boundary detection.
           </p>
 
@@ -485,7 +485,7 @@ export default function Page() {
           </ul>
           <p className="text-base text-muted-foreground mb-4">
             Whatever the context, our{' '}
-            <Link href="/tools/numbers-to-letters" className="text-primary hover:underline">Numbers to Letters converter</Link>{' '}
+            <Link href="/tools/letter-number-converter" className="text-primary hover:underline">Numbers to Letters converter</Link>{' '}
             gives you instant results without needing to decode manually.
           </p>
 

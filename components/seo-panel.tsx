@@ -44,7 +44,7 @@ const WHO_FOR = [
     icon: <BookOpen className="w-6 h-6" style={{ color: '#11a099' }} />,
     title: 'Students & Educators',
     desc: 'Learn cryptography, number systems, and encoding from Babylonian numerals to modern Base64 — with interactive tools for every lesson.',
-    link: '/tools/a1z26-translator',
+    link: '/tools/letter-number-converter',
     linkLabel: 'Try the A1Z26 Translator →',
   },
   {
@@ -74,7 +74,7 @@ const TOOL_CATEGORIES = [
   {
     name: 'Letters & Numbers',
     tools: ['A1Z26 Translator', 'Letters to Numbers', 'Numbers to Letters', 'Alphanumeric Converter', 'Text to Roman Numerals'],
-    href: '/tools/a1z26-translator',
+    href: '/tools/letter-number-converter',
     color: '#11a099',
   },
   {

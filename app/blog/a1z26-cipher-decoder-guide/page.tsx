@@ -187,7 +187,7 @@ export default function Page() {
 
           <h2 id="using-tools-for-a1z26-decoder-assistance" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Using Tools for A1Z26 Decoder Assistance</h2>
           <p className="text-base text-muted-foreground mb-4">
-            While manual decoding builds strong cryptographic skills, our <Link href="/tools/a1z26-decoder-and-encoder" className="text-primary hover:underline">A1Z26 Decoder and Encoder tool</Link> provides instant verification and speeds up the decoding process for longer messages. This <Link href="/tools/letter-number-converter" className="text-primary hover:underline">letter to number converter</Link> supports quick validation of your manual work and helps identify decoding errors.
+            While manual decoding builds strong cryptographic skills, our <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Decoder and Encoder tool</Link> provides instant verification and speeds up the decoding process for longer messages. This <Link href="/tools/letter-number-converter" className="text-primary hover:underline">letter to number converter</Link> supports quick validation of your manual work and helps identify decoding errors.
           </p>
           <p className="text-base text-muted-foreground mb-4">
             For solving related cipher types, explore our <Link href="/tools/cryptogram-solver" className="text-primary hover:underline">cryptogram solver</Link> tool which handles A1Z26 and other substitution ciphers automatically.

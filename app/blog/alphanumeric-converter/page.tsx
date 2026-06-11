@@ -413,7 +413,7 @@ export default function AlphanumericConverterPage() {
                 },
                 {
                   label: "A1Z26 Decoder & Encoder",
-                  href: "/tools/a1z26-decoder-and-encoder",
+                  href: "/tools/letter-number-converter",
                   desc: "Full A1Z26 tool with bidirectional conversion",
                 },
                 {

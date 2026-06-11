@@ -141,7 +141,7 @@ export default function Page() {
 
           <h2 id="example-3-caesar-cipher-shift-13-rot13" className="text-2xl font-bold text-foreground mt-8 mb-4 scroll-mt-20">Example 3: Caesar Cipher Shift 13 (ROT13)</h2>
           <p className="text-base text-muted-foreground mb-2">
-            Shift 13 is special: because 13 × 2 = 26, encoding and decoding are identical operations. This is ROT13 — used for Reddit spoilers and Usenet posts. See our full guide: <Link href="/blog/caesar-cipher-shift-13" className="text-primary hover:underline">Caesar Cipher Shift 13 explained</Link>.
+            Shift 13 is special: because 13 × 2 = 26, encoding and decoding are identical operations. This is ROT13 — used for Reddit spoilers and Usenet posts. See our full guide: <Link href="/blog/rot13-cipher-explained" className="text-primary hover:underline">Caesar Cipher Shift 13 explained</Link>.
           </p>
           <ShiftTable shift={13} />
 

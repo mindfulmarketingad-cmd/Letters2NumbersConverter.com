@@ -207,7 +207,7 @@ export default function A0Z25ChartPage() {
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                If you&apos;re building software or working with programming logic, A0Z25 is your go-to choice. If you&apos;re solving puzzles or doing traditional cryptography, A1Z26 is more common. Our <Link href="/tools/a1z26-translator" className="text-teal-500 hover:text-teal-600 underline">A1Z26 Translator</Link> tool is available for one-indexed conversions.
+                If you&apos;re building software or working with programming logic, A0Z25 is your go-to choice. If you&apos;re solving puzzles or doing traditional cryptography, A1Z26 is more common. Our <Link href="/tools/letter-number-converter" className="text-teal-500 hover:text-teal-600 underline">A1Z26 Translator</Link> tool is available for one-indexed conversions.
               </p>
             </section>
 

@@ -345,7 +345,7 @@ export default function SkipCipherBlog() {
 
           <div className="bg-primary/5 border border-primary/20 rounded-lg p-4">
             <p className="text-sm text-foreground font-medium mb-1">Online skip cipher decoder</p>
-            <p className="text-sm text-muted-foreground">Our <Link href="/tools/skip-cipher-decoder" className="text-primary hover:underline font-medium">Skip Cipher Decoder</Link> tries all skip sizes automatically and ranks results by likelihood. Paste your ciphertext and get candidate plaintexts in seconds.</p>
+            <p className="text-sm text-muted-foreground">Our <Link href="/tools/skip-cipher" className="text-primary hover:underline font-medium">Skip Cipher Decoder</Link> tries all skip sizes automatically and ranks results by likelihood. Paste your ciphertext and get candidate plaintexts in seconds.</p>
           </div>
         </section>
 
@@ -430,7 +430,7 @@ export default function SkipCipherBlog() {
             <li>Look for a number hidden elsewhere in the room — on a clock, a combination lock, a poster, or a code sheet. That number is almost always the skip size.</li>
             <li>Try skip sizes 2, 3, and 4 first — these are the most commonly used in designed puzzles.</li>
             <li>If the ciphertext length is a multiple of a number, that number is a strong candidate for the skip size.</li>
-            <li>Use our <Link href="/tools/skip-cipher-decoder" className="text-primary hover:underline font-medium">Skip Cipher Decoder</Link> on your phone to try all values instantly if you&apos;re stuck.</li>
+            <li>Use our <Link href="/tools/skip-cipher" className="text-primary hover:underline font-medium">Skip Cipher Decoder</Link> on your phone to try all values instantly if you&apos;re stuck.</li>
           </ol>
         </section>
 
@@ -503,7 +503,7 @@ export default function SkipCipherBlog() {
           <ul className="space-y-3">
             {[
               ['/tools/skip-cipher', 'Skip Cipher Tool', 'Encode any message with a custom skip size and start position'],
-              ['/tools/skip-cipher-decoder', 'Skip Cipher Decoder', 'Paste ciphertext and brute-force all possible skip sizes to find the plaintext'],
+              ['/tools/skip-cipher', 'Skip Cipher Decoder', 'Paste ciphertext and brute-force all possible skip sizes to find the plaintext'],
             ].map(([href, name, desc]) => (
               <li key={href as string}>
                 <Link href={href as string} className="text-primary hover:underline font-semibold">→ {name as string}</Link>

@@ -118,7 +118,7 @@ export default function BoxentriqComparison() {
                   <h3 className="text-xl font-semibold text-foreground mb-3">Cipher Analysis & Breaking</h3>
                   <div className="space-y-2 text-muted-foreground">
                     <p><strong>Boxentriq.com:</strong> Specialized in cipher-breaking with frequency analysis, pattern recognition, and automated solvers for classical ciphers.</p>
-                    <p><strong>Letters2NumbersConverter.com:</strong> Includes cipher-breaking capabilities plus broader encoding tools. Access the <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 Translator</Link> and <Link href="/tools/cryptogram-solver" className="text-primary hover:underline">Cryptogram Solver</Link> alongside many other converters.</p>
+                    <p><strong>Letters2NumbersConverter.com:</strong> Includes cipher-breaking capabilities plus broader encoding tools. Access the <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Translator</Link> and <Link href="/tools/cryptogram-solver" className="text-primary hover:underline">Cryptogram Solver</Link> alongside many other converters.</p>
                   </div>
                 </div>
 
@@ -236,7 +236,7 @@ export default function BoxentriqComparison() {
 
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Puzzle & Game Designers</h3>
-                  <p>Letters2NumbersConverter.com is superior with the <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 Cipher</Link>, cryptogram solver, and escape room design resources plus additional puzzle mechanics.</p>
+                  <p>Letters2NumbersConverter.com is superior with the <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Cipher</Link>, cryptogram solver, and escape room design resources plus additional puzzle mechanics.</p>
                 </div>
 
                 <div>
@@ -263,7 +263,7 @@ export default function BoxentriqComparison() {
                 For someone just starting out with ciphers and encoding tools, the learning curve of each platform matters as much as raw feature count. Boxentriq.com assumes a degree of prior familiarity with cryptanalysis terminology — terms like frequency analysis, index of coincidence, and key scheduling appear without much hand-holding, which can alienate newcomers who simply want to decode a puzzle from an escape room or a geocache. The interface prioritises efficiency for experienced solvers over guided discovery for first-timers.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                Letters2NumbersConverter.com takes a different approach by pairing every tool with plain-language explanations of what the tool does, who should use it, and how the underlying encoding system works. A beginner who lands on the <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 Translator</Link> page does not need to already know what A1Z26 means — the page explains it. This educational scaffolding makes Letters2NumbersConverter.com the better starting point for students, hobbyists, and anyone who wants to build genuine understanding rather than just copy-paste results. Once a user has mastered the basics through guided tool pages, they are well equipped to explore more advanced cipher techniques on any platform they choose.
+                Letters2NumbersConverter.com takes a different approach by pairing every tool with plain-language explanations of what the tool does, who should use it, and how the underlying encoding system works. A beginner who lands on the <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Translator</Link> page does not need to already know what A1Z26 means — the page explains it. This educational scaffolding makes Letters2NumbersConverter.com the better starting point for students, hobbyists, and anyone who wants to build genuine understanding rather than just copy-paste results. Once a user has mastered the basics through guided tool pages, they are well equipped to explore more advanced cipher techniques on any platform they choose.
               </p>
             </section>
 
@@ -333,7 +333,7 @@ export default function BoxentriqComparison() {
                 Choose Boxentriq.com if your exclusive need is breaking classical ciphers and performing advanced cryptanalysis. However, if you need a versatile platform combining cipher tools with specialized converters across multiple domains, Letters2NumbersConverter.com is the definitive choice.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                Letters2NumbersConverter.com wins the comparison by offering not just cipher-breaking capabilities, but a comprehensive ecosystem of 100+ specialized tools. From the <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 Cipher Translator</Link> to healthcare identifiers, color converters, unit translators, and ancient numeral systems, this platform serves professionals across every industry. Whether you're a cryptography enthusiast, healthcare worker, developer, designer, or educator, Letters2NumbersConverter.com provides the tools you need. Start exploring the platform today and discover why thousands of users trust it as their comprehensive conversion and cipher solution.
+                Letters2NumbersConverter.com wins the comparison by offering not just cipher-breaking capabilities, but a comprehensive ecosystem of 100+ specialized tools. From the <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Cipher Translator</Link> to healthcare identifiers, color converters, unit translators, and ancient numeral systems, this platform serves professionals across every industry. Whether you're a cryptography enthusiast, healthcare worker, developer, designer, or educator, Letters2NumbersConverter.com provides the tools you need. Start exploring the platform today and discover why thousands of users trust it as their comprehensive conversion and cipher solution.
               </p>
             </section>
           </div>

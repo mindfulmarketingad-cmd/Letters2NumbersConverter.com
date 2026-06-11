@@ -17,35 +17,11 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Conversion',
     href: '/tools/letter-number-converter',
   },
-  'a1z26-translator': {
-    name: 'A1Z26 Translator',
-    description: 'Translate letters to numbers with the A1Z26 alphabet',
-    category: 'Conversion',
-    href: '/tools/a1z26-translator',
-  },
-  'a1z26-decoder-and-encoder': {
-    name: 'A1Z26 Decoder and Encoder',
-    description: 'Encode letters to A1Z26 numbers and decode numbers back to letters instantly',
-    category: 'Conversion',
-    href: '/tools/a1z26-decoder-and-encoder',
-  },
   'a0z25-cipher': {
     name: 'A0Z25 Cipher Translator',
     description: 'Convert text using A0Z25 cipher encoding',
     category: 'Cipher',
     href: '/tools/a0z25-cipher-translator',
-  },
-  'a0z25-decoder': {
-    name: 'A0Z25 Decoder',
-    description: 'Decode A0Z25 encoded numbers back to letters instantly',
-    category: 'Decoder',
-    href: '/tools/a0z25-decoder',
-  },
-  'a0z25-converter': {
-    name: 'A0Z25 Converter',
-    description: 'Convert letters to numbers and numbers to letters with A0Z25 formatting',
-    category: 'Converter',
-    href: '/tools/a0z25-converter',
   },
   'anagram-solver': {
     name: 'Anagram Solver',
@@ -70,12 +46,6 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Visualize audio frequencies and analyze sound waves',
     category: 'Audio Tools',
     href: '/tools/audio-spectrogram',
-  },
-  'audio-spectrogram-decoder': {
-    name: 'Spectrogram Decoder',
-    description: 'Decode audio spectrograms and analyze frequencies',
-    category: 'Audio Tools',
-    href: '/tools/audio-spectrogram-decoder',
   },
   'babylonian-numeral-converter': {
     name: 'Babylonian Numeral Converter',
@@ -124,12 +94,6 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Solve complex cryptogram puzzles',
     category: 'Puzzle Games',
     href: '/tools/cryptogram-solver',
-  },
-  'cryptogram-solver-free': {
-    name: 'Cryptogram Solver Free',
-    description: 'Solve substitution cipher cryptograms',
-    category: 'Puzzle Games',
-    href: '/tools/cryptogram-solver-free',
   },
   'convert-ogg-to-wav': {
     name: 'Convert OGG to WAV',
@@ -257,12 +221,6 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Medical',
     href: '/tools/mbi-converter',
   },
-  'medicare-id-converter': {
-    name: 'Medicare ID Converter',
-    description: 'Identify and validate Medicare ID numbers - distinguish between HIC and MBI formats',
-    category: 'Medical',
-    href: '/tools/medicare-id-converter',
-  },
   'monoalphabetic-substitution-cipher': {
     name: 'Monoalphabetic Substitution Cipher',
     description: 'Encrypt and decrypt using monoalphabetic ciphers',
@@ -280,12 +238,6 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Instantly encode and decode URLs with support for recursive decoding and batch processing',
     category: 'Encoding Tools',
     href: '/tools/online-url-decoder-encoder',
-  },
-  'numbers-to-letters': {
-    name: 'Numbers to Letters Converter',
-    description: 'Convert numbers back to letters',
-    category: 'Conversion',
-    href: '/tools/numbers-to-letters',
   },
   'password-strength-tester': {
     name: 'Password Strength Tester',
@@ -316,12 +268,6 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Encode text using skip cipher technique',
     category: 'Cipher',
     href: '/tools/skip-cipher',
-  },
-  'skip-cipher-decoder': {
-    name: 'Skip Cipher Decoder',
-    description: 'Decode skip cipher messages with automatic brute force detection',
-    category: 'Cipher',
-    href: '/tools/skip-cipher-decoder',
   },
   'scan-words-from-image': {
     name: 'Scan Words From Image',
@@ -359,12 +305,6 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Conversion',
     href: '/tools/xml-to-ini-converter',
   },
-  'word-to-phone-number-converter': {
-    name: 'Word To Phone Number Converter',
-    description: 'Convert any word or phrase to phone keypad digits for vanity phone numbers',
-    category: 'Conversion',
-    href: '/tools/word-to-phone-number-converter',
-  },
   'url-percent-encoding-decoding': {
     name: 'URL Percent Encoding and Decoding',
     description: 'Instantly encode and decode URLs with percent encoding support',
@@ -388,12 +328,6 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Convert YAML configuration files to XML format instantly',
     category: 'Data Conversion',
     href: '/tools/yaml-to-xml-converter',
-  },
-  'word-to-number-translator': {
-    name: 'Word To Number Translator',
-    description: 'Convert words to numbers and numbers to words with multiple encoding methods',
-    category: 'Conversion',
-    href: '/tools/word-to-number-translator',
   },
   'cmyk-to-pantone-converter': {
     name: 'CMYK to Pantone Color Converter',
@@ -611,12 +545,6 @@ const toolRegistry: Record<string, { name: string; description: string; category
     category: 'Cipher',
     href: '/tools/caesar-cipher-decoder',
   },
-  'morse-code-decoder-and-encoder': {
-    name: 'Morse Code Decoder and Encoder',
-    description: 'Translate text to Morse code or decode Morse code back to text instantly. Includes audio playback and the full Morse alphabet.',
-    category: 'Cipher',
-    href: '/tools/morse-code-decoder-and-encoder',
-  },
   'saml-encoder': {
     name: 'SAML Encoder and Decoder',
     description: 'Encode XML to SAMLRequest or SAMLResponse format, or decode either parameter back to readable XML. Handles deflate and Base64 automatically.',
@@ -682,12 +610,6 @@ const toolRegistry: Record<string, { name: string; description: string; category
     description: 'Convert any PDF to grayscale online for free. All pages converted using the luminosity formula and bundled into a downloadable grayscale PDF. Runs entirely in your browser — no upload.',
     category: 'PDF Tools',
     href: '/tools/pdf-to-grayscale-converter',
-  },
-  'jpg-to-grayscale-converter': {
-    name: 'Convert JPG to Grayscale',
-    description: 'Convert any JPG to grayscale online for free. Side-by-side preview, adjustable output quality, and file size comparison. Luminosity formula for accurate tones. No sign-up, 100% private.',
-    category: 'Image Tools',
-    href: '/tools/jpg-to-grayscale-converter',
   },
   'discriminant-formula-calculator': {
     name: 'Discriminant Formula Calculator',

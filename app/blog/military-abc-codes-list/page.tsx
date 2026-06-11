@@ -327,7 +327,7 @@ export default function MilitaryABCCodesListPage() {
                 </Link>
               </li>
               <li>
-                <Link href="/tools/a1z26-translator" className="text-primary hover:underline font-semibold">
+                <Link href="/tools/letter-number-converter" className="text-primary hover:underline font-semibold">
                   → A1Z26 Cipher Translator
                 </Link>
               </li>

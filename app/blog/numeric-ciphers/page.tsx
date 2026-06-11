@@ -185,7 +185,7 @@ export default function Page() {
               Example: "CODE" → 3-15-4-5
             </p>
             <p className="text-base text-muted-foreground mb-6">
-              You can encode and decode A1Z26 messages instantly using our <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 translator</Link>.
+              You can encode and decode A1Z26 messages instantly using our <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 translator</Link>.
             </p>
 
             <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">A0Z25 Cipher (Zero-Indexed Variant)</h3>
@@ -404,7 +404,7 @@ export default function Page() {
                 <Link href="/" className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
                   Letters ↔ Numbers Converter
                 </Link>
-                <Link href="/tools/a1z26-translator" className="inline-flex items-center px-4 py-2 border border-border text-foreground rounded-lg text-sm font-medium hover:bg-muted transition-colors">
+                <Link href="/tools/letter-number-converter" className="inline-flex items-center px-4 py-2 border border-border text-foreground rounded-lg text-sm font-medium hover:bg-muted transition-colors">
                   A1Z26 Translator
                 </Link>
                 <Link href="/blog/best-letter-number-ciphers" className="inline-flex items-center px-4 py-2 border border-border text-foreground rounded-lg text-sm font-medium hover:bg-muted transition-colors">

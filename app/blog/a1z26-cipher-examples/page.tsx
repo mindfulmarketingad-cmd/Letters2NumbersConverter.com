@@ -187,7 +187,7 @@ export default function A1Z26CipherExamples() {
               
               <h3 className="text-xl font-semibold text-foreground mb-3">Escape Room Applications</h3>
               <p className="text-muted-foreground mb-4">
-                A1Z26 cipher examples are perfect for creating escape room puzzles. Players find numbered sequences and must decode them using the A1Z26 method to discover hidden messages, access codes, or next clues. Use our <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 Translator tool</Link> to quickly verify puzzle solutions and create various difficulty levels.
+                A1Z26 cipher examples are perfect for creating escape room puzzles. Players find numbered sequences and must decode them using the A1Z26 method to discover hidden messages, access codes, or next clues. Use our <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Translator tool</Link> to quickly verify puzzle solutions and create various difficulty levels.
               </p>
 
               <h3 className="text-xl font-semibold text-foreground mb-3">Educational Uses</h3>
@@ -231,10 +231,10 @@ export default function A1Z26CipherExamples() {
 
               <ul className="space-y-3 text-muted-foreground">
                 <li>
-                  <strong><Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 Translator</Link>:</strong> Instantly encode and decode A1Z26 cipher examples with real-time conversions and visual breakdowns.
+                  <strong><Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Translator</Link>:</strong> Instantly encode and decode A1Z26 cipher examples with real-time conversions and visual breakdowns.
                 </li>
                 <li>
-                  <strong><Link href="/tools/a1z26-decoder-and-encoder" className="text-primary hover:underline">A1Z26 Decoder and Encoder</Link>:</strong> Comprehensive tool supporting both encoding and decoding of complex A1Z26 cipher examples with batch processing.
+                  <strong><Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Decoder and Encoder</Link>:</strong> Comprehensive tool supporting both encoding and decoding of complex A1Z26 cipher examples with batch processing.
                 </li>
                 <li>
                   <strong><Link href="/tools/letter-number-converter" className="text-primary hover:underline">Letter to Number Converter</Link>:</strong> Advanced converter supporting multiple encoding methods including A1Z26 cipher examples with additional format options.
@@ -262,7 +262,7 @@ export default function A1Z26CipherExamples() {
                     <strong>Challenge 3 (Hard):</strong> Decode 3-18-25-16-20-15-7-18-1-16-8-25
                   </div>
                   <div className="border-t border-muted pt-4">
-                    <strong>Pro Tip:</strong> Use the <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 Translator</Link> to verify your solutions and learn from the detailed breakdowns.
+                    <strong>Pro Tip:</strong> Use the <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Translator</Link> to verify your solutions and learn from the detailed breakdowns.
                   </div>
                 </div>
               </div>

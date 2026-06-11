@@ -253,7 +253,7 @@ export default function NATOAlphanumericAlphabetPage() {
                 <p className="text-sm text-muted-foreground">Convert letters to their numeric positions in the alphabet</p>
               </Link>
 
-              <Link href="/tools/a1z26-translator" className="bg-card border border-border hover:border-primary rounded-lg p-6 transition-colors">
+              <Link href="/tools/letter-number-converter" className="bg-card border border-border hover:border-primary rounded-lg p-6 transition-colors">
                 <h3 className="font-semibold text-foreground mb-2">A1Z26 Translator</h3>
                 <p className="text-sm text-muted-foreground">Translate between text and A1Z26 cipher codes</p>
               </Link>

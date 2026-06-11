@@ -176,7 +176,7 @@ export default function A0Z25CipherPage() {
               The name "A0Z25" directly describes the mapping: A maps to 0, and Z maps to 25. You may also see this written as "zero-indexed alphabet encoding" or "0-indexed letter substitution." All refer to the same system.
             </p>
             <p>
-              To encode or decode messages right now, use our free <Link href="/tools/a0z25-cipher-translator" className="text-primary hover:underline font-semibold">A0Z25 Cipher Translator</Link> or the <Link href="/tools/a0z25-decoder" className="text-primary hover:underline font-semibold">A0Z25 Decoder</Link>.
+              To encode or decode messages right now, use our free <Link href="/tools/a0z25-cipher-translator" className="text-primary hover:underline font-semibold">A0Z25 Cipher Translator</Link> or the <Link href="/tools/a0z25-cipher-translator" className="text-primary hover:underline font-semibold">A0Z25 Decoder</Link>.
             </p>
 
             {/* Reference Chart */}
@@ -198,7 +198,7 @@ export default function A0Z25CipherPage() {
             </div>
 
             <p>
-              For a printable version, see our <Link href="/tools/a0z25-converter" className="text-primary hover:underline">A0Z25 Converter</Link>, which lets you download the full chart alongside your encoded output.
+              For a printable version, see our <Link href="/tools/a0z25-cipher-translator" className="text-primary hover:underline">A0Z25 Converter</Link>, which lets you download the full chart alongside your encoded output.
             </p>
 
             {/* A0Z25 vs A1Z26 */}
@@ -239,7 +239,7 @@ export default function A0Z25CipherPage() {
             </div>
 
             <p>
-              For general-purpose puzzle solving where people are just counting letters (A is the 1st letter, so A=1), <Link href="/blog/a1z26-cipher-decoder-guide" className="text-primary hover:underline">A1Z26</Link> is more intuitive. For anything involving code, algorithms, or cipher math, A0Z25 is the cleaner choice. Our <Link href="/tools/a1z26-decoder-and-encoder" className="text-primary hover:underline">A1Z26 Decoder and Encoder</Link> handles the one-based variant if you need to switch between them.
+              For general-purpose puzzle solving where people are just counting letters (A is the 1st letter, so A=1), <Link href="/blog/a1z26-cipher-decoder-guide" className="text-primary hover:underline">A1Z26</Link> is more intuitive. For anything involving code, algorithms, or cipher math, A0Z25 is the cleaner choice. Our <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Decoder and Encoder</Link> handles the one-based variant if you need to switch between them.
             </p>
 
             {/* Zero-based indexing */}
@@ -338,7 +338,7 @@ export default function A0Z25CipherPage() {
               In Python: <code className="bg-muted px-1 rounded text-sm">''.join(chr(n + 65) for n in [7, 4, 11, 11, 14])</code> returns <code className="bg-muted px-1 rounded text-sm">'HELLO'</code>.
             </p>
             <p>
-              Use our <Link href="/tools/a0z25-decoder" className="text-primary hover:underline font-semibold">free A0Z25 decoder</Link> to paste any sequence of numbers and get the decoded text instantly — no code required.
+              Use our <Link href="/tools/a0z25-cipher-translator" className="text-primary hover:underline font-semibold">free A0Z25 decoder</Link> to paste any sequence of numbers and get the decoded text instantly — no code required.
             </p>
 
             {/* Related Ciphers & Tools */}
@@ -351,7 +351,7 @@ export default function A0Z25CipherPage() {
               {[
                 {
                   label: "A1Z26 Decoder & Encoder",
-                  href: "/tools/a1z26-decoder-and-encoder",
+                  href: "/tools/letter-number-converter",
                   desc: "One-based alphabet encoding (A=1 through Z=26)",
                 },
                 {
@@ -376,7 +376,7 @@ export default function A0Z25CipherPage() {
                 },
                 {
                   label: "Skip Cipher Decoder",
-                  href: "/tools/skip-cipher-decoder",
+                  href: "/tools/skip-cipher",
                   desc: "Transposition cipher that often pairs with A0Z25",
                 },
               ].map(({ label, href, desc }) => (
@@ -415,7 +415,7 @@ export default function A0Z25CipherPage() {
                   A0Z25 Cipher Translator
                 </Link>
                 <Link
-                  href="/tools/a0z25-decoder"
+                  href="/tools/a0z25-cipher-translator"
                   className="inline-flex items-center justify-center rounded-md border border-border px-6 py-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
                 >
                   A0Z25 Decoder

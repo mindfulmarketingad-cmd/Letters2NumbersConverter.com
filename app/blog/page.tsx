@@ -16,17 +16,13 @@ const blogPosts = [
   { slug: "a1z26-cipher-for-escape-rooms", title: "A1Z26 Cipher for Escape Rooms", description: "How to use the A1Z26 cipher in escape room puzzles and number-lock challenges.", category: "Puzzles & Games" },
   { slug: "a1z26-conversion-chart", title: "A1Z26 Conversion Chart", description: "Printable A1Z26 conversion chart showing the full A=1 to Z=26 alphabet-number mapping.", category: "Ciphers & Codes" },
   { slug: "a1z26-translator", title: "A1Z26 Translator", description: "Use our free A1Z26 translator to convert letters to numbers and numbers to letters. The A1Z26 cipher assigns A=1, B=2 through Z=26.", category: "Ciphers & Codes" },
-  { slug: "abc-to-number-code", title: "ABC to Number Code: Simple Guide for Everyone", description: "Learn the ABC to number code system for converting alphabet letters to numbers. Perfect for kids, educators, and puzzle enthusiasts.", category: "Education" },
   { slug: "alpha-bravo-charlie-code-list", title: "Alpha Bravo Charlie Code List", description: "Complete NATO phonetic alphabet list from Alpha to Zulu. Learn the standard military and aviation spelling alphabet.", category: "Ciphers & Codes" },
-  { slug: "alphabet-to-numbers-converter", title: "Alphabet to Numbers Converter", description: "Free alphabet to numbers converter tool. Convert any letter A-Z to its numerical position 1-26 instantly.", category: "Ciphers & Codes" },
   { slug: "alphanumeric-code-translator", title: "Alphanumeric Code Translator", description: "Translate alphanumeric codes between letters and numbers across multiple encoding systems.", category: "Ciphers & Codes" },
   { slug: "alphanumeric-converter", title: "Alphanumeric Converter", description: "Free alphanumeric converter tool to transform text into numbers, ASCII codes, hex, and binary. Convert between letters and numeric representations.", category: "Ciphers & Codes" },
 
   // Best / Reviews
   { slug: "best-cipher-locks", title: "Best Cipher Locks — Reviews & Buying Guide", description: "Discover the top cipher locks on Amazon. Read detailed reviews, compare features, and find the perfect combination padlock for your needs.", category: "Tools & Reviews" },
   { slug: "best-decoder", title: "Best Decoder Tools", description: "A roundup of the best online decoder tools for ciphers, encoding formats, and cryptographic puzzles.", category: "Tools & Reviews" },
-  { slug: "best-decoder-online", title: "Best Decoder Online", description: "Find the best online decoder tools for Base64, hex, URL encoding, Morse code, and cipher decryption.", category: "Tools & Reviews" },
-  { slug: "best-decoder-web-app", title: "Best Decoder Web App", description: "Comparison of the top decoder web apps with features, speed, and supported encoding formats.", category: "Tools & Reviews" },
   { slug: "best-letter-number-ciphers", title: "Best Letter Number Ciphers for Beginners and Experts", description: "Discover the best letter number ciphers from simple A1Z26 to complex ASCII encoding. Learn which cipher is right for your needs.", category: "Ciphers & Codes" },
 
   // Comparisons
@@ -36,7 +32,6 @@ const blogPosts = [
   // Caesar Cipher series
   { slug: "caesar-cipher-examples", title: "Caesar Cipher Examples", description: "Worked examples of the Caesar cipher with different shift values. Encode and decode messages step by step.", category: "Ciphers & Codes" },
   { slug: "caesar-cipher-history", title: "Caesar Cipher History", description: "The history of the Caesar cipher from ancient Rome to modern cryptography education.", category: "Cryptography" },
-  { slug: "caesar-cipher-shift-13", title: "Caesar Cipher Shift 13 (ROT13)", description: "Explains why shift-13 is special: encoding and decoding with the same key. The basis of ROT13.", category: "Ciphers & Codes" },
   { slug: "how-to-crack-caesar-cipher", title: "How to Crack the Caesar Cipher", description: "Step-by-step guide to cracking Caesar cipher encrypted messages using frequency analysis and brute force.", category: "Cryptography" },
 
   // ROT13 series
@@ -65,7 +60,6 @@ const blogPosts = [
   { slug: "how-to-encode-a-url", title: "How To Encode A URL", description: "How to encode a URL using percent-encoding (RFC 3986): which characters must be encoded, encodeURIComponent vs encodeURI in JavaScript, and Python/PHP equivalents.", category: "Decoding Guides" },
   { slug: "how-to-encode-html-code", title: "How To Encode HTML Code", description: "How to encode HTML code: convert & < > \" ' to safe HTML entities, prevent XSS attacks, and use htmlspecialchars in PHP and html.escape in Python.", category: "Decoding Guides" },
   { slug: "how-to-encode-php-code", title: "How To Encode PHP Code", description: "PHP encoding functions explained: urlencode, rawurlencode, htmlspecialchars, base64_encode, json_encode, and password_hash — with a decision table.", category: "Decoding Guides" },
-  { slug: "how-to-url-encode", title: "How To URL Encode", description: "How to URL encode a string: percent-encoding explained with a character table, plus code examples in JavaScript (encodeURIComponent), Python (urllib.parse.quote), and PHP (rawurlencode).", category: "Decoding Guides" },
   { slug: "how-to-use-unicode-in-html", title: "How To Use Unicode in HTML", description: "How to use Unicode in HTML: set UTF-8 charset, insert characters as direct text, named entities (&amp;euro;), or numeric references (&#x20AC;). Includes 15-row character reference table.", category: "Decoding Guides" },
   { slug: "how-to-encode-python-code", title: "How To Encode Python Code", description: "Python encoding functions explained: base64, urllib.parse, html.escape, json.dumps, and str.encode — with real code examples and a use-case decision table.", category: "Decoding Guides" },
 
@@ -102,7 +96,6 @@ const blogPosts = [
 
   // Converters / Translators
   { slug: "letter-to-numbers-code", title: "Letter to Numbers Code: Complete Guide to A1Z26", description: "Learn how the letter to numbers code works. Convert A=1, B=2 through Z=26 with our complete guide to the A1Z26 cipher system.", category: "Ciphers & Codes" },
-  { slug: "letters-to-numbers-translator", title: "Letters to Numbers Translator", description: "Use our free letters to numbers translator to instantly convert any text to numerical values.", category: "Ciphers & Codes" },
   { slug: "how-to-manually-check-letter-number-conversion", title: "How to Manually Check Letter to Number Conversion", description: "Step-by-step methods for manually converting letters to numbers using A1Z26, ASCII, hexadecimal, and binary encoding.", category: "Decoding Guides" },
 
   // Misc

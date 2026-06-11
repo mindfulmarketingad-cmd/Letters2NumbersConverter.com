@@ -110,7 +110,7 @@ export default function BestCipherLocksPage() {
                 </p>
 
                 <p className="mb-6">
-                  The name &quot;cipher&quot; derives from the mathematical concept of encoding information—much like how letters are converted to numbers in cryptography (similar to our <Link href="/tools/cryptogram-solver-free" className="text-primary hover:text-primary/90">cryptogram solver</Link> tools). Cipher locks provide a modern, keyless solution for securing personal and valuable items in both residential and commercial settings.
+                  The name &quot;cipher&quot; derives from the mathematical concept of encoding information—much like how letters are converted to numbers in cryptography (similar to our <Link href="/tools/cryptogram-solver" className="text-primary hover:text-primary/90">cryptogram solver</Link> tools). Cipher locks provide a modern, keyless solution for securing personal and valuable items in both residential and commercial settings.
                 </p>
 
                 <h2 id="why-choose-cipher-locks" className="text-2xl font-bold text-foreground mt-12 mb-4">Why Choose Cipher Locks?</h2>
@@ -431,7 +431,7 @@ export default function BestCipherLocksPage() {
 
                 <ul className="mb-6 space-y-3">
                   <li>
-                    <strong>Cryptogram Solver:</strong> Learn how to decode secret messages using cipher techniques. Similar to how cipher locks use encoded combinations, <Link href="/tools/cryptogram-solver-free" className="text-primary hover:text-primary/90">our cryptogram solver</Link> helps you understand letter-to-number encoding patterns.
+                    <strong>Cryptogram Solver:</strong> Learn how to decode secret messages using cipher techniques. Similar to how cipher locks use encoded combinations, <Link href="/tools/cryptogram-solver" className="text-primary hover:text-primary/90">our cryptogram solver</Link> helps you understand letter-to-number encoding patterns.
                   </li>
                   <li>
                     <strong>Cryptogram Game:</strong> Challenge yourself with <Link href="/play/cryptogram-game-online" className="text-primary hover:text-primary/90">our interactive cryptogram game</Link> where you solve substitution ciphers—the same principles used in cipher locks.

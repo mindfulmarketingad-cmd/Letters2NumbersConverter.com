@@ -171,7 +171,7 @@ export default function Page() {
               fully worked examples with tables, the binary XOR version used in digital systems, and the real-world
               consequences of getting it wrong. If you want to explore simpler letter-number substitutions first,
               try our{' '}
-              <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 translator</Link>{' '}
+              <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 translator</Link>{' '}
               or the{' '}
               <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar cipher decoder</Link>.
             </p>
@@ -844,7 +844,7 @@ export default function Page() {
             <p className="text-base text-muted-foreground mb-4">
               If you want to explore classical ciphers and letter-number encoding hands-on, try our free tools:
               the{' '}
-              <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 translator</Link>{' '}
+              <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 translator</Link>{' '}
               converts letters to their alphabet positions (A=1, B=2, … Z=26) — the building block of
               manual OTP arithmetic — and the{' '}
               <Link href="/tools/caesar-cipher-decoder" className="text-primary hover:underline">Caesar cipher decoder</Link>{' '}

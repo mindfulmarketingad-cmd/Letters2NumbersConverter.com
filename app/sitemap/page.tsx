@@ -111,7 +111,7 @@ export default function Sitemap() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/abc-to-number-code" className="text-primary hover:underline">
+                  <Link href="/blog/letter-to-numbers-code" className="text-primary hover:underline">
                     ABC to Number Code: Simple Guide for Everyone
                   </Link>
                 </li>
@@ -136,43 +136,13 @@ export default function Sitemap() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tools/numbers-to-letters" className="text-primary hover:underline">
-                    Numbers to Letters Converter
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/a1z26-translator" className="text-primary hover:underline">
-                    A1Z26 Translator
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/a1z26-decoder-and-encoder" className="text-primary hover:underline">
-                    A1Z26 Decoder and Encoder
-                  </Link>
-                </li>
-                <li>
                   <Link href="/tools/a0z25-cipher-translator" className="text-primary hover:underline">
                     A0Z25 Cipher Translator
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tools/a0z25-converter" className="text-primary hover:underline">
-                    A0Z25 Converter
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/a0z25-decoder" className="text-primary hover:underline">
-                    A0Z25 Decoder
-                  </Link>
-                </li>
-                <li>
                   <Link href="/tools/alphanumeric-conversion-tool" className="text-primary hover:underline">
                     Alphanumeric Conversion Tool
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/word-to-number-translator" className="text-primary hover:underline">
-                    Word to Number Translator
                   </Link>
                 </li>
                 <li>
@@ -225,11 +195,6 @@ export default function Sitemap() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tools/skip-cipher-decoder" className="text-primary hover:underline">
-                    Skip Cipher Decoder
-                  </Link>
-                </li>
-                <li>
                   <Link href="/tools/vernam-cipher-decoder" className="text-primary hover:underline">
                     Vernam Cipher Decoder
                   </Link>
@@ -261,11 +226,6 @@ export default function Sitemap() {
                 <li>
                   <Link href="/tools/cryptogram-solver" className="text-primary hover:underline">
                     Cryptogram Solver
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/cryptogram-solver-free" className="text-primary hover:underline">
-                    Cryptogram Solver - Free
                   </Link>
                 </li>
                 <li>
@@ -424,11 +384,6 @@ export default function Sitemap() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tools/audio-spectrogram-decoder" className="text-primary hover:underline">
-                    Audio Spectrogram Decoder
-                  </Link>
-                </li>
-                <li>
                   <Link href="/tools/black-and-white-photo-to-color-converter" className="text-primary hover:underline">
                     Black and White Photo to Color Converter
                   </Link>
@@ -533,11 +488,6 @@ export default function Sitemap() {
 
               <h3 className="text-lg font-semibold text-foreground mt-6 mb-3">Calculator Tools</h3>
               <ul className="space-y-2">
-                <li>
-                  <Link href="/tools/fill-in-the-blanks-equation-solver" className="text-primary hover:underline">
-                    Fill In The Blanks Equation Solver
-                  </Link>
-                </li>
                 <li>
                   <Link href="/tools/grade-curve-calculator" className="text-primary hover:underline">
                     Grade Curve Calculator

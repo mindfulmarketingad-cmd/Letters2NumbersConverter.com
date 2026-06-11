@@ -190,7 +190,7 @@ export default function Page() {
             </div>
 
             <p className="text-base text-muted-foreground mb-6">
-              You can also see this chart in our <Link href="/blog/a1z26-chart" className="text-primary hover:underline">A1Z26 chart guide</Link> with additional examples and printable versions.
+              You can also see this chart in our <Link href="/blog/a1z26-conversion-chart" className="text-primary hover:underline">A1Z26 chart guide</Link> with additional examples and printable versions.
             </p>
 
             {/* ── Section 3 ── */}
@@ -343,7 +343,7 @@ export default function Page() {
 
             <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">A=0 to Z=25 (Zero-Indexed)</h3>
             <p className="text-base text-muted-foreground mb-6">
-              The <strong className="text-foreground">A0Z25 system</strong> shifts all values down by one: A=0, B=1 … Z=25. This is the natural mapping when working with zero-indexed arrays in programming, and it is used in modular arithmetic where you want the arithmetic to wrap cleanly at 26 (0 mod 26 = 0, corresponding to A). Our <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 translator</Link> supports both the standard and zero-indexed variants.
+              The <strong className="text-foreground">A0Z25 system</strong> shifts all values down by one: A=0, B=1 … Z=25. This is the natural mapping when working with zero-indexed arrays in programming, and it is used in modular arithmetic where you want the arithmetic to wrap cleanly at 26 (0 mod 26 = 0, corresponding to A). Our <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 translator</Link> supports both the standard and zero-indexed variants.
             </p>
 
             <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Reverse Alphabet (Z=1, A=26)</h3>
@@ -410,10 +410,10 @@ export default function Page() {
                 <Link href="/" className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
                   Letters ↔ Numbers Converter
                 </Link>
-                <Link href="/tools/a1z26-translator" className="inline-flex items-center px-4 py-2 border border-border text-foreground rounded-lg text-sm font-medium hover:bg-muted transition-colors">
+                <Link href="/tools/letter-number-converter" className="inline-flex items-center px-4 py-2 border border-border text-foreground rounded-lg text-sm font-medium hover:bg-muted transition-colors">
                   A1Z26 Translator
                 </Link>
-                <Link href="/blog/a1z26-chart" className="inline-flex items-center px-4 py-2 border border-border text-foreground rounded-lg text-sm font-medium hover:bg-muted transition-colors">
+                <Link href="/blog/a1z26-conversion-chart" className="inline-flex items-center px-4 py-2 border border-border text-foreground rounded-lg text-sm font-medium hover:bg-muted transition-colors">
                   A1Z26 Chart
                 </Link>
               </div>

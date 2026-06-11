@@ -345,7 +345,7 @@ export default function WhatIsUrlEncodingBlog() {
               <h4 className="font-bold text-black dark:text-white mb-2">Online URL Decoder Encoder</h4>
               <p className="text-sm text-muted-foreground">Instantly encode and decode URLs with support for recursive decoding and batch processing.</p>
             </Link>
-            <Link href="/blog/a1z26-chart" className="p-6 bg-secondary/50 rounded-lg border border-border hover:border-primary hover:bg-secondary transition">
+            <Link href="/blog/a1z26-conversion-chart" className="p-6 bg-secondary/50 rounded-lg border border-border hover:border-primary hover:bg-secondary transition">
               <h4 className="font-bold text-black dark:text-white mb-2">A1Z26 Chart</h4>
               <p className="text-sm text-muted-foreground">Learn about the A1Z26 encoding system and how letters convert to numbers.</p>
             </Link>

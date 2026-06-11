@@ -144,7 +144,7 @@ export default function A1Z26CipherEscapeRoomsBlog() {
 
               <h3 className="text-xl font-semibold text-foreground mb-3">Mixed Encoding Systems</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Combine A1Z26 with other encoding methods to increase difficulty. Mix it with backward sequences, offset ciphers, or multi-step decoding processes. Our <Link href="/tools/a1z26-translator" className="text-primary hover:underline">A1Z26 Translator tool</Link> can help you quickly generate and verify these combinations.
+                Combine A1Z26 with other encoding methods to increase difficulty. Mix it with backward sequences, offset ciphers, or multi-step decoding processes. Our <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Translator tool</Link> can help you quickly generate and verify these combinations.
               </p>
 
               <h3 className="text-xl font-semibold text-foreground mb-3">Grid-Based Puzzles</h3>
@@ -208,7 +208,7 @@ export default function A1Z26CipherEscapeRoomsBlog() {
             <section className="mb-8">
               <h2 id="useful-tools-for-a1z26-puzzle-design" className="text-2xl font-bold text-foreground mb-4 scroll-mt-20">Useful Tools For A1Z26 Puzzle Design</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Designing A1Z26 cipher puzzles becomes significantly easier with the right tools. Our <Link href="/tools/letter-number-converter" className="text-primary hover:underline">Letter to Number Converter</Link> allows you to instantly generate accurate A1Z26 codes, verify conversions, and experiment with different message combinations. Additionally, our <Link href="/tools/a1z26-decoder-and-encoder" className="text-primary hover:underline">A1Z26 Decoder and Encoder</Link> tool provides both encoding and decoding capabilities, essential for testing puzzle solutions before implementation.
+                Designing A1Z26 cipher puzzles becomes significantly easier with the right tools. Our <Link href="/tools/letter-number-converter" className="text-primary hover:underline">Letter to Number Converter</Link> allows you to instantly generate accurate A1Z26 codes, verify conversions, and experiment with different message combinations. Additionally, our <Link href="/tools/letter-number-converter" className="text-primary hover:underline">A1Z26 Decoder and Encoder</Link> tool provides both encoding and decoding capabilities, essential for testing puzzle solutions before implementation.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 For more complex scenarios, explore our <Link href="/tools/cryptogram-generator" className="text-primary hover:underline">Cryptogram Generator</Link> and <Link href="/tools/cipher-identifier" className="text-primary hover:underline">Cipher Identifier</Link> tools to create layered challenges and validate your puzzle mechanics.
@@ -251,7 +251,7 @@ export default function A1Z26CipherEscapeRoomsBlog() {
             <h3 className="text-lg font-semibold text-foreground mb-4">Related Tools & Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/tools/a1z26-translator" className="text-primary hover:underline">
+                <Link href="/tools/letter-number-converter" className="text-primary hover:underline">
                   A1Z26 Translator
                 </Link>
               </li>
@@ -261,7 +261,7 @@ export default function A1Z26CipherEscapeRoomsBlog() {
                 </Link>
               </li>
               <li>
-                <Link href="/tools/a1z26-decoder-and-encoder" className="text-primary hover:underline">
+                <Link href="/tools/letter-number-converter" className="text-primary hover:underline">
                   A1Z26 Decoder and Encoder
                 </Link>
               </li>

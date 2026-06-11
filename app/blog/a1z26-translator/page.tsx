@@ -104,7 +104,7 @@ const faqSchema = generateFAQSchema([
   },
   {
     question: 'How do I use an A1Z26 translator online?',
-    answer: 'Visit letters2numbersconverter.com/tools/a1z26-translator, type or paste your text (or numbers), and the tool instantly converts it. For letters it outputs the A1Z26 number sequence; for numbers separated by dashes, spaces, or commas it outputs the decoded letters.',
+    answer: 'Visit letters2numbersconverter.com/tools/letter-number-converter, type or paste your text (or numbers), and the tool instantly converts it. For letters it outputs the A1Z26 number sequence; for numbers separated by dashes, spaces, or commas it outputs the decoded letters.',
   },
 ])
 
@@ -265,7 +265,7 @@ export default function A1Z26TranslatorPage() {
             <p className="text-sm text-muted-foreground font-mono mt-1">A1Z26 output: <strong className="text-foreground">3-9-16-8-5-18</strong></p>
           </div>
           <p className="text-muted-foreground leading-relaxed mt-4">
-            For instant encoding of any word or phrase, use the <Link href="/tools/a1z26-translator" className="text-primary hover:underline font-medium">A1Z26 Translator tool</Link> — paste your text and get the number sequence in one click.
+            For instant encoding of any word or phrase, use the <Link href="/tools/letter-number-converter" className="text-primary hover:underline font-medium">A1Z26 Translator tool</Link> — paste your text and get the number sequence in one click.
           </p>
         </section>
 
@@ -356,7 +356,7 @@ export default function A1Z26TranslatorPage() {
 
           <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mt-6">
             <p className="text-sm text-foreground font-medium mb-1">Decode any sequence instantly</p>
-            <p className="text-sm text-muted-foreground">Paste any number string into our <Link href="/tools/a1z26-translator" className="text-primary hover:underline font-medium">A1Z26 Translator</Link> and it decodes immediately — dashes, spaces, or commas all work as separators.</p>
+            <p className="text-sm text-muted-foreground">Paste any number string into our <Link href="/tools/letter-number-converter" className="text-primary hover:underline font-medium">A1Z26 Translator</Link> and it decodes immediately — dashes, spaces, or commas all work as separators.</p>
           </div>
         </section>
 
@@ -555,7 +555,7 @@ export default function A1Z26TranslatorPage() {
           <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
             <li>A1Z26 always uses the 26-letter English alphabet — accented characters (é, ã, ü, etc.) have no standard A1Z26 values and are typically ignored or represented as their base letter</li>
             <li>The numeric mapping (A=1, Z=26) does not change based on language — it is a fixed international standard for this cipher</li>
-            <li>Our <Link href="/tools/a1z26-translator" className="text-primary hover:underline font-medium">A1Z26 Translator tool</Link> interface works in any browser and requires no language-specific settings</li>
+            <li>Our <Link href="/tools/letter-number-converter" className="text-primary hover:underline font-medium">A1Z26 Translator tool</Link> interface works in any browser and requires no language-specific settings</li>
           </ul>
           <p className="text-muted-foreground leading-relaxed">
             If you&apos;re solving an A1Z26 puzzle in a language other than English and encounter letters outside A–Z, treat them as their nearest English equivalent or skip them — the puzzle designer almost certainly used standard A1Z26 based on the English alphabet.
@@ -570,8 +570,8 @@ export default function A1Z26TranslatorPage() {
           </p>
           <ul className="space-y-3">
             {[
-              ['/tools/a1z26-translator', 'A1Z26 Translator', 'Type text to encode it, or paste numbers to decode — both directions in one tool'],
-              ['/tools/a1z26-decoder-and-encoder', 'A1Z26 Decoder and Encoder', 'Dedicated encoder/decoder with character-by-character breakdown'],
+              ['/tools/letter-number-converter', 'A1Z26 Translator', 'Type text to encode it, or paste numbers to decode — both directions in one tool'],
+              ['/tools/letter-number-converter', 'A1Z26 Decoder and Encoder', 'Dedicated encoder/decoder with character-by-character breakdown'],
               ['/tools/a0z25-cipher-translator', 'A0Z25 Cipher Translator', 'For zero-indexed A=0 to Z=25 encoding'],
             ].map(([href, name, desc]) => (
               <li key={href as string}>
@@ -617,7 +617,7 @@ export default function A1Z26TranslatorPage() {
               },
               {
                 q: 'How do I use an A1Z26 translator online?',
-                a: 'Go to letters2numbersconverter.com/tools/a1z26-translator, type or paste your text or numbers, and the tool converts instantly. It handles numbers separated by dashes, spaces, or commas automatically.',
+                a: 'Go to letters2numbersconverter.com/tools/letter-number-converter, type or paste your text or numbers, and the tool converts instantly. It handles numbers separated by dashes, spaces, or commas automatically.',
               },
             ].map(({ q, a }, i) => (
               <div key={i}>

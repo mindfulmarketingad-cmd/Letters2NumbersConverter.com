@@ -262,7 +262,7 @@ export default function Page() {
           <ul className="list-disc list-inside text-base text-muted-foreground mb-4 space-y-2">
             <li><Link href="/blog/caesar-cipher-history" className="text-primary hover:underline">Caesar Cipher History</Link> — where the cipher came from and how it has been used</li>
             <li><Link href="/blog/caesar-cipher-examples" className="text-primary hover:underline">Caesar Cipher Examples</Link> — worked encoding and decoding for shifts 3, 7, 13, and 21</li>
-            <li><Link href="/blog/caesar-cipher-shift-13" className="text-primary hover:underline">Caesar Cipher Shift 13</Link> — why shift 13 (ROT13) is the only self-inverse Caesar shift</li>
+            <li><Link href="/blog/rot13-cipher-explained" className="text-primary hover:underline">Caesar Cipher Shift 13</Link> — why shift 13 (ROT13) is the only self-inverse Caesar shift</li>
             <li><Link href="/blog/rot13-vs-caesar-cipher" className="text-primary hover:underline">ROT13 vs Caesar Cipher</Link> — detailed comparison of the two ciphers</li>
             <li><Link href="/tools/cipher-identifier" className="text-primary hover:underline">Cipher Identifier Tool</Link> — not sure which cipher was used? This tool analyses the text automatically</li>
           </ul>

@@ -23,8 +23,8 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: { absolute: "Tap Code Translator" },
-  description: "Tapcode Translator - Convert messages to tap code patterns. Learn about this covert communication method used in POW camps. Encode/decode with dots, numbers, or knocks. Free online tool.",
+  title: { absolute: "Tap Code Translator — Encode & Decode Knock Code (Free)" },
+  description: "Free tap code translator. Encode and decode messages in the Polybius tap/knock code used by POWs — as dots, numbers, or knocks. Instant, browser-based, no sign-up.",
   keywords: ["tapcode translator", "tap code encoder", "knock code", "Smitty code", "POW communication", "covert code"],
   openGraph: {
     title: "Tapcode Translator",

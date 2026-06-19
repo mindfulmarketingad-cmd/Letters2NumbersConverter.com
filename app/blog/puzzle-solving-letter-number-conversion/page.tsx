@@ -70,7 +70,7 @@ export default function PuzzleSolvingLetterNumberConversion() {
                 For example, a geocache might give you the clue &quot;NORTH FORTY SEVEN&quot; where you need to convert certain letters to numbers to find the coordinates. Using A=1 encoding, N=14, O=15, R=18, T=20, H=8. Puzzle setters often combine letter values through addition, multiplication, or other operations to generate valid coordinate numbers.
               </p>
               <p className="text-foreground leading-relaxed mb-6">
-                Our letters to numbers converter tool is an essential tool for geocachers, allowing quick conversion of clue text to numerical values that can then be used to calculate final coordinates.
+                Our <Link href="/tools/letter-number-converter" className="text-primary hover:underline">letters to numbers converter</Link> is an essential tool for geocachers, allowing quick conversion of clue text to numerical values that can then be used to calculate final coordinates. See also our guide to <Link href="/blog/letter-number-codes-geocaching" className="text-primary hover:underline">letter-number codes in geocaching</Link>.
               </p>
 
               <h2 id="escape-room-puzzles" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Escape Room Puzzles</h2>
@@ -78,7 +78,7 @@ export default function PuzzleSolvingLetterNumberConversion() {
                 Escape rooms frequently incorporate letter-number ciphers as puzzle elements. A common setup involves finding a word or phrase that must be converted to numbers to unlock a combination lock. The A1Z26 system is popular because it produces numbers in the 1-26 range, perfect for combination locks.
               </p>
               <p className="text-foreground leading-relaxed mb-6">
-                Some escape rooms use more complex encodings like ASCII values or require multiple conversion steps. For instance, you might need to find a four-letter word, convert each letter to its alphabetical position, then use those digits for a padlock combination.
+                Some escape rooms use more complex encodings like <Link href="/tools/ascii-decoder" className="text-primary hover:underline">ASCII values</Link> or require multiple conversion steps. For instance, you might need to find a four-letter word, convert each letter to its alphabetical position, then use those digits for a padlock combination. Our <Link href="/blog/escape-room-letter-codes" className="text-primary hover:underline">escape room letter codes guide</Link> covers every format you're likely to encounter.
               </p>
 
               <h2 id="ctf-challenges" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">CTF Challenges</h2>
@@ -91,7 +91,7 @@ export default function PuzzleSolvingLetterNumberConversion() {
 
               <h2 id="common-puzzle-patterns-to-recognize" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Common Puzzle Patterns to Recognize</h2>
               <p className="text-foreground leading-relaxed mb-6">
-                Experienced puzzle solvers learn to recognize encoding patterns quickly. Numbers in the 1-26 range likely indicate A1Z26 encoding. Numbers between 65-90 or 97-122 suggest ASCII. Long strings of 0s and 1s in groups of 7 or 8 are probably binary. Two-digit hexadecimal pairs starting with 4, 5, 6, or 7 often encode letters.
+                Experienced puzzle solvers learn to recognize encoding patterns quickly. Numbers in the 1-26 range likely indicate A1Z26 encoding. Numbers between 65-90 or 97-122 suggest ASCII. Long strings of 0s and 1s in groups of 7 or 8 are probably binary. Two-digit hexadecimal pairs starting with 4, 5, 6, or 7 often encode letters. When you&apos;re unsure, paste the text into our <Link href="/tools/cipher-identifier" className="text-primary hover:underline">cipher identifier</Link> to detect the encoding automatically.
               </p>
 
               <h2 id="tips-for-faster-solving" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Tips for Faster Solving</h2>

@@ -67,7 +67,7 @@ export default function NumberWordGamesPage() {
 
 <h2 id="word-value-challenge" className="text-2xl font-bold text-foreground mt-12 mb-4">1. Word Value Challenge</h2>
                 <p className="text-muted-foreground mb-4">
-                  In this game, each letter has its numerical value (A=1, B=2, etc.), and players compete to find words with the highest total value.
+                  In this game, each letter has its numerical value (A=1, B=2, etc. — see our <Link href="/tools/letter-number-converter" className="text-primary hover:underline">letters to numbers converter</Link>), and players compete to find words with the highest total value.
                 </p>
                 <p className="text-muted-foreground mb-4"><strong>How to play:</strong></p>
                 <ol className="list-decimal list-inside text-muted-foreground space-y-2 mb-6">

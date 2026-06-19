@@ -70,6 +70,47 @@ export default function LetterNumberConvertersCryptography() {
               The Vigenere cipher extends this concept by using a keyword to determine variable shift values for each letter position. Both the plaintext and the key are converted to numbers, added together modulo 26, and the result converted back to letters. This numerical foundation made the cipher much stronger than simple substitution.
             </p>
 
+            <div className="not-prose my-8 rounded-xl border border-border bg-muted/40 p-6">
+              <p className="text-sm font-semibold text-foreground mb-3">Worked example: Caesar cipher with a shift of 3</p>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse text-sm">
+                  <caption className="sr-only">Encrypting the word HELLO with a Caesar shift of 3 using A=0 numbering</caption>
+                  <thead>
+                    <tr className="bg-background">
+                      <th className="border border-border p-2 text-left font-semibold">Step</th>
+                      {'HELLO'.split('').map((c, i) => (
+                        <th key={i} className="border border-border p-2 font-mono font-semibold">{c}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {(() => {
+                      const letters = 'HELLO'.split('')
+                      const nums = letters.map(c => c.charCodeAt(0) - 65) // A=0
+                      const shifted = nums.map(n => (n + 3) % 26)
+                      const out = shifted.map(n => String.fromCharCode(n + 65))
+                      const rows: [string, string[]][] = [
+                        ['Letter → number (A=0)', nums.map(String)],
+                        ['Add shift (+3) mod 26', shifted.map(String)],
+                        ['Number → letter', out],
+                      ]
+                      return rows.map(([label, cells]) => (
+                        <tr key={label} className="border-b border-border">
+                          <td className="border border-border p-2 text-muted-foreground">{label}</td>
+                          {cells.map((v, i) => (
+                            <td key={i} className="border border-border p-2 text-center font-mono text-primary">{v}</td>
+                          ))}
+                        </tr>
+                      ))
+                    })()}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-sm text-muted-foreground mt-3">
+                So <span className="font-mono text-foreground">HELLO</span> encrypts to <span className="font-mono" style={{ color: '#11a099' }}>KHOOR</span>. Every classical cipher works this way underneath: convert letters to numbers, do arithmetic, convert back.
+              </p>
+            </div>
+
             <h2 id="mathematical-operations-on-text" className="text-2xl font-bold text-foreground mt-10 mb-4 scroll-mt-20">Mathematical Operations on Text</h2>
             <p className="text-foreground leading-relaxed mb-6">
               Converting letters to numbers enables mathematical transformations that form the basis of encryption. Addition, multiplication, exponentiation, and modular arithmetic all become possible once text is represented numerically. These operations can scramble messages in ways that are difficult to reverse without the correct key.

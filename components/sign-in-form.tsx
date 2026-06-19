@@ -2,13 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { createClient } from '@supabase/supabase-js'
 import { Mail, Lock, LogIn } from 'lucide-react'
+import { getSupabaseAnon } from '@/lib/supabase/anon'
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-)
+const supabase = getSupabaseAnon()
 
 function GoogleIcon() {
   return (

@@ -1,5 +1,3 @@
-'use client'
-
 export interface Tool {
   id: string
   name: string

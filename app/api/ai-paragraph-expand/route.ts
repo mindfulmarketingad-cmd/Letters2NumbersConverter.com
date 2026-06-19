@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 
-const anthropic = new Anthropic()
+// Depends on runtime env (ANTHROPIC_API_KEY); never statically evaluate.
+export const dynamic = 'force-dynamic'
+
 
 export async function POST(req: NextRequest) {
+  const anthropic = new Anthropic()
   try {
     const { text, tone, style, targetLength } = await req.json()
 

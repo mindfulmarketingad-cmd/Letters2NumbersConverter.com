@@ -2,14 +2,20 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import Anthropic from '@anthropic-ai/sdk'
 
-const admin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-)
-
-const anthropic = new Anthropic()
+// Avoid static evaluation at build time — this route depends on runtime env vars.
+export const dynamic = 'force-dynamic'
 
 export async function POST(req: NextRequest) {
+  // Instantiate clients lazily so missing env vars can't crash `next build`
+  // (supabase-js throws on an undefined URL; the Anthropic SDK throws on a
+  // missing API key). At build time Next.js evaluates route modules to collect
+  // page data, so module-level instantiation would fail the whole build.
+  const admin = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!
+  )
+  const anthropic = new Anthropic()
+
   const { mySkills, lookingFor, matchType } = await req.json()
 
   if (!mySkills || !Array.isArray(mySkills) || mySkills.length === 0) {

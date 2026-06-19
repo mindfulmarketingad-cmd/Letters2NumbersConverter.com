@@ -1,12 +1,53 @@
-'use client'
-
 import type { Metadata } from 'next'
 import { ToolLayout } from '@/components/tool-layout'
 import { TCGProxyCreator } from '@/components/tcg-proxy-creator'
 import { generateToolPageSchema, generateBreadcrumbSchema } from '@/lib/schema-markup'
 
+const BASE_URL = 'https://www.letters2numbersconverter.com'
+const PAGE_URL = `${BASE_URL}/tools/tcg-proxy-creator`
+
+export const metadata: Metadata = {
+  title: { absolute: 'TCG Proxy Creator — Print Proxy Cards for MTG, Pokémon & Yu-Gi-Oh!' },
+  description:
+    'Free TCG proxy creator. Design and print proxy card sheets for Magic: The Gathering, Pokémon, and Yu-Gi-Oh! with adjustable spacing and 300–600 DPI print quality. Browser-based, no sign-up.',
+  keywords: [
+    'tcg proxy creator',
+    'proxy card maker',
+    'mtg proxy generator',
+    'pokemon proxy cards',
+    'yugioh proxy printer',
+    'print proxy cards',
+  ],
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: 'TCG Proxy Creator — Print Proxy Cards for MTG, Pokémon & Yu-Gi-Oh!',
+    description:
+      'Design and print proxy card sheets for MTG, Pokémon, and Yu-Gi-Oh! with adjustable spacing and high-DPI print quality. Free and browser-based.',
+    type: 'website',
+    url: PAGE_URL,
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TCG Proxy Creator' }],
+  },
+  robots: { index: true, follow: true },
+}
+
+const toolSchema = generateToolPageSchema(
+  'TCG Proxy Creator',
+  'Free TCG proxy creator. Design and print proxy card sheets for Magic: The Gathering, Pokémon, and Yu-Gi-Oh! with adjustable spacing and high print quality.',
+  PAGE_URL,
+  'Utility'
+)
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: BASE_URL },
+  { name: 'Tools', url: `${BASE_URL}/tools` },
+  { name: 'TCG Proxy Creator', url: PAGE_URL },
+])
+
 export default function TCGProxyCreatorPage() {
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <ToolLayout
       toolId="tcg-proxy-creator"
       toolName="TCG Proxy Creator"
@@ -56,5 +97,6 @@ export default function TCGProxyCreatorPage() {
         ],
       }}
     />
+    </>
   )
 }

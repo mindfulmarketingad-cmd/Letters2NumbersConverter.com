@@ -1,10 +1,7 @@
+import { getSupabaseAdmin } from '@/lib/supabase/admin'
 import { NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
 
-const admin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-)
+const admin = getSupabaseAdmin()
 
 // GET /api/hackathon/profiles — public list of all hacker profiles
 export async function GET() {

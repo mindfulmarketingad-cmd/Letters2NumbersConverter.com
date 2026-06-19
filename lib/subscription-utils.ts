@@ -1,9 +1,6 @@
-import { createClient } from '@supabase/supabase-js'
+import { getSupabaseAnon } from '@/lib/supabase/anon'
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-)
+const supabase = getSupabaseAnon()
 
 export const USAGE_LIMITS = {
   ANONYMOUS: 10,

@@ -271,6 +271,54 @@ export function SeoPanel() {
         </p>
       </div>
 
+      {/* ── 5b-ii. A1Z26 Reference Chart ──────────────────────── */}
+      <div className="space-y-4">
+        <h2 id="a1z26-chart" className="text-2xl md:text-3xl font-bold">A1Z26 Chart: Letters to Numbers (A=1 to Z=26)</h2>
+        <p className="text-muted-foreground max-w-3xl">
+          Use this quick reference to convert any letter to its number, or any number back to its letter. The A1Z26 standard maps A=1 through Z=26.
+        </p>
+        <div className="overflow-x-auto not-prose">
+          <table className="w-full border-collapse text-sm">
+            <caption className="sr-only">A1Z26 chart mapping each letter A to Z to its number 1 to 26</caption>
+            <thead>
+              <tr className="bg-secondary/40">
+                <th className="border border-border p-2 text-left font-semibold">Letter</th>
+                {'ABCDEFGHIJKLM'.split('').map((l) => (
+                  <th key={l} className="border border-border p-2 font-mono font-semibold">{l}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-border p-2 font-semibold text-muted-foreground">Number</td>
+                {'ABCDEFGHIJKLM'.split('').map((l, i) => (
+                  <td key={l} className="border border-border p-2 text-center font-mono" style={{ color: '#11a099' }}>{i + 1}</td>
+                ))}
+              </tr>
+            </tbody>
+            <thead>
+              <tr className="bg-secondary/40">
+                <th className="border border-border p-2 text-left font-semibold">Letter</th>
+                {'NOPQRSTUVWXYZ'.split('').map((l) => (
+                  <th key={l} className="border border-border p-2 font-mono font-semibold">{l}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-border p-2 font-semibold text-muted-foreground">Number</td>
+                {'NOPQRSTUVWXYZ'.split('').map((l, i) => (
+                  <td key={l} className="border border-border p-2 text-center font-mono" style={{ color: '#11a099' }}>{i + 14}</td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-muted-foreground max-w-3xl text-sm">
+          For example, <strong>HELLO</strong> becomes <span className="font-mono" style={{ color: '#11a099' }}>8-5-12-12-15</span> and <strong>CAT</strong> becomes <span className="font-mono" style={{ color: '#11a099' }}>3-1-20</span>. Paste numbers into the converter above in decode mode to turn them back into letters.
+        </p>
+      </div>
+
       {/* ── 5c. A0Z25 Cipher ──────────────────────────────────── */}
       <div className="space-y-4">
         <h2 id="a0z25-cipher" className="text-2xl md:text-3xl font-bold">A0Z25 Cipher</h2>

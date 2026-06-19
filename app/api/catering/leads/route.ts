@@ -63,7 +63,10 @@ export async function POST(req: NextRequest) {
 
   if (error) {
     console.error('catering_leads insert error:', error)
-    return NextResponse.json({ error: 'Failed to save lead' }, { status: 500 })
+    return NextResponse.json(
+      { error: "We couldn't submit your request right now. Please email us and we'll help you directly." },
+      { status: 500 }
+    )
   }
 
   return NextResponse.json({ success: true, id: data.id }, { status: 201 })

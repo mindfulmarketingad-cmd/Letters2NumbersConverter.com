@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: 'Instantly encode and decode URLs with our free online tool. Perfect for developers and API testing.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/url-percent-encoding-decoding',
-    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'URL Percent Encoding and Decoding | Instant URL Encoding Tool' }],
     images: [
       {
         url: '/images/url-percent-encoding-decoding-preview.jpg',

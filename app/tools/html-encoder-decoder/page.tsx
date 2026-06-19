@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: 'Instantly encode and decode HTML entities with this free online tool.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/html-encoder-decoder',
-    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'HTML Encoder and Decoder | Instantly Encode/Decode HTML Entities' }],
     images: [
       {
         url: '/images/html-encoder-decoder-preview.jpg',

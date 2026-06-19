@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: 'Extract text from images instantly using advanced OCR technology. Free online tool.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/scan-words-from-image',
-    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Scan Words From Image | Free OCR Text Extractor' }],
     images: [
       {
         url: '/images/scan-words-from-image-preview.jpg',

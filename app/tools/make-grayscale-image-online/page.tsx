@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: 'Convert your images to grayscale instantly with our free online tool. Perfect for photographers, designers, and anyone needing professional grayscale conversion.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/make-grayscale-image-online',
-    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Grayscale Image Online | Free Image to Black & White Converter' }],
     images: [
       {
         url: '/images/make-grayscale-image-online-preview.jpg',

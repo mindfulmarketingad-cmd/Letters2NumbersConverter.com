@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: 'Find out when your half birthday is and celebrate twice a year with our free Half Birthday Calculator.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/half-birthday-calculator',
-    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Half Birthday Calculator | Find Your Half Birthday Date' }],
     images: [
       {
         url: '/images/half-birthday-calculator-preview.jpg',

@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: 'Transform black and white photos into vibrant color images using advanced colorization technology.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/black-and-white-photo-to-color-converter',
-    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'black and white photo to color converter | Letters2NumbersConverter.com' }],
     images: [
       {
         url: '/images/black-and-white-photo-to-color-converter-preview.jpg',

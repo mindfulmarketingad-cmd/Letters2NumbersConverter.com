@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: 'Reverse any text or string instantly with this free online Reverse Text Converter.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/reverse-text-converter',
-    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Reverse Text Converter | Free Online Tool' }],
     images: [
       {
         url: '/images/reverse-text-converter-preview.jpg',

@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: 'Curve grades fairly using statistical distribution methods. Supports normal, linear, and percentile curving.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/grade-curve-calculator',
-    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Grade Curve Calculator | Free Online Tool' }],
     images: [
       {
         url: '/images/grade-curve-calculator-preview.jpg',

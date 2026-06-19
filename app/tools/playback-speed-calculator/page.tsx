@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: 'Calculate adjusted duration and time saved when playing media at different speeds instantly.',
     type: 'website',
     url: 'https://www.letters2numbersconverter.com/tools/playback-speed-calculator',
-    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Playback Speed Calculator | Calculate Duration & Time Saved' }],
     images: [
       {
         url: '/images/playback-speed-calculator-preview.jpg',

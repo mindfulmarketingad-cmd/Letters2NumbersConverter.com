@@ -23,15 +23,14 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: { absolute: "Alphanumeric Conversion Tool" },
-  description: "Alphanumeric Conversion Tool - Free online converter to transform letters to numbers and numbers to letters instantly. Support for multiple encoding formats including A=1, ASCII, HEX, and Binary.",
+  title: { absolute: "Alphanumeric Conversion Tool — Letters ↔ Numbers, ASCII, Hex, Binary" },
+  description: "Free alphanumeric conversion tool. Convert letters to numbers and numbers to letters instantly across A=1, A=0, ASCII, hexadecimal, and binary. Encode and decode in your browser, no sign-up.",
   keywords: ["alphanumeric conversion", "letters to numbers converter", "alphanumeric converter", "text to numbers", "number to text converter"],
   openGraph: {
-    title: "Alphanumeric Conversion Tool | Letters2NumbersConverter.com",
-    description: "Convert between letters and numbers instantly with the Alphanumeric Conversion Tool. Multiple encoding formats supported.",
+    title: "Alphanumeric Conversion Tool — Letters ↔ Numbers, ASCII, Hex, Binary",
+    description: "Convert between letters and numbers instantly across A=1, A=0, ASCII, hex, and binary. Free and browser-based.",
     type: "website",
     url: "https://www.letters2numbersconverter.com/tools/alphanumeric-conversion-tool",
-    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'Alphanumeric Conversion Tool' }],
     images: [
       {
         url: "/images/alphanumeric-conversion-tool-preview.jpg",

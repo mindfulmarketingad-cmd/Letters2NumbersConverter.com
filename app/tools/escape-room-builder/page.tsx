@@ -23,9 +23,9 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: { absolute: "Escape Room Builder" },
-  description: "Create and design interactive escape room puzzles",
-  keywords: [],
+  title: { absolute: "Escape Room Builder — Create Cipher Puzzles & Clues (Free)" },
+  description: "Free escape room builder. Design interactive escape room puzzles and cipher clues — A1Z26, Morse, and more — then share or print them. Browser-based, no sign-up required.",
+  keywords: ["escape room builder", "escape room puzzle maker", "cipher puzzle generator", "escape room clues", "diy escape room"],
   openGraph: {
     title: "Escape Room Builder",
     description: "Create and design interactive escape room puzzles",
